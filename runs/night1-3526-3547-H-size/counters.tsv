@@ -1,0 +1,9 @@
+arm	scenario	runtime_params	pread	preadv2	preadv2_nowait	preadv2_eagain	io_uring_enter	liburing_submit	read_bytes	syscr	majflt	minflt	cpu_s	instructions_u	strace_syscalls	io_pattern	bytes	xxh3_128	elapsed_s_screening	note	error
+p6-3525	warm	-	143367	0	0	0	0	0	0	285472	0	12865	1.64	-	-	-	61418523	dde2a34851a6029eead6c3430d7608af	1.021		
+p7-3526	warm	-	1350	0	0	0	0	8384	0	1442	0	12655	3.81	-	-	-	61418523	dde2a34851a6029eead6c3430d7608af	1.223		
+p8-3547-on	warm	vocabulary-iouring-page-cache-fast-path=true	1438	246926	246926	0	0	0	0	248368	0	11870	1.53	-	-	-	61418523	dde2a34851a6029eead6c3430d7608af	0.958		
+p8-3547-off	warm	vocabulary-iouring-page-cache-fast-path=false	1438	0	0	0	0	8384	0	1442	0	12262	3.68	-	-	-	61418523	dde2a34851a6029eead6c3430d7608af	2.213		
+p6-3525	cold	-	143367	0	0	0	0	0	487161856	285484	2	16105	2.42	-	-	-	61418523	dde2a34851a6029eead6c3430d7608af	5.917	our-files-only cold: fadvise DONTNEED on 26 files resident_after=8192B	
+p7-3526	cold	-	1350	0	0	0	0	8384	466006016	1446	1	16149	5.2	-	-	-	61418523	dde2a34851a6029eead6c3430d7608af	3.021	our-files-only cold: fadvise DONTNEED on 26 files resident_after=8192B	
+p8-3547-on	cold	vocabulary-iouring-page-cache-fast-path=true	1438	246926	246926	41588	0	1337	467136512	248368	1	14103	2.97	-	-	-	61418523	dde2a34851a6029eead6c3430d7608af	2.024	our-files-only cold: fadvise DONTNEED on 26 files resident_after=8192B	
+p8-3547-off	cold	vocabulary-iouring-page-cache-fast-path=false	1438	0	0	0	0	8384	475049984	1442	1	14099	4.94	-	-	-	61418523	dde2a34851a6029eead6c3430d7608af	1.332	our-files-only cold: fadvise DONTNEED on 26 files resident_after=8192B	

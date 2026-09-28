@@ -1,0 +1,4 @@
+arm	scenario	runtime_params	pread	preadv2	preadv2_nowait	preadv2_eagain	io_uring_enter	liburing_submit	read_bytes	syscr	majflt	minflt	cpu_s	instructions_u	strace_syscalls	io_pattern	bytes	xxh3_128	elapsed_s_screening	note	error
+p11-3529	warm	-	167	194665	194665	0	0	0	0	194832	0	3834	0.64	-	-	-	15532320	6ef70863ccd3b9affcebefc1b2836236	0.472		
+p12-3539-off	warm	adaptive-export-chunk-size=false	167	194665	194665	0	0	0	3067904	194836	2	3347	0.65	-	-	-	15532320	6ef70863ccd3b9affcebefc1b2836236	0.47		
+p12-3539-on	warm	adaptive-export-chunk-size=true	167	194665	194665	0	0	0	0	194836	0	4300	0.63	-	-	-	15532320	6ef70863ccd3b9affcebefc1b2836236	0.453		

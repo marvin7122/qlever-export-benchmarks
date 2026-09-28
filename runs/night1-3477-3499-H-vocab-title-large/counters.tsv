@@ -1,0 +1,7 @@
+arm	scenario	runtime_params	pread	preadv2	preadv2_nowait	preadv2_eagain	io_uring_enter	liburing_submit	read_bytes	syscr	majflt	minflt	cpu_s	instructions_u	strace_syscalls	io_pattern	bytes	xxh3_128	elapsed_s_screening	note	error
+p14-3476	warm	-	167	195266	195266	0	0	0	0	195433	0	3698	0.71	-	-	-	15532320	6ef70863ccd3b9affcebefc1b2836236	0.519		
+p15-3477	warm	-	167	195264	195264	0	0	0	3072000	195431	2	2801	0.67	-	-	-	15532320	6ef70863ccd3b9affcebefc1b2836236	0.519		
+p16-3499	warm	-	167	195264	195264	0	0	0	1863680	195435	2	3818	0.86	-	-	-	15532320	6ef70863ccd3b9affcebefc1b2836236	0.731		
+p14-3476	cold	-	167	195266	195266	53941	0	744	688611328	195437	1	7230	2.51	-	-	-	15532320	6ef70863ccd3b9affcebefc1b2836236	1.257	our-files-only cold: fadvise DONTNEED on 26 files resident_after=8192B	
+p15-3477	cold	-	167	195264	195264	54061	0	746	704454656	195435	1	7162	2.6	-	-	-	15532320	6ef70863ccd3b9affcebefc1b2836236	1.289	our-files-only cold: fadvise DONTNEED on 26 files resident_after=8192B	
+p16-3499	cold	-	167	195264	195264	54166	0	747	699604992	195435	1	7092	3.03	-	-	-	15532320	6ef70863ccd3b9affcebefc1b2836236	2.627	our-files-only cold: fadvise DONTNEED on 26 files resident_after=8192B	

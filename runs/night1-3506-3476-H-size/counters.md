@@ -1,0 +1,20 @@
+| arm | scenario | rp | pread | preadv2 (nowait/EAGAIN) | io_uring_enter | submit | read_bytes | majflt | cpu_s | instructions:u | bytes |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| p12-3539 | warm | - | 1438 | 246926 (246926/0) | 0 | 0 | 0 | 0 | 1.63 | - | 61418523 |
+| p13-3506 | warm | - | 1438 | 246946 (246946/0) | 0 | 0 | 0 | 0 | 1.51 | - | 61418523 |
+| p14-3476-off | warm | iouring-adaptive-batch-enabled=false | 1438 | 246946 (246946/0) | 0 | 0 | 0 | 0 | 1.62 | - | 61418523 |
+| p14-3476-on | warm | iouring-adaptive-batch-enabled=true | 1438 | 246946 (246946/0) | 0 | 0 | 0 | 0 | 1.56 | - | 61418523 |
+| p12-3539 | cold | - | 1438 | 246926 (246926/41467) | 0 | 1330 | 461266944 | 3 | 5.53 | - | 61418523 |
+| p13-3506 | cold | - | 1438 | 246946 (246946/41548) | 0 | 1330 | 469344256 | 3 | 5.6 | - | 61418523 |
+| p14-3476-off | cold | iouring-adaptive-batch-enabled=false | 1438 | 246946 (246946/41422) | 0 | 1327 | 462176256 | 3 | 5.89 | - | 61418523 |
+| p14-3476-on | cold | iouring-adaptive-batch-enabled=true | 1438 | 246946 (246946/41535) | 0 | 3301 | 465473536 | 3 | 6.31 | - | 61418523 |
+
+I/O pattern p12-3539 (cold, traced): pread64=1438 preadv2=246926 (nowait 246926, EAGAIN 41467) io_uring_enter=4791 batch_med=0 batch_sum=47078 [dblp.vocabulary.words.external: n=125912 seq=0.0001 seek_med=33623] [dblp.vocabulary.words.external.offsets: n=121190 seq=0.0 seek_med=47320]
+
+I/O pattern p13-3506 (cold, traced): pread64=1438 preadv2=246946 (nowait 246946, EAGAIN 41548) io_uring_enter=4606 batch_med=0 batch_sum=47366 [dblp.vocabulary.words.external: n=125918 seq=0.0001 seek_med=33575] [dblp.vocabulary.words.external.offsets: n=121204 seq=0.0001 seek_med=47152]
+
+I/O pattern p14-3476-off (cold, traced): pread64=1438 preadv2=246946 (nowait 246946, EAGAIN 41422) io_uring_enter=2999 batch_med=0 batch_sum=47098 [dblp.vocabulary.words.external: n=125918 seq=0.0001 seek_med=33575] [dblp.vocabulary.words.external.offsets: n=121204 seq=0.0001 seek_med=47152]
+
+I/O pattern p14-3476-on (cold, traced): pread64=1438 preadv2=246946 (nowait 246946, EAGAIN 41535) io_uring_enter=4758 batch_med=13 batch_sum=47233 [dblp.vocabulary.words.external: n=125918 seq=0.0001 seek_med=33575] [dblp.vocabulary.words.external.offsets: n=121204 seq=0.0001 seek_med=47152]
+
+Byte-identical output across arms: yes. Screening counters (one execution per arm and scenario); timing only in the verdict row.
