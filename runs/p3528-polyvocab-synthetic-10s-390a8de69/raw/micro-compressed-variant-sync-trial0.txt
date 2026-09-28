@@ -1,0 +1,52 @@
+2026-09-28 22:33:16.878 - INFO: Finished writing compressed vocabulary, size = 7219 B [uncompressed = 141.3 kB, ratio = 5%]
+2026-09-28 22:33:16.878 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p9-polyvocab/polyVocabLookupBatchMicroC.words ...
+2026-09-28 22:33:16.879 - WARN: io_uring is compiled in but unavailable at runtime (io_uring_queue_init failed in IoUringManager. In file "../../../src/util/IoUringManager.cpp" at line 154); falling back to synchronous pread for vocabulary lookups
+2026-09-28 22:33:16.879 - INFO: Done, number of words: 2048
+2026-09-28 22:33:16.879 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 2048
+2026-09-28 22:33:16.880 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p9-polyvocab/polyVocabLookupBatchMicroU ...
+2026-09-28 22:33:16.880 - WARN: io_uring is compiled in but unavailable at runtime (io_uring_queue_init failed in IoUringManager. In file "../../../src/util/IoUringManager.cpp" at line 154); falling back to synchronous pread for vocabulary lookups
+2026-09-28 22:33:16.880 - INFO: Done, number of words: 2048
+2026-09-28 22:33:16.880 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 2048
+2026-09-28 22:33:16.880 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p9-polyvocab/polyVocabLookupBatchMicroC.words ...
+2026-09-28 22:33:16.880 - WARN: io_uring is compiled in but unavailable at runtime (io_uring_queue_init failed in IoUringManager. In file "../../../src/util/IoUringManager.cpp" at line 154); falling back to synchronous pread for vocabulary lookups
+2026-09-28 22:33:16.880 - INFO: Done, number of words: 2048
+2026-09-28 22:33:16.880 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 2048
+2026-09-28 22:33:16.880 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p9-polyvocab/polyVocabLookupBatchMicroU ...
+2026-09-28 22:33:16.880 - WARN: io_uring is compiled in but unavailable at runtime (io_uring_queue_init failed in IoUringManager. In file "../../../src/util/IoUringManager.cpp" at line 154); falling back to synchronous pread for vocabulary lookups
+2026-09-28 22:33:16.880 - INFO: Done, number of words: 2048
+2026-09-28 22:33:16.880 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 2048
+2026-09-28 22:33:16.880 - INFO: Running measurement "sequential operator[] of group Synthetic micro-batches: 2,048 lookups into 2,048 words (on-disk compressed, builder path)" ...
+2026-09-28 22:33:34.624 - INFO: Done in 17.7441 seconds.
+2026-09-28 22:33:34.624 - INFO: Running measurement "batched lookupBatch of group Synthetic micro-batches: 2,048 lookups into 2,048 words (on-disk compressed, builder path)" ...
+2026-09-28 22:33:45.833 - INFO: Done in 11.2089 seconds.
+2026-09-28 22:33:45.833 - INFO: Running measurement "batched lookupBatch with builder of group Synthetic micro-batches: 2,048 lookups into 2,048 words (on-disk compressed, builder path)" ...
+2026-09-28 22:33:57.026 - INFO: Done in 11.1926 seconds.
+2026-09-28 22:33:57.026 - INFO: Running measurement "concrete lookupBatch (no dispatch) of group Synthetic micro-batches: 2,048 lookups into 2,048 words (on-disk compressed, builder path)" ...
+2026-09-28 22:34:08.192 - INFO: Done in 11.1664 seconds.
+##########################################################################
+# Benchmark class 'PolymorphicVocabulary::lookupBatch (synthetic micro)' #
+##########################################################################
+General metadata: {"time-of-measurement":"2026-09-28 22:33:16.880"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'Synthetic micro-batches: 2,048 lookups into 2,048 words (on-disk compressed, builder path)'
+    Measurements:
+    
+        Single measurement 'sequential operator[]'
+            time: 17.7441s
+        
+        Single measurement 'batched lookupBatch'
+            time: 11.2089s
+        
+        Single measurement 'batched lookupBatch with builder'
+            time: 11.1926s
+        
+        Single measurement 'concrete lookupBatch (no dispatch)'
+            time: 11.1664s
+    
+    Tables: None
+

@@ -1,0 +1,40 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 2K of event 'cpu/cycles/P'
+# Event count (approx.): 10556282689
+#
+# Children      Self  Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+# ........  ........  ................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    29.54%    29.47%  [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+    20.44%    20.44%  [.] fsst_decompress
+    19.44%    19.44%  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     7.71%     4.01%  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const
+     6.73%     4.19%  [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     6.20%     5.45%  [.] FsstRepeatedDecoder<2ul>::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+     5.53%     4.66%  [.] std::basic_string_view<char, std::char_traits<char> > decompressIntoSpan<CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const::{lambda(std::span<char, 18446744073709551615ul>)#1}&>(std::span<char, 18446744073709551615ul>, unsigned long, CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const::{lambda(std::span<char, 18446744073709551615ul>)#1}&)
+     3.84%     1.44%  [.] VocabularyInMemoryBinSearch::operator[](unsigned long) const
+     3.77%     0.00%  [.] _start
+     3.77%     0.00%  [.] ad_benchmark::(anonymous namespace)::PolymorphicVocabLookupBatchMicroBenchmark::runAllBenchmarks()
+     3.77%     0.00%  [.] ad_benchmark::BenchmarkRegister::runAllRegisteredBenchmarks()
+     3.77%     0.00%  [.] main
+     3.77%     0.00%  [.] 0x000070201242a1c9
+     3.74%     3.74%  [.] FsstRepeatedDecoder<2ul>::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     3.74%     0.00%  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     3.74%     0.00%  [.] PolymorphicVocabulary::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     3.04%     0.00%  [.] __libc_start_main
+     1.96%     1.96%  [.] VocabularyInMemoryBinSearch::wordAtPosition(unsigned long) const
+     0.74%     0.00%  [.] __libc_start_main
+     0.61%     0.00%  [.] asm_sysvec_apic_timer_interrupt
+     0.61%     0.00%  [.] sysvec_apic_timer_interrupt
+     0.54%     0.00%  [.] __sysvec_apic_timer_interrupt
+     0.54%     0.00%  [.] hrtimer_interrupt
+     0.54%     0.04%  [.] __hrtimer_run_queues
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

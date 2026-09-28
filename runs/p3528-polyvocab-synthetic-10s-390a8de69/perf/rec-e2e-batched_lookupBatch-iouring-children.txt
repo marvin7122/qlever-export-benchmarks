@@ -1,0 +1,113 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 3K of event 'cpu/cycles/P'
+# Event count (approx.): 12877440005
+#
+# Children      Self  Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+# ........  ........  ................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    23.93%    23.93%  [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+    22.49%     0.51%  [.] asm_exc_page_fault
+    21.57%     0.26%  [.] exc_page_fault
+    20.79%     0.42%  [.] do_user_addr_fault
+    19.30%     0.61%  [.] handle_mm_fault
+    17.96%     1.27%  [.] __handle_mm_fault
+    16.77%    16.67%  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+    16.72%     0.35%  [.] handle_pte_fault
+    16.49%     1.31%  [.] do_anonymous_page
+    12.17%    10.93%  [.] fsst_decompress
+    10.61%     0.44%  [.] alloc_anon_folio
+     9.72%     5.07%  [.] kernel_init_pages
+     8.05%     0.42%  [.] vma_alloc_folio_noprof
+     7.91%     0.54%  [.] alloc_pages_mpol
+     7.73%     0.62%  [.] __alloc_frozen_pages_noprof
+     7.02%     0.36%  [.] get_page_from_freelist
+     6.79%     3.52%  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const
+     5.99%     4.19%  [.] FsstRepeatedDecoder<2ul>::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+     5.03%     0.25%  [.] post_alloc_hook
+     4.75%     0.00%  [.] do_syscall_64
+     4.75%     0.00%  [.] entry_SYSCALL_64_after_hwframe
+     4.75%     0.00%  [.] x64_sys_call
+     4.74%     0.00%  [.] __x64_sys_madvise
+     4.74%     0.00%  [.] do_madvise
+     4.74%     0.00%  [.] 0x00007316c38891de
+     4.71%     0.00%  [.] std::pmr::monotonic_buffer_resource::_M_release_buffers()
+     4.71%     0.00%  [.] std::pmr::monotonic_buffer_resource::~monotonic_buffer_resource()
+     4.71%     0.00%  [.] std::pmr::monotonic_buffer_resource::~monotonic_buffer_resource()
+     4.71%     0.00%  [.] 0x00007316c383398c
+     4.71%     0.00%  [.] 0x00007316c3836f9a
+     4.71%     0.00%  [.] 0x00007316c388964e
+     4.71%     0.00%  [.] 0x00007316c388db0e
+     4.71%     0.00%  [.] 0x00007316c38978a4
+     4.64%     2.80%  [.] std::basic_string_view<char, std::char_traits<char> > decompressIntoSpan<CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const::{lambda(std::span<char, 18446744073709551615ul>)#1}&>(std::span<char, 18446744073709551615ul>, unsigned long, CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const::{lambda(std::span<char, 18446744073709551615ul>)#1}&)
+     3.90%     0.00%  [.] __madvise
+     3.69%     0.00%  [.] __libc_start_main
+     3.69%     0.00%  [.] _start
+     3.56%     0.00%  [.] ad_benchmark::(anonymous namespace)::PolymorphicVocabLookupBatchEndToEndBenchmark::runAllBenchmarks()
+     3.56%     0.00%  [.] ad_benchmark::BenchmarkRegister::runAllRegisteredBenchmarks()
+     3.56%     0.00%  [.] main
+     3.56%     0.00%  [.] 0x00007316c262a1c9
+     3.50%     2.29%  [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     3.27%     0.00%  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     3.27%     0.00%  [.] PolymorphicVocabulary::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     2.76%     0.00%  [.] __tlb_batch_free_encoded_pages
+     2.76%     0.00%  [.] tlb_finish_mmu
+     2.73%     0.23%  [.] free_pages_and_swap_cache
+     2.63%     0.10%  [.] folios_put_refs
+     2.57%     0.70%  [.] __mem_cgroup_charge
+     2.08%     0.10%  [.] folio_add_lru_vma
+     2.05%     0.10%  [.] folio_add_lru
+     1.99%     0.42%  [.] rmqueue.isra.0
+     1.98%     0.06%  [.] zap_pte_range
+     1.98%     0.00%  [.] madvise_do_behavior
+     1.98%     0.00%  [.] madvise_vma_behavior
+     1.98%     0.00%  [.] madvise_walk_vmas
+     1.98%     0.00%  [.] unmap_page_range
+     1.98%     0.00%  [.] unmap_single_vma
+     1.98%     0.00%  [.] zap_page_range_single_batched
+     1.98%     0.00%  [.] zap_pmd_range.isra.0
+     1.97%     0.82%  [k] lruvec_stat_mod_folio
+     1.95%     0.10%  [.] __folio_batch_add_and_move
+     1.85%     0.42%  [.] zap_present_ptes.constprop.0
+     1.85%     0.87%  [k] mod_memcg_lruvec_state
+     1.76%     0.13%  [.] folio_batch_move_lru
+     1.69%     0.47%  [.] VocabularyInMemoryBinSearch::operator[](unsigned long) const
+     1.67%     0.77%  [.] srso_safe_ret
+     1.66%     0.51%  [.] lru_add
+     1.64%     0.13%  [.] __rmqueue_pcplist
+     1.40%     0.39%  [.] lru_gen_del_folio.constprop.0
+     1.37%     0.20%  [.] __page_cache_release.part.0
+     1.37%     0.13%  [.] folio_add_new_anon_rmap
+     1.35%     0.38%  [.] charge_memcg
+     1.33%     1.26%  [.] FsstRepeatedDecoder<2ul>::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     1.18%     0.13%  [.] __folio_mod_stat
+     1.14%     0.45%  [k] lock_vma_under_rcu
+     1.13%     1.13%  [.] VocabularyInMemoryBinSearch::wordAtPosition(unsigned long) const
+     1.10%     0.13%  [.] folio_remove_rmap_ptes
+     1.04%     0.32%  [.] mod_lruvec_state
+     0.96%     0.35%  [.] lru_gen_add_folio
+     0.87%     0.49%  [.] mod_node_page_state
+     0.85%     0.00%  [.] __madvise
+     0.80%     0.59%  [k] free_unref_folios
+     0.79%     0.32%  [k] pte_offset_map_lock
+     0.78%     0.26%  [.] __rcu_read_unlock
+     0.74%     0.26%  [.] __rcu_read_lock
+     0.70%     0.70%  [k] srso_return_thunk
+     0.70%     0.26%  [k] mas_walk
+     0.67%     0.32%  [.] __pte_offset_map
+     0.65%     0.29%  [.] count_memcg_events
+     0.58%     0.26%  [.] memcg1_commit_charge
+     0.58%     0.13%  [.] __folio_throttle_swaprate
+     0.53%     0.32%  [.] get_mem_cgroup_from_mm
+     0.51%     0.19%  [.] try_charge_memcg
+     0.51%     0.13%  [k] __mem_cgroup_uncharge_folios
+     0.51%     0.51%  [.] 0x00000000001b5de5
+     0.51%     0.00%  [.] 0x00007316c2bb5de5
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

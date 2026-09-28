@@ -1,0 +1,44 @@
+2026-09-28 22:51:14.289 - INFO: Finished writing compressed vocabulary, size = 223.5 kB [uncompressed = 3.9 MB, ratio = 5%]
+2026-09-28 22:51:14.289 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p9-polyvocab/polyVocabLookupBatchEndToEnd/vocab.words ...
+2026-09-28 22:51:14.290 - WARN: io_uring is compiled in but unavailable at runtime (io_uring_queue_init failed in IoUringManager. In file "../../../src/util/IoUringManager.cpp" at line 154); falling back to synchronous pread for vocabulary lookups
+2026-09-28 22:51:14.290 - INFO: Done, number of words: 50000
+2026-09-28 22:51:14.290 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 50000
+2026-09-28 22:51:14.290 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p9-polyvocab/polyVocabLookupBatchEndToEnd/vocab.words ...
+2026-09-28 22:51:14.290 - WARN: io_uring is compiled in but unavailable at runtime (io_uring_queue_init failed in IoUringManager. In file "../../../src/util/IoUringManager.cpp" at line 154); falling back to synchronous pread for vocabulary lookups
+2026-09-28 22:51:14.290 - INFO: Done, number of words: 50000
+2026-09-28 22:51:14.290 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 50000
+2026-09-28 22:51:14.290 - INFO: Running measurement "sequential operator[] of group End to end: 50,000 words (on-disk compressed), 100,000 lookups per batch" ...
+2026-09-28 22:51:25.792 - INFO: Done in 11.5014 seconds.
+2026-09-28 22:51:25.792 - INFO: Running measurement "batched lookupBatch of group End to end: 50,000 words (on-disk compressed), 100,000 lookups per batch" ...
+2026-09-28 22:51:38.590 - INFO: Done in 12.7979 seconds.
+2026-09-28 22:51:38.590 - INFO: Running measurement "batched lookupBatch with builder of group End to end: 50,000 words (on-disk compressed), 100,000 lookups per batch" ...
+2026-09-28 22:51:51.012 - INFO: Done in 12.4219 seconds.
+2026-09-28 22:51:51.012 - INFO: Running measurement "concrete lookupBatch (no dispatch) of group End to end: 50,000 words (on-disk compressed), 100,000 lookups per batch" ...
+2026-09-28 22:52:03.103 - INFO: Done in 12.0917 seconds.
+#####################################################################
+# Benchmark class 'PolymorphicVocabulary::lookupBatch (end to end)' #
+#####################################################################
+General metadata: {"time-of-measurement":"2026-09-28 22:51:14.290"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'End to end: 50,000 words (on-disk compressed), 100,000 lookups per batch'
+    Measurements:
+    
+        Single measurement 'sequential operator[]'
+            time: 11.5014s
+        
+        Single measurement 'batched lookupBatch'
+            time: 12.7979s
+        
+        Single measurement 'batched lookupBatch with builder'
+            time: 12.4219s
+        
+        Single measurement 'concrete lookupBatch (no dispatch)'
+            time: 12.0917s
+    
+    Tables: None
+

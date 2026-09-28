@@ -1,0 +1,61 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'cpu/cycles/P'
+# Event count (approx.): 6181808890
+#
+# Overhead  Shared Object                                 Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+# ........  ............................................  ..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    24.30%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+    13.93%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+    10.60%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] fsst_decompress
+     3.51%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const
+     3.05%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] FsstRepeatedDecoder<2ul>::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+     2.89%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     2.87%  [kernel.kallsyms]                             [k] kernel_init_pages
+     2.68%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] std::basic_string_view<char, std::char_traits<char> > decompressIntoSpan<CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const::{lambda(std::span<char, 18446744073709551615ul>)#1}&>(std::span<char, 18446744073709551615ul>, unsigned long, CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const::{lambda(std::span<char, 18446744073709551615ul>)#1}&)
+     2.50%  [kernel.kallsyms]                             [k] do_anonymous_page
+     2.06%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] FsstRepeatedDecoder<2ul>::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     1.54%  [kernel.kallsyms]                             [k] srso_return_thunk
+     1.35%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] VocabularyInMemoryBinSearch::wordAtPosition(unsigned long) const
+     1.27%  [kernel.kallsyms]                             [k] lruvec_stat_mod_folio
+     1.01%  [kernel.kallsyms]                             [k] lock_vma_under_rcu
+     0.90%  [kernel.kallsyms]                             [k] __handle_mm_fault
+     0.87%  [kernel.kallsyms]                             [k] handle_mm_fault
+     0.82%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] VocabularyInMemoryBinSearch::operator[](unsigned long) const
+     0.72%  [kernel.kallsyms]                             [k] lru_add
+     0.71%  [kernel.kallsyms]                             [k] mod_memcg_lruvec_state
+     0.69%  [kernel.kallsyms]                             [k] do_user_addr_fault
+     0.68%  [kernel.kallsyms]                             [k] srso_safe_ret
+     0.63%  [kernel.kallsyms]                             [k] native_irq_return_iret
+     0.57%  [kernel.kallsyms]                             [k] get_page_from_freelist
+     0.55%  [kernel.kallsyms]                             [k] vma_alloc_folio_noprof
+     0.52%  [kernel.kallsyms]                             [k] uncharge_folio
+     0.52%  libstdc++.so.6.0.33                           [.] 0x00000000001b5de4
+     0.50%  [kernel.kallsyms]                             [k] get_mem_cgroup_from_mm
+     0.46%  libstdc++.so.6.0.33                           [.] 0x00000000001b5de0
+     0.46%  [kernel.kallsyms]                             [k] blk_cgroup_congested
+     0.45%  [kernel.kallsyms]                             [k] memcg1_commit_charge
+     0.45%  [kernel.kallsyms]                             [k] __pte_offset_map
+     0.43%  [kernel.kallsyms]                             [k] free_unref_folios
+     0.43%  [kernel.kallsyms]                             [k] rmqueue.isra.0
+     0.43%  [kernel.kallsyms]                             [k] lru_gen_add_folio
+     0.39%  [kernel.kallsyms]                             [k] folios_put_refs
+     0.38%  [kernel.kallsyms]                             [k] __page_cache_release.part.0
+     0.38%  [kernel.kallsyms]                             [k] alloc_anon_folio
+     0.37%  [kernel.kallsyms]                             [k] charge_memcg
+     0.37%  [kernel.kallsyms]                             [k] post_alloc_hook
+     0.32%  [kernel.kallsyms]                             [k] arch_exit_to_user_mode_prepare.isra.0
+     0.32%  [kernel.kallsyms]                             [k] asm_exc_page_fault
+     0.31%  [kernel.kallsyms]                             [k] folio_remove_rmap_ptes
+     0.31%  [kernel.kallsyms]                             [k] __alloc_frozen_pages_noprof
+     0.31%  [kernel.kallsyms]                             [k] __folio_mod_stat
+     0.31%  [kernel.kallsyms]                             [k] __mem_cgroup_charge
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

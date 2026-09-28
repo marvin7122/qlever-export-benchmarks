@@ -1,0 +1,26 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'cpu/cycles/P'
+# Event count (approx.): 5342160806
+#
+# Overhead  Shared Object                              Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+# ........  .........................................  ................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    31.69%  PolymorphicVocabLookupBatchMicroBenchmark  [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+    19.87%  PolymorphicVocabLookupBatchMicroBenchmark  [.] fsst_decompress
+    16.71%  PolymorphicVocabLookupBatchMicroBenchmark  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     5.72%  PolymorphicVocabLookupBatchMicroBenchmark  [.] FsstRepeatedDecoder<2ul>::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+     5.35%  PolymorphicVocabLookupBatchMicroBenchmark  [.] FsstRepeatedDecoder<2ul>::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     4.74%  PolymorphicVocabLookupBatchMicroBenchmark  [.] std::basic_string_view<char, std::char_traits<char> > decompressIntoSpan<CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const::{lambda(std::span<char, 18446744073709551615ul>)#1}&>(std::span<char, 18446744073709551615ul>, unsigned long, CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const::{lambda(std::span<char, 18446744073709551615ul>)#1}&)
+     3.85%  PolymorphicVocabLookupBatchMicroBenchmark  [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     3.28%  PolymorphicVocabLookupBatchMicroBenchmark  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const
+     2.32%  PolymorphicVocabLookupBatchMicroBenchmark  [.] VocabularyInMemoryBinSearch::wordAtPosition(unsigned long) const
+     1.62%  PolymorphicVocabLookupBatchMicroBenchmark  [.] VocabularyInMemoryBinSearch::operator[](unsigned long) const
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

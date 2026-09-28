@@ -1,0 +1,36 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 2K of event 'cpu/cycles/P'
+# Event count (approx.): 10167827843
+#
+# Children      Self  Symbol                                                                                                                                  
+# ........  ........  ........................................................................................................................................
+#
+    64.39%     9.22%  [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+    64.22%    63.76%  [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+    61.81%     0.00%  [.] _start
+    61.71%     0.00%  [.] ad_benchmark::(anonymous namespace)::PolymorphicVocabLookupBatchMicroBenchmark::runAllBenchmarks()
+    61.71%     0.00%  [.] ad_benchmark::BenchmarkRegister::runAllRegisteredBenchmarks()
+    61.71%     0.00%  [.] main
+    61.71%     0.00%  [.] 0x000070d69202a1c9
+    57.18%     3.71%  [.] VocabularyInMemoryBinSearch::operator[](unsigned long) const
+    53.92%     0.00%  [.] __libc_start_main
+    32.21%     0.00%  [.] PolymorphicVocabulary::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const
+    29.32%     0.00%  [.] PolymorphicVocabulary::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     9.98%     9.91%  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     7.89%     0.00%  [.] __libc_start_main
+     5.83%     5.43%  [.] appendVocabBatchLookupResult(VocabBatchLookupResult const&, ArenaVocabBatchBuilder&)
+     3.96%     3.90%  [.] VocabularyInMemoryBinSearch::wordAtPosition(unsigned long) const
+     2.22%     0.00%  [.] 0x00000000000007ff
+     1.82%     0.00%  [.] 0x0000000000000044
+     1.00%     0.00%  [.] 0x0000000000007fff
+     0.60%     0.00%  [.] 0xf0b9077559beafff
+     0.52%     0.00%  [.] asm_sysvec_apic_timer_interrupt
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

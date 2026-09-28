@@ -1,0 +1,31 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'cpu/cycles/P'
+# Event count (approx.): 4671404257
+#
+# Children      Self  Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+# ........  ........  .................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    70.83%    70.61%  [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+    70.35%     8.53%  [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+    64.75%     0.00%  [.] _start
+    64.75%     0.00%  [.] main
+    64.75%     0.00%  [.] 0x0000796b65a2a1c9
+    64.58%     0.00%  [.] ad_benchmark::(anonymous namespace)::PolymorphicVocabLookupBatchMicroBenchmark::runAllBenchmarks()
+    64.58%     0.00%  [.] ad_benchmark::BenchmarkRegister::runAllRegisteredBenchmarks()
+    62.54%     3.52%  [.] VocabularyInMemoryBinSearch::operator[](unsigned long) const
+    55.96%     0.00%  [.] __libc_start_main
+    11.77%    11.77%  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     8.79%     0.00%  [.] __libc_start_main
+     4.81%     4.67%  [.] VocabularyInMemoryBinSearch::wordAtPosition(unsigned long) const
+     2.68%     0.00%  [.] 0x00000000000007ff
+     1.29%     0.00%  [.] 0x0000000000000044
+     0.54%     0.16%  [.] exc_page_fault
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

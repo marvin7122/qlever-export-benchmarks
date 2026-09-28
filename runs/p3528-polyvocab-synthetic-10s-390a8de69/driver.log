@@ -1,0 +1,62 @@
+variant commit 390a8de69badf543e11620b4bbb53e7fcd0b8594 (upstream-stack/07d, #3528), base commit 40c0065812c3c4217c04921c93ad653140c1371b (bench/p9-base-07c on upstream-stack/07c @ 87557be42, #3527), flavor u24
+binary /local/data-ssd/stoetzem/bin-cache/390a8de69badf543e11620b4bbb53e7fcd0b8594/PolymorphicVocabLookupBatchMicroBenchmark sha256 af190c9bf96158ed133950da4753ae1684ce6cd606f294214b08cc01d855a68d
+binary /local/data-ssd/stoetzem/bin-cache/390a8de69badf543e11620b4bbb53e7fcd0b8594/PolymorphicVocabLookupBatchEndToEndBenchmark sha256 ac5aed7f75770c024ce8f250822524ffb6876332c4eee49a11f6f60f6ae6b547
+binary /local/data-ssd/stoetzem/bin-cache/40c0065812c3c4217c04921c93ad653140c1371b/PolymorphicVocabLookupBatchMicroBenchmark sha256 435149caa72b15e433915b736277424161902196bd01a4e76a247d265186b293
+binary /local/data-ssd/stoetzem/bin-cache/40c0065812c3c4217c04921c93ad653140c1371b/PolymorphicVocabLookupBatchEndToEndBenchmark sha256 e6519df3489b32befe4274da63ac2cb5268cf221cabd0d5055082759f7a4fced
+calibration micro-compressed: 500 reps, fastest arm 0.129554 s -> 46313 reps
+calibration micro-uncompressed: 500 reps, fastest arm 0.070126 s -> 85561 reps
+calibration e2e: 20 reps, fastest arm 0.459405 s -> 523 reps
+trial 0 done 20:39:09 load 2.21 2.25 2.38
+trial 1 done 20:45:53 load 2.20 2.20 2.30
+trial 2 done 20:52:39 load 2.41 2.26 2.28
+trial 3 done 20:59:25 load 2.21 2.31 2.30
+fallback confirmed: e2e-variant-sync-trial1.txt
+fallback confirmed: micro-compressed-variant-sync-trial1.txt
+fallback confirmed: micro-uncompressed-variant-sync-trial1.txt
+tag | binary | mode | measurement | n | median s | min..max s | median ns/word | min..max ns/word | vs per-word (same binary, mode) | verdict
+e2e | base | iouring | batched lookupBatch | 3 | 12.17 | 11.96..12.23 | 232.8 | 228.7..233.8 | +7.3 % | slower
+e2e | base | iouring | concrete lookupBatch (no dispatch) | 3 | 12.41 | 11.90..12.56 | 237.3 | 227.6..240.2 | +9.4 % | slower
+e2e | base | iouring | sequential operator[] | 3 | 11.35 | 11.29..11.39 | 216.9 | 216.0..217.8 | +0.0 % | parity
+e2e | variant | iouring | batched lookupBatch | 3 | 12.10 | 12.03..12.87 | 231.4 | 230.0..246.1 | +5.2 % | slower
+e2e | variant | iouring | batched lookupBatch with builder | 3 | 12.10 | 12.05..12.91 | 231.4 | 230.4..246.8 | +5.2 % | slower
+e2e | variant | iouring | concrete lookupBatch (no dispatch) | 3 | 12.31 | 12.08..12.41 | 235.3 | 230.9..237.4 | +7.0 % | slower
+e2e | variant | iouring | sequential operator[] | 3 | 11.50 | 11.50..11.53 | 219.9 | 219.8..220.5 | +0.0 % | parity
+e2e | variant | sync | batched lookupBatch | 3 | 12.17 | 11.99..12.80 | 232.7 | 229.2..244.7 | +5.8 % | slower
+e2e | variant | sync | batched lookupBatch with builder | 3 | 12.42 | 12.12..12.66 | 237.5 | 231.8..242.0 | +8.0 % | slower
+e2e | variant | sync | concrete lookupBatch (no dispatch) | 3 | 12.25 | 12.09..12.50 | 234.2 | 231.2..239.0 | +6.5 % | slower
+e2e | variant | sync | sequential operator[] | 3 | 11.50 | 11.50..11.59 | 219.9 | 219.9..221.5 | +0.0 % | parity
+micro-compressed | base | iouring | batched lookupBatch | 3 | 11.11 | 11.05..11.16 | 117.2 | 116.5..117.6 | -37.7 % | faster
+micro-compressed | base | iouring | concrete lookupBatch (no dispatch) | 3 | 11.12 | 11.05..11.14 | 117.2 | 116.5..117.5 | -37.6 % | faster
+micro-compressed | base | iouring | sequential operator[] | 3 | 17.83 | 17.81..17.85 | 188.0 | 187.7..188.2 | +0.0 % | parity
+micro-compressed | variant | iouring | batched lookupBatch | 3 | 11.20 | 11.18..11.23 | 118.1 | 117.9..118.4 | -37.1 % | faster
+micro-compressed | variant | iouring | batched lookupBatch with builder | 3 | 11.16 | 11.16..11.21 | 117.7 | 117.7..118.2 | -37.3 % | faster
+micro-compressed | variant | iouring | concrete lookupBatch (no dispatch) | 3 | 11.18 | 11.17..11.19 | 117.9 | 117.7..118.0 | -37.2 % | faster
+micro-compressed | variant | iouring | sequential operator[] | 3 | 17.81 | 17.78..17.84 | 187.8 | 187.4..188.1 | +0.0 % | parity
+micro-compressed | variant | sync | batched lookupBatch | 3 | 11.21 | 11.17..11.23 | 118.2 | 117.8..118.4 | -36.9 % | faster
+micro-compressed | variant | sync | batched lookupBatch with builder | 3 | 11.21 | 11.20..11.21 | 118.2 | 118.1..118.2 | -37.0 % | faster
+micro-compressed | variant | sync | concrete lookupBatch (no dispatch) | 3 | 11.23 | 11.16..11.23 | 118.4 | 117.7..118.4 | -36.8 % | faster
+micro-compressed | variant | sync | sequential operator[] | 3 | 17.78 | 17.77..17.88 | 187.4 | 187.4..188.6 | +0.0 % | parity
+micro-uncompressed | base | iouring | batched lookupBatch | 3 | 10.78 | 10.76..10.86 | 61.5 | 61.4..62.0 | -16.5 % | faster
+micro-uncompressed | base | iouring | concrete lookupBatch (no dispatch) | 3 | 10.78 | 10.71..10.83 | 61.5 | 61.1..61.8 | -16.5 % | faster
+micro-uncompressed | base | iouring | sequential operator[] | 3 | 12.90 | 12.88..13.05 | 73.6 | 73.5..74.5 | +0.0 % | parity
+micro-uncompressed | variant | iouring | batched lookupBatch | 3 | 11.02 | 11.02..11.04 | 62.9 | 62.9..63.0 | -14.5 % | faster
+micro-uncompressed | variant | iouring | batched lookupBatch with builder | 3 | 12.46 | 12.42..12.49 | 71.1 | 70.9..71.3 | -3.3 % | faster
+micro-uncompressed | variant | iouring | concrete lookupBatch (no dispatch) | 3 | 10.95 | 10.95..10.97 | 62.5 | 62.5..62.6 | -15.1 % | faster
+micro-uncompressed | variant | iouring | sequential operator[] | 3 | 12.89 | 12.86..13.06 | 73.6 | 73.4..74.5 | +0.0 % | parity
+micro-uncompressed | variant | sync | batched lookupBatch | 3 | 10.99 | 10.97..11.07 | 62.7 | 62.6..63.2 | -14.9 % | faster
+micro-uncompressed | variant | sync | batched lookupBatch with builder | 3 | 12.46 | 12.43..12.49 | 71.1 | 70.9..71.3 | -3.5 % | faster
+micro-uncompressed | variant | sync | concrete lookupBatch (no dispatch) | 3 | 10.99 | 10.96..11.01 | 62.7 | 62.6..62.8 | -14.9 % | faster
+micro-uncompressed | variant | sync | sequential operator[] | 3 | 12.91 | 12.80..13.20 | 73.7 | 73.0..75.3 | +0.0 % | parity
+
+#3528 (variant) vs #3527 (base), same arm and mode:
+e2e | iouring | batched lookupBatch | base 12.17 (11.96..12.23) s | variant 12.10 (12.03..12.87) s | -0.6 % | parity
+e2e | iouring | concrete lookupBatch (no dispatch) | base 12.41 (11.90..12.56) s | variant 12.31 (12.08..12.41) s | -0.8 % | parity
+e2e | iouring | sequential operator[] | base 11.35 (11.29..11.39) s | variant 11.50 (11.50..11.53) s | +1.4 % | parity
+micro-compressed | iouring | batched lookupBatch | base 11.11 (11.05..11.16) s | variant 11.20 (11.18..11.23) s | +0.8 % | parity
+micro-compressed | iouring | concrete lookupBatch (no dispatch) | base 11.12 (11.05..11.14) s | variant 11.18 (11.17..11.19) s | +0.6 % | parity
+micro-compressed | iouring | sequential operator[] | base 17.83 (17.81..17.85) s | variant 17.81 (17.78..17.84) s | -0.1 % | parity
+micro-uncompressed | iouring | batched lookupBatch | base 10.78 (10.76..10.86) s | variant 11.02 (11.02..11.04) s | +2.3 % | slower
+micro-uncompressed | iouring | concrete lookupBatch (no dispatch) | base 10.78 (10.71..10.83) s | variant 10.95 (10.95..10.97) s | +1.6 % | parity
+micro-uncompressed | iouring | sequential operator[] | base 12.90 (12.88..13.05) s | variant 12.89 (12.86..13.06) s | -0.1 % | parity
+
+BENCH_EXIT=0

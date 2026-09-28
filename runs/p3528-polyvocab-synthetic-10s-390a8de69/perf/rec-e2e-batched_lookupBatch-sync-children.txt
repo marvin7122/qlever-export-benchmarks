@@ -1,0 +1,115 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 3K of event 'cpu/cycles/P'
+# Event count (approx.): 12398061107
+#
+# Children      Self  Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+# ........  ........  ................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    25.08%    25.08%  [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+    21.68%     0.16%  [.] asm_exc_page_fault
+    20.64%     0.59%  [.] exc_page_fault
+    19.92%     0.49%  [.] do_user_addr_fault
+    18.60%     0.59%  [.] handle_mm_fault
+    17.12%     0.94%  [k] __handle_mm_fault
+    16.43%     1.52%  [.] do_anonymous_page
+    16.24%     0.42%  [.] handle_pte_fault
+    14.69%    14.54%  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+    11.15%    10.55%  [.] fsst_decompress
+     9.99%     0.72%  [.] alloc_anon_folio
+     7.55%     4.25%  [k] kernel_init_pages
+     6.61%     0.24%  [.] vma_alloc_folio_noprof
+     6.55%     0.29%  [.] alloc_pages_mpol
+     6.50%     0.69%  [.] __alloc_frozen_pages_noprof
+     5.77%     0.30%  [.] get_page_from_freelist
+     5.28%     3.64%  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const
+     5.09%     0.00%  [.] do_syscall_64
+     5.09%     0.00%  [.] entry_SYSCALL_64_after_hwframe
+     5.04%     0.03%  [.] x64_sys_call
+     4.97%     0.00%  [.] 0x00007a3961c3398c
+     4.97%     0.00%  [.] 0x00007a3961c36f9a
+     4.97%     0.00%  [.] 0x00007a3961c8964e
+     4.97%     0.00%  [.] 0x00007a3961c8db0e
+     4.97%     0.00%  [.] 0x00007a3961c978a4
+     4.97%     0.00%  [.] __x64_sys_madvise
+     4.97%     0.00%  [.] do_madvise
+     4.94%     0.00%  [.] 0x00007a3961c891de
+     4.85%     0.00%  [.] std::pmr::monotonic_buffer_resource::_M_release_buffers()
+     4.85%     0.00%  [.] std::pmr::monotonic_buffer_resource::~monotonic_buffer_resource()
+     4.85%     0.00%  [.] std::pmr::monotonic_buffer_resource::~monotonic_buffer_resource()
+     4.82%     0.00%  [.] __madvise
+     4.76%     4.02%  [.] FsstRepeatedDecoder<2ul>::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+     3.72%     0.26%  [.] post_alloc_hook
+     3.68%     2.78%  [.] std::basic_string_view<char, std::char_traits<char> > decompressIntoSpan<CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const::{lambda(std::span<char, 18446744073709551615ul>)#1}&>(std::span<char, 18446744073709551615ul>, unsigned long, CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const::{lambda(std::span<char, 18446744073709551615ul>)#1}&)
+     3.36%     2.76%  [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     2.80%     0.55%  [k] __mem_cgroup_charge
+     2.67%     0.13%  [.] free_pages_and_swap_cache
+     2.67%     0.00%  [.] __tlb_batch_free_encoded_pages
+     2.67%     0.00%  [.] tlb_finish_mmu
+     2.64%     0.10%  [.] folios_put_refs
+     2.53%     0.13%  [.] folio_add_lru
+     2.47%     0.07%  [.] folio_add_lru_vma
+     2.26%     1.18%  [.] lruvec_stat_mod_folio
+     2.24%     0.03%  [.] __folio_batch_add_and_move
+     2.23%     0.00%  [.] madvise_do_behavior
+     2.23%     0.00%  [.] madvise_vma_behavior
+     2.23%     0.00%  [.] madvise_walk_vmas
+     2.20%     0.03%  [.] unmap_page_range
+     2.20%     0.00%  [.] unmap_single_vma
+     2.20%     0.00%  [.] zap_page_range_single_batched
+     2.20%     0.00%  [.] zap_pmd_range.isra.0
+     2.17%     0.23%  [k] zap_pte_range
+     2.02%     0.17%  [.] folio_batch_move_lru
+     2.01%     0.91%  [k] lru_add
+     1.97%     0.40%  [.] zap_present_ptes.constprop.0
+     1.90%     0.35%  [k] rmqueue.isra.0
+     1.88%     1.85%  [.] FsstRepeatedDecoder<2ul>::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     1.82%     0.00%  [.] __libc_start_main
+     1.82%     0.00%  [.] _start
+     1.76%     0.00%  [.] ad_benchmark::(anonymous namespace)::PolymorphicVocabLookupBatchEndToEndBenchmark::runAllBenchmarks()
+     1.76%     0.00%  [.] ad_benchmark::BenchmarkRegister::runAllRegisteredBenchmarks()
+     1.76%     0.00%  [.] main
+     1.76%     0.00%  [.] 0x00007a3960a2a1c9
+     1.75%     0.88%  [.] srso_safe_ret
+     1.75%     0.66%  [.] mod_memcg_lruvec_state
+     1.69%     0.03%  [.] PolymorphicVocabulary::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     1.66%     0.00%  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     1.39%     0.59%  [.] charge_memcg
+     1.36%     0.14%  [.] __rmqueue_pcplist
+     1.30%     0.23%  [.] folio_add_new_anon_rmap
+     1.25%     0.17%  [.] __page_cache_release.part.0
+     1.21%     0.67%  [.] VocabularyInMemoryBinSearch::operator[](unsigned long) const
+     1.19%     0.40%  [.] mod_lruvec_state
+     1.14%     0.26%  [k] lru_gen_add_folio
+     1.13%     1.10%  [.] VocabularyInMemoryBinSearch::wordAtPosition(unsigned long) const
+     1.12%     0.33%  [.] lru_gen_del_folio.constprop.0
+     1.10%     0.36%  [.] lock_vma_under_rcu
+     1.06%     0.57%  [k] get_mem_cgroup_from_mm
+     1.03%     0.43%  [k] __rcu_read_lock
+     1.02%     0.49%  [k] free_unref_folios
+     0.98%     0.10%  [.] __folio_mod_stat
+     0.97%     0.10%  [.] folio_remove_rmap_ptes
+     0.82%     0.36%  [k] mas_walk
+     0.82%     0.82%  [k] srso_return_thunk
+     0.77%     0.19%  [k] __rcu_read_unlock
+     0.76%     0.02%  [.] asm_sysvec_apic_timer_interrupt
+     0.73%     0.00%  [.] sysvec_apic_timer_interrupt
+     0.68%     0.29%  [.] count_memcg_events
+     0.68%     0.27%  [k] memcg1_commit_charge
+     0.61%     0.03%  [.] hrtimer_interrupt
+     0.60%     0.34%  [.] __css_rstat_updated
+     0.59%     0.33%  [.] mod_node_page_state
+     0.58%     0.06%  [k] __folio_throttle_swaprate
+     0.58%     0.00%  [.] __sysvec_apic_timer_interrupt
+     0.54%     0.03%  [.] tick_nohz_handler
+     0.54%     0.00%  [.] __hrtimer_run_queues
+     0.52%     0.30%  [.] blk_cgroup_congested
+     0.51%     0.26%  [k] pte_offset_map_lock
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

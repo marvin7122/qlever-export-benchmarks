@@ -1,0 +1,67 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'cpu/cycles/P'
+# Event count (approx.): 5976298919
+#
+# Overhead  Shared Object                                 Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+# ........  ............................................  ................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    26.07%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+    12.12%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+    10.52%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] fsst_decompress
+     4.23%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] FsstRepeatedDecoder<2ul>::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+     3.90%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const
+     3.23%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] std::basic_string_view<char, std::char_traits<char> > decompressIntoSpan<CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const::{lambda(std::span<char, 18446744073709551615ul>)#1}&>(std::span<char, 18446744073709551615ul>, unsigned long, CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const::{lambda(std::span<char, 18446744073709551615ul>)#1}&)
+     2.62%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     2.57%  [kernel.kallsyms]                             [k] kernel_init_pages
+     1.79%  [kernel.kallsyms]                             [k] do_anonymous_page
+     1.46%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] VocabularyInMemoryBinSearch::wordAtPosition(unsigned long) const
+     1.09%  [kernel.kallsyms]                             [k] __handle_mm_fault
+     1.01%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] VocabularyInMemoryBinSearch::operator[](unsigned long) const
+     0.96%  [kernel.kallsyms]                             [k] lru_gen_add_folio
+     0.96%  [kernel.kallsyms]                             [k] srso_safe_ret
+     0.91%  [kernel.kallsyms]                             [k] lru_add
+     0.88%  [kernel.kallsyms]                             [k] mod_memcg_lruvec_state
+     0.87%  [kernel.kallsyms]                             [k] srso_return_thunk
+     0.85%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] FsstRepeatedDecoder<2ul>::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     0.80%  [kernel.kallsyms]                             [k] lruvec_stat_mod_folio
+     0.78%  [kernel.kallsyms]                             [k] charge_memcg
+     0.73%  [kernel.kallsyms]                             [k] __mem_cgroup_charge
+     0.64%  [kernel.kallsyms]                             [k] handle_pte_fault
+     0.63%  [kernel.kallsyms]                             [k] get_mem_cgroup_from_mm
+     0.59%  [kernel.kallsyms]                             [k] zap_present_ptes.constprop.0
+     0.57%  [kernel.kallsyms]                             [k] exc_page_fault
+     0.53%  [kernel.kallsyms]                             [k] set_ptes.isra.0
+     0.52%  [kernel.kallsyms]                             [k] handle_mm_fault
+     0.51%  libstdc++.so.6.0.33                           [.] 0x00000000001b5df4
+     0.47%  [kernel.kallsyms]                             [k] mod_node_page_state
+     0.46%  [kernel.kallsyms]                             [k] memcg1_commit_charge
+     0.46%  [kernel.kallsyms]                             [k] mod_lruvec_state
+     0.45%  libstdc++.so.6.0.33                           [.] 0x00000000001b5de0
+     0.41%  [kernel.kallsyms]                             [k] free_unref_folios
+     0.40%  [kernel.kallsyms]                             [k] __pte_offset_map
+     0.40%  [kernel.kallsyms]                             [k] count_memcg_events
+     0.40%  [kernel.kallsyms]                             [k] blk_cgroup_congested
+     0.40%  [kernel.kallsyms]                             [k] asm_exc_page_fault
+     0.39%  [kernel.kallsyms]                             [k] get_page_from_freelist
+     0.39%  [kernel.kallsyms]                             [k] rmqueue.isra.0
+     0.39%  [kernel.kallsyms]                             [k] pte_offset_map_lock
+     0.38%  [kernel.kallsyms]                             [k] folio_add_new_anon_rmap
+     0.38%  [kernel.kallsyms]                             [k] lock_vma_under_rcu
+     0.34%  [kernel.kallsyms]                             [k] vm_normal_page
+     0.34%  [kernel.kallsyms]                             [k] post_alloc_hook
+     0.33%  [kernel.kallsyms]                             [k] vma_alloc_folio_noprof
+     0.33%  [kernel.kallsyms]                             [k] lru_gen_del_folio.constprop.0
+     0.33%  [kernel.kallsyms]                             [k] native_irq_return_iret
+     0.32%  [kernel.kallsyms]                             [k] __folio_mod_stat
+     0.31%  libstdc++.so.6.0.33                           [.] 0x00000000001b5de5
+     0.30%  PolymorphicVocabLookupBatchEndToEndBenchmark  [.] libfsst::compressBulk(libfsst::SymbolTable&, unsigned long, unsigned long const*, unsigned char const**, unsigned long, unsigned char*, unsigned long*, unsigned char**, bool, bool)
+     0.30%  libstdc++.so.6.0.33                           [.] 0x00000000001b5df0
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

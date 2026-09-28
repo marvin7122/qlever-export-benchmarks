@@ -1,0 +1,34 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'cpu/cycles/P'
+# Event count (approx.): 4676297339
+#
+# Children      Self  Symbol                                                                                                                                                                                                                                                                     
+# ........  ........  ...........................................................................................................................................................................................................................................................................
+#
+    72.86%     9.84%  [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+    69.75%    69.37%  [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+    65.98%     0.00%  [.] _start
+    65.82%     0.00%  [.] ad_benchmark::(anonymous namespace)::PolymorphicVocabLookupBatchMicroBenchmark::runAllBenchmarks()
+    65.82%     0.00%  [.] ad_benchmark::BenchmarkRegister::runAllRegisteredBenchmarks()
+    65.82%     0.00%  [.] main
+    65.82%     0.00%  [.] 0x000075b99da2a1c9
+    65.18%     0.00%  [.] __libc_start_main
+    65.01%     4.11%  [.] VocabularyInMemoryBinSearch::operator[](unsigned long) const
+    11.52%    11.52%  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     4.21%     4.15%  [.] VocabularyInMemoryBinSearch::wordAtPosition(unsigned long) const
+     2.33%     0.00%  [.] 0x00000000000007ff
+     1.26%     0.00%  [.] 0x0000000000000044
+     0.80%     0.00%  [.] __libc_start_main
+     0.54%     0.00%  [.] __sysvec_apic_timer_interrupt
+     0.54%     0.00%  [.] asm_sysvec_apic_timer_interrupt
+     0.54%     0.00%  [.] hrtimer_interrupt
+     0.54%     0.00%  [.] sysvec_apic_timer_interrupt
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

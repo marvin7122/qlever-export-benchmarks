@@ -1,0 +1,42 @@
+2026-09-28 22:32:23.728 - INFO: Finished writing compressed vocabulary, size = 223.5 kB [uncompressed = 3.9 MB, ratio = 5%]
+2026-09-28 22:32:23.728 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p9-polyvocab/polyVocabLookupBatchEndToEnd/vocab.words ...
+2026-09-28 22:32:23.729 - INFO: Done, number of words: 50000
+2026-09-28 22:32:23.729 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 50000
+2026-09-28 22:32:23.729 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p9-polyvocab/polyVocabLookupBatchEndToEnd/vocab.words ...
+2026-09-28 22:32:23.729 - INFO: Done, number of words: 50000
+2026-09-28 22:32:23.729 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 50000
+2026-09-28 22:32:23.729 - INFO: Running measurement "sequential operator[] of group End to end: 50,000 words (on-disk compressed), 100,000 lookups per batch" ...
+2026-09-28 22:32:24.206 - INFO: Done in 0.47656 seconds.
+2026-09-28 22:32:24.206 - INFO: Running measurement "batched lookupBatch of group End to end: 50,000 words (on-disk compressed), 100,000 lookups per batch" ...
+2026-09-28 22:32:24.691 - INFO: Done in 0.485251 seconds.
+2026-09-28 22:32:24.691 - INFO: Running measurement "batched lookupBatch with builder of group End to end: 50,000 words (on-disk compressed), 100,000 lookups per batch" ...
+2026-09-28 22:32:25.154 - INFO: Done in 0.463151 seconds.
+2026-09-28 22:32:25.154 - INFO: Running measurement "concrete lookupBatch (no dispatch) of group End to end: 50,000 words (on-disk compressed), 100,000 lookups per batch" ...
+2026-09-28 22:32:25.614 - INFO: Done in 0.459405 seconds.
+#####################################################################
+# Benchmark class 'PolymorphicVocabulary::lookupBatch (end to end)' #
+#####################################################################
+General metadata: {"time-of-measurement":"2026-09-28 22:32:23.729"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'End to end: 50,000 words (on-disk compressed), 100,000 lookups per batch'
+    Measurements:
+    
+        Single measurement 'sequential operator[]'
+            time: 0.47656s
+        
+        Single measurement 'batched lookupBatch'
+            time: 0.485251s
+        
+        Single measurement 'batched lookupBatch with builder'
+            time: 0.463151s
+        
+        Single measurement 'concrete lookupBatch (no dispatch)'
+            time: 0.459405s
+    
+    Tables: None
+

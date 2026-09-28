@@ -1,0 +1,27 @@
+2026-09-28 23:02:57.688 - INFO: Finished writing compressed vocabulary, size = 223.5 kB [uncompressed = 3.9 MB, ratio = 5%]
+2026-09-28 23:02:57.688 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p9-polyvocab/polyVocabLookupBatchEndToEnd/vocab.words ...
+2026-09-28 23:02:57.688 - INFO: Done, number of words: 50000
+2026-09-28 23:02:57.688 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 50000
+2026-09-28 23:02:57.688 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p9-polyvocab/polyVocabLookupBatchEndToEnd/vocab.words ...
+2026-09-28 23:02:57.688 - INFO: Done, number of words: 50000
+2026-09-28 23:02:57.688 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 50000
+2026-09-28 23:02:57.689 - INFO: Running measurement "batched lookupBatch with builder of group End to end: 50,000 words (on-disk compressed), 100,000 lookups per batch" ...
+2026-09-28 23:03:10.472 - INFO: Done in 12.7831 seconds.
+#####################################################################
+# Benchmark class 'PolymorphicVocabulary::lookupBatch (end to end)' #
+#####################################################################
+General metadata: {"time-of-measurement":"2026-09-28 23:02:57.689"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'End to end: 50,000 words (on-disk compressed), 100,000 lookups per batch'
+    Measurements:
+    
+        Single measurement 'batched lookupBatch with builder'
+            time: 12.7831s
+    
+    Tables: None
+

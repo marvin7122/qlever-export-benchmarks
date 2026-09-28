@@ -1,0 +1,21 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'cpu/cycles/P'
+# Event count (approx.): 4676297339
+#
+# Overhead  Shared Object                              Symbol                                                                                                                                                                                                                                                                     
+# ........  .........................................  ...........................................................................................................................................................................................................................................................................
+#
+    69.37%  PolymorphicVocabLookupBatchMicroBenchmark  [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+    11.52%  PolymorphicVocabLookupBatchMicroBenchmark  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     9.84%  PolymorphicVocabLookupBatchMicroBenchmark  [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     4.15%  PolymorphicVocabLookupBatchMicroBenchmark  [.] VocabularyInMemoryBinSearch::wordAtPosition(unsigned long) const
+     4.11%  PolymorphicVocabLookupBatchMicroBenchmark  [.] VocabularyInMemoryBinSearch::operator[](unsigned long) const
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

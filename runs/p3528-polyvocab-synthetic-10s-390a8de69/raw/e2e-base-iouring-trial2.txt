@@ -1,0 +1,37 @@
+2026-09-28 22:52:03.140 - INFO: Finished writing compressed vocabulary, size = 223.5 kB [uncompressed = 3.9 MB, ratio = 5%]
+2026-09-28 22:52:03.140 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p9-polyvocab/polyVocabLookupBatchEndToEnd/vocab.words ...
+2026-09-28 22:52:03.141 - INFO: Done, number of words: 50000
+2026-09-28 22:52:03.141 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 50000
+2026-09-28 22:52:03.141 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p9-polyvocab/polyVocabLookupBatchEndToEnd/vocab.words ...
+2026-09-28 22:52:03.141 - INFO: Done, number of words: 50000
+2026-09-28 22:52:03.141 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 50000
+2026-09-28 22:52:03.141 - INFO: Running measurement "sequential operator[] of group End to end: 50,000 words (on-disk compressed), 100,000 lookups per batch" ...
+2026-09-28 22:52:14.436 - INFO: Done in 11.2949 seconds.
+2026-09-28 22:52:14.436 - INFO: Running measurement "batched lookupBatch of group End to end: 50,000 words (on-disk compressed), 100,000 lookups per batch" ...
+2026-09-28 22:52:26.663 - INFO: Done in 12.2266 seconds.
+2026-09-28 22:52:26.663 - INFO: Running measurement "concrete lookupBatch (no dispatch) of group End to end: 50,000 words (on-disk compressed), 100,000 lookups per batch" ...
+2026-09-28 22:52:39.074 - INFO: Done in 12.4114 seconds.
+#####################################################################
+# Benchmark class 'PolymorphicVocabulary::lookupBatch (end to end)' #
+#####################################################################
+General metadata: {"time-of-measurement":"2026-09-28 22:52:03.141"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'End to end: 50,000 words (on-disk compressed), 100,000 lookups per batch'
+    Measurements:
+    
+        Single measurement 'sequential operator[]'
+            time: 11.2949s
+        
+        Single measurement 'batched lookupBatch'
+            time: 12.2266s
+        
+        Single measurement 'concrete lookupBatch (no dispatch)'
+            time: 12.4114s
+    
+    Tables: None
+
