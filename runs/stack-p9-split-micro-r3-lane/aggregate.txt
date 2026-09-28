@@ -1,0 +1,40 @@
+ns/word, median [min..max] over trials; shortest measurement 10.0 s; delta = right vs left;
+verdict: faster/slower only if ranges do not overlap and |delta| >= 2 %, else parity
+
+A. this part vs previous part's code (same final binary): fallback sequentialLookupBatch -> batched lookupBatch
+benchmark | underlying | batch | trials | left ns/word | right ns/word | delta | verdict
+EndToEnd | CompressedVocabulary<VocabularyInMemory> | 100k lookups | 3/3 | 191.87 [189.04..200.91] | 196.81 [185.61..202.62] | +2.6 % | parity
+EndToEnd | VocabularyInMemory | 100k lookups | 3/3 | 52.63 [44.46..56.65] | 18.68 [18.44..18.72] | -64.5 % | faster
+Micro | CompressedVocabulary<VocabularyInMemory> | mixed markers | 3/3 | 146.90 [146.37..147.12] | 92.53 [92.38..92.62] | -37.0 % | faster
+Micro | CompressedVocabulary<VocabularyInMemory> | single marker | 3/3 | 143.62 [143.26..143.66] | 72.11 [71.92..72.23] | -49.8 % | faster
+Micro | VocabularyInMemory | mixed markers | 3/3 | 25.63 [25.12..27.19] | 8.67 [8.65..8.99] | -66.2 % | faster
+Micro | VocabularyInMemory | single marker | 3/3 | 23.76 [23.23..24.72] | 8.64 [8.53..8.74] | -63.6 % | faster
+
+B. research loop: batched lookupBatch, as submitted (repro binary) -> final
+benchmark | underlying | batch | trials | left ns/word | right ns/word | delta | verdict
+EndToEnd | CompressedVocabulary<VocabularyInMemory> | 100k lookups | 3/3 | 183.39 [180.90..201.12] | 196.81 [185.61..202.62] | +7.3 % | parity
+EndToEnd | VocabularyInMemory | 100k lookups | 3/3 | 62.44 [61.41..71.91] | 18.68 [18.44..18.72] | -70.1 % | faster
+Micro | CompressedVocabulary<VocabularyInMemory> | mixed markers | 3/3 | 88.00 [87.75..89.20] | 92.53 [92.38..92.62] | +5.2 % | slower
+Micro | CompressedVocabulary<VocabularyInMemory> | single marker | 3/3 | 83.30 [82.99..84.93] | 72.11 [71.92..72.23] | -13.4 % | faster
+Micro | VocabularyInMemory | mixed markers | 3/3 | 35.31 [34.94..35.80] | 8.67 [8.65..8.99] | -75.5 % | faster
+Micro | VocabularyInMemory | single marker | 3/3 | 33.23 [33.14..33.95] | 8.64 [8.53..8.74] | -74.0 % | faster
+
+C. same code in both binaries (noise check): fallback sequentialLookupBatch repro -> final
+benchmark | underlying | batch | trials | left ns/word | right ns/word | delta | verdict
+EndToEnd | CompressedVocabulary<VocabularyInMemory> | 100k lookups | 3/3 | 188.48 [181.26..222.81] | 191.87 [189.04..200.91] | +1.8 % | parity
+EndToEnd | VocabularyInMemory | 100k lookups | 3/3 | 54.85 [54.20..65.43] | 52.63 [44.46..56.65] | -4.0 % | parity
+Micro | CompressedVocabulary<VocabularyInMemory> | mixed markers | 3/3 | 146.82 [146.26..147.21] | 146.90 [146.37..147.12] | +0.1 % | parity
+Micro | CompressedVocabulary<VocabularyInMemory> | single marker | 3/3 | 143.69 [142.63..144.38] | 143.62 [143.26..143.66] | -0.1 % | parity
+Micro | VocabularyInMemory | mixed markers | 3/3 | 24.35 [24.31..24.41] | 25.63 [25.12..27.19] | +5.3 % | slower
+Micro | VocabularyInMemory | single marker | 3/3 | 22.47 [22.46..22.50] | 23.76 [23.23..24.72] | +5.7 % | slower
+
+D. lower bound (final binary): sequential operator[] -> batched lookupBatch
+benchmark | underlying | batch | trials | left ns/word | right ns/word | delta | verdict
+EndToEnd | CompressedVocabulary<VocabularyInMemory> | 100k lookups | 3/3 | 116.67 [116.61..117.15] | 196.81 [185.61..202.62] | +68.7 % | slower
+EndToEnd | VocabularyInMemory | 100k lookups | 3/3 | 15.60 [15.41..15.61] | 18.68 [18.44..18.72] | +19.8 % | slower
+Micro | CompressedVocabulary<VocabularyInMemory> | mixed markers | 3/3 | 103.77 [103.59..103.78] | 92.53 [92.38..92.62] | -10.8 % | faster
+Micro | CompressedVocabulary<VocabularyInMemory> | single marker | 3/3 | 99.50 [99.01..99.76] | 72.11 [71.92..72.23] | -27.5 % | faster
+Micro | VocabularyInMemory | mixed markers | 3/3 | 8.39 [8.29..8.46] | 8.67 [8.65..8.99] | +3.3 % | slower
+Micro | VocabularyInMemory | single marker | 3/3 | 7.35 [7.26..7.35] | 8.64 [8.53..8.74] | +17.5 % | slower
+
+bytes per call identical across arms and binaries: True

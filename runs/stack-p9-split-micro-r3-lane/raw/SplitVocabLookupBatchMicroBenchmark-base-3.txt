@@ -1,0 +1,158 @@
+2026-09-28 23:23:14.344 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/micro-lane/tmp/job-90012/splitVocabLookupBatchMicro/inMemory ...
+2026-09-28 23:23:14.344 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/micro-lane/tmp/job-90012/splitVocabLookupBatchMicro/inMemory ...
+2026-09-28 23:23:14.344 - INFO: Done, number of words: 426
+2026-09-28 23:23:14.344 - INFO: Done, number of words: 426
+2026-09-28 23:23:14.344 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/micro-lane/tmp/job-90012/splitVocabLookupBatchMicro/inMemory.a ...
+2026-09-28 23:23:14.344 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/micro-lane/tmp/job-90012/splitVocabLookupBatchMicro/inMemory.a ...
+2026-09-28 23:23:14.344 - INFO: Done, number of words: 86
+2026-09-28 23:23:14.344 - INFO: Done, number of words: 86
+2026-09-28 23:23:14.344 - INFO: Running measurement "sequential operator[], mixed markers of group VocabularyInMemory: 2048 lookups into 512 words" ...
+2026-09-28 23:23:24.344 - INFO: Done in 10 seconds.
+2026-09-28 23:23:24.344 - INFO: Running measurement "fallback sequentialLookupBatch, mixed markers of group VocabularyInMemory: 2048 lookups into 512 words" ...
+2026-09-28 23:23:34.344 - INFO: Done in 10 seconds.
+2026-09-28 23:23:34.344 - INFO: Running measurement "batched lookupBatch, mixed markers of group VocabularyInMemory: 2048 lookups into 512 words" ...
+2026-09-28 23:23:44.344 - INFO: Done in 10.0001 seconds.
+2026-09-28 23:23:44.345 - INFO: Running measurement "sequential operator[], single marker of group VocabularyInMemory: 2048 lookups into 512 words" ...
+2026-09-28 23:23:54.345 - INFO: Done in 10 seconds.
+2026-09-28 23:23:54.345 - INFO: Running measurement "fallback sequentialLookupBatch, single marker of group VocabularyInMemory: 2048 lookups into 512 words" ...
+2026-09-28 23:24:04.345 - INFO: Done in 10 seconds.
+2026-09-28 23:24:04.345 - INFO: Running measurement "batched lookupBatch, single marker of group VocabularyInMemory: 2048 lookups into 512 words" ...
+2026-09-28 23:24:14.345 - INFO: Done in 10 seconds.
+2026-09-28 23:24:14.348 - INFO: Finished writing compressed vocabulary, size = 1228 B [uncompressed = 8834 B, ratio = 13%]
+2026-09-28 23:24:14.349 - INFO: Finished writing compressed vocabulary, size = 451 B [uncompressed = 3832 B, ratio = 11%]
+2026-09-28 23:24:14.349 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/micro-lane/tmp/job-90012/splitVocabLookupBatchMicro/compressed ...
+2026-09-28 23:24:14.349 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/micro-lane/tmp/job-90012/splitVocabLookupBatchMicro/compressed.words ...
+2026-09-28 23:24:14.349 - INFO: Done, number of words: 426
+2026-09-28 23:24:14.349 - INFO: Done, number of words: 426
+2026-09-28 23:24:14.349 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/micro-lane/tmp/job-90012/splitVocabLookupBatchMicro/compressed.a ...
+2026-09-28 23:24:14.349 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/micro-lane/tmp/job-90012/splitVocabLookupBatchMicro/compressed.a.words ...
+2026-09-28 23:24:14.349 - INFO: Done, number of words: 86
+2026-09-28 23:24:14.349 - INFO: Done, number of words: 86
+2026-09-28 23:24:14.350 - INFO: Running measurement "sequential operator[], mixed markers of group CompressedVocabulary<VocabularyInMemory>: 2048 lookups into 512 words" ...
+2026-09-28 23:24:24.351 - INFO: Done in 10.0001 seconds.
+2026-09-28 23:24:24.351 - INFO: Running measurement "fallback sequentialLookupBatch, mixed markers of group CompressedVocabulary<VocabularyInMemory>: 2048 lookups into 512 words" ...
+2026-09-28 23:24:34.351 - INFO: Done in 10 seconds.
+2026-09-28 23:24:34.351 - INFO: Running measurement "batched lookupBatch, mixed markers of group CompressedVocabulary<VocabularyInMemory>: 2048 lookups into 512 words" ...
+2026-09-28 23:24:44.351 - INFO: Done in 10 seconds.
+2026-09-28 23:24:44.352 - INFO: Running measurement "sequential operator[], single marker of group CompressedVocabulary<VocabularyInMemory>: 2048 lookups into 512 words" ...
+2026-09-28 23:24:54.352 - INFO: Done in 10.0001 seconds.
+2026-09-28 23:24:54.352 - INFO: Running measurement "fallback sequentialLookupBatch, single marker of group CompressedVocabulary<VocabularyInMemory>: 2048 lookups into 512 words" ...
+2026-09-28 23:25:04.352 - INFO: Done in 10.0001 seconds.
+2026-09-28 23:25:04.352 - INFO: Running measurement "batched lookupBatch, single marker of group CompressedVocabulary<VocabularyInMemory>: 2048 lookups into 512 words" ...
+2026-09-28 23:25:14.352 - INFO: Done in 10 seconds.
+####################################################################
+# Benchmark class 'SplitVocabulary::lookupBatch (synthetic micro)' #
+####################################################################
+General metadata: {"time-of-measurement":"2026-09-28 23:23:14.343"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'VocabularyInMemory: 2048 lookups into 512 words'
+    Measurements:
+    
+        Single measurement 'sequential operator[], mixed markers'
+            metadata: {
+              "calls": 581946,
+              "words": 1191825408,
+              "bytes-per-call": 50664
+            }
+            time: 10s
+        
+        Single measurement 'fallback sequentialLookupBatch, mixed markers'
+            metadata: {
+              "calls": 200508,
+              "words": 410640384,
+              "bytes-per-call": 50664
+            }
+            time: 10s
+        
+        Single measurement 'batched lookupBatch, mixed markers'
+            metadata: {
+              "calls": 139751,
+              "words": 286210048,
+              "bytes-per-call": 50664
+            }
+            time: 10.0001s
+        
+        Single measurement 'sequential operator[], single marker'
+            metadata: {
+              "calls": 663362,
+              "words": 1358565376,
+              "bytes-per-call": 43766
+            }
+            time: 10s
+        
+        Single measurement 'fallback sequentialLookupBatch, single marker'
+            metadata: {
+              "calls": 217279,
+              "words": 444987392,
+              "bytes-per-call": 43766
+            }
+            time: 10s
+        
+        Single measurement 'batched lookupBatch, single marker'
+            metadata: {
+              "calls": 146929,
+              "words": 300910592,
+              "bytes-per-call": 43766
+            }
+            time: 10s
+    
+    Tables: None
+
+Group 'CompressedVocabulary<VocabularyInMemory>: 2048 lookups into 512 words'
+    Measurements:
+    
+        Single measurement 'sequential operator[], mixed markers'
+            metadata: {
+              "calls": 42428,
+              "words": 86892544,
+              "bytes-per-call": 50664
+            }
+            time: 10.0001s
+        
+        Single measurement 'fallback sequentialLookupBatch, mixed markers'
+            metadata: {
+              "calls": 33169,
+              "words": 67930112,
+              "bytes-per-call": 50664
+            }
+            time: 10s
+        
+        Single measurement 'batched lookupBatch, mixed markers'
+            metadata: {
+              "calls": 55487,
+              "words": 113637376,
+              "bytes-per-call": 50664
+            }
+            time: 10s
+        
+        Single measurement 'sequential operator[], single marker'
+            metadata: {
+              "calls": 43341,
+              "words": 88762368,
+              "bytes-per-call": 43766
+            }
+            time: 10.0001s
+        
+        Single measurement 'fallback sequentialLookupBatch, single marker'
+            metadata: {
+              "calls": 33982,
+              "words": 69595136,
+              "bytes-per-call": 43766
+            }
+            time: 10.0001s
+        
+        Single measurement 'batched lookupBatch, single marker'
+            metadata: {
+              "calls": 58620,
+              "words": 120053760,
+              "bytes-per-call": 43766
+            }
+            time: 10s
+    
+    Tables: None
+

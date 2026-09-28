@@ -1,0 +1,71 @@
+job=90012 lane=micro start=2026-09-28T21:15:13Z
+script=/local/data-ssd/stoetzem/incoming/p9-split-microbench.sh sha256=23789897ac500b490df206dc19a6c26f83aeb7d5bc9bbe384f319ed847eab854
+args=b77905824a3e2b352db7f0813993390a9c9677d4 334db4d14c60c9a9b7062c20fcd89a9c180e6815 stack-p9-split-micro-r3-lane
+qbranch=upstream-stack/07c sha=a1d6c06e3ede6d040031f2e513d09e6c0bc09e7c
+host=ural kernel=7.0.0-28-generic loadavg=2.28 2.15 2.19 2/927 3158080
+ural-wq running at start: 5192|bench
+--- bin-cache/334db4d14c60c9a9b7062c20fcd89a9c180e6815: CMakeCache.txt META META-qlever-server META-SplitVocabLookupBatchEndToEndBenchmark META-SplitVocabLookupBatchMicroBenchmark qlever-server SplitVocabLookupBatchEndToEndBenchmark SplitVocabLookupBatchMicroBenchmark 
+  META: sha=334db4d14c60c9a9b7062c20fcd89a9c180e6815
+  META: ref=334db4d14c60c9a9b7062c20fcd89a9c180e6815
+  META: targets=qlever-server
+  META: compiler=/usr/bin/g++-13 (g++-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META: liburing=2.15
+  META: flavor=u24-hosted
+  META: run=https://github.com/marvin7122/qlever/actions/runs/36467401435
+  META: built_utc=2026-09-28T19:20:31Z
+  META-qlever-server: branch=334db4d14c60c9a9b7062c20fcd89a9c180e6815
+  META-qlever-server: sha=334db4d14c60c9a9b7062c20fcd89a9c180e6815
+  META-qlever-server: target=qlever-server
+  META-qlever-server: flavor=u24-hosted
+  META-qlever-server: compiler=/usr/bin/g++-13 (g++-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-qlever-server: liburing=2.15
+  META-qlever-server: built_utc=2026-09-28T19:20:31Z host=github-hosted run=36467401435
+  META-SplitVocabLookupBatchEndToEndBenchmark: branch=wip/p9-07c
+  META-SplitVocabLookupBatchEndToEndBenchmark: sha=334db4d14c60c9a9b7062c20fcd89a9c180e6815
+  META-SplitVocabLookupBatchEndToEndBenchmark: target=SplitVocabLookupBatchEndToEndBenchmark
+  META-SplitVocabLookupBatchEndToEndBenchmark: flavor=u24
+  META-SplitVocabLookupBatchEndToEndBenchmark: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-SplitVocabLookupBatchEndToEndBenchmark: build_type=Release
+  META-SplitVocabLookupBatchEndToEndBenchmark: cxx_flags_release=-O3 -DNDEBUG
+  META-SplitVocabLookupBatchEndToEndBenchmark: exe_linker_flags=
+  META-SplitVocabLookupBatchEndToEndBenchmark: linker=default ld
+  META-SplitVocabLookupBatchEndToEndBenchmark: profile=b3c465cfff4a
+  META-SplitVocabLookupBatchEndToEndBenchmark: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-SplitVocabLookupBatchEndToEndBenchmark: built_utc=2026-09-28T18:51:14Z host=wolga wq_seq=246
+  META-SplitVocabLookupBatchMicroBenchmark: branch=wip/p9-07c
+  META-SplitVocabLookupBatchMicroBenchmark: sha=334db4d14c60c9a9b7062c20fcd89a9c180e6815
+  META-SplitVocabLookupBatchMicroBenchmark: target=SplitVocabLookupBatchMicroBenchmark
+  META-SplitVocabLookupBatchMicroBenchmark: flavor=u24
+  META-SplitVocabLookupBatchMicroBenchmark: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-SplitVocabLookupBatchMicroBenchmark: build_type=Release
+  META-SplitVocabLookupBatchMicroBenchmark: cxx_flags_release=-O3 -DNDEBUG
+  META-SplitVocabLookupBatchMicroBenchmark: exe_linker_flags=
+  META-SplitVocabLookupBatchMicroBenchmark: linker=default ld
+  META-SplitVocabLookupBatchMicroBenchmark: profile=b3c465cfff4a
+  META-SplitVocabLookupBatchMicroBenchmark: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-SplitVocabLookupBatchMicroBenchmark: built_utc=2026-09-28T18:51:14Z host=wolga wq_seq=246
+--- bin-cache/b77905824a3e2b352db7f0813993390a9c9677d4: CMakeCache.txt META-SplitVocabLookupBatchEndToEndBenchmark META-SplitVocabLookupBatchMicroBenchmark SplitVocabLookupBatchEndToEndBenchmark SplitVocabLookupBatchMicroBenchmark 
+  META-SplitVocabLookupBatchEndToEndBenchmark: branch=wip/part8-repro
+  META-SplitVocabLookupBatchEndToEndBenchmark: sha=b77905824a3e2b352db7f0813993390a9c9677d4
+  META-SplitVocabLookupBatchEndToEndBenchmark: target=SplitVocabLookupBatchEndToEndBenchmark
+  META-SplitVocabLookupBatchEndToEndBenchmark: flavor=u24
+  META-SplitVocabLookupBatchEndToEndBenchmark: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-SplitVocabLookupBatchEndToEndBenchmark: build_type=Release
+  META-SplitVocabLookupBatchEndToEndBenchmark: cxx_flags_release=-O3 -DNDEBUG
+  META-SplitVocabLookupBatchEndToEndBenchmark: exe_linker_flags=
+  META-SplitVocabLookupBatchEndToEndBenchmark: linker=default ld
+  META-SplitVocabLookupBatchEndToEndBenchmark: profile=b3c465cfff4a
+  META-SplitVocabLookupBatchEndToEndBenchmark: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-SplitVocabLookupBatchEndToEndBenchmark: built_utc=2026-09-28T17:32:08Z host=wolga wq_seq=233
+  META-SplitVocabLookupBatchMicroBenchmark: branch=wip/part8-repro
+  META-SplitVocabLookupBatchMicroBenchmark: sha=b77905824a3e2b352db7f0813993390a9c9677d4
+  META-SplitVocabLookupBatchMicroBenchmark: target=SplitVocabLookupBatchMicroBenchmark
+  META-SplitVocabLookupBatchMicroBenchmark: flavor=u24
+  META-SplitVocabLookupBatchMicroBenchmark: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-SplitVocabLookupBatchMicroBenchmark: build_type=Release
+  META-SplitVocabLookupBatchMicroBenchmark: cxx_flags_release=-O3 -DNDEBUG
+  META-SplitVocabLookupBatchMicroBenchmark: exe_linker_flags=
+  META-SplitVocabLookupBatchMicroBenchmark: linker=default ld
+  META-SplitVocabLookupBatchMicroBenchmark: profile=b3c465cfff4a
+  META-SplitVocabLookupBatchMicroBenchmark: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-SplitVocabLookupBatchMicroBenchmark: built_utc=2026-09-28T17:32:08Z host=wolga wq_seq=233
