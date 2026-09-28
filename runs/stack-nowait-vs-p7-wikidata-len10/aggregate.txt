@@ -1,0 +1,27 @@
+## cold
+| query | arm | reps | median elapsed_s | median read_bytes | median syscr | checksums |
+|---|---|---|---|---|---|---|
+| H-vocab-label-large-de | base | 10 | 28.6650 | 9430220800.0 | 2693.0 | 1 distinct |
+| H-vocab-label-large-de | variant | 10 | 24.7540 | 9442914304.0 | 8881582.0 | 1 distinct |
+| H-vocab-label-large-de | variant2 | 10 | 28.5862 | 9431711744.0 | 2689.0 | 1 distinct |
+| H-vocab-random-label-de-200k | base | 9 | 11.1587 | 2990010368 | 1201759 | 1 distinct |
+| H-vocab-random-label-de-200k | variant | 10 | 11.1740 | 2992119808.0 | 1550678.0 | 1 distinct |
+| H-vocab-random-label-de-200k | variant2 | 10 | 11.3236 | 2989496320.0 | 1201759.0 | 1 distinct |
+
+
+PROBLEMS:
+ - H-vocab-random-label-de-200k/base: status=failed bytes=0 (/local/data-ssd/stoetzem/thesis/experiments/runs/stack-nowait-vs-p7-wikidata-len10/cold/H-vocab-random-label-de-200k/base/raw/results.csv)
+
+## warm
+| query | arm | reps | median elapsed_s | median read_bytes | median syscr | checksums |
+|---|---|---|---|---|---|---|
+| H-vocab-label-large-de | base | 10 | 19.7959 | 0.0 | 2673.0 | 1 distinct |
+| H-vocab-label-large-de | variant | 10 | 16.1653 | 0.0 | 8881566.0 | 1 distinct |
+| H-vocab-label-large-de | variant2 | 10 | 19.7249 | 0.0 | 2673.0 | 1 distinct |
+| H-vocab-random-label-de-200k | base | 10 | 4.6827 | 0.0 | 3605233.0 | 1 distinct |
+| H-vocab-random-label-de-200k | variant | 10 | 4.6938 | 0.0 | 4651990.0 | 1 distinct |
+| H-vocab-random-label-de-200k | variant2 | 10 | 4.8907 | 0.0 | 3605233.0 | 1 distinct |
+
+
+ALL REPS COMPLETE, NO ZERO-BYTE REPS
+
