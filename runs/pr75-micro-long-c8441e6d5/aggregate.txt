@@ -1,0 +1,17 @@
+pr75-micro-long-c8441e6d5 (Ural micro lane job 90007, SCREENING; pinned CPU 14; 1 warm-up + 3 trials; aggregate written offline after the in-script python failed on a comma in a measurement name)
+
+A assemble, same binary (part 5 bench c8441e6d5), 60000 batches x 20000 words per measurement
+measurement | median s [min-max] | ns/word median [min-max] | delta vs owning | verdict
+baseline: owning vector<string> per word | 22.40 [22.28-22.48] | 18.67 [18.56-18.73] | base |
+ContiguousVocabBatchBuilder + memcpy | 8.93 [8.80-9.07] | 7.44 [7.33-7.56] | -60.1 % | faster
+ArenaVocabBatchBuilder::appendWord | 10.44 [9.59-10.46] | 8.70 [7.99-8.72] | -53.4 % | faster
+
+B resolve 4096 of 50000 words (VocabularyInMemoryBinSearch), 60000 batches per measurement, p4 = db5fa8d1e (#3523 + bench), p5 = c8441e6d5 (#3524 + bench), interleaved
+measurement | p4 median s [min-max] ns/lookup | p5 median s [min-max] ns/lookup | delta | verdict
+1 per-word operator[] + string copy | 26.82 [26.81-26.92] 109.1 | 26.79 [26.63-26.79] 109.0 | -0.1 % | parity
+2 single lookupBatch | 27.85 [27.83-28.14] 113.3 | 28.03 [28.03-28.09] 114.1 | +0.7 % | parity
+3 per-word operator[] views, no copy | 20.35 [20.27-20.37] 82.8 | 20.34 [20.29-20.49] 82.7 | -0.1 % | parity
+within binary: lookupBatch vs copy loop: p4 +3.9 % (slower), p5 +4.7 % (slower); views-only vs copy loop: -24.1 % both
+
+C perf stat (2000 batches, whole process), lookupBatch (m2) minus copy loop (m1), p5: instructions +436.2 M = +53 per lookup; cycles +213.6 M = +26 per lookup; cache-references +23.2 M = +2.8 per lookup
+D jemalloc nrequests minus fixture-only process, 200 batches: assemble baseline 19794.1/batch (0.99/word), contiguous 5.1/batch, arena 19.1/batch; resolve m1 4054.1/batch, m2 4056.1/batch (+2), m3 1.1/batch (p4 = p5)

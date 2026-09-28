@@ -1,0 +1,14 @@
+binary /local/data-ssd/stoetzem/bin-cache/c8441e6d54320c3f9587c50b4ffb55d9aa30be6e/VocabBatchLookupBenchmark sha256 f0aab52742d23d508851e0e9d2cbb1ee58e8a8413539e3110b4bad8aa5ce8d27
+binary /local/data-ssd/stoetzem/bin-cache/db5fa8d1e862912b392e9768f4331451d0557cbe/VocabBatchResolveAbBenchmark sha256 7c95f85e253bb0aec832cde3e460513a01ec2dcfb6e5b55d36cdd2b79b6e6007
+binary /local/data-ssd/stoetzem/bin-cache/c8441e6d54320c3f9587c50b4ffb55d9aa30be6e/VocabBatchResolveAbBenchmark sha256 a37cf8330918e9d84ee8d548bbdf494e720c861e362a79436e79e590f1d2e6eb
+part4 bench commit db5fa8d1e862912b392e9768f4331451d0557cbe (upstream-stack/05 f566b590d + benchmark); part5 bench commit c8441e6d54320c3f9587c50b4ffb55d9aa30be6e (upstream-stack/06a c83ed19c0 + benchmark)
+taskset -c 3; ASM_REPS=60000 RES_REPS=60000 TRIALS=3 (+1 warm-up each) ALLOC_REPS=200
+== A assemble (same binary)
+== B resolve (part 4 vs part 5, interleaved)
+== C perf stat + jemalloc per resolve measurement
+== D jemalloc per assemble variant
+Traceback (most recent call last):
+  File "<stdin>", line 18, in <module>
+  File "<stdin>", line 5, in load
+ValueError: could not convert string to float: ' no copy'
+BENCH_EXIT=0

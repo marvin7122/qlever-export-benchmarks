@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+##QBRANCH=upstream-stack/06a
+# #3524 (fork #75) row 3 final verdict (ural-wq, exclusive slot): resolve 4,096 of
+# 50,000 words from VocabularyInMemoryBinSearch, VocabBatchResolveAbBenchmark
+# (identical source) built on
+#   p5  = 46367ef8a (#3524 upstream-stack/06a ee355a63a + bench, before the fix)
+#   fix = d5fa80c4f (#3524 + "Construct each word in place in sequentialLookupBatch" 71b0baf67 + bench)
+# Both binaries are hosted build-binaries builds (runs 36480381125, 36480374723; same
+# toolchain). #3523 vs #3524 was measured in pr75-micro-long-c8441e6d5 (parity).
+# Each measurement 60,000 batches (>= 10 s); 1 warm-up + 3 interleaved trials per arm
+# (ABBA order), pinned to one core; median + min-max.
+set -u
+C=/local/data-ssd/stoetzem/bin-cache
+declare -A BIN=([p5]=$C/46367ef8a0b826024513c4e6c36f4288fb124c2c/VocabBatchResolveAbBenchmark
+                [fix]=$C/d5fa80c4fdcf94988d09a7ad22e0da0f6af47ddd/VocabBatchResolveAbBenchmark)
+OUT=/local/data-ssd/stoetzem/thesis/experiments/runs/pr75-resolve-final-d5fa80c4f
+CORE=${CORE:-3}; REPS=60000; TRIALS=3
+export LD_LIBRARY_PATH=/local/data-ssd/stoetzem/liburing-install/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+mkdir -p "$OUT/raw"
+exec > >(tee "$OUT/driver.log") 2>&1
+for a in p5 fix; do test -x "${BIN[$a]}" || { echo "MISSING ${BIN[$a]}"; exit 1; }; echo "$a ${BIN[$a]} sha256 $(sha256sum "${BIN[$a]}" | cut -d' ' -f1)"; done
+{ echo "host $(hostname)"; date -u +%FT%TZ; uname -r; cat /proc/loadavg; lscpu | grep -E 'Model name|^CPU\(s\)'; cat /sys/devices/system/cpu/cpu$CORE/cpufreq/scaling_governor 2>/dev/null; } > "$OUT/env.txt"
+cp "$0" "$OUT/run.sh" 2>/dev/null || true
+cd "$(mktemp -d)"
+run() { VOCAB_RESOLVE_AB_REPETITIONS=$REPS taskset -c $CORE "${BIN[$1]}" -p; }
+for a in p5 fix; do run $a > "$OUT/raw/warmup-$a.txt" 2>&1 || { echo "warm-up $a FAILED"; exit 1; }; done
+echo "trial|arm|measurement|seconds" > "$OUT/results.psv"
+orders=("p5 fix" "fix p5")
+for i in $(seq 1 $TRIALS); do
+  for a in ${orders[$(( (i-1) % 2 ))]}; do
+    run $a > "$OUT/raw/trial$i-$a.txt" 2>&1 || { echo "trial $i $a FAILED"; exit 1; }
+    awk -v r=$i -v a=$a '/Single measurement/{s=$0; sub(/.*measurement \047/,"",s); sub(/\047.*/,"",s)} /time:/{t=$2; sub(/s$/,"",t); print r "|" a "|" s "|" t}' "$OUT/raw/trial$i-$a.txt" >> "$OUT/results.psv"
+  done
+done
+# Cycles decide warm/CPU verdicts: perf stat per arm and measurement (20,000 batches, one process each).
+mkdir -p "$OUT/perf"
+for a in p5 fix; do for m in 1 2; do
+  VOCAB_RESOLVE_AB_ONLY=$m VOCAB_RESOLVE_AB_REPETITIONS=20000 taskset -c $CORE perf stat -x, -o "$OUT/perf/$a-m$m.csv" -e task-clock,cycles,instructions "${BIN[$a]}" -p > "$OUT/perf/$a-m$m.out" 2>&1 || echo "perf $a m$m rc=$?"
+done; done
+python3 - "$OUT" $REPS <<'PY'
+import sys,statistics as st,collections
+out,rr=sys.argv[1],int(sys.argv[2]); d=collections.OrderedDict()
+for l in list(open(out+"/results.psv"))[1:]:
+  t,a,m,s=l.rstrip("\n").split("|"); d.setdefault((a,m),[]).append(float(s))
+ns=lambda x:x/(rr*4096)*1e9
+def v(b,x):
+  bm,xm=st.median(b),st.median(x); dd=100*(xm-bm)/bm; dis=max(x)<min(b) or min(x)>max(b)
+  return f"{dd:+.1f} % " + ((("faster" if dd<0 else "slower") if dis and abs(dd)>=2 else "parity"))
+L=["arm | measurement | median s [min-max] | ns/lookup median [min-max]"]
+for (a,m),x in d.items(): L.append(f"{a} | {m} | {st.median(x):.2f} [{min(x):.2f}-{max(x):.2f}] | {ns(st.median(x)):.1f} [{ns(min(x)):.1f}-{ns(max(x)):.1f}]")
+ms=sorted({m for _,m in d})
+for m in ms: L.append(f"{m}: fix vs p5 {v(d[('p5',m)],d[('fix',m)])}")
+for a in ("p5","fix"): L.append(f"{a}: lookupBatch vs copy loop {v(d[(a,ms[0])],d[(a,ms[1])])}")
+open(out+"/aggregate.txt","w").write("\n".join(L)+"\n"); print("\n".join(L))
+PY
+echo BENCH_EXIT=0

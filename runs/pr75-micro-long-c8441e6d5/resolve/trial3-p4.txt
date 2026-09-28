@@ -1,0 +1,30 @@
+2026-09-28 22:29:39.813 - INFO: Running measurement "1 per-word operator[] + string copy of group Resolve 4,096 of 50,000 words" ...
+2026-09-28 22:30:06.731 - INFO: Done in 26.9177 seconds.
+2026-09-28 22:30:06.731 - INFO: Running measurement "2 single lookupBatch of group Resolve 4,096 of 50,000 words" ...
+2026-09-28 22:30:34.869 - INFO: Done in 28.1379 seconds.
+2026-09-28 22:30:34.870 - INFO: Running measurement "3 per-word operator[] views, no copy of group Resolve 4,096 of 50,000 words" ...
+2026-09-28 22:30:55.237 - INFO: Done in 20.3667 seconds.
+#########################################
+# Benchmark class 'VocabBatchResolveAb' #
+#########################################
+General metadata: {"time-of-measurement":"2026-09-28 22:29:39.813"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'Resolve 4,096 of 50,000 words'
+    Measurements:
+    
+        Single measurement '1 per-word operator[] + string copy'
+            time: 26.9177s
+        
+        Single measurement '2 single lookupBatch'
+            time: 28.1379s
+        
+        Single measurement '3 per-word operator[] views, no copy'
+            time: 20.3667s
+    
+    Tables: None
+

@@ -1,0 +1,60 @@
+--------------------------------------------------------------------------------
+Profile data file '/home/runner/work/_temp/w/base-s1.cg' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 28108392
+Trigger: Program termination
+Profiled target:  /home/runner/work/_temp/w/base/VocabBatchLookupBenchmark -w /home/runner/work/_temp/w/base-s1-callgrind.json (PID 3594, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+Ir                   
+--------------------------------------------------------------------------------
+147,823,746 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                   file:function
+--------------------------------------------------------------------------------
+85,202,595 (57.64%)  ???:ad_benchmark::(anonymous namespace)::makeSyntheticWord(unsigned long) [/home/runner/work/_temp/w/base/VocabBatchLookupBenchmark]
+ 5,684,673 ( 3.85%)  ./libio/./libio/iofwrite.c:fwrite [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 5,542,240 ( 3.75%)  ???:operator delete(void*, unsigned long) [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+ 5,411,333 ( 3.66%)  ./string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:__memset_avx2_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 5,082,269 ( 3.44%)  ???:operator new(unsigned long) [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+ 4,699,188 ( 3.18%)  ./libio/./libio/fileops.c:_IO_file_xsputn@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 3,556,109 ( 2.41%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) [/home/runner/work/_temp/w/base/VocabBatchLookupBenchmark]
+ 3,100,387 ( 2.10%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 2,891,024 ( 1.96%)  ???:VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const [/home/runner/work/_temp/w/base/VocabBatchLookupBenchmark]
+ 2,800,797 ( 1.89%)  ???:VocabularyInMemoryBinSearch::WordWriter::operator()(std::basic_string_view<char, std::char_traits<char> >, unsigned long) [/home/runner/work/_temp/w/base/VocabBatchLookupBenchmark]
+ 1,710,309 ( 1.16%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__mempcpy_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,705,353 ( 1.15%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() [/home/runner/work/_temp/w/base/VocabBatchLookupBenchmark]
+ 1,620,772 ( 1.10%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*) [/home/runner/work/_temp/w/base/VocabBatchLookupBenchmark]
+ 1,492,980 ( 1.01%)  ./libio/./libio/libioP.h:fwrite
+ 1,219,764 ( 0.83%)  ???:0x00000000000af680 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+ 1,043,931 ( 0.71%)  ???:ad_benchmark::(anonymous namespace)::VocabBatchLookupEndToEndBenchmark::VocabBatchLookupEndToEndBenchmark() [/home/runner/work/_temp/w/base/VocabBatchLookupBenchmark]
+ 1,030,883 ( 0.70%)  ./elf/./elf/dl-lookup.c:do_lookup_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   925,269 ( 0.63%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) [/home/runner/work/_temp/w/base/VocabBatchLookupBenchmark]
+   823,120 ( 0.56%)  ???:0x00000000000a41c0 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+   781,804 ( 0.53%)  ???:_GLOBAL__sub_I_VocabBatchLookupBenchmark.cpp [/home/runner/work/_temp/w/base/VocabBatchLookupBenchmark]
+   659,960 ( 0.45%)  ./string/../sysdeps/x86_64/multiarch/strlen-avx2.S:__strlen_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   641,170 ( 0.43%)  ./elf/../sysdeps/generic/dl-new-hash.h:_dl_lookup_symbol_x
+   560,073 ( 0.38%)  ???:ContiguousVocabBatchBuilder::ContiguousVocabBatchBuilder(std::span<unsigned long const, 18446744073709551615ul>) [/home/runner/work/_temp/w/base/VocabBatchLookupBenchmark]
+   524,288 ( 0.35%)  ???:VocabularyInMemoryBinSearch::wordAtPosition(unsigned long) const [/home/runner/work/_temp/w/base/VocabBatchLookupBenchmark]
+   460,303 ( 0.31%)  ???:ad_benchmark::(anonymous namespace)::VocabBatchLookupMicroBenchmark::runAllBenchmarks() [/home/runner/work/_temp/w/base/VocabBatchLookupBenchmark]
+   447,121 ( 0.30%)  ???:0x0000000000030eb0 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+   408,740 ( 0.28%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > ad_utility::vocabulary::wordAsStringOrPlaceholder<VocabularyInMemoryBinSearch>(VocabularyInMemoryBinSearch const&, unsigned long) [/home/runner/work/_temp/w/base/VocabBatchLookupBenchmark]
+   393,336 ( 0.27%)  ???:void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location) [/home/runner/work/_temp/w/base/VocabBatchLookupBenchmark]
+   374,938 ( 0.25%)  ???:0x0000000000124290 [???]
+   374,926 ( 0.25%)  ???:0x0000000000123f60 [???]
+   360,448 ( 0.24%)  ???:VocabularyInMemoryBinSearch::operator[](unsigned long) const [/home/runner/work/_temp/w/base/VocabBatchLookupBenchmark]
+   339,214 ( 0.23%)  ???:0x00000000001244f0 [???]
+   255,613 ( 0.17%)  ./elf/./elf/dl-lookup.c:_dl_lookup_symbol_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   240,340 ( 0.16%)  ???:std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~vector() [/home/runner/work/_temp/w/base/VocabBatchLookupBenchmark]
+   240,046 ( 0.16%)  ???:0x00000000000adbd0 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]

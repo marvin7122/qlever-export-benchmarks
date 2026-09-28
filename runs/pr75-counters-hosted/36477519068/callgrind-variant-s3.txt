@@ -1,0 +1,60 @@
+--------------------------------------------------------------------------------
+Profile data file '/home/runner/work/_temp/w/variant-s3.cg' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 22535947
+Trigger: Program termination
+Profiled target:  /home/runner/work/_temp/w/variant/VocabBatchResolveAbBenchmark -w /home/runner/work/_temp/w/variant-s3-callgrind.json (PID 3688, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+Ir                   
+--------------------------------------------------------------------------------
+117,504,034 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                   file:function
+--------------------------------------------------------------------------------
+64,998,493 (55.32%)  ???:ad_benchmark::(anonymous namespace)::VocabBatchResolveAbBenchmark::VocabBatchResolveAbBenchmark() [/home/runner/work/_temp/w/variant/VocabBatchResolveAbBenchmark]
+ 9,880,119 ( 8.41%)  ???:operator delete(void*, unsigned long) [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+ 5,683,077 ( 4.84%)  ./libio/./libio/iofwrite.c:fwrite [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 4,922,726 ( 4.19%)  ???:operator new(unsigned long) [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+ 4,697,872 ( 4.00%)  ./libio/./libio/fileops.c:_IO_file_xsputn@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 4,092,808 ( 3.48%)  ./string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:__memset_avx2_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 3,613,780 ( 3.08%)  ???:VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const [/home/runner/work/_temp/w/variant/VocabBatchResolveAbBenchmark]
+ 3,002,134 ( 2.55%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 2,800,797 ( 2.38%)  ???:VocabularyInMemoryBinSearch::WordWriter::operator()(std::basic_string_view<char, std::char_traits<char> >, unsigned long) [/home/runner/work/_temp/w/variant/VocabBatchResolveAbBenchmark]
+ 1,709,835 ( 1.46%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__mempcpy_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,492,560 ( 1.27%)  ./libio/./libio/libioP.h:fwrite
+ 1,028,729 ( 0.88%)  ./elf/./elf/dl-lookup.c:do_lookup_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   655,360 ( 0.56%)  ???:VocabularyInMemoryBinSearch::wordAtPosition(unsigned long) const [/home/runner/work/_temp/w/variant/VocabBatchResolveAbBenchmark]
+   640,188 ( 0.54%)  ./elf/../sysdeps/generic/dl-new-hash.h:_dl_lookup_symbol_x
+   585,192 ( 0.50%)  ???:0x00000000000af680 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+   576,390 ( 0.49%)  ???:ad_benchmark::(anonymous namespace)::VocabBatchResolveAbBenchmark::runAllBenchmarks() [/home/runner/work/_temp/w/variant/VocabBatchResolveAbBenchmark]
+   491,592 ( 0.42%)  ???:void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location) [/home/runner/work/_temp/w/variant/VocabBatchResolveAbBenchmark]
+   450,560 ( 0.38%)  ???:VocabularyInMemoryBinSearch::operator[](unsigned long) const [/home/runner/work/_temp/w/variant/VocabBatchResolveAbBenchmark]
+   395,335 ( 0.34%)  ???:0x00000000000a41c0 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+   363,058 ( 0.31%)  ???:0x0000000000124260 [???]
+   363,046 ( 0.31%)  ???:0x0000000000123f30 [???]
+   362,652 ( 0.31%)  ???:0x00000000001244c0 [???]
+   296,603 ( 0.25%)  ???:0x0000000000030eb0 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+   278,015 ( 0.24%)  ???:0x00000000000adbd0 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+   255,128 ( 0.22%)  ./elf/./elf/dl-lookup.c:_dl_lookup_symbol_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   234,050 ( 0.20%)  ./elf/../sysdeps/x86_64/dl-machine.h:_dl_relocate_object
+   209,104 ( 0.18%)  ???:0x0000000000023040 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+   205,284 ( 0.17%)  ./elf/./elf/dl-reloc.c:_dl_relocate_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   204,370 ( 0.17%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > ad_utility::vocabulary::wordAsStringOrPlaceholder<VocabularyInMemoryBinSearch>(VocabularyInMemoryBinSearch const&, unsigned long) [/home/runner/work/_temp/w/variant/VocabBatchResolveAbBenchmark]
+   204,143 ( 0.17%)  ./elf/./elf/do-rel.h:_dl_relocate_object
+   200,012 ( 0.17%)  ???:0x0000000000124cb0 [???]
+   199,992 ( 0.17%)  ???:0x0000000005145430 [???]
+   162,531 ( 0.14%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/strcmp-sse2.S:strcmp [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   157,880 ( 0.13%)  ./elf/./elf/dl-lookup.c:check_match [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   104,510 ( 0.09%)  ???:void std::shuffle<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>&>(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>&) [/home/runner/work/_temp/w/variant/VocabBatchResolveAbBenchmark]

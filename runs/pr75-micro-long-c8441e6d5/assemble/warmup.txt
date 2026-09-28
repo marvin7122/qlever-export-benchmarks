@@ -1,0 +1,55 @@
+2026-09-28 22:19:21.250 - INFO: Running measurement "baseline: owning vector<string> per word of group Assemble 20,000-word batch (mean word length ~45)" ...
+2026-09-28 22:19:43.717 - INFO: Done in 22.467 seconds.
+2026-09-28 22:19:43.717 - INFO: Running measurement "ContiguousVocabBatchBuilder + memcpy of group Assemble 20,000-word batch (mean word length ~45)" ...
+2026-09-28 22:19:52.718 - INFO: Done in 9.00084 seconds.
+2026-09-28 22:19:52.718 - INFO: Running measurement "ArenaVocabBatchBuilder::appendWord of group Assemble 20,000-word batch (mean word length ~45)" ...
+2026-09-28 22:20:02.349 - INFO: Done in 9.63103 seconds.
+2026-09-28 22:20:02.349 - INFO: Running measurement "per-word operator[] loop of group Resolve 4,096-word batch from 50,000-word VocabularyInMemoryBinSearch" ...
+2026-09-28 22:20:02.350 - INFO: Done in 0.001006 seconds.
+2026-09-28 22:20:02.350 - INFO: Running measurement "single lookupBatch of group Resolve 4,096-word batch from 50,000-word VocabularyInMemoryBinSearch" ...
+2026-09-28 22:20:02.351 - INFO: Done in 0.000609 seconds.
+################################################################
+# Benchmark class 'VocabBatchLookup synthetic micro-benchmark' #
+################################################################
+General metadata: {"time-of-measurement":"2026-09-28 22:19:21.250"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'Assemble 20,000-word batch (mean word length ~45)'
+    Measurements:
+    
+        Single measurement 'baseline: owning vector<string> per word'
+            time: 22.467s
+        
+        Single measurement 'ContiguousVocabBatchBuilder + memcpy'
+            time: 9.00084s
+        
+        Single measurement 'ArenaVocabBatchBuilder::appendWord'
+            time: 9.63103s
+    
+    Tables: None
+
+###########################################################
+# Benchmark class 'VocabBatchLookup end-to-end benchmark' #
+###########################################################
+General metadata: {"time-of-measurement":"2026-09-28 22:20:02.349"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'Resolve 4,096-word batch from 50,000-word VocabularyInMemoryBinSearch'
+    Measurements:
+    
+        Single measurement 'per-word operator[] loop'
+            time: 0.001006s
+        
+        Single measurement 'single lookupBatch'
+            time: 0.000609s
+    
+    Tables: None
+
