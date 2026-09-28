@@ -1,0 +1,111 @@
+2026-09-28 20:36:48.631 - INFO: [1mQLever server 0.0.0-unknown, compiled on Mon Sep 28 17:51:24 UTC 2026 using git hash QLever [22m
+2026-09-28 20:36:48.631 - INFO: Runtime parameter set from the command line: use-fast-export-stream-formatter=true
+2026-09-28 20:36:48.631 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-09-28 20:36:48.631 - INFO: The git hash used to build this index was "65f84b4"
+2026-09-28 20:36:48.631 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/dblp/dblp.vocabulary.words ...
+2026-09-28 20:36:48.638 - INFO: Done, number of words: 446,944,668
+2026-09-28 20:36:48.638 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 446,955
+2026-09-28 20:36:48.641 - INFO: Registered PSO permutation: #relations = 6, #blocks = 8,187, #triples = 255,805,025
+2026-09-28 20:36:48.661 - INFO: Registered PSO permutation: #relations = 96, #blocks = 51,023, #triples = 1,593,245,022
+2026-09-28 20:36:48.663 - INFO: Registered POS permutation: #relations = 6, #blocks = 8,187, #triples = 255,805,025
+2026-09-28 20:36:48.682 - INFO: Registered POS permutation: #relations = 96, #blocks = 51,023, #triples = 1,593,245,022
+2026-09-28 20:36:48.697 - INFO: Registered OPS permutation: #relations = 345,357,897, #blocks = 42,492, #triples = 1,593,245,022
+2026-09-28 20:36:48.713 - INFO: Registered OSP permutation: #relations = 345,357,897, #blocks = 42,492, #triples = 1,593,245,022
+2026-09-28 20:36:48.723 - INFO: Registered SPO permutation: #relations = 255,804,614, #blocks = 33,993, #triples = 1,593,245,022
+2026-09-28 20:36:48.731 - INFO: Registered SOP permutation: #relations = 255,804,614, #blocks = 33,993, #triples = 1,593,245,022
+2026-09-28 20:36:48.731 - INFO: Reading patterns from file /local/data-ssd/stoetzem/dblp/dblp.index.patterns ...
+2026-09-28 20:36:48.731 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-09-28 20:36:56.994 - INFO: Initializing server ...
+2026-09-28 20:36:56.994 - INFO: No access token required for restricted API calls
+2026-09-28 20:36:56.994 - INFO: The server is ready, listening for requests on port 7307 ...
+2026-09-28 20:41:31.838 - INFO: 
+2026-09-28 20:41:31.838 - INFO: Request received via GET, no content type specified
+2026-09-28 20:41:31.838 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 20:41:31.856 - INFO: 
+2026-09-28 20:41:31.856 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 20:41:31.859 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large
+# Goal: external-vocabulary lookup pressure with larger bounded output.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?title }
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-28 20:41:31.859 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 20:41:31.859 - INFO: Query planning done in 2 ms
+2026-09-28 20:41:31.859 - INFO: Result has unknown size (not computed yet)
+2026-09-28 20:41:32.134 - INFO: Heap allocations during the export: 386,142 (527,157,976 bytes)
+2026-09-28 20:41:32.152 - INFO: Done processing query and sending result, total time was 295 ms
+2026-09-28 20:55:09.747 - INFO: 
+2026-09-28 20:55:09.747 - INFO: Request received via GET, no content type specified
+2026-09-28 20:55:09.747 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 20:55:09.765 - INFO: 
+2026-09-28 20:55:09.765 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 20:55:09.765 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, 1,000,000 rows (10x H-vocab-title-large)
+# Goal: the H-vocab-title-large shape with a response long enough (several
+# seconds warm) for a timing verdict on the per-literal formatting cost.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?title }
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 1000000
+
+2026-09-28 20:55:09.765 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 20:55:09.765 - INFO: Query planning done in 0 ms
+2026-09-28 20:55:09.765 - INFO: Result has unknown size (not computed yet)
+2026-09-28 20:55:12.653 - INFO: Heap allocations during the export: 4,178,744 (5,640,792,745 bytes)
+2026-09-28 20:55:12.674 - INFO: Done processing query and sending result, total time was 2,909 ms
+2026-09-28 21:03:22.063 - INFO: 
+2026-09-28 21:03:22.063 - INFO: Request received via GET, no content type specified
+2026-09-28 21:03:22.063 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 21:03:22.081 - INFO: 
+2026-09-28 21:03:22.081 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 21:03:22.082 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-28 21:03:22.082 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 21:03:22.084 - INFO: Query planning done in 2 ms
+2026-09-28 21:03:22.103 - INFO: Result has unknown size (not computed yet)
+2026-09-28 21:03:22.641 - INFO: Heap allocations during the export: 519,350 (887,022,692 bytes)
+2026-09-28 21:03:22.649 - INFO: Done processing query and sending result, total time was 567 ms
+2026-09-28 21:16:22.978 - INFO: 
+2026-09-28 21:16:22.978 - INFO: Request received via GET, no content type specified
+2026-09-28 21:16:22.978 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 21:16:23.000 - INFO: 
+2026-09-28 21:16:23.000 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 21:16:23.000 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep, year <= 1990
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1990"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-28 21:16:23.000 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 21:16:23.001 - INFO: Query planning done in 1 ms
+2026-09-28 21:16:23.088 - INFO: Result has unknown size (not computed yet)
+2026-09-28 21:16:29.471 - INFO: Heap allocations during the export: 6,787,700 (10,522,791,824 bytes)
+2026-09-28 21:16:29.480 - INFO: Done processing query and sending result, total time was 6,480 ms

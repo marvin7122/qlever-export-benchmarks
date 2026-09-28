@@ -1,0 +1,40 @@
+Generating 1000000 synthetic triples per dataset...
+Synthetic dataset generation complete.
+#############################################################
+# Benchmark class 'SPARQL Export Serializer MicroBenchmark' #
+#############################################################
+General metadata: {"time-of-measurement":"2026-09-28 23:48:23.510"}
+
+No configuration options were defined.
+
+####################
+# Table benchmarks #
+####################
+Table 'Turtle, title-like triples (H-vocab-title-large shape)'
+    metadata: {"triples":1000000,"trials":3,"sink-checksum":0}
+    arm                                    | median ns/triple | min ns/triple | max ns/triple | passes per trial | heap allocations per triple | bytes per triple | median vs arm 0
+    legacy formatTriple (flag off)         | 251.3627         | 250.5763      | 251.4233      | 38               | 5.0300                      | 201.7168         | 0 %            
+    fast, one string per triple            | 151.9135         | 151.4343      | 152.1150      | 66               | 1.0000                      | 201.7168         | -39.564 %      
+    fast, 64 KiB batches (flag on)         | 113.2177         | 112.4619      | 116.2922      | 89               | 0.0031                      | 201.7168         | -54.9584 %     
+    formatter streaming mode (lower bound) | 92.5373          | 91.9315       | 97.6875       | 109              | 0.0000                      | 201.7168         | -63.1858 %     
+
+Table 'Turtle, mixed triples'
+    metadata: {"triples":1000000,"trials":3,"sink-checksum":0}
+    arm                                    | median ns/triple | min ns/triple | max ns/triple | passes per trial | heap allocations per triple | bytes per triple | median vs arm 0
+    legacy formatTriple (flag off)         | 158.3219         | 158.2916      | 159.1277      | 63               | 4.5000                      | 105.4286         | 0 %            
+    fast, one string per triple            | 111.6137         | 111.5837      | 111.6446      | 90               | 1.0000                      | 105.4286         | -29.5021 %     
+    fast, 64 KiB batches (flag on)         | 76.1062          | 75.9237       | 76.8274       | 130              | 0.0016                      | 105.4286         | -51.9295 %     
+    formatter streaming mode (lower bound) | 57.5350          | 57.3868       | 57.8217       | 174              | 0.0000                      | 105.4286         | -63.6595 %     
+
+Table 'CSV, mixed triples'
+    metadata: {"triples":1000000,"trials":3,"sink-checksum":0}
+    arm                      | median ns/triple | min ns/triple | max ns/triple | passes per trial | heap allocations per triple | bytes per triple | median vs arm 0
+    legacy formatTriple      | 224.2450         | 223.8016      | 224.4912      | 44               | 4.9000                      | 104.8286         | 0 %            
+    formatter streaming mode | 79.3334          | 79.2576       | 80.8267       | 126              | 0.0000                      | 104.8286         | -64.622 %      
+
+Table 'TSV, mixed triples'
+    metadata: {"triples":1000000,"trials":3,"sink-checksum":0}
+    arm                      | median ns/triple | min ns/triple | max ns/triple | passes per trial | heap allocations per triple | bytes per triple | median vs arm 0
+    legacy formatTriple      | 206.4570         | 206.0989      | 206.4727      | 49               | 4.1000                      | 103.0286         | 0 %            
+    formatter streaming mode | 85.8832          | 85.6747       | 86.5141       | 117              | 0.0000                      | 103.0286         | -58.4014 %     
+

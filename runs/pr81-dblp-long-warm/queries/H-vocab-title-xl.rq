@@ -1,0 +1,10 @@
+# Tier H-vocab — title literals, 1,000,000 rows (10x H-vocab-title-large)
+# Goal: the H-vocab-title-large shape with a response long enough (several
+# seconds warm) for a timing verdict on the per-literal formatting cost.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?title }
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 1000000

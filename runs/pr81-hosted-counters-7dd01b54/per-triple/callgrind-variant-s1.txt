@@ -1,0 +1,60 @@
+--------------------------------------------------------------------------------
+Profile data file '/home/runner/work/_temp/w/variant-s1.cg' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 70616754
+Trigger: Program termination
+Profiled target:  /home/runner/work/_temp/w/variant/SerializerMicroBenchmark -w /home/runner/work/_temp/w/variant-s1-callgrind.json (PID 3415, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+Ir                   
+--------------------------------------------------------------------------------
+334,927,931 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                   file:function
+--------------------------------------------------------------------------------
+54,544,256 (16.29%)  ???:std::_Function_handler<ad_benchmark::(anonymous namespace)::Consumed (std::vector<qlever::constructExport::EvaluatedTriple, std::allocator<qlever::constructExport::EvaluatedTriple> > const&), ad_benchmark::(anonymous namespace)::turtleArms()::{lambda(auto:1 const&)#2}>::_M_invoke(std::_Any_data const&, std::vector<qlever::constructExport::EvaluatedTriple, std::allocator<qlever::constructExport::EvaluatedTriple> > const&) [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+46,779,624 (13.97%)  ???:ql::export_formatting::FastExportStreamFormatter::writeEscapedTurtleLiteral(std::basic_string_view<char, std::char_traits<char> >) [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+22,043,175 ( 6.58%)  ???:_GLOBAL__sub_I__Znwm [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+19,800,123 ( 5.91%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+19,375,200 ( 5.78%)  ???:ql::export_formatting::FastExportStreamFormatter::ensureAvailable(unsigned long) [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+12,723,170 ( 3.80%)  ???:free [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+11,640,114 ( 3.48%)  ???:ad_utility::InputRangeFromGet<qlever::constructExport::EvaluatedTriple, cppcoro::NoDetails>::getNextAndStore() [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+11,294,402 ( 3.37%)  ./string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:__memset_avx2_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 9,690,899 ( 2.89%)  ???:malloc [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+ 9,600,000 ( 2.87%)  ???:ql::export_formatting::FastExportStreamFormatter::writeRaw(std::basic_string_view<char, std::char_traits<char> >) [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+ 9,156,000 ( 2.73%)  ???:ql::export_formatting::FastExportStreamFormatter::writeTerm(qlever::constructExport::EvaluatedTermData const&, ql::export_formatting::ExportFormat) [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+ 9,000,000 ( 2.69%)  ???:qlever::constructExport::formatTripleAsTurtleWithFastFormatter[abi:cxx11](qlever::constructExport::EvaluatedTriple const&) [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+ 8,160,000 ( 2.44%)  ???:ql::export_formatting::FastExportStreamFormatter::writeTriple(ql::export_formatting::ExportFormat, qlever::constructExport::EvaluatedTriple const&) [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+ 6,217,708 ( 1.86%)  ???:0x00000000000af680 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+ 5,800,101 ( 1.73%)  ???:std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+ 5,688,000 ( 1.70%)  ???:qlever::constructExport::(anonymous namespace)::turtleTripleSizeUpperBound(qlever::constructExport::EvaluatedTriple const&) [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+ 4,995,745 ( 1.49%)  ???:std::__cxx11::to_string(unsigned long) [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+ 4,920,210 ( 1.47%)  ???:ad_utility::RangeToInputRangeFromGet<std::ranges::transform_view<std::ranges::owning_view<ad_utility::InputRangeTypeErased<qlever::constructExport::EvaluatedTriple, cppcoro::NoDetails> >, ad_benchmark::(anonymous namespace)::turtleArms()::{lambda(auto:1 const&)#2}::operator()<std::vector<qlever::constructExport::EvaluatedTriple, std::allocator<qlever::constructExport::EvaluatedTriple> > >(std::vector<qlever::constructExport::EvaluatedTriple, std::allocator<qlever::constructExport::EvaluatedTriple> > const&) const::{lambda(qlever::constructExport::EvaluatedTriple const&)#1}> >::get() [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+ 4,876,260 ( 1.46%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+ 4,680,000 ( 1.40%)  ???:ql::export_formatting::FastExportStreamFormatter::FastExportStreamFormatter(std::span<char, 18446744073709551615ul>) [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+ 4,415,520 ( 1.32%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+ 4,067,558 ( 1.21%)  ???:0x00000000000a41c0 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+ 3,597,455 ( 1.07%)  ???:ad_benchmark::(anonymous namespace)::generateMixedTriples(unsigned long) [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+ 3,520,072 ( 1.05%)  ???:operator new(unsigned long) [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+ 3,020,000 ( 0.90%)  ???:absl::lts_20260107::strings_internal::CatPieces[abi:cxx11](std::initializer_list<std::basic_string_view<char, std::char_traits<char> > >) [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+ 3,004,614 ( 0.90%)  ./string/../sysdeps/x86_64/multiarch/memchr-avx2.S:__memchr_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 2,450,748 ( 0.73%)  ???:0x000000000012b020 [???]
+ 1,998,528 ( 0.60%)  ???:absl::lts_20260107::numbers_internal::FastIntToBuffer(unsigned long, char*) [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+ 1,983,076 ( 0.59%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*) [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+ 1,819,379 ( 0.54%)  ???:0x0000000000030eb0 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+ 1,597,844 ( 0.48%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() [/home/runner/work/_temp/w/variant/SerializerMicroBenchmark]
+ 1,571,067 ( 0.47%)  ./string/../sysdeps/x86_64/multiarch/strlen-avx2.S:__strlen_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,226,949 ( 0.37%)  ./elf/./elf/dl-lookup.c:do_lookup_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 1,001,371 ( 0.30%)  ???:0x00000000000aab40 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+   937,432 ( 0.28%)  ./nptl/./nptl/pthread_mutex_trylock.c:pthread_mutex_trylock@@GLIBC_2.34 [/usr/lib/x86_64-linux-gnu/libc.so.6]

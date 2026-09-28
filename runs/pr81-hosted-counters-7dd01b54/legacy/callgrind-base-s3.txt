@@ -1,0 +1,60 @@
+--------------------------------------------------------------------------------
+Profile data file '/home/runner/work/_temp/w/base-s3.cg' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 131241505
+Trigger: Program termination
+Profiled target:  /home/runner/work/_temp/w/base/SerializerMicroBenchmark -w /home/runner/work/_temp/w/base-s3-callgrind.json (PID 3651, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+Ir                   
+--------------------------------------------------------------------------------
+633,009,912 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                    file:function
+--------------------------------------------------------------------------------
+168,673,460 (26.65%)  ???:RdfEscaping::validRDFLiteralFromNormalized[abi:cxx11](std::basic_string_view<char, std::char_traits<char> >) [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+ 58,624,508 ( 9.26%)  ???:std::_Function_handler<ad_benchmark::(anonymous namespace)::Consumed (std::vector<qlever::constructExport::EvaluatedTriple, std::allocator<qlever::constructExport::EvaluatedTriple> > const&), ad_benchmark::(anonymous namespace)::turtleArms()::{lambda(auto:1 const&)#1}>::_M_invoke(std::_Any_data const&, std::vector<qlever::constructExport::EvaluatedTriple, std::allocator<qlever::constructExport::EvaluatedTriple> > const&) [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+ 46,908,200 ( 7.41%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 42,768,458 ( 6.76%)  ???:free [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+ 35,620,000 ( 5.63%)  ???:absl::lts_20260107::strings_internal::CatPieces[abi:cxx11](std::initializer_list<std::basic_string_view<char, std::char_traits<char> > >) [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+ 32,224,232 ( 5.09%)  ???:malloc [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+ 22,043,175 ( 3.48%)  ???:_GLOBAL__sub_I__Znwm [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+ 19,460,000 ( 3.07%)  ???:qlever::constructExport::formatTerm[abi:cxx11](qlever::constructExport::EvaluatedTermData const&, bool) [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+ 19,400,190 ( 3.06%)  ???:ad_utility::InputRangeFromGet<qlever::constructExport::EvaluatedTriple, cppcoro::NoDetails>::getNextAndStore() [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+ 18,120,000 ( 2.86%)  ???:qlever::constructExport::formatTriple[abi:cxx11](qlever::constructExport::EvaluatedTriple const&, ad_utility::MediaType const&) [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+ 17,154,503 ( 2.71%)  ???:void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [clone .isra.0] [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+ 16,983,578 ( 2.68%)  ./string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:__memset_avx2_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 12,151,432 ( 1.92%)  ???:operator new(unsigned long) [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+  8,920,101 ( 1.41%)  ???:std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+  8,600,350 ( 1.36%)  ???:ad_utility::RangeToInputRangeFromGet<std::ranges::transform_view<std::ranges::owning_view<ad_utility::InputRangeTypeErased<qlever::constructExport::EvaluatedTriple, cppcoro::NoDetails> >, ad_benchmark::(anonymous namespace)::turtleArms()::{lambda(auto:1 const&)#1}::operator()<std::vector<qlever::constructExport::EvaluatedTriple, std::allocator<qlever::constructExport::EvaluatedTriple> > >(std::vector<qlever::constructExport::EvaluatedTriple, std::allocator<qlever::constructExport::EvaluatedTriple> > const&) const::{lambda(qlever::constructExport::EvaluatedTriple const&)#1}> >::get() [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+  8,427,806 ( 1.33%)  ./string/../sysdeps/x86_64/multiarch/memchr-avx2.S:__memchr_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  7,496,000 ( 1.18%)  ???:absl::lts_20260107::strings_internal::ApplySubstitutions(std::basic_string_view<char, std::char_traits<char> >, std::vector<absl::lts_20260107::strings_internal::ViableSubstitution, std::allocator<absl::lts_20260107::strings_internal::ViableSubstitution> >*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+  7,207,900 ( 1.14%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+  6,236,328 ( 0.99%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+  6,222,476 ( 0.98%)  ???:0x00000000000af680 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+  5,845,152 ( 0.92%)  ???:0x000000000012b020 [???]
+  5,391,000 ( 0.85%)  ???:absl::lts_20260107::StrAppend(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, absl::lts_20260107::AlphaNum const&, absl::lts_20260107::AlphaNum const&) [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+  4,997,000 ( 0.79%)  ???:std::vector<absl::lts_20260107::strings_internal::ViableSubstitution, std::allocator<absl::lts_20260107::strings_internal::ViableSubstitution> > absl::lts_20260107::strings_internal::FindSubstitutions<std::initializer_list<std::pair<std::basic_string_view<char, std::char_traits<char> >, std::basic_string_view<char, std::char_traits<char> > > > >(std::basic_string_view<char, std::char_traits<char> >, std::initializer_list<std::pair<std::basic_string_view<char, std::char_traits<char> >, std::basic_string_view<char, std::char_traits<char> > > > const&) [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+  4,995,745 ( 0.79%)  ???:std::__cxx11::to_string(unsigned long) [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+  4,415,520 ( 0.70%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+  4,069,192 ( 0.64%)  ???:0x00000000000a41c0 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+  3,597,455 ( 0.57%)  ???:ad_benchmark::(anonymous namespace)::generateMixedTriples(unsigned long) [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+  2,354,044 ( 0.37%)  ???:0x000000000012b950 [???]
+  2,354,020 ( 0.37%)  ???:0x000000000012b6c0 [???]
+  1,998,528 ( 0.32%)  ???:absl::lts_20260107::numbers_internal::FastIntToBuffer(unsigned long, char*) [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+  1,983,076 ( 0.31%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*) [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+  1,813,987 ( 0.29%)  ???:0x0000000000030eb0 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+  1,806,000 ( 0.29%)  ???:absl::lts_20260107::StrCat[abi:cxx11](absl::lts_20260107::AlphaNum const&, absl::lts_20260107::AlphaNum const&, absl::lts_20260107::AlphaNum const&) [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+  1,512,000 ( 0.24%)  ???:absl::lts_20260107::StrReplaceAll[abi:cxx11](std::basic_string_view<char, std::char_traits<char> >, std::initializer_list<std::pair<std::basic_string_view<char, std::char_traits<char> >, std::basic_string_view<char, std::char_traits<char> > > >) [/home/runner/work/_temp/w/base/SerializerMicroBenchmark]
+  1,226,949 ( 0.19%)  ./elf/./elf/dl-lookup.c:do_lookup_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
