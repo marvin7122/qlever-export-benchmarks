@@ -1,0 +1,60 @@
+    51.45%  FsstScratchBufferBenchmark  [.] fsst_decompress
+    20.80%  FsstScratchBufferBenchmark  [.] FsstDecoder::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>) const
+    13.15%  FsstScratchBufferBenchmark  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+    10.09%  FsstScratchBufferBenchmark  [.] std::_Function_handler<unsigned long (std::basic_string_view<char, std::char_traits<char> >), ad_benchmark::(anonymous namespace)::FsstScratchBufferBenchmark::runAllBenchmarks()::{lambda(std::basic_string_view<char, std::char_traits<char> >)#6}>::_M_invoke(std::_Any_data const&, std::basic_string_view<char, std::char_traits<char> >&&)
+     4.10%  FsstScratchBufferBenchmark  [.] ad_benchmark::(anonymous namespace)::FsstScratchBufferBenchmark::runAllBenchmarks()
+     0.03%  [kernel.kallsyms]           [k] task_tick_fair
+     0.03%  [kernel.kallsyms]           [k] read_tsc
+     0.02%  [kernel.kallsyms]           [k] kernel_init_pages
+     0.02%  [kernel.kallsyms]           [k] update_vsyscall
+     0.02%  [kernel.kallsyms]           [k] timekeeping_update_from_shadow
+     0.01%  [kernel.kallsyms]           [k] local_clock_noinstr
+     0.01%  ld-linux-x86-64.so.2        [.] 0x00000000000100f8
+     0.01%  [kernel.kallsyms]           [k] mas_wr_store_type
+     0.01%  [kernel.kallsyms]           [k] __hrtimer_run_queues
+     0.01%  [kernel.kallsyms]           [k] srso_safe_ret
+     0.01%  [kernel.kallsyms]           [k] update_wall_time
+     0.01%  [kernel.kallsyms]           [k] tick_nohz_handler
+     0.01%  [kernel.kallsyms]           [k] rcu_core
+     0.01%  [kernel.kallsyms]           [k] rcu_sched_clock_irq
+     0.01%  [kernel.kallsyms]           [k] native_sched_clock
+     0.01%  [kernel.kallsyms]           [k] __update_load_avg_cfs_rq
+     0.01%  [kernel.kallsyms]           [k] error_entry
+     0.01%  [kernel.kallsyms]           [k] folio_add_new_anon_rmap
+     0.01%  FsstScratchBufferBenchmark  [.] libfsst::compressBulk(libfsst::SymbolTable&, unsigned long, unsigned long const*, unsigned char const**, unsigned long, unsigned char*, unsigned long*, unsigned char**, bool, bool)
+     0.01%  FsstScratchBufferBenchmark  [.] libfsst::buildSymbolTable(libfsst::Counters&, std::vector<unsigned char const*, std::allocator<unsigned char const*> >, unsigned long const*, bool)
+     0.01%  FsstScratchBufferBenchmark  [.] absl::lts_20260107::time_internal::cctz::detail::impl::n_sec(long, long, long, long, long, long)
+     0.01%  [kernel.kallsyms]           [k] note_gp_changes
+     0.01%  [kernel.kallsyms]           [k] update_rq_clock
+     0.01%  [kernel.kallsyms]           [k] sysvec_apic_timer_interrupt
+     0.01%  [kernel.kallsyms]           [k] __note_gp_changes
+     0.01%  [kernel.kallsyms]           [k] native_queued_spin_lock_slowpath
+     0.01%  [kernel.kallsyms]           [k] update_se
+     0.01%  [kernel.kallsyms]           [k] __css_rstat_updated
+     0.01%  [kernel.kallsyms]           [k] perf_adjust_freq_unthr_context
+     0.01%  [kernel.kallsyms]           [k] timerqueue_del
+     0.01%  [kernel.kallsyms]           [k] calc_timer_values
+     0.01%  [kernel.kallsyms]           [k] srso_untrain_ret
+     0.01%  [kernel.kallsyms]           [k] arch_perf_update_userpage
+     0.01%  [kernel.kallsyms]           [k] arch_scale_freq_tick
+     0.01%  [kernel.kallsyms]           [k] notifier_call_chain
+     0.01%  [kernel.kallsyms]           [k] __timekeeping_advance
+     0.01%  [kernel.kallsyms]           [k] rcu_segcblist_ready_cbs
+     0.01%  [kernel.kallsyms]           [k] irq_exit_rcu
+     0.01%  [kernel.kallsyms]           [k] irq_work_run_list
+     0.01%  [kernel.kallsyms]           [k] sched_clock_noinstr
+     0.01%  [kernel.kallsyms]           [k] hrtimer_update_next_event
+     0.01%  [kernel.kallsyms]           [k] update_entity_lag
+     0.01%  [kernel.kallsyms]           [k] nohz_balancer_kick
+     0.00%  [kernel.kallsyms]           [k] sched_clock
+     0.00%  [kernel.kallsyms]           [k] __raw_spin_lock_irqsave
+     0.00%  [kernel.kallsyms]           [k] asm_sysvec_apic_timer_interrupt
+     0.00%  [kernel.kallsyms]           [k] srso_return_thunk
+     0.00%  [kernel.kallsyms]           [k] acct_account_cputime
+     0.00%  [kernel.kallsyms]           [k] lru_gen_add_folio
+     0.00%  [kernel.kallsyms]           [k] folio_mark_accessed
+     0.00%  [kernel.kallsyms]           [k] make_vfsuid
+     0.00%  [kernel.kallsyms]           [k] next_uptodate_folio
+     0.00%  [kernel.kallsyms]           [k] perf_event_addr_filters_exec
+     0.00%  [kernel.kallsyms]           [k] perf_event_update_userpage
+     0.00%  [kernel.kallsyms]           [k] native_write_msr

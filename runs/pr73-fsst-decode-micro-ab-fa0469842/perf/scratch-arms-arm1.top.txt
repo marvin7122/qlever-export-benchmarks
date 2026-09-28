@@ -1,0 +1,60 @@
+    20.44%  FsstScratchBufferBenchmark  [.] fsst_decompress
+    19.54%  FsstScratchBufferBenchmark  [.] std::_Function_handler<unsigned long (std::basic_string_view<char, std::char_traits<char> >), ad_benchmark::(anonymous namespace)::FsstScratchBufferBenchmark::runAllBenchmarks()::{lambda(std::basic_string_view<char, std::char_traits<char> >)#2}>::_M_invoke(std::_Any_data const&, std::basic_string_view<char, std::char_traits<char> >&&)
+    15.52%  FsstScratchBufferBenchmark  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+    13.83%  FsstScratchBufferBenchmark  [.] void ql::resize_and_overwrite<char, std::char_traits<char>, std::allocator<char>, detail::decompressToOwnedString<FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1}>(unsigned long, FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1})::{lambda(char*, unsigned long)#1}>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long, detail::decompressToOwnedString<FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1}>(unsigned long, FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1})::{lambda(char*, unsigned long)#1}&&)
+     8.16%  FsstScratchBufferBenchmark  [.] FsstDecoder::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>) const
+     7.15%  FsstScratchBufferBenchmark  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+     2.71%  libjemalloc.so.2            [.] operator new(unsigned long)
+     2.51%  libjemalloc.so.2            [.] operator delete(void*, unsigned long)
+     2.11%  FsstScratchBufferBenchmark  [.] ad_benchmark::(anonymous namespace)::FsstScratchBufferBenchmark::runAllBenchmarks()
+     1.65%  FsstScratchBufferBenchmark  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+     1.47%  libc.so.6                   [.] 0x00000000001897ba
+     0.43%  FsstScratchBufferBenchmark  [.] memset@plt
+     0.41%  libc.so.6                   [.] 0x0000000000189880
+     0.40%  libc.so.6                   [.] 0x000000000018988a
+     0.40%  libc.so.6                   [.] 0x0000000000189884
+     0.38%  FsstScratchBufferBenchmark  [.] operator new(unsigned long)@plt
+     0.25%  FsstScratchBufferBenchmark  [.] operator delete(void*, unsigned long)@plt
+     0.21%  libc.so.6                   [.] 0x0000000000189865
+     0.21%  libc.so.6                   [.] 0x000000000018986d
+     0.18%  libc.so.6                   [.] 0x000000000018971b
+     0.16%  libc.so.6                   [.] 0x000000000018971f
+     0.15%  libc.so.6                   [.] 0x0000000000189860
+     0.15%  libc.so.6                   [.] 0x0000000000189714
+     0.13%  libc.so.6                   [.] 0x0000000000189725
+     0.11%  libc.so.6                   [.] 0x0000000000189718
+     0.10%  libc.so.6                   [.] 0x00000000001897b5
+     0.09%  libc.so.6                   [.] 0x0000000000189710
+     0.09%  libc.so.6                   [.] 0x00000000001897b0
+     0.08%  libc.so.6                   [.] 0x0000000000189894
+     0.07%  libc.so.6                   [.] 0x0000000000189890
+     0.06%  libc.so.6                   [.] 0x00000000001897d2
+     0.06%  libc.so.6                   [.] 0x000000000018989a
+     0.06%  libc.so.6                   [.] 0x000000000018972a
+     0.06%  libc.so.6                   [.] 0x000000000018973e
+     0.06%  libc.so.6                   [.] 0x000000000018986a
+     0.05%  libc.so.6                   [.] 0x00000000001897cd
+     0.04%  libc.so.6                   [.] 0x00000000001897d5
+     0.03%  libc.so.6                   [.] 0x00000000001897c9
+     0.03%  libc.so.6                   [.] 0x00000000001897bd
+     0.01%  [kernel.kallsyms]           [k] __hrtimer_run_queues
+     0.01%  [kernel.kallsyms]           [k] read_tsc
+     0.01%  [kernel.kallsyms]           [k] srso_safe_ret
+     0.01%  [kernel.kallsyms]           [k] tick_nohz_handler
+     0.01%  [kernel.kallsyms]           [k] __timekeeping_advance
+     0.01%  [kernel.kallsyms]           [k] update_curr
+     0.01%  [kernel.kallsyms]           [k] sched_tick
+     0.01%  [kernel.kallsyms]           [k] timekeeping_update_from_shadow
+     0.01%  [kernel.kallsyms]           [k] hrtimer_interrupt
+     0.01%  [kernel.kallsyms]           [k] sched_clock_cpu
+     0.01%  [kernel.kallsyms]           [k] task_tick_fair
+     0.01%  [kernel.kallsyms]           [k] update_vsyscall
+     0.01%  [kernel.kallsyms]           [k] _raw_spin_lock
+     0.01%  FsstScratchBufferBenchmark  [.] ad_benchmark::(anonymous namespace)::FsstScratchBufferBenchmark::FsstScratchBufferBenchmark()
+     0.01%  [kernel.kallsyms]           [k] update_vdso_time_data
+     0.01%  [kernel.kallsyms]           [k] note_gp_changes
+     0.01%  [kernel.kallsyms]           [k] update_deadline
+     0.01%  libc.so.6                   [.] 0x0000000000189734
+     0.01%  [kernel.kallsyms]           [k] native_read_msr
+     0.01%  [kernel.kallsyms]           [k] srso_return_thunk
+     0.01%  [kernel.kallsyms]           [k] update_se

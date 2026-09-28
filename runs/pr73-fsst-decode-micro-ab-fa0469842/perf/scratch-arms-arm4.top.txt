@@ -1,0 +1,58 @@
+    51.32%  FsstScratchBufferBenchmark  [.] fsst_decompress
+    21.72%  FsstScratchBufferBenchmark  [.] FsstDecoder::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>) const
+    12.99%  FsstScratchBufferBenchmark  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     9.70%  FsstScratchBufferBenchmark  [.] std::_Function_handler<unsigned long (std::basic_string_view<char, std::char_traits<char> >), ad_benchmark::(anonymous namespace)::FsstScratchBufferBenchmark::runAllBenchmarks()::{lambda(std::basic_string_view<char, std::char_traits<char> >)#5}>::_M_invoke(std::_Any_data const&, std::basic_string_view<char, std::char_traits<char> >&&)
+     3.80%  FsstScratchBufferBenchmark  [.] ad_benchmark::(anonymous namespace)::FsstScratchBufferBenchmark::runAllBenchmarks()
+     0.04%  [kernel.kallsyms]           [k] task_tick_fair
+     0.04%  [kernel.kallsyms]           [k] read_tsc
+     0.03%  [kernel.kallsyms]           [k] kernel_init_pages
+     0.02%  [kernel.kallsyms]           [k] __raw_spin_lock_irqsave
+     0.02%  [kernel.kallsyms]           [k] srso_safe_ret
+     0.02%  [kernel.kallsyms]           [k] srso_return_thunk
+     0.02%  [kernel.kallsyms]           [k] update_curr
+     0.02%  [kernel.kallsyms]           [k] perf_event_update_userpage
+     0.01%  [kernel.kallsyms]           [k] sched_clock_noinstr
+     0.01%  [kernel.kallsyms]           [k] update_se
+     0.01%  [kernel.kallsyms]           [k] __timekeeping_advance
+     0.01%  [kernel.kallsyms]           [k] timekeeping_update_from_shadow
+     0.01%  FsstScratchBufferBenchmark  [.] libfsst::compressBulk(libfsst::SymbolTable&, unsigned long, unsigned long const*, unsigned char const**, unsigned long, unsigned char*, unsigned long*, unsigned char**, bool, bool)
+     0.01%  [kernel.kallsyms]           [k] __memcg_slab_free_hook
+     0.01%  [kernel.kallsyms]           [k] native_sched_clock
+     0.01%  [kernel.kallsyms]           [k] timekeeping_adjust
+     0.01%  [kernel.kallsyms]           [k] raw_notifier_call_chain
+     0.01%  [kernel.kallsyms]           [k] __update_load_avg_cfs_rq
+     0.01%  FsstScratchBufferBenchmark  [.] ad_benchmark::(anonymous namespace)::FsstScratchBufferBenchmark::FsstScratchBufferBenchmark()
+     0.01%  FsstScratchBufferBenchmark  [.] absl::lts_20260107::time_internal::cctz::detail::impl::n_sec(long, long, long, long, long, long)
+     0.01%  [kernel.kallsyms]           [k] __update_load_avg_se
+     0.01%  libstdc++.so.6.0.33         [.] std::locale::_Impl::~_Impl()
+     0.01%  [kernel.kallsyms]           [k] rcu_report_qs_rnp
+     0.01%  [kernel.kallsyms]           [k] note_gp_changes
+     0.01%  [kernel.kallsyms]           [k] native_read_msr
+     0.01%  [kernel.kallsyms]           [k] update_fast_timekeeper
+     0.01%  [kernel.kallsyms]           [k] arch_exit_to_user_mode_prepare.isra.0
+     0.01%  [kernel.kallsyms]           [k] __irqentry_text_end
+     0.01%  [kernel.kallsyms]           [k] timerqueue_add
+     0.01%  [kernel.kallsyms]           [k] rcu_segcblist_ready_cbs
+     0.01%  [kernel.kallsyms]           [k] get_jiffies_update
+     0.01%  [kernel.kallsyms]           [k] rcu_core_si
+     0.01%  [kernel.kallsyms]           [k] update_cfs_rq_load_avg
+     0.01%  [kernel.kallsyms]           [k] sysvec_apic_timer_interrupt
+     0.01%  [kernel.kallsyms]           [k] native_irq_return_iret
+     0.01%  [kernel.kallsyms]           [k] irqentry_exit
+     0.01%  [kernel.kallsyms]           [k] update_process_times
+     0.01%  [kernel.kallsyms]           [k] sched_clock
+     0.00%  [kernel.kallsyms]           [k] __hrtimer_run_queues
+     0.00%  [kernel.kallsyms]           [k] nohz_balancer_kick
+     0.00%  [kernel.kallsyms]           [k] rcu_pending
+     0.00%  [kernel.kallsyms]           [k] __x86_indirect_thunk_r12
+     0.00%  [kernel.kallsyms]           [k] hrtimer_interrupt
+     0.00%  [kernel.kallsyms]           [k] irq_exit_rcu
+     0.00%  [kernel.kallsyms]           [k] update_vsyscall
+     0.00%  [kernel.kallsyms]           [k] mas_spanning_rebalance
+     0.00%  [kernel.kallsyms]           [k] chacha_permute
+     0.00%  [kernel.kallsyms]           [k] mod_node_page_state
+     0.00%  [kernel.kallsyms]           [k] pte_offset_map_lock
+     0.00%  [kernel.kallsyms]           [k] __mmap_region
+     0.00%  [kernel.kallsyms]           [k] kfree
+     0.00%  [kernel.kallsyms]           [k] pud_val
+     0.00%  [kernel.kallsyms]           [k] x86_pmu_enable

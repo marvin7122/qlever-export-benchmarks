@@ -1,0 +1,60 @@
+    21.20%  CompressedVocabularyLookupBenchmark  [.] fsst_decompress
+    15.34%  CompressedVocabularyLookupBenchmark  [.] ad_benchmark::(anonymous namespace)::CompressedVocabularyLookupBenchmark::runAllBenchmarks()
+    13.41%  CompressedVocabularyLookupBenchmark  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+    11.25%  CompressedVocabularyLookupBenchmark  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::resize(unsigned long, char) [clone .constprop.0]
+     8.94%  CompressedVocabularyLookupBenchmark  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+     7.59%  CompressedVocabularyLookupBenchmark  [.] void ql::resize_and_overwrite<char, std::char_traits<char>, std::allocator<char>, detail::decompressToOwnedString<FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1}>(unsigned long, FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1})::{lambda(char*, unsigned long)#1}>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long, detail::decompressToOwnedString<FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1}>(unsigned long, FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1})::{lambda(char*, unsigned long)#1}&&)
+     3.77%  libjemalloc.so.2                     [.] operator new(unsigned long)
+     3.10%  libjemalloc.so.2                     [.] operator delete(void*, unsigned long)
+     2.84%  CompressedVocabularyLookupBenchmark  [.] FsstDecoder::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     1.64%  libc.so.6                            [.] 0x000000000018973e
+     1.57%  CompressedVocabularyLookupBenchmark  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
+     1.50%  libc.so.6                            [.] 0x00000000001897ba
+     0.84%  libc.so.6                            [.] 0x0000000000189833
+     0.64%  CompressedVocabularyLookupBenchmark  [.] memset@plt
+     0.50%  CompressedVocabularyLookupBenchmark  [.] operator delete(void*, unsigned long)@plt
+     0.43%  CompressedVocabularyLookupBenchmark  [.] operator new(unsigned long)@plt
+     0.40%  libc.so.6                            [.] 0x0000000000189725
+     0.27%  libc.so.6                            [.] 0x00000000001897b0
+     0.25%  libc.so.6                            [.] 0x00000000001897b5
+     0.22%  libc.so.6                            [.] 0x0000000000189718
+     0.21%  libc.so.6                            [.] 0x000000000018971b
+     0.20%  libc.so.6                            [.] 0x0000000000189714
+     0.19%  libc.so.6                            [.] 0x000000000018972a
+     0.18%  libc.so.6                            [.] 0x00000000001897d5
+     0.18%  libc.so.6                            [.] 0x0000000000189734
+     0.17%  libc.so.6                            [.] 0x0000000000189710
+     0.17%  libc.so.6                            [.] 0x00000000001897d2
+     0.16%  libc.so.6                            [.] 0x000000000018973a
+     0.15%  libc.so.6                            [.] 0x00000000001897cd
+     0.11%  libc.so.6                            [.] 0x00000000001897c9
+     0.08%  CompressedVocabularyLookupBenchmark  [.] libfsst::compressBulk(libfsst::SymbolTable&, unsigned long, unsigned long const*, unsigned char const**, unsigned long, unsigned char*, unsigned long*, unsigned char**, bool, bool)
+     0.06%  libc.so.6                            [.] 0x00000000001897f5
+     0.06%  libc.so.6                            [.] 0x00000000001897fc
+     0.06%  CompressedVocabularyLookupBenchmark  [.] ad_benchmark::(anonymous namespace)::CompressedVocabularyLookupBenchmark::CompressedVocabularyLookupBenchmark()
+     0.06%  libjemalloc.so.2                     [.] 0x0000000000036899
+     0.05%  libc.so.6                            [.] 0x00000000001897de
+     0.05%  libc.so.6                            [.] 0x00000000001897bd
+     0.05%  libc.so.6                            [.] 0x00000000001897e8
+     0.04%  libc.so.6                            [.] 0x00000000001897e3
+     0.04%  libc.so.6                            [.] 0x0000000000189824
+     0.03%  [kernel.kallsyms]                    [k] read_tsc
+     0.03%  libjemalloc.so.2                     [.] 0x0000000000036932
+     0.03%  libc.so.6                            [.] 0x000000000018982e
+     0.03%  libjemalloc.so.2                     [.] 0x0000000000036aa6
+     0.03%  libc.so.6                            [.] 0x0000000000189829
+     0.03%  libc.so.6                            [.] 0x00000000001897ec
+     0.03%  libc.so.6                            [.] 0x0000000000189741
+     0.02%  libjemalloc.so.2                     [.] 0x00000000000367e5
+     0.02%  libjemalloc.so.2                     [.] 0x0000000000036815
+     0.02%  libjemalloc.so.2                     [.] 0x00000000000367f9
+     0.02%  libjemalloc.so.2                     [.] 0x00000000000367fa
+     0.02%  libjemalloc.so.2                     [.] 0x0000000000036abb
+     0.02%  [kernel.kallsyms]                    [k] srso_return_thunk
+     0.02%  libjemalloc.so.2                     [.] 0x0000000000036996
+     0.02%  libjemalloc.so.2                     [.] 0x00000000000367e0
+     0.02%  libjemalloc.so.2                     [.] 0x000000000003690b
+     0.02%  libjemalloc.so.2                     [.] 0x0000000000036957
+     0.02%  libjemalloc.so.2                     [.] 0x00000000000367ea
+     0.02%  libjemalloc.so.2                     [.] 0x0000000000036985
+     0.02%  libjemalloc.so.2                     [.] 0x000000000003688b

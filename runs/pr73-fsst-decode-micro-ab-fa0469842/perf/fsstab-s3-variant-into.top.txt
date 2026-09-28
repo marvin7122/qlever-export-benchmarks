@@ -1,0 +1,60 @@
+    91.77%  FsstDecodeAbBenchmark  [.] fsst_decompress
+     1.96%  FsstDecodeAbBenchmark  [.] FsstRepeatedDecoder<3ul>::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+     1.67%  FsstDecodeAbBenchmark  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     1.07%  FsstDecodeAbBenchmark  [.] libfsst::compressBulk(libfsst::SymbolTable&, unsigned long, unsigned long const*, unsigned char const**, unsigned long, unsigned char*, unsigned long*, unsigned char**, bool, bool)
+     0.96%  FsstDecodeAbBenchmark  [.] FsstRepeatedDecoder<3ul>::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     0.46%  FsstDecodeAbBenchmark  [.] ad_benchmark::(anonymous namespace)::FsstDecodeAbBenchmark::runAllBenchmarks()
+     0.44%  FsstDecodeAbBenchmark  [.] ad_benchmark::(anonymous namespace)::FsstDecodeAbBenchmark::FsstDecodeAbBenchmark()
+     0.24%  FsstDecodeAbBenchmark  [.] std::_Function_handler<unsigned long (std::basic_string_view<char, std::char_traits<char> >), ad_benchmark::(anonymous namespace)::makeIntoDecoder<FsstDecoder, FsstRepeatedDecoder<3ul> >(FsstDecoder const&, FsstRepeatedDecoder<3ul> const&, unsigned long, std::vector<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)::{lambda(std::basic_string_view<char, std::char_traits<char> >)#1}>::_M_invoke(std::_Any_data const&, std::basic_string_view<char, std::char_traits<char> >&&)
+     0.08%  [kernel.kallsyms]      [k] read_tsc
+     0.08%  [kernel.kallsyms]      [k] srso_return_thunk
+     0.05%  [kernel.kallsyms]      [k] mas_walk
+     0.05%  [kernel.kallsyms]      [k] handle_pte_fault
+     0.05%  [kernel.kallsyms]      [k] policy_nodemask
+     0.05%  FsstDecodeAbBenchmark  [.] std::conditional<true, std::tuple<std::shared_ptr<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::vector<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > >, FsstDecoder>, std::unique_ptr<void*, FsstEncoder::Deleter> >::type FsstEncoder::makeEncoder<true, std::vector<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > > >(std::vector<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > > const&)
+     0.04%  [kernel.kallsyms]      [k] wp_page_copy
+     0.04%  [kernel.kallsyms]      [k] __alloc_frozen_pages_noprof
+     0.04%  ld-linux-x86-64.so.2   [.] 0x000000000000b12c
+     0.04%  [kernel.kallsyms]      [k] do_anonymous_page
+     0.03%  [kernel.kallsyms]      [k] tick_do_update_jiffies64
+     0.03%  [kernel.kallsyms]      [k] error_return
+     0.03%  [kernel.kallsyms]      [k] __handle_mm_fault
+     0.03%  FsstDecodeAbBenchmark  [.] libfsst::buildSymbolTable(libfsst::Counters&, std::vector<unsigned char const*, std::allocator<unsigned char const*> >, unsigned long const*, bool)
+     0.03%  FsstDecodeAbBenchmark  [.] libfsst::buildSymbolTable(libfsst::Counters&, std::vector<unsigned char const*, std::allocator<unsigned char const*> >, unsigned long const*, bool)::{lambda(libfsst::SymbolTable*, libfsst::Counters&)#2}::operator()(libfsst::SymbolTable*, libfsst::Counters&) const
+     0.03%  [kernel.kallsyms]      [k] lruvec_stat_mod_folio
+     0.03%  [kernel.kallsyms]      [k] __folio_batch_add_and_move
+     0.02%  libjemalloc.so.2       [.] operator new(unsigned long)
+     0.02%  libc.so.6              [.] 0x0000000000188e32
+     0.02%  [kernel.kallsyms]      [k] __hrtimer_run_queues
+     0.02%  [kernel.kallsyms]      [k] update_process_times
+     0.02%  [kernel.kallsyms]      [k] hrtimer_interrupt
+     0.02%  [kernel.kallsyms]      [k] account_process_tick
+     0.02%  [kernel.kallsyms]      [k] tick_nohz_handler
+     0.02%  [kernel.kallsyms]      [k] sched_clock_tick
+     0.02%  [kernel.kallsyms]      [k] account_user_time
+     0.02%  [kernel.kallsyms]      [k] enqueue_task_fair
+     0.02%  [kernel.kallsyms]      [k] update_fast_timekeeper
+     0.02%  [kernel.kallsyms]      [k] __x86_indirect_thunk_rax
+     0.02%  [kernel.kallsyms]      [k] cyc2ns_read_begin
+     0.02%  [kernel.kallsyms]      [k] __timekeeping_advance
+     0.02%  [kernel.kallsyms]      [k] __update_load_avg_cfs_rq
+     0.02%  [kernel.kallsyms]      [k] check_cpu_stall
+     0.02%  [kernel.kallsyms]      [k] task_tick_fair
+     0.02%  [kernel.kallsyms]      [k] native_sched_clock
+     0.02%  [kernel.kallsyms]      [k] zap_present_ptes.constprop.0
+     0.02%  [kernel.kallsyms]      [k] timer_recalc_next_expiry
+     0.02%  [kernel.kallsyms]      [k] vma_alloc_folio_noprof
+     0.02%  [kernel.kallsyms]      [k] arch_perf_update_userpage
+     0.02%  libjemalloc.so.2       [.] 0x000000000003684f
+     0.02%  FsstDecodeAbBenchmark  [.] std::pair<std::__detail::_Node_iterator<libfsst::QSymbol, true, true>, bool> std::_Hashtable<libfsst::QSymbol, libfsst::QSymbol, std::allocator<libfsst::QSymbol>, std::__detail::_Identity, std::equal_to<libfsst::QSymbol>, std::hash<libfsst::QSymbol>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert_unique<libfsst::QSymbol const&, libfsst::QSymbol const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<libfsst::QSymbol, true> > > >(libfsst::QSymbol const&, libfsst::QSymbol const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<libfsst::QSymbol, true> > > const&) [clone .isra.0]
+     0.02%  libc.so.6              [.] 0x0000000000188e7a
+     0.02%  [kernel.kallsyms]      [k] folio_add_lru
+     0.02%  [kernel.kallsyms]      [k] rcu_sched_clock_irq
+     0.02%  [kernel.kallsyms]      [k] get_page_from_freelist
+     0.02%  [kernel.kallsyms]      [k] kernel_init_pages
+     0.02%  [kernel.kallsyms]      [k] rmqueue_bulk
+     0.02%  [kernel.kallsyms]      [k] native_irq_return_iret
+     0.02%  [kernel.kallsyms]      [k] mod_lruvec_state
+     0.02%  [kernel.kallsyms]      [k] lock_vma_under_rcu
+     0.02%  libc.so.6              [.] 0x0000000000188eb1
+     0.02%  libc.so.6              [.] 0x0000000000189813

@@ -1,0 +1,60 @@
+    37.73%  FsstScratchBufferBenchmark  [.] fsst_decompress
+    13.10%  FsstScratchBufferBenchmark  [.] FsstRepeatedDecoder<3ul>::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+    12.33%  FsstScratchBufferBenchmark  [.] FsstDecoder::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>) const
+     8.04%  FsstScratchBufferBenchmark  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     5.87%  FsstScratchBufferBenchmark  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+     5.59%  FsstScratchBufferBenchmark  [.] FsstRepeatedDecoder<3ul>::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     3.77%  FsstScratchBufferBenchmark  [.] std::_Function_handler<unsigned long (std::basic_string_view<char, std::char_traits<char> >), ad_benchmark::(anonymous namespace)::FsstScratchBufferBenchmark::runAllBenchmarks()::{lambda(std::basic_string_view<char, std::char_traits<char> >)#4}>::_M_invoke(std::_Any_data const&, std::basic_string_view<char, std::char_traits<char> >&&)
+     3.44%  libc.so.6                   [.] 0x000000000018973e
+     3.15%  libjemalloc.so.2            [.] operator delete(void*, unsigned long)
+     2.15%  libjemalloc.so.2            [.] operator new(unsigned long)
+     1.98%  FsstScratchBufferBenchmark  [.] ad_benchmark::(anonymous namespace)::FsstScratchBufferBenchmark::runAllBenchmarks()
+     0.58%  FsstScratchBufferBenchmark  [.] memset@plt
+     0.35%  FsstScratchBufferBenchmark  [.] operator new(unsigned long)@plt
+     0.30%  libc.so.6                   [.] 0x0000000000189725
+     0.30%  FsstScratchBufferBenchmark  [.] operator delete(void*, unsigned long)@plt
+     0.15%  libc.so.6                   [.] 0x0000000000189710
+     0.14%  libc.so.6                   [.] 0x0000000000189718
+     0.13%  libc.so.6                   [.] 0x000000000018971b
+     0.13%  libc.so.6                   [.] 0x0000000000189714
+     0.11%  libc.so.6                   [.] 0x000000000018972a
+     0.11%  libc.so.6                   [.] 0x0000000000189734
+     0.10%  libc.so.6                   [.] 0x000000000018973a
+     0.07%  libc.so.6                   [.] 0x0000000000189741
+     0.02%  [kernel.kallsyms]           [k] read_tsc
+     0.01%  [kernel.kallsyms]           [k] update_vsyscall
+     0.01%  [kernel.kallsyms]           [k] update_vdso_time_data
+     0.01%  [kernel.kallsyms]           [k] __update_load_avg_se
+     0.01%  [kernel.kallsyms]           [k] asm_exc_page_fault
+     0.01%  [kernel.kallsyms]           [k] update_curr
+     0.01%  [kernel.kallsyms]           [k] pte_offset_map_lock
+     0.01%  [kernel.kallsyms]           [k] ktime_get
+     0.01%  [kernel.kallsyms]           [k] lruvec_stat_mod_folio
+     0.01%  FsstScratchBufferBenchmark  [.] libfsst::buildSymbolTable(libfsst::Counters&, std::vector<unsigned char const*, std::allocator<unsigned char const*> >, unsigned long const*, bool)
+     0.01%  [kernel.kallsyms]           [k] srso_return_thunk
+     0.01%  [kernel.kallsyms]           [k] task_tick_fair
+     0.01%  [kernel.kallsyms]           [k] update_process_times
+     0.01%  [kernel.kallsyms]           [k] update_se
+     0.01%  [kernel.kallsyms]           [k] update_cfs_rq_load_avg
+     0.01%  [kernel.kallsyms]           [k] native_sched_clock
+     0.01%  [kernel.kallsyms]           [k] update_cfs_group
+     0.01%  [kernel.kallsyms]           [k] update_wall_time
+     0.01%  [kernel.kallsyms]           [k] hrtimer_interrupt
+     0.01%  FsstScratchBufferBenchmark  [.] std::conditional<true, std::tuple<std::shared_ptr<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::vector<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > >, FsstDecoder>, std::unique_ptr<void*, FsstEncoder::Deleter> >::type FsstEncoder::makeEncoder<true, std::vector<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > > >(std::vector<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > > const&)
+     0.01%  [kernel.kallsyms]           [k] tmigr_requires_handle_remote
+     0.00%  libc.so.6                   [.] pthread_mutex_trylock
+     0.00%  libjemalloc.so.2            [.] 0x00000000000ae01b
+     0.00%  libjemalloc.so.2            [.] 0x00000000000b0a8a
+     0.00%  libjemalloc.so.2            [.] 0x00000000000b4b1c
+     0.00%  libjemalloc.so.2            [.] 0x00000000000a36f9
+     0.00%  libjemalloc.so.2            [.] 0x00000000000b4a96
+     0.00%  [kernel.kallsyms]           [k] account_user_time
+     0.00%  [kernel.kallsyms]           [k] native_irq_return_iret
+     0.00%  [kernel.kallsyms]           [k] sched_clock_stable
+     0.00%  libjemalloc.so.2            [.] 0x00000000000b4c75
+     0.00%  libjemalloc.so.2            [.] 0x0000000000036957
+     0.00%  libjemalloc.so.2            [.] 0x00000000000ae01d
+     0.00%  libjemalloc.so.2            [.] 0x00000000000367e4
+     0.00%  [kernel.kallsyms]           [k] kick_ilb
+     0.00%  libjemalloc.so.2            [.] 0x00000000000b0b5c
+     0.00%  libjemalloc.so.2            [.] 0x00000000000230cc

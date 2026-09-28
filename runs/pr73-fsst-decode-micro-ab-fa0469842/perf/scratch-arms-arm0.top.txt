@@ -1,0 +1,60 @@
+    30.42%  FsstScratchBufferBenchmark  [.] fsst_decompress
+    20.67%  FsstScratchBufferBenchmark  [.] std::_Function_handler<unsigned long (std::basic_string_view<char, std::char_traits<char> >), ad_benchmark::(anonymous namespace)::FsstScratchBufferBenchmark::runAllBenchmarks()::{lambda(std::basic_string_view<char, std::char_traits<char> >)#1}>::_M_invoke(std::_Any_data const&, std::basic_string_view<char, std::char_traits<char> >&&)
+    11.82%  FsstScratchBufferBenchmark  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+    10.68%  FsstScratchBufferBenchmark  [.] FsstDecoder::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>) const
+     6.53%  FsstScratchBufferBenchmark  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     4.16%  libjemalloc.so.2            [.] operator delete(void*, unsigned long)
+     3.56%  libjemalloc.so.2            [.] operator new(unsigned long)
+     2.43%  libc.so.6                   [.] 0x00000000001897ba
+     1.85%  FsstScratchBufferBenchmark  [.] ad_benchmark::(anonymous namespace)::FsstScratchBufferBenchmark::runAllBenchmarks()
+     1.11%  FsstScratchBufferBenchmark  [.] memset@plt
+     0.87%  FsstScratchBufferBenchmark  [.] operator new(unsigned long)@plt
+     0.57%  libc.so.6                   [.] 0x000000000018971f
+     0.44%  libc.so.6                   [.] 0x0000000000189718
+     0.41%  FsstScratchBufferBenchmark  [.] operator delete(void*, unsigned long)@plt
+     0.40%  libc.so.6                   [.] 0x0000000000189714
+     0.34%  libc.so.6                   [.] 0x0000000000189860
+     0.30%  libc.so.6                   [.] 0x00000000001897b5
+     0.28%  libc.so.6                   [.] 0x000000000018986d
+     0.26%  libc.so.6                   [.] 0x00000000001897b0
+     0.25%  libc.so.6                   [.] 0x0000000000189865
+     0.23%  libc.so.6                   [.] 0x0000000000189725
+     0.20%  libc.so.6                   [.] 0x000000000018971b
+     0.17%  libc.so.6                   [.] 0x0000000000189710
+     0.15%  libc.so.6                   [.] 0x0000000000189880
+     0.14%  libc.so.6                   [.] 0x000000000018988a
+     0.13%  libc.so.6                   [.] 0x0000000000189884
+     0.13%  libc.so.6                   [.] 0x000000000018973e
+     0.13%  libc.so.6                   [.] 0x000000000018986a
+     0.11%  libc.so.6                   [.] 0x000000000018972a
+     0.11%  libc.so.6                   [.] 0x00000000001897cd
+     0.11%  libc.so.6                   [.] 0x00000000001897d2
+     0.10%  libc.so.6                   [.] 0x0000000000189894
+     0.10%  libc.so.6                   [.] 0x0000000000189890
+     0.09%  libc.so.6                   [.] 0x000000000018989a
+     0.06%  libc.so.6                   [.] 0x00000000001897c9
+     0.05%  libc.so.6                   [.] 0x00000000001897d5
+     0.03%  libc.so.6                   [.] 0x00000000001897bd
+     0.02%  [kernel.kallsyms]           [k] srso_return_thunk
+     0.02%  [kernel.kallsyms]           [k] tick_nohz_handler
+     0.02%  [kernel.kallsyms]           [k] srso_safe_ret
+     0.02%  [kernel.kallsyms]           [k] read_tsc
+     0.01%  [kernel.kallsyms]           [k] __timekeeping_advance
+     0.01%  libjemalloc.so.2            [.] 0x00000000000b4b3d
+     0.01%  [kernel.kallsyms]           [k] task_tick_fair
+     0.01%  [kernel.kallsyms]           [k] update_vsyscall
+     0.01%  FsstScratchBufferBenchmark  [.] libfsst::buildSymbolTable(libfsst::Counters&, std::vector<unsigned char const*, std::allocator<unsigned char const*> >, unsigned long const*, bool)
+     0.01%  [kernel.kallsyms]           [k] update_vdso_time_data
+     0.01%  [kernel.kallsyms]           [k] timekeeping_update_from_shadow
+     0.01%  [kernel.kallsyms]           [k] ntp_tick_length
+     0.01%  libc.so.6                   [.] 0x000000000018972e
+     0.01%  [kernel.kallsyms]           [k] update_process_times
+     0.01%  libjemalloc.so.2            [.] 0x00000000000b4ccb
+     0.01%  libc.so.6                   [.] 0x000000000018973a
+     0.01%  [kernel.kallsyms]           [k] timer_recalc_next_expiry
+     0.01%  [kernel.kallsyms]           [k] __hrtimer_run_queues
+     0.01%  ld-linux-x86-64.so.2        [.] 0x000000000000b13e
+     0.01%  libc.so.6                   [.] 0x0000000000188d15
+     0.01%  libjemalloc.so.2            [.] 0x00000000000b0ae8
+     0.01%  [kernel.kallsyms]           [k] native_sched_clock
+     0.01%  [kernel.kallsyms]           [k] update_wall_time

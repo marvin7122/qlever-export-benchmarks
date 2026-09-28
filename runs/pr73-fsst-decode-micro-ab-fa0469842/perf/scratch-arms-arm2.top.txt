@@ -1,0 +1,60 @@
+    46.04%  FsstScratchBufferBenchmark  [.] fsst_decompress
+    17.96%  FsstScratchBufferBenchmark  [.] FsstDecoder::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>) const
+    11.46%  FsstScratchBufferBenchmark  [.] FsstRepeatedDecoder<3ul>::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+    11.30%  FsstScratchBufferBenchmark  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     8.01%  FsstScratchBufferBenchmark  [.] FsstRepeatedDecoder<3ul>::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     3.33%  FsstScratchBufferBenchmark  [.] ad_benchmark::(anonymous namespace)::FsstScratchBufferBenchmark::runAllBenchmarks()
+     1.48%  FsstScratchBufferBenchmark  [.] std::_Function_handler<unsigned long (std::basic_string_view<char, std::char_traits<char> >), ad_benchmark::(anonymous namespace)::FsstScratchBufferBenchmark::runAllBenchmarks()::{lambda(std::basic_string_view<char, std::char_traits<char> >)#3}>::_M_invoke(std::_Any_data const&, std::basic_string_view<char, std::char_traits<char> >&&)
+     0.03%  [kernel.kallsyms]           [k] srso_return_thunk
+     0.03%  [kernel.kallsyms]           [k] read_tsc
+     0.02%  [kernel.kallsyms]           [k] task_tick_fair
+     0.02%  [kernel.kallsyms]           [k] __update_load_avg_se
+     0.02%  [kernel.kallsyms]           [k] srso_safe_ret
+     0.01%  [kernel.kallsyms]           [k] update_wall_time
+     0.01%  [kernel.kallsyms]           [k] wp_page_copy
+     0.01%  [kernel.kallsyms]           [k] update_curr
+     0.01%  [kernel.kallsyms]           [k] timekeeping_adjust
+     0.01%  FsstScratchBufferBenchmark  [.] libfsst::compressBulk(libfsst::SymbolTable&, unsigned long, unsigned long const*, unsigned char const**, unsigned long, unsigned char*, unsigned long*, unsigned char**, bool, bool)
+     0.01%  [kernel.kallsyms]           [k] free_pages_and_swap_cache
+     0.01%  [kernel.kallsyms]           [k] update_process_times
+     0.01%  [kernel.kallsyms]           [k] update_vdso_time_data
+     0.01%  [kernel.kallsyms]           [k] sched_tick
+     0.01%  [kernel.kallsyms]           [k] timekeeping_update_from_shadow
+     0.01%  [kernel.kallsyms]           [k] __update_load_avg_cfs_rq
+     0.01%  [kernel.kallsyms]           [k] __timekeeping_advance
+     0.01%  [kernel.kallsyms]           [k] sync_regs
+     0.01%  FsstScratchBufferBenchmark  [.] fsst_compress
+     0.01%  [kernel.kallsyms]           [k] tick_nohz_handler
+     0.01%  [kernel.kallsyms]           [k] clockevents_program_event
+     0.01%  FsstScratchBufferBenchmark  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+     0.01%  FsstScratchBufferBenchmark  [.] ad_benchmark::(anonymous namespace)::FsstScratchBufferBenchmark::FsstScratchBufferBenchmark()
+     0.00%  [kernel.kallsyms]           [k] sched_clock
+     0.00%  [kernel.kallsyms]           [k] cpuacct_charge
+     0.00%  [kernel.kallsyms]           [k] sysvec_apic_timer_interrupt
+     0.00%  [kernel.kallsyms]           [k] hrtimer_interrupt
+     0.00%  [kernel.kallsyms]           [k] cyc2ns_read_end
+     0.00%  [kernel.kallsyms]           [k] sched_clock_cpu
+     0.00%  [kernel.kallsyms]           [k] timerqueue_del
+     0.00%  [kernel.kallsyms]           [k] entry_untrain_ret
+     0.00%  [kernel.kallsyms]           [k] ntp_tick_length
+     0.00%  [kernel.kallsyms]           [k] raw_spin_rq_lock_nested
+     0.00%  [kernel.kallsyms]           [k] update_vsyscall
+     0.00%  [kernel.kallsyms]           [k] __hrtimer_run_queues
+     0.00%  [kernel.kallsyms]           [k] rcu_pending
+     0.00%  [kernel.kallsyms]           [k] __sysvec_apic_timer_interrupt
+     0.00%  [kernel.kallsyms]           [k] update_cfs_group
+     0.00%  [kernel.kallsyms]           [k] enqueue_hrtimer
+     0.00%  [kernel.kallsyms]           [k] account_process_tick
+     0.00%  [kernel.kallsyms]           [k] __x86_indirect_thunk_rax
+     0.00%  [kernel.kallsyms]           [k] calc_timer_values
+     0.00%  [kernel.kallsyms]           [k] tmigr_requires_handle_remote
+     0.00%  libjemalloc.so.2            [.] 0x00000000000a4283
+     0.00%  [kernel.kallsyms]           [k] update_deadline
+     0.00%  [kernel.kallsyms]           [k] native_read_msr
+     0.00%  [kernel.kallsyms]           [k] _raw_spin_lock_irqsave
+     0.00%  [kernel.kallsyms]           [k] native_sched_clock
+     0.00%  [kernel.kallsyms]           [k] sched_core_idle_cpu
+     0.00%  [kernel.kallsyms]           [k] dl_server_update
+     0.00%  [kernel.kallsyms]           [k] __run_timers
+     0.00%  [kernel.kallsyms]           [k] perf_ibs_start
+     0.00%  [kernel.kallsyms]           [k] path_get
