@@ -1,0 +1,145 @@
+commit 82bfd5f500f3ac4a93981991082129a3b4a17fe1
+host ural 2026-09-28T14:25:40Z
+== StringTest exit=0 [  PASSED  ] 6 tests. 
+== GTestHelpersTest exit=0 [  PASSED  ] 6 tests. 
+== FsstCompressorTest exit=0 [  PASSED  ] 5 tests. 
+== PrefixCompressorTest exit=0 [  PASSED  ] 8 tests. 
+== VocabularyTypesTest exit=0 [  PASSED  ] 33 tests. 
+== VocabularyTest exit=0 [  PASSED  ] 15 tests. 
+== VocabularyInMemoryBinSearchTest exit=0 [  PASSED  ] 13 tests. 
+== VocabularyOnDiskTest exit=0 [  PASSED  ] 17 tests. 
+== PolymorphicVocabularyTest exit=0 [  PASSED  ] 4 tests. 
+== GeoVocabularyTest exit=0 [  PASSED  ] 9 tests. 
+== ExportIdsTest exit=0 [  PASSED  ] 18 tests. 
+== VocabBatchLookupBenchmark
+== VocabBatchLookupBenchmark exit=0
+2026-09-28 16:25:42.291 - INFO: Running measurement "baseline: owning vector<string> per word of group Assemble 20,000-word batch (mean word length ~45)" ...
+2026-09-28 16:25:42.295 - INFO: Done in 0.003696 seconds.
+2026-09-28 16:25:42.295 - INFO: Running measurement "ContiguousVocabBatchBuilder + memcpy of group Assemble 20,000-word batch (mean word length ~45)" ...
+2026-09-28 16:25:42.297 - INFO: Done in 0.001546 seconds.
+2026-09-28 16:25:42.297 - INFO: Running measurement "ArenaVocabBatchBuilder::appendWord of group Assemble 20,000-word batch (mean word length ~45)" ...
+2026-09-28 16:25:42.298 - INFO: Done in 0.00103 seconds.
+2026-09-28 16:25:42.298 - INFO: Running measurement "per-word operator[] loop of group Resolve 4,096-word batch from 50,000-word VocabularyInMemoryBinSearch" ...
+2026-09-28 16:25:42.304 - INFO: Done in 0.00608 seconds.
+2026-09-28 16:25:42.304 - INFO: Running measurement "single lookupBatch of group Resolve 4,096-word batch from 50,000-word VocabularyInMemoryBinSearch" ...
+2026-09-28 16:25:42.310 - INFO: Done in 0.006206 seconds.
+################################################################
+# Benchmark class 'VocabBatchLookup synthetic micro-benchmark' #
+################################################################
+General metadata: {"time-of-measurement":"2026-09-28 16:25:42.291"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'Assemble 20,000-word batch (mean word length ~45)'
+    Measurements:
+    
+        Single measurement 'baseline: owning vector<string> per word'
+            time: 0.003696s
+        
+        Single measurement 'ContiguousVocabBatchBuilder + memcpy'
+            time: 0.001546s
+        
+        Single measurement 'ArenaVocabBatchBuilder::appendWord'
+            time: 0.00103s
+    
+    Tables: None
+
+###########################################################
+# Benchmark class 'VocabBatchLookup end-to-end benchmark' #
+###########################################################
+General metadata: {"time-of-measurement":"2026-09-28 16:25:42.298"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'Resolve 4,096-word batch from 50,000-word VocabularyInMemoryBinSearch'
+    Measurements:
+    
+        Single measurement 'per-word operator[] loop'
+            time: 0.00608s
+        
+        Single measurement 'single lookupBatch'
+            time: 0.006206s
+    
+    Tables: None
+
+== PrefixCompressorBenchmark
+== PrefixCompressorBenchmark exit=0
+2026-09-28 16:25:42.411 - INFO: Running measurement "decompress (allocating) of group Single-word PrefixCompressor decode (5,000 words)" ...
+2026-09-28 16:25:42.412 - INFO: Done in 0.000965 seconds.
+2026-09-28 16:25:42.412 - INFO: Running measurement "decompressInto (reused buffer) of group Single-word PrefixCompressor decode (5,000 words)" ...
+2026-09-28 16:25:42.413 - INFO: Done in 0.000381 seconds.
+2026-09-28 16:25:42.413 - INFO: Running measurement "batch decode into vector<string> of group Batch PrefixCompressor resolution (5,000 words)" ...
+2026-09-28 16:25:42.414 - INFO: Done in 0.001385 seconds.
+2026-09-28 16:25:42.414 - INFO: Running measurement "batch decodeInto contiguous arena of group Batch PrefixCompressor resolution (5,000 words)" ...
+2026-09-28 16:25:42.415 - INFO: Done in 0.000729 seconds.
+#############################################################
+# Benchmark class 'PrefixCompressor in-place decompression' #
+#############################################################
+General metadata: {"time-of-measurement":"2026-09-28 16:25:42.411"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'Single-word PrefixCompressor decode (5,000 words)'
+    Measurements:
+    
+        Single measurement 'decompress (allocating)'
+            time: 0.000965s
+        
+        Single measurement 'decompressInto (reused buffer)'
+            time: 0.000381s
+    
+    Tables: None
+
+Group 'Batch PrefixCompressor resolution (5,000 words)'
+    Measurements:
+    
+        Single measurement 'batch decode into vector<string>'
+            time: 0.001385s
+        
+        Single measurement 'batch decodeInto contiguous arena'
+            time: 0.000729s
+    
+    Tables: None
+
+== FsstScratchBufferBenchmark
+== FsstScratchBufferBenchmark exit=0
+2026-09-28 16:25:42.515 - INFO: Running measurement "full-size std::string scratch of group Three-stage FSST scratch-buffer strategies (5,000 words)" ...
+2026-09-28 16:25:42.515 - INFO: Done in 0.000146 seconds.
+2026-09-28 16:25:42.515 - INFO: Running measurement "full-size uninitialized scratch of group Three-stage FSST scratch-buffer strategies (5,000 words)" ...
+2026-09-28 16:25:42.515 - INFO: Done in 0.000149 seconds.
+2026-09-28 16:25:42.515 - INFO: Running measurement "stage-aware uninitialized scratch of group Three-stage FSST scratch-buffer strategies (5,000 words)" ...
+2026-09-28 16:25:42.516 - INFO: Done in 0.000145 seconds.
+####################################################
+# Benchmark class 'FSST scratch buffer strategies' #
+####################################################
+General metadata: {"time-of-measurement":"2026-09-28 16:25:42.515"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'Three-stage FSST scratch-buffer strategies (5,000 words)'
+    Measurements:
+    
+        Single measurement 'full-size std::string scratch'
+            time: 0.000146s
+        
+        Single measurement 'full-size uninitialized scratch'
+            time: 0.000149s
+        
+        Single measurement 'stage-aware uninitialized scratch'
+            time: 0.000145s
+    
+    Tables: None
+
+TEST_EXIT=0

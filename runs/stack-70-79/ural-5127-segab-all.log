@@ -1,0 +1,395 @@
+=== [wq] bench /local/data-ssd/stoetzem/incoming/segab-all-v2.sh ##QBRANCH=stack/07d-vocab-polymorphic-dispatch on Ural ===
+Qlever branch verified: stack/07d-vocab-polymorphic-dispatch @ 0fee4eb579
+HEAD is now at 0fee4eb57 bench(vocab): drop invalid using-declarations from the polymorphic lookupBatch benchmarks
+QLEVER OK: /local/data-ssd/stoetzem/wt/stack/07d-vocab-polymorphic-dispatch @ 0fee4eb579 (= origin/stack/07d-vocab-polymorphic-dispatch)
+BENCH REF: stack/07d-vocab-polymorphic-dispatch @ 0fee4eb5790fd2971abd59ddca6a4368f88f7a49
+commit 82bfd5f500f3ac4a93981991082129a3b4a17fe1
+host ural 2026-09-28T14:23:51Z
+== StringTest exit=0 [  PASSED  ] 6 tests. 
+== GTestHelpersTest exit=0 [  PASSED  ] 6 tests. 
+== FsstCompressorTest exit=0 [  PASSED  ] 5 tests. 
+== PrefixCompressorTest exit=0 [  PASSED  ] 8 tests. 
+== VocabularyTypesTest exit=0 [  PASSED  ] 33 tests. 
+== VocabularyTest exit=0 [  PASSED  ] 15 tests. 
+== VocabularyInMemoryBinSearchTest exit=0 [  PASSED  ] 13 tests. 
+== VocabularyOnDiskTest exit=0 [  PASSED  ] 17 tests. 
+== PolymorphicVocabularyTest exit=0 [  PASSED  ] 4 tests. 
+== GeoVocabularyTest exit=0 [  PASSED  ] 9 tests. 
+== ExportIdsTest exit=0 [  PASSED  ] 18 tests. 
+== VocabBatchLookupBenchmark
+== VocabBatchLookupBenchmark exit=0
+2026-09-28 16:23:52.573 - INFO: Running measurement "baseline: owning vector<string> per word of group Assemble 20,000-word batch (mean word length ~45)" ...
+2026-09-28 16:23:52.576 - INFO: Done in 0.003313 seconds.
+2026-09-28 16:23:52.576 - INFO: Running measurement "ContiguousVocabBatchBuilder + memcpy of group Assemble 20,000-word batch (mean word length ~45)" ...
+2026-09-28 16:23:52.577 - INFO: Done in 0.001425 seconds.
+2026-09-28 16:23:52.577 - INFO: Running measurement "ArenaVocabBatchBuilder::appendWord of group Assemble 20,000-word batch (mean word length ~45)" ...
+2026-09-28 16:23:52.578 - INFO: Done in 0.000878 seconds.
+2026-09-28 16:23:52.578 - INFO: Running measurement "per-word operator[] loop of group Resolve 4,096-word batch from 50,000-word VocabularyInMemoryBinSearch" ...
+2026-09-28 16:23:52.583 - INFO: Done in 0.005107 seconds.
+2026-09-28 16:23:52.583 - INFO: Running measurement "single lookupBatch of group Resolve 4,096-word batch from 50,000-word VocabularyInMemoryBinSearch" ...
+2026-09-28 16:23:52.589 - INFO: Done in 0.005563 seconds.
+################################################################
+# Benchmark class 'VocabBatchLookup synthetic micro-benchmark' #
+################################################################
+General metadata: {"time-of-measurement":"2026-09-28 16:23:52.573"}
+No configuration options were defined.
+####################
+# Group benchmarks #
+####################
+Group 'Assemble 20,000-word batch (mean word length ~45)'
+    Measurements:
+        Single measurement 'baseline: owning vector<string> per word'
+            time: 0.003313s
+        Single measurement 'ContiguousVocabBatchBuilder + memcpy'
+            time: 0.001425s
+        Single measurement 'ArenaVocabBatchBuilder::appendWord'
+            time: 0.000878s
+    Tables: None
+###########################################################
+# Benchmark class 'VocabBatchLookup end-to-end benchmark' #
+###########################################################
+General metadata: {"time-of-measurement":"2026-09-28 16:23:52.578"}
+No configuration options were defined.
+####################
+# Group benchmarks #
+####################
+Group 'Resolve 4,096-word batch from 50,000-word VocabularyInMemoryBinSearch'
+    Measurements:
+        Single measurement 'per-word operator[] loop'
+            time: 0.005107s
+        Single measurement 'single lookupBatch'
+            time: 0.005563s
+    Tables: None
+== PrefixCompressorBenchmark
+== PrefixCompressorBenchmark exit=0
+2026-09-28 16:23:52.683 - INFO: Running measurement "decompress (allocating) of group Single-word PrefixCompressor decode (5,000 words)" ...
+2026-09-28 16:23:52.684 - INFO: Done in 0.000939 seconds.
+2026-09-28 16:23:52.684 - INFO: Running measurement "decompressInto (reused buffer) of group Single-word PrefixCompressor decode (5,000 words)" ...
+2026-09-28 16:23:52.684 - INFO: Done in 0.000392 seconds.
+2026-09-28 16:23:52.684 - INFO: Running measurement "batch decode into vector<string> of group Batch PrefixCompressor resolution (5,000 words)" ...
+2026-09-28 16:23:52.686 - INFO: Done in 0.0014 seconds.
+2026-09-28 16:23:52.686 - INFO: Running measurement "batch decodeInto contiguous arena of group Batch PrefixCompressor resolution (5,000 words)" ...
+2026-09-28 16:23:52.686 - INFO: Done in 0.000736 seconds.
+#############################################################
+# Benchmark class 'PrefixCompressor in-place decompression' #
+#############################################################
+General metadata: {"time-of-measurement":"2026-09-28 16:23:52.683"}
+No configuration options were defined.
+####################
+# Group benchmarks #
+####################
+Group 'Single-word PrefixCompressor decode (5,000 words)'
+    Measurements:
+        Single measurement 'decompress (allocating)'
+            time: 0.000939s
+        Single measurement 'decompressInto (reused buffer)'
+            time: 0.000392s
+    Tables: None
+Group 'Batch PrefixCompressor resolution (5,000 words)'
+    Measurements:
+        Single measurement 'batch decode into vector<string>'
+            time: 0.0014s
+        Single measurement 'batch decodeInto contiguous arena'
+            time: 0.000736s
+    Tables: None
+== FsstScratchBufferBenchmark
+== FsstScratchBufferBenchmark exit=0
+2026-09-28 16:23:52.776 - INFO: Running measurement "full-size std::string scratch of group Three-stage FSST scratch-buffer strategies (5,000 words)" ...
+2026-09-28 16:23:52.776 - INFO: Done in 0.000155 seconds.
+2026-09-28 16:23:52.776 - INFO: Running measurement "full-size uninitialized scratch of group Three-stage FSST scratch-buffer strategies (5,000 words)" ...
+2026-09-28 16:23:52.776 - INFO: Done in 0.000144 seconds.
+2026-09-28 16:23:52.776 - INFO: Running measurement "stage-aware uninitialized scratch of group Three-stage FSST scratch-buffer strategies (5,000 words)" ...
+2026-09-28 16:23:52.777 - INFO: Done in 0.000145 seconds.
+####################################################
+# Benchmark class 'FSST scratch buffer strategies' #
+####################################################
+General metadata: {"time-of-measurement":"2026-09-28 16:23:52.776"}
+No configuration options were defined.
+####################
+# Group benchmarks #
+####################
+Group 'Three-stage FSST scratch-buffer strategies (5,000 words)'
+    Measurements:
+        Single measurement 'full-size std::string scratch'
+            time: 0.000155s
+        Single measurement 'full-size uninitialized scratch'
+            time: 0.000144s
+        Single measurement 'stage-aware uninitialized scratch'
+            time: 0.000145s
+    Tables: None
+TEST_EXIT=0
+=== SEGB GTEST ===
+2026-09-28 16:23:55.526 - INFO: Done, number of words: 426
+2026-09-28 16:23:55.526 - INFO: Done, number of words: 426
+2026-09-28 16:23:55.526 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/job-5127/splitVocabLookupBatchMicro.a ...
+2026-09-28 16:23:55.526 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/job-5127/splitVocabLookupBatchMicro.a ...
+2026-09-28 16:23:55.526 - INFO: Done, number of words: 86
+2026-09-28 16:23:55.526 - INFO: Done, number of words: 86
+2026-09-28 16:23:55.526 - INFO: Running measurement "sequential operator[], mixed markers of group Synthetic micro-batches: 2,048 lookups into 512 words" ...
+2026-09-28 16:23:55.527 - INFO: Done in 0.00091 seconds.
+2026-09-28 16:23:55.527 - INFO: Running measurement "batched lookupBatch, mixed markers of group Synthetic micro-batches: 2,048 lookups into 512 words" ...
+2026-09-28 16:23:55.532 - INFO: Done in 0.00442 seconds.
+2026-09-28 16:23:55.532 - INFO: Running measurement "sequential operator[], single marker of group Synthetic micro-batches: 2,048 lookups into 512 words" ...
+2026-09-28 16:23:55.532 - INFO: Done in 0.000841 seconds.
+2026-09-28 16:23:55.532 - INFO: Running measurement "batched lookupBatch, single marker of group Synthetic micro-batches: 2,048 lookups into 512 words" ...
+2026-09-28 16:23:55.536 - INFO: Done in 0.00388 seconds.
+####################################################################
+# Benchmark class 'SplitVocabulary::lookupBatch (synthetic micro)' #
+####################################################################
+General metadata: {"time-of-measurement":"2026-09-28 16:23:55.526"}
+No configuration options were defined.
+####################
+# Group benchmarks #
+####################
+Group 'Synthetic micro-batches: 2,048 lookups into 512 words'
+    Measurements:
+        Single measurement 'sequential operator[], mixed markers'
+            time: 0.00091s
+        Single measurement 'batched lookupBatch, mixed markers'
+            time: 0.00442s
+        Single measurement 'sequential operator[], single marker'
+            time: 0.000841s
+        Single measurement 'batched lookupBatch, single marker'
+            time: 0.00388s
+    Tables: None
+bench rc=0
+=== BENCH SplitVocabLookupBatchEndToEndBenchmark
+2026-09-28 16:23:55.565 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/job-5127/splitVocabLookupBatchEndToEnd/vocab ...
+2026-09-28 16:23:55.565 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/job-5127/splitVocabLookupBatchEndToEnd/vocab ...
+2026-09-28 16:23:55.566 - INFO: Done, number of words: 33333
+2026-09-28 16:23:55.566 - INFO: Done, number of words: 33333
+2026-09-28 16:23:55.566 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/job-5127/splitVocabLookupBatchEndToEnd/vocab.a ...
+2026-09-28 16:23:55.566 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/job-5127/splitVocabLookupBatchEndToEnd/vocab.a ...
+2026-09-28 16:23:55.567 - INFO: Done, number of words: 16667
+2026-09-28 16:23:55.567 - INFO: Done, number of words: 16667
+2026-09-28 16:23:55.570 - INFO: Running measurement "sequential operator[] of group End to end: 50,000 words in two markers, 100,000 lookups per batch" ...
+2026-09-28 16:23:55.580 - INFO: Done in 0.010681 seconds.
+2026-09-28 16:23:55.580 - INFO: Running measurement "batched lookupBatch of group End to end: 50,000 words in two markers, 100,000 lookups per batch" ...
+2026-09-28 16:23:55.629 - INFO: Done in 0.048584 seconds.
+###############################################################
+# Benchmark class 'SplitVocabulary::lookupBatch (end to end)' #
+###############################################################
+General metadata: {"time-of-measurement":"2026-09-28 16:23:55.570"}
+No configuration options were defined.
+####################
+# Group benchmarks #
+####################
+Group 'End to end: 50,000 words in two markers, 100,000 lookups per batch'
+    Measurements:
+        Single measurement 'sequential operator[]'
+            time: 0.010681s
+        Single measurement 'batched lookupBatch'
+            time: 0.048584s
+    Tables: None
+bench rc=0
+MISSING PolymorphicVocabLookupBatchMicroBenchmark
+MISSING PolymorphicVocabLookupBatchEndToEndBenchmark
+WQ_DONE segb-gtest exit=0
+=== EXPORT A/B ===
+[2026-09-28T14:24:03Z] PR #75 dblp turtle_export queries=H-size scenarios=warm reps=1 mode=two binaries layout=ural
+[2026-09-28T14:24:03Z] base:    /local/data-ssd/stoetzem/thesis/experiments/runs/pr75-dblp-segA-construct-ab/bin/qlever-server-base (39c735bf) args='' form=''
+[2026-09-28T14:24:03Z] variant: /local/data-ssd/stoetzem/thesis/experiments/runs/pr75-dblp-segA-construct-ab/bin/qlever-server-variant (82bfd5f5) args='' form=''
+[2026-09-28T14:24:17Z] pr75-H-size-warm-base-r1 done
+[2026-09-28T14:24:30Z] pr75-H-size-warm-variant-r1 done
+[2026-09-28T14:24:30Z] finished rc=0 run=/local/data-ssd/stoetzem/thesis/experiments/runs/pr75-dblp-segA-construct-ab
+pr-ab: FATAL: verify-qlever-binary failed for variant (see gate-verify-variant.log)
+SEGAB_EXIT=1
+SEGAB_ALL_EXIT=1
+=== [wq] bench /local/data-ssd/stoetzem/incoming/segab-all-v2.sh ##QBRANCH=stack/07d-vocab-polymorphic-dispatch on Ural ===
+Qlever branch verified: stack/07d-vocab-polymorphic-dispatch @ 0fee4eb579
+HEAD is now at 0fee4eb57 bench(vocab): drop invalid using-declarations from the polymorphic lookupBatch benchmarks
+QLEVER OK: /local/data-ssd/stoetzem/wt/stack/07d-vocab-polymorphic-dispatch @ 0fee4eb579 (= origin/stack/07d-vocab-polymorphic-dispatch)
+BENCH REF: stack/07d-vocab-polymorphic-dispatch @ 0fee4eb5790fd2971abd59ddca6a4368f88f7a49
+commit 82bfd5f500f3ac4a93981991082129a3b4a17fe1
+host ural 2026-09-28T14:25:40Z
+== StringTest exit=0 [  PASSED  ] 6 tests. 
+== GTestHelpersTest exit=0 [  PASSED  ] 6 tests. 
+== FsstCompressorTest exit=0 [  PASSED  ] 5 tests. 
+== PrefixCompressorTest exit=0 [  PASSED  ] 8 tests. 
+== VocabularyTypesTest exit=0 [  PASSED  ] 33 tests. 
+== VocabularyTest exit=0 [  PASSED  ] 15 tests. 
+== VocabularyInMemoryBinSearchTest exit=0 [  PASSED  ] 13 tests. 
+== VocabularyOnDiskTest exit=0 [  PASSED  ] 17 tests. 
+== PolymorphicVocabularyTest exit=0 [  PASSED  ] 4 tests. 
+== GeoVocabularyTest exit=0 [  PASSED  ] 9 tests. 
+== ExportIdsTest exit=0 [  PASSED  ] 18 tests. 
+== VocabBatchLookupBenchmark
+== VocabBatchLookupBenchmark exit=0
+2026-09-28 16:25:42.291 - INFO: Running measurement "baseline: owning vector<string> per word of group Assemble 20,000-word batch (mean word length ~45)" ...
+2026-09-28 16:25:42.295 - INFO: Done in 0.003696 seconds.
+2026-09-28 16:25:42.295 - INFO: Running measurement "ContiguousVocabBatchBuilder + memcpy of group Assemble 20,000-word batch (mean word length ~45)" ...
+2026-09-28 16:25:42.297 - INFO: Done in 0.001546 seconds.
+2026-09-28 16:25:42.297 - INFO: Running measurement "ArenaVocabBatchBuilder::appendWord of group Assemble 20,000-word batch (mean word length ~45)" ...
+2026-09-28 16:25:42.298 - INFO: Done in 0.00103 seconds.
+2026-09-28 16:25:42.298 - INFO: Running measurement "per-word operator[] loop of group Resolve 4,096-word batch from 50,000-word VocabularyInMemoryBinSearch" ...
+2026-09-28 16:25:42.304 - INFO: Done in 0.00608 seconds.
+2026-09-28 16:25:42.304 - INFO: Running measurement "single lookupBatch of group Resolve 4,096-word batch from 50,000-word VocabularyInMemoryBinSearch" ...
+2026-09-28 16:25:42.310 - INFO: Done in 0.006206 seconds.
+################################################################
+# Benchmark class 'VocabBatchLookup synthetic micro-benchmark' #
+################################################################
+General metadata: {"time-of-measurement":"2026-09-28 16:25:42.291"}
+No configuration options were defined.
+####################
+# Group benchmarks #
+####################
+Group 'Assemble 20,000-word batch (mean word length ~45)'
+    Measurements:
+        Single measurement 'baseline: owning vector<string> per word'
+            time: 0.003696s
+        Single measurement 'ContiguousVocabBatchBuilder + memcpy'
+            time: 0.001546s
+        Single measurement 'ArenaVocabBatchBuilder::appendWord'
+            time: 0.00103s
+    Tables: None
+###########################################################
+# Benchmark class 'VocabBatchLookup end-to-end benchmark' #
+###########################################################
+General metadata: {"time-of-measurement":"2026-09-28 16:25:42.298"}
+No configuration options were defined.
+####################
+# Group benchmarks #
+####################
+Group 'Resolve 4,096-word batch from 50,000-word VocabularyInMemoryBinSearch'
+    Measurements:
+        Single measurement 'per-word operator[] loop'
+            time: 0.00608s
+        Single measurement 'single lookupBatch'
+            time: 0.006206s
+    Tables: None
+== PrefixCompressorBenchmark
+== PrefixCompressorBenchmark exit=0
+2026-09-28 16:25:42.411 - INFO: Running measurement "decompress (allocating) of group Single-word PrefixCompressor decode (5,000 words)" ...
+2026-09-28 16:25:42.412 - INFO: Done in 0.000965 seconds.
+2026-09-28 16:25:42.412 - INFO: Running measurement "decompressInto (reused buffer) of group Single-word PrefixCompressor decode (5,000 words)" ...
+2026-09-28 16:25:42.413 - INFO: Done in 0.000381 seconds.
+2026-09-28 16:25:42.413 - INFO: Running measurement "batch decode into vector<string> of group Batch PrefixCompressor resolution (5,000 words)" ...
+2026-09-28 16:25:42.414 - INFO: Done in 0.001385 seconds.
+2026-09-28 16:25:42.414 - INFO: Running measurement "batch decodeInto contiguous arena of group Batch PrefixCompressor resolution (5,000 words)" ...
+2026-09-28 16:25:42.415 - INFO: Done in 0.000729 seconds.
+#############################################################
+# Benchmark class 'PrefixCompressor in-place decompression' #
+#############################################################
+General metadata: {"time-of-measurement":"2026-09-28 16:25:42.411"}
+No configuration options were defined.
+####################
+# Group benchmarks #
+####################
+Group 'Single-word PrefixCompressor decode (5,000 words)'
+    Measurements:
+        Single measurement 'decompress (allocating)'
+            time: 0.000965s
+        Single measurement 'decompressInto (reused buffer)'
+            time: 0.000381s
+    Tables: None
+Group 'Batch PrefixCompressor resolution (5,000 words)'
+    Measurements:
+        Single measurement 'batch decode into vector<string>'
+            time: 0.001385s
+        Single measurement 'batch decodeInto contiguous arena'
+            time: 0.000729s
+    Tables: None
+== FsstScratchBufferBenchmark
+== FsstScratchBufferBenchmark exit=0
+2026-09-28 16:25:42.515 - INFO: Running measurement "full-size std::string scratch of group Three-stage FSST scratch-buffer strategies (5,000 words)" ...
+2026-09-28 16:25:42.515 - INFO: Done in 0.000146 seconds.
+2026-09-28 16:25:42.515 - INFO: Running measurement "full-size uninitialized scratch of group Three-stage FSST scratch-buffer strategies (5,000 words)" ...
+2026-09-28 16:25:42.515 - INFO: Done in 0.000149 seconds.
+2026-09-28 16:25:42.515 - INFO: Running measurement "stage-aware uninitialized scratch of group Three-stage FSST scratch-buffer strategies (5,000 words)" ...
+2026-09-28 16:25:42.516 - INFO: Done in 0.000145 seconds.
+####################################################
+# Benchmark class 'FSST scratch buffer strategies' #
+####################################################
+General metadata: {"time-of-measurement":"2026-09-28 16:25:42.515"}
+No configuration options were defined.
+####################
+# Group benchmarks #
+####################
+Group 'Three-stage FSST scratch-buffer strategies (5,000 words)'
+    Measurements:
+        Single measurement 'full-size std::string scratch'
+            time: 0.000146s
+        Single measurement 'full-size uninitialized scratch'
+            time: 0.000149s
+        Single measurement 'stage-aware uninitialized scratch'
+            time: 0.000145s
+    Tables: None
+TEST_EXIT=0
+=== SEGB GTEST ===
+2026-09-28 16:25:45.329 - INFO: Done, number of words: 426
+2026-09-28 16:25:45.329 - INFO: Done, number of words: 426
+2026-09-28 16:25:45.329 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/job-5127/splitVocabLookupBatchMicro.a ...
+2026-09-28 16:25:45.329 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/job-5127/splitVocabLookupBatchMicro.a ...
+2026-09-28 16:25:45.329 - INFO: Done, number of words: 86
+2026-09-28 16:25:45.329 - INFO: Done, number of words: 86
+2026-09-28 16:25:45.329 - INFO: Running measurement "sequential operator[], mixed markers of group Synthetic micro-batches: 2,048 lookups into 512 words" ...
+2026-09-28 16:25:45.330 - INFO: Done in 0.000906 seconds.
+2026-09-28 16:25:45.330 - INFO: Running measurement "batched lookupBatch, mixed markers of group Synthetic micro-batches: 2,048 lookups into 512 words" ...
+2026-09-28 16:25:45.335 - INFO: Done in 0.004281 seconds.
+2026-09-28 16:25:45.335 - INFO: Running measurement "sequential operator[], single marker of group Synthetic micro-batches: 2,048 lookups into 512 words" ...
+2026-09-28 16:25:45.336 - INFO: Done in 0.00088 seconds.
+2026-09-28 16:25:45.336 - INFO: Running measurement "batched lookupBatch, single marker of group Synthetic micro-batches: 2,048 lookups into 512 words" ...
+2026-09-28 16:25:45.340 - INFO: Done in 0.003974 seconds.
+####################################################################
+# Benchmark class 'SplitVocabulary::lookupBatch (synthetic micro)' #
+####################################################################
+General metadata: {"time-of-measurement":"2026-09-28 16:25:45.329"}
+No configuration options were defined.
+####################
+# Group benchmarks #
+####################
+Group 'Synthetic micro-batches: 2,048 lookups into 512 words'
+    Measurements:
+        Single measurement 'sequential operator[], mixed markers'
+            time: 0.000906s
+        Single measurement 'batched lookupBatch, mixed markers'
+            time: 0.004281s
+        Single measurement 'sequential operator[], single marker'
+            time: 0.00088s
+        Single measurement 'batched lookupBatch, single marker'
+            time: 0.003974s
+    Tables: None
+bench rc=0
+=== BENCH SplitVocabLookupBatchEndToEndBenchmark
+2026-09-28 16:25:45.369 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/job-5127/splitVocabLookupBatchEndToEnd/vocab ...
+2026-09-28 16:25:45.369 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/job-5127/splitVocabLookupBatchEndToEnd/vocab ...
+2026-09-28 16:25:45.370 - INFO: Done, number of words: 33333
+2026-09-28 16:25:45.370 - INFO: Done, number of words: 33333
+2026-09-28 16:25:45.370 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/job-5127/splitVocabLookupBatchEndToEnd/vocab.a ...
+2026-09-28 16:25:45.370 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/job-5127/splitVocabLookupBatchEndToEnd/vocab.a ...
+2026-09-28 16:25:45.371 - INFO: Done, number of words: 16667
+2026-09-28 16:25:45.371 - INFO: Done, number of words: 16667
+2026-09-28 16:25:45.373 - INFO: Running measurement "sequential operator[] of group End to end: 50,000 words in two markers, 100,000 lookups per batch" ...
+2026-09-28 16:25:45.383 - INFO: Done in 0.009955 seconds.
+2026-09-28 16:25:45.383 - INFO: Running measurement "batched lookupBatch of group End to end: 50,000 words in two markers, 100,000 lookups per batch" ...
+2026-09-28 16:25:45.428 - INFO: Done in 0.045527 seconds.
+###############################################################
+# Benchmark class 'SplitVocabulary::lookupBatch (end to end)' #
+###############################################################
+General metadata: {"time-of-measurement":"2026-09-28 16:25:45.373"}
+No configuration options were defined.
+####################
+# Group benchmarks #
+####################
+Group 'End to end: 50,000 words in two markers, 100,000 lookups per batch'
+    Measurements:
+        Single measurement 'sequential operator[]'
+            time: 0.009955s
+        Single measurement 'batched lookupBatch'
+            time: 0.045527s
+    Tables: None
+bench rc=0
+MISSING PolymorphicVocabLookupBatchMicroBenchmark
+MISSING PolymorphicVocabLookupBatchEndToEndBenchmark
+WQ_DONE segb-gtest exit=0
+=== EXPORT A/B ===
+[2026-09-28T14:25:53Z] PR #75 dblp turtle_export queries=H-size scenarios=warm reps=1 mode=two binaries layout=ural
+[2026-09-28T14:25:53Z] base:    /local/data-ssd/stoetzem/thesis/experiments/runs/pr75-dblp-segA-construct-ab/bin/qlever-server-base (39c735bf) args='' form=''
+[2026-09-28T14:25:53Z] variant: /local/data-ssd/stoetzem/thesis/experiments/runs/pr75-dblp-segA-construct-ab/bin/qlever-server-variant (82bfd5f5) args='' form=''
+[2026-09-28T14:26:06Z] pr75-H-size-warm-base-r1 done
+[2026-09-28T14:26:20Z] pr75-H-size-warm-variant-r1 done
+[2026-09-28T14:26:20Z] finished rc=0 run=/local/data-ssd/stoetzem/thesis/experiments/runs/pr75-dblp-segA-construct-ab
+pr-ab: FATAL: verify-qlever-binary failed for variant (see gate-verify-variant.log)
+SEGAB_EXIT=1
+SEGAB_ALL_EXIT=1
+WQ_DONE seq=5127 type=bench exit=1

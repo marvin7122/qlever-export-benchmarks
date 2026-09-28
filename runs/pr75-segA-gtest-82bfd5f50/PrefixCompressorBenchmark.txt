@@ -1,0 +1,40 @@
+2026-09-28 16:25:42.411 - INFO: Running measurement "decompress (allocating) of group Single-word PrefixCompressor decode (5,000 words)" ...
+2026-09-28 16:25:42.412 - INFO: Done in 0.000965 seconds.
+2026-09-28 16:25:42.412 - INFO: Running measurement "decompressInto (reused buffer) of group Single-word PrefixCompressor decode (5,000 words)" ...
+2026-09-28 16:25:42.413 - INFO: Done in 0.000381 seconds.
+2026-09-28 16:25:42.413 - INFO: Running measurement "batch decode into vector<string> of group Batch PrefixCompressor resolution (5,000 words)" ...
+2026-09-28 16:25:42.414 - INFO: Done in 0.001385 seconds.
+2026-09-28 16:25:42.414 - INFO: Running measurement "batch decodeInto contiguous arena of group Batch PrefixCompressor resolution (5,000 words)" ...
+2026-09-28 16:25:42.415 - INFO: Done in 0.000729 seconds.
+#############################################################
+# Benchmark class 'PrefixCompressor in-place decompression' #
+#############################################################
+General metadata: {"time-of-measurement":"2026-09-28 16:25:42.411"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'Single-word PrefixCompressor decode (5,000 words)'
+    Measurements:
+    
+        Single measurement 'decompress (allocating)'
+            time: 0.000965s
+        
+        Single measurement 'decompressInto (reused buffer)'
+            time: 0.000381s
+    
+    Tables: None
+
+Group 'Batch PrefixCompressor resolution (5,000 words)'
+    Measurements:
+    
+        Single measurement 'batch decode into vector<string>'
+            time: 0.001385s
+        
+        Single measurement 'batch decodeInto contiguous arena'
+            time: 0.000729s
+    
+    Tables: None
+
