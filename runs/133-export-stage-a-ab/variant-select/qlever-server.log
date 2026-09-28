@@ -1,0 +1,129 @@
+2026-09-18 00:09:57.560 - INFO: [1mQLever server v0.6.0-90-gfde3ce8db, compiled on Thu Sep 17 11:24:12 PM CEST 2026 using git hash fde3ce8[22m
+2026-09-18 00:09:57.560 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-09-18 00:09:57.561 - INFO: The git hash used to build this index was "65f84b4"
+2026-09-18 00:09:57.561 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-09-18 00:10:10.871 - INFO: Done, number of words: 1,580,300,680
+2026-09-18 00:10:10.871 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-09-18 00:10:10.952 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-09-18 00:10:11.048 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-09-18 00:10:11.120 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-09-18 00:10:11.215 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-09-18 00:10:11.297 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-09-18 00:10:11.378 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-09-18 00:10:11.434 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-09-18 00:10:11.488 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-09-18 00:10:11.488 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-09-18 00:10:12.876 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-09-18 00:10:20.758 - INFO: Initializing server ...
+2026-09-18 00:10:20.758 - INFO: No access token required for restricted API calls
+2026-09-18 00:10:20.758 - INFO: The server is ready, listening for requests on port 7022 ...
+2026-09-18 00:10:21.332 - INFO: 
+2026-09-18 00:10:21.332 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-18 00:10:21.346 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large (SELECT companion)
+# Same WHERE clause as H-vocab-label-large.rq, but SELECT ?entity ?label
+# instead of CONSTRUCT. Used by run 124 (export term-lookup perf profile)
+# to attribute SELECT export CPU between vocabulary lookup and formatting.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entity ?label
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-09-18 00:10:21.346 - INFO: Requested media types of the result are: "text/csv"
+2026-09-18 00:10:21.348 - INFO: Query planning done in 16 ms
+2026-09-18 00:10:21.348 - INFO: Result has unknown size (not computed yet)
+2026-09-18 00:10:40.786 - INFO: Done processing query and sending result, total time was 19,454 ms
+2026-09-18 00:10:41.244 - INFO: 
+2026-09-18 00:10:41.244 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-18 00:10:41.244 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large (SELECT companion)
+# Same WHERE clause as H-vocab-label-large.rq, but SELECT ?entity ?label
+# instead of CONSTRUCT. Used by run 124 (export term-lookup perf profile)
+# to attribute SELECT export CPU between vocabulary lookup and formatting.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entity ?label
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-09-18 00:10:41.244 - INFO: Requested media types of the result are: "text/csv"
+2026-09-18 00:10:41.248 - INFO: Query planning done in 3 ms
+2026-09-18 00:10:41.248 - INFO: Result has unknown size (not computed yet)
+2026-09-18 00:11:00.060 - INFO: Done processing query and sending result, total time was 18,815 ms
+2026-09-18 00:11:00.516 - INFO: 
+2026-09-18 00:11:00.516 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-18 00:11:00.517 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large (SELECT companion)
+# Same WHERE clause as H-vocab-label-large.rq, but SELECT ?entity ?label
+# instead of CONSTRUCT. Used by run 124 (export term-lookup perf profile)
+# to attribute SELECT export CPU between vocabulary lookup and formatting.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entity ?label
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-09-18 00:11:00.517 - INFO: Requested media types of the result are: "text/csv"
+2026-09-18 00:11:00.520 - INFO: Query planning done in 4 ms
+2026-09-18 00:11:00.521 - INFO: Result has unknown size (not computed yet)
+2026-09-18 00:11:19.694 - INFO: Done processing query and sending result, total time was 19,178 ms
+2026-09-18 00:11:20.125 - INFO: 
+2026-09-18 00:11:20.125 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-18 00:11:20.125 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large (SELECT companion)
+# Same WHERE clause as H-vocab-label-large.rq, but SELECT ?entity ?label
+# instead of CONSTRUCT. Used by run 124 (export term-lookup perf profile)
+# to attribute SELECT export CPU between vocabulary lookup and formatting.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entity ?label
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-09-18 00:11:20.125 - INFO: Requested media types of the result are: "text/csv"
+2026-09-18 00:11:20.129 - INFO: Query planning done in 3 ms
+2026-09-18 00:11:20.129 - INFO: Result has unknown size (not computed yet)
+2026-09-18 00:11:39.385 - INFO: Done processing query and sending result, total time was 19,260 ms
+2026-09-18 00:11:39.844 - INFO: 
+2026-09-18 00:11:39.844 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-18 00:11:39.845 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large (SELECT companion)
+# Same WHERE clause as H-vocab-label-large.rq, but SELECT ?entity ?label
+# instead of CONSTRUCT. Used by run 124 (export term-lookup perf profile)
+# to attribute SELECT export CPU between vocabulary lookup and formatting.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entity ?label
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-09-18 00:11:39.845 - INFO: Requested media types of the result are: "text/csv"
+2026-09-18 00:11:39.848 - INFO: Query planning done in 3 ms
+2026-09-18 00:11:39.848 - INFO: Result has unknown size (not computed yet)
+2026-09-18 00:11:59.286 - INFO: Done processing query and sending result, total time was 19,441 ms

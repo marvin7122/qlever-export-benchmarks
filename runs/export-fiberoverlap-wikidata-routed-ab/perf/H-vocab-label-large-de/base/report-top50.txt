@@ -1,0 +1,50 @@
+    11.44%  qlever-server-a  qlever-server-ab              [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+     7.25%  qlever-server-a  [kernel.kallsyms]             [k] filemap_get_read_batch
+     6.05%  qlever-server-a  [kernel.kallsyms]             [k] _copy_to_iter
+     5.27%  qlever-server-a  [kernel.kallsyms]             [k] filemap_read
+     2.11%  qlever-server-a  qlever-server-ab              [.] qlever::constructExport::scatterBatchResolved(std::vector<qlever::constructExport::(anonymous namespace)::ColumnWork, std::allocator<qlever::constructExport::(anonymous namespace)::ColumnWork> >&, ad_utility::util::LRUCacheWithStatistics<ValueId, std::optional<std::shared_ptr<qlever::constructExport::EvaluatedTermData const> > >&, qlever::constructExport::BatchEvaluationResult&)
+     1.64%  qlever-server-a  [kernel.kallsyms]             [k] __io_read
+     1.42%  qlever-server-a  qlever-server-ab              [.] ValueId::compareThreeWay(ValueId const&) const
+     1.40%  qlever-server-a  qlever-server-ab              [.] ad_utility::vocabulary::detail::DecoderMultiplexer<FsstRepeatedDecoder<2ul> >::decompress[abi:cxx11](std::basic_string_view<char, std::char_traits<char> >, unsigned long) const
+     1.27%  qlever-server-a  [kernel.kallsyms]             [k] kiocb_done
+     1.18%  qlever-server-a  qlever-server-ab              [.] qlever::constructExport::instantiateBatch(qlever::constructExport::PreprocessedConstructTemplate const&, qlever::constructExport::BatchEvaluationResult const&, unsigned long, std::optional<qlever::constructExport::DeduplicationParams>)
+     1.17%  qlever-server-a  qlever-server-ab              [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     1.17%  qlever-server-a  [kernel.kallsyms]             [k] atime_needs_update
+     1.12%  qlever-server-a  libjemalloc.so.2              [.] operator new(unsigned long)
+     1.11%  qlever-server-a  [kernel.kallsyms]             [k] io_read
+     1.10%  qlever-server-a  libjemalloc.so.2              [.] operator delete(void*, unsigned long)
+     1.09%  qlever-server-a  [kernel.kallsyms]             [k] xas_load
+     1.02%  qlever-server-a  qlever-server-ab              [.] fsst_decompress
+     0.99%  qlever-server-a  qlever-server-ab              [.] boost::iostreams::detail::indirect_streambuf<boost::iostreams::back_insert_device<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::char_traits<char>, std::allocator<char>, boost::iostreams::output>::overflow(int)
+     0.98%  qlever-server-a  libz.so.1.3                   [.] adler32_z
+     0.97%  qlever-server-a  qlever-server-ab              [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+     0.95%  qlever-server-a  [kernel.kallsyms]             [k] srso_safe_ret
+     0.92%  qlever-server-a  [kernel.kallsyms]             [k] srso_return_thunk
+     0.90%  qlever-server-a  [kernel.kallsyms]             [k] copy_page_to_iter
+     0.89%  qlever-server-a  [kernel.kallsyms]             [k] fget
+     0.84%  qlever-server-a  qlever-server-ab              [.] qlever::constructExport::(anonymous namespace)::collectColumnMisses(unsigned long, qlever::constructExport::BatchEvaluationContext const&, ad_utility::util::LRUCacheWithStatistics<ValueId, std::optional<std::shared_ptr<qlever::constructExport::EvaluatedTermData const> > >&, qlever::constructExport::(anonymous namespace)::ColumnWork&)
+     0.83%  qlever-server-a  qlever-server-ab              [.] RdfEscaping::validRDFLiteralFromNormalized[abi:cxx11](std::basic_string_view<char, std::char_traits<char> >)
+     0.82%  qlever-server-a  [kernel.kallsyms]             [k] io_issue_sqe
+     0.82%  qlever-server-a  [kernel.kallsyms]             [k] io_prep_rw
+     0.81%  qlever-server-a  [kernel.kallsyms]             [k] apparmor_file_permission
+     0.81%  qlever-server-a  [kernel.kallsyms]             [k] ext4_file_read_iter
+     0.79%  qlever-server-a  [kernel.kallsyms]             [k] aa_file_perm
+     0.78%  qlever-server-a  [kernel.kallsyms]             [k] io_prep_read
+     0.77%  qlever-server-a  [kernel.kallsyms]             [k] io_submit_sqe
+     0.75%  qlever-server-a  [kernel.kallsyms]             [k] io_rw_init_file
+     0.75%  qlever-server-a  libstdc++.so.6.0.33           [.] std::basic_streambuf<char, std::char_traits<char> >::xsputn(char const*, long)
+     0.71%  qlever-server-a  [kernel.kallsyms]             [k] __io_prep_rw
+     0.69%  qlever-server-a  [kernel.kallsyms]             [k] filemap_get_pages
+     0.68%  qlever-server-a  [kernel.kallsyms]             [k] current_time
+     0.64%  qlever-server-a  [kernel.kallsyms]             [k] io_init_req
+     0.61%  qlever-server-a  qlever-server-ab              [.] ad_utility::IoUringPolicy::addBatch(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>, unsigned long)
+     0.60%  qlever-server-a  [kernel.kallsyms]             [k] rw_verify_area
+     0.57%  qlever-server-a  qlever-server-ab              [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.56%  qlever-server-a  qlever-server-ab              [.] void std::__introsort_loop<__gnu_cxx::__normal_iterator<std::pair<long, ValueId>*, std::vector<std::pair<long, ValueId>, std::allocator<std::pair<long, ValueId> > > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::ranges::__detail::__make_comp_proj<std::ranges::less, ad_utility::detail::SecondImpl>(std::ranges::less&, ad_utility::detail::SecondImpl&)::{lambda(auto:1&&, auto:2&&)#1}> >(__gnu_cxx::__normal_iterator<std::pair<long, ValueId>*, std::vector<std::pair<long, ValueId>, std::allocator<std::pair<long, ValueId> > > >, __gnu_cxx::__normal_iterator<std::pair<long, ValueId>*, std::vector<std::pair<long, ValueId>, std::allocator<std::pair<long, ValueId> > > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::ranges::__detail::__make_comp_proj<std::ranges::less, ad_utility::detail::SecondImpl>(std::ranges::less&, ad_utility::detail::SecondImpl&)::{lambda(auto:1&&, auto:2&&)#1}>)
+     0.56%  qlever-server-a  qlever-server-ab              [.] std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
+     0.55%  qlever-server-a  qlever-server-ab              [.] absl::lts_20260107::container_internal::EraseMetaOnlyLarge(absl::lts_20260107::container_internal::CommonFields&, absl::lts_20260107::container_internal::ctrl_t const*, unsigned long)
+     0.53%  qlever-server-a  [kernel.kallsyms]             [k] __io_import_rw_buffer
+     0.53%  qlever-server-a  [kernel.kallsyms]             [k] io_free_batch_list
+     0.52%  qlever-server-a  [kernel.kallsyms]             [k] io_rw_alloc_async
+     0.51%  qlever-server-a  [kernel.kallsyms]             [k] io_file_get_normal
+     0.51%  qlever-server-a  qlever-server-ab              [.] std::vector<std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> >, std::allocator<std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> > > > ql::exportIds::idsToStringAndType<false, false, ql::identity>(Index const&, std::span<ValueId const, 18446744073709551615ul>, LocalVocab const&, ql::identity const&)

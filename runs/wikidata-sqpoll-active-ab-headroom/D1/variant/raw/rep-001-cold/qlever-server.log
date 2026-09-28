@@ -1,0 +1,59 @@
+2026-09-20 23:42:07.842 - INFO: [1mQLever server v0.6.0-129-gcc308dd1b, compiled on Sun Sep 20 11:28:37 PM CEST 2026 using git hash cc308dd[22m
+2026-09-20 23:42:07.843 - INFO: Runtime parameter set from the command line: iouring-sqpoll=true
+2026-09-20 23:42:07.843 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-09-20 23:42:07.852 - INFO: The git hash used to build this index was "65f84b4"
+2026-09-20 23:42:07.853 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-09-20 23:42:20.513 - INFO: Done, number of words: 1,580,300,680
+2026-09-20 23:42:20.513 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-09-20 23:42:20.591 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-09-20 23:42:20.686 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-09-20 23:42:20.754 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-09-20 23:42:20.848 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-09-20 23:42:20.927 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-09-20 23:42:21.006 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-09-20 23:42:21.060 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-09-20 23:42:21.114 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-09-20 23:42:21.114 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-09-20 23:42:22.477 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-09-20 23:42:30.278 - INFO: Initializing server ...
+2026-09-20 23:42:30.278 - INFO: No access token required for restricted API calls
+2026-09-20 23:42:30.278 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-09-20 23:42:30.448 - INFO: 
+2026-09-20 23:42:30.448 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-20 23:42:30.450 - INFO: Processing the following SPARQL query:
+# Tier D1 — DISCOVER (broad scan, mixed cache hits/misses)
+# Physical: VALUES binds 10 subjects. ?s ?p ?o is S bound only, so one
+# SPO scan of all outgoing triples per subject.
+# CONSTRUCT emits s, p, and o, so export resolves many distinct
+# predicate and object vocabulary IDs.
+# Targets: lookupBatch on a wide mix of terms. Small scan, high unique-ID
+# cardinality. This is the 5620 → 108 syscr query.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  VALUES ?s {
+    wd:Q42
+    wd:Q937
+    wd:Q7251
+    wd:Q7259
+    wd:Q307
+    wd:Q392
+    wd:Q692
+    wd:Q6197
+    wd:Q6199
+    wd:Q9095
+  }
+  ?s ?p ?o .
+}
+
+2026-09-20 23:42:30.450 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-20 23:42:30.451 - INFO: Query planning done in 2 ms
+2026-09-20 23:42:30.453 - INFO: Number of tuples in VALUES clause: 10
+2026-09-20 23:42:30.453 - INFO: Number of entries in local vocabulary per column: 0
+2026-09-20 23:42:30.453 - INFO: Result has unknown size (not computed yet)
+2026-09-20 23:42:30.620 - INFO: Done processing query and sending result, total time was 171 ms
+2026-09-20 23:42:30.644 - INFO: 
+2026-09-20 23:42:30.644 - INFO: Request received via GET, no content type specified
+2026-09-20 23:42:30.644 - INFO: Processing command "cache-stats": get cache statistics

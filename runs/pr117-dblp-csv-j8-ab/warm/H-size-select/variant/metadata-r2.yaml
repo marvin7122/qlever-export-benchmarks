@@ -1,0 +1,290 @@
+run_id: pr117-H-size-select-warm-variant-r2
+status: complete
+created_at: '2026-09-26T15:37:52.915861+00:00'
+mode: pilot
+query: /local/data-ssd/stoetzem/thesis/representative-queries/H-size-select.rq
+cache_scenario: warm
+repetitions: 1
+construct_deduplication: none
+timing_boundary: client request start to final response byte
+primary_metric: server-side export time from completed query result to final emitted
+  response
+secondary_metric: client request start to final response byte
+response_mode: stream_count_xxh3_128_discard
+harness:
+  git:
+    repo: /local/data-ssd/stoetzem/incoming/pr-ab-tools-9207b911ab
+    commit: ''
+    short_commit: ''
+    working_tree_status: ''
+    remote: ''
+    submodule_status: ''
+  script:
+    path: /local/data-ssd/stoetzem/incoming/pr-ab-tools-9207b911ab/scripts/benchmark_export.py
+    size_bytes: 43755
+    mtime_ns: 1790352645000000000
+    sha256: 5c574f84c68c5f621f0f494842345f1e9ed20d0e4a089aaa8c03dbf618e7ece7
+qlever:
+  repo: /local/data-ssd/stoetzem/qlever-src
+  commit: cc7cc74f22051a4d54b4a7f6473c984cebbf582f
+  short_commit: cc7cc74f2
+  working_tree_status: ?? build-shared/
+  git:
+    repo: /local/data-ssd/stoetzem/qlever-src
+    commit: cc7cc74f22051a4d54b4a7f6473c984cebbf582f
+    short_commit: cc7cc74f2
+    working_tree_status: ?? build-shared/
+    remote: "origin\thttps://github.com/marvin7122/qlever.git (fetch)\norigin\thttps://github.com/marvin7122/qlever.git\
+      \ (push)\nupstream\thttps://github.com/ad-freiburg/qlever (fetch)\nupstream\t\
+      https://github.com/ad-freiburg/qlever (push)"
+    submodule_status: ''
+  server_binary: /local/data-ssd/stoetzem/thesis/experiments/runs/pr117-dblp-csv-j8-ab/bin/qlever-server-ab
+  server_binary_version: /local/data-ssd/stoetzem/thesis/experiments/runs/pr117-dblp-csv-j8-ab/bin/qlever-server-ab
+    v0.6.0-601-g4202342c3
+  server_binary_matches_source: false
+  server_binary_file:
+    path: /local/data-ssd/stoetzem/thesis/experiments/runs/pr117-dblp-csv-j8-ab/bin/qlever-server-ab
+    size_bytes: 56539776
+    mtime_ns: 1790437045322947091
+  build:
+    build_dir: /local/data-ssd/stoetzem/thesis/experiments/runs/pr117-dblp-csv-j8-ab/bin
+    cmake_cache: /local/data-ssd/stoetzem/thesis/experiments/runs/pr117-dblp-csv-j8-ab/bin/CMakeCache.txt
+    cmake_cache_present: false
+    cmake_cache_file: null
+    cmake_configure_log: /local/data-ssd/stoetzem/thesis/experiments/runs/pr117-dblp-csv-j8-ab/bin/CMakeFiles/CMakeConfigureLog.yaml
+    cmake_configure_log_present: false
+    cmake_configure_log_file: null
+    cmake_version: 'cmake version 4.4.2
+
+
+      CMake suite maintained and supported by Kitware (kitware.com/cmake).'
+    cache_entries: {}
+    configure_options: {}
+  server_command:
+  - /local/data-ssd/stoetzem/thesis/experiments/runs/pr117-dblp-csv-j8-ab/bin/qlever-server-ab
+  - --index-basename
+  - /local/data-ssd/stoetzem/dblp/dblp
+  - --port
+  - '7015'
+  - --no-access-check
+  - --cache-max-size
+  - 0B
+  - --cache-max-size-single-entry
+  - 0B
+  - --cache-max-size-lazy-result
+  - 0B
+  - --cache-max-num-entries
+  - '0'
+  - --default-query-timeout
+  - 1800s
+  - --num-simultaneous-queries
+  - '8'
+  - --construct-deduplication
+  - none
+  - --set-runtime-parameter
+  - export-v2-async-pipeline=true
+  access_control: --no-access-check
+  result_cache:
+    cache_max_size: 0B
+    cache_max_size_single_entry: 0B
+    cache_max_size_lazy_result: 0B
+    cache_max_num_entries: 0
+dataset:
+  index_dir: /local/data-ssd/stoetzem/dblp
+  index_basename: /local/data-ssd/stoetzem/dblp/dblp
+  serving_manifest: /local/data-ssd/stoetzem/thesis/experiments/manifests/dblp-serving-files.txt
+  serving_manifest_file:
+    path: /local/data-ssd/stoetzem/thesis/experiments/manifests/dblp-serving-files.txt
+    size_bytes: 548
+    mtime_ns: 1786301073123890946
+    sha256: 2eff23ca01335618c7e0cbceb5525dc3dcf8043e8884129c1f55211e3b16ed1a
+  serving_file_count: 25
+  serving_files:
+  - path: /local/data-ssd/stoetzem/dblp/dblp.index.spo
+    size_bytes: 3338348499
+    mtime_ns: 1788457650788857856
+  - path: /local/data-ssd/stoetzem/dblp/dblp.index.spo.meta
+    size_bytes: 32
+    mtime_ns: 1788457650788857856
+  - path: /local/data-ssd/stoetzem/dblp/dblp.index.sop
+    size_bytes: 3374417998
+    mtime_ns: 1788457650801857750
+  - path: /local/data-ssd/stoetzem/dblp/dblp.index.sop.meta
+    size_bytes: 32
+    mtime_ns: 1788457650801857750
+  - path: /local/data-ssd/stoetzem/dblp/dblp.index.pso
+    size_bytes: 3777257373
+    mtime_ns: 1788457589479359274
+  - path: /local/data-ssd/stoetzem/dblp/dblp.index.pso.meta
+    size_bytes: 1792
+    mtime_ns: 1788457589479359274
+  - path: /local/data-ssd/stoetzem/dblp/dblp.index.pos
+    size_bytes: 3452033016
+    mtime_ns: 1788457589502359086
+  - path: /local/data-ssd/stoetzem/dblp/dblp.index.pos.meta
+    size_bytes: 1792
+    mtime_ns: 1788457589502359086
+  - path: /local/data-ssd/stoetzem/dblp/dblp.index.osp
+    size_bytes: 3506630418
+    mtime_ns: 1788457720703286384
+  - path: /local/data-ssd/stoetzem/dblp/dblp.index.osp.meta
+    size_bytes: 55584
+    mtime_ns: 1788457720703286384
+  - path: /local/data-ssd/stoetzem/dblp/dblp.index.ops
+    size_bytes: 3503233892
+    mtime_ns: 1788457720684286539
+  - path: /local/data-ssd/stoetzem/dblp/dblp.index.ops.meta
+    size_bytes: 55584
+    mtime_ns: 1788457720684286539
+  - path: /local/data-ssd/stoetzem/dblp/dblp.internal.index.pso
+    size_bytes: 284215107
+    mtime_ns: 1788457596629300784
+  - path: /local/data-ssd/stoetzem/dblp/dblp.internal.index.pso.meta
+    size_bytes: 64
+    mtime_ns: 1788457596629300784
+  - path: /local/data-ssd/stoetzem/dblp/dblp.internal.index.pos
+    size_bytes: 265296533
+    mtime_ns: 1788457596632300759
+  - path: /local/data-ssd/stoetzem/dblp/dblp.internal.index.pos.meta
+    size_bytes: 64
+    mtime_ns: 1788457596632300759
+  - path: /local/data-ssd/stoetzem/dblp/dblp.vocabulary.words.external
+    size_bytes: 4682928180
+    mtime_ns: 1788457722792269313
+  - path: /local/data-ssd/stoetzem/dblp/dblp.vocabulary.words.external.offsets
+    size_bytes: 3575557384
+    mtime_ns: 1788457724320257025
+  - path: /local/data-ssd/stoetzem/dblp/dblp.vocabulary.codebooks
+    size_bytes: 1967624
+    mtime_ns: 1788457724321257018
+  - path: /local/data-ssd/stoetzem/dblp/dblp.vocabulary.words.internal
+    size_bytes: 8255094
+    mtime_ns: 1788457724325256987
+  - path: /local/data-ssd/stoetzem/dblp/dblp.vocabulary.words.internal.ids
+    size_bytes: 3575648
+    mtime_ns: 1788457720715286286
+  - path: /local/data-ssd/stoetzem/dblp/dblp.meta-data.json
+    size_bytes: 1074
+    mtime_ns: 1788457724327256972
+  - path: /local/data-ssd/stoetzem/dblp/dblp.settings.json
+    size_bytes: 37
+    mtime_ns: 1788457720712428066
+  - path: /local/data-ssd/stoetzem/dblp/dblp.index.patterns
+    size_bytes: 175992
+    mtime_ns: 1788457720712428066
+  - path: /local/data-ssd/stoetzem/dblp/Qleverfile
+    size_bytes: 1259
+    mtime_ns: 1785419006724370468
+  index_metadata_file:
+    path: /local/data-ssd/stoetzem/dblp/dblp.meta-data.json
+    size_bytes: 1074
+    mtime_ns: 1788457724327256972
+    sha256: af1487eadbbc93915067e1c28f451433282bdfb901b8c0d0778a945c35d413a6
+  index_metadata:
+    date-of-index-build: '2026-08-09T20:28:20Z'
+    encoded-iri-prefixes:
+      prefixes-with-leading-angle-brackets:
+      - <http://qlever.cs.uni-freiburg.de/builtin-functions/graph/
+    git-hash: 65f84b4
+    graphNameManager:
+      allocatedGraphs: 1
+      prefix: http://qlever.cs.uni-freiburg.de/builtin-functions/graph/
+    has-all-permutations: true
+    has-icu-support: true
+    index-format-version:
+      date: '2026-09-01'
+      pull-request-number: 3159
+    locale:
+      country: US
+      ignore-punctuation: false
+      language: en
+    num-blank-nodes-total: 58482687
+    num-objects:
+      internal: 0
+      normal: 345357897
+    num-predicates:
+      internal: 6
+      normal: 96
+    num-subjects:
+      internal: 0
+      normal: 255804614
+    num-triples:
+      internal: 255805025
+      normal: 1593245022
+    vocabulary-type: on-disk-compressed
+  index_settings_file:
+    path: /local/data-ssd/stoetzem/dblp/dblp.settings.json
+    size_bytes: 37
+    mtime_ns: 1788457720712428066
+    sha256: e3e321f884b209d9fe05b2857fc024d6770540faf3cbfdf83fe0a54dbc222891
+  qleverfile:
+    path: /local/data-ssd/stoetzem/dblp/Qleverfile
+    size_bytes: 1259
+    mtime_ns: 1785419006724370468
+    sha256: 5dc71f86509c3544bfc9386803c5815fbf8981e3e7bc27f691f134b36b5eb0f9
+query_file:
+  path: /local/data-ssd/stoetzem/thesis/representative-queries/H-size-select.rq
+  size_bytes: 400
+  mtime_ns: 1788943675226790318
+  sha256: 657cfa3aaea186971eb65223cd05e292664a377c1755a98947bf645e32b35aa8
+machine:
+  hostname: ural
+  system: Linux-7.0.0-28-generic-x86_64-with-glibc2.39
+  python: 3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]
+  python_packages:
+    httpx: 0.28.1
+    PyYAML: 6.0.3
+    xxhash: 3.8.1
+  loadavg:
+  - 1.84765625
+  - 2.48193359375
+  - 3.02783203125
+  mem_available_gib: 121.49685287475586
+  cpu_model_names:
+  - AMD Ryzen 7 3700X 8-Core Processor
+  cpu_governors:
+    cpu0: powersave
+    cpu1: powersave
+    cpu10: powersave
+    cpu11: powersave
+    cpu12: powersave
+    cpu13: powersave
+    cpu14: powersave
+    cpu15: powersave
+    cpu2: powersave
+    cpu3: powersave
+    cpu4: powersave
+    cpu5: powersave
+    cpu6: powersave
+    cpu7: powersave
+    cpu8: powersave
+    cpu9: powersave
+  cpu_scaling_drivers:
+    cpu0: amd-pstate-epp
+    cpu1: amd-pstate-epp
+    cpu10: amd-pstate-epp
+    cpu11: amd-pstate-epp
+    cpu12: amd-pstate-epp
+    cpu13: amd-pstate-epp
+    cpu14: amd-pstate-epp
+    cpu15: amd-pstate-epp
+    cpu2: amd-pstate-epp
+    cpu3: amd-pstate-epp
+    cpu4: amd-pstate-epp
+    cpu5: amd-pstate-epp
+    cpu6: amd-pstate-epp
+    cpu7: amd-pstate-epp
+    cpu8: amd-pstate-epp
+    cpu9: amd-pstate-epp
+  vmtouch: null
+syscall_counters:
+  source: ld_preload
+  library: /local/data-ssd/stoetzem/thesis/experiments/runs/pr117-dblp-csv-j8-ab/warm/H-size-select/variant/libexport_syscall_count.so
+  compile_error: null
+  events:
+  - pread64
+  - io_uring_enter
+  method: src/util/File.h and SyncIoPolicy call pread; IoUringPolicy calls io_uring_submit
+    and io_uring_wait_cqe/wait_cqes. Those liburing functions issue io_uring_enter.
+    Kernel syscalls:sys_enter_* tracepoints are not readable on Ural (perf_event_paranoid=4).
+completed_at: '2026-09-26T15:38:02.686490+00:00'

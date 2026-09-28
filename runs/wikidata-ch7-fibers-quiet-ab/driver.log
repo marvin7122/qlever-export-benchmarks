@@ -1,0 +1,55 @@
+[2026-09-22T02:04:53Z] WARN baseline links liburing (master merged the ring path); the arm still counts as baseline because unrouted workloads never enter the ring
+[2026-09-22T02:04:53Z] binary gates ok (baseline without, variant with liburing)
+[2026-09-22T02:04:53Z] preflight ok
+base_commit=7bd97790e9ee6d5b2f6305fd8fd1c8000b63710b
+baseline_binary=/local/data-ssd/stoetzem/binaries/qlever-server-ch7-integration
+baseline_version=/local/data-ssd/stoetzem/binaries/qlever-server-ch7-integration v0.6.0-135-g84b943e4e
+variant_branch=fibers
+variant_binary=/local/data-ssd/stoetzem/wt/feat/iouring-fibers-cooperative/build/qlever-server
+variant_version=/local/data-ssd/stoetzem/wt/feat/iouring-fibers-cooperative/build/qlever-server v0.6.0-109-gf047a827d
+index=/local/data-ssd/stoetzem/wikidata/index-for-upgrade-new-format/wikidata
+uname=7.0.0-28-generic
+date=2026-09-22T02:04:53Z
+[2026-09-22T02:04:55Z] === arm baseline (/local/data-ssd/stoetzem/binaries/qlever-server-ch7-integration)
+[2026-09-22T02:05:16Z] server ready pid 968604 (baseline)
+[2026-09-22T02:05:16Z] warmup baseline large-de (discarded)
+
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-fibers-quiet-ab/baseline-large-de-warm code=200 wall=15.686382s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=16.31s cpu_iowait=230.74s cpu_total=248.06s wall=15.5s n=32
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-fibers-quiet-ab/baseline-large-de-cold1 code=200 wall=23.687324s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=23.82s cpu_iowait=350.30s cpu_total=375.89s wall=23.5s n=48
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-fibers-quiet-ab/baseline-large-de-cold2 code=200 wall=23.664243s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=23.77s cpu_iowait=348.99s cpu_total=375.83s wall=23.5s n=48
+[2026-09-22T02:06:52Z] warmup baseline scatter200k-de (discarded)
+
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-fibers-quiet-ab/baseline-scatter200k-de-warm code=200 wall=5.075387s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=4.31s cpu_iowait=75.45s cpu_total=80.01s wall=5.0s n=11
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-fibers-quiet-ab/baseline-scatter200k-de-cold1 code=200 wall=10.948241s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=6.63s cpu_iowait=157.99s cpu_total=167.75s wall=10.5s n=22
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-fibers-quiet-ab/baseline-scatter200k-de-cold2 code=200 wall=10.713163s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=6.75s cpu_iowait=157.22s cpu_total=167.74s wall=10.5s n=22
+[2026-09-22T02:07:45Z] server stopped (baseline)
+[2026-09-22T02:07:55Z] === arm initial-ring (/local/data-ssd/stoetzem/wt/feat/iouring-fibers-cooperative/build/qlever-server)
+[2026-09-22T02:08:18Z] server ready pid 969696 (initial-ring)
+[2026-09-22T02:08:18Z] warmup initial-ring large-de (discarded)
+
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-fibers-quiet-ab/initial-ring-large-de-warm code=200 wall=15.593562s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=16.28s cpu_iowait=231.03s cpu_total=248.02s wall=15.5s n=32
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-fibers-quiet-ab/initial-ring-large-de-cold1 code=200 wall=60.551348s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=24.54s cpu_iowait=903.39s cpu_total=964.65s wall=60.5s n=122
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-fibers-quiet-ab/initial-ring-large-de-cold2 code=200 wall=60.437580s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=24.27s cpu_iowait=895.75s cpu_total=956.73s wall=60.0s n=121
+[2026-09-22T02:11:45Z] warmup initial-ring scatter200k-de (discarded)
+
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-fibers-quiet-ab/initial-ring-scatter200k-de-warm code=200 wall=4.964848s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=3.64s cpu_iowait=68.02s cpu_total=72.01s wall=4.5s n=10
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-fibers-quiet-ab/initial-ring-scatter200k-de-cold1 code=200 wall=27.417088s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=7.39s cpu_iowait=405.44s cpu_total=430.37s wall=27.0s n=55
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-fibers-quiet-ab/initial-ring-scatter200k-de-cold2 code=200 wall=27.409172s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=7.56s cpu_iowait=405.36s cpu_total=430.39s wall=27.0s n=55
+[2026-09-22T02:13:16Z] server stopped (initial-ring)
+[2026-09-22T02:13:16Z] A/B complete

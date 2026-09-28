@@ -1,0 +1,65 @@
+2026-07-30 22:34:09.125 - INFO: [1mQLever server v0.5.50-58-gbdd1a6b9, compiled on Thu Jul 30 22:03:57 CEST 2026 using git hash bdd1a6b[22m
+2026-07-30 22:34:09.126 - INFO: The git hash used to build this index was "8c99fe"
+2026-07-30 22:34:09.126 - INFO: Reading vocabulary from file /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.vocabulary.words ...
+2026-07-30 22:34:09.140 - INFO: Done, number of words: 409,446,926
+2026-07-30 22:34:09.140 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 409,457
+2026-07-30 22:34:09.150 - INFO: Registered PSO permutation: #relations = 6, #blocks = 7,515, #triples = 234,800,838
+2026-07-30 22:34:09.173 - INFO: Registered PSO permutation: #relations = 96, #blocks = 46,913, #triples = 1,464,719,701
+2026-07-30 22:34:09.177 - INFO: Registered POS permutation: #relations = 6, #blocks = 7,515, #triples = 234,800,838
+2026-07-30 22:34:09.200 - INFO: Registered POS permutation: #relations = 96, #blocks = 46,913, #triples = 1,464,719,701
+2026-07-30 22:34:09.220 - INFO: Registered OPS permutation: #relations = 318,850,904, #blocks = 39,014, #triples = 1,464,719,701
+2026-07-30 22:34:09.241 - INFO: Registered OSP permutation: #relations = 318,850,904, #blocks = 39,014, #triples = 1,464,719,701
+2026-07-30 22:34:09.257 - INFO: Registered SPO permutation: #relations = 234,800,427, #blocks = 31,251, #triples = 1,464,719,701
+2026-07-30 22:34:09.269 - INFO: Registered SOP permutation: #relations = 234,800,427, #blocks = 31,251, #triples = 1,464,719,701
+2026-07-30 22:34:09.269 - INFO: Reading patterns from file /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.patterns ...
+2026-07-30 22:34:09.270 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-07-30 22:34:17.866 - INFO: Initializing server ...
+2026-07-30 22:34:17.866 - INFO: No access token required for restricted API calls
+2026-07-30 22:34:17.866 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-07-30 22:34:17.925 - INFO: 
+2026-07-30 22:34:17.925 - INFO: Request received via GET, no content type specified
+2026-07-30 22:34:17.925 - INFO: Processing command "cache-stats": get cache statistics
+2026-07-30 22:34:17.934 - INFO: 
+2026-07-30 22:34:17.934 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-07-30 22:34:17.936 - INFO: Processing the following SPARQL query:
+# Tier D4 — DISCOVER (real-world-ish, cross-check against Tier R)
+# Materialize a bounded publication subgraph for one established venue.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper ?p ?o }
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+LIMIT 50000
+
+2026-07-30 22:34:17.936 - INFO: Requested media types of the result are: "text/turtle"
+2026-07-30 22:34:17.940 - INFO: Query planning done in 6 ms
+2026-07-30 22:34:17.945 - INFO: Result has unknown size (not computed yet)
+2026-07-30 22:34:19.581 - INFO: Done processing query and sending result, total time was 1,647 ms
+2026-07-30 22:34:19.589 - INFO: 
+2026-07-30 22:34:19.589 - INFO: Request received via GET, no content type specified
+2026-07-30 22:34:19.590 - INFO: Processing command "cache-stats": get cache statistics
+2026-07-30 22:34:19.931 - INFO: 
+2026-07-30 22:34:19.931 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-07-30 22:34:19.931 - INFO: Processing the following SPARQL query:
+# Tier D4 — DISCOVER (real-world-ish, cross-check against Tier R)
+# Materialize a bounded publication subgraph for one established venue.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper ?p ?o }
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+LIMIT 50000
+
+2026-07-30 22:34:19.931 - INFO: Requested media types of the result are: "text/turtle"
+2026-07-30 22:34:19.932 - INFO: Query planning done in 0 ms
+2026-07-30 22:34:19.935 - INFO: Result has unknown size (not computed yet)
+2026-07-30 22:34:19.994 - INFO: Done processing query and sending result, total time was 63 ms
+2026-07-30 22:34:20.002 - INFO: 
+2026-07-30 22:34:20.002 - INFO: Request received via GET, no content type specified
+2026-07-30 22:34:20.002 - INFO: Processing command "cache-stats": get cache statistics

@@ -1,0 +1,29 @@
+# Initial-ring A/B on German-label exports (Wikidata truthy)
+
+Baseline: compressed-routing. Variant: register-files-routed.
+Method: per arm 1 warm + 2 cold reps per workload with sampler.
+
+## large-de-warm baseline vs initial-ring
+baseline:     200	17.748368	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=0
+initial-ring: 200	15.259698	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=0
+
+## large-de-cold1 baseline vs initial-ring
+baseline:     200	25.410259	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=9430499328
+initial-ring: 200	23.455940	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=9445138432
+
+## large-de-cold2 baseline vs initial-ring
+baseline:     200	25.310535	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=9433227264
+initial-ring: 200	23.311832	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=9443958784
+
+## scatter200k-de-warm baseline vs initial-ring
+baseline:     200	5.122693	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=0
+initial-ring: 200	4.929522	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=0
+
+## scatter200k-de-cold1 baseline vs initial-ring
+baseline:     200	11.354005	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=2990120960
+initial-ring: 200	10.886028	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=2991620096
+
+## scatter200k-de-cold2 baseline vs initial-ring
+baseline:     200	11.220556	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=2989072384
+initial-ring: 200	10.760765	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=2991063040
+

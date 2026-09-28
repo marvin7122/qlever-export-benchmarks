@@ -1,0 +1,8 @@
+host: Ural (shared cluster node, x86-64, GCC 13)
+branch: feat/export-v2-unified-pipeline-wired @ 0549c4b2d (marvin7122/qlever)
+binary: build/benchmark/StreamingBufferBenchmark (queue build seq 3435)
+bench: run-nt-streaming-benchmark.sh <branch>, queue seq 3437, `--print`
+workload: 256 MB buffer per pass; chunk sizes 1 KB, 4 KB, 16 KB, 64 KB,
+  1 MB, 16 MB, 256 MB; one measurement per chunk-size cell (no repetitions)
+raw: bench.log (queue log 3437-bench.log)
+no pre-registered protocol; no gate.log or VERDICT.md for this run

@@ -1,0 +1,41 @@
+2026-07-30 22:47:02.496 - INFO: [1mQLever server v0.5.50-58-gbdd1a6b9, compiled on Thu Jul 30 22:03:57 CEST 2026 using git hash bdd1a6b[22m
+2026-07-30 22:47:02.496 - INFO: The git hash used to build this index was "8c99fe"
+2026-07-30 22:47:02.496 - INFO: Reading vocabulary from file /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.vocabulary.words ...
+2026-07-30 22:47:02.515 - INFO: Done, number of words: 409,446,926
+2026-07-30 22:47:02.515 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 409,457
+2026-07-30 22:47:02.534 - INFO: Registered PSO permutation: #relations = 6, #blocks = 7,515, #triples = 234,800,838
+2026-07-30 22:47:02.559 - INFO: Registered PSO permutation: #relations = 96, #blocks = 46,913, #triples = 1,464,719,701
+2026-07-30 22:47:02.562 - INFO: Registered POS permutation: #relations = 6, #blocks = 7,515, #triples = 234,800,838
+2026-07-30 22:47:02.589 - INFO: Registered POS permutation: #relations = 96, #blocks = 46,913, #triples = 1,464,719,701
+2026-07-30 22:47:02.612 - INFO: Registered OPS permutation: #relations = 318,850,904, #blocks = 39,014, #triples = 1,464,719,701
+2026-07-30 22:47:02.636 - INFO: Registered OSP permutation: #relations = 318,850,904, #blocks = 39,014, #triples = 1,464,719,701
+2026-07-30 22:47:02.652 - INFO: Registered SPO permutation: #relations = 234,800,427, #blocks = 31,251, #triples = 1,464,719,701
+2026-07-30 22:47:02.667 - INFO: Registered SOP permutation: #relations = 234,800,427, #blocks = 31,251, #triples = 1,464,719,701
+2026-07-30 22:47:02.667 - INFO: Reading patterns from file /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.patterns ...
+2026-07-30 22:47:02.668 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-07-30 22:47:11.229 - INFO: Initializing server ...
+2026-07-30 22:47:11.229 - INFO: No access token required for restricted API calls
+2026-07-30 22:47:11.229 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-07-30 22:47:11.284 - INFO: 
+2026-07-30 22:47:11.284 - INFO: Request received via GET, no content type specified
+2026-07-30 22:47:11.284 - INFO: Processing command "cache-stats": get cache statistics
+2026-07-30 22:47:11.292 - INFO: 
+2026-07-30 22:47:11.292 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-07-30 22:47:11.295 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — creator-name literals, large
+# Goal: external-vocabulary lookup pressure on a different predicate path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?creator dblp:creatorName ?name }
+WHERE {
+  ?creator dblp:creatorName ?name .
+}
+LIMIT 100000
+
+2026-07-30 22:47:11.295 - INFO: Requested media types of the result are: "text/turtle"
+2026-07-30 22:47:11.296 - INFO: Query planning done in 3 ms
+2026-07-30 22:47:11.296 - INFO: Result has unknown size (not computed yet)
+2026-07-30 22:47:25.598 - INFO: Done processing query and sending result, total time was 14,305 ms
+2026-07-30 22:47:25.607 - INFO: 
+2026-07-30 22:47:25.607 - INFO: Request received via GET, no content type specified
+2026-07-30 22:47:25.607 - INFO: Processing command "cache-stats": get cache statistics

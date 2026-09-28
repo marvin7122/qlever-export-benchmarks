@@ -1,0 +1,50 @@
+     5.60%  qlever-server-a  [kernel.kallsyms]    [k] kernel_init_pages
+     3.35%  qlever-server-a  libzstd.so.1.5.5     [.] 0x00000000000775ca
+     3.23%  qlever-server-a  libzstd.so.1.5.5     [.] 0x00000000000a5b16
+     3.08%  qlever-server-a  libzstd.so.1.5.5     [.] 0x0000000000077767
+     3.03%  qlever-server-a  [kernel.kallsyms]    [k] do_user_addr_fault
+     3.03%  qlever-server-a  libzstd.so.1.5.5     [.] 0x00000000000773e7
+     2.94%  qlever-server-a  [kernel.kallsyms]    [k] rmqueue_bulk
+     2.44%  qlever-server-a  libzstd.so.1.5.5     [.] 0x0000000000077352
+     2.31%  qlever-server-a  [kernel.kallsyms]    [k] srso_safe_ret
+     1.96%  qlever-server-a  [kernel.kallsyms]    [k] smp_call_function_many_cond
+     1.67%  qlever-server-a  [kernel.kallsyms]    [k] __mem_cgroup_uncharge_folios
+     1.66%  qlever-server-a  libzstd.so.1.5.5     [.] 0x0000000000077428
+     1.64%  qlever-server-a  libzstd.so.1.5.5     [.] 0x0000000000077449
+     1.64%  qlever-server-a  [kernel.kallsyms]    [k] mod_memcg_lruvec_state
+     1.62%  qlever-server-a  qlever-server-ab     [.] CompressedRelationReader::getBlocksForJoin(std::span<ValueId const, 18446744073709551615ul>, CompressedRelationReader::ScanSpecAndBlocksAndBounds const&)
+     1.61%  qlever-server-a  libzstd.so.1.5.5     [.] 0x00000000000772d3
+     1.61%  qlever-server-a  [kernel.kallsyms]    [k] __handle_mm_fault
+     1.60%  qlever-server-a  [kernel.kallsyms]    [k] post_alloc_hook
+     1.60%  qlever-server-a  libzstd.so.1.5.5     [.] 0x00000000000772c4
+     1.60%  qlever-server-a  libzstd.so.1.5.5     [.] 0x00000000000650db
+     1.59%  qlever-server-a  [kernel.kallsyms]    [k] memcg1_commit_charge
+     1.58%  qlever-server-a  qlever-server-ab     [.] CompressedRelationReader::readPossiblyIncompleteBlock(ScanSpecification const&, CompressedRelationReader::ScanImplConfig const&, CompressedBlockMetadata const&, std::optional<std::reference_wrapper<CompressedRelationReader::LazyScanMetadata> >, LocatedTriplesPerBlock const&) const
+     1.57%  qlever-server-a  libzstd.so.1.5.5     [.] 0x000000000007776b
+     1.56%  qlever-server-a  libzstd.so.1.5.5     [.] 0x0000000000077760
+     1.54%  qlever-server-a  libzstd.so.1.5.5     [.] 0x0000000000077419
+     1.54%  qlever-server-a  [kernel.kallsyms]    [k] native_irq_return_iret
+     1.53%  qlever-server-a  [kernel.kallsyms]    [k] inherit_event.isra.0
+     1.52%  qlever-server-a  qlever-server-ab     [.] ValueId::comparePositionInVocabToLocalVocab(ad_utility::TypedIndex<unsigned long, LocalVocabEntry::proxyTag>, LocalVocabEntry const*)
+     1.52%  qlever-server-a  [kernel.kallsyms]    [k] get_mem_cgroup_from_mm
+     1.50%  qlever-server-a  [kernel.kallsyms]    [k] handle_mm_fault
+     1.50%  qlever-server-a  qlever-server-ab     [.] void ad_utility::detail::BlockZipperJoinImplCRTP<ad_utility::detail::BlockZipperJoinImpl<ad_utility::detail::JoinSide<ad_utility::IdTableAndFirstCols<1ul, columnBasedIdTable::IdTable<ValueId, 0, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)0> >*, ad_utility::IdTableAndFirstCols<1ul, columnBasedIdTable::IdTable<ValueId, 0, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)0> >*, ql::identity, std::monostate>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, std::less<void>, ad_utility::AddCombinedRowToIdTable, ad_utility::detail::AlwaysFalse>, ad_utility::detail::JoinSide<ad_utility::IdTableAndFirstCols<1ul, columnBasedIdTable::IdTable<ValueId, 0, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)0> >*, ad_utility::IdTableAndFirstCols<1ul, columnBasedIdTable::IdTable<ValueId, 0, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)0> >*, ql::identity, std::monostate>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, std::less<void>, ad_utility::AddCombinedRowToIdTable, ad_utility::detail::AlwaysFalse>::joinAndRemoveLessThanCurrentEl<false>(std::vector<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, columnBasedIdTable::IdTable<ValueId, 0, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)0> > >, std::allocator<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, columnBasedIdTable::IdTable<ValueId, 0, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)0> > > > >&, std::vector<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> >, std::allocator<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> > > >&, ValueId const&)
+     1.46%  qlever-server-a  [kernel.kallsyms]    [k] lruvec_stat_mod_folio
+     1.45%  qlever-server-a  [kernel.kallsyms]    [k] srso_return_thunk
+     1.41%  qlever-server-a  [kernel.kallsyms]    [k] vm_normal_page
+     1.35%  qlever-server-a  qlever-server-ab     [.] ValueId::compareThreeWay(ValueId const&) const
+     1.31%  qlever-server-a  [kernel.kallsyms]    [k] update_rt_rq_load_avg
+     1.30%  qlever-server-a  libzstd.so.1.5.5     [.] 0x00000000000772c9
+     1.28%  qlever-server-a  libzstd.so.1.5.5     [.] 0x00000000000774bb
+     1.26%  qlever-server-a  [kernel.kallsyms]    [k] folio_batch_move_lru
+     1.25%  qlever-server-a  libzstd.so.1.5.5     [.] 0x000000000007776f
+     1.25%  qlever-server-a  libzstd.so.1.5.5     [.] 0x0000000000077304
+     1.23%  qlever-server-a  libzstd.so.1.5.5     [.] 0x00000000000775d1
+     1.23%  qlever-server-a  [kernel.kallsyms]    [k] charge_memcg
+     1.22%  qlever-server-a  libz.so.1.3          [.] 0x0000000000004e41
+     1.20%  qlever-server-a  libzstd.so.1.5.5     [.] 0x0000000000077331
+     1.18%  qlever-server-a  libzstd.so.1.5.5     [.] 0x00000000000772c7
+     1.13%  qlever-server-a  [kernel.kallsyms]    [k] memset_orig
+     1.10%  qlever-server-a  libzstd.so.1.5.5     [.] 0x00000000000772ff
+     1.10%  qlever-server-a  libzstd.so.1.5.5     [.] 0x0000000000077506
+     1.10%  qlever-server-a  libzstd.so.1.5.5     [.] 0x00000000000a5af7

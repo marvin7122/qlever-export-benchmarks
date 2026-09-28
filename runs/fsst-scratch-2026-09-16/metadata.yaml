@@ -1,0 +1,33 @@
+run_id: fsst-scratch-2026-09-16
+status: complete
+created_at: '2026-09-16T18:00:00+00:00'
+mode: microbenchmark
+question: Do FSST scratch-buffer strategies differ in decode time at scale?
+qlever:
+  branch: bench/fsst-scratch-scaled
+  commit: c5191e1529
+  base_branch: origin/stack/04-fsst-inplace-decompress-into
+  base_commit: 897d692c0
+  binary: /local/data-ssd/stoetzem/wt/bench/fsst-scratch-scaled/build/benchmark/FsstScratchBufferBenchmark
+  build_type: Release
+  host: Ural
+workload:
+  corpus_words: 40000
+  suffix_chars: 180
+  stages: 3
+  inner_repetitions: 200
+  decodes_per_strategy: 8000000
+  strategy_orders: 6
+  trials_per_order: 3
+  measurements_per_strategy: 18
+driver: /local/data-ssd/stoetzem/incoming/run-fsst-scratch-benchmark-scaled.sh
+queue:
+  build_seq: 3739
+  bench_seq: 3744
+  bench_log: ~/.qlever-wq/logs/3744-bench.log
+result:
+  median_seconds_per_8M_decodes:
+    full-size std::string scratch: 0.334042
+    full-size uninitialized scratch: 0.334253
+    stage-aware uninitialized scratch: 0.336010
+  verdict: parity within noise, no speedup claimed

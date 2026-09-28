@@ -1,0 +1,5 @@
+run-id: wikidata-upstream172-compressed-routing-ab
+baseline: baseline-upstream-master @ a96c6ce5 (upstream master, sequential per-word vocab pread)
+variant: upstream-iouring-compressed-routing @ c817610b (compressed batch lookups via io_uring ring pool)
+queries: I-iouring-label-de (on-disk de), I-iouring-label-nonen (on-disk multi-lang)
+excluded: H-vocab-label-large (English / languages-internal, 0 io_uring_enter)

@@ -1,0 +1,50 @@
+     6.13%  qlever-server-a  [kernel.kallsyms]             [k] filemap_read
+     5.42%  qlever-server-a  [kernel.kallsyms]             [k] filemap_get_read_batch
+     3.83%  qlever-server-a  [kernel.kallsyms]             [k] srso_safe_ret
+     3.81%  qlever-server-a  [kernel.kallsyms]             [k] vfs_read
+     2.92%  qlever-server-a  [kernel.kallsyms]             [k] atime_needs_update
+     2.55%  qlever-server-a  [kernel.kallsyms]             [k] _copy_to_iter
+     2.41%  qlever-server-a  [kernel.kallsyms]             [k] __x64_sys_pread64
+     2.40%  qlever-server-a  qlever-server-ab              [.] fsst_decompress
+     2.29%  qlever-server-a  [kernel.kallsyms]             [k] do_syscall_64
+     2.23%  qlever-server-a  [kernel.kallsyms]             [k] xas_load
+     2.07%  qlever-server-a  [kernel.kallsyms]             [k] aa_file_perm
+     1.96%  qlever-server-a  [kernel.kallsyms]             [k] ext4_file_read_iter
+     1.93%  qlever-server-a  [kernel.kallsyms]             [k] fdget
+     1.84%  qlever-server-a  [kernel.kallsyms]             [k] filemap_get_pages
+     1.69%  qlever-server-a  [kernel.kallsyms]             [k] apparmor_file_permission
+     1.67%  qlever-server-a  [kernel.kallsyms]             [k] copy_page_to_iter
+     1.58%  qlever-server-a  [kernel.kallsyms]             [k] current_time
+     1.55%  qlever-server-a  qlever-server-ab              [.] ad_utility::vocabulary::VocabularyOnDisk::operator[][abi:cxx11](unsigned long) const
+     1.45%  qlever-server-a  [kernel.kallsyms]             [k] arch_exit_to_user_mode_prepare.isra.0
+     1.36%  qlever-server-a  [kernel.kallsyms]             [k] entry_SYSCALL_64_after_hwframe
+     1.34%  qlever-server-a  qlever-server-ab              [.] RdfEscaping::escapeForCsv(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+     1.31%  qlever-server-a  qlever-server-ab              [.] ExportQueryExecutionTrees::selectQueryResultToStream(ExportQueryExecutionTrees::selectQueryResultToStream<(ad_utility::MediaType)6>(QueryExecutionTree const&, parsedQuery::SelectClause const&, LimitOffsetClause, std::shared_ptr<ad_utility::CancellationHandle<(ad_utility::detail::CancellationMode)0> >, ad_utility::timer::Timer const&, int)::_ZN25ExportQueryExecutionTrees25selectQueryResultToStreamILN10ad_utility9MediaTypeE6EEENS1_7streams22basic_stream_generatorILm1048576EEERK18QueryExecutionTreeRKN11parsedQuery12SelectClauseE17LimitOffsetClauseSt10shared_ptrINS1_18CancellationHandleILNS1_6detail16CancellationModeE0EEEERKNS1_5timer5TimerEi.Frame*) [clone .actor]
+     1.30%  qlever-server-a  [kernel.kallsyms]             [k] srso_return_thunk
+     1.19%  qlever-server-a  qlever-server-ab              [.] ad_utility::vocabulary::PolymorphicVocabulary::operator[][abi:cxx11](unsigned long) const
+     1.16%  qlever-server-a  [kernel.kallsyms]             [k] security_file_permission
+     1.16%  qlever-server-a  qlever-server-ab              [.] ad_utility::vocabulary::VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+     1.13%  qlever-server-a  libc.so.6                     [.] __libc_pread
+     1.01%  qlever-server-a  [kernel.kallsyms]             [k] x64_sys_call
+     0.93%  qlever-server-a  qlever-server-ab              [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     0.89%  qlever-server-a  [kernel.kallsyms]             [k] entry_SYSCALL_64
+     0.89%  qlever-server-a  qlever-server-ab              [.] ql::exportIds::getLiteralOrIriFromVocabIndex(IndexImpl const&, ValueId, LocalVocab const&)
+     0.86%  qlever-server-a  qlever-server-ab              [.] ad_utility::vocabulary::CompressedVocabulary<ad_utility::vocabulary::VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::operator[][abi:cxx11](unsigned long) const
+     0.82%  qlever-server-a  [kernel.kallsyms]             [k] rw_verify_area
+     0.75%  qlever-server-a  qlever-server-ab              [.] std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> > ql::exportIds::literalOrIriToStringAndType<true, false, ad_utility::triple_component::LiteralOrIri, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > (&)(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)>(ad_utility::triple_component::LiteralOrIri const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > (&)(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >))
+     0.71%  qlever-server-a  qlever-server-ab              [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+     0.68%  qlever-server-a  [kernel.kallsyms]             [k] touch_atime
+     0.61%  qlever-server-a  libz.so.1.3                   [.] adler32_z
+     0.60%  qlever-server-a  qlever-server-ab              [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::resize(unsigned long, char) [clone .constprop.0]
+     0.60%  qlever-server-a  qlever-server-ab              [.] std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> > ql::exportIds::idToStringAndType<true, false, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > (&)(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)>(Index const&, ValueId, LocalVocab const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > (&)(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >))
+     0.59%  qlever-server-a  qlever-server-ab              [.] FsstDecoder::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     0.54%  qlever-server-a  [kernel.kallsyms]             [k] entry_SYSRETQ_unsafe_stack
+     0.53%  qlever-server-a  [kernel.kallsyms]             [k] generic_file_read_iter
+     0.53%  qlever-server-a  qlever-server-ab              [.] ad_utility::vocabulary::Vocabulary<ad_utility::vocabulary::PolymorphicVocabulary, ad_utility::vocabulary::TripleComponentComparatorImpl<ad_utility::vocabulary::LocaleManagerICU>, ad_utility::TypedIndex<unsigned long, vocabIndexTag> >::operator[][abi:cxx11](ad_utility::TypedIndex<unsigned long, vocabIndexTag>) const
+     0.51%  qlever-server-a  qlever-server-ab              [.] boost::iostreams::detail::indirect_streambuf<boost::iostreams::back_insert_device<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::char_traits<char>, std::allocator<char>, boost::iostreams::output>::overflow(int)
+     0.51%  qlever-server-a  [kernel.kallsyms]             [k] fput
+     0.50%  qlever-server-a  libjemalloc.so.2              [.] operator new(unsigned long)
+     0.50%  qlever-server-a  libjemalloc.so.2              [.] operator delete(void*, unsigned long)
+     0.50%  qlever-server-a  qlever-server-ab              [.] ad_utility::streams::detail::stream_generator_promise<1048576ul>::yield_value(std::basic_string_view<char, std::char_traits<char> >)
+     0.48%  qlever-server-a  qlever-server-ab              [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
+     0.44%  qlever-server-a  qlever-server-ab              [.] void ql::resize_and_overwrite<char, std::char_traits<char>, std::allocator<char>, detail::decompressToOwnedString<FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1}>(unsigned long, FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1})::{lambda(char*, unsigned long)#1}>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size_type, detail::decompressToOwnedString<FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1}>(unsigned long, FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1})::{lambda(char*, unsigned long)#1}&&)

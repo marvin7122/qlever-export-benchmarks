@@ -1,0 +1,16 @@
+# Run 132: cold-cache export latency attribution (perf, Wikidata truthy, master)
+
+Binary: /local/data-ssd/stoetzem/wt/master/build/qlever-server
+Sampling: 999 Hz, dwarf call graph, 3 cold reps per workload (cache evicted before each rep).
+
+## construct (H-vocab-label-large, turtle_export)
+1	200	22.443563	1302749672
+2	200	22.590170	1302749672
+3	200	22.747072	1302749672
+total=96.87 lookup=46.27 format=4.55 other=46.05
+
+## select (H-vocab-label-large-select, csv_export)
+1	200	20.017072	674222797
+2	200	20.181772	674222797
+3	200	20.270642	674222797
+total=97.98 lookup=53.94 format=9.64 other=34.40

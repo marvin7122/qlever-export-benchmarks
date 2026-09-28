@@ -1,0 +1,11 @@
+# Tier R1 — STATE (real-world, small result) — SELECT variant
+# Bounded materialization of a real DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+LIMIT 50000

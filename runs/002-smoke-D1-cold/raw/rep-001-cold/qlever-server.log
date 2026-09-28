@@ -1,0 +1,51 @@
+2026-07-30 21:52:55.321 - INFO: [1mQLever server v0.5.50-55-gb53c7646, compiled on Wed Jul 29 05:38:53 PM CEST 2026 using git hash b53c764[22m
+2026-07-30 21:52:55.329 - INFO: The git hash used to build this index was "8c99fe"
+2026-07-30 21:52:55.329 - INFO: Reading vocabulary from file /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.vocabulary.words ...
+2026-07-30 21:52:55.346 - INFO: Done, number of words: 409,446,926
+2026-07-30 21:52:55.346 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 409,457
+2026-07-30 21:52:55.359 - INFO: Registered PSO permutation: #relations = 6, #blocks = 7,515, #triples = 234,800,838
+2026-07-30 21:52:55.384 - INFO: Registered PSO permutation: #relations = 96, #blocks = 46,913, #triples = 1,464,719,701
+2026-07-30 21:52:55.389 - INFO: Registered POS permutation: #relations = 6, #blocks = 7,515, #triples = 234,800,838
+2026-07-30 21:52:55.414 - INFO: Registered POS permutation: #relations = 96, #blocks = 46,913, #triples = 1,464,719,701
+2026-07-30 21:52:55.436 - INFO: Registered OPS permutation: #relations = 318,850,904, #blocks = 39,014, #triples = 1,464,719,701
+2026-07-30 21:52:55.458 - INFO: Registered OSP permutation: #relations = 318,850,904, #blocks = 39,014, #triples = 1,464,719,701
+2026-07-30 21:52:55.471 - INFO: Registered SPO permutation: #relations = 234,800,427, #blocks = 31,251, #triples = 1,464,719,701
+2026-07-30 21:52:55.484 - INFO: Registered SOP permutation: #relations = 234,800,427, #blocks = 31,251, #triples = 1,464,719,701
+2026-07-30 21:52:55.484 - INFO: Reading patterns from file /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.patterns ...
+2026-07-30 21:52:55.485 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-07-30 21:53:03.922 - INFO: Initializing server ...
+2026-07-30 21:53:03.922 - INFO: No access token required for restricted API calls
+2026-07-30 21:53:03.923 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-07-30 21:53:04.131 - INFO: 
+2026-07-30 21:53:04.131 - INFO: Request received via GET, no content type specified
+2026-07-30 21:53:04.131 - INFO: Processing command "cache-stats": get cache statistics
+2026-07-30 21:53:04.139 - INFO: 
+2026-07-30 21:53:04.139 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-07-30 21:53:04.146 - INFO: Processing the following SPARQL query:
+# Tier D1 — DISCOVER (broad scan, mixed cache hits/misses)
+# Unrelated publication IRIs provide broad predicate and vocabulary coverage.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  VALUES ?s {
+    <https://dblp.org/rec/journals/cacm/Knuth74>
+    <https://dblp.org/rec/conf/stoc/Karp72>
+    <https://dblp.org/rec/journals/cacm/Dijkstra68>
+    <https://dblp.org/rec/conf/focs/Cook71>
+    <https://dblp.org/rec/journals/cacm/Hoare69>
+    <https://dblp.org/rec/conf/stoc/Rabin76>
+    <https://dblp.org/rec/journals/tocs/Lamport78>
+    <https://dblp.org/rec/conf/podc/FischerLP85>
+    <https://dblp.org/rec/journals/jacm/ValiantV76>
+    <https://dblp.org/rec/conf/stoc/GareyJ76>
+  }
+  ?s ?p ?o .
+}
+
+2026-07-30 21:53:04.146 - INFO: Requested media types of the result are: "text/turtle"
+2026-07-30 21:53:04.147 - INFO: Query planning done in 7 ms
+2026-07-30 21:53:04.157 - INFO: Number of tuples in VALUES clause: 10
+2026-07-30 21:53:04.157 - INFO: Number of entries in local vocabulary per column: 7
+2026-07-30 21:53:04.157 - INFO: Result has unknown size (not computed yet)
+2026-07-30 21:53:04.216 - INFO: Done processing query and sending result, total time was 77 ms

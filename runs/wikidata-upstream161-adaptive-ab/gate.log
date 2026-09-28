@@ -1,0 +1,34 @@
+== PREFLIGHT: experiments/runs/wikidata-upstream161-adaptive-ab/qlever-server-baseline ==
+  OK   binary exists: experiments/runs/wikidata-upstream161-adaptive-ab/qlever-server-baseline
+  OK   version matches commit c817610b: experiments/runs/wikidata-upstream161-adaptive-ab/qlever-server-baseline v0.6.0-171-gc817610b8
+      io_uring symbols: 4
+  OK   io_uring compiled in (4 syms)
+  OK   port 7015 free (no stale server)
+  WARN CPU governor powersave (powersave ACCEPTED via --allow-powersave — record in artifact)
+  OK   loadavg 0.31 < 0.5
+  OK   venv deps (httpx/xxhash/yaml)
+  OK   clear-caches present (drop_caches, true cold)
+== PREFLIGHT: PASS ==
+== PREFLIGHT: experiments/runs/wikidata-upstream161-adaptive-ab/qlever-server-variant ==
+  OK   binary exists: experiments/runs/wikidata-upstream161-adaptive-ab/qlever-server-variant
+  OK   version matches commit 43524db6: experiments/runs/wikidata-upstream161-adaptive-ab/qlever-server-variant v0.6.0-190-g43524db66
+      io_uring symbols: 6
+  OK   io_uring compiled in (6 syms)
+  OK   binaries differ (A/B arms distinct)
+      compare-to io_uring symbols: 4
+  OK   io_uring present on both arms (this=6 compare-to=4)
+  OK   port 7015 free (no stale server)
+  WARN CPU governor powersave (powersave ACCEPTED via --allow-powersave — record in artifact)
+  OK   loadavg 0.37 < 0.5
+  OK   venv deps (httpx/xxhash/yaml)
+  OK   clear-caches present (drop_caches, true cold)
+== PREFLIGHT: PASS ==
+== POSTFLIGHT: experiments/runs/wikidata-upstream161-adaptive-ab ==
+  OK   COMPLETE marker present
+  OK   found results.csv files
+  OK   all reps complete (no failed rows)
+  OK   all reps served >0 bytes
+  OK   cold reps show major_faults>0 (index mmap cold)
+  OK   cold reps show read_bytes>0 and a read syscall (syscr, pread64, or io_uring_enter)
+  OK   checksums stable per arm
+== POSTFLIGHT: PASS ==

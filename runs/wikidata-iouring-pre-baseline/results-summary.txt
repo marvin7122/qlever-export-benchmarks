@@ -1,0 +1,17 @@
+# Pre-io_uring baseline (commit 7bd97790e9ee6d5b2f6305fd8fd1c8000b63710b, Wikidata truthy)
+
+Binary: /local/data-ssd/stoetzem/wt/bench/iouring-pre-baseline/build/qlever-server (no liburing linkage)
+Sampling: 999 Hz, dwarf call graph, 8 warm reps per workload.
+Cold: 3 reps per workload with cleared caches.
+
+## construct (H-vocab-label-large, turtle_export)
+total=96.69 lookup=45.09 format=6.79 other=44.81
+1	200	22.299992	1302749672	pread=0	rbytes=509448192	minflt=38339	majorfaults=0
+2	200	22.310708	1302749672	pread=0	rbytes=509448192	minflt=39337	majorfaults=0
+3	200	22.060616	1302749672	pread=0	rbytes=509448192	minflt=33580	majorfaults=0
+
+## select (H-vocab-label-large-select, csv_export)
+total=97.58 lookup=54.76 format=8.24 other=34.58
+1	200	19.665699	674222797	pread=0	rbytes=509448192	minflt=24094	majorfaults=0
+2	200	19.622404	674222797	pread=0	rbytes=509448192	minflt=25526	majorfaults=0
+3	200	19.561467	674222797	pread=0	rbytes=509448192	minflt=23620	majorfaults=0

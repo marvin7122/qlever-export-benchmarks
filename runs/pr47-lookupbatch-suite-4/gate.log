@@ -1,0 +1,34 @@
+== PREFLIGHT: /local/data-ssd/stoetzem/binaries/qlever-server-master ==
+  OK   binary exists: /local/data-ssd/stoetzem/binaries/qlever-server-master
+  OK   version carries commit 65f84b43
+      io_uring symbols: 4
+  OK   io_uring compiled in (4 syms)
+  OK   port 7015 free (no stale server)
+  WARN CPU governor powersave (powersave ACCEPTED via --allow-powersave — record in artifact)
+  OK   loadavg 0.01 < 0.5
+  OK   venv deps (httpx/xxhash/yaml)
+  OK   clear-caches present (drop_caches, true cold)
+== PREFLIGHT: PASS ==
+== PREFLIGHT: /local/data-ssd/stoetzem/wt/marvin-vocab-lookupbatch-wire/build/qlever-server ==
+  OK   binary exists: /local/data-ssd/stoetzem/wt/marvin-vocab-lookupbatch-wire/build/qlever-server
+  OK   version carries commit 9037cd27
+      io_uring symbols: 4
+  OK   io_uring compiled in (4 syms)
+  OK   binaries differ (A/B arms distinct)
+      compare-to io_uring symbols: 4
+  OK   io_uring symbol count matches compare-to (4)
+  OK   port 7015 free (no stale server)
+  WARN CPU governor powersave (powersave ACCEPTED via --allow-powersave — record in artifact)
+  OK   loadavg 0.09 < 0.5
+  OK   venv deps (httpx/xxhash/yaml)
+  OK   clear-caches present (drop_caches, true cold)
+== PREFLIGHT: PASS ==
+== POSTFLIGHT: experiments/runs/pr47-lookupbatch-suite-4 ==
+  OK   COMPLETE marker present
+  OK   found results.csv files
+  OK   all reps complete (no failed rows)
+  OK   all reps served >0 bytes
+  OK   cold reps show major_faults>0 (index mmap cold)
+  OK   cold reps show read_bytes>0 and a read syscall (syscr, pread64, or io_uring_enter)
+  OK   checksums stable per arm
+== POSTFLIGHT: PASS ==

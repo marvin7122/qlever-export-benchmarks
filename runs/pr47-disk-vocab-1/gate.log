@@ -1,0 +1,34 @@
+== PREFLIGHT: experiments/runs/pr47-disk-vocab-1/qlever-server-baseline ==
+  OK   binary exists: experiments/runs/pr47-disk-vocab-1/qlever-server-baseline
+  OK   version matches commit 65f84b43: experiments/runs/pr47-disk-vocab-1/qlever-server-baseline CIKM-2493-g65f84b43
+      io_uring symbols: 4
+  OK   io_uring compiled in (4 syms)
+  OK   port 7015 free (no stale server)
+  WARN CPU governor powersave (powersave ACCEPTED via --allow-powersave — record in artifact)
+  OK   loadavg 0.00 < 0.5
+  OK   venv deps (httpx/xxhash/yaml)
+  OK   clear-caches present (drop_caches, true cold)
+== PREFLIGHT: PASS ==
+== PREFLIGHT: experiments/runs/pr47-disk-vocab-1/qlever-server-variant ==
+  OK   binary exists: experiments/runs/pr47-disk-vocab-1/qlever-server-variant
+  OK   version matches commit bac70a0e: experiments/runs/pr47-disk-vocab-1/qlever-server-variant CIKM-2549-gbac70a0e
+      io_uring symbols: 4
+  OK   io_uring compiled in (4 syms)
+  OK   binaries differ (A/B arms distinct)
+      compare-to io_uring symbols: 4
+  OK   io_uring symbol count matches compare-to (4)
+  OK   port 7015 free (no stale server)
+  WARN CPU governor powersave (powersave ACCEPTED via --allow-powersave — record in artifact)
+  OK   loadavg 0.00 < 0.5
+  OK   venv deps (httpx/xxhash/yaml)
+  OK   clear-caches present (drop_caches, true cold)
+== PREFLIGHT: PASS ==
+== POSTFLIGHT: experiments/runs/pr47-disk-vocab-1 ==
+  OK   COMPLETE marker present
+  OK   found results.csv files
+  OK   all reps complete (no failed rows)
+  OK   all reps served >0 bytes
+  OK   cold reps show major_faults>0 (index mmap cold)
+  OK   cold reps show read_bytes>0 and a read syscall (syscr, pread64, or io_uring_enter)
+  OK   checksums stable per arm
+== POSTFLIGHT: PASS ==

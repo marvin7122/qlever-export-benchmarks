@@ -1,0 +1,20 @@
+# Tier D1 — DISCOVER (broad scan, mixed cache hits/misses) — SELECT variant
+# Unrelated publication IRIs provide broad predicate and vocabulary coverage.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?s ?p ?o
+WHERE {
+  VALUES ?s {
+    <https://dblp.org/rec/journals/cacm/Knuth74>
+    <https://dblp.org/rec/conf/stoc/Karp72>
+    <https://dblp.org/rec/journals/cacm/Dijkstra68>
+    <https://dblp.org/rec/conf/focs/Cook71>
+    <https://dblp.org/rec/journals/cacm/Hoare69>
+    <https://dblp.org/rec/conf/stoc/Rabin76>
+    <https://dblp.org/rec/journals/tocs/Lamport78>
+    <https://dblp.org/rec/conf/podc/FischerLP85>
+    <https://dblp.org/rec/journals/jacm/ValiantV76>
+    <https://dblp.org/rec/conf/stoc/GareyJ76>
+  }
+  ?s ?p ?o .
+}

@@ -1,0 +1,5 @@
+run-id: wikidata-upstream161-adaptive-ab
+baseline: upstream-iouring-compressed-routing @ c817610b (routing port, fixed ring window)
+variant: upstream-iouring-adaptive-batching @ 43524db6 (adaptive batch sizing on ring path)
+queries: I-iouring-label-de (on-disk de), I-iouring-label-nonen (on-disk multi-lang)
+excluded: H-vocab-label-large (English / languages-internal, 0 io_uring_enter)

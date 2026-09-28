@@ -1,0 +1,70 @@
+2026-09-26 22:27:59.518 - INFO: [1mQLever server v0.6.0-206-gc8f70dff8, compiled on Sat Sep 26 10:27:18 PM CEST 2026 using git hash c8f70df[22m
+2026-09-26 22:27:59.518 - INFO: Runtime parameter set from the command line: use-swar-export-delimiters=true
+2026-09-26 22:27:59.518 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-09-26 22:27:59.518 - INFO: The git hash used to build this index was "65f84b4"
+2026-09-26 22:27:59.518 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/dblp/dblp.vocabulary.words ...
+2026-09-26 22:27:59.527 - INFO: Done, number of words: 446,944,668
+2026-09-26 22:27:59.527 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 446,955
+2026-09-26 22:27:59.533 - INFO: Registered PSO permutation: #relations = 6, #blocks = 8,187, #triples = 255,805,025
+2026-09-26 22:27:59.555 - INFO: Registered PSO permutation: #relations = 96, #blocks = 51,023, #triples = 1,593,245,022
+2026-09-26 22:27:59.558 - INFO: Registered POS permutation: #relations = 6, #blocks = 8,187, #triples = 255,805,025
+2026-09-26 22:27:59.580 - INFO: Registered POS permutation: #relations = 96, #blocks = 51,023, #triples = 1,593,245,022
+2026-09-26 22:27:59.599 - INFO: Registered OPS permutation: #relations = 345,357,897, #blocks = 42,492, #triples = 1,593,245,022
+2026-09-26 22:27:59.617 - INFO: Registered OSP permutation: #relations = 345,357,897, #blocks = 42,492, #triples = 1,593,245,022
+2026-09-26 22:27:59.629 - INFO: Registered SPO permutation: #relations = 255,804,614, #blocks = 33,993, #triples = 1,593,245,022
+2026-09-26 22:27:59.639 - INFO: Registered SOP permutation: #relations = 255,804,614, #blocks = 33,993, #triples = 1,593,245,022
+2026-09-26 22:27:59.640 - INFO: Reading patterns from file /local/data-ssd/stoetzem/dblp/dblp.index.patterns ...
+2026-09-26 22:27:59.640 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-09-26 22:28:07.662 - INFO: Initializing server ...
+2026-09-26 22:28:07.662 - INFO: No access token required for restricted API calls
+2026-09-26 22:28:07.662 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-09-26 22:28:07.830 - INFO: 
+2026-09-26 22:28:07.830 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-26 22:28:07.833 - INFO: Processing the following SPARQL query:
+# Tier R1 — STATE (real-world, small result) — SELECT variant
+# Bounded materialization of a real DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+LIMIT 50000
+
+2026-09-26 22:28:07.833 - INFO: Requested media types of the result are: "text/csv"
+2026-09-26 22:28:07.835 - INFO: Query planning done in 4 ms
+2026-09-26 22:28:07.839 - INFO: Result has unknown size (not computed yet)
+2026-09-26 22:28:08.871 - INFO: Done processing query and sending result, total time was 1,040 ms
+2026-09-26 22:28:08.891 - INFO: 
+2026-09-26 22:28:08.891 - INFO: Request received via GET, no content type specified
+2026-09-26 22:28:08.891 - INFO: Processing command "cache-stats": get cache statistics
+2026-09-26 22:28:08.910 - INFO: 
+2026-09-26 22:28:08.910 - INFO: Request received via GET, no content type specified
+2026-09-26 22:28:08.910 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-26 22:28:08.928 - INFO: 
+2026-09-26 22:28:08.928 - INFO: Request received via GET, no content type specified
+2026-09-26 22:28:08.928 - INFO: Processing command "cache-stats": get cache statistics
+2026-09-26 22:28:08.948 - INFO: 
+2026-09-26 22:28:08.948 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-26 22:28:08.948 - INFO: Processing the following SPARQL query:
+# Tier R1 — STATE (real-world, small result) — SELECT variant
+# Bounded materialization of a real DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+LIMIT 50000
+
+2026-09-26 22:28:08.948 - INFO: Requested media types of the result are: "text/csv"
+2026-09-26 22:28:08.948 - INFO: Query planning done in 0 ms
+2026-09-26 22:28:08.951 - INFO: Result has unknown size (not computed yet)
+2026-09-26 22:28:09.230 - INFO: Done processing query and sending result, total time was 282 ms
+2026-09-26 22:28:09.251 - INFO: 
+2026-09-26 22:28:09.251 - INFO: Request received via GET, no content type specified
+2026-09-26 22:28:09.251 - INFO: Processing command "cache-stats": get cache statistics

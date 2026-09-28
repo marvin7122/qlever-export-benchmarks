@@ -1,0 +1,7 @@
+# Access pattern: full label scan (all languages materialized, LANG filter applied
+# after vocab.literals resolution). Working set: rdfs:label postings + literal vocab.
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT (COUNT(?label) AS ?c) WHERE {
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}

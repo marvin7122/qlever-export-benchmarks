@@ -1,0 +1,54 @@
+2026-09-21 00:01:43.950 - INFO: [1mQLever server v0.6.0-129-gcc308dd1b, compiled on Sun Sep 20 11:28:37 PM CEST 2026 using git hash cc308dd[22m
+2026-09-21 00:01:43.950 - INFO: Runtime parameter set from the command line: iouring-sqpoll=false
+2026-09-21 00:01:43.950 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-09-21 00:01:43.959 - INFO: The git hash used to build this index was "65f84b4"
+2026-09-21 00:01:43.960 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-09-21 00:01:56.845 - INFO: Done, number of words: 1,580,300,680
+2026-09-21 00:01:56.845 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-09-21 00:01:56.925 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-09-21 00:01:57.022 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-09-21 00:01:57.091 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-09-21 00:01:57.184 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-09-21 00:01:57.268 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-09-21 00:01:57.356 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-09-21 00:01:57.416 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-09-21 00:01:57.476 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-09-21 00:01:57.476 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-09-21 00:01:58.930 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-09-21 00:02:07.225 - INFO: Initializing server ...
+2026-09-21 00:02:07.225 - INFO: No access token required for restricted API calls
+2026-09-21 00:02:07.225 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-09-21 00:02:07.555 - INFO: 
+2026-09-21 00:02:07.555 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-21 00:02:07.557 - INFO: Processing the following SPARQL query:
+# Tier I — io_uring proof, star dumps
+# Physical: VALUES binds 30 subjects. ?s ?p ?o is S bound only. One SPO
+# scan of all outgoing triples per subject. No class scan. No LANG filter.
+# CONSTRUCT emits s, p, and o, so export resolves many distinct
+# predicate and object VocabIndex IDs from disk.
+# Expected if lookupBatch+io_uring is live: pread64 and syscr fall,
+# io_uring_enter rises, elapsed falls. Same mechanism as D1, more seeds.
+PREFIX wd: <http://www.wikidata.org/entity/>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  VALUES ?s {
+    wd:Q42 wd:Q937 wd:Q7251 wd:Q7259 wd:Q307
+    wd:Q392 wd:Q692 wd:Q6197 wd:Q6199 wd:Q9095
+    wd:Q76 wd:Q298 wd:Q517 wd:Q9682 wd:Q7200
+    wd:Q317521 wd:Q8023 wd:Q47774 wd:Q23 wd:Q91
+    wd:Q1299 wd:Q303 wd:Q207 wd:Q11459 wd:Q35332
+    wd:Q140 wd:Q15180 wd:Q868 wd:Q935 wd:Q9047
+  }
+  ?s ?p ?o .
+}
+
+2026-09-21 00:02:07.557 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-21 00:02:07.558 - INFO: Query planning done in 2 ms
+2026-09-21 00:02:07.563 - INFO: Number of tuples in VALUES clause: 30
+2026-09-21 00:02:07.563 - INFO: Number of entries in local vocabulary per column: 0
+2026-09-21 00:02:07.563 - INFO: Result has unknown size (not computed yet)
+2026-09-21 00:02:07.751 - INFO: Done processing query and sending result, total time was 196 ms
+2026-09-21 00:02:07.771 - INFO: 
+2026-09-21 00:02:07.771 - INFO: Request received via GET, no content type specified
+2026-09-21 00:02:07.771 - INFO: Processing command "cache-stats": get cache statistics

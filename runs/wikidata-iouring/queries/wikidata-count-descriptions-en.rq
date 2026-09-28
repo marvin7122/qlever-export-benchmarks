@@ -1,0 +1,7 @@
+# Access pattern: full description scan (schema:description), LANG filter after
+# vocab.literals resolution. Different literal predicate -> different index slice.
+PREFIX schema: <http://schema.org/>
+SELECT (COUNT(?desc) AS ?c) WHERE {
+  ?entity schema:description ?desc .
+  FILTER(LANG(?desc) = "en")
+}

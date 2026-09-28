@@ -1,0 +1,5 @@
+run-id: wikidata-upstream165-fibers-routed-ab3
+baseline: upstream-iouring-compressed-routing @ c817610b (upstream master, blocking batch waits)
+variant: upstream-iouring-fibers @ a577e4399 (fiber-parked batch waits with overlapped continuations)
+queries: I-iouring-label-de (on-disk de), I-iouring-label-nonen (on-disk multi-lang)
+excluded: H-vocab-label-large (English / languages-internal, 0 io_uring_enter)

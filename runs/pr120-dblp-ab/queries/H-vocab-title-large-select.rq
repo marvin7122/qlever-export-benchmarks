@@ -1,0 +1,9 @@
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000

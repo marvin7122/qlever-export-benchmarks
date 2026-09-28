@@ -1,0 +1,29 @@
+# Initial-ring A/B on German-label exports (Wikidata truthy)
+
+Baseline: 7bd97790e9ee6d5b2f6305fd8fd1c8000b63710b (no liburing). Variant: comparator.
+Method: per arm 1 warm + 2 cold reps per workload with sampler.
+
+## large-de-warm baseline vs initial-ring
+baseline:     200	16.876004	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=0
+initial-ring: 200	16.397450	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=0
+
+## large-de-cold1 baseline vs initial-ring
+baseline:     200	23.933700	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=9436610560
+initial-ring: 200	24.535745	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=9435959296
+
+## large-de-cold2 baseline vs initial-ring
+baseline:     200	24.268665	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=9436147712
+initial-ring: 200	24.123687	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=9434980352
+
+## scatter200k-de-warm baseline vs initial-ring
+baseline:     400	1.059308	5434	sha256=8037ee6dd79b40f6d607ff66fc83a342648238833639ee968010196e89325257	rbytes=0
+initial-ring: 400	1.057483	5434	sha256=9e33111c7593d9f414012e10f078713f300ed68367be8f176f78ea365b0b24b2	rbytes=0
+
+## scatter200k-de-cold1 baseline vs initial-ring
+baseline:     400	1.059403	5434	sha256=8037ee6dd79b40f6d607ff66fc83a342648238833639ee968010196e89325257	rbytes=4096
+initial-ring: 400	1.059059	5434	sha256=f7234b82f4748f6e2ae913591df2ce1f8e25f05112d468c260e72a62d1d96be5	rbytes=4096
+
+## scatter200k-de-cold2 baseline vs initial-ring
+baseline:     400	1.058347	5434	sha256=8037ee6dd79b40f6d607ff66fc83a342648238833639ee968010196e89325257	rbytes=4096
+initial-ring: 400	1.058425	5434	sha256=9730c091597d66a70ac81c0fd18cadb97095292aeaec4e82bd0d2bcba6dcabd7	rbytes=4096
+

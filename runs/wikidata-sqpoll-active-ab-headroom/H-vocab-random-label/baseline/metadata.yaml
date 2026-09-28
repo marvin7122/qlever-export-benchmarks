@@ -1,0 +1,1031 @@
+run_id: wikidata-sqpoll-active-ab-headroom-H-vocab-random-label-baseline-10
+status: complete
+created_at: '2026-09-20T22:21:47.616488+00:00'
+mode: pilot
+query: /local/data-ssd/stoetzem/thesis/representative-queries/wikidata/H-vocab-random-label.rq
+cache_scenario: cold
+repetitions: 1
+construct_deduplication: none
+timing_boundary: client request start to final response byte
+primary_metric: server-side export time from completed query result to final emitted
+  response
+secondary_metric: client request start to final response byte
+response_mode: stream_count_xxh3_128_discard
+harness:
+  git:
+    repo: /local/data-ssd/stoetzem/thesis
+    commit: db8e1409b5c422facbc96d9a53cd97afa96ff712
+    short_commit: db8e1409b
+    working_tree_status: '?? .venv/
+
+      ?? H-dedup.rq
+
+      ?? H-size.rq
+
+      ?? benchmark_export.py
+
+      ?? construct-workload-v1.yaml
+
+      ?? dblp-serving-files.txt
+
+      ?? experiments/manifests/dblp-2026-08-08-inputs.sha256
+
+      ?? experiments/manifests/dblp-index-id.txt
+
+      ?? experiments/runs/097-e2-ural-dedup-pilot/
+
+      ?? experiments/runs/098-e2-ural-dedup-preflight/
+
+      ?? experiments/runs/099-e2-ural-dedup-powersave-pilot/
+
+      ?? experiments/runs/100-e2-ural-dedup-powersave-pilot/
+
+      ?? experiments/runs/101-e2-ural-dedup-powersave-pilot-idle-gate/
+
+      ?? experiments/runs/102-e2-ural-dedup-memory-preflight/
+
+      ?? experiments/runs/103-e2-ural-dedup-memory-powersave-pilot/
+
+      ?? experiments/runs/104-e2-ural-dedup-memory-powersave-pilot/
+
+      ?? experiments/runs/105-e2-ural-dedup-memory-powersave-pilot/
+
+      ?? experiments/runs/106-05c-instrumentation-preflight/
+
+      ?? experiments/runs/107-05c-instrumented-memory-powersave-pilot/
+
+      ?? experiments/runs/108-05c-stage-preflight-H-dedup-values-full-warm/
+
+      ?? experiments/runs/109-05c-stage-preflight-H-dedup-values-full-warm/
+
+      ?? experiments/runs/110-05c-stage-instrumented-powersave-pilot/
+
+      ?? experiments/runs/111-05c-lru-capacity-scan/
+
+      ?? experiments/runs/112-05c-lru-capacity-refinement/
+
+      ?? experiments/runs/113-05c-selected-lru-semantic-preflight/
+
+      ?? experiments/runs/114-05c-lru-stage-preflight/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-dedup-full-cold/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-dedup-full-warm/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-dedup-lru-30-cold/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-dedup-lru-30-warm/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-dedup-lru-50-cold/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-dedup-lru-50-warm/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-dedup-none-cold/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-dedup-none-warm/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-dedup-values-full-cold/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-dedup-values-full-warm/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-dedup-values-lru-30-cold/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-dedup-values-lru-30-warm/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-dedup-values-lru-50-cold/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-dedup-values-lru-50-warm/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-dedup-values-none-cold/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-dedup-values-none-warm/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-size-full-cold/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-size-full-warm/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-size-lru-30-cold/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-size-lru-30-warm/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-size-lru-50-cold/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-size-lru-50-warm/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-size-none-cold/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/H-size-none-warm/
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/analyze.py
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/instrumentation-artifacts.sha256
+
+      ?? experiments/runs/115-05c-stage-lru-powersave-pilot/qlever-stage-instrumentation.patch
+
+      ?? experiments/runs/118-issue67-construct-batch-size/
+
+      ?? experiments/runs/119-dedup-ab/
+
+      ?? experiments/runs/124-export-lookup-perf-profile/COMPLETE
+
+      ?? experiments/runs/124-export-lookup-perf-profile/construct/
+
+      ?? experiments/runs/124-export-lookup-perf-profile/select/
+
+      ?? experiments/runs/125-wikidata-suite-validation/COMPLETE
+
+      ?? experiments/runs/125-wikidata-suite-validation/D1-select/
+
+      ?? experiments/runs/125-wikidata-suite-validation/D1/
+
+      ?? experiments/runs/125-wikidata-suite-validation/D2/
+
+      ?? experiments/runs/125-wikidata-suite-validation/D3/
+
+      ?? experiments/runs/125-wikidata-suite-validation/D4/
+
+      ?? experiments/runs/125-wikidata-suite-validation/H-dedup/
+
+      ?? experiments/runs/125-wikidata-suite-validation/H-format/
+
+      ?? experiments/runs/125-wikidata-suite-validation/H-size-select/
+
+      ?? experiments/runs/125-wikidata-suite-validation/H-size/
+
+      ?? experiments/runs/125-wikidata-suite-validation/H-vocab-description-large/
+
+      ?? experiments/runs/125-wikidata-suite-validation/H-vocab-description-small/
+
+      ?? experiments/runs/125-wikidata-suite-validation/H-vocab-label-large-select/
+
+      ?? experiments/runs/125-wikidata-suite-validation/H-vocab-label-large/
+
+      ?? experiments/runs/125-wikidata-suite-validation/H-vocab-label-small/
+
+      ?? experiments/runs/125-wikidata-suite-validation/R1-select/
+
+      ?? experiments/runs/125-wikidata-suite-validation/R1/
+
+      ?? experiments/runs/125-wikidata-suite-validation/R2-select/
+
+      ?? experiments/runs/125-wikidata-suite-validation/R2/
+
+      ?? experiments/runs/125-wikidata-suite-validation/R3/
+
+      ?? experiments/runs/126-construct-baseline-truthy/
+
+      ?? experiments/runs/127-select-baseline-truthy/
+
+      ?? experiments/runs/128-select-pr75-truthy/
+
+      ?? experiments/runs/128a-select-master-truthy-pilot/
+
+      ?? experiments/runs/128b-select-pr75-truthy-pilot/
+
+      ?? experiments/runs/132-export-cold-latency/construct/body-ref.tmp
+
+      ?? experiments/runs/132-export-cold-latency/construct/callgraph.txt
+
+      ?? experiments/runs/132-export-cold-latency/construct/perf.script
+
+      ?? experiments/runs/132-export-cold-latency/select/body-ref.tmp
+
+      ?? experiments/runs/132-export-cold-latency/select/callgraph.txt
+
+      ?? experiments/runs/132-export-cold-latency/select/perf.script
+
+      ?? experiments/runs/133-export-stage-a-ab/ref-construct.tmp
+
+      ?? experiments/runs/133-export-stage-a-ab/ref-select.tmp
+
+      ?? experiments/runs/135-iouring-sqpoll-ab/
+
+      ?? experiments/runs/136-iouring-compressed-ab/
+
+      ?? experiments/runs/137-iouring-compressed-ab/
+
+      ?? experiments/runs/2026-09-04-e2e-ab-select-csv-wired-c8e08/
+
+      ?? experiments/runs/2026-09-04-e2e-ab-select-csv-wired/
+
+      ?? experiments/runs/borrowedterms-lifetime-ab-1/
+
+      ?? experiments/runs/construct-row-batch-ab/
+
+      ?? experiments/runs/construct-row-batch-sweep-1/
+
+      ?? experiments/runs/construct-row-batch-sweep-pr64/
+
+      ?? experiments/runs/construct-row-batch/
+
+      ?? experiments/runs/exp-v2-sparqloscope-dblp/
+
+      ?? experiments/runs/exp-v2-unified-dblp/
+
+      ?? experiments/runs/exp-v2-unified-wikidata/
+
+      ?? experiments/runs/exp-v2-wikidata-10m/
+
+      ?? experiments/runs/export-buffered-writes/
+
+      ?? experiments/runs/export-presized-ab-fixed/
+
+      ?? experiments/runs/export-presized-ab/
+
+      ?? experiments/runs/export-presized-buffers-select/
+
+      ?? experiments/runs/export-presized-buffers/
+
+      ?? experiments/runs/export-presized-select-check/
+
+      ?? experiments/runs/export-select-batch/
+
+      ?? experiments/runs/export-simd-escaping/
+
+      ?? experiments/runs/export-v2-profile/
+
+      ?? experiments/runs/io-uring-bench-truecold/
+
+      ?? experiments/runs/io-uring-bench/
+
+      ?? experiments/runs/io-uring-real/
+
+      ?? experiments/runs/io-uring-ring-capacity-highfault/
+
+      ?? experiments/runs/io-uring-ring-capacity/
+
+      ?? experiments/runs/io-uring-split-phase/
+
+      ?? experiments/runs/io-wait-crossarm-1/.gate-postflight.txt
+
+      ?? experiments/runs/io-wait-crossarm-1/COMPLETE
+
+      ?? experiments/runs/io-wait-crossarm-1/H-vocab-label-large/baseline/libexport_syscall_count.so
+
+      ?? experiments/runs/io-wait-crossarm-1/H-vocab-label-large/baseline/metadata.yaml
+
+      ?? experiments/runs/io-wait-crossarm-1/H-vocab-label-large/baseline/raw/
+
+      ?? experiments/runs/io-wait-crossarm-1/H-vocab-label-large/variant/libexport_syscall_count.so
+
+      ?? experiments/runs/io-wait-crossarm-1/H-vocab-label-large/variant/metadata.yaml
+
+      ?? experiments/runs/io-wait-crossarm-1/H-vocab-label-large/variant/raw/
+
+      ?? experiments/runs/io-wait-crossarm-1/I-iouring-label-nonen/baseline/libexport_syscall_count.so
+
+      ?? experiments/runs/io-wait-crossarm-1/I-iouring-label-nonen/baseline/metadata.yaml
+
+      ?? experiments/runs/io-wait-crossarm-1/I-iouring-label-nonen/baseline/raw/
+
+      ?? experiments/runs/io-wait-crossarm-1/I-iouring-label-nonen/variant/libexport_syscall_count.so
+
+      ?? experiments/runs/io-wait-crossarm-1/I-iouring-label-nonen/variant/metadata.yaml
+
+      ?? experiments/runs/io-wait-crossarm-1/I-iouring-label-nonen/variant/raw/
+
+      ?? experiments/runs/io-wait-crossarm-2/.gate-postflight.txt
+
+      ?? experiments/runs/io-wait-crossarm-2/COMPLETE
+
+      ?? experiments/runs/io-wait-crossarm-2/H-vocab-label-large/baseline/libexport_syscall_count.so
+
+      ?? experiments/runs/io-wait-crossarm-2/H-vocab-label-large/baseline/metadata.yaml
+
+      ?? experiments/runs/io-wait-crossarm-2/H-vocab-label-large/baseline/raw/
+
+      ?? experiments/runs/io-wait-crossarm-2/H-vocab-label-large/variant/libexport_syscall_count.so
+
+      ?? experiments/runs/io-wait-crossarm-2/H-vocab-label-large/variant/metadata.yaml
+
+      ?? experiments/runs/io-wait-crossarm-2/H-vocab-label-large/variant/raw/
+
+      ?? experiments/runs/io-wait-crossarm-2/I-iouring-label-nonen/baseline/libexport_syscall_count.so
+
+      ?? experiments/runs/io-wait-crossarm-2/I-iouring-label-nonen/baseline/metadata.yaml
+
+      ?? experiments/runs/io-wait-crossarm-2/I-iouring-label-nonen/baseline/raw/
+
+      ?? experiments/runs/io-wait-crossarm-2/I-iouring-label-nonen/variant/libexport_syscall_count.so
+
+      ?? experiments/runs/io-wait-crossarm-2/I-iouring-label-nonen/variant/metadata.yaml
+
+      ?? experiments/runs/io-wait-crossarm-2/I-iouring-label-nonen/variant/raw/
+
+      ?? experiments/runs/io-wait-crossarm-3/.gate-postflight.txt
+
+      ?? experiments/runs/io-wait-crossarm-3/COMPLETE
+
+      ?? experiments/runs/io-wait-crossarm-3/H-vocab-label-large/
+
+      ?? experiments/runs/io-wait-crossarm-3/I-iouring-label-nonen/
+
+      ?? experiments/runs/io-wait-crossarm-5/.gate-postflight.txt
+
+      ?? experiments/runs/io-wait-crossarm-5/H-vocab-label-large/
+
+      ?? experiments/runs/io-wait-crossarm-5/I-iouring-label-nonen/
+
+      ?? experiments/runs/io-wait-crossarm-5/bin/
+
+      ?? experiments/runs/io-wait-crossarm-5/build-provenance.txt
+
+      ?? experiments/runs/io-wait-crossarm-5/build-signature.diff
+
+      ?? experiments/runs/io-wait-null-ab-1/
+
+      ?? experiments/runs/io-wait-null-ab-2/.gate-postflight.txt
+
+      ?? experiments/runs/io-wait-null-ab-2/COMPLETE
+
+      ?? experiments/runs/io-wait-null-ab-2/D3/
+
+      ?? experiments/runs/io-wait-null-ab-2/I-iouring-label-de/
+
+      ?? experiments/runs/iouring-ringsize-ab-1/.gate-postflight.txt
+
+      ?? experiments/runs/iouring-ringsize-ab-1/D1/
+
+      ?? experiments/runs/iouring-ringsize-ab-1/D3/
+
+      ?? experiments/runs/iouring-ringsize-ab-1/H-vocab-label-large/
+
+      ?? experiments/runs/iouring-ringsize-ab-1/H-vocab-random-label/
+
+      ?? experiments/runs/iouring-ringsize-ab-1/I-iouring-capitals/
+
+      ?? experiments/runs/iouring-ringsize-ab-1/I-iouring-stars/
+
+      ?? experiments/runs/iouring-wavecap-ab-1/.gate-postflight.txt
+
+      ?? experiments/runs/iouring-wavecap-ab-1/D1/
+
+      ?? experiments/runs/iouring-wavecap-ab-1/D3/
+
+      ?? experiments/runs/iouring-wavecap-ab-1/H-vocab-label-large/
+
+      ?? experiments/runs/iouring-wavecap-ab-1/H-vocab-random-label/
+
+      ?? experiments/runs/iouring-wavecap-ab-1/I-iouring-capitals/
+
+      ?? experiments/runs/iouring-wavecap-ab-1/I-iouring-stars/
+
+      ?? experiments/runs/jit-filter/
+
+      ?? experiments/runs/overnight-2026-09-03-e2e-ab-dblp-wired/
+
+      ?? experiments/runs/overnight-2026-09-03-e2e-ab-probe/
+
+      ?? experiments/runs/overnight-2026-09-04-e2e-ab-dblp-unified/
+
+      ?? experiments/runs/parallel-export-serialization/
+
+      ?? experiments/runs/pr161-pilot/
+
+      ?? experiments/runs/pr28-dupheavy-dedup/
+
+      ?? experiments/runs/pr28-parallel-export-cold-1/
+
+      ?? experiments/runs/pr28-parallel-export-cold-2/
+
+      ?? experiments/runs/pr28-parallel-export-cold-3/
+
+      ?? experiments/runs/pr29-alloc-wd-1/
+
+      ?? experiments/runs/pr29-alloc-wd-2/
+
+      ?? experiments/runs/pr29-presized-wd-1/
+
+      ?? experiments/runs/pr30-simd-wd-1/
+
+      ?? experiments/runs/pr31-buffered-wd-1/
+
+      ?? experiments/runs/pr3202-cgroup-vocab-pf/
+
+      ?? experiments/runs/pr3202-cgroup-vocab-pf2/
+
+      ?? experiments/runs/pr34-sqpoll-wd-1/
+
+      ?? experiments/runs/pr46-select-batch-wd/
+
+      ?? experiments/runs/pr47-disk-vocab-1/.gate-postflight.txt
+
+      ?? experiments/runs/pr47-disk-vocab-1/COMPLETE
+
+      ?? experiments/runs/pr47-disk-vocab-1/I-iouring-label-de/
+
+      ?? experiments/runs/pr47-disk-vocab-1/R2/
+
+      ?? experiments/runs/pr47-disk-vocab-1/qlever-server-baseline
+
+      ?? experiments/runs/pr47-disk-vocab-1/qlever-server-variant
+
+      ?? experiments/runs/pr47-disk-vocab-combined-1/
+
+      ?? experiments/runs/pr47-disk-vocab-flame-1/
+
+      ?? experiments/runs/pr47-lookupbatch-suite-2/
+
+      ?? experiments/runs/pr47-lookupbatch-suite-4/.gate-postflight.txt
+
+      ?? experiments/runs/pr47-lookupbatch-suite-4/D1/
+
+      ?? experiments/runs/pr47-lookupbatch-suite-4/D3/
+
+      ?? experiments/runs/pr47-lookupbatch-suite-4/H-size/
+
+      ?? experiments/runs/pr47-lookupbatch-suite-4/H-vocab-description-large/
+
+      ?? experiments/runs/pr47-lookupbatch-suite-4/H-vocab-description-small/
+
+      ?? experiments/runs/pr47-lookupbatch-suite-4/H-vocab-label-large/
+
+      ?? experiments/runs/pr47-lookupbatch-suite-4/H-vocab-label-small/
+
+      ?? experiments/runs/pr47-lookupbatch-suite-4/H-vocab-random-label/
+
+      ?? experiments/runs/pr47-lookupbatch-suite-4/I-iouring-capitals/
+
+      ?? experiments/runs/pr47-lookupbatch-suite-4/I-iouring-stars/
+
+      ?? experiments/runs/pr47-lookupbatch-suite-5/
+
+      ?? experiments/runs/pr47-lookupbatch-suite-6/
+
+      ?? experiments/runs/pr47-lookupbatch-suite-current/
+
+      ?? experiments/runs/pr47-lookupbatch-wd-3-rerun-20260818/
+
+      ?? experiments/runs/pr47-lookupbatch-wd-rerun/
+
+      ?? experiments/runs/pr47-wait-util-1/.gate-postflight.txt
+
+      ?? experiments/runs/pr47-wait-util-1/COMPLETE
+
+      ?? experiments/runs/pr47-wait-util-1/H-vocab-label-large/
+
+      ?? experiments/runs/pr47-wait-util-1/I-iouring-label-nonen/
+
+      ?? experiments/runs/pr47-wait-util-1/PROTOCOL.md
+
+      ?? experiments/runs/pr47-wait-util-1/bin/
+
+      ?? experiments/runs/pr47-wait-util-1/qlever-server-baseline
+
+      ?? experiments/runs/pr47-wait-util-1/qlever-server-variant
+
+      ?? experiments/runs/pr47-wait-util-combined-1/
+
+      ?? experiments/runs/pr55-bottleneck-1/
+
+      ?? experiments/runs/pr55-disk-vocab-1/
+
+      ?? experiments/runs/pr55-flame-1/
+
+      ?? experiments/runs/pr55-flame-2/
+
+      ?? experiments/runs/pr55-flame-3/
+
+      ?? experiments/runs/pr55-flame-4/
+
+      ?? experiments/runs/pr55-flame-cpuclock-1/
+
+      ?? experiments/runs/pr55-sliding-window-1/
+
+      ?? experiments/runs/pr55-sliding-window-rebased-1/
+
+      ?? experiments/runs/pr55-sliding-window-suite-2-seq253/
+
+      ?? experiments/runs/pr55-sliding-window-suite-2/.gate-postflight.txt
+
+      ?? experiments/runs/pr55-sliding-window-suite-2/D1/
+
+      ?? experiments/runs/pr55-sliding-window-suite-2/D3/
+
+      ?? experiments/runs/pr55-sliding-window-suite-2/H-size/
+
+      ?? experiments/runs/pr55-sliding-window-suite-2/H-vocab-description-large/
+
+      ?? experiments/runs/pr55-sliding-window-suite-2/H-vocab-description-small/
+
+      ?? experiments/runs/pr55-sliding-window-suite-2/H-vocab-label-large/
+
+      ?? experiments/runs/pr55-sliding-window-suite-2/H-vocab-label-small/
+
+      ?? experiments/runs/pr55-sliding-window-suite-2/H-vocab-random-label/
+
+      ?? experiments/runs/pr55-sliding-window-suite-2/I-iouring-capitals/
+
+      ?? experiments/runs/pr55-sliding-window-suite-2/I-iouring-stars/
+
+      ?? experiments/runs/pr63-decode-arena-1/
+
+      ?? experiments/runs/pr63-decode-arena-2/
+
+      ?? experiments/runs/pr63-decode-arena-3/
+
+      ?? experiments/runs/pr64-construct-row-batch-sweep-1/
+
+      ?? experiments/runs/pr64-row-batch-eval-1/
+
+      ?? experiments/runs/pr64-row-batch-eval-2/
+
+      ?? experiments/runs/pr64-row-batch-eval-3/
+
+      ?? experiments/runs/pr64-row-batch-join-1/
+
+      ?? experiments/runs/pr64-row-batch-sweep-1/
+
+      ?? experiments/runs/pr64-row-batch-sweep-2/
+
+      ?? experiments/runs/pr64-row-batch-sweep-large-1/
+
+      ?? experiments/runs/pr64-row-batch-sweep-large-2/
+
+      ?? experiments/runs/pr66-decode-arena-20260918T000303Z/
+
+      ?? experiments/runs/pr66-decode-arena-20260918T203034Z/
+
+      ?? experiments/runs/pr68-construct-ab3/
+
+      ?? experiments/runs/pr81-wikidata-export-ab-r2/
+
+      ?? experiments/runs/pr81-wikidata-export-ab-r3/
+
+      ?? experiments/runs/pr90-wikidata-export-ab/
+
+      ?? experiments/runs/select-iouring/
+
+      ?? experiments/runs/sharedwords-lifetime-ab-2/
+
+      ?? experiments/runs/test-preflight/
+
+      ?? experiments/runs/wikidata-adaptive-ab/
+
+      ?? experiments/runs/wikidata-compressed-ab/
+
+      ?? experiments/runs/wikidata-construct-access-pattern-v0/
+
+      ?? experiments/runs/wikidata-construct-row-batch-sweep-pr64-1/
+
+      ?? experiments/runs/wikidata-fibers-ab/
+
+      ?? experiments/runs/wikidata-fibers-routed-ab/
+
+      ?? experiments/runs/wikidata-iouring-pre-baseline/
+
+      ?? experiments/runs/wikidata-iouring/COMPLETE
+
+      ?? experiments/runs/wikidata-iouring/conclusion.md
+
+      ?? experiments/runs/wikidata-iouring/gate/
+
+      ?? experiments/runs/wikidata-iouring/index-build-env.txt
+
+      ?? experiments/runs/wikidata-iouring/index-files.txt
+
+      ?? experiments/runs/wikidata-iouring/manifests/
+
+      ?? experiments/runs/wikidata-iouring/queries/smoke.rq
+
+      ?? experiments/runs/wikidata-iouring/queries/wikidata-construct-humans-dup.rq
+
+      ?? experiments/runs/wikidata-iouring/smoke/
+
+      ?? experiments/runs/wikidata-iouring/summary.json
+
+      ?? experiments/runs/wikidata-iouring/wikidata-construct-humans-label-en/
+
+      ?? experiments/runs/wikidata-iouring/wikidata-count-descriptions-en/
+
+      ?? experiments/runs/wikidata-iouring/wikidata-count-labels-en/
+
+      ?? experiments/runs/wikidata-iouring/wikidata-values-label-en/
+
+      ?? experiments/runs/wikidata-parallel-export-cold-1/
+
+      ?? experiments/runs/wikidata-parallel-full-thread-sweep-129efca2/
+
+      ?? experiments/runs/wikidata-parallel-full-thread-sweep-e4570c51/
+
+      ?? experiments/runs/wikidata-parallel-full-thread-sweep-rerun-20260818-1820/
+
+      ?? experiments/runs/wikidata-parallel-global-dedup-129efca2/
+
+      ?? experiments/runs/wikidata-parallel-global-dedup/
+
+      ?? experiments/runs/wikidata-perthread-ab/
+
+      ?? experiments/runs/wikidata-pr63-decode-arena-1/
+
+      ?? experiments/runs/wikidata-profile-adaptive-kptr0/
+
+      ?? experiments/runs/wikidata-profile-adaptive/
+
+      ?? experiments/runs/wikidata-profile-fibers-kptr0/
+
+      ?? experiments/runs/wikidata-profile-fibers/
+
+      ?? experiments/runs/wikidata-profile-master-dwarf/
+
+      ?? experiments/runs/wikidata-profile-master-kptr0/
+
+      ?? experiments/runs/wikidata-profile-master/
+
+      ?? experiments/runs/wikidata-profile-perthread-kptr0/
+
+      ?? experiments/runs/wikidata-profile-perthread/
+
+      ?? experiments/runs/wikidata-profile-routing-kptr0/
+
+      ?? experiments/runs/wikidata-profile-routing/
+
+      ?? experiments/runs/wikidata-profile-sqpoll-kptr0/
+
+      ?? experiments/runs/wikidata-profile-sqpoll/
+
+      ?? experiments/runs/wikidata-register-files-routed-ab/
+
+      ?? experiments/runs/wikidata-routing-ab/
+
+      ?? experiments/runs/wikidata-sqpoll-ab/
+
+      ?? experiments/runs/wikidata-sqpoll-active-ab-headroom/
+
+      ?? experiments/runs/wikidata-sqpoll-active-ab/
+
+      ?? experiments/runs/wikidata-ssd-sequential/
+
+      ?? experiments/runs/wikidata-wired-ring-ab/
+
+      ?? experiments/runs/wikidata-wired-ring-ab2/
+
+      ?? recovery2.COMPLETE
+
+      ?? scripts/__pycache__/benchmark_export.cpython-312.pyc
+
+      ?? scripts/__pycache__/benchmark_export_powersave_pilot.cpython-312.pyc
+
+      ?? scripts/__pycache__/benchmark_export_stage_powersave_pilot.cpython-312.pyc
+
+      ?? scripts/aggregate-bench.py
+
+      ?? scripts/analyze-construct-baseline.py
+
+      ?? scripts/analyze_sweep3.py
+
+      ?? scripts/bench-batch-sweep3.sh
+
+      ?? scripts/bench-pr82-async-pipeline.sh
+
+      ?? scripts/benchmark_export.py.bak-20260814
+
+      ?? scripts/benchmark_export.py.bak-20260815114433
+
+      ?? scripts/benchmark_export_stage_powersave_pilot.py
+
+      ?? scripts/capture-environment.sh
+
+      ?? scripts/export-quickwin-bench.sh.bak-20260814
+
+      ?? scripts/export-quickwin-bench.sh.bak-g7b
+
+      ?? scripts/export-quickwin-select-bench.sh
+
+      ?? scripts/export-v2-flame-profile.sh
+
+      ?? scripts/export-v2-sparqloscope-bench.sh
+
+      ?? scripts/export-v2-wikidata-bench.sh
+
+      ?? scripts/hsize-ab-2010-2023.sh
+
+      ?? scripts/parallel-export-bench.sh
+
+      ?? scripts/parallel-export-bench.sh.bak-20260815114433
+
+      ?? scripts/pr45-bt-repro.sh
+
+      ?? scripts/pr45-depth2-repro.sh
+
+      ?? scripts/pr45-stress-repro.sh
+
+      ?? scripts/qlever-benchmark-gate.sh.bak-20260814
+
+      ?? scripts/qlever-benchmark-gate.sh.bak-g2fullsha-20260816200243
+
+      ?? scripts/qlever-benchmark-gate.sh.bak-g7b
+
+      ?? scripts/quickwin-ab.sh
+
+      ?? scripts/repro2.sh
+
+      ?? scripts/repro3.sh
+
+      ?? scripts/repro_exists.sh
+
+      ?? scripts/resume-115-05c-stage-lru-suite.sh
+
+      ?? scripts/run-110-05c-stage-suite.sh
+
+      ?? scripts/run-115-05c-stage-lru-suite.sh
+
+      ?? scripts/run-117-construct-baseline.sh
+
+      ?? scripts/run-118-issue67-batch-size.sh
+
+      ?? scripts/run-eql-tests.sh
+
+      ?? scripts/run-ural-e2-dedup-pilot.sh
+
+      ?? scripts/verify-queue.sh
+
+      ?? scripts/vocab-multi-bench.sh
+
+      ?? scripts/wikidata-export-quickwin-bench.sh
+
+      ?? scripts/wikidata-index-build.sh.bak-60G
+
+      ?? scripts/wikidata-parallel-export-bench.sh
+
+      ?? scripts/wikidata-parallel-global-dedup-dupheavy-bench.sh
+
+      ?? verify_dedup_e2.py'
+    remote: "origin\t/home/stoetzem/thesis-ural.bundle (fetch)\norigin\t/home/stoetzem/thesis-ural.bundle\
+      \ (push)"
+    submodule_status: ''
+  script:
+    path: /local/data-ssd/stoetzem/thesis/scripts/benchmark_export.py
+    size_bytes: 40072
+    mtime_ns: 1789763686251403110
+    sha256: 133cd2686318739d058a59deab193dc3169c41819b48b727e29302bea59fdc70
+qlever:
+  repo: /local/data-ssd/stoetzem/qlever-src
+  commit: cc7cc74f22051a4d54b4a7f6473c984cebbf582f
+  short_commit: cc7cc74f2
+  working_tree_status: ?? build-shared/
+  git:
+    repo: /local/data-ssd/stoetzem/qlever-src
+    commit: cc7cc74f22051a4d54b4a7f6473c984cebbf582f
+    short_commit: cc7cc74f2
+    working_tree_status: ?? build-shared/
+    remote: "origin\thttps://github.com/marvin7122/qlever.git (fetch)\norigin\thttps://github.com/marvin7122/qlever.git\
+      \ (push)\nupstream\thttps://github.com/ad-freiburg/qlever (fetch)\nupstream\t\
+      https://github.com/ad-freiburg/qlever (push)"
+    submodule_status: ''
+  server_binary: /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-sqpoll-active-ab-headroom/bin/qlever-server
+  server_binary_version: /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-sqpoll-active-ab-headroom/bin/qlever-server
+    v0.6.0-129-gcc308dd1b
+  server_binary_matches_source: false
+  server_binary_file:
+    path: /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-sqpoll-active-ab-headroom/bin/qlever-server
+    size_bytes: 55544104
+    mtime_ns: 1789940022872239215
+  build:
+    build_dir: /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-sqpoll-active-ab-headroom/bin
+    cmake_cache: /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-sqpoll-active-ab-headroom/bin/CMakeCache.txt
+    cmake_cache_present: false
+    cmake_cache_file: null
+    cmake_configure_log: /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-sqpoll-active-ab-headroom/bin/CMakeFiles/CMakeConfigureLog.yaml
+    cmake_configure_log_present: false
+    cmake_configure_log_file: null
+    cmake_version: 'cmake version 4.4.2
+
+
+      CMake suite maintained and supported by Kitware (kitware.com/cmake).'
+    cache_entries: {}
+    configure_options: {}
+  server_command:
+  - /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-sqpoll-active-ab-headroom/bin/qlever-server
+  - --index-basename
+  - /local/data-ssd/stoetzem/wikidata/wikidata
+  - --port
+  - '7015'
+  - --no-access-check
+  - --cache-max-size
+  - 0B
+  - --cache-max-size-single-entry
+  - 0B
+  - --cache-max-size-lazy-result
+  - 0B
+  - --cache-max-num-entries
+  - '0'
+  - --default-query-timeout
+  - 1800s
+  - --num-simultaneous-queries
+  - '1'
+  - --construct-deduplication
+  - none
+  - --set-runtime-parameter
+  - iouring-sqpoll=false
+  access_control: --no-access-check
+  result_cache:
+    cache_max_size: 0B
+    cache_max_size_single_entry: 0B
+    cache_max_size_lazy_result: 0B
+    cache_max_num_entries: 0
+dataset:
+  index_dir: /local/data-ssd/stoetzem/wikidata
+  index_basename: /local/data-ssd/stoetzem/wikidata/wikidata
+  serving_manifest: /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-iouring/manifests/wikidata-serving-files.txt
+  serving_manifest_file:
+    path: /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-iouring/manifests/wikidata-serving-files.txt
+    size_bytes: 671
+    mtime_ns: 1786664399728567401
+    sha256: 38f2e2976f867a2e0d50ceceeb84013ab9ebaff3b5a2e5da5dddc4d803261544
+  serving_file_count: 25
+  serving_files:
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.index.ops
+    size_bytes: 23302581531
+    mtime_ns: 1788592604843983336
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.index.ops.meta
+    size_bytes: 297152
+    mtime_ns: 1788592604843983336
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.index.osp
+    size_bytes: 23199223425
+    mtime_ns: 1788592604945982431
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.index.osp.meta
+    size_bytes: 297152
+    mtime_ns: 1788592604945982431
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns
+    size_bytes: 2249492280
+    mtime_ns: 1788592608571950236
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.index.pos
+    size_bytes: 26289275001
+    mtime_ns: 1788591778662340578
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.index.pos.meta
+    size_bytes: 46880
+    mtime_ns: 1788591778662340578
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.index.pso
+    size_bytes: 20200654737
+    mtime_ns: 1788591778541341661
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.index.pso.meta
+    size_bytes: 46880
+    mtime_ns: 1788591778541341661
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.index.resource-usage-log.tsv
+    size_bytes: 637101
+    mtime_ns: 1786664398976021120
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.index.sop
+    size_bytes: 15200448612
+    mtime_ns: 1788592243391195533
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.index.sop.meta
+    size_bytes: 32
+    mtime_ns: 1788592243391195533
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.index.spo
+    size_bytes: 14470044006
+    mtime_ns: 1788592243325196121
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.index.spo.meta
+    size_bytes: 32
+    mtime_ns: 1788592243325196121
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.internal.index.pos
+    size_bytes: 17883619202
+    mtime_ns: 1788592002798338435
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.internal.index.pos.meta
+    size_bytes: 72064
+    mtime_ns: 1788592002798338435
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.internal.index.pso
+    size_bytes: 19036150782
+    mtime_ns: 1788592002612340094
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.internal.index.pso.meta
+    size_bytes: 72064
+    mtime_ns: 1788592002612340094
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.meta-data.json
+    size_bytes: 1302
+    mtime_ns: 1788592652897556709
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.settings.json
+    size_bytes: 381
+    mtime_ns: 1788592608961946773
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.codebooks
+    size_bytes: 6948872
+    mtime_ns: 1788592608980946605
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words.external
+    size_bytes: 19767630433
+    mtime_ns: 1788592641791655302
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words.external.offsets
+    size_bytes: 12642405480
+    mtime_ns: 1788592622531826292
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words.internal
+    size_bytes: 15039824805
+    mtime_ns: 1788592652876556895
+  - path: /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words.internal.ids
+    size_bytes: 6221268296
+    mtime_ns: 1788592612788912795
+  index_metadata_file:
+    path: /local/data-ssd/stoetzem/wikidata/wikidata.meta-data.json
+    size_bytes: 1302
+    mtime_ns: 1788592652897556709
+    sha256: 3e450d072a2707ee87cef72788ae9641a9c3919d019e2cb4e1f0a9b942580c7b
+  index_metadata:
+    date-of-index-build: '2026-08-13T19:10:06Z'
+    encoded-iri-prefixes:
+      prefixes-with-leading-angle-brackets:
+      - <http://qlever.cs.uni-freiburg.de/builtin-functions/graph/
+    git-hash: 65f84b4
+    graphNameManager:
+      allocatedGraphs: 1
+      prefix: http://qlever.cs.uni-freiburg.de/builtin-functions/graph/
+    has-all-permutations: true
+    has-icu-support: true
+    index-format-version:
+      date: '2026-09-01'
+      pull-request-number: 3159
+    languages-internal:
+    - en
+    locale:
+      country: US
+      ignore-punctuation: true
+      language: en
+    num-blank-nodes-total: 766103
+    num-objects:
+      internal: 0
+      normal: 1683253489
+    num-predicates:
+      internal: 10100
+      normal: 13566
+    num-subjects:
+      internal: 0
+      normal: 252534289
+    num-triples:
+      internal: 6983973847
+      normal: 8220417022
+    prefixes-external:
+    - <http://www.wikidata.org/entity/statement
+    - <http://www.wikidata.org/value
+    - <http://www.wikidata.org/reference
+    vocabulary-type: on-disk-compressed
+  index_settings_file:
+    path: /local/data-ssd/stoetzem/wikidata/wikidata.settings.json
+    size_bytes: 381
+    mtime_ns: 1788592608961946773
+    sha256: 5ddc590eb2653835bf96186e7e8aa24dfb3ae4bb4484aae1df3641574d98ff05
+  qleverfile:
+    path: /local/data-ssd/stoetzem/wikidata/Qleverfile
+    size_bytes: 592
+    mtime_ns: 1786780178836272486
+    sha256: cbeaeb31c2ee9061c5fa24434715a518cbac6e4bd0f5d5a1ee567f39aa3d174a
+query_file:
+  path: /local/data-ssd/stoetzem/thesis/representative-queries/wikidata/H-vocab-random-label.rq
+  size_bytes: 514585
+  mtime_ns: 1788943675227644223
+  sha256: f52259d394f389b340ea8c758d67ee27d849aa4943546d8d2cb7d51faba2940b
+machine:
+  hostname: ural
+  system: Linux-7.0.0-28-generic-x86_64-with-glibc2.39
+  python: 3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]
+  python_packages:
+    httpx: 0.28.1
+    PyYAML: 6.0.3
+    xxhash: 3.8.1
+  loadavg:
+  - 1.1591796875
+  - 1.08056640625
+  - 1.0146484375
+  mem_available_gib: 121.37099075317383
+  cpu_model_names:
+  - AMD Ryzen 7 3700X 8-Core Processor
+  cpu_governors:
+    cpu0: powersave
+    cpu1: powersave
+    cpu10: powersave
+    cpu11: powersave
+    cpu12: powersave
+    cpu13: powersave
+    cpu14: powersave
+    cpu15: powersave
+    cpu2: powersave
+    cpu3: powersave
+    cpu4: powersave
+    cpu5: powersave
+    cpu6: powersave
+    cpu7: powersave
+    cpu8: powersave
+    cpu9: powersave
+  cpu_scaling_drivers:
+    cpu0: amd-pstate-epp
+    cpu1: amd-pstate-epp
+    cpu10: amd-pstate-epp
+    cpu11: amd-pstate-epp
+    cpu12: amd-pstate-epp
+    cpu13: amd-pstate-epp
+    cpu14: amd-pstate-epp
+    cpu15: amd-pstate-epp
+    cpu2: amd-pstate-epp
+    cpu3: amd-pstate-epp
+    cpu4: amd-pstate-epp
+    cpu5: amd-pstate-epp
+    cpu6: amd-pstate-epp
+    cpu7: amd-pstate-epp
+    cpu8: amd-pstate-epp
+    cpu9: amd-pstate-epp
+  vmtouch: null
+syscall_counters:
+  source: ld_preload
+  library: /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-sqpoll-active-ab-headroom/H-vocab-random-label/baseline/libexport_syscall_count.so
+  compile_error: null
+  events:
+  - pread64
+  - io_uring_enter
+  method: src/util/File.h and SyncIoPolicy call pread; IoUringPolicy calls io_uring_submit
+    and io_uring_wait_cqe/wait_cqes. Those liburing functions issue io_uring_enter.
+    Kernel syscalls:sys_enter_* tracepoints are not readable on Ural (perf_event_paranoid=4).
+completed_at: '2026-09-20T22:22:17.617143+00:00'

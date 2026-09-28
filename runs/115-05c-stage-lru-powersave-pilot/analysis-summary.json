@@ -1,0 +1,3057 @@
+{
+  "audit": {
+    "cell_count": 24,
+    "cells_with_inconsistent_candidate_counts": 0,
+    "cells_with_inconsistent_checksums": 0,
+    "cells_with_inconsistent_emitted_counts": 0,
+    "cells_with_inconsistent_response_bytes": 0,
+    "http_statuses": [
+      "200"
+    ],
+    "major_faults_total": 0,
+    "memory_markers_seen": 120,
+    "negative_residual_rows": 0,
+    "non_root_decomposition_mismatches": 0,
+    "response_decomposition_mismatches": 0,
+    "row_count": 120,
+    "rows_per_cell": [
+      5
+    ],
+    "rows_with_errors": 0,
+    "stage_metrics_seen": 120,
+    "statuses": [
+      "complete"
+    ],
+    "swap_in_total": 0,
+    "swap_out_total": 0
+  },
+  "cells": {
+    "H-dedup-full-cold": {
+      "cache": "cold",
+      "candidate_triples": [
+        390854
+      ],
+      "checksums": [
+        "3c6efb5776d5453b6792079ea638f3f1"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 1609.156,
+        "median": 1601.987,
+        "min": 1597.572
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 50.56,
+        "median": 49.716,
+        "min": 48.978
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 54.981,
+        "median": 53.619,
+        "min": 53.049
+      },
+      "construct_setup_ms": {
+        "max": 0.015,
+        "median": 0.009,
+        "min": 0.008
+      },
+      "construct_stream_ms": {
+        "max": 1723.99,
+        "median": 1712.914,
+        "min": 1707.784
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 36144,
+        "median": 35824,
+        "min": 35276
+      },
+      "e2e_ms": {
+        "max": 1826.005096,
+        "median": 1779.9538189999998,
+        "min": 1769.9265870000002
+      },
+      "emitted_triples": [
+        143415
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 89.86777318983987,
+        "format_transport_residual_of_e2e": 2.791308373826973,
+        "instantiation_deduplication_of_e2e": 2.997721630999689,
+        "non_root_stream_of_e2e": 95.6177695664225,
+        "response_stream_of_e2e": 97.7365677544501,
+        "root_execution_of_e2e": 2.1929158127279997
+      },
+      "mode": "full",
+      "query": "H-dedup",
+      "response_bytes": [
+        17662959
+      ],
+      "server_non_root_stream_ms": {
+        "max": 1713.777,
+        "median": 1705.33,
+        "min": 1700.314
+      },
+      "server_planning_ms": {
+        "max": 17.324,
+        "median": 17.221,
+        "min": 3.198
+      },
+      "server_request_ms": {
+        "max": 1775.225,
+        "median": 1758.033,
+        "min": 1750.817
+      },
+      "server_response_stream_ms": {
+        "max": 1755.607,
+        "median": 1744.143,
+        "min": 1738.14
+      },
+      "server_root_execution_ms": {
+        "max": 41.83,
+        "median": 38.813,
+        "min": 37.715
+      }
+    },
+    "H-dedup-full-warm": {
+      "cache": "warm",
+      "candidate_triples": [
+        390854
+      ],
+      "checksums": [
+        "3c6efb5776d5453b6792079ea638f3f1"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 146.617,
+        "median": 140.17,
+        "min": 138.525
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 50.874,
+        "median": 49.045,
+        "min": 48.959
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 53.53,
+        "median": 49.656,
+        "min": 48.664
+      },
+      "construct_setup_ms": {
+        "max": 0.009,
+        "median": 0.008,
+        "min": 0.008
+      },
+      "construct_stream_ms": {
+        "max": 258.279,
+        "median": 245.258,
+        "min": 242.828
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 34352,
+        "median": 33336,
+        "min": 33064
+      },
+      "e2e_ms": {
+        "max": 305.010817,
+        "median": 291.61767199999997,
+        "min": 288.89768100000003
+      },
+      "emitted_triples": [
+        143415
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 48.06944273061634,
+        "format_transport_residual_of_e2e": 16.94683039009925,
+        "instantiation_deduplication_of_e2e": 17.027774640488865,
+        "non_root_stream_of_e2e": 81.90655880415916,
+        "response_stream_of_e2e": 92.9622130079029,
+        "root_execution_of_e2e": 10.898668307413653
+      },
+      "mode": "full",
+      "query": "H-dedup",
+      "response_bytes": [
+        17662959
+      ],
+      "server_non_root_stream_ms": {
+        "max": 251.029,
+        "median": 238.854,
+        "min": 236.156
+      },
+      "server_planning_ms": {
+        "max": 1.592,
+        "median": 1.443,
+        "min": 1.421
+      },
+      "server_request_ms": {
+        "max": 285.701,
+        "median": 272.64,
+        "min": 269.382
+      },
+      "server_response_stream_ms": {
+        "max": 283.841,
+        "median": 270.884,
+        "min": 267.642
+      },
+      "server_root_execution_ms": {
+        "max": 32.954,
+        "median": 32.03,
+        "min": 30.76
+      }
+    },
+    "H-dedup-lru:30-cold": {
+      "cache": "cold",
+      "candidate_triples": [
+        390854
+      ],
+      "checksums": [
+        "8de25e918fa4384b6921f26f017b8a32"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 1605.253,
+        "median": 1601.788,
+        "min": 1600.485
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 78.306,
+        "median": 77.296,
+        "min": 76.91
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 40.089,
+        "median": 39.88,
+        "min": 39.562
+      },
+      "construct_setup_ms": {
+        "max": 0.012,
+        "median": 0.008,
+        "min": 0.007
+      },
+      "construct_stream_ms": {
+        "max": 1733.94,
+        "median": 1731.083,
+        "min": 1730.287
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 28188,
+        "median": 27996,
+        "min": 27504
+      },
+      "e2e_ms": {
+        "max": 1834.39507,
+        "median": 1800.210735,
+        "min": 1787.487311
+      },
+      "emitted_triples": [
+        348230
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 89.04068667271889,
+        "format_transport_residual_of_e2e": 4.2899681172855395,
+        "instantiation_deduplication_of_e2e": 2.2217954388545516,
+        "non_root_stream_of_e2e": 95.6129727778787,
+        "response_stream_of_e2e": 97.76844264846581,
+        "root_execution_of_e2e": 2.1600712778430458
+      },
+      "mode": "lru:30",
+      "query": "H-dedup",
+      "response_bytes": [
+        42928087
+      ],
+      "server_non_root_stream_ms": {
+        "max": 1722.436,
+        "median": 1718.795,
+        "min": 1717.907
+      },
+      "server_planning_ms": {
+        "max": 17.343,
+        "median": 17.146,
+        "min": 3.633
+      },
+      "server_request_ms": {
+        "max": 1779.641,
+        "median": 1778.519,
+        "min": 1767.034
+      },
+      "server_response_stream_ms": {
+        "max": 1761.047,
+        "median": 1758.699,
+        "min": 1757.099
+      },
+      "server_root_execution_ms": {
+        "max": 40.729,
+        "median": 38.803,
+        "min": 38.304
+      }
+    },
+    "H-dedup-lru:30-warm": {
+      "cache": "warm",
+      "candidate_triples": [
+        390854
+      ],
+      "checksums": [
+        "8de25e918fa4384b6921f26f017b8a32"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 139.565,
+        "median": 138.182,
+        "min": 137.347
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 77.869,
+        "median": 75.701,
+        "min": 75.271
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 39.759,
+        "median": 39.208,
+        "min": 38.858
+      },
+      "construct_setup_ms": {
+        "max": 0.008,
+        "median": 0.007,
+        "min": 0.007
+      },
+      "construct_stream_ms": {
+        "max": 265.261,
+        "median": 263.961,
+        "min": 262.229
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 27908,
+        "median": 26812,
+        "min": 26256
+      },
+      "e2e_ms": {
+        "max": 307.60119000000003,
+        "median": 305.30942799999997,
+        "min": 304.713302
+      },
+      "emitted_triples": [
+        348230
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 45.25965703227481,
+        "format_transport_residual_of_e2e": 24.777454993340804,
+        "instantiation_deduplication_of_e2e": 12.858525438166353,
+        "non_root_stream_of_e2e": 82.93848036687554,
+        "response_stream_of_e2e": 93.35155661784074,
+        "root_execution_of_e2e": 10.459224993209183
+      },
+      "mode": "lru:30",
+      "query": "H-dedup",
+      "response_bytes": [
+        42928087
+      ],
+      "server_non_root_stream_ms": {
+        "max": 255.19,
+        "median": 253.758,
+        "min": 252.472
+      },
+      "server_planning_ms": {
+        "max": 1.595,
+        "median": 1.495,
+        "min": 1.446
+      },
+      "server_request_ms": {
+        "max": 288.684,
+        "median": 286.881,
+        "min": 286.281
+      },
+      "server_response_stream_ms": {
+        "max": 286.877,
+        "median": 285.152,
+        "min": 284.472
+      },
+      "server_root_execution_ms": {
+        "max": 32.627,
+        "median": 31.933,
+        "min": 30.888
+      }
+    },
+    "H-dedup-lru:50-cold": {
+      "cache": "cold",
+      "candidate_triples": [
+        390854
+      ],
+      "checksums": [
+        "bacb5dcc8b13d277c5b416733cdb60cf"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 1602.007,
+        "median": 1596.731,
+        "min": 1596.599
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 45.604,
+        "median": 43.583,
+        "min": 42.655
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 36.882,
+        "median": 36.639,
+        "min": 36.52
+      },
+      "construct_setup_ms": {
+        "max": 0.009,
+        "median": 0.007,
+        "min": 0.007
+      },
+      "construct_stream_ms": {
+        "max": 1697.328,
+        "median": 1690.569,
+        "min": 1689.368
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 27056,
+        "median": 26608,
+        "min": 26408
+      },
+      "e2e_ms": {
+        "max": 1788.477233,
+        "median": 1762.72074,
+        "min": 1753.598018
+      },
+      "emitted_triples": [
+        148108
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 90.8278576007781,
+        "format_transport_residual_of_e2e": 2.4806141175736665,
+        "instantiation_deduplication_of_e2e": 2.084292515440286,
+        "non_root_stream_of_e2e": 95.40372954715221,
+        "response_stream_of_e2e": 97.66587650254462,
+        "root_execution_of_e2e": 2.227749359776637
+      },
+      "mode": "lru:50",
+      "query": "H-dedup",
+      "response_bytes": [
+        18248473
+      ],
+      "server_non_root_stream_ms": {
+        "max": 1684.353,
+        "median": 1676.841,
+        "min": 1675.932
+      },
+      "server_planning_ms": {
+        "max": 17.318,
+        "median": 17.207,
+        "min": 17.167
+      },
+      "server_request_ms": {
+        "max": 1743.201,
+        "median": 1735.823,
+        "min": 1734.619
+      },
+      "server_response_stream_ms": {
+        "max": 1723.622,
+        "median": 1716.125,
+        "min": 1715.119
+      },
+      "server_root_execution_ms": {
+        "max": 40.193,
+        "median": 39.269,
+        "min": 38.278
+      }
+    },
+    "H-dedup-lru:50-warm": {
+      "cache": "warm",
+      "candidate_triples": [
+        390854
+      ],
+      "checksums": [
+        "bacb5dcc8b13d277c5b416733cdb60cf"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 140.205,
+        "median": 138.779,
+        "min": 135.759
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 45.035,
+        "median": 43.688,
+        "min": 42.499
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 36.682,
+        "median": 36.241,
+        "min": 35.867
+      },
+      "construct_setup_ms": {
+        "max": 0.008,
+        "median": 0.008,
+        "min": 0.008
+      },
+      "construct_stream_ms": {
+        "max": 232.913,
+        "median": 230.079,
+        "min": 225.722
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 26328,
+        "median": 26008,
+        "min": 25324
+      },
+      "e2e_ms": {
+        "max": 274.322626,
+        "median": 272.050005,
+        "min": 265.52855800000003
+      },
+      "emitted_triples": [
+        148108
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 51.01948827217774,
+        "format_transport_residual_of_e2e": 16.10949874765343,
+        "instantiation_deduplication_of_e2e": 13.349234555553078,
+        "non_root_stream_of_e2e": 80.50374962508562,
+        "response_stream_of_e2e": 92.55539285533271,
+        "root_execution_of_e2e": 12.079572320804482
+      },
+      "mode": "lru:50",
+      "query": "H-dedup",
+      "response_bytes": [
+        18248473
+      ],
+      "server_non_root_stream_ms": {
+        "max": 221.457,
+        "median": 218.283,
+        "min": 214.585
+      },
+      "server_planning_ms": {
+        "max": 1.598,
+        "median": 1.513,
+        "min": 1.438
+      },
+      "server_request_ms": {
+        "max": 255.951,
+        "median": 253.099,
+        "min": 247.509
+      },
+      "server_response_stream_ms": {
+        "max": 254.069,
+        "median": 251.234,
+        "min": 245.761
+      },
+      "server_root_execution_ms": {
+        "max": 33.137,
+        "median": 32.617,
+        "min": 31.176
+      }
+    },
+    "H-dedup-none-cold": {
+      "cache": "cold",
+      "candidate_triples": [
+        390854
+      ],
+      "checksums": [
+        "706738d8ac92ca112689716c4cfc65c5"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 1603.498,
+        "median": 1601.699,
+        "min": 1598.547
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 84.572,
+        "median": 83.297,
+        "min": 82.904
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 19.539,
+        "median": 19.347,
+        "min": 19.273
+      },
+      "construct_setup_ms": {
+        "max": 0.012,
+        "median": 0.008,
+        "min": 0.006
+      },
+      "construct_stream_ms": {
+        "max": 1718.503,
+        "median": 1717.048,
+        "min": 1713.971
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 28128,
+        "median": 27624,
+        "min": 27504
+      },
+      "e2e_ms": {
+        "max": 1820.912566,
+        "median": 1784.131699,
+        "min": 1779.937635
+      },
+      "emitted_triples": [
+        390854
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 89.80915783602721,
+        "format_transport_residual_of_e2e": 4.672467077758036,
+        "instantiation_deduplication_of_e2e": 1.0868358317509255,
+        "non_root_stream_of_e2e": 95.56913492646049,
+        "response_stream_of_e2e": 97.76555645537687,
+        "root_execution_of_e2e": 2.189752252248151
+      },
+      "mode": "none",
+      "query": "H-dedup",
+      "response_bytes": [
+        48192356
+      ],
+      "server_non_root_stream_ms": {
+        "max": 1705.961,
+        "median": 1705.722,
+        "min": 1701.071
+      },
+      "server_planning_ms": {
+        "max": 17.602,
+        "median": 17.273,
+        "min": 17.139
+      },
+      "server_request_ms": {
+        "max": 1766.345,
+        "median": 1764.368,
+        "min": 1760.657
+      },
+      "server_response_stream_ms": {
+        "max": 1746.182,
+        "median": 1744.68,
+        "min": 1740.835
+      },
+      "server_root_execution_ms": {
+        "max": 40.221,
+        "median": 39.085,
+        "min": 38.332
+      }
+    },
+    "H-dedup-none-warm": {
+      "cache": "warm",
+      "candidate_triples": [
+        390854
+      ],
+      "checksums": [
+        "706738d8ac92ca112689716c4cfc65c5"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 141.507,
+        "median": 139.177,
+        "min": 138.25
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 84.546,
+        "median": 82.397,
+        "min": 82.286
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 19.405,
+        "median": 19.282,
+        "min": 19.056
+      },
+      "construct_setup_ms": {
+        "max": 0.007,
+        "median": 0.007,
+        "min": 0.007
+      },
+      "construct_stream_ms": {
+        "max": 255.031,
+        "median": 253.204,
+        "min": 251.636
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 28804,
+        "median": 28376,
+        "min": 27664
+      },
+      "e2e_ms": {
+        "max": 296.788024,
+        "median": 294.400015,
+        "min": 292.368782
+      },
+      "emitted_triples": [
+        390854
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 47.56160816264025,
+        "format_transport_residual_of_e2e": 28.144591716361838,
+        "instantiation_deduplication_of_e2e": 6.532271666056175,
+        "non_root_stream_of_e2e": 82.1615816037597,
+        "response_stream_of_e2e": 93.21840557650786,
+        "root_execution_of_e2e": 11.014265743159013
+      },
+      "mode": "none",
+      "query": "H-dedup",
+      "response_bytes": [
+        48192356
+      ],
+      "server_non_root_stream_ms": {
+        "max": 243.231,
+        "median": 242.009,
+        "min": 240.433
+      },
+      "server_planning_ms": {
+        "max": 1.632,
+        "median": 1.455,
+        "min": 1.437
+      },
+      "server_request_ms": {
+        "max": 278.471,
+        "median": 276.145,
+        "min": 273.953
+      },
+      "server_response_stream_ms": {
+        "max": 276.708,
+        "median": 274.435,
+        "min": 272.047
+      },
+      "server_root_execution_ms": {
+        "max": 33.477,
+        "median": 32.426,
+        "min": 31.614
+      }
+    },
+    "H-dedup-values-full-cold": {
+      "cache": "cold",
+      "candidate_triples": [
+        573752
+      ],
+      "checksums": [
+        "9b14062edabf378b5dd0d7a1ceb8da32"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 1621.869,
+        "median": 1618.9,
+        "min": 1615.691
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 55.402,
+        "median": 54.235,
+        "min": 53.901
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 63.7,
+        "median": 62.946,
+        "min": 61.192
+      },
+      "construct_setup_ms": {
+        "max": 0.013,
+        "median": 0.009,
+        "min": 0.008
+      },
+      "construct_stream_ms": {
+        "max": 1747.834,
+        "median": 1745.023,
+        "min": 1741.764
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 37440,
+        "median": 37244,
+        "min": 37060
+      },
+      "e2e_ms": {
+        "max": 1832.325047,
+        "median": 1805.8752410000002,
+        "min": 1799.825282
+      },
+      "emitted_triples": [
+        143438
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 89.7385270337077,
+        "format_transport_residual_of_e2e": 3.013348047857903,
+        "instantiation_deduplication_of_e2e": 3.492123629604719,
+        "non_root_stream_of_e2e": 96.27785798963727,
+        "response_stream_of_e2e": 97.73243001337002,
+        "root_execution_of_e2e": 1.4432890715953948
+      },
+      "mode": "full",
+      "query": "H-dedup-values",
+      "response_bytes": [
+        17665769
+      ],
+      "server_non_root_stream_ms": {
+        "max": 1740.509,
+        "median": 1735.981,
+        "min": 1731.127
+      },
+      "server_planning_ms": {
+        "max": 16.174,
+        "median": 16.072,
+        "min": 15.961
+      },
+      "server_request_ms": {
+        "max": 1785.602,
+        "median": 1782.898,
+        "min": 1777.72
+      },
+      "server_response_stream_ms": {
+        "max": 1766.345,
+        "median": 1763.567,
+        "min": 1759.143
+      },
+      "server_root_execution_ms": {
+        "max": 28.328,
+        "median": 26.064,
+        "min": 25.406
+      }
+    },
+    "H-dedup-values-full-warm": {
+      "cache": "warm",
+      "candidate_triples": [
+        573752
+      ],
+      "checksums": [
+        "9b14062edabf378b5dd0d7a1ceb8da32"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 157.747,
+        "median": 155.869,
+        "min": 155.208
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 54.775,
+        "median": 53.586,
+        "min": 52.598
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 58.68,
+        "median": 57.853,
+        "min": 56.88
+      },
+      "construct_setup_ms": {
+        "max": 0.009,
+        "median": 0.008,
+        "min": 0.008
+      },
+      "construct_stream_ms": {
+        "max": 276.639,
+        "median": 272.621,
+        "min": 269.32
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 39864,
+        "median": 39688,
+        "min": 23584
+      },
+      "e2e_ms": {
+        "max": 313.214311,
+        "median": 308.936327,
+        "min": 304.468445
+      },
+      "emitted_triples": [
+        143438
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 50.42612001280108,
+        "format_transport_residual_of_e2e": 17.381285055134597,
+        "instantiation_deduplication_of_e2e": 18.706343303780148,
+        "non_root_stream_of_e2e": 86.40186303620078,
+        "response_stream_of_e2e": 93.47065243545964,
+        "root_execution_of_e2e": 7.013095614359395
+      },
+      "mode": "full",
+      "query": "H-dedup-values",
+      "response_bytes": [
+        17665769
+      ],
+      "server_non_root_stream_ms": {
+        "max": 270.623,
+        "median": 267.323,
+        "min": 265.682
+      },
+      "server_planning_ms": {
+        "max": 0.552,
+        "median": 0.487,
+        "min": 0.427
+      },
+      "server_request_ms": {
+        "max": 293.69,
+        "median": 289.26,
+        "min": 285.558
+      },
+      "server_response_stream_ms": {
+        "max": 292.879,
+        "median": 288.544,
+        "min": 284.779
+      },
+      "server_root_execution_ms": {
+        "max": 22.256,
+        "median": 21.685,
+        "min": 16.168
+      }
+    },
+    "H-dedup-values-lru:30-cold": {
+      "cache": "cold",
+      "candidate_triples": [
+        573752
+      ],
+      "checksums": [
+        "9b14062edabf378b5dd0d7a1ceb8da32"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 1623.445,
+        "median": 1612.66,
+        "min": 1611.786
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 51.066,
+        "median": 48.192,
+        "min": 47.339
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 39.343,
+        "median": 38.556,
+        "min": 38.047
+      },
+      "construct_setup_ms": {
+        "max": 0.011,
+        "median": 0.009,
+        "min": 0.008
+      },
+      "construct_stream_ms": {
+        "max": 1727.319,
+        "median": 1713.044,
+        "min": 1711.037
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 28232,
+        "median": 28048,
+        "min": 27920
+      },
+      "e2e_ms": {
+        "max": 1803.397456,
+        "median": 1767.645067,
+        "min": 1763.767445
+      },
+      "emitted_triples": [
+        143438
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 91.2321161135003,
+        "format_transport_residual_of_e2e": 2.7007981173537448,
+        "instantiation_deduplication_of_e2e": 2.1648576806737414,
+        "non_root_stream_of_e2e": 96.16760919572097,
+        "response_stream_of_e2e": 97.68951214650201,
+        "root_execution_of_e2e": 1.5006406260629699
+      },
+      "mode": "lru:30",
+      "query": "H-dedup-values",
+      "response_bytes": [
+        17665769
+      ],
+      "server_non_root_stream_ms": {
+        "max": 1713.863,
+        "median": 1699.902,
+        "min": 1697.716
+      },
+      "server_planning_ms": {
+        "max": 16.154,
+        "median": 16.108,
+        "min": 15.995
+      },
+      "server_request_ms": {
+        "max": 1760.797,
+        "median": 1745.703,
+        "min": 1742.759
+      },
+      "server_response_stream_ms": {
+        "max": 1741.699,
+        "median": 1726.428,
+        "min": 1723.951
+      },
+      "server_root_execution_ms": {
+        "max": 27.836,
+        "median": 26.773,
+        "min": 25.945
+      }
+    },
+    "H-dedup-values-lru:30-warm": {
+      "cache": "warm",
+      "candidate_triples": [
+        573752
+      ],
+      "checksums": [
+        "9b14062edabf378b5dd0d7a1ceb8da32"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 154.491,
+        "median": 153.325,
+        "min": 153.296
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 48.243,
+        "median": 47.969,
+        "min": 46.92
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 37.971,
+        "median": 37.713,
+        "min": 37.519
+      },
+      "construct_setup_ms": {
+        "max": 0.008,
+        "median": 0.007,
+        "min": 0.007
+      },
+      "construct_stream_ms": {
+        "max": 251.47,
+        "median": 249.481,
+        "min": 242.639
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 30196,
+        "median": 30012,
+        "min": 14632
+      },
+      "e2e_ms": {
+        "max": 283.157457,
+        "median": 280.196079,
+        "min": 273.50020600000005
+      },
+      "emitted_triples": [
+        143438
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 54.72060870630528,
+        "format_transport_residual_of_e2e": 17.064554445785113,
+        "instantiation_deduplication_of_e2e": 13.440230903445299,
+        "non_root_stream_of_e2e": 85.28313488640933,
+        "response_stream_of_e2e": 92.89699655883035,
+        "root_execution_of_e2e": 7.780622797366127
+      },
+      "mode": "lru:30",
+      "query": "H-dedup-values",
+      "response_bytes": [
+        17665769
+      ],
+      "server_non_root_stream_ms": {
+        "max": 240.551,
+        "median": 238.96,
+        "min": 237.788
+      },
+      "server_planning_ms": {
+        "max": 0.525,
+        "median": 0.48,
+        "min": 0.421
+      },
+      "server_request_ms": {
+        "max": 263.804,
+        "median": 261.523,
+        "min": 253.792
+      },
+      "server_response_stream_ms": {
+        "max": 262.963,
+        "median": 260.761,
+        "min": 253.123
+      },
+      "server_root_execution_ms": {
+        "max": 22.646,
+        "median": 21.801,
+        "min": 15.335
+      }
+    },
+    "H-dedup-values-lru:50-cold": {
+      "cache": "cold",
+      "candidate_triples": [
+        573752
+      ],
+      "checksums": [
+        "9b14062edabf378b5dd0d7a1ceb8da32"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 1688.99,
+        "median": 1648.496,
+        "min": 1611.826
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 53.083,
+        "median": 49.865,
+        "min": 48.289
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 51.487,
+        "median": 47.282,
+        "min": 45.512
+      },
+      "construct_setup_ms": {
+        "max": 0.015,
+        "median": 0.009,
+        "min": 0.008
+      },
+      "construct_stream_ms": {
+        "max": 1806.717,
+        "median": 1759.309,
+        "min": 1719.838
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 28464,
+        "median": 27868,
+        "min": 27280
+      },
+      "e2e_ms": {
+        "max": 1846.316345,
+        "median": 1812.9421889999999,
+        "min": 1761.524025
+      },
+      "emitted_triples": [
+        143438
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 91.47246107491942,
+        "format_transport_residual_of_e2e": 2.7666383942733908,
+        "instantiation_deduplication_of_e2e": 2.6080257984442548,
+        "non_root_stream_of_e2e": 96.90341861786416,
+        "response_stream_of_e2e": 98.38770152453641,
+        "root_execution_of_e2e": 1.4842829066722494
+      },
+      "mode": "lru:50",
+      "query": "H-dedup-values",
+      "response_bytes": [
+        17665769
+      ],
+      "server_non_root_stream_ms": {
+        "max": 1793.449,
+        "median": 1745.651,
+        "min": 1705.64
+      },
+      "server_planning_ms": {
+        "max": 16.097,
+        "median": 2.913,
+        "min": 1.95
+      },
+      "server_request_ms": {
+        "max": 1825.192,
+        "median": 1791.546,
+        "min": 1739.241
+      },
+      "server_response_stream_ms": {
+        "max": 1819.775,
+        "median": 1772.702,
+        "min": 1732.721
+      },
+      "server_root_execution_ms": {
+        "max": 27.081,
+        "median": 26.326,
+        "min": 25.612
+      }
+    },
+    "H-dedup-values-lru:50-warm": {
+      "cache": "warm",
+      "candidate_triples": [
+        573752
+      ],
+      "checksums": [
+        "9b14062edabf378b5dd0d7a1ceb8da32"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 155.994,
+        "median": 153.505,
+        "min": 152.474
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 49.076,
+        "median": 48.515,
+        "min": 47.745
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 45.645,
+        "median": 45.157,
+        "min": 44.654
+      },
+      "construct_setup_ms": {
+        "max": 0.008,
+        "median": 0.007,
+        "min": 0.007
+      },
+      "construct_stream_ms": {
+        "max": 260.466,
+        "median": 256.834,
+        "min": 255.724
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 30300,
+        "median": 30012,
+        "min": 29580
+      },
+      "e2e_ms": {
+        "max": 291.865905,
+        "median": 289.122929,
+        "min": 287.498402
+      },
+      "emitted_triples": [
+        143438
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 53.1526969660435,
+        "format_transport_residual_of_e2e": 16.753260227950836,
+        "instantiation_deduplication_of_e2e": 15.639031218805775,
+        "non_root_stream_of_e2e": 85.35108309923754,
+        "response_stream_of_e2e": 93.01512569798562,
+        "root_execution_of_e2e": 7.664042598748079
+      },
+      "mode": "lru:50",
+      "query": "H-dedup-values",
+      "response_bytes": [
+        17665769
+      ],
+      "server_non_root_stream_ms": {
+        "max": 250.723,
+        "median": 246.89,
+        "min": 245.383
+      },
+      "server_planning_ms": {
+        "max": 0.499,
+        "median": 0.491,
+        "min": 0.425
+      },
+      "server_request_ms": {
+        "max": 273.175,
+        "median": 269.474,
+        "min": 268.145
+      },
+      "server_response_stream_ms": {
+        "max": 272.399,
+        "median": 268.685,
+        "min": 267.417
+      },
+      "server_root_execution_ms": {
+        "max": 23.207,
+        "median": 22.034,
+        "min": 21.562
+      }
+    },
+    "H-dedup-values-none-cold": {
+      "cache": "cold",
+      "candidate_triples": [
+        573752
+      ],
+      "checksums": [
+        "2a42de9315f91e6e098aae0fdbac9008"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 1623.246,
+        "median": 1622.163,
+        "min": 1618.379
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 117.354,
+        "median": 115.57,
+        "min": 111.277
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 28.569,
+        "median": 28.271,
+        "min": 28.078
+      },
+      "construct_setup_ms": {
+        "max": 0.012,
+        "median": 0.008,
+        "min": 0.006
+      },
+      "construct_stream_ms": {
+        "max": 1784.856,
+        "median": 1779.583,
+        "min": 1776.631
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 29256,
+        "median": 27684,
+        "min": 27364
+      },
+      "e2e_ms": {
+        "max": 1864.56548,
+        "median": 1828.994528,
+        "min": 1826.8379029999999
+      },
+      "emitted_triples": [
+        573752
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 88.53298377481828,
+        "format_transport_residual_of_e2e": 6.293906074030717,
+        "instantiation_deduplication_of_e2e": 1.5373474097129722,
+        "non_root_stream_of_e2e": 96.39229606021591,
+        "response_stream_of_e2e": 97.80701760524896,
+        "root_execution_of_e2e": 1.4129860850753473
+      },
+      "mode": "none",
+      "query": "H-dedup-values",
+      "response_bytes": [
+        70663076
+      ],
+      "server_non_root_stream_ms": {
+        "max": 1768.7,
+        "median": 1762.555,
+        "min": 1760.931
+      },
+      "server_planning_ms": {
+        "max": 16.207,
+        "median": 16.07,
+        "min": 15.978
+      },
+      "server_request_ms": {
+        "max": 1813.59,
+        "median": 1808.034,
+        "min": 1804.632
+      },
+      "server_response_stream_ms": {
+        "max": 1794.335,
+        "median": 1788.885,
+        "min": 1785.865
+      },
+      "server_root_execution_ms": {
+        "max": 26.81,
+        "median": 25.907,
+        "min": 24.934
+      }
+    },
+    "H-dedup-values-none-warm": {
+      "cache": "warm",
+      "candidate_triples": [
+        573752
+      ],
+      "checksums": [
+        "2a42de9315f91e6e098aae0fdbac9008"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 163.878,
+        "median": 157.643,
+        "min": 156.585
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 119.432,
+        "median": 111.49,
+        "min": 110.457
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 28.379,
+        "median": 27.858,
+        "min": 27.584
+      },
+      "construct_setup_ms": {
+        "max": 0.007,
+        "median": 0.007,
+        "min": 0.006
+      },
+      "construct_stream_ms": {
+        "max": 320.162,
+        "median": 310.49,
+        "min": 305.816
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 31240,
+        "median": 31164,
+        "min": 15368
+      },
+      "e2e_ms": {
+        "max": 347.197103,
+        "median": 338.00476699999996,
+        "min": 333.0888
+      },
+      "emitted_triples": [
+        573752
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 46.63928304892813,
+        "format_transport_residual_of_e2e": 33.1614272230108,
+        "instantiation_deduplication_of_e2e": 8.191924337790246,
+        "non_root_stream_of_e2e": 87.8071889956892,
+        "response_stream_of_e2e": 94.17000725762206,
+        "root_execution_of_e2e": 6.317897177297316
+      },
+      "mode": "none",
+      "query": "H-dedup-values",
+      "response_bytes": [
+        70663076
+      ],
+      "server_non_root_stream_ms": {
+        "max": 311.695,
+        "median": 296.766,
+        "min": 295.536
+      },
+      "server_planning_ms": {
+        "max": 0.486,
+        "median": 0.469,
+        "min": 0.428
+      },
+      "server_request_ms": {
+        "max": 328.162,
+        "median": 319.349,
+        "min": 314.211
+      },
+      "server_response_stream_ms": {
+        "max": 327.476,
+        "median": 318.537,
+        "min": 313.464
+      },
+      "server_root_execution_ms": {
+        "max": 21.771,
+        "median": 21.425,
+        "min": 15.781
+      }
+    },
+    "H-size-full-cold": {
+      "cache": "cold",
+      "candidate_triples": [
+        490650
+      ],
+      "checksums": [
+        "dde2a34851a6029eead6c3430d7608af"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 3343.595,
+        "median": 3338.644,
+        "min": 3332.874
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 134.594,
+        "median": 134.361,
+        "min": 132.485
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 181.465,
+        "median": 180.234,
+        "min": 179.604
+      },
+      "construct_setup_ms": {
+        "max": 0.014,
+        "median": 0.009,
+        "min": 0.008
+      },
+      "construct_stream_ms": {
+        "max": 3738.909,
+        "median": 3735.269,
+        "min": 3728.39
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 75140,
+        "median": 74788,
+        "min": 73908
+      },
+      "e2e_ms": {
+        "max": 3862.01447,
+        "median": 3840.8385310000003,
+        "min": 3825.574507
+      },
+      "emitted_triples": [
+        490650
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 87.03441957831836,
+        "format_transport_residual_of_e2e": 3.4982204775220738,
+        "instantiation_deduplication_of_e2e": 4.692569045673324,
+        "non_root_stream_of_e2e": 95.21625553520805,
+        "response_stream_of_e2e": 98.94268575118603,
+        "root_execution_of_e2e": 3.726430215977982
+      },
+      "mode": "full",
+      "query": "H-size",
+      "response_bytes": [
+        61418523
+      ],
+      "server_non_root_stream_ms": {
+        "max": 3657.916,
+        "median": 3652.773,
+        "min": 3647.097
+      },
+      "server_planning_ms": {
+        "max": 16.333,
+        "median": 16.08,
+        "min": 2.121
+      },
+      "server_request_ms": {
+        "max": 3820.398,
+        "median": 3808.617,
+        "min": 3804.56
+      },
+      "server_response_stream_ms": {
+        "max": 3801.074,
+        "median": 3799.237,
+        "min": 3788.986
+      },
+      "server_root_execution_ms": {
+        "max": 146.464,
+        "median": 143.158,
+        "min": 140.248
+      }
+    },
+    "H-size-full-warm": {
+      "cache": "warm",
+      "candidate_triples": [
+        490650
+      ],
+      "checksums": [
+        "dde2a34851a6029eead6c3430d7608af"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 352.898,
+        "median": 346.018,
+        "min": 344.464
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 133.269,
+        "median": 131.54,
+        "min": 130.982
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 173.071,
+        "median": 171.044,
+        "min": 169.606
+      },
+      "construct_setup_ms": {
+        "max": 0.01,
+        "median": 0.008,
+        "min": 0.008
+      },
+      "construct_stream_ms": {
+        "max": 712.222,
+        "median": 702.461,
+        "min": 699.022
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 72748,
+        "median": 71984,
+        "min": 70864
+      },
+      "e2e_ms": {
+        "max": 787.5386450000001,
+        "median": 773.754148,
+        "min": 768.714041
+      },
+      "emitted_triples": [
+        490650
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 44.81024547055719,
+        "format_transport_residual_of_e2e": 16.96262311992155,
+        "instantiation_deduplication_of_e2e": 22.063601151263477,
+        "non_root_stream_of_e2e": 83.90908167383421,
+        "response_stream_of_e2e": 97.43818523606804,
+        "root_execution_of_e2e": 13.529103562233828
+      },
+      "mode": "full",
+      "query": "H-size",
+      "response_bytes": [
+        61418523
+      ],
+      "server_non_root_stream_ms": {
+        "max": 659.246,
+        "median": 649.25,
+        "min": 645.618
+      },
+      "server_planning_ms": {
+        "max": 1.123,
+        "median": 0.927,
+        "min": 0.856
+      },
+      "server_request_ms": {
+        "max": 769.088,
+        "median": 755.072,
+        "min": 750.545
+      },
+      "server_response_stream_ms": {
+        "max": 767.791,
+        "median": 753.932,
+        "min": 749.395
+      },
+      "server_root_execution_ms": {
+        "max": 108.545,
+        "median": 104.682,
+        "min": 103.434
+      }
+    },
+    "H-size-lru:30-cold": {
+      "cache": "cold",
+      "candidate_triples": [
+        490650
+      ],
+      "checksums": [
+        "dde2a34851a6029eead6c3430d7608af"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 3346.003,
+        "median": 3331.372,
+        "min": 3325.966
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 106.623,
+        "median": 105.424,
+        "min": 103.569
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 54.154,
+        "median": 53.144,
+        "min": 52.925
+      },
+      "construct_setup_ms": {
+        "max": 0.01,
+        "median": 0.009,
+        "min": 0.008
+      },
+      "construct_stream_ms": {
+        "max": 3612.006,
+        "median": 3598.639,
+        "min": 3591.652
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 47692,
+        "median": 47340,
+        "min": 47140
+      },
+      "e2e_ms": {
+        "max": 3693.1496199999997,
+        "median": 3686.1658159999997,
+        "min": 3672.6489309999997
+      },
+      "emitted_triples": [
+        490650
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 90.61900722141199,
+        "format_transport_residual_of_e2e": 2.870189935940817,
+        "instantiation_deduplication_of_e2e": 1.4464687037194366,
+        "non_root_stream_of_e2e": 94.94417733288229,
+        "response_stream_of_e2e": 98.9295755804981,
+        "root_execution_of_e2e": 3.9781972039051743
+      },
+      "mode": "lru:30",
+      "query": "H-size",
+      "response_bytes": [
+        61418523
+      ],
+      "server_non_root_stream_ms": {
+        "max": 3506.458,
+        "median": 3489.95,
+        "min": 3482.468
+      },
+      "server_planning_ms": {
+        "max": 16.209,
+        "median": 16.04,
+        "min": 16.01
+      },
+      "server_request_ms": {
+        "max": 3666.964,
+        "median": 3655.297,
+        "min": 3643.854
+      },
+      "server_response_stream_ms": {
+        "max": 3648.169,
+        "median": 3636.111,
+        "min": 3625.071
+      },
+      "server_root_execution_ms": {
+        "max": 146.872,
+        "median": 146.161,
+        "min": 141.611
+      }
+    },
+    "H-size-lru:30-warm": {
+      "cache": "warm",
+      "candidate_triples": [
+        490650
+      ],
+      "checksums": [
+        "dde2a34851a6029eead6c3430d7608af"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 346.468,
+        "median": 338.595,
+        "min": 338.129
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 104.811,
+        "median": 104.18,
+        "min": 103.813
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 53.1,
+        "median": 52.786,
+        "min": 52.424
+      },
+      "construct_setup_ms": {
+        "max": 0.009,
+        "median": 0.008,
+        "min": 0.007
+      },
+      "construct_stream_ms": {
+        "max": 586.433,
+        "median": 583.073,
+        "min": 573.508
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 47016,
+        "median": 45332,
+        "min": 45068
+      },
+      "e2e_ms": {
+        "max": 630.800844,
+        "median": 626.766716,
+        "min": 621.587726
+      },
+      "emitted_triples": [
+        490650
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 54.36423704130025,
+        "format_transport_residual_of_e2e": 16.648616726636536,
+        "instantiation_deduplication_of_e2e": 8.427312750870453,
+        "non_root_stream_of_e2e": 79.54007834565175,
+        "response_stream_of_e2e": 96.8239428263396,
+        "root_execution_of_e2e": 17.248952492773356
+      },
+      "mode": "lru:30",
+      "query": "H-size",
+      "response_bytes": [
+        61418523
+      ],
+      "server_non_root_stream_ms": {
+        "max": 504.176,
+        "median": 495.203,
+        "min": 494.764
+      },
+      "server_planning_ms": {
+        "max": 1.06,
+        "median": 0.95,
+        "min": 0.857
+      },
+      "server_request_ms": {
+        "max": 612.493,
+        "median": 608.609,
+        "min": 602.639
+      },
+      "server_response_stream_ms": {
+        "max": 611.115,
+        "median": 607.417,
+        "min": 601.373
+      },
+      "server_root_execution_ms": {
+        "max": 112.653,
+        "median": 107.301,
+        "min": 106.17
+      }
+    },
+    "H-size-lru:50-cold": {
+      "cache": "cold",
+      "candidate_triples": [
+        490650
+      ],
+      "checksums": [
+        "dde2a34851a6029eead6c3430d7608af"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 3338.203,
+        "median": 3330.975,
+        "min": 3322.94
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 105.977,
+        "median": 104.582,
+        "min": 103.557
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 77.735,
+        "median": 76.712,
+        "min": 76.39
+      },
+      "construct_setup_ms": {
+        "max": 0.013,
+        "median": 0.009,
+        "min": 0.008
+      },
+      "construct_stream_ms": {
+        "max": 3625.962,
+        "median": 3617.944,
+        "min": 3609.664
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 47700,
+        "median": 47080,
+        "min": 46844
+      },
+      "e2e_ms": {
+        "max": 3729.68986,
+        "median": 3701.352519,
+        "min": 3686.8991379999998
+      },
+      "emitted_triples": [
+        490650
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 90.10483787255697,
+        "format_transport_residual_of_e2e": 2.825507688423449,
+        "instantiation_deduplication_of_e2e": 2.0719308324078165,
+        "non_root_stream_of_e2e": 95.02026575275254,
+        "response_stream_of_e2e": 98.8907985689518,
+        "root_execution_of_e2e": 3.852894736361008
+      },
+      "mode": "lru:50",
+      "query": "H-size",
+      "response_bytes": [
+        61418523
+      ],
+      "server_non_root_stream_ms": {
+        "max": 3521.32,
+        "median": 3512.664,
+        "min": 3502.898
+      },
+      "server_planning_ms": {
+        "max": 16.297,
+        "median": 16.196,
+        "min": 16.057
+      },
+      "server_request_ms": {
+        "max": 3682.874,
+        "median": 3674.837,
+        "min": 3664.992
+      },
+      "server_response_stream_ms": {
+        "max": 3664.062,
+        "median": 3655.716,
+        "min": 3646.004
+      },
+      "server_root_execution_ms": {
+        "max": 144.179,
+        "median": 143.052,
+        "min": 139.341
+      }
+    },
+    "H-size-lru:50-warm": {
+      "cache": "warm",
+      "candidate_triples": [
+        490650
+      ],
+      "checksums": [
+        "dde2a34851a6029eead6c3430d7608af"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 342.989,
+        "median": 341.796,
+        "min": 340.411
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 105.428,
+        "median": 104.202,
+        "min": 102.752
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 77.079,
+        "median": 76.54,
+        "min": 76.475
+      },
+      "construct_setup_ms": {
+        "max": 0.008,
+        "median": 0.008,
+        "min": 0.007
+      },
+      "construct_stream_ms": {
+        "max": 607.479,
+        "median": 604.905,
+        "min": 601.167
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 46208,
+        "median": 45692,
+        "min": 45308
+      },
+      "e2e_ms": {
+        "max": 652.242176,
+        "median": 650.445261,
+        "min": 649.477042
+      },
+      "emitted_triples": [
+        490650
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 52.56198109001057,
+        "format_transport_residual_of_e2e": 16.020102881493667,
+        "instantiation_deduplication_of_e2e": 11.776551756851784,
+        "non_root_stream_of_e2e": 80.30314801353785,
+        "response_stream_of_e2e": 96.93252265850548,
+        "root_execution_of_e2e": 16.63684958345746
+      },
+      "mode": "lru:50",
+      "query": "H-size",
+      "response_bytes": [
+        61418523
+      ],
+      "server_non_root_stream_ms": {
+        "max": 524.793,
+        "median": 521.906,
+        "min": 521.096
+      },
+      "server_planning_ms": {
+        "max": 1.021,
+        "median": 0.958,
+        "min": 0.857
+      },
+      "server_request_ms": {
+        "max": 633.929,
+        "median": 631.755,
+        "min": 630.644
+      },
+      "server_response_stream_ms": {
+        "max": 632.783,
+        "median": 630.493,
+        "min": 629.269
+      },
+      "server_root_execution_ms": {
+        "max": 109.397,
+        "median": 108.101,
+        "min": 105.848
+      }
+    },
+    "H-size-none-cold": {
+      "cache": "cold",
+      "candidate_triples": [
+        490650
+      ],
+      "checksums": [
+        "dde2a34851a6029eead6c3430d7608af"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 3337.566,
+        "median": 3327.37,
+        "min": 3326.748
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 105.781,
+        "median": 104.896,
+        "min": 104.248
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 24.843,
+        "median": 24.228,
+        "min": 24.099
+      },
+      "construct_setup_ms": {
+        "max": 0.008,
+        "median": 0.008,
+        "min": 0.006
+      },
+      "construct_stream_ms": {
+        "max": 3570.548,
+        "median": 3565.784,
+        "min": 3560.772
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 48244,
+        "median": 47500,
+        "min": 46924
+      },
+      "e2e_ms": {
+        "max": 3671.001855,
+        "median": 3644.902983,
+        "min": 3636.346895
+      },
+      "emitted_triples": [
+        490650
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 91.43020525293791,
+        "format_transport_residual_of_e2e": 2.870306911195657,
+        "instantiation_deduplication_of_e2e": 0.6662730674379184,
+        "non_root_stream_of_e2e": 94.99352976331332,
+        "response_stream_of_e2e": 98.89870915118401,
+        "root_execution_of_e2e": 3.9051793878706924
+      },
+      "mode": "none",
+      "query": "H-size",
+      "response_bytes": [
+        61418523
+      ],
+      "server_non_root_stream_ms": {
+        "max": 3467.693,
+        "median": 3456.5,
+        "min": 3455.293
+      },
+      "server_planning_ms": {
+        "max": 16.37,
+        "median": 16.059,
+        "min": 15.998
+      },
+      "server_request_ms": {
+        "max": 3626.565,
+        "median": 3618.726,
+        "min": 3616.381
+      },
+      "server_response_stream_ms": {
+        "max": 3607.764,
+        "median": 3599.869,
+        "min": 3597.292
+      },
+      "server_root_execution_ms": {
+        "max": 143.369,
+        "median": 142.34,
+        "min": 140.071
+      }
+    },
+    "H-size-none-warm": {
+      "cache": "warm",
+      "candidate_triples": [
+        490650
+      ],
+      "checksums": [
+        "dde2a34851a6029eead6c3430d7608af"
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 343.204,
+        "median": 341.127,
+        "min": 337.579
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 103.868,
+        "median": 103.049,
+        "min": 102.673
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 24.163,
+        "median": 23.923,
+        "min": 23.835
+      },
+      "construct_setup_ms": {
+        "max": 0.016,
+        "median": 0.007,
+        "min": 0.007
+      },
+      "construct_stream_ms": {
+        "max": 551.919,
+        "median": 545.877,
+        "min": 543.256
+      },
+      "dedup_memory_incremental_peak_kib": {
+        "max": 44916,
+        "median": 44376,
+        "min": 42916
+      },
+      "e2e_ms": {
+        "max": 597.8781,
+        "median": 592.559759,
+        "min": 591.2759960000001
+      },
+      "emitted_triples": [
+        490650
+      ],
+      "median_per_run_shares_percent": {
+        "batch_evaluation_of_e2e": 57.40367476246412,
+        "format_transport_residual_of_e2e": 17.36464877562863,
+        "instantiation_deduplication_of_e2e": 4.037229939537625,
+        "non_root_stream_of_e2e": 78.68276158635013,
+        "response_stream_of_e2e": 96.62883708142556,
+        "root_execution_of_e2e": 18.03728887209617
+      },
+      "mode": "none",
+      "query": "H-size",
+      "response_bytes": [
+        61418523
+      ],
+      "server_non_root_stream_ms": {
+        "max": 470.427,
+        "median": 468.048,
+        "min": 464.094
+      },
+      "server_planning_ms": {
+        "max": 1.059,
+        "median": 1.004,
+        "min": 0.849
+      },
+      "server_request_ms": {
+        "max": 579.539,
+        "median": 574.415,
+        "min": 572.412
+      },
+      "server_response_stream_ms": {
+        "max": 578.268,
+        "median": 573.09,
+        "min": 571.198
+      },
+      "server_root_execution_ms": {
+        "max": 108.321,
+        "median": 107.104,
+        "min": 102.038
+      }
+    }
+  },
+  "comparisons": {
+    "H-dedup-cold": {
+      "full": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 1601.987,
+          "mode_minus_none": 0.2880000000000109,
+          "none_median": 1601.699,
+          "reduction_percent": -0.01798090652488457
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 49.716,
+          "mode_minus_none": -33.580999999999996,
+          "none_median": 83.297,
+          "reduction_percent": 40.31477724287789
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 53.619,
+          "mode_minus_none": 34.272,
+          "none_median": 19.347,
+          "reduction_percent": -177.14374321600246
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 35824,
+          "mode_minus_none": 8200,
+          "none_median": 27624,
+          "reduction_percent": -29.684332464523603
+        },
+        "e2e_ms": {
+          "mode_median": 1779.9538189999998,
+          "mode_minus_none": -4.1778800000001866,
+          "none_median": 1784.131699,
+          "reduction_percent": 0.2341688117722405
+        },
+        "emitted_triples": {
+          "mode": 143415,
+          "none": 390854,
+          "reduction_percent": 63.3072707455981
+        },
+        "response_bytes": {
+          "mode": 17662959,
+          "none": 48192356,
+          "reduction_percent": 63.34904440031942
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 1705.33,
+          "mode_minus_none": -0.39200000000005275,
+          "none_median": 1705.722,
+          "reduction_percent": 0.022981470603067367
+        },
+        "server_root_execution_ms": {
+          "mode_median": 38.813,
+          "mode_minus_none": -0.27199999999999847,
+          "none_median": 39.085,
+          "reduction_percent": 0.6959191505692681
+        }
+      },
+      "lru:30": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 1601.788,
+          "mode_minus_none": 0.08899999999994179,
+          "none_median": 1601.699,
+          "reduction_percent": -0.005556599585811179
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 77.296,
+          "mode_minus_none": -6.000999999999991,
+          "none_median": 83.297,
+          "reduction_percent": 7.204341092716413
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 39.88,
+          "mode_minus_none": 20.533,
+          "none_median": 19.347,
+          "reduction_percent": -106.13014937716441
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 27996,
+          "mode_minus_none": 372,
+          "none_median": 27624,
+          "reduction_percent": -1.3466550825369243
+        },
+        "e2e_ms": {
+          "mode_median": 1800.210735,
+          "mode_minus_none": 16.079036000000087,
+          "none_median": 1784.131699,
+          "reduction_percent": -0.9012247251148743
+        },
+        "emitted_triples": {
+          "mode": 348230,
+          "none": 390854,
+          "reduction_percent": 10.905350847119385
+        },
+        "response_bytes": {
+          "mode": 42928087,
+          "none": 48192356,
+          "reduction_percent": 10.923452258694304
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 1718.795,
+          "mode_minus_none": 13.073000000000093,
+          "none_median": 1705.722,
+          "reduction_percent": -0.7664203193720954
+        },
+        "server_root_execution_ms": {
+          "mode_median": 38.803,
+          "mode_minus_none": -0.2820000000000036,
+          "none_median": 39.085,
+          "reduction_percent": 0.7215044134578574
+        }
+      },
+      "lru:50": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 1596.731,
+          "mode_minus_none": -4.968000000000075,
+          "none_median": 1601.699,
+          "reduction_percent": 0.3101706375542517
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 43.583,
+          "mode_minus_none": -39.714,
+          "none_median": 83.297,
+          "reduction_percent": 47.677587428118656
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 36.639,
+          "mode_minus_none": 17.292,
+          "none_median": 19.347,
+          "reduction_percent": -89.37819817025897
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 26608,
+          "mode_minus_none": -1016,
+          "none_median": 27624,
+          "reduction_percent": 3.6779611931653635
+        },
+        "e2e_ms": {
+          "mode_median": 1762.72074,
+          "mode_minus_none": -21.410959000000048,
+          "none_median": 1784.131699,
+          "reduction_percent": 1.2000772707530962
+        },
+        "emitted_triples": {
+          "mode": 148108,
+          "none": 390854,
+          "reduction_percent": 62.10656664636923
+        },
+        "response_bytes": {
+          "mode": 18248473,
+          "none": 48192356,
+          "reduction_percent": 62.13409238593772
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 1676.841,
+          "mode_minus_none": -28.881000000000085,
+          "none_median": 1705.722,
+          "reduction_percent": 1.6931832971609726
+        },
+        "server_root_execution_ms": {
+          "mode_median": 39.269,
+          "mode_minus_none": 0.1839999999999975,
+          "none_median": 39.085,
+          "reduction_percent": -0.4707688371497953
+        }
+      }
+    },
+    "H-dedup-values-cold": {
+      "full": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 1618.9,
+          "mode_minus_none": -3.26299999999992,
+          "none_median": 1622.163,
+          "reduction_percent": 0.20115117901221516
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 54.235,
+          "mode_minus_none": -61.334999999999994,
+          "none_median": 115.57,
+          "reduction_percent": 53.07173141818811
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 62.946,
+          "mode_minus_none": 34.675,
+          "none_median": 28.271,
+          "reduction_percent": -122.65218775423577
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 37244,
+          "mode_minus_none": 9560,
+          "none_median": 27684,
+          "reduction_percent": -34.53258199682127
+        },
+        "e2e_ms": {
+          "mode_median": 1805.8752410000002,
+          "mode_minus_none": -23.11928699999976,
+          "none_median": 1828.994528,
+          "reduction_percent": 1.2640435302603463
+        },
+        "emitted_triples": {
+          "mode": 143438,
+          "none": 573752,
+          "reduction_percent": 75.0
+        },
+        "response_bytes": {
+          "mode": 17665769,
+          "none": 70663076,
+          "reduction_percent": 75.0
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 1735.981,
+          "mode_minus_none": -26.57400000000007,
+          "none_median": 1762.555,
+          "reduction_percent": 1.5076976321306323
+        },
+        "server_root_execution_ms": {
+          "mode_median": 26.064,
+          "mode_minus_none": 0.15700000000000003,
+          "none_median": 25.907,
+          "reduction_percent": -0.6060138186590498
+        }
+      },
+      "lru:30": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 1612.66,
+          "mode_minus_none": -9.502999999999929,
+          "none_median": 1622.163,
+          "reduction_percent": 0.5858227564061028
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 48.192,
+          "mode_minus_none": -67.37799999999999,
+          "none_median": 115.57,
+          "reduction_percent": 58.30059704075451
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 38.556,
+          "mode_minus_none": 10.284999999999997,
+          "none_median": 28.271,
+          "reduction_percent": -36.380036079374605
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 28048,
+          "mode_minus_none": 364,
+          "none_median": 27684,
+          "reduction_percent": -1.3148388961132784
+        },
+        "e2e_ms": {
+          "mode_median": 1767.645067,
+          "mode_minus_none": -61.34946100000002,
+          "none_median": 1828.994528,
+          "reduction_percent": 3.3542725284741817
+        },
+        "emitted_triples": {
+          "mode": 143438,
+          "none": 573752,
+          "reduction_percent": 75.0
+        },
+        "response_bytes": {
+          "mode": 17665769,
+          "none": 70663076,
+          "reduction_percent": 75.0
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 1699.902,
+          "mode_minus_none": -62.65300000000002,
+          "none_median": 1762.555,
+          "reduction_percent": 3.5546692159960975
+        },
+        "server_root_execution_ms": {
+          "mode_median": 26.773,
+          "mode_minus_none": 0.8659999999999997,
+          "none_median": 25.907,
+          "reduction_percent": -3.3427259041957758
+        }
+      },
+      "lru:50": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 1648.496,
+          "mode_minus_none": 26.333000000000084,
+          "none_median": 1622.163,
+          "reduction_percent": -1.6233263858194327
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 49.865,
+          "mode_minus_none": -65.70499999999998,
+          "none_median": 115.57,
+          "reduction_percent": 56.85298953015487
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 47.282,
+          "mode_minus_none": 19.010999999999996,
+          "none_median": 28.271,
+          "reduction_percent": -67.2455873509957
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 27868,
+          "mode_minus_none": 184,
+          "none_median": 27684,
+          "reduction_percent": -0.6646438375957232
+        },
+        "e2e_ms": {
+          "mode_median": 1812.9421889999999,
+          "mode_minus_none": -16.052339000000075,
+          "none_median": 1828.994528,
+          "reduction_percent": 0.8776592140794024
+        },
+        "emitted_triples": {
+          "mode": 143438,
+          "none": 573752,
+          "reduction_percent": 75.0
+        },
+        "response_bytes": {
+          "mode": 17665769,
+          "none": 70663076,
+          "reduction_percent": 75.0
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 1745.651,
+          "mode_minus_none": -16.903999999999996,
+          "none_median": 1762.555,
+          "reduction_percent": 0.9590622703972356
+        },
+        "server_root_execution_ms": {
+          "mode_median": 26.326,
+          "mode_minus_none": 0.4190000000000005,
+          "none_median": 25.907,
+          "reduction_percent": -1.6173235033002682
+        }
+      }
+    },
+    "H-dedup-values-warm": {
+      "full": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 155.869,
+          "mode_minus_none": -1.774000000000001,
+          "none_median": 157.643,
+          "reduction_percent": 1.1253274804463256
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 53.586,
+          "mode_minus_none": -57.903999999999996,
+          "none_median": 111.49,
+          "reduction_percent": 51.936496546775494
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 57.853,
+          "mode_minus_none": 29.995,
+          "none_median": 27.858,
+          "reduction_percent": -107.67104601909685
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 39688,
+          "mode_minus_none": 8524,
+          "none_median": 31164,
+          "reduction_percent": -27.352072904633552
+        },
+        "e2e_ms": {
+          "mode_median": 308.936327,
+          "mode_minus_none": -29.068439999999953,
+          "none_median": 338.00476699999996,
+          "reduction_percent": 8.6000088868569
+        },
+        "emitted_triples": {
+          "mode": 143438,
+          "none": 573752,
+          "reduction_percent": 75.0
+        },
+        "response_bytes": {
+          "mode": 17665769,
+          "none": 70663076,
+          "reduction_percent": 75.0
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 267.323,
+          "mode_minus_none": -29.44300000000004,
+          "none_median": 296.766,
+          "reduction_percent": 9.92128478329729
+        },
+        "server_root_execution_ms": {
+          "mode_median": 21.685,
+          "mode_minus_none": 0.259999999999998,
+          "none_median": 21.425,
+          "reduction_percent": -1.2135355892648683
+        }
+      },
+      "lru:30": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 153.325,
+          "mode_minus_none": -4.318000000000012,
+          "none_median": 157.643,
+          "reduction_percent": 2.739100372360341
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 47.969,
+          "mode_minus_none": -63.520999999999994,
+          "none_median": 111.49,
+          "reduction_percent": 56.97461655753879
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 37.713,
+          "mode_minus_none": 9.855,
+          "none_median": 27.858,
+          "reduction_percent": -35.37583458970493
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 30012,
+          "mode_minus_none": -1152,
+          "none_median": 31164,
+          "reduction_percent": 3.6965729688101656
+        },
+        "e2e_ms": {
+          "mode_median": 280.196079,
+          "mode_minus_none": -57.80868799999996,
+          "none_median": 338.00476699999996,
+          "reduction_percent": 17.10292091827213
+        },
+        "emitted_triples": {
+          "mode": 143438,
+          "none": 573752,
+          "reduction_percent": 75.0
+        },
+        "response_bytes": {
+          "mode": 17665769,
+          "none": 70663076,
+          "reduction_percent": 75.0
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 238.96,
+          "mode_minus_none": -57.80600000000001,
+          "none_median": 296.766,
+          "reduction_percent": 19.47864647567444
+        },
+        "server_root_execution_ms": {
+          "mode_median": 21.801,
+          "mode_minus_none": 0.37599999999999767,
+          "none_median": 21.425,
+          "reduction_percent": -1.7549591598599656
+        }
+      },
+      "lru:50": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 153.505,
+          "mode_minus_none": -4.138000000000005,
+          "none_median": 157.643,
+          "reduction_percent": 2.624918328121138
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 48.515,
+          "mode_minus_none": -62.974999999999994,
+          "none_median": 111.49,
+          "reduction_percent": 56.48488653690914
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 45.157,
+          "mode_minus_none": 17.298999999999996,
+          "none_median": 27.858,
+          "reduction_percent": -62.09706368009188
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 30012,
+          "mode_minus_none": -1152,
+          "none_median": 31164,
+          "reduction_percent": 3.6965729688101656
+        },
+        "e2e_ms": {
+          "mode_median": 289.122929,
+          "mode_minus_none": -48.88183799999996,
+          "none_median": 338.00476699999996,
+          "reduction_percent": 14.46187828469294
+        },
+        "emitted_triples": {
+          "mode": 143438,
+          "none": 573752,
+          "reduction_percent": 75.0
+        },
+        "response_bytes": {
+          "mode": 17665769,
+          "none": 70663076,
+          "reduction_percent": 75.0
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 246.89,
+          "mode_minus_none": -49.87600000000003,
+          "none_median": 296.766,
+          "reduction_percent": 16.806507484010982
+        },
+        "server_root_execution_ms": {
+          "mode_median": 22.034,
+          "mode_minus_none": 0.6089999999999982,
+          "none_median": 21.425,
+          "reduction_percent": -2.8424737456242624
+        }
+      }
+    },
+    "H-dedup-warm": {
+      "full": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 140.17,
+          "mode_minus_none": 0.992999999999995,
+          "none_median": 139.177,
+          "reduction_percent": -0.7134799571768288
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 49.045,
+          "mode_minus_none": -33.352000000000004,
+          "none_median": 82.397,
+          "reduction_percent": 40.47720183987281
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 49.656,
+          "mode_minus_none": 30.374,
+          "none_median": 19.282,
+          "reduction_percent": -157.5251529924282
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 33336,
+          "mode_minus_none": 4960,
+          "none_median": 28376,
+          "reduction_percent": -17.479560191711304
+        },
+        "e2e_ms": {
+          "mode_median": 291.61767199999997,
+          "mode_minus_none": -2.7823430000000258,
+          "none_median": 294.400015,
+          "reduction_percent": 0.9450892860858128
+        },
+        "emitted_triples": {
+          "mode": 143415,
+          "none": 390854,
+          "reduction_percent": 63.3072707455981
+        },
+        "response_bytes": {
+          "mode": 17662959,
+          "none": 48192356,
+          "reduction_percent": 63.34904440031942
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 238.854,
+          "mode_minus_none": -3.1549999999999727,
+          "none_median": 242.009,
+          "reduction_percent": 1.3036705246498985
+        },
+        "server_root_execution_ms": {
+          "mode_median": 32.03,
+          "mode_minus_none": -0.3960000000000008,
+          "none_median": 32.426,
+          "reduction_percent": 1.2212422130389218
+        }
+      },
+      "lru:30": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 138.182,
+          "mode_minus_none": -0.9950000000000045,
+          "none_median": 139.177,
+          "reduction_percent": 0.7149169762245232
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 75.701,
+          "mode_minus_none": -6.696000000000012,
+          "none_median": 82.397,
+          "reduction_percent": 8.1265094602959
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 39.208,
+          "mode_minus_none": 19.926,
+          "none_median": 19.282,
+          "reduction_percent": -103.33990249974069
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 26812,
+          "mode_minus_none": -1564,
+          "none_median": 28376,
+          "reduction_percent": 5.511700028192839
+        },
+        "e2e_ms": {
+          "mode_median": 305.30942799999997,
+          "mode_minus_none": 10.909412999999972,
+          "none_median": 294.400015,
+          "reduction_percent": -3.7056428139108526
+        },
+        "emitted_triples": {
+          "mode": 348230,
+          "none": 390854,
+          "reduction_percent": 10.905350847119385
+        },
+        "response_bytes": {
+          "mode": 42928087,
+          "none": 48192356,
+          "reduction_percent": 10.923452258694304
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 253.758,
+          "mode_minus_none": 11.749000000000024,
+          "none_median": 242.009,
+          "reduction_percent": -4.8547781280861555
+        },
+        "server_root_execution_ms": {
+          "mode_median": 31.933,
+          "mode_minus_none": -0.4930000000000021,
+          "none_median": 32.426,
+          "reduction_percent": 1.5203848763338126
+        }
+      },
+      "lru:50": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 138.779,
+          "mode_minus_none": -0.39799999999999613,
+          "none_median": 139.177,
+          "reduction_percent": 0.28596679048980517
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 43.688,
+          "mode_minus_none": -38.709,
+          "none_median": 82.397,
+          "reduction_percent": 46.97865213539328
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 36.241,
+          "mode_minus_none": 16.959,
+          "none_median": 19.282,
+          "reduction_percent": -87.95249455450679
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 26008,
+          "mode_minus_none": -2368,
+          "none_median": 28376,
+          "reduction_percent": 8.345080349591203
+        },
+        "e2e_ms": {
+          "mode_median": 272.050005,
+          "mode_minus_none": -22.350009999999997,
+          "none_median": 294.400015,
+          "reduction_percent": 7.591714966454739
+        },
+        "emitted_triples": {
+          "mode": 148108,
+          "none": 390854,
+          "reduction_percent": 62.10656664636923
+        },
+        "response_bytes": {
+          "mode": 18248473,
+          "none": 48192356,
+          "reduction_percent": 62.13409238593772
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 218.283,
+          "mode_minus_none": -23.726,
+          "none_median": 242.009,
+          "reduction_percent": 9.803767628476628
+        },
+        "server_root_execution_ms": {
+          "mode_median": 32.617,
+          "mode_minus_none": 0.1909999999999954,
+          "none_median": 32.426,
+          "reduction_percent": -0.5890334916424949
+        }
+      }
+    },
+    "H-size-cold": {
+      "full": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 3338.644,
+          "mode_minus_none": 11.273999999999887,
+          "none_median": 3327.37,
+          "reduction_percent": -0.3388261600002371
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 134.361,
+          "mode_minus_none": 29.46499999999999,
+          "none_median": 104.896,
+          "reduction_percent": -28.0897269676632
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 180.234,
+          "mode_minus_none": 156.006,
+          "none_median": 24.228,
+          "reduction_percent": -643.9078751857355
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 74788,
+          "mode_minus_none": 27288,
+          "none_median": 47500,
+          "reduction_percent": -57.44842105263158
+        },
+        "e2e_ms": {
+          "mode_median": 3840.8385310000003,
+          "mode_minus_none": 195.93554800000038,
+          "none_median": 3644.902983,
+          "reduction_percent": -5.375603930031967
+        },
+        "emitted_triples": {
+          "mode": 490650,
+          "none": 490650,
+          "reduction_percent": 0.0
+        },
+        "response_bytes": {
+          "mode": 61418523,
+          "none": 61418523,
+          "reduction_percent": 0.0
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 3652.773,
+          "mode_minus_none": 196.27300000000014,
+          "none_median": 3456.5,
+          "reduction_percent": -5.678374077824393
+        },
+        "server_root_execution_ms": {
+          "mode_median": 143.158,
+          "mode_minus_none": 0.8179999999999836,
+          "none_median": 142.34,
+          "reduction_percent": -0.5746803428410732
+        }
+      },
+      "lru:30": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 3331.372,
+          "mode_minus_none": 4.001999999999953,
+          "none_median": 3327.37,
+          "reduction_percent": -0.12027517228321326
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 105.424,
+          "mode_minus_none": 0.5280000000000058,
+          "none_median": 104.896,
+          "reduction_percent": -0.5033557046979921
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 53.144,
+          "mode_minus_none": 28.915999999999997,
+          "none_median": 24.228,
+          "reduction_percent": -119.3495129602113
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 47340,
+          "mode_minus_none": -160,
+          "none_median": 47500,
+          "reduction_percent": 0.3368421052631579
+        },
+        "e2e_ms": {
+          "mode_median": 3686.1658159999997,
+          "mode_minus_none": 41.26283299999977,
+          "none_median": 3644.902983,
+          "reduction_percent": -1.132069445811084
+        },
+        "emitted_triples": {
+          "mode": 490650,
+          "none": 490650,
+          "reduction_percent": 0.0
+        },
+        "response_bytes": {
+          "mode": 61418523,
+          "none": 61418523,
+          "reduction_percent": 0.0
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 3489.95,
+          "mode_minus_none": 33.44999999999982,
+          "none_median": 3456.5,
+          "reduction_percent": -0.9677419354838657
+        },
+        "server_root_execution_ms": {
+          "mode_median": 146.161,
+          "mode_minus_none": 3.820999999999998,
+          "none_median": 142.34,
+          "reduction_percent": -2.684417591681887
+        }
+      },
+      "lru:50": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 3330.975,
+          "mode_minus_none": 3.605000000000018,
+          "none_median": 3327.37,
+          "reduction_percent": -0.10834382710669442
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 104.582,
+          "mode_minus_none": -0.31400000000000716,
+          "none_median": 104.896,
+          "reduction_percent": 0.29934411226358215
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 76.712,
+          "mode_minus_none": 52.484,
+          "none_median": 24.228,
+          "reduction_percent": -216.62539210830445
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 47080,
+          "mode_minus_none": -420,
+          "none_median": 47500,
+          "reduction_percent": 0.8842105263157894
+        },
+        "e2e_ms": {
+          "mode_median": 3701.352519,
+          "mode_minus_none": 56.44953600000008,
+          "none_median": 3644.902983,
+          "reduction_percent": -1.5487253368137202
+        },
+        "emitted_triples": {
+          "mode": 490650,
+          "none": 490650,
+          "reduction_percent": 0.0
+        },
+        "response_bytes": {
+          "mode": 61418523,
+          "none": 61418523,
+          "reduction_percent": 0.0
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 3512.664,
+          "mode_minus_none": 56.164000000000215,
+          "none_median": 3456.5,
+          "reduction_percent": -1.6248806596267964
+        },
+        "server_root_execution_ms": {
+          "mode_median": 143.052,
+          "mode_minus_none": 0.7119999999999891,
+          "none_median": 142.34,
+          "reduction_percent": -0.5002107629619145
+        }
+      }
+    },
+    "H-size-warm": {
+      "full": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 346.018,
+          "mode_minus_none": 4.890999999999963,
+          "none_median": 341.127,
+          "reduction_percent": -1.433776863162389
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 131.54,
+          "mode_minus_none": 28.490999999999985,
+          "none_median": 103.049,
+          "reduction_percent": -27.648012110743416
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 171.044,
+          "mode_minus_none": 147.121,
+          "none_median": 23.923,
+          "reduction_percent": -614.9772185762656
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 71984,
+          "mode_minus_none": 27608,
+          "none_median": 44376,
+          "reduction_percent": -62.213809266270054
+        },
+        "e2e_ms": {
+          "mode_median": 773.754148,
+          "mode_minus_none": 181.194389,
+          "none_median": 592.559759,
+          "reduction_percent": -30.57824738314706
+        },
+        "emitted_triples": {
+          "mode": 490650,
+          "none": 490650,
+          "reduction_percent": 0.0
+        },
+        "response_bytes": {
+          "mode": 61418523,
+          "none": 61418523,
+          "reduction_percent": 0.0
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 649.25,
+          "mode_minus_none": 181.202,
+          "none_median": 468.048,
+          "reduction_percent": -38.714405360134
+        },
+        "server_root_execution_ms": {
+          "mode_median": 104.682,
+          "mode_minus_none": -2.421999999999997,
+          "none_median": 107.104,
+          "reduction_percent": 2.261353450851506
+        }
+      },
+      "lru:30": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 338.595,
+          "mode_minus_none": -2.5319999999999823,
+          "none_median": 341.127,
+          "reduction_percent": 0.7422455566401903
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 104.18,
+          "mode_minus_none": 1.1310000000000002,
+          "none_median": 103.049,
+          "reduction_percent": -1.0975361235916896
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 52.786,
+          "mode_minus_none": 28.863000000000003,
+          "none_median": 23.923,
+          "reduction_percent": -120.64958408226394
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 45332,
+          "mode_minus_none": 956,
+          "none_median": 44376,
+          "reduction_percent": -2.154317649179737
+        },
+        "e2e_ms": {
+          "mode_median": 626.766716,
+          "mode_minus_none": 34.20695699999999,
+          "none_median": 592.559759,
+          "reduction_percent": -5.77274384236409
+        },
+        "emitted_triples": {
+          "mode": 490650,
+          "none": 490650,
+          "reduction_percent": 0.0
+        },
+        "response_bytes": {
+          "mode": 61418523,
+          "none": 61418523,
+          "reduction_percent": 0.0
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 495.203,
+          "mode_minus_none": 27.154999999999973,
+          "none_median": 468.048,
+          "reduction_percent": -5.801755375517035
+        },
+        "server_root_execution_ms": {
+          "mode_median": 107.301,
+          "mode_minus_none": 0.19700000000000273,
+          "none_median": 107.104,
+          "reduction_percent": -0.18393337317000555
+        }
+      },
+      "lru:50": {
+        "construct_batch_evaluation_ms": {
+          "mode_median": 341.796,
+          "mode_minus_none": 0.6689999999999827,
+          "none_median": 341.127,
+          "reduction_percent": -0.19611464351985702
+        },
+        "construct_format_transport_residual_ms": {
+          "mode_median": 104.202,
+          "mode_minus_none": 1.1529999999999916,
+          "none_median": 103.049,
+          "reduction_percent": -1.1188851905404142
+        },
+        "construct_instantiation_deduplication_ms": {
+          "mode_median": 76.54,
+          "mode_minus_none": 52.617000000000004,
+          "none_median": 23.923,
+          "reduction_percent": -219.9431509426076
+        },
+        "dedup_memory_incremental_peak_kib": {
+          "mode_median": 45692,
+          "mode_minus_none": 1316,
+          "none_median": 44376,
+          "reduction_percent": -2.9655669731386336
+        },
+        "e2e_ms": {
+          "mode_median": 650.445261,
+          "mode_minus_none": 57.885501999999974,
+          "none_median": 592.559759,
+          "reduction_percent": -9.768719714900515
+        },
+        "emitted_triples": {
+          "mode": 490650,
+          "none": 490650,
+          "reduction_percent": 0.0
+        },
+        "response_bytes": {
+          "mode": 61418523,
+          "none": 61418523,
+          "reduction_percent": 0.0
+        },
+        "server_non_root_stream_ms": {
+          "mode_median": 521.906,
+          "mode_minus_none": 53.85799999999995,
+          "none_median": 468.048,
+          "reduction_percent": -11.506939459200755
+        },
+        "server_root_execution_ms": {
+          "mode_median": 108.101,
+          "mode_minus_none": 0.9969999999999999,
+          "none_median": 107.104,
+          "reduction_percent": -0.9308709291903196
+        }
+      }
+    }
+  },
+  "root": "/local/data-ssd/stoetzem/thesis/experiments/runs/115-05c-stage-lru-powersave-pilot"
+}

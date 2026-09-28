@@ -1,0 +1,78 @@
+{
+  "audit": {
+    "cell_count": 6,
+    "errors": [],
+    "http_statuses": [200],
+    "major_faults": 0,
+    "row_count": 30,
+    "rows_per_cell": [5],
+    "rows_with_memory_marker": 30,
+    "rows_with_stage_metrics": 30,
+    "statuses": ["ok"],
+    "swap_in": 0,
+    "swap_out": 0
+  },
+  "cells": {
+    "H-dedup-none-cold": {
+      "candidate_result_triples": 390854,
+      "e2e_seconds": {
+        "maximum": 1.814109592,
+        "median": 1.786568053,
+        "minimum": 1.783075146
+      },
+      "emitted_result_triples": 390854,
+      "response_bytes": 48192356
+    },
+    "H-dedup-none-warm": {
+      "candidate_result_triples": 390854,
+      "e2e_seconds": {
+        "maximum": 0.295961693,
+        "median": 0.294073946,
+        "minimum": 0.290693315
+      },
+      "emitted_result_triples": 390854,
+      "response_bytes": 48192356
+    },
+    "H-dedup-values-none-cold": {
+      "candidate_result_triples": 573752,
+      "e2e_seconds": {
+        "maximum": 1.865733613,
+        "median": 1.831623573,
+        "minimum": 1.823986237
+      },
+      "emitted_result_triples": 573752,
+      "response_bytes": 70663076
+    },
+    "H-dedup-values-none-warm": {
+      "candidate_result_triples": 573752,
+      "e2e_seconds": {
+        "maximum": 0.348194313,
+        "median": 0.338232249,
+        "minimum": 0.337709027
+      },
+      "emitted_result_triples": 573752,
+      "response_bytes": 70663076
+    },
+    "H-size-none-cold": {
+      "candidate_result_triples": 490650,
+      "e2e_seconds": {
+        "maximum": 3.679613781,
+        "median": 3.643077569,
+        "minimum": 3.631632203
+      },
+      "emitted_result_triples": 490650,
+      "response_bytes": 61418523
+    },
+    "H-size-none-warm": {
+      "candidate_result_triples": 490650,
+      "e2e_seconds": {
+        "maximum": 0.607764859,
+        "median": 0.595498823,
+        "minimum": 0.592936005
+      },
+      "emitted_result_triples": 490650,
+      "response_bytes": 61418523
+    }
+  },
+  "scope": "Client observed end to end summary reconstructed from the completed run driver output. The full stage and process memory analysis remains in analysis-summary.json on Ural."
+}

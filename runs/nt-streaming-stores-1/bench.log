@@ -1,0 +1,114 @@
+=== [wq] bench /local/data-ssd/stoetzem/incoming/run-nt-streaming-benchmark.sh feat/export-v2-unified-pipeline-wired on Ural ===
+===== StreamingBufferBenchmark (feat/export-v2-unified-pipeline-wired) =====
+
+========================================================================================================
+ QLever Non-Temporal Streaming Stores Benchmark: Standard memcpy vs StreamingBufferWriter
+ Total Export Buffer Size: 256 MB | Vocabulary Warm Set: 8 MB
+========================================================================================================
+Method                  Chunk Size    Time (ms)   Throughput(GB/s)  Vocab Probe(ns)   Cache Hit Est.  
+------------------------------------------------------------------------------------------------------
+2026-09-08 08:42:42.759 - INFO: Running measurement "memcpy: Chunk 1 KB" ...
+2026-09-08 08:42:43.092 - INFO: Done in 0.333192 seconds.
+2026-09-08 08:42:43.092 - INFO: Running measurement "StreamingWriter: Chunk 1 KB" ...
+2026-09-08 08:42:43.407 - INFO: Done in 0.314181 seconds.
+Standard memcpy         1 KB          30.80       8.12              6.26              94.5%
+StreamingBufferWriter   1 KB          22.01       11.36             5.36              96.0% (HOT)
+......................................................................................................
+2026-09-08 08:42:43.407 - INFO: Running measurement "memcpy: Chunk 4 KB" ...
+2026-09-08 08:42:43.728 - INFO: Done in 0.3 seconds.
+2026-09-08 08:42:43.728 - INFO: Running measurement "StreamingWriter: Chunk 4 KB" ...
+2026-09-08 08:42:44.040 - INFO: Done in 0.3 seconds.
+Standard memcpy         4 KB          30.73       8.14              6.18              94.7%
+StreamingBufferWriter   4 KB          18.03       13.87             5.35              96.0% (HOT)
+......................................................................................................
+2026-09-08 08:42:44.040 - INFO: Running measurement "memcpy: Chunk 16 KB" ...
+2026-09-08 08:42:44.368 - INFO: Done in 0.3 seconds.
+2026-09-08 08:42:44.368 - INFO: Running measurement "StreamingWriter: Chunk 16 KB" ...
+2026-09-08 08:42:44.686 - INFO: Done in 0.3 seconds.
+Standard memcpy         16 KB         32.79       7.62              6.13              94.7%
+StreamingBufferWriter   16 KB         17.82       14.03             5.31              96.1% (HOT)
+......................................................................................................
+2026-09-08 08:42:44.686 - INFO: Running measurement "memcpy: Chunk 64 KB" ...
+2026-09-08 08:42:45.015 - INFO: Done in 0.3 seconds.
+2026-09-08 08:42:45.015 - INFO: Running measurement "StreamingWriter: Chunk 64 KB" ...
+2026-09-08 08:42:45.328 - INFO: Done in 0.3 seconds.
+Standard memcpy         64 KB         29.56       8.46              6.08              94.8%
+StreamingBufferWriter   64 KB         18.21       13.73             5.40              96.0% (HOT)
+......................................................................................................
+2026-09-08 08:42:45.328 - INFO: Running measurement "memcpy: Chunk 1024 KB" ...
+2026-09-08 08:42:45.658 - INFO: Done in 0.3 seconds.
+2026-09-08 08:42:45.658 - INFO: Running measurement "StreamingWriter: Chunk 1024 KB" ...
+2026-09-08 08:42:45.963 - INFO: Done in 0.3 seconds.
+Standard memcpy         1024 KB       29.89       8.36              6.08              94.8%
+StreamingBufferWriter   1024 KB       17.75       14.09             5.45              95.9% (HOT)
+......................................................................................................
+2026-09-08 08:42:45.964 - INFO: Running measurement "memcpy: Chunk 16384 KB" ...
+2026-09-08 08:42:46.271 - INFO: Done in 0.3 seconds.
+2026-09-08 08:42:46.271 - INFO: Running measurement "StreamingWriter: Chunk 16384 KB" ...
+2026-09-08 08:42:46.558 - INFO: Done in 0.3 seconds.
+Standard memcpy         16384 KB      18.67       13.39             5.51              95.8%
+StreamingBufferWriter   16384 KB      17.66       14.16             5.33              96.1% (HOT)
+......................................................................................................
+2026-09-08 08:42:46.558 - INFO: Running measurement "memcpy: Chunk 262144 KB" ...
+2026-09-08 08:42:46.845 - INFO: Done in 0.3 seconds.
+2026-09-08 08:42:46.845 - INFO: Running measurement "StreamingWriter: Chunk 262144 KB" ...
+2026-09-08 08:42:47.125 - INFO: Done in 0.3 seconds.
+Standard memcpy         262144 KB     19.38       12.90             5.28              96.2%
+StreamingBufferWriter   262144 KB     17.61       14.19             5.39              96.0% (HOT)
+......................................................................................................
+========================================================================================================
+
+#################################################################################################
+# Benchmark class 'StreamingBufferWriter vs std::memcpy (256 MB Non-Temporal Export Streaming)' #
+#################################################################################################
+General metadata: {"time-of-measurement":"2026-09-08 08:42:42.757"}
+
+No configuration options were defined.
+
+#################################
+# Single measurement benchmarks #
+#################################
+Single measurement 'memcpy: Chunk 1 KB'
+    time: 0.333192s
+
+Single measurement 'StreamingWriter: Chunk 1 KB'
+    time: 0.314181s
+
+Single measurement 'memcpy: Chunk 4 KB'
+    time: 0.321859s
+
+Single measurement 'StreamingWriter: Chunk 4 KB'
+    time: 0.311579s
+
+Single measurement 'memcpy: Chunk 16 KB'
+    time: 0.328318s
+
+Single measurement 'StreamingWriter: Chunk 16 KB'
+    time: 0.317208s
+
+Single measurement 'memcpy: Chunk 64 KB'
+    time: 0.329025s
+
+Single measurement 'StreamingWriter: Chunk 64 KB'
+    time: 0.312901s
+
+Single measurement 'memcpy: Chunk 1024 KB'
+    time: 0.329952s
+
+Single measurement 'StreamingWriter: Chunk 1024 KB'
+    time: 0.305365s
+
+Single measurement 'memcpy: Chunk 16384 KB'
+    time: 0.307392s
+
+Single measurement 'StreamingWriter: Chunk 16384 KB'
+    time: 0.286691s
+
+Single measurement 'memcpy: Chunk 262144 KB'
+    time: 0.287385s
+
+Single measurement 'StreamingWriter: Chunk 262144 KB'
+    time: 0.279436s
+
+WQ_DONE nt-streaming-benchmark feat/export-v2-unified-pipeline-wired exit=0
+WQ_DONE seq=3437 type=bench exit=0

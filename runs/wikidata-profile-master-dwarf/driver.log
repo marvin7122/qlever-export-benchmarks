@@ -1,0 +1,48 @@
+binary=/local/data-ssd/stoetzem/wt/master/build/qlever-server
+version=/local/data-ssd/stoetzem/wt/master/build/qlever-server v0.6.0-116-g2f24c39c9
+arm=master-2f24c39
+index=/local/data-ssd/stoetzem/wikidata/index-for-upgrade-new-format/wikidata
+uname=7.0.0-28-generic
+date=2026-09-20T16:00:11Z
+[2026-09-20T16:00:36Z] server ready pid 3353572 (master-2f24c39)
+[2026-09-20T16:00:36Z] warmup master-2f24c39 (discarded)
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+[2026-09-20T16:00:44Z] caches cleared, starting perf on pid 3353572 (opts: --call-graph dwarf,2048)
+WARNING: Kernel address maps (/proc/{kallsyms,modules}) are restricted,
+check /proc/sys/kernel/kptr_restrict and /proc/sys/kernel/perf_event_paranoid.
+
+Samples in kernel functions may not be resolved if a suitable vmlinux
+file is not found in the buildid cache or in the vmlinux path.
+
+Samples in kernel modules won't be resolved at all.
+
+If some relocation was applied (e.g. kexec) symbols may be misresolved
+even with a suitable vmlinux or kallsyms file.
+
+Couldn't record kernel reference relocation symbol
+Symbol resolution may be skewed if relocation was used (e.g. kexec).
+Check /proc/kallsyms permission or run as root.
+[ perf record: Woken up 6 times to write data ]
+[ perf record: Captured and wrote 1.783 MB /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-profile-master-dwarf/perf.data (818 samples) ]
+[2026-09-20T16:01:15Z] export done code=200 wall=27.940815s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9
+[2026-09-20T16:01:15Z] collapsing stacks
+[2026-09-20T16:01:16Z] flamegraph done: 44 stacks, 22445 bytes
+[2026-09-20T16:01:18Z] PROFILE COMPLETE
+binary=/local/data-ssd/stoetzem/wt/master/build/qlever-server
+version=/local/data-ssd/stoetzem/wt/master/build/qlever-server v0.6.0-116-g2f24c39c9
+arm=master
+index=/local/data-ssd/stoetzem/wikidata/index-for-upgrade-new-format/wikidata
+uname=7.0.0-28-generic
+date=2026-09-21T06:48:33Z
+[2026-09-21T06:48:59Z] server ready pid 287194 (master)
+[2026-09-21T06:48:59Z] warmup master (discarded)
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+[2026-09-21T06:49:32Z] caches cleared, starting perf on pid 287194 (opts: --call-graph dwarf,8192)
+[ perf record: Woken up 22 times to write data ]
+[ perf record: Captured and wrote 6.571 MB /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-profile-master-dwarf/perf.data (843 samples) ]
+[2026-09-21T06:50:03Z] export done code=200 wall=27.870540s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9
+[2026-09-21T06:50:03Z] collapsing stacks
+[2026-09-21T06:50:04Z] flamegraph done: 364 stacks, 146835 bytes
+[2026-09-21T06:50:06Z] PROFILE COMPLETE

@@ -1,0 +1,63 @@
+2026-07-30 22:54:35.035 - INFO: [1mQLever server v0.5.50-58-gbdd1a6b9, compiled on Thu Jul 30 22:03:57 CEST 2026 using git hash bdd1a6b[22m
+2026-07-30 22:54:35.035 - INFO: The git hash used to build this index was "8c99fe"
+2026-07-30 22:54:35.036 - INFO: Reading vocabulary from file /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.vocabulary.words ...
+2026-07-30 22:54:35.053 - INFO: Done, number of words: 409,446,926
+2026-07-30 22:54:35.053 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 409,457
+2026-07-30 22:54:35.064 - INFO: Registered PSO permutation: #relations = 6, #blocks = 7,515, #triples = 234,800,838
+2026-07-30 22:54:35.089 - INFO: Registered PSO permutation: #relations = 96, #blocks = 46,913, #triples = 1,464,719,701
+2026-07-30 22:54:35.092 - INFO: Registered POS permutation: #relations = 6, #blocks = 7,515, #triples = 234,800,838
+2026-07-30 22:54:35.116 - INFO: Registered POS permutation: #relations = 96, #blocks = 46,913, #triples = 1,464,719,701
+2026-07-30 22:54:35.136 - INFO: Registered OPS permutation: #relations = 318,850,904, #blocks = 39,014, #triples = 1,464,719,701
+2026-07-30 22:54:35.157 - INFO: Registered OSP permutation: #relations = 318,850,904, #blocks = 39,014, #triples = 1,464,719,701
+2026-07-30 22:54:35.171 - INFO: Registered SPO permutation: #relations = 234,800,427, #blocks = 31,251, #triples = 1,464,719,701
+2026-07-30 22:54:35.183 - INFO: Registered SOP permutation: #relations = 234,800,427, #blocks = 31,251, #triples = 1,464,719,701
+2026-07-30 22:54:35.183 - INFO: Reading patterns from file /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.patterns ...
+2026-07-30 22:54:35.184 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-07-30 22:54:43.858 - INFO: Initializing server ...
+2026-07-30 22:54:43.858 - INFO: No access token required for restricted API calls
+2026-07-30 22:54:43.858 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-07-30 22:54:44.106 - INFO: 
+2026-07-30 22:54:44.106 - INFO: Request received via GET, no content type specified
+2026-07-30 22:54:44.106 - INFO: Processing command "cache-stats": get cache statistics
+2026-07-30 22:54:44.117 - INFO: 
+2026-07-30 22:54:44.117 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-07-30 22:54:44.120 - INFO: Processing the following SPARQL query:
+# Tier H — format-heavy
+# Goal: stress literal serialization and escaping using synthetic literals.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?syntheticTitle }
+WHERE {
+  ?paper a dblp:Publication .
+  BIND(CONCAT("synthetic \"quoted\" title with backslash \\\\ and tab \t for ", STR(?paper)) AS ?syntheticTitle)
+}
+LIMIT 100000
+
+2026-07-30 22:54:44.120 - INFO: Requested media types of the result are: "text/turtle"
+2026-07-30 22:54:44.123 - INFO: Query planning done in 5 ms
+2026-07-30 22:54:44.123 - INFO: Result has unknown size (not computed yet)
+2026-07-30 22:54:46.478 - INFO: Done processing query and sending result, total time was 2,360 ms
+2026-07-30 22:54:46.486 - INFO: 
+2026-07-30 22:54:46.486 - INFO: Request received via GET, no content type specified
+2026-07-30 22:54:46.486 - INFO: Processing command "cache-stats": get cache statistics
+2026-07-30 22:54:46.823 - INFO: 
+2026-07-30 22:54:46.823 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-07-30 22:54:46.823 - INFO: Processing the following SPARQL query:
+# Tier H — format-heavy
+# Goal: stress literal serialization and escaping using synthetic literals.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?syntheticTitle }
+WHERE {
+  ?paper a dblp:Publication .
+  BIND(CONCAT("synthetic \"quoted\" title with backslash \\\\ and tab \t for ", STR(?paper)) AS ?syntheticTitle)
+}
+LIMIT 100000
+
+2026-07-30 22:54:46.823 - INFO: Requested media types of the result are: "text/turtle"
+2026-07-30 22:54:46.824 - INFO: Query planning done in 0 ms
+2026-07-30 22:54:46.824 - INFO: Result has unknown size (not computed yet)
+2026-07-30 22:54:49.144 - INFO: Done processing query and sending result, total time was 2,321 ms
+2026-07-30 22:54:49.153 - INFO: 
+2026-07-30 22:54:49.153 - INFO: Request received via GET, no content type specified
+2026-07-30 22:54:49.153 - INFO: Processing command "cache-stats": get cache statistics

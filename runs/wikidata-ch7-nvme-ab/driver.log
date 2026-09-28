@@ -1,0 +1,55 @@
+[2026-09-21T21:29:04Z] WARN baseline links liburing (master merged the ring path); the arm still counts as baseline because unrouted workloads never enter the ring
+[2026-09-21T21:29:04Z] binary gates ok (baseline without, variant with liburing)
+[2026-09-21T21:29:04Z] preflight ok
+base_commit=7bd97790e9ee6d5b2f6305fd8fd1c8000b63710b
+baseline_binary=/local/data-ssd/stoetzem/binaries/qlever-server-ch7-integration
+baseline_version=/local/data-ssd/stoetzem/binaries/qlever-server-ch7-integration v0.6.0-135-g84b943e4e
+variant_branch=nvme
+variant_binary=/local/data-ssd/stoetzem/wt/bench/ch7-nvmept/build/qlever-server
+variant_version=/local/data-ssd/stoetzem/wt/bench/ch7-nvmept/build/qlever-server v0.6.0-143-g1d4d41b98
+index=/local/data-ssd/stoetzem/wikidata/index-for-upgrade-new-format/wikidata
+uname=7.0.0-28-generic
+date=2026-09-21T21:29:04Z
+[2026-09-21T21:29:06Z] === arm baseline (/local/data-ssd/stoetzem/binaries/qlever-server-ch7-integration)
+[2026-09-21T21:29:31Z] server ready pid 3411586 (baseline)
+[2026-09-21T21:29:31Z] warmup baseline large-de (discarded)
+
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-nvme-ab/baseline-large-de-warm code=200 wall=16.441099s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=16.82s cpu_iowait=235.86s cpu_total=255.99s wall=16.0s n=33
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-nvme-ab/baseline-large-de-cold1 code=200 wall=24.136286s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=23.79s cpu_iowait=350.06s cpu_total=375.70s wall=23.5s n=48
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-nvme-ab/baseline-large-de-cold2 code=200 wall=24.227059s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=24.31s cpu_iowait=357.93s cpu_total=383.76s wall=24.0s n=49
+[2026-09-21T21:31:21Z] warmup baseline scatter200k-de (discarded)
+
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-nvme-ab/baseline-scatter200k-de-warm code=200 wall=5.053406s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=4.26s cpu_iowait=75.45s cpu_total=80.03s wall=5.0s n=11
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-nvme-ab/baseline-scatter200k-de-cold1 code=200 wall=10.971159s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=7.18s cpu_iowait=164.96s cpu_total=175.66s wall=11.0s n=23
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-nvme-ab/baseline-scatter200k-de-cold2 code=200 wall=10.888968s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=6.73s cpu_iowait=157.22s cpu_total=167.67s wall=10.5s n=22
+[2026-09-21T21:32:15Z] server stopped (baseline)
+[2026-09-21T21:32:25Z] === arm initial-ring (/local/data-ssd/stoetzem/wt/bench/ch7-nvmept/build/qlever-server)
+[2026-09-21T21:32:49Z] server ready pid 3417013 (initial-ring)
+[2026-09-21T21:32:49Z] warmup initial-ring large-de (discarded)
+
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-nvme-ab/initial-ring-large-de-warm code=200 wall=16.158862s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=16.78s cpu_iowait=237.42s cpu_total=255.92s wall=16.0s n=33
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-nvme-ab/initial-ring-large-de-cold1 code=200 wall=24.236245s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=24.29s cpu_iowait=357.52s cpu_total=383.68s wall=24.0s n=49
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-nvme-ab/initial-ring-large-de-cold2 code=200 wall=24.291680s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=24.31s cpu_iowait=357.33s cpu_total=383.75s wall=24.0s n=49
+[2026-09-21T21:34:34Z] warmup initial-ring scatter200k-de (discarded)
+
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-nvme-ab/initial-ring-scatter200k-de-warm code=200 wall=5.155642s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=4.25s cpu_iowait=75.55s cpu_total=79.99s wall=5.0s n=11
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-nvme-ab/initial-ring-scatter200k-de-cold1 code=200 wall=11.000600s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=7.25s cpu_iowait=164.56s cpu_total=175.64s wall=11.0s n=23
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-ch7-nvme-ab/initial-ring-scatter200k-de-cold2 code=200 wall=11.057279s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=7.16s cpu_iowait=163.59s cpu_total=175.58s wall=11.0s n=23
+[2026-09-21T21:35:29Z] server stopped (initial-ring)
+[2026-09-21T21:35:29Z] A/B complete

@@ -1,0 +1,77 @@
+2026-08-10 23:53:05.070 - INFO: [1mQLever server v0.5.50-82-g65f84b43, compiled on Mon Aug 10 19:10:29 CEST 2026 using git hash 65f84b4[22m
+2026-08-10 23:53:05.070 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-08-10 23:53:05.085 - INFO: The git hash used to build this index was "65f84b4"
+2026-08-10 23:53:05.085 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/dblp/dblp.vocabulary.words ...
+2026-08-10 23:53:05.099 - INFO: Done, number of words: 446,944,668
+2026-08-10 23:53:05.099 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 446,955
+2026-08-10 23:53:05.106 - INFO: Registered PSO permutation: #relations = 6, #blocks = 8,187, #triples = 255,805,025
+2026-08-10 23:53:05.131 - INFO: Registered PSO permutation: #relations = 96, #blocks = 51,023, #triples = 1,593,245,022
+2026-08-10 23:53:05.134 - INFO: Registered POS permutation: #relations = 6, #blocks = 8,187, #triples = 255,805,025
+2026-08-10 23:53:05.158 - INFO: Registered POS permutation: #relations = 96, #blocks = 51,023, #triples = 1,593,245,022
+2026-08-10 23:53:05.178 - INFO: Registered OPS permutation: #relations = 345,357,897, #blocks = 42,492, #triples = 1,593,245,022
+2026-08-10 23:53:05.198 - INFO: Registered OSP permutation: #relations = 345,357,897, #blocks = 42,492, #triples = 1,593,245,022
+2026-08-10 23:53:05.211 - INFO: Registered SPO permutation: #relations = 255,804,614, #blocks = 33,993, #triples = 1,593,245,022
+2026-08-10 23:53:05.222 - INFO: Registered SOP permutation: #relations = 255,804,614, #blocks = 33,993, #triples = 1,593,245,022
+2026-08-10 23:53:05.222 - INFO: Reading patterns from file /local/data-ssd/stoetzem/dblp/dblp.index.patterns ...
+2026-08-10 23:53:05.223 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-08-10 23:53:13.323 - INFO: Initializing server ...
+2026-08-10 23:53:13.323 - INFO: No access token required for restricted API calls
+2026-08-10 23:53:13.323 - INFO: The server is ready, listening for requests on port 7026 ...
+2026-08-10 23:53:13.590 - INFO: 
+2026-08-10 23:53:13.590 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-08-10 23:53:13.593 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-08-10 23:53:13.593 - INFO: Requested media types of the result are: "text/turtle"
+2026-08-10 23:53:13.593 - INFO: CONSTRUCT_REQUEST_STAGE_ENTER name=planning elapsed_us=2,927
+2026-08-10 23:53:13.609 - INFO: Query planning done in 19 ms
+2026-08-10 23:53:13.609 - INFO: CONSTRUCT_REQUEST_STAGE_ENTER name=response_stream elapsed_us=19,079
+2026-08-10 23:53:13.640 - INFO: Result has unknown size (not computed yet)
+2026-08-10 23:53:13.640 - INFO: CONSTRUCT_EXPORT_DEDUPLICATOR_CONSTRUCTION_BEGIN mode=none
+2026-08-10 23:53:13.640 - INFO: CONSTRUCT_EXPORT_DEDUPLICATOR_CONSTRUCTION_END mode=none enabled=false
+2026-08-10 23:53:17.193 - INFO: CONSTRUCT_EXPORT_STAGE_SUMMARY construct_stream_us=3,553,480 setup_us=12 batch_evaluation_us=3,322,018 instantiation_deduplication_us=24,265 batches=482 input_rows=490,650 candidate_triples=490,650 emitted_triples=490,650
+2026-08-10 23:53:17.201 - INFO: CONSTRUCT_REQUEST_STAGE_SUMMARY planning_begin_us=2,927 planning_end_us=19,079 planning_us=16,152 response_stream_begin_us=19,079 response_stream_end_us=3,610,704 response_stream_us=3,591,625 root_execution_us=142,226 non_root_stream_us=3,449,399 server_request_us=3,610,704
+2026-08-10 23:53:17.201 - INFO: Done processing query and sending result, total time was 3,610 ms
+2026-08-10 23:53:17.220 - INFO: 
+2026-08-10 23:53:17.220 - INFO: Request received via GET, no content type specified
+2026-08-10 23:53:17.220 - INFO: Processing command "cache-stats": get cache statistics
+2026-08-10 23:53:17.241 - INFO: 
+2026-08-10 23:53:17.241 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-08-10 23:53:17.241 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-08-10 23:53:17.241 - INFO: Requested media types of the result are: "text/turtle"
+2026-08-10 23:53:17.241 - INFO: CONSTRUCT_REQUEST_STAGE_ENTER name=planning elapsed_us=285
+2026-08-10 23:53:17.242 - INFO: Query planning done in 1 ms
+2026-08-10 23:53:17.242 - INFO: CONSTRUCT_REQUEST_STAGE_ENTER name=response_stream elapsed_us=1,188
+2026-08-10 23:53:17.264 - INFO: Result has unknown size (not computed yet)
+2026-08-10 23:53:17.264 - INFO: CONSTRUCT_EXPORT_DEDUPLICATOR_CONSTRUCTION_BEGIN mode=none
+2026-08-10 23:53:17.264 - INFO: CONSTRUCT_EXPORT_DEDUPLICATOR_CONSTRUCTION_END mode=none enabled=false
+2026-08-10 23:53:17.807 - INFO: CONSTRUCT_EXPORT_STAGE_SUMMARY construct_stream_us=542,943 setup_us=7 batch_evaluation_us=339,537 instantiation_deduplication_us=23,963 batches=482 input_rows=490,650 candidate_triples=490,650 emitted_triples=490,650
+2026-08-10 23:53:17.815 - INFO: CONSTRUCT_REQUEST_STAGE_SUMMARY planning_begin_us=285 planning_end_us=1,187 planning_us=902 response_stream_begin_us=1,188 response_stream_end_us=574,392 response_stream_us=573,204 root_execution_us=106,139 non_root_stream_us=467,065 server_request_us=574,392
+2026-08-10 23:53:17.815 - INFO: Done processing query and sending result, total time was 574 ms
+2026-08-10 23:53:17.835 - INFO: 
+2026-08-10 23:53:17.835 - INFO: Request received via GET, no content type specified
+2026-08-10 23:53:17.835 - INFO: Processing command "cache-stats": get cache statistics

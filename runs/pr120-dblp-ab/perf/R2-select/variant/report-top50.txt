@@ -1,0 +1,50 @@
+     4.48%  qlever-server-a  [kernel.kallsyms]             [k] filemap_read
+     4.13%  qlever-server-a  [kernel.kallsyms]             [k] filemap_get_read_batch
+     3.48%  qlever-server-a  [kernel.kallsyms]             [k] srso_safe_ret
+     3.10%  qlever-server-a  [kernel.kallsyms]             [k] __do_sys_io_uring_enter
+     2.86%  qlever-server-a  [kernel.kallsyms]             [k] __io_read
+     2.61%  qlever-server-a  [kernel.kallsyms]             [k] _copy_to_iter
+     2.30%  qlever-server-a  [kernel.kallsyms]             [k] __io_submit_flush_completions
+     2.25%  qlever-server-a  [kernel.kallsyms]             [k] atime_needs_update
+     2.20%  qlever-server-a  [kernel.kallsyms]             [k] fget
+     2.13%  qlever-server-a  [kernel.kallsyms]             [k] kiocb_done
+     1.98%  qlever-server-a  [kernel.kallsyms]             [k] srso_return_thunk
+     1.78%  qlever-server-a  [kernel.kallsyms]             [k] copy_page_to_iter
+     1.74%  qlever-server-a  [kernel.kallsyms]             [k] do_syscall_64
+     1.61%  qlever-server-a  qlever-server-ab              [.] ad_utility::IoUringPolicy::addBatch(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>, unsigned long)
+     1.60%  qlever-server-a  [kernel.kallsyms]             [k] io_read
+     1.57%  qlever-server-a  [kernel.kallsyms]             [k] apparmor_file_permission
+     1.55%  qlever-server-a  [kernel.kallsyms]             [k] io_prep_read
+     1.47%  qlever-server-a  [kernel.kallsyms]             [k] xas_load
+     1.47%  qlever-server-a  qlever-server-ab              [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     1.42%  qlever-server-a  [kernel.kallsyms]             [k] io_prep_rw
+     1.41%  qlever-server-a  qlever-server-ab              [.] fsst_decompress
+     1.40%  qlever-server-a  [kernel.kallsyms]             [k] ext4_file_read_iter
+     1.38%  qlever-server-a  [kernel.kallsyms]             [k] io_issue_sqe
+     1.35%  qlever-server-a  [kernel.kallsyms]             [k] io_submit_sqe
+     1.31%  qlever-server-a  [kernel.kallsyms]             [k] io_submit_sqes
+     1.27%  qlever-server-a  [kernel.kallsyms]             [k] __io_prep_rw
+     1.26%  qlever-server-a  [kernel.kallsyms]             [k] aa_file_perm
+     1.18%  qlever-server-a  [kernel.kallsyms]             [k] io_rw_init_file
+     1.02%  qlever-server-a  [kernel.kallsyms]             [k] filemap_get_pages
+     0.99%  qlever-server-a  [kernel.kallsyms]             [k] current_time
+     0.99%  qlever-server-a  [kernel.kallsyms]             [k] rw_verify_area
+     0.94%  qlever-server-a  [kernel.kallsyms]             [k] __io_import_rw_buffer
+     0.90%  qlever-server-a  [kernel.kallsyms]             [k] generic_file_read_iter
+     0.90%  qlever-server-a  [kernel.kallsyms]             [k] entry_SYSCALL_64_after_hwframe
+     0.89%  qlever-server-a  [kernel.kallsyms]             [k] io_free_batch_list
+     0.88%  qlever-server-a  liburing.so.2.15              [.] io_uring_submit
+     0.87%  qlever-server-a  [kernel.kallsyms]             [k] io_init_req
+     0.86%  qlever-server-a  qlever-server-ab              [.] ad_utility::vocabulary::VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+     0.85%  qlever-server-a  [kernel.kallsyms]             [k] io_file_get_normal
+     0.82%  qlever-server-a  qlever-server-ab              [.] ad_utility::IoUringPolicy::drainOneCqe()
+     0.75%  qlever-server-a  [kernel.kallsyms]             [k] __io_issue_sqe
+     0.73%  qlever-server-a  [kernel.kallsyms]             [k] touch_atime
+     0.67%  qlever-server-a  libz.so.1.3                   [.] adler32_z
+     0.65%  qlever-server-a  [kernel.kallsyms]             [k] arch_exit_to_user_mode_prepare.isra.0
+     0.58%  qlever-server-a  [kernel.kallsyms]             [k] xas_start
+     0.55%  qlever-server-a  [kernel.kallsyms]             [k] security_file_permission
+     0.51%  qlever-server-a  [kernel.kallsyms]             [k] __x64_sys_io_uring_enter
+     0.48%  qlever-server-a  qlever-server-ab              [.] boost::iostreams::detail::indirect_streambuf<boost::iostreams::back_insert_device<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::char_traits<char>, std::allocator<char>, boost::iostreams::output>::overflow(int)
+     0.46%  qlever-server-a  [kernel.kallsyms]             [k] io_rw_recycle
+     0.46%  qlever-server-a  [kernel.kallsyms]             [k] entry_SYSCALL_64

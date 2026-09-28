@@ -1,0 +1,81 @@
+[2026-09-21T14:20:02Z] WARN baseline links liburing (master merged the ring path); the arm still counts as baseline because unrouted workloads never enter the ring
+[2026-09-21T14:20:02Z] binary gates ok (baseline without, variant with liburing)
+[2026-09-21T14:20:02Z] FATAL: CPU sampler missing: /local/data-ssd/stoetzem/thesis/scripts/sample_cpu_stat.py
+[2026-09-21T14:21:32Z] WARN baseline links liburing (master merged the ring path); the arm still counts as baseline because unrouted workloads never enter the ring
+[2026-09-21T14:21:32Z] binary gates ok (baseline without, variant with liburing)
+[2026-09-21T14:21:32Z] FATAL: CPU sampler missing: /local/data-ssd/stoetzem/thesis/scripts/sample_cpu_stat.py
+[2026-09-21T14:33:30Z] WARN baseline links liburing (master merged the ring path); the arm still counts as baseline because unrouted workloads never enter the ring
+[2026-09-21T14:33:30Z] binary gates ok (baseline without, variant with liburing)
+[2026-09-21T14:33:30Z] FATAL: CPU sampler missing: /local/data-ssd/stoetzem/thesis/scripts/sample_cpu_stat.py
+[2026-09-21T14:35:00Z] WARN baseline links liburing (master merged the ring path); the arm still counts as baseline because unrouted workloads never enter the ring
+[2026-09-21T14:35:00Z] binary gates ok (baseline without, variant with liburing)
+[2026-09-21T14:35:00Z] FATAL: CPU sampler missing: /local/data-ssd/stoetzem/thesis/scripts/sample_cpu_stat.py
+[2026-09-21T15:00:03Z] WARN baseline links liburing (master merged the ring path); the arm still counts as baseline because unrouted workloads never enter the ring
+[2026-09-21T15:00:03Z] binary gates ok (baseline without, variant with liburing)
+[2026-09-21T15:00:03Z] FATAL: query missing: /local/data-ssd/stoetzem/thesis/representative-queries/wikidata/H-vocab-label-large-de.rq
+[2026-09-21T15:01:32Z] WARN baseline links liburing (master merged the ring path); the arm still counts as baseline because unrouted workloads never enter the ring
+[2026-09-21T15:01:32Z] binary gates ok (baseline without, variant with liburing)
+[2026-09-21T15:01:32Z] FATAL: query missing: /local/data-ssd/stoetzem/thesis/representative-queries/wikidata/H-vocab-label-large-de.rq
+[2026-09-21T15:12:01Z] WARN baseline links liburing (master merged the ring path); the arm still counts as baseline because unrouted workloads never enter the ring
+[2026-09-21T15:12:01Z] binary gates ok (baseline without, variant with liburing)
+[2026-09-21T15:12:01Z] preflight ok
+base_commit=7bd97790e9ee6d5b2f6305fd8fd1c8000b63710b
+baseline_binary=/local/data-ssd/stoetzem/binaries/qlever-server-master
+baseline_version=/local/data-ssd/stoetzem/binaries/qlever-server-master v0.6.0-132-geeb6cf9e8
+variant_branch=nvme-routed
+variant_binary=/local/data-ssd/stoetzem/binaries/qlever-server-feat_iouring-nvme-routed
+variant_version=/local/data-ssd/stoetzem/binaries/qlever-server-feat_iouring-nvme-routed v0.6.0-119-gd585b6bb4
+index=/local/data-ssd/stoetzem/wikidata/index-for-upgrade-new-format/wikidata
+uname=7.0.0-28-generic
+date=2026-09-21T15:12:01Z
+[2026-09-21T15:12:03Z] === arm baseline (/local/data-ssd/stoetzem/binaries/qlever-server-master)
+[2026-09-21T15:12:26Z] server ready pid 607829 (baseline)
+[2026-09-21T15:12:26Z] warmup baseline large-de (discarded)
+
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/baseline-large-de-warm code=200 wall=15.340773s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=15.80s cpu_iowait=221.85s cpu_total=239.95s wall=15.0s n=31
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/baseline-large-de-cold1 code=200 wall=61.243238s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=25.01s cpu_iowait=907.49s cpu_total=972.61s wall=61.0s n=123
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/baseline-large-de-cold2 code=200 wall=61.103630s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=25.00s cpu_iowait=908.53s cpu_total=972.41s wall=61.0s n=123
+[2026-09-21T15:15:58Z] warmup baseline scatter200k-de (discarded)
+
+[2026-09-21T15:16:01Z] WARN /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/baseline-scatter200k-de-warm rep: 400 1.058032 5434
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/baseline-scatter200k-de-warm code=400 wall=1.058032s sha=9e33111c7593d9f414012e10f078713f300ed68367be8f176f78ea365b0b24b2 cpu_proc=0.00s cpu_iowait=15.96s cpu_total=16.01s wall=1.0s n=3
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+[2026-09-21T15:16:08Z] WARN /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/baseline-scatter200k-de-cold1 rep: 400 1.058726 5434
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/baseline-scatter200k-de-cold1 code=400 wall=1.058726s sha=c52be17c48d46d7f1afe9779224f83e93e7b38ebb1b4d49b08b97c5d834f9968 cpu_proc=0.00s cpu_iowait=15.89s cpu_total=16.00s wall=1.0s n=3
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+[2026-09-21T15:16:14Z] WARN /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/baseline-scatter200k-de-cold2 rep: 400 1.060125 5434
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/baseline-scatter200k-de-cold2 code=400 wall=1.060125s sha=8037ee6dd79b40f6d607ff66fc83a342648238833639ee968010196e89325257 cpu_proc=0.00s cpu_iowait=15.94s cpu_total=16.00s wall=1.0s n=3
+[2026-09-21T15:16:18Z] server stopped (baseline)
+[2026-09-21T15:16:28Z] === arm initial-ring (/local/data-ssd/stoetzem/binaries/qlever-server-feat_iouring-nvme-routed)
+[2026-09-21T15:16:52Z] server ready pid 609501 (initial-ring)
+[2026-09-21T15:16:52Z] warmup initial-ring large-de (discarded)
+
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/initial-ring-large-de-warm code=200 wall=18.223004s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=18.80s cpu_iowait=265.40s cpu_total=287.89s wall=18.0s n=37
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/initial-ring-large-de-cold1 code=200 wall=25.582799s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=26.03s cpu_iowait=380.42s cpu_total=407.91s wall=25.5s n=52
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/initial-ring-large-de-cold2 code=200 wall=26.039789s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=26.57s cpu_iowait=384.55s cpu_total=415.86s wall=26.0s n=53
+[2026-09-21T15:18:44Z] warmup initial-ring scatter200k-de (discarded)
+
+[2026-09-21T15:18:48Z] WARN /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/initial-ring-scatter200k-de-warm rep: 400 1.060179 5434
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/initial-ring-scatter200k-de-warm code=400 wall=1.060179s sha=9730c091597d66a70ac81c0fd18cadb97095292aeaec4e82bd0d2bcba6dcabd7 cpu_proc=0.00s cpu_iowait=15.86s cpu_total=16.00s wall=1.0s n=3
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+[2026-09-21T15:18:55Z] WARN /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/initial-ring-scatter200k-de-cold1 rep: 400 1.059768 5434
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/initial-ring-scatter200k-de-cold1 code=400 wall=1.059768s sha=9e33111c7593d9f414012e10f078713f300ed68367be8f176f78ea365b0b24b2 cpu_proc=0.00s cpu_iowait=15.89s cpu_total=16.00s wall=1.0s n=3
+Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).
+[2026-09-21T15:19:01Z] WARN /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/initial-ring-scatter200k-de-cold2 rep: 400 1.058272 5434
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-nvme-routed-ab/initial-ring-scatter200k-de-cold2 code=400 wall=1.058272s sha=9730c091597d66a70ac81c0fd18cadb97095292aeaec4e82bd0d2bcba6dcabd7 cpu_proc=0.00s cpu_iowait=15.95s cpu_total=16.01s wall=1.0s n=3
+[2026-09-21T15:19:05Z] server stopped (initial-ring)
+[2026-09-21T15:19:05Z] WARN body hash differs for scatter200k-de-cold1: sha256=c52be17c48d46d7f1afe9779224f83e93e7b38ebb1b4d49b08b97c5d834f9968 vs sha256=9e33111c7593d9f414012e10f078713f300ed68367be8f176f78ea365b0b24b2
+[2026-09-21T15:19:05Z] WARN body hash differs for scatter200k-de-cold2: sha256=8037ee6dd79b40f6d607ff66fc83a342648238833639ee968010196e89325257 vs sha256=9730c091597d66a70ac81c0fd18cadb97095292aeaec4e82bd0d2bcba6dcabd7
+[2026-09-21T15:19:05Z] A/B complete

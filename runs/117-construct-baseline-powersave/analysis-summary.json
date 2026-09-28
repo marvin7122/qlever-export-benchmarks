@@ -1,0 +1,420 @@
+{
+  "audit": {
+    "cell_count": 6,
+    "errors": [],
+    "http_statuses": [
+      "200"
+    ],
+    "major_faults": 0,
+    "row_count": 30,
+    "rows_per_cell": [
+      5
+    ],
+    "rows_with_memory_marker": 30,
+    "rows_with_stage_metrics": 30,
+    "statuses": [
+      "complete"
+    ],
+    "swap_in": 0,
+    "swap_out": 0
+  },
+  "cells": {
+    "H-dedup-none-cold": {
+      "candidate_result_triples": [
+        390854
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 1603.61,
+        "median": 1602.677,
+        "min": 1600.286
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 85.462,
+        "median": 84.359,
+        "min": 83.299
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 19.476,
+        "median": 19.38,
+        "min": 19.302
+      },
+      "e2e_s": {
+        "max": 1.814109592,
+        "median": 1.786568053,
+        "min": 1.783075146
+      },
+      "emitted_result_triples": [
+        390854
+      ],
+      "http_statuses": [
+        "200"
+      ],
+      "median_per_run_share_percent": {
+        "construct_batch_evaluation": 89.72361850686563,
+        "construct_format_transport_residual": 4.730480475376845,
+        "construct_instantiation_deduplication": 1.0823709875143595,
+        "server_non_root_stream": 95.55952995767123,
+        "server_planning": 0.9622351415250109,
+        "server_root_execution": 2.137105239109409
+      },
+      "process_peak_rss_mib": {
+        "max": 566.90625,
+        "median": 566.62890625,
+        "min": 566.36328125
+      },
+      "repetitions": 5,
+      "response_bytes": [
+        48192356
+      ],
+      "server_non_root_stream_ms": {
+        "max": 1708.555,
+        "median": 1706.071,
+        "min": 1702.971
+      },
+      "server_planning_ms": {
+        "max": 17.456,
+        "median": 17.246,
+        "min": 17.094
+      },
+      "server_root_execution_ms": {
+        "max": 38.806,
+        "median": 38.374,
+        "min": 37.959
+      },
+      "statuses": [
+        "complete"
+      ]
+    },
+    "H-dedup-none-warm": {
+      "candidate_result_triples": [
+        390854
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 140.411,
+        "median": 139.128,
+        "min": 138.428
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 83.654,
+        "median": 82.921,
+        "min": 80.431
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 19.378,
+        "median": 19.171,
+        "min": 19.047
+      },
+      "e2e_s": {
+        "max": 0.295961693,
+        "median": 0.294073946,
+        "min": 0.290693315
+      },
+      "emitted_result_triples": [
+        390854
+      ],
+      "http_statuses": [
+        "200"
+      ],
+      "median_per_run_share_percent": {
+        "construct_batch_evaluation": 47.36468829876217,
+        "construct_format_transport_residual": 28.017477248314023,
+        "construct_instantiation_deduplication": 6.487910139368303,
+        "server_non_root_stream": 81.91634449124467,
+        "server_planning": 0.5228667506879856,
+        "server_root_execution": 11.104142522162919
+      },
+      "process_peak_rss_mib": {
+        "max": 566.73828125,
+        "median": 566.45703125,
+        "min": 565.703125
+      },
+      "repetitions": 5,
+      "response_bytes": [
+        48192356
+      ],
+      "server_non_root_stream_ms": {
+        "max": 242.788,
+        "median": 241.477,
+        "min": 238.122
+      },
+      "server_planning_ms": {
+        "max": 1.634,
+        "median": 1.526,
+        "min": 1.487
+      },
+      "server_root_execution_ms": {
+        "max": 33.669,
+        "median": 32.535,
+        "min": 32.148
+      },
+      "statuses": [
+        "complete"
+      ]
+    },
+    "H-dedup-values-none-cold": {
+      "candidate_result_triples": [
+        573752
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 1624.819,
+        "median": 1621.831,
+        "min": 1615.425
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 117.356,
+        "median": 114.898,
+        "min": 112.9
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 28.643,
+        "median": 28.341,
+        "min": 28.086
+      },
+      "e2e_s": {
+        "max": 1.865733613,
+        "median": 1.831623573,
+        "min": 1.823986237
+      },
+      "emitted_result_triples": [
+        573752
+      ],
+      "http_statuses": [
+        "200"
+      ],
+      "median_per_run_share_percent": {
+        "construct_batch_evaluation": 88.51999783015933,
+        "construct_format_transport_residual": 6.204213480586696,
+        "construct_instantiation_deduplication": 1.5409655747309239,
+        "server_non_root_stream": 96.3399813197165,
+        "server_planning": 0.8786250507218054,
+        "server_root_execution": 1.397488614931912
+      },
+      "process_peak_rss_mib": {
+        "max": 566.95703125,
+        "median": 566.54296875,
+        "min": 565.703125
+      },
+      "repetitions": 5,
+      "response_bytes": [
+        70663076
+      ],
+      "server_non_root_stream_ms": {
+        "max": 1769.961,
+        "median": 1766.084,
+        "min": 1756.423
+      },
+      "server_planning_ms": {
+        "max": 16.177,
+        "median": 16.08,
+        "min": 15.988
+      },
+      "server_root_execution_ms": {
+        "max": 26.374,
+        "median": 25.49,
+        "min": 23.453
+      },
+      "statuses": [
+        "complete"
+      ]
+    },
+    "H-dedup-values-none-warm": {
+      "candidate_result_triples": [
+        573752
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 164.941,
+        "median": 157.595,
+        "min": 156.548
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 113.152,
+        "median": 111.135,
+        "min": 109.478
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 27.832,
+        "median": 27.799,
+        "min": 27.717
+      },
+      "e2e_s": {
+        "max": 0.348194313,
+        "median": 0.338232249,
+        "min": 0.337709027
+      },
+      "emitted_result_triples": [
+        573752
+      ],
+      "http_statuses": [
+        "200"
+      ],
+      "median_per_run_share_percent": {
+        "construct_batch_evaluation": 46.59372382909591,
+        "construct_format_transport_residual": 32.757373174076015,
+        "construct_instantiation_deduplication": 8.194665080561256,
+        "server_non_root_stream": 87.54783166758294,
+        "server_planning": 0.13887695101499314,
+        "server_root_execution": 6.514914086036155
+      },
+      "process_peak_rss_mib": {
+        "max": 566.75390625,
+        "median": 566.20703125,
+        "min": 565.88671875
+      },
+      "repetitions": 5,
+      "response_bytes": [
+        70663076
+      ],
+      "server_non_root_stream_ms": {
+        "max": 305.921,
+        "median": 296.115,
+        "min": 295.214
+      },
+      "server_planning_ms": {
+        "max": 0.512,
+        "median": 0.469,
+        "min": 0.432
+      },
+      "server_root_execution_ms": {
+        "max": 22.847,
+        "median": 22.114,
+        "min": 21.751
+      },
+      "statuses": [
+        "complete"
+      ]
+    },
+    "H-size-none-cold": {
+      "candidate_result_triples": [
+        490650
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 3335.154,
+        "median": 3330.718,
+        "min": 3323.021
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 105.633,
+        "median": 104.614,
+        "min": 102.608
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 24.601,
+        "median": 24.515,
+        "min": 24.135
+      },
+      "e2e_s": {
+        "max": 3.679613781,
+        "median": 3.643077569,
+        "min": 3.631632203
+      },
+      "emitted_result_triples": [
+        490650
+      ],
+      "http_statuses": [
+        "200"
+      ],
+      "median_per_run_share_percent": {
+        "construct_batch_evaluation": 91.42594240490628,
+        "construct_format_transport_residual": 2.865187414295213,
+        "construct_instantiation_deduplication": 0.67292006650106,
+        "server_non_root_stream": 94.96424203093876,
+        "server_planning": 0.4470992405725178,
+        "server_root_execution": 3.940817571828322
+      },
+      "process_peak_rss_mib": {
+        "max": 566.53515625,
+        "median": 566.16015625,
+        "min": 565.72265625
+      },
+      "repetitions": 5,
+      "response_bytes": [
+        61418523
+      ],
+      "server_non_root_stream_ms": {
+        "max": 3464.682,
+        "median": 3459.621,
+        "min": 3450.167
+      },
+      "server_planning_ms": {
+        "max": 16.389,
+        "median": 16.237,
+        "min": 16.075
+      },
+      "server_root_execution_ms": {
+        "max": 150.608,
+        "median": 143.116,
+        "min": 136.584
+      },
+      "statuses": [
+        "complete"
+      ]
+    },
+    "H-size-none-warm": {
+      "candidate_result_triples": [
+        490650
+      ],
+      "construct_batch_evaluation_ms": {
+        "max": 340.925,
+        "median": 340.019,
+        "min": 339.537
+      },
+      "construct_format_transport_residual_ms": {
+        "max": 105.373,
+        "median": 103.568,
+        "min": 102.957
+      },
+      "construct_instantiation_deduplication_ms": {
+        "max": 24.075,
+        "median": 23.984,
+        "min": 23.955
+      },
+      "e2e_s": {
+        "max": 0.607764859,
+        "median": 0.595498823,
+        "min": 0.592936005
+      },
+      "emitted_result_triples": [
+        490650
+      ],
+      "http_statuses": [
+        "200"
+      ],
+      "median_per_run_share_percent": {
+        "construct_batch_evaluation": 57.09818755257127,
+        "construct_format_transport_residual": 17.391805995223606,
+        "construct_instantiation_deduplication": 4.027547842861144,
+        "server_non_root_stream": 78.49079987713202,
+        "server_planning": 0.15212434265987945,
+        "server_root_execution": 18.155566615563806
+      },
+      "process_peak_rss_mib": {
+        "max": 566.84375,
+        "median": 566.6328125,
+        "min": 566.56640625
+      },
+      "repetitions": 5,
+      "response_bytes": [
+        61418523
+      ],
+      "server_non_root_stream_ms": {
+        "max": 470.26,
+        "median": 467.5,
+        "min": 467.057
+      },
+      "server_planning_ms": {
+        "max": 1.005,
+        "median": 0.902,
+        "min": 0.849
+      },
+      "server_root_execution_ms": {
+        "max": 119.959,
+        "median": 108.775,
+        "min": 106.139
+      },
+      "statuses": [
+        "complete"
+      ]
+    }
+  },
+  "root": "/local/data-ssd/stoetzem/thesis/experiments/runs/117-construct-baseline-powersave"
+}

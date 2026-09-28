@@ -1,0 +1,34 @@
+== PREFLIGHT: /local/data-ssd/stoetzem/wt/marvin-vocab-lookupbatch-wire/build/qlever-server ==
+  OK   binary exists: /local/data-ssd/stoetzem/wt/marvin-vocab-lookupbatch-wire/build/qlever-server
+  OK   version carries commit 9037cd27
+      io_uring symbols: 4
+  OK   io_uring compiled in (4 syms)
+  OK   port 7015 free (no stale server)
+  WARN CPU governor powersave (powersave ACCEPTED via --allow-powersave — record in artifact)
+  OK   loadavg 0.35 < 0.5
+  OK   venv deps (httpx/xxhash/yaml)
+  OK   clear-caches present (drop_caches, true cold)
+== PREFLIGHT: PASS ==
+== PREFLIGHT: /local/data-ssd/stoetzem/wt/marvin-io-uring-sliding-window/build/qlever-server ==
+  OK   binary exists: /local/data-ssd/stoetzem/wt/marvin-io-uring-sliding-window/build/qlever-server
+  OK   version carries commit 0bd06f7f
+      io_uring symbols: 6
+  OK   io_uring compiled in (6 syms)
+  OK   binaries differ (A/B arms distinct)
+      compare-to io_uring symbols: 4
+  OK   io_uring present on both arms (this=6 compare-to=4)
+  OK   port 7015 free (no stale server)
+  WARN CPU governor powersave (powersave ACCEPTED via --allow-powersave — record in artifact)
+  OK   loadavg 0.35 < 0.5
+  OK   venv deps (httpx/xxhash/yaml)
+  OK   clear-caches present (drop_caches, true cold)
+== PREFLIGHT: PASS ==
+== POSTFLIGHT: experiments/runs/pr55-sliding-window-suite-2 ==
+  OK   COMPLETE marker present
+  OK   found results.csv files
+  OK   all reps complete (no failed rows)
+  OK   all reps served >0 bytes
+  OK   cold reps show major_faults>0 (index mmap cold)
+  OK   cold reps show read_bytes>0 and a read syscall (syscr, pread64, or io_uring_enter)
+  OK   checksums stable per arm
+== POSTFLIGHT: PASS ==

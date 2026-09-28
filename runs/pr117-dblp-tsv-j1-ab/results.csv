@@ -1,0 +1,13 @@
+pr,query,scenario,arm,arm_label,rep,status,elapsed_s,first_byte_s,response_bytes,cpu_s,read_bytes,syscr,major_faults,checksum,body_multiset,body_lines,correctness
+117,H-size-select,warm,base,async-pipeline=off,1,complete,1.162348759,0.191235795,59424342,2.660000,0,2708168,0,39e7400e071c6f1c7f7db5f5fec0b50e,09c88d0730b264ee086cb3ad323fa8ce,490651,identical
+117,H-size-select,warm,variant,async-pipeline=on,1,complete,1.209507624,0.178839147,59424342,2.710000,0,2708168,0,efad92030a9b5c40232f59d08146dd32,09c88d0730b264ee086cb3ad323fa8ce,490651,equal-multiset
+117,H-size-select,warm,base,async-pipeline=off,2,complete,1.188716055,0.182708200,59424342,2.670000,0,2708169,0,cb54d9859fe3de39f4128be12812ba4c,09c88d0730b264ee086cb3ad323fa8ce,490651,equal-multiset
+117,H-size-select,warm,variant,async-pipeline=on,2,complete,1.185161678,0.182428101,59424342,2.690000,0,2708168,0,5a40c2d340755328260b4a24ebf31256,09c88d0730b264ee086cb3ad323fa8ce,490651,equal-multiset
+117,H-size-select,warm,base,async-pipeline=off,3,complete,1.184171773,0.183140378,59424342,2.660000,0,2708169,0,fa330367ee994b485495b1bc118bd5b0,09c88d0730b264ee086cb3ad323fa8ce,490651,equal-multiset
+117,H-size-select,warm,variant,async-pipeline=on,3,complete,1.148094282,0.194178776,59424342,2.610000,0,2708169,0,13b4e6e2f0b11d0d4e930ac3b40f48fe,09c88d0730b264ee086cb3ad323fa8ce,490651,equal-multiset
+117,R2-select,warm,base,async-pipeline=off,1,complete,0.363494337,0.072983161,16973608,0.740000,0,780476,0,cfc6d57e825e286792a5e94dddd2ec89,9cbe50f5f99e2aeed68b2b5b4f497565,143439,identical
+117,R2-select,warm,variant,async-pipeline=on,1,complete,0.359127600,0.072992832,16973608,0.710000,0,780476,0,cfc6d57e825e286792a5e94dddd2ec89,9cbe50f5f99e2aeed68b2b5b4f497565,143439,identical
+117,R2-select,warm,base,async-pipeline=off,2,complete,0.354634764,0.069660656,16973608,0.720000,0,780476,0,cfc6d57e825e286792a5e94dddd2ec89,9cbe50f5f99e2aeed68b2b5b4f497565,143439,identical
+117,R2-select,warm,variant,async-pipeline=on,2,complete,0.352754858,0.068766203,16973608,0.710000,0,780476,0,cfc6d57e825e286792a5e94dddd2ec89,9cbe50f5f99e2aeed68b2b5b4f497565,143439,identical
+117,R2-select,warm,base,async-pipeline=off,3,complete,0.362436668,0.073951225,16973608,0.710000,0,780476,0,89fb5d958acc9df865683ef64f0da740,9cbe50f5f99e2aeed68b2b5b4f497565,143439,equal-multiset
+117,R2-select,warm,variant,async-pipeline=on,3,complete,0.363218233,0.077452859,16973608,0.720000,0,780476,0,0da3ffd07fa746606492103b552e8ea5,9cbe50f5f99e2aeed68b2b5b4f497565,143439,equal-multiset

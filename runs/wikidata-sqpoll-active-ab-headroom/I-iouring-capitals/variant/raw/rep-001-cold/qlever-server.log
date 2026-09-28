@@ -1,0 +1,47 @@
+2026-09-21 00:10:36.785 - INFO: [1mQLever server v0.6.0-129-gcc308dd1b, compiled on Sun Sep 20 11:28:37 PM CEST 2026 using git hash cc308dd[22m
+2026-09-21 00:10:36.785 - INFO: Runtime parameter set from the command line: iouring-sqpoll=true
+2026-09-21 00:10:36.785 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-09-21 00:10:36.795 - INFO: The git hash used to build this index was "65f84b4"
+2026-09-21 00:10:36.795 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-09-21 00:10:49.481 - INFO: Done, number of words: 1,580,300,680
+2026-09-21 00:10:49.481 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-09-21 00:10:49.560 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-09-21 00:10:49.655 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-09-21 00:10:49.724 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-09-21 00:10:49.818 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-09-21 00:10:49.898 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-09-21 00:10:49.977 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-09-21 00:10:50.031 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-09-21 00:10:50.085 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-09-21 00:10:50.085 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-09-21 00:10:51.462 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-09-21 00:10:59.483 - INFO: Initializing server ...
+2026-09-21 00:10:59.483 - INFO: No access token required for restricted API calls
+2026-09-21 00:10:59.483 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-09-21 00:10:59.641 - INFO: 
+2026-09-21 00:10:59.641 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-21 00:10:59.644 - INFO: Processing the following SPARQL query:
+# Tier I — io_uring proof, capital-city outgoing dump
+# Physical: P+O bound scan of wdt:P31 wd:Q5119 (capital city), then
+# S bound SPO of all outgoing ?p ?o. LIMIT 50000.
+# CONSTRUCT emits s, p, and o. The class is smaller than humans or
+# films, so serialize is not the main cost. Unique object IDs stay high.
+# Expected if lookupBatch+io_uring is live: pread64 and syscr fall,
+# io_uring_enter rises, elapsed falls.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s wdt:P31 wd:Q5119 ;
+     ?p ?o .
+}
+LIMIT 50000
+
+2026-09-21 00:10:59.644 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-21 00:10:59.645 - INFO: Query planning done in 3 ms
+2026-09-21 00:10:59.646 - INFO: Result has unknown size (not computed yet)
+2026-09-21 00:10:59.927 - INFO: Done processing query and sending result, total time was 285 ms
+2026-09-21 00:10:59.956 - INFO: 
+2026-09-21 00:10:59.956 - INFO: Request received via GET, no content type specified
+2026-09-21 00:10:59.956 - INFO: Processing command "cache-stats": get cache statistics

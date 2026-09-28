@@ -1,0 +1,139 @@
+2026-09-18 00:05:19.255 - INFO: [1mQLever server v0.6.0-90-gfde3ce8db, compiled on Thu Sep 17 11:24:12 PM CEST 2026 using git hash fde3ce8[22m
+2026-09-18 00:05:19.255 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-09-18 00:05:19.267 - INFO: The git hash used to build this index was "65f84b4"
+2026-09-18 00:05:19.267 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-09-18 00:05:33.697 - INFO: Done, number of words: 1,580,300,680
+2026-09-18 00:05:33.697 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-09-18 00:05:33.777 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-09-18 00:05:33.898 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-09-18 00:05:33.972 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-09-18 00:05:34.073 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-09-18 00:05:34.158 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-09-18 00:05:34.275 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-09-18 00:05:34.333 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-09-18 00:05:34.390 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-09-18 00:05:34.390 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-09-18 00:05:36.081 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-09-18 00:05:44.063 - INFO: Initializing server ...
+2026-09-18 00:05:44.063 - INFO: No access token required for restricted API calls
+2026-09-18 00:05:44.063 - INFO: The server is ready, listening for requests on port 7022 ...
+2026-09-18 00:05:44.538 - INFO: 
+2026-09-18 00:05:44.538 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-18 00:05:44.541 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan, label vocabulary, 1.3 GiB Turtle
+# serialize. Same query as wikidata-construct-humans-label-en.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-09-18 00:05:44.541 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-18 00:05:44.542 - INFO: Query planning done in 4 ms
+2026-09-18 00:05:44.542 - INFO: Result has unknown size (not computed yet)
+2026-09-18 00:06:07.303 - INFO: Done processing query and sending result, total time was 22,765 ms
+2026-09-18 00:06:08.167 - INFO: 
+2026-09-18 00:06:08.167 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-18 00:06:08.168 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan, label vocabulary, 1.3 GiB Turtle
+# serialize. Same query as wikidata-construct-humans-label-en.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-09-18 00:06:08.168 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-18 00:06:08.171 - INFO: Query planning done in 3 ms
+2026-09-18 00:06:08.171 - INFO: Result has unknown size (not computed yet)
+2026-09-18 00:06:30.972 - INFO: Done processing query and sending result, total time was 22,804 ms
+2026-09-18 00:06:31.796 - INFO: 
+2026-09-18 00:06:31.796 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-18 00:06:31.796 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan, label vocabulary, 1.3 GiB Turtle
+# serialize. Same query as wikidata-construct-humans-label-en.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-09-18 00:06:31.796 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-18 00:06:31.799 - INFO: Query planning done in 3 ms
+2026-09-18 00:06:31.799 - INFO: Result has unknown size (not computed yet)
+2026-09-18 00:06:54.799 - INFO: Done processing query and sending result, total time was 23,003 ms
+2026-09-18 00:06:55.667 - INFO: 
+2026-09-18 00:06:55.667 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-18 00:06:55.668 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan, label vocabulary, 1.3 GiB Turtle
+# serialize. Same query as wikidata-construct-humans-label-en.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-09-18 00:06:55.668 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-18 00:06:55.671 - INFO: Query planning done in 3 ms
+2026-09-18 00:06:55.671 - INFO: Result has unknown size (not computed yet)
+2026-09-18 00:07:18.303 - INFO: Done processing query and sending result, total time was 22,635 ms
+2026-09-18 00:07:19.175 - INFO: 
+2026-09-18 00:07:19.175 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-18 00:07:19.176 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan, label vocabulary, 1.3 GiB Turtle
+# serialize. Same query as wikidata-construct-humans-label-en.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-09-18 00:07:19.176 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-18 00:07:19.179 - INFO: Query planning done in 3 ms
+2026-09-18 00:07:19.179 - INFO: Result has unknown size (not computed yet)
+2026-09-18 00:07:42.142 - INFO: Done processing query and sending result, total time was 22,966 ms

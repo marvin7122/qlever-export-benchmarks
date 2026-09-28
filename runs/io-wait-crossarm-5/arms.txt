@@ -1,0 +1,12 @@
+run-id:   io-wait-crossarm-5
+baseline: marvin-io-wait-accounting @ 8a44e0dc -> /local/data-ssd/stoetzem/wt/marvin-io-wait-accounting/build/qlever-server
+variant:  marvin-io-wait-accounting-pr47 @ 94655c62 -> /local/data-ssd/stoetzem/wt/marvin-io-wait-accounting-pr47/build/qlever-server
+pinned baseline: /local/data-ssd/stoetzem/thesis/experiments/runs/io-wait-crossarm-5/bin/qlever-server-baseline
+pinned variant:  /local/data-ssd/stoetzem/thesis/experiments/runs/io-wait-crossarm-5/bin/qlever-server-variant
+sha256 baseline: 042f15efec38d8b9970195f2d976bc967874e7987de64e587244d6425b903b55
+sha256 variant:  7391408a325622583aafb39f006ed9df8d5f9d049f27eae89c24db40691ecd64
+instrumentation: QLEVER_MEASURE_IO_WAIT=1 in BOTH arms
+clocksource: tsc
+build_type: Release
+post-run sha256 of worktree baseline: 042f15efec38d8b9970195f2d976bc967874e7987de64e587244d6425b903b55
+post-run sha256 of worktree variant:  7391408a325622583aafb39f006ed9df8d5f9d049f27eae89c24db40691ecd64

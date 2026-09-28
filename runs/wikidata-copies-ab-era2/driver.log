@@ -1,0 +1,81 @@
+=== [wq] bench /home/stoetzem/incoming/wikidata-routing-ab-newindex.sh /local/data-ssd/stoetzem/binaries/qlever-server-bench_ch7-integration /local/data-ssd/stoetzem/binaries/qlever-server-bench_ch7-copies wikidata-copies-ab-era2 bench/ch7-copies bench-ch7-integration-84b943e4e5-io_uring uring-vs-uring ##QBRANCH=bench/ch7-copies on Ural ===
+Qlever branch verified: bench/ch7-copies @ 84b943e4e5
+HEAD is now at 84b943e4e Merge compressed routing (PR 172) into fibers stack
+QLEVER OK: /local/data-ssd/stoetzem/wt/bench/ch7-copies @ 84b943e4e5 (= origin/bench/ch7-copies)
+BENCH REF: bench/ch7-copies @ 84b943e4e5519c2660d3ef90fc883b1907078cd3
+[2026-09-22T13:57:29Z] binary gates ok (both arms link liburing)
+[2026-09-22T13:57:29Z] preflight ok
+base_commit=7bd97790e9ee6d5b2f6305fd8fd1c8000b63710b
+baseline_binary=/local/data-ssd/stoetzem/binaries/qlever-server-bench_ch7-integration
+baseline_version=/local/data-ssd/stoetzem/binaries/qlever-server-bench_ch7-integration v0.6.0-135-g84b943e4e
+variant_branch=bench/ch7-copies
+variant_binary=/local/data-ssd/stoetzem/binaries/qlever-server-bench_ch7-copies
+variant_version=/local/data-ssd/stoetzem/binaries/qlever-server-bench_ch7-copies v0.6.0-135-g84b943e4e
+index=/local/data-ssd/stoetzem/wikidata/index-for-upgrade-new-format/wikidata
+uname=7.0.0-28-generic
+date=2026-09-22T13:57:29Z
+[2026-09-22T13:57:31Z] === arm baseline (/local/data-ssd/stoetzem/binaries/qlever-server-bench_ch7-integration)
+[2026-09-22T13:57:55Z] server ready pid 1696248 (baseline)
+[2026-09-22T13:57:55Z] warmup baseline large-de (discarded)
+200	16.184166	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=0
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-copies-ab-era2/baseline-large-de-warm code=200 wall=16.184166s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=16.78s cpu_iowait=238.37s cpu_total=256.01s wall=16.0s n=33
+200	23.460524	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=9436147712
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-copies-ab-era2/baseline-large-de-cold1 code=200 wall=23.460524s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=23.25s cpu_iowait=343.43s cpu_total=367.86s wall=23.0s n=47
+200	23.893983	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=9435959296
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-copies-ab-era2/baseline-large-de-cold2 code=200 wall=23.893983s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=23.79s cpu_iowait=350.98s cpu_total=375.86s wall=23.5s n=48
+[2026-09-22T13:59:37Z] warmup baseline scatter200k-de (discarded)
+200	4.983290	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=0
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-copies-ab-era2/baseline-scatter200k-de-warm code=200 wall=4.983290s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=4.24s cpu_iowait=75.63s cpu_total=80.02s wall=5.0s n=11
+200	10.982017	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=2992041984
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-copies-ab-era2/baseline-scatter200k-de-cold1 code=200 wall=10.982017s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=7.24s cpu_iowait=165.39s cpu_total=175.69s wall=11.0s n=23
+200	10.993818	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=2992041984
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-copies-ab-era2/baseline-scatter200k-de-cold2 code=200 wall=10.993818s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=6.80s cpu_iowait=158.01s cpu_total=167.71s wall=10.5s n=22
+[2026-09-22T14:00:31Z] server stopped (baseline)
+[2026-09-22T14:00:41Z] === arm initial-ring (/local/data-ssd/stoetzem/binaries/qlever-server-bench_ch7-copies)
+[2026-09-22T14:01:04Z] server ready pid 1697643 (initial-ring)
+[2026-09-22T14:01:04Z] warmup initial-ring large-de (discarded)
+200	16.253941	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=0
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-copies-ab-era2/initial-ring-large-de-warm code=200 wall=16.253941s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=16.78s cpu_iowait=238.38s cpu_total=256.05s wall=16.0s n=33
+200	23.904761	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=9435959296
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-copies-ab-era2/initial-ring-large-de-cold1 code=200 wall=23.904761s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=23.78s cpu_iowait=350.87s cpu_total=375.85s wall=23.5s n=48
+200	23.559660	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=9435959296
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-copies-ab-era2/initial-ring-large-de-cold2 code=200 wall=23.559660s sha=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1 cpu_proc=23.77s cpu_iowait=351.00s cpu_total=375.88s wall=23.5s n=48
+[2026-09-22T14:02:47Z] warmup initial-ring scatter200k-de (discarded)
+200	5.037190	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=0
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-copies-ab-era2/initial-ring-scatter200k-de-warm code=200 wall=5.037190s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=4.27s cpu_iowait=75.60s cpu_total=80.02s wall=5.0s n=11
+200	10.779098	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=2992013312
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-copies-ab-era2/initial-ring-scatter200k-de-cold1 code=200 wall=10.779098s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=6.72s cpu_iowait=158.11s cpu_total=167.70s wall=10.5s n=22
+200	10.963723	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=2992013312
+/local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-copies-ab-era2/initial-ring-scatter200k-de-cold2 code=200 wall=10.963723s sha=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9 cpu_proc=7.25s cpu_iowait=165.58s cpu_total=175.76s wall=11.0s n=23
+[2026-09-22T14:03:40Z] server stopped (initial-ring)
+# Initial-ring A/B on German-label exports (Wikidata truthy)
+
+Baseline: bench-ch7-integration-84b943e4e5-io_uring. Variant: bench/ch7-copies.
+Method: per arm 1 warm + 2 cold reps per workload with sampler.
+
+## large-de-warm baseline vs initial-ring
+baseline:     200	16.184166	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=0
+initial-ring: 200	16.253941	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=0
+
+## large-de-cold1 baseline vs initial-ring
+baseline:     200	23.460524	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=9436147712
+initial-ring: 200	23.904761	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=9435959296
+
+## large-de-cold2 baseline vs initial-ring
+baseline:     200	23.893983	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=9435959296
+initial-ring: 200	23.559660	504927346	sha256=dcd2b1bc77fce98409640e9a234aa92688de7ba54eeff9c0556752e814f8c5e1	rbytes=9435959296
+
+## scatter200k-de-warm baseline vs initial-ring
+baseline:     200	4.983290	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=0
+initial-ring: 200	5.037190	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=0
+
+## scatter200k-de-cold1 baseline vs initial-ring
+baseline:     200	10.982017	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=2992041984
+initial-ring: 200	10.779098	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=2992013312
+
+## scatter200k-de-cold2 baseline vs initial-ring
+baseline:     200	10.993818	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=2992041984
+initial-ring: 200	10.963723	19297737	sha256=497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9	rbytes=2992013312
+
+[2026-09-22T14:03:40Z] A/B complete
+WQ_DONE seq=4396 type=bench exit=0

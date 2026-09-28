@@ -1,0 +1,27 @@
+# build environment, PR #3476 (2026-09-28T08:51:57Z)
+host: ural layout: ural
+binary mode: same binary, runtime-flag A/B
+== base
+source binary: /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-minbatch-sweep3/qlever-server
+expected commit: 26427fd7
+server extra args: --set-runtime-parameter iouring-adaptive-batch-enabled=false
+--version: /local/data-ssd/stoetzem/thesis/experiments/runs/pr3476-controller-onoff-wikidata-ab/bin/qlever-server-ab v0.6.0-193-g26427fd71
+md5: 91eb3c423eaaae3cd25b85f234336c3e
+io_uring symbols: 6
+compiler (.comment): GCC: (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0 
+liburing linked: liburing.so.2
+== variant
+source binary: /local/data-ssd/stoetzem/thesis/experiments/runs/wikidata-minbatch-sweep3/qlever-server
+expected commit: 26427fd7
+server extra args: --set-runtime-parameter iouring-adaptive-batch-enabled=true
+--version: /local/data-ssd/stoetzem/thesis/experiments/runs/pr3476-controller-onoff-wikidata-ab/bin/qlever-server-ab v0.6.0-193-g26427fd71
+md5: 91eb3c423eaaae3cd25b85f234336c3e
+io_uring symbols: 6
+compiler (.comment): GCC: (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0 
+liburing linked: liburing.so.2
+== toolchain on host
+c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+liburing (pkg-config): 2.15
+perf: perf version 7.0.12
+python: Python 3.12.3
+harness md5: 51f5ec62ebbee6fa852a165fda8c2781 (/local/data-ssd/stoetzem/incoming/pr-ab-tools-88ee0e9d29/scripts/benchmark_export.py)

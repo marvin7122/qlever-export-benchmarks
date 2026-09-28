@@ -1,0 +1,30 @@
+## cold
+| query | arm | reps | median elapsed_s | median read_bytes | median syscr | checksums |
+|---|---|---|---|---|---|---|
+| D1-select | base | 5 | 0.0953 | 3559424 | 740 | 1 distinct |
+| D1-select | variant | 5 | 0.0897 | 3559424 | 260 | 1 distinct |
+| H-vocab-title-large-select | base | 5 | 5.1420 | 630886400 | 399753 | 1 distinct |
+| H-vocab-title-large-select | variant | 5 | 1.1812 | 627126272 | 85 | 1 distinct |
+| R1-select | base | 5 | 1.1038 | 46497792 | 271890 | 1 distinct |
+| R1-select | variant | 5 | 0.4954 | 46477312 | 128 | 1 distinct |
+| R2-select | base | 5 | 2.3258 | 100302848 | 780477 | 1 distinct |
+| R2-select | variant | 5 | 0.7129 | 101957632 | 128 | 4 distinct |
+
+
+ALL REPS COMPLETE, NO ZERO-BYTE REPS
+
+## warm
+| query | arm | reps | median elapsed_s | median read_bytes | median syscr | checksums |
+|---|---|---|---|---|---|---|
+| D1-select | base | 5 | 0.0281 | 0 | 740 | 1 distinct |
+| D1-select | variant | 5 | 0.0307 | 0 | 260 | 1 distinct |
+| H-vocab-title-large-select | base | 5 | 0.4880 | 0 | 399751 | 1 distinct |
+| H-vocab-title-large-select | variant | 5 | 0.5291 | 0 | 85 | 1 distinct |
+| R1-select | base | 5 | 0.3086 | 0 | 271890 | 1 distinct |
+| R1-select | variant | 5 | 0.3507 | 0 | 128 | 1 distinct |
+| R2-select | base | 5 | 0.8118 | 0 | 780476 | 1 distinct |
+| R2-select | variant | 5 | 0.5756 | 0 | 128 | 3 distinct |
+
+
+ALL REPS COMPLETE, NO ZERO-BYTE REPS
+

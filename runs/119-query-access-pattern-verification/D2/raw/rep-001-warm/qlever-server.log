@@ -1,0 +1,72 @@
+2026-08-11 13:28:22.326 - INFO: [1mQLever server v0.5.50-58-gbdd1a6b9, compiled on Fri Jul 31 12:36:09 CEST 2026 using git hash bdd1a6b[22m
+2026-08-11 13:28:22.326 - INFO: The git hash used to build this index was "bdd1a6b"
+2026-08-11 13:28:22.327 - INFO: Reading vocabulary from file /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.vocabulary.words ...
+2026-08-11 13:28:22.344 - INFO: Done, number of words: 409,446,926
+2026-08-11 13:28:22.344 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 409,457
+2026-08-11 13:28:22.354 - INFO: Registered PSO permutation: #relations = 6, #blocks = 7,515, #triples = 234,800,838
+2026-08-11 13:28:22.380 - INFO: Registered PSO permutation: #relations = 96, #blocks = 46,913, #triples = 1,464,719,701
+2026-08-11 13:28:22.385 - INFO: Registered POS permutation: #relations = 6, #blocks = 7,515, #triples = 234,800,838
+2026-08-11 13:28:22.412 - INFO: Registered POS permutation: #relations = 96, #blocks = 46,913, #triples = 1,464,719,701
+2026-08-11 13:28:22.437 - INFO: Registered OPS permutation: #relations = 318,850,904, #blocks = 39,014, #triples = 1,464,719,701
+2026-08-11 13:28:22.462 - INFO: Registered OSP permutation: #relations = 318,850,904, #blocks = 39,014, #triples = 1,464,719,701
+2026-08-11 13:28:22.477 - INFO: Registered SPO permutation: #relations = 234,800,427, #blocks = 31,251, #triples = 1,464,719,701
+2026-08-11 13:28:22.489 - INFO: Registered SOP permutation: #relations = 234,800,427, #blocks = 31,251, #triples = 1,464,719,701
+2026-08-11 13:28:22.489 - INFO: Reading patterns from file /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.patterns ...
+2026-08-11 13:28:22.490 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-08-11 13:28:31.387 - INFO: Initializing server ...
+2026-08-11 13:28:31.387 - INFO: No access token required for restricted API calls
+2026-08-11 13:28:31.387 - INFO: The server is ready, listening for requests on port 7088 ...
+2026-08-11 13:28:31.621 - INFO: 
+2026-08-11 13:28:31.621 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-08-11 13:28:31.623 - INFO: Processing the following SPARQL query:
+# Tier D2 — DISCOVER (medium duplication, realistic)
+# Signature joins create moderate duplicate density without a synthetic
+# multiplier; use a bounded result while tuning the concrete stream.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper ?p ?o }
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         dblp:hasSignature ?sig .
+  ?sig dblp:signatureCreator ?creator .
+  ?paper ?p ?o .
+}
+LIMIT 100000
+
+2026-08-11 13:28:31.623 - INFO: Requested media types of the result are: "text/turtle"
+2026-08-11 13:28:31.632 - INFO: Query planning done in 11 ms
+2026-08-11 13:28:31.653 - INFO: Result has unknown size (not computed yet)
+2026-08-11 13:28:31.653 - INFO: Result has unknown size (not computed yet)
+2026-08-11 13:28:33.167 - INFO: Export finished in 1,127 ms
+2026-08-11 13:28:33.167 - INFO: Done processing query and sending result, total time was 1,546 ms
+2026-08-11 13:28:33.214 - INFO: 
+2026-08-11 13:28:33.214 - INFO: Request received via GET, no content type specified
+2026-08-11 13:28:33.214 - INFO: Processing command "cache-stats": get cache statistics
+2026-08-11 13:28:33.540 - INFO: 
+2026-08-11 13:28:33.540 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-08-11 13:28:33.541 - INFO: Processing the following SPARQL query:
+# Tier D2 — DISCOVER (medium duplication, realistic)
+# Signature joins create moderate duplicate density without a synthetic
+# multiplier; use a bounded result while tuning the concrete stream.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper ?p ?o }
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         dblp:hasSignature ?sig .
+  ?sig dblp:signatureCreator ?creator .
+  ?paper ?p ?o .
+}
+LIMIT 100000
+
+2026-08-11 13:28:33.541 - INFO: Requested media types of the result are: "text/turtle"
+2026-08-11 13:28:33.542 - INFO: Query planning done in 1 ms
+2026-08-11 13:28:33.553 - INFO: Result has unknown size (not computed yet)
+2026-08-11 13:28:33.553 - INFO: Result has unknown size (not computed yet)
+2026-08-11 13:28:33.630 - INFO: Export finished in 57 ms
+2026-08-11 13:28:33.630 - INFO: Done processing query and sending result, total time was 89 ms
+2026-08-11 13:28:33.678 - INFO: 
+2026-08-11 13:28:33.678 - INFO: Request received via GET, no content type specified
+2026-08-11 13:28:33.678 - INFO: Processing command "cache-stats": get cache statistics

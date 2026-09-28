@@ -1,0 +1,85 @@
+run_id: 024-pilot-H-format-cold
+status: complete
+created_at: '2026-07-30T20:36:05.737433+00:00'
+mode: pilot
+query: /home/userNoPriv/thesis/representative-queries/H-format.rq
+cache_scenario: cold
+repetitions: 1
+timing_boundary: client request start to final response byte
+response_mode: stream_count_xxh3_128_discard
+qlever:
+  repo: /home/userNoPriv/code/qlever/qlever-code
+  commit: bdd1a6b958169c71b23e077baa76bdab294c844a
+  short_commit: bdd1a6b9
+  working_tree_status: ''
+  server_binary: /home/userNoPriv/code/qlever/qlever-code/build/qlever-server
+  server_binary_version: /home/userNoPriv/code/qlever/qlever-code/build/qlever-server
+    v0.5.50-58-gbdd1a6b9
+  server_binary_matches_source: true
+  server_command:
+  - /home/userNoPriv/code/qlever/qlever-code/build/qlever-server
+  - --index-basename
+  - /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp
+  - --port
+  - '7015'
+  - --no-access-check
+  - --cache-max-size
+  - 0B
+  - --cache-max-size-single-entry
+  - 0B
+  - --cache-max-size-lazy-result
+  - 0B
+  - --cache-max-num-entries
+  - '0'
+  - --default-query-timeout
+  - 1800s
+  - --num-simultaneous-queries
+  - '1'
+  access_control: --no-access-check
+  result_cache:
+    cache_max_size: 0B
+    cache_max_size_single_entry: 0B
+    cache_max_size_lazy_result: 0B
+    cache_max_num_entries: 0
+dataset:
+  index_dir: /home/userNoPriv/code/qlever/qlever-indices/dblp
+  index_basename: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp
+  serving_manifest: /home/userNoPriv/thesis/experiments/manifests/dblp-serving-files.txt
+  serving_file_count: 25
+machine:
+  hostname: workstation
+  system: Linux-6.18.13-100.fc42.x86_64-x86_64-with-glibc2.41
+  python: 3.13.12 (main, Feb  4 2026, 00:00:00) [GCC 15.2.1 20260123 (Red Hat 15.2.1-7)]
+  loadavg:
+  - 4.259765625
+  - 4.115234375
+  - 5.17041015625
+  mem_available_gib: 21.52629852294922
+  cpu_governors:
+    cpu0: powersave
+    cpu1: powersave
+    cpu10: powersave
+    cpu11: powersave
+    cpu2: powersave
+    cpu3: powersave
+    cpu4: powersave
+    cpu5: powersave
+    cpu6: powersave
+    cpu7: powersave
+    cpu8: powersave
+    cpu9: powersave
+  cpu_scaling_drivers:
+    cpu0: amd-pstate-epp
+    cpu1: amd-pstate-epp
+    cpu10: amd-pstate-epp
+    cpu11: amd-pstate-epp
+    cpu2: amd-pstate-epp
+    cpu3: amd-pstate-epp
+    cpu4: amd-pstate-epp
+    cpu5: amd-pstate-epp
+    cpu6: amd-pstate-epp
+    cpu7: amd-pstate-epp
+    cpu8: amd-pstate-epp
+    cpu9: amd-pstate-epp
+  vmtouch: /usr/bin/vmtouch
+completed_at: '2026-07-30T20:36:21.819930+00:00'

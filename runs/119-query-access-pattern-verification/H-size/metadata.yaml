@@ -1,0 +1,322 @@
+run_id: 119-H-size
+status: complete
+created_at: '2026-08-11T11:29:39.621201+00:00'
+mode: pilot
+query: /home/userNoPriv/thesis/representative-queries/H-size.rq
+cache_scenario: warm
+repetitions: 1
+construct_deduplication: none
+timing_boundary: client request start to final response byte
+primary_metric: server-side export time from completed query result to final emitted
+  response
+secondary_metric: client request start to final response byte
+response_mode: stream_count_xxh3_128_discard
+harness:
+  git:
+    repo: /home/userNoPriv/thesis
+    commit: 023e1353fc5082ba57566b605bbef2cee0f142a0
+    short_commit: 023e135
+    working_tree_status: "M document/chapters/01-introduction.tex\n M document/chapters/02-background.tex\n\
+      \ M document/chapters/04-methodology.tex\n M document/main.pdf\n M document/references/references.bib\n\
+      \ M log.md\n?? experiments/runs/119-query-access-pattern-verification/\n?? scripts/verify_query_access_patterns.py"
+    remote: "origin\tgit@github.com:marvin7122/thesis_repository.git (fetch)\norigin\t\
+      git@github.com:marvin7122/thesis_repository.git (push)"
+    submodule_status: ''
+  script:
+    path: /home/userNoPriv/thesis/scripts/benchmark_export.py
+    size_bytes: 28536
+    mtime_ns: 1786302151688216528
+    sha256: fa0486a7c19aaef36488afe9b6056bc2c44f2c8ff36a4e72f9dfed8ee47738ab
+qlever:
+  repo: /home/userNoPriv/code/qlever/qlever-code
+  commit: 65f84b43d86b6ceb887d7a15dd5d387b2fc18a7a
+  short_commit: 65f84b43
+  working_tree_status: M src/engine/ConstructTripleGenerator.cpp
+  git:
+    repo: /home/userNoPriv/code/qlever/qlever-code
+    commit: 65f84b43d86b6ceb887d7a15dd5d387b2fc18a7a
+    short_commit: 65f84b43
+    working_tree_status: M src/engine/ConstructTripleGenerator.cpp
+    remote: "gitea\tgit@<private-gitea-host>:marvin/qlever.git (fetch)\ngitea\tgit@<private-gitea-host>:marvin/qlever.git\
+      \ (push)\njoka921\tgit@github.com:joka921/QLever.git (fetch)\njoka921\tgit@github.com:joka921/QLever.git\
+      \ (push)\norigin\tgit@github.com:random998/qlever.git (fetch)\norigin\tgit@github.com:random998/qlever.git\
+      \ (push)\nupstream\thttps://github.com/ad-freiburg/qlever (fetch)\nupstream\t\
+      https://github.com/ad-freiburg/qlever (push)"
+    submodule_status: ''
+  server_binary: /home/userNoPriv/code/qlever/qlever-code/build/qlever-server
+  server_binary_version: /home/userNoPriv/code/qlever/qlever-code/build/qlever-server
+    v0.5.50-58-gbdd1a6b9
+  server_binary_matches_source: false
+  server_binary_file:
+    path: /home/userNoPriv/code/qlever/qlever-code/build/qlever-server
+    size_bytes: 1348905680
+    mtime_ns: 1785494261760008363
+  build:
+    build_dir: /home/userNoPriv/code/qlever/qlever-code/build
+    cmake_cache: /home/userNoPriv/code/qlever/qlever-code/build/CMakeCache.txt
+    cmake_cache_present: true
+    cmake_cache_file:
+      path: /home/userNoPriv/code/qlever/qlever-code/build/CMakeCache.txt
+      size_bytes: 61249
+      mtime_ns: 1785441234313940505
+      sha256: 415a72246804ff0b7cf60b0e6d21434bc5c6f2c739c60ed1f5519a35077c1f5d
+    cmake_configure_log: /home/userNoPriv/code/qlever/qlever-code/build/CMakeFiles/CMakeConfigureLog.yaml
+    cmake_configure_log_present: true
+    cmake_configure_log_file:
+      path: /home/userNoPriv/code/qlever/qlever-code/build/CMakeFiles/CMakeConfigureLog.yaml
+      size_bytes: 111262
+      mtime_ns: 1785334973609506843
+      sha256: 46e4006066b4ab8d70af4652868df777dafff8f819cc7d1d9d14ce402f336ac2
+    cmake_version: 'cmake version 3.31.6
+
+
+      CMake suite maintained and supported by Kitware (kitware.com/cmake).'
+    cache_entries:
+      CMAKE_BUILD_TYPE: RelWithDebInfo
+      CMAKE_GENERATOR: Ninja
+      CMAKE_MAKE_PROGRAM: /usr/bin/ninja-build
+      CMAKE_COMMAND: /usr/bin/cmake
+      CMAKE_HOME_DIRECTORY: /home/userNoPriv/code/qlever/qlever-code
+      CMAKE_C_COMPILER: /usr/bin/cc
+      CMAKE_CXX_COMPILER: /usr/bin/c++
+      CMAKE_C_COMPILER_AR: /usr/bin/gcc-ar
+      CMAKE_CXX_COMPILER_AR: /usr/bin/gcc-ar
+      CMAKE_C_COMPILER_RANLIB: /usr/bin/gcc-ranlib
+      CMAKE_CXX_COMPILER_RANLIB: /usr/bin/gcc-ranlib
+      CMAKE_C_FLAGS: ''
+      CMAKE_C_FLAGS_RELWITHDEBINFO: -O2 -g -DNDEBUG
+      CMAKE_CXX_FLAGS: ''
+      CMAKE_CXX_FLAGS_RELWITHDEBINFO: -O2 -g -DNDEBUG
+      CMAKE_EXE_LINKER_FLAGS: ''
+      CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO: ''
+      CMAKE_PROJECT_NAME: QLever
+      CMAKE_PROJECT_VERSION: 1.16.0
+    configure_options:
+      ANTLR_BUILD_SHARED: 'OFF'
+      ANTLR_BUILD_STATIC: 'ON'
+      BUILD_EXAMPLES: 'ON'
+      BUILD_GMOCK: 'ON'
+      BUILD_SHARED_LIBS: 'OFF'
+      BUILD_TESTING: 'OFF'
+      BUILD_TESTS: 'OFF'
+      BUILD_W3CTRACECONTEXT_TEST: 'OFF'
+      CHEAPER_COMPILATION: 'OFF'
+      ENABLE_COMPRESSION: 'OFF'
+      ENABLE_PULL: 'ON'
+      ENABLE_PUSH: 'OFF'
+      QLEVER_NO_UNDEFINED_SYMBOLS: 'OFF'
+      QLEVER_NO_UNICODE: 'OFF'
+      QLEVER_ONE_TEST_CASE_PER_FILE: 'OFF'
+      QUERY_CANCELLATION_MODE: ENABLED
+      USE_CPP_17_BACKPORTS: 'OFF'
+      USE_IO_URING: 'ON'
+      USE_PRECOMPILED_HEADERS: 'ON'
+      USE_THIRDPARTY_LIBRARIES: 'ON'
+  server_command:
+  - /home/userNoPriv/code/qlever/qlever-code/build/qlever-server
+  - --index-basename
+  - /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp
+  - --port
+  - '7088'
+  - --no-access-check
+  - --cache-max-size
+  - 0B
+  - --cache-max-size-single-entry
+  - 0B
+  - --cache-max-size-lazy-result
+  - 0B
+  - --cache-max-num-entries
+  - '0'
+  - --default-query-timeout
+  - 1800s
+  - --num-simultaneous-queries
+  - '1'
+  - --construct-deduplication
+  - none
+  access_control: --no-access-check
+  result_cache:
+    cache_max_size: 0B
+    cache_max_size_single_entry: 0B
+    cache_max_size_lazy_result: 0B
+    cache_max_num_entries: 0
+dataset:
+  index_dir: /home/userNoPriv/code/qlever/qlever-indices/dblp
+  index_basename: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp
+  serving_manifest: /home/userNoPriv/thesis/experiments/manifests/dblp-serving-files.txt
+  serving_manifest_file:
+    path: /home/userNoPriv/thesis/experiments/manifests/dblp-serving-files.txt
+    size_bytes: 548
+    mtime_ns: 1785439698441784605
+    sha256: 2eff23ca01335618c7e0cbceb5525dc3dcf8043e8884129c1f55211e3b16ed1a
+  serving_file_count: 25
+  serving_files:
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.spo
+    size_bytes: 3074916737
+    mtime_ns: 1785490910009678568
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.spo.meta
+    size_bytes: 32
+    mtime_ns: 1785490910009678568
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.sop
+    size_bytes: 3105984217
+    mtime_ns: 1785490910020678904
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.sop.meta
+    size_bytes: 32
+    mtime_ns: 1785490910020678904
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.pso
+    size_bytes: 3467093173
+    mtime_ns: 1785492012795738842
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.pso.meta
+    size_bytes: 1792
+    mtime_ns: 1785492012794738815
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.pos
+    size_bytes: 3172894017
+    mtime_ns: 1785492012815739380
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.pos.meta
+    size_bytes: 1792
+    mtime_ns: 1785492012815739380
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.osp
+    size_bytes: 3219665547
+    mtime_ns: 1785491342729186182
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.osp.meta
+    size_bytes: 48608
+    mtime_ns: 1785491342729186182
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.ops
+    size_bytes: 3214950013
+    mtime_ns: 1785491342747186741
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.ops.meta
+    size_bytes: 48608
+    mtime_ns: 1785491342747186741
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.internal.index.pso
+    size_bytes: 260544408
+    mtime_ns: 1785491484218568482
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.internal.index.pso.meta
+    size_bytes: 64
+    mtime_ns: 1785491484218568482
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.internal.index.pos
+    size_bytes: 243512235
+    mtime_ns: 1785491484221568574
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.internal.index.pos.meta
+    size_bytes: 64
+    mtime_ns: 1785491484221568574
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.vocabulary.words.external
+    size_bytes: 4307788713
+    mtime_ns: 1785490218273566876
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+    size_bytes: 3275575448
+    mtime_ns: 1785490219027593379
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.vocabulary.codebooks
+    size_bytes: 1801736
+    mtime_ns: 1785490219034593625
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.vocabulary.words.internal
+    size_bytes: 7581354
+    mtime_ns: 1785490218268566701
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+    size_bytes: 3275664
+    mtime_ns: 1785490218273566876
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.meta-data.json
+    size_bytes: 766
+    mtime_ns: 1785492013205749862
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.settings.json
+    size_bytes: 38
+    mtime_ns: 1766242064771190679
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.index.patterns
+    size_bytes: 173600
+    mtime_ns: 1785490910026244840
+  - path: /home/userNoPriv/code/qlever/qlever-indices/dblp/Qleverfile
+    size_bytes: 1259
+    mtime_ns: 1766241708991302494
+  index_metadata_file:
+    path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.meta-data.json
+    size_bytes: 766
+    mtime_ns: 1785492013205749862
+    sha256: 5e56da95dffddf3b3937059b877f2e9069fae7b07a2c4981f1e67e3940b68799
+  index_metadata:
+    date-of-index-build: '2026-07-31T08:57:51Z'
+    encoded-iri-prefixes:
+      prefixes-with-leading-angle-brackets:
+      - <http://qlever.cs.uni-freiburg.de/builtin-functions/graph/
+    git-hash: bdd1a6b
+    graphNameManager:
+      allocatedGraphs: 1
+      prefix: http://qlever.cs.uni-freiburg.de/builtin-functions/graph/
+    has-all-permutations: true
+    has-icu-support: true
+    index-format-version:
+      date: '2024-10-22'
+      pull-request-number: 1572
+    locale:
+      country: US
+      ignore-punctuation: false
+      language: en
+    num-blank-nodes-total: 54728256
+    num-objects:
+      internal: 0
+      normal: 318850904
+    num-predicates:
+      internal: 6
+      normal: 96
+    num-subjects:
+      internal: 0
+      normal: 234800427
+    num-triples:
+      internal: 234800838
+      normal: 1464719701
+    vocabulary-type: on-disk-compressed
+  index_settings_file:
+    path: /home/userNoPriv/code/qlever/qlever-indices/dblp/dblp.settings.json
+    size_bytes: 38
+    mtime_ns: 1766242064771190679
+    sha256: dacbd745036f0e0c8a62e4c196b33ee544e0bbe8a4f4c9b9331c11a2c1985879
+  qleverfile:
+    path: /home/userNoPriv/code/qlever/qlever-indices/dblp/Qleverfile
+    size_bytes: 1259
+    mtime_ns: 1766241708991302494
+    sha256: c6b000f9beeb6ea9c03db7448ade3d7382d85c4f94e89dd831c858a40dcaf08d
+query_file:
+  path: /home/userNoPriv/thesis/representative-queries/H-size.rq
+  size_bytes: 375
+  mtime_ns: 1785423464877831516
+  sha256: f28ee24c0b42cd908e0b4338b644a801aac1718c0ea510928fbd3e012a5d2e05
+machine:
+  hostname: workstation
+  system: Linux-6.18.13-100.fc42.x86_64-x86_64-with-glibc2.41
+  python: 3.13.12 (main, Feb  4 2026, 00:00:00) [GCC 15.2.1 20260123 (Red Hat 15.2.1-7)]
+  python_packages:
+    httpx: 0.28.1
+    PyYAML: 6.0.2
+    xxhash: 3.8.1
+  loadavg:
+  - 1.81982421875
+  - 1.73828125
+  - 1.3388671875
+  mem_available_gib: 14.192867279052734
+  cpu_model_names:
+  - AMD Ryzen 5 4600G with Radeon Graphics
+  cpu_governors:
+    cpu0: powersave
+    cpu1: powersave
+    cpu10: powersave
+    cpu11: powersave
+    cpu2: powersave
+    cpu3: powersave
+    cpu4: powersave
+    cpu5: powersave
+    cpu6: powersave
+    cpu7: powersave
+    cpu8: powersave
+    cpu9: powersave
+  cpu_scaling_drivers:
+    cpu0: amd-pstate-epp
+    cpu1: amd-pstate-epp
+    cpu10: amd-pstate-epp
+    cpu11: amd-pstate-epp
+    cpu2: amd-pstate-epp
+    cpu3: amd-pstate-epp
+    cpu4: amd-pstate-epp
+    cpu5: amd-pstate-epp
+    cpu6: amd-pstate-epp
+    cpu7: amd-pstate-epp
+    cpu8: amd-pstate-epp
+    cpu9: amd-pstate-epp
+  vmtouch: /usr/bin/vmtouch
+completed_at: '2026-08-11T11:29:56.922699+00:00'
