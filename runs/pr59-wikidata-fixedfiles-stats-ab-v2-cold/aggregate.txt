@@ -1,0 +1,13 @@
+## cold
+| query | arm | reps | median elapsed_s | median read_bytes | median syscr | checksums |
+|---|---|---|---|---|---|---|
+| H-vocab-label-large-de | base | 9 | 26.9426 | 9433104384 | 2647 | 1 distinct |
+| H-vocab-label-large-de | variant | 9 | 26.2605 | 9433174016 | 2646 | 1 distinct |
+| H-vocab-random-label-de-200k | base | 10 | 10.6159 | 2990401536.0 | 1201740.0 | 1 distinct |
+| H-vocab-random-label-de-200k | variant | 10 | 10.5695 | 2990215168.0 | 1201740.0 | 1 distinct |
+
+
+PROBLEMS:
+ - H-vocab-label-large-de/base: status=failed bytes=409890946 (/local/data-ssd/stoetzem/thesis/experiments/runs/pr59-wikidata-fixedfiles-stats-ab-v2-cold/cold/H-vocab-label-large-de/base/raw/results.csv)
+ - H-vocab-label-large-de/variant: status=failed bytes=18752176 (/local/data-ssd/stoetzem/thesis/experiments/runs/pr59-wikidata-fixedfiles-stats-ab-v2-cold/cold/H-vocab-label-large-de/variant/raw/results.csv)
+

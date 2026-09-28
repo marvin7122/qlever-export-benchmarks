@@ -1,0 +1,89 @@
+2026-09-28 20:16:33.096 - INFO: [1mQLever server v0.6.0-221-g27e4cb88d, compiled on Mon Sep 28 12:43:16 PM CEST 2026 using git hash 27e4cb8[22m
+2026-09-28 20:16:33.096 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-09-28 20:16:33.098 - INFO: The git hash used to build this index was "65f84b4"
+2026-09-28 20:16:33.098 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-09-28 20:16:45.926 - INFO: Done, number of words: 1,580,300,680
+2026-09-28 20:16:45.926 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-09-28 20:16:46.000 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-09-28 20:16:46.095 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-09-28 20:16:46.165 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-09-28 20:16:46.259 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-09-28 20:16:46.338 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-09-28 20:16:46.418 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-09-28 20:16:46.473 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-09-28 20:16:46.527 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-09-28 20:16:46.527 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-09-28 20:16:47.896 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-09-28 20:16:56.193 - INFO: Initializing server ...
+2026-09-28 20:16:56.193 - INFO: No access token required for restricted API calls
+2026-09-28 20:16:56.194 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-09-28 20:16:56.413 - INFO: 
+2026-09-28 20:16:56.413 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 20:16:56.416 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-09-28 20:16:56.416 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 20:16:56.420 - INFO: Query planning done in 6 ms
+2026-09-28 20:16:56.420 - INFO: Result has unknown size (not computed yet)
+2026-09-28 20:17:23.072 - INFO: Done processing query and sending result, total time was 26,659 ms
+2026-09-28 20:17:23.072 - INFO: io_uring submissions of this query: 8,883,546 reads with IOSQE_FIXED_FILE, 0 reads with a plain descriptor, 32 fixed-file table updates
+2026-09-28 20:17:23.094 - INFO: 
+2026-09-28 20:17:23.094 - INFO: Request received via GET, no content type specified
+2026-09-28 20:17:23.094 - INFO: Processing command "cache-stats": get cache statistics
+2026-09-28 20:17:23.116 - INFO: 
+2026-09-28 20:17:23.116 - INFO: Request received via GET, no content type specified
+2026-09-28 20:17:23.116 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 20:17:23.137 - INFO: 
+2026-09-28 20:17:23.137 - INFO: Request received via GET, no content type specified
+2026-09-28 20:17:23.137 - INFO: Processing command "cache-stats": get cache statistics
+2026-09-28 20:17:23.159 - INFO: 
+2026-09-28 20:17:23.159 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 20:17:23.159 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-09-28 20:17:23.159 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 20:17:23.160 - INFO: Query planning done in 0 ms
+2026-09-28 20:17:23.160 - INFO: Result has unknown size (not computed yet)
+2026-09-28 20:17:41.301 - INFO: Done processing query and sending result, total time was 18,141 ms
+2026-09-28 20:17:41.301 - INFO: io_uring submissions of this query: 8,883,546 reads with IOSQE_FIXED_FILE, 0 reads with a plain descriptor, 0 fixed-file table updates
+2026-09-28 20:17:41.322 - INFO: 
+2026-09-28 20:17:41.322 - INFO: Request received via GET, no content type specified
+2026-09-28 20:17:41.322 - INFO: Processing command "cache-stats": get cache statistics
