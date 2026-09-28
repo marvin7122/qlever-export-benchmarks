@@ -1,0 +1,40 @@
+    64.23%  CompressedVocabularyLookupBenchmark  [.] fsst_decompress
+    13.67%  CompressedVocabularyLookupBenchmark  [.] ad_benchmark::(anonymous namespace)::CompressedVocabularyLookupBenchmark::runAllBenchmarks()
+     5.26%  libjemalloc.so.2                     [.] operator new(unsigned long)
+     4.06%  libjemalloc.so.2                     [.] operator delete(void*, unsigned long)
+     3.16%  libc.so.6                            [.] 0x0000000000188d1f
+     1.11%  CompressedVocabularyLookupBenchmark  [.] libfsst::compressBulk(libfsst::SymbolTable&, unsigned long, unsigned long const*, unsigned char const**, unsigned long, unsigned char*, unsigned long*, unsigned char**, bool, bool)
+     0.67%  CompressedVocabularyLookupBenchmark  [.] memcpy@plt
+     0.64%  CompressedVocabularyLookupBenchmark  [.] ad_benchmark::(anonymous namespace)::CompressedVocabularyLookupBenchmark::CompressedVocabularyLookupBenchmark()
+     0.42%  CompressedVocabularyLookupBenchmark  [.] operator new(unsigned long)@plt
+     0.41%  libc.so.6                            [.] 0x0000000000188db0
+     0.33%  libc.so.6                            [.] 0x0000000000188cf7
+     0.33%  CompressedVocabularyLookupBenchmark  [.] operator delete(void*, unsigned long)@plt
+     0.27%  libc.so.6                            [.] 0x0000000000188d22
+     0.27%  libc.so.6                            [.] 0x0000000000188cf4
+     0.25%  libc.so.6                            [.] 0x0000000000188cf0
+     0.24%  libc.so.6                            [.] 0x0000000000188d15
+     0.22%  libc.so.6                            [.] 0x0000000000188d19
+     0.22%  libc.so.6                            [.] 0x0000000000188d0f
+     0.19%  [kernel.kallsyms]                    [k] srso_return_thunk
+     0.16%  [kernel.kallsyms]                    [k] kernel_init_pages
+     0.16%  CompressedVocabularyLookupBenchmark  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
+     0.14%  [kernel.kallsyms]                    [k] mod_memcg_lruvec_state
+     0.14%  libc.so.6                            [.] _IO_fwrite
+     0.11%  [kernel.kallsyms]                    [k] folio_add_new_anon_rmap
+     0.11%  libc.so.6                            [.] 0x0000000000188d01
+     0.11%  libc.so.6                            [.] 0x0000000000188dec
+     0.09%  [kernel.kallsyms]                    [k] __memmove
+     0.09%  CompressedVocabularyLookupBenchmark  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+     0.08%  [kernel.kallsyms]                    [k] lru_add
+     0.08%  libc.so.6                            [.] 0x0000000000188d05
+     0.08%  [kernel.kallsyms]                    [k] __pte_offset_map
+     0.08%  CompressedVocabularyLookupBenchmark  [.] std::conditional<true, std::tuple<std::shared_ptr<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::vector<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > >, FsstDecoder>, std::unique_ptr<void*, FsstEncoder::Deleter> >::type FsstEncoder::makeEncoder<true, std::vector<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > > >(std::vector<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > > const&)
+     0.08%  libjemalloc.so.2                     [.] 0x00000000000a01fe
+     0.06%  [kernel.kallsyms]                    [k] __handle_mm_fault
+     0.06%  [kernel.kallsyms]                    [k] _raw_spin_unlock
+     0.06%  [kernel.kallsyms]                    [k] __hrtimer_run_queues
+     0.06%  CompressedVocabularyLookupBenchmark  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, unsigned long, std::allocator<char> const&) [clone .isra.0]
+     0.06%  [kernel.kallsyms]                    [k] rmqueue.isra.0
+     0.06%  [kernel.kallsyms]                    [k] lruvec_stat_mod_folio
+     0.06%  libc.so.6                            [.] _IO_file_xsputn
