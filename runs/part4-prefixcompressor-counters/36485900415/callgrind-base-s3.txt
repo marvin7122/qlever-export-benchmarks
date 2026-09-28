@@ -1,0 +1,60 @@
+--------------------------------------------------------------------------------
+Profile data file '/home/runner/work/_temp/w/base-s3.cg' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 13683471
+Trigger: Program termination
+Profiled target:  /home/runner/work/_temp/w/base/PrefixCompressorLengthBenchmark decompress 20000 0 (PID 3477, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+Ir                  
+--------------------------------------------------------------------------------
+75,439,535 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                   file:function
+--------------------------------------------------------------------------------
+38,496,263 (51.03%)  ???:main [/home/runner/work/_temp/w/base/PrefixCompressorLengthBenchmark]
+ 7,520,000 ( 9.97%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > strCatImpl<char>(std::basic_string_view<char, std::char_traits<char> > const&, std::basic_string_view<char, std::char_traits<char> >) [/home/runner/work/_temp/w/base/PrefixCompressorLengthBenchmark]
+ 5,797,558 ( 7.69%)  ???:free [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+ 4,359,491 ( 5.78%)  ???:malloc [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+ 3,820,000 ( 5.06%)  ???:PrefixCompressor::decompress[abi:cxx11](std::basic_string_view<char, std::char_traits<char> >) const [/home/runner/work/_temp/w/base/PrefixCompressorLengthBenchmark]
+ 2,604,474 ( 3.45%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 2,355,331 ( 3.12%)  ./elf/./elf/dl-lookup.c:do_lookup_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 1,422,126 ( 1.89%)  ./string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:__memset_avx2_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,286,067 ( 1.70%)  ./string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S:__memcmp_avx2_movbe [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   807,157 ( 1.07%)  ???:0x00000000000af680 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+   780,120 ( 1.03%)  ???:unsigned long (anonymous namespace)::runPass<false, PrefixCompressor>((anonymous namespace)::Data const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char*, unsigned long&) [clone .isra.0] [/home/runner/work/_temp/w/base/PrefixCompressorLengthBenchmark]
+   752,690 ( 1.00%)  ./elf/../sysdeps/generic/dl-new-hash.h:_dl_lookup_symbol_x
+   549,607 ( 0.73%)  ???:0x00000000000a41c0 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+   457,091 ( 0.61%)  ./elf/../sysdeps/x86_64/dl-machine.h:_dl_relocate_object
+   440,050 ( 0.58%)  ???:0x000000000010c550 [???]
+   368,215 ( 0.49%)  ./elf/./elf/dl-lookup.c:_dl_lookup_symbol_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   360,150 ( 0.48%)  ./elf/./elf/do-rel.h:_dl_relocate_object
+   320,128 ( 0.42%)  ???:0x000000000010c710 [???]
+   320,128 ( 0.42%)  ???:0x000000000010c810 [???]
+   308,550 ( 0.41%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/strcmp-sse2.S:strcmp [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   267,674 ( 0.35%)  ./elf/./elf/dl-reloc.c:_dl_relocate_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   243,204 ( 0.32%)  ???:0x0000000000030eb0 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+   220,594 ( 0.29%)  ./elf/./elf/dl-lookup.c:check_match [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   160,084 ( 0.21%)  ???:std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~vector() [/home/runner/work/_temp/w/base/PrefixCompressorLengthBenchmark]
+   150,002 ( 0.20%)  ???:0x000000000010c960 [???]
+    76,609 ( 0.10%)  ./elf/./elf/dl-tunables.c:__GI___tunables_init [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    61,881 ( 0.08%)  ???:0x00000000000aab40 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+    61,346 ( 0.08%)  ./nptl/./nptl/pthread_mutex_trylock.c:pthread_mutex_trylock@@GLIBC_2.34 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    59,279 ( 0.08%)  ???:0x00000000000834b0 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+    55,683 ( 0.07%)  ???:0x0000000000043970 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+    47,251 ( 0.06%)  ???:0x00000000000adbd0 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+    39,817 ( 0.05%)  ./elf/./elf/dl-version.c:_dl_check_map_versions [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    38,168 ( 0.05%)  ./nptl/./nptl/pthread_mutex_unlock.c:pthread_mutex_unlock@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    32,604 ( 0.04%)  ???:0x00000000000ae010 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
+    32,161 ( 0.04%)  ???:0x0000000000083100 [/usr/lib/x86_64-linux-gnu/libjemalloc.so.2]
