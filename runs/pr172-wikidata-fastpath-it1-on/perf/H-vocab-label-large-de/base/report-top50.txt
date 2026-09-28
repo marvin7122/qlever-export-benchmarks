@@ -1,0 +1,50 @@
+     9.82%  qlever-server-b  qlever-server-base            [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+     8.92%  qlever-server-b  [kernel.kallsyms]             [k] filemap_get_read_batch
+     6.13%  qlever-server-b  [kernel.kallsyms]             [k] _copy_to_iter
+     5.25%  qlever-server-b  [kernel.kallsyms]             [k] filemap_read
+     2.56%  qlever-server-b  qlever-server-base            [.] qlever::constructExport::ConstructBatchEvaluator::evaluateVariableByColumn(unsigned long, qlever::constructExport::BatchEvaluationContext const&, LocalVocab const&, Index const&, ad_utility::util::LRUCacheWithStatistics<ValueId, std::optional<std::shared_ptr<qlever::constructExport::EvaluatedTermData const> > >&)
+     2.20%  qlever-server-b  [kernel.kallsyms]             [k] vfs_read
+     2.03%  qlever-server-b  [kernel.kallsyms]             [k] srso_safe_ret
+     1.36%  qlever-server-b  qlever-server-base            [.] fsst_decompress
+     1.34%  qlever-server-b  [kernel.kallsyms]             [k] atime_needs_update
+     1.30%  qlever-server-b  qlever-server-base            [.] ValueId::compareThreeWay(ValueId const&) const
+     1.28%  qlever-server-b  qlever-server-base            [.] ad_utility::vocabulary::detail::DecoderMultiplexer<FsstRepeatedDecoder<2ul> >::decompress[abi:cxx11](std::basic_string_view<char, std::char_traits<char> >, unsigned long) const
+     1.25%  qlever-server-b  [kernel.kallsyms]             [k] __x64_sys_pread64
+     1.21%  qlever-server-b  qlever-server-base            [.] qlever::constructExport::instantiateBatch(qlever::constructExport::PreprocessedConstructTemplate const&, qlever::constructExport::BatchEvaluationResult const&, unsigned long, std::optional<qlever::constructExport::DeduplicationParams>)
+     1.13%  qlever-server-b  [kernel.kallsyms]             [k] xas_load
+     1.10%  qlever-server-b  [kernel.kallsyms]             [k] do_syscall_64
+     1.03%  qlever-server-b  [kernel.kallsyms]             [k] fdget
+     1.03%  qlever-server-b  qlever-server-base            [.] boost::iostreams::detail::indirect_streambuf<boost::iostreams::back_insert_device<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::char_traits<char>, std::allocator<char>, boost::iostreams::output>::overflow(int)
+     0.98%  qlever-server-b  libjemalloc.so.2              [.] operator new(unsigned long)
+     0.96%  qlever-server-b  [kernel.kallsyms]             [k] aa_file_perm
+     0.94%  qlever-server-b  qlever-server-base            [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+     0.93%  qlever-server-b  libz.so.1.3                   [.] adler32_z
+     0.93%  qlever-server-b  [kernel.kallsyms]             [k] apparmor_file_permission
+     0.91%  qlever-server-b  libjemalloc.so.2              [.] operator delete(void*, unsigned long)
+     0.88%  qlever-server-b  [kernel.kallsyms]             [k] copy_page_to_iter
+     0.87%  qlever-server-b  [kernel.kallsyms]             [k] ext4_file_read_iter
+     0.84%  qlever-server-b  qlever-server-base            [.] RdfEscaping::validRDFLiteralFromNormalized[abi:cxx11](std::basic_string_view<char, std::char_traits<char> >)
+     0.82%  qlever-server-b  [kernel.kallsyms]             [k] srso_return_thunk
+     0.79%  qlever-server-b  [kernel.kallsyms]             [k] current_time
+     0.79%  qlever-server-b  libc.so.6                     [.] __libc_pread
+     0.75%  qlever-server-b  [kernel.kallsyms]             [k] entry_SYSCALL_64_after_hwframe
+     0.72%  qlever-server-b  [kernel.kallsyms]             [k] filemap_get_pages
+     0.71%  qlever-server-b  qlever-server-base            [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     0.68%  qlever-server-b  qlever-server-base            [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+     0.66%  qlever-server-b  qlever-server-base            [.] VocabularyOnDisk::operator[][abi:cxx11](unsigned long) const
+     0.65%  qlever-server-b  [kernel.kallsyms]             [k] arch_exit_to_user_mode_prepare.isra.0
+     0.59%  qlever-server-b  [kernel.kallsyms]             [k] __fsnotify_parent
+     0.59%  qlever-server-b  [kernel.kallsyms]             [k] entry_SYSCALL_64
+     0.58%  qlever-server-b  [kernel.kallsyms]             [k] rw_verify_area
+     0.57%  qlever-server-b  qlever-server-base            [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
+     0.55%  qlever-server-b  qlever-server-base            [.] std::shared_ptr<std::span<std::basic_string_view<char, std::char_traits<char> >, 18446744073709551615ul> > ad_utility::vocabulary::sequentialLookupBatch<CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul> >(CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul> const&, std::span<unsigned long const, 18446744073709551615ul>)
+     0.53%  qlever-server-b  qlever-server-base            [.] std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
+     0.50%  qlever-server-b  qlever-server-base            [.] void std::__introsort_loop<__gnu_cxx::__normal_iterator<std::pair<long, ValueId>*, std::vector<std::pair<long, ValueId>, std::allocator<std::pair<long, ValueId> > > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::ranges::__detail::__make_comp_proj<std::ranges::less, ad_utility::detail::SecondImpl>(std::ranges::less&, ad_utility::detail::SecondImpl&)::{lambda(auto:1&&, auto:2&&)#1}> >(__gnu_cxx::__normal_iterator<std::pair<long, ValueId>*, std::vector<std::pair<long, ValueId>, std::allocator<std::pair<long, ValueId> > > >, __gnu_cxx::__normal_iterator<std::pair<long, ValueId>*, std::vector<std::pair<long, ValueId>, std::allocator<std::pair<long, ValueId> > > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::ranges::__detail::__make_comp_proj<std::ranges::less, ad_utility::detail::SecondImpl>(std::ranges::less&, ad_utility::detail::SecondImpl&)::{lambda(auto:1&&, auto:2&&)#1}>)
+     0.50%  qlever-server-b  libstdc++.so.6.0.33           [.] std::basic_streambuf<char, std::char_traits<char> >::xsputn(char const*, long)
+     0.47%  qlever-server-b  [kernel.kallsyms]             [k] security_file_permission
+     0.46%  qlever-server-b  [kernel.kallsyms]             [k] generic_file_read_iter
+     0.43%  qlever-server-b  qlever-server-base            [.] std::vector<std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> >, std::allocator<std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> > > > ql::exportIds::idsToStringAndType<false, false, ql::identity>(Index const&, std::span<ValueId const, 18446744073709551615ul>, LocalVocab const&, ql::identity const&)
+     0.42%  qlever-server-b  qlever-server-base            [.] void ad_utility::detail::BlockZipperJoinImplCRTP<ad_utility::detail::BlockZipperJoinImpl<ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, std::less<void>, ad_utility::AddCombinedRowToIdTable, ad_utility::detail::AlwaysFalse>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, std::less<void>, ad_utility::AddCombinedRowToIdTable, ad_utility::detail::AlwaysFalse>::joinAndRemoveLessThanCurrentEl<false>(std::vector<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> >, std::allocator<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> > > >&, std::vector<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> >, std::allocator<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> > > >&, ValueId const&)
+     0.40%  qlever-server-b  [kernel.kallsyms]             [k] rep_movs_alternative
+     0.38%  qlever-server-b  [kernel.kallsyms]             [k] x64_sys_call
+     0.38%  qlever-server-b  qlever-server-base            [.] VocabularyInternalExternal::operator[][abi:cxx11](unsigned long) const
