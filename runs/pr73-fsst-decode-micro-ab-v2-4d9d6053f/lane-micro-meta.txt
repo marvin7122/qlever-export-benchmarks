@@ -1,0 +1,141 @@
+job=90015 lane=micro start=2026-09-28T21:54:29Z
+script=/local/data-ssd/stoetzem/incoming/pr73-micro-v2.sh sha256=adbf6a0f4398fe24418eafe511c88977311d6b74b96c282ed2c65e5d77e10333
+args=
+qbranch=bench/pr73-ab-variant2 sha=4d9d6053fe1976d4d33d619fad109cdfde079740
+host=ural kernel=7.0.0-28-generic loadavg=2.35 2.48 2.54 2/961 3246443
+ural-wq running at start: 5192|bench
+--- bin-cache/0456e6c5955576282965bd1821c2b84a093dda8a: CMakeCache.txt CompressedVocabularyLookupBenchmark FsstDecodeAbBenchmark META-CompressedVocabularyLookupBenchmark META-FsstDecodeAbBenchmark META-qlever-server qlever-server 
+  META-CompressedVocabularyLookupBenchmark: branch=bench/pr73-ab-base
+  META-CompressedVocabularyLookupBenchmark: sha=0456e6c5955576282965bd1821c2b84a093dda8a
+  META-CompressedVocabularyLookupBenchmark: target=CompressedVocabularyLookupBenchmark
+  META-CompressedVocabularyLookupBenchmark: flavor=u24
+  META-CompressedVocabularyLookupBenchmark: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-CompressedVocabularyLookupBenchmark: build_type=Release
+  META-CompressedVocabularyLookupBenchmark: cxx_flags_release=-O3 -DNDEBUG
+  META-CompressedVocabularyLookupBenchmark: exe_linker_flags=
+  META-CompressedVocabularyLookupBenchmark: linker=default ld
+  META-CompressedVocabularyLookupBenchmark: profile=b3c465cfff4a
+  META-CompressedVocabularyLookupBenchmark: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-CompressedVocabularyLookupBenchmark: built_utc=2026-09-28T17:21:36Z host=wolga wq_seq=227
+  META-FsstDecodeAbBenchmark: branch=bench/pr73-ab-base
+  META-FsstDecodeAbBenchmark: sha=0456e6c5955576282965bd1821c2b84a093dda8a
+  META-FsstDecodeAbBenchmark: target=FsstDecodeAbBenchmark
+  META-FsstDecodeAbBenchmark: flavor=u24
+  META-FsstDecodeAbBenchmark: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-FsstDecodeAbBenchmark: build_type=Release
+  META-FsstDecodeAbBenchmark: cxx_flags_release=-O3 -DNDEBUG
+  META-FsstDecodeAbBenchmark: exe_linker_flags=
+  META-FsstDecodeAbBenchmark: linker=default ld
+  META-FsstDecodeAbBenchmark: profile=b3c465cfff4a
+  META-FsstDecodeAbBenchmark: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-FsstDecodeAbBenchmark: built_utc=2026-09-28T17:21:36Z host=wolga wq_seq=227
+  META-qlever-server: branch=bench/pr73-ab-base
+  META-qlever-server: sha=0456e6c5955576282965bd1821c2b84a093dda8a
+  META-qlever-server: target=qlever-server
+  META-qlever-server: flavor=u24
+  META-qlever-server: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-qlever-server: build_type=Release
+  META-qlever-server: cxx_flags_release=-O3 -DNDEBUG
+  META-qlever-server: exe_linker_flags=
+  META-qlever-server: linker=default ld
+  META-qlever-server: profile=b3c465cfff4a
+  META-qlever-server: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-qlever-server: built_utc=2026-09-28T17:21:36Z host=wolga wq_seq=227
+--- bin-cache/4d9d6053fe1976d4d33d619fad109cdfde079740: CMakeCache.txt CompressedVocabularyLookupBenchmark FsstDecodeAbBenchmark FsstScratchBufferBenchmark META-CompressedVocabularyLookupBenchmark META-FsstDecodeAbBenchmark META-FsstScratchBufferBenchmark META-qlever-server qlever-server 
+  META-CompressedVocabularyLookupBenchmark: branch=bench/pr73-ab-variant2
+  META-CompressedVocabularyLookupBenchmark: sha=4d9d6053fe1976d4d33d619fad109cdfde079740
+  META-CompressedVocabularyLookupBenchmark: target=CompressedVocabularyLookupBenchmark
+  META-CompressedVocabularyLookupBenchmark: flavor=u24
+  META-CompressedVocabularyLookupBenchmark: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-CompressedVocabularyLookupBenchmark: build_type=Release
+  META-CompressedVocabularyLookupBenchmark: cxx_flags_release=-O3 -DNDEBUG
+  META-CompressedVocabularyLookupBenchmark: exe_linker_flags=
+  META-CompressedVocabularyLookupBenchmark: linker=default ld
+  META-CompressedVocabularyLookupBenchmark: profile=b3c465cfff4a
+  META-CompressedVocabularyLookupBenchmark: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-CompressedVocabularyLookupBenchmark: built_utc=2026-09-28T20:25:50Z host=wolga wq_seq=250
+  META-FsstDecodeAbBenchmark: branch=bench/pr73-ab-variant2
+  META-FsstDecodeAbBenchmark: sha=4d9d6053fe1976d4d33d619fad109cdfde079740
+  META-FsstDecodeAbBenchmark: target=FsstDecodeAbBenchmark
+  META-FsstDecodeAbBenchmark: flavor=u24
+  META-FsstDecodeAbBenchmark: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-FsstDecodeAbBenchmark: build_type=Release
+  META-FsstDecodeAbBenchmark: cxx_flags_release=-O3 -DNDEBUG
+  META-FsstDecodeAbBenchmark: exe_linker_flags=
+  META-FsstDecodeAbBenchmark: linker=default ld
+  META-FsstDecodeAbBenchmark: profile=b3c465cfff4a
+  META-FsstDecodeAbBenchmark: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-FsstDecodeAbBenchmark: built_utc=2026-09-28T20:25:50Z host=wolga wq_seq=250
+  META-FsstScratchBufferBenchmark: branch=bench/pr73-ab-variant2
+  META-FsstScratchBufferBenchmark: sha=4d9d6053fe1976d4d33d619fad109cdfde079740
+  META-FsstScratchBufferBenchmark: target=FsstScratchBufferBenchmark
+  META-FsstScratchBufferBenchmark: flavor=u24
+  META-FsstScratchBufferBenchmark: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-FsstScratchBufferBenchmark: build_type=Release
+  META-FsstScratchBufferBenchmark: cxx_flags_release=-O3 -DNDEBUG
+  META-FsstScratchBufferBenchmark: exe_linker_flags=
+  META-FsstScratchBufferBenchmark: linker=default ld
+  META-FsstScratchBufferBenchmark: profile=b3c465cfff4a
+  META-FsstScratchBufferBenchmark: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-FsstScratchBufferBenchmark: built_utc=2026-09-28T20:25:50Z host=wolga wq_seq=250
+  META-qlever-server: branch=bench/pr73-ab-variant2
+  META-qlever-server: sha=4d9d6053fe1976d4d33d619fad109cdfde079740
+  META-qlever-server: target=qlever-server
+  META-qlever-server: flavor=u24
+  META-qlever-server: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-qlever-server: build_type=Release
+  META-qlever-server: cxx_flags_release=-O3 -DNDEBUG
+  META-qlever-server: exe_linker_flags=
+  META-qlever-server: linker=default ld
+  META-qlever-server: profile=b3c465cfff4a
+  META-qlever-server: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-qlever-server: built_utc=2026-09-28T20:32:23Z host=wolga wq_seq=253
+--- bin-cache/fa04698423899cd72c2d552a72eae3c466433baa: CMakeCache.txt CompressedVocabularyLookupBenchmark FsstDecodeAbBenchmark FsstScratchBufferBenchmark META-CompressedVocabularyLookupBenchmark META-FsstDecodeAbBenchmark META-FsstScratchBufferBenchmark META-qlever-server qlever-server 
+  META-CompressedVocabularyLookupBenchmark: branch=bench/pr73-ab-variant
+  META-CompressedVocabularyLookupBenchmark: sha=fa04698423899cd72c2d552a72eae3c466433baa
+  META-CompressedVocabularyLookupBenchmark: target=CompressedVocabularyLookupBenchmark
+  META-CompressedVocabularyLookupBenchmark: flavor=u24
+  META-CompressedVocabularyLookupBenchmark: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-CompressedVocabularyLookupBenchmark: build_type=Release
+  META-CompressedVocabularyLookupBenchmark: cxx_flags_release=-O3 -DNDEBUG
+  META-CompressedVocabularyLookupBenchmark: exe_linker_flags=
+  META-CompressedVocabularyLookupBenchmark: linker=default ld
+  META-CompressedVocabularyLookupBenchmark: profile=b3c465cfff4a
+  META-CompressedVocabularyLookupBenchmark: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-CompressedVocabularyLookupBenchmark: built_utc=2026-09-28T17:16:47Z host=wolga wq_seq=226
+  META-FsstDecodeAbBenchmark: branch=bench/pr73-ab-variant
+  META-FsstDecodeAbBenchmark: sha=fa04698423899cd72c2d552a72eae3c466433baa
+  META-FsstDecodeAbBenchmark: target=FsstDecodeAbBenchmark
+  META-FsstDecodeAbBenchmark: flavor=u24
+  META-FsstDecodeAbBenchmark: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-FsstDecodeAbBenchmark: build_type=Release
+  META-FsstDecodeAbBenchmark: cxx_flags_release=-O3 -DNDEBUG
+  META-FsstDecodeAbBenchmark: exe_linker_flags=
+  META-FsstDecodeAbBenchmark: linker=default ld
+  META-FsstDecodeAbBenchmark: profile=b3c465cfff4a
+  META-FsstDecodeAbBenchmark: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-FsstDecodeAbBenchmark: built_utc=2026-09-28T17:16:47Z host=wolga wq_seq=226
+  META-FsstScratchBufferBenchmark: branch=bench/pr73-ab-variant
+  META-FsstScratchBufferBenchmark: sha=fa04698423899cd72c2d552a72eae3c466433baa
+  META-FsstScratchBufferBenchmark: target=FsstScratchBufferBenchmark
+  META-FsstScratchBufferBenchmark: flavor=u24
+  META-FsstScratchBufferBenchmark: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-FsstScratchBufferBenchmark: build_type=Release
+  META-FsstScratchBufferBenchmark: cxx_flags_release=-O3 -DNDEBUG
+  META-FsstScratchBufferBenchmark: exe_linker_flags=
+  META-FsstScratchBufferBenchmark: linker=default ld
+  META-FsstScratchBufferBenchmark: profile=b3c465cfff4a
+  META-FsstScratchBufferBenchmark: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-FsstScratchBufferBenchmark: built_utc=2026-09-28T17:16:47Z host=wolga wq_seq=226
+  META-qlever-server: branch=bench/pr73-ab-variant
+  META-qlever-server: sha=fa04698423899cd72c2d552a72eae3c466433baa
+  META-qlever-server: target=qlever-server
+  META-qlever-server: flavor=u24
+  META-qlever-server: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-qlever-server: build_type=Release
+  META-qlever-server: cxx_flags_release=-O3 -DNDEBUG
+  META-qlever-server: exe_linker_flags=
+  META-qlever-server: linker=default ld
+  META-qlever-server: profile=b3c465cfff4a
+  META-qlever-server: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-qlever-server: built_utc=2026-09-28T17:16:47Z host=wolga wq_seq=226

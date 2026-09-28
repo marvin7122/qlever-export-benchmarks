@@ -1,0 +1,40 @@
+    74.48%  FsstDecodeAbBenchmark  [.] fsst_decompress
+     3.62%  FsstDecodeAbBenchmark  [.] void ql::resize_and_overwrite<char, std::char_traits<char>, std::allocator<char>, detail::decompressToOwnedString<FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1}>(unsigned long, FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1})::{lambda(char*, unsigned long)#1}>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long, detail::decompressToOwnedString<FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1}>(unsigned long, FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1})::{lambda(char*, unsigned long)#1}&&)
+     2.83%  FsstDecodeAbBenchmark  [.] std::_Function_handler<unsigned long (std::basic_string_view<char, std::char_traits<char> >), ad_benchmark::(anonymous namespace)::FsstDecodeAbBenchmark::runAllBenchmarks()::{lambda(std::basic_string_view<char, std::char_traits<char> >)#1}>::_M_invoke(std::_Any_data const&, std::basic_string_view<char, std::char_traits<char> >&&)
+     2.10%  FsstDecodeAbBenchmark  [.] FsstDecoder::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>) const
+     1.37%  FsstDecodeAbBenchmark  [.] ad_benchmark::(anonymous namespace)::FsstDecodeAbBenchmark::runAllBenchmarks()
+     1.12%  libjemalloc.so.2       [.] operator new(unsigned long)
+     1.10%  FsstDecodeAbBenchmark  [.] FsstDecoder::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     1.03%  libc.so.6              [.] 0x0000000000189813
+     0.86%  libc.so.6              [.] 0x0000000000189809
+     0.84%  libc.so.6              [.] 0x0000000000189817
+     0.81%  libc.so.6              [.] 0x0000000000189800
+     0.77%  libc.so.6              [.] 0x0000000000189833
+     0.74%  libc.so.6              [.] 0x0000000000189804
+     0.68%  libc.so.6              [.] 0x000000000018980e
+     0.52%  libjemalloc.so.2       [.] operator delete(void*, unsigned long)
+     0.38%  FsstDecodeAbBenchmark  [.] ad_benchmark::(anonymous namespace)::FsstDecodeAbBenchmark::FsstDecodeAbBenchmark()
+     0.35%  FsstDecodeAbBenchmark  [.] libfsst::compressBulk(libfsst::SymbolTable&, unsigned long, unsigned long const*, unsigned char const**, unsigned long, unsigned char*, unsigned long*, unsigned char**, bool, bool)
+     0.25%  libc.so.6              [.] 0x0000000000189829
+     0.23%  libc.so.6              [.] 0x0000000000189824
+     0.22%  libc.so.6              [.] 0x000000000018982e
+     0.17%  FsstDecodeAbBenchmark  [.] operator delete(void*, unsigned long)@plt
+     0.15%  libjemalloc.so.2       [.] 0x0000000000036899
+     0.15%  libc.so.6              [.] 0x000000000018981c
+     0.13%  libc.so.6              [.] 0x00000000001897cd
+     0.11%  libc.so.6              [.] 0x00000000001897f5
+     0.10%  libc.so.6              [.] 0x00000000001897ec
+     0.10%  FsstDecodeAbBenchmark  [.] memset@plt
+     0.10%  libc.so.6              [.] 0x0000000000189725
+     0.10%  libc.so.6              [.] 0x00000000001897d5
+     0.08%  libc.so.6              [.] 0x000000000018972a
+     0.08%  libjemalloc.so.2       [.] 0x0000000000036996
+     0.08%  libjemalloc.so.2       [.] 0x000000000003688b
+     0.08%  libc.so.6              [.] 0x00000000001897c9
+     0.08%  libjemalloc.so.2       [.] 0x0000000000036abb
+     0.08%  libjemalloc.so.2       [.] 0x00000000000367fa
+     0.08%  libjemalloc.so.2       [.] 0x00000000000b4b3d
+     0.07%  libjemalloc.so.2       [.] 0x000000000003698c
+     0.07%  FsstDecodeAbBenchmark  [.] operator new(unsigned long)@plt
+     0.07%  libjemalloc.so.2       [.] 0x0000000000036936
+     0.07%  libjemalloc.so.2       [.] 0x000000000003681f
