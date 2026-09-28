@@ -1,0 +1,53 @@
+2026-09-28 18:47:49.796 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:49.797 - INFO: Running measurement "build: compress + write + open of group End to end: 50,000 words in 13 decoder blocks, 100,000 lookups per batch" ...
+2026-09-28 18:47:49.833 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:49.866 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:49.903 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:49.937 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:49.968 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:49.999 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:50.032 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:50.063 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:50.094 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:50.125 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:50.160 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:50.190 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:50.225 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:50.256 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:50.288 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:50.318 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:50.352 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:50.383 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:50.414 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:50.444 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:47:50.445 - INFO: Done in 0.647724 seconds.
+2026-09-28 18:47:50.445 - INFO: Running measurement "sequential operator[] over batch of group End to end: 50,000 words in 13 decoder blocks, 100,000 lookups per batch" ...
+2026-09-28 18:47:52.794 - INFO: Done in 2.34959 seconds.
+2026-09-28 18:47:52.794 - INFO: Running measurement "lookupBatch over batch (PMR arena) of group End to end: 50,000 words in 13 decoder blocks, 100,000 lookups per batch" ...
+2026-09-28 18:47:56.963 - INFO: Done in 4.16908 seconds.
+####################################################################
+# Benchmark class 'CompressedVocabulary::lookupBatch (end to end)' #
+####################################################################
+General metadata: {"time-of-measurement":"2026-09-28 18:47:49.797"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'End to end: 50,000 words in 13 decoder blocks, 100,000 lookups per batch'
+    Measurements:
+    
+        Single measurement 'build: compress + write + open'
+            time: 0.647724s
+        
+        Single measurement 'sequential operator[] over batch'
+            time: 2.34959s
+        
+        Single measurement 'lookupBatch over batch (PMR arena)'
+            time: 4.16908s
+    
+    Tables: None
+
+[ perf record: Woken up 4 times to write data ]
+[ perf record: Captured and wrote 0.979 MB perf-ring.data (7136 samples) ]

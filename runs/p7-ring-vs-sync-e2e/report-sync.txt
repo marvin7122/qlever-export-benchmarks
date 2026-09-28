@@ -1,0 +1,58 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 5K of event 'cpu/cycles/P'
+# Event count (approx.): 24670915430
+#
+# Overhead  Command          Shared Object                                Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+# ........  ...............  ...........................................  ..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+     7.03%  CompressedVocab  [kernel.kallsyms]                            [k] filemap_read
+     6.14%  CompressedVocab  [kernel.kallsyms]                            [k] filemap_get_read_batch
+     5.48%  CompressedVocab  [kernel.kallsyms]                            [k] vfs_read
+     4.16%  CompressedVocab  [kernel.kallsyms]                            [k] do_syscall_64
+     3.79%  CompressedVocab  [kernel.kallsyms]                            [k] srso_safe_ret
+     3.28%  CompressedVocab  [kernel.kallsyms]                            [k] atime_needs_update
+     3.28%  CompressedVocab  [kernel.kallsyms]                            [k] _copy_to_iter
+     3.25%  CompressedVocab  [kernel.kallsyms]                            [k] __seccomp_filter
+     2.76%  CompressedVocab  [kernel.kallsyms]                            [k] copy_page_to_iter
+     2.31%  CompressedVocab  [kernel.kallsyms]                            [k] entry_SYSCALL_64_after_hwframe
+     2.29%  CompressedVocab  [kernel.kallsyms]                            [k] srso_return_thunk
+     2.28%  CompressedVocab  [kernel.kallsyms]                            [k] ext4_file_read_iter
+     2.26%  CompressedVocab  [kernel.kallsyms]                            [k] __x64_sys_pread64
+     2.15%  CompressedVocab  [kernel.kallsyms]                            [k] aa_file_perm
+     2.02%  CompressedVocab  [kernel.kallsyms]                            [k] apparmor_file_permission
+     1.87%  CompressedVocab  [kernel.kallsyms]                            [k] filemap_get_pages
+     1.82%  CompressedVocab  CompressedVocabLookupBatchEndToEndBenchmark  [.] libfsst::buildSymbolTable(libfsst::Counters&, std::vector<unsigned char const*, std::allocator<unsigned char const*> >, unsigned long const*, bool)
+     1.80%  CompressedVocab  [kernel.kallsyms]                            [k] xas_load
+     1.69%  CompressedVocab  [kernel.kallsyms]                            [k] __fsnotify_parent
+     1.67%  CompressedVocab  [kernel.kallsyms]                            [k] current_time
+     1.64%  CompressedVocab  libc.so.6                                    [.] __libc_pread
+     1.64%  CompressedVocab  [kernel.kallsyms]                            [k] rw_verify_area
+     1.52%  CompressedVocab  CompressedVocabLookupBatchEndToEndBenchmark  [.] libfsst::compressBulk(libfsst::SymbolTable&, unsigned long, unsigned long const*, unsigned char const**, unsigned long, unsigned char*, unsigned long*, unsigned char**, bool, bool)
+     1.51%  CompressedVocab  CompressedVocabLookupBatchEndToEndBenchmark  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     1.47%  CompressedVocab  [kernel.kallsyms]                            [k] arch_exit_to_user_mode_prepare.isra.0
+     1.44%  CompressedVocab  CompressedVocabLookupBatchEndToEndBenchmark  [.] fsst_decompress
+     1.42%  CompressedVocab  [kernel.kallsyms]                            [k] security_file_permission
+     1.36%  CompressedVocab  [kernel.kallsyms]                            [k] generic_file_read_iter
+     1.26%  CompressedVocab  [kernel.kallsyms]                            [k] x64_sys_call
+     1.16%  CompressedVocab  [kernel.kallsyms]                            [k] entry_SYSCALL_64
+     1.07%  CompressedVocab  CompressedVocabLookupBatchEndToEndBenchmark  [.] libfsst::buildSymbolTable(libfsst::Counters&, std::vector<unsigned char const*, std::allocator<unsigned char const*> >, unsigned long const*, bool)::{lambda(libfsst::SymbolTable*, libfsst::Counters&)#2}::operator()(libfsst::SymbolTable*, libfsst::Counters&) const
+     0.92%  CompressedVocab  [kernel.kallsyms]                            [k] touch_atime
+     0.91%  CompressedVocab  [kernel.kallsyms]                            [k] __secure_computing
+     0.88%  CompressedVocab  [kernel.kallsyms]                            [k] seccomp_run_filters
+     0.80%  CompressedVocab  CompressedVocabLookupBatchEndToEndBenchmark  [.] float ad_benchmark::measureTimeOfFunction<ad_benchmark::(anonymous namespace)::CompressedVocabLookupBatchEndToEndBenchmark::runAllBenchmarks()::{lambda()#2}>(ad_benchmark::(anonymous namespace)::CompressedVocabLookupBatchEndToEndBenchmark::runAllBenchmarks()::{lambda()#2} const&, std::basic_string_view<char, std::char_traits<char> >)
+     0.78%  CompressedVocab  [kernel.kallsyms]                            [k] entry_SYSRETQ_unsafe_stack
+     0.67%  CompressedVocab  CompressedVocabLookupBatchEndToEndBenchmark  [.] VocabularyOnDisk::operator[][abi:cxx11](unsigned long) const
+     0.62%  CompressedVocab  [kernel.kallsyms]                            [k] xas_start
+     0.59%  CompressedVocab  [kernel.kallsyms]                            [k] srso_untrain_ret
+     0.57%  CompressedVocab  CompressedVocabLookupBatchEndToEndBenchmark  [.] ad_utility::SyncIoPolicy::addBatch(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>, unsigned long) const
+     0.53%  CompressedVocab  [kernel.kallsyms]                            [k] __rcu_read_unlock
+     0.50%  CompressedVocab  [kernel.kallsyms]                            [k] __rcu_read_lock
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

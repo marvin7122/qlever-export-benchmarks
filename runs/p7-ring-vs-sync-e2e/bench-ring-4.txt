@@ -1,0 +1,51 @@
+2026-09-28 18:41:09.258 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.259 - INFO: Running measurement "build: compress + write + open of group End to end: 50,000 words in 13 decoder blocks, 100,000 lookups per batch" ...
+2026-09-28 18:41:09.296 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.327 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.356 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.387 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.417 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.446 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.477 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.508 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.538 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.569 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.599 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.630 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.660 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.690 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.721 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.751 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.781 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.811 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.841 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.872 - INFO: Finished writing compressed vocabulary, size = 235.1 kB [uncompressed = 3.5 MB, ratio = 6%]
+2026-09-28 18:41:09.872 - INFO: Done in 0.613502 seconds.
+2026-09-28 18:41:09.872 - INFO: Running measurement "sequential operator[] over batch of group End to end: 50,000 words in 13 decoder blocks, 100,000 lookups per batch" ...
+2026-09-28 18:41:12.173 - INFO: Done in 2.30045 seconds.
+2026-09-28 18:41:12.173 - INFO: Running measurement "lookupBatch over batch (PMR arena) of group End to end: 50,000 words in 13 decoder blocks, 100,000 lookups per batch" ...
+2026-09-28 18:41:16.295 - INFO: Done in 4.12172 seconds.
+####################################################################
+# Benchmark class 'CompressedVocabulary::lookupBatch (end to end)' #
+####################################################################
+General metadata: {"time-of-measurement":"2026-09-28 18:41:09.259"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'End to end: 50,000 words in 13 decoder blocks, 100,000 lookups per batch'
+    Measurements:
+    
+        Single measurement 'build: compress + write + open'
+            time: 0.613502s
+        
+        Single measurement 'sequential operator[] over batch'
+            time: 2.30045s
+        
+        Single measurement 'lookupBatch over batch (PMR arena)'
+            time: 4.12172s
+    
+    Tables: None
+
