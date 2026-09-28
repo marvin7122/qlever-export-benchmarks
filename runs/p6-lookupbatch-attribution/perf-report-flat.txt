@@ -1,0 +1,150 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 89K of event 'cpu/cycles/P'
+# Event count (approx.): 73760054915
+#
+# Overhead  Command          Shared Object                              Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+# ........  ...............  .........................................  .................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    10.26%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+            |          
+            |--7.31%--VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+            |          
+            |--1.00%--VocabularyInMemoryBinSearch::operator[](unsigned long) const
+            |          
+             --0.52%--std::_Function_handler<unsigned long (), ad_benchmark::BMVocabBatchLookupAttribution::runAllBenchmarks()::{lambda()#5}>::_M_invoke(std::_Any_data const&)
+
+     6.81%  VocabularyBatch  [kernel.kallsyms]                          [k] filemap_read
+            |          
+             --0.56%--filemap_read
+                       |          
+                        --0.56%--generic_file_read_iter
+                                  ext4_file_read_iter
+
+     5.96%  VocabularyBatch  [kernel.kallsyms]                          [k] filemap_get_read_batch
+            |          
+            |--0.73%--filemap_read
+            |          |          
+            |           --0.72%--generic_file_read_iter
+            |                     ext4_file_read_iter
+            |          
+             --0.53%--vfs_read
+                       |          
+                        --0.52%--__x64_sys_pread64
+                                  x64_sys_call
+                                  do_syscall_64
+                                  entry_SYSCALL_64_after_hwframe
+                                  __libc_pread
+
+     3.61%  VocabularyBatch  [kernel.kallsyms]                          [k] srso_safe_ret
+            |          
+             --0.57%--filemap_get_read_batch
+                       filemap_get_pages
+                       filemap_read
+                       generic_file_read_iter
+                       ext4_file_read_iter
+                       |          
+                        --0.53%--vfs_read
+                                  __x64_sys_pread64
+                                  x64_sys_call
+                                  do_syscall_64
+                                  entry_SYSCALL_64_after_hwframe
+                                  __libc_pread
+
+     3.41%  VocabularyBatch  [kernel.kallsyms]                          [k] _copy_to_iter
+     3.05%  VocabularyBatch  [kernel.kallsyms]                          [k] atime_needs_update
+     3.02%  VocabularyBatch  [kernel.kallsyms]                          [k] vfs_read
+     2.21%  VocabularyBatch  [kernel.kallsyms]                          [k] copy_page_to_iter
+     2.16%  VocabularyBatch  [kernel.kallsyms]                          [k] srso_return_thunk
+     2.14%  VocabularyBatch  [kernel.kallsyms]                          [k] do_syscall_64
+     2.14%  VocabularyBatch  [kernel.kallsyms]                          [k] aa_file_perm
+     1.97%  VocabularyBatch  [kernel.kallsyms]                          [k] apparmor_file_permission
+     1.96%  VocabularyBatch  [kernel.kallsyms]                          [k] ext4_file_read_iter
+     1.73%  VocabularyBatch  [kernel.kallsyms]                          [k] filemap_get_pages
+     1.72%  VocabularyBatch  [kernel.kallsyms]                          [k] __io_read
+     1.72%  VocabularyBatch  [kernel.kallsyms]                          [k] current_time
+     1.69%  VocabularyBatch  [kernel.kallsyms]                          [k] xas_load
+     1.54%  VocabularyBatch  [kernel.kallsyms]                          [k] __fsnotify_parent
+     1.53%  VocabularyBatch  [kernel.kallsyms]                          [k] rw_verify_area
+     1.41%  VocabularyBatch  [kernel.kallsyms]                          [k] entry_SYSCALL_64_after_hwframe
+     1.26%  VocabularyBatch  [kernel.kallsyms]                          [k] kiocb_done
+     1.26%  VocabularyBatch  [kernel.kallsyms]                          [k] arch_exit_to_user_mode_prepare.isra.0
+     1.20%  VocabularyBatch  [kernel.kallsyms]                          [k] __x64_sys_pread64
+     1.19%  VocabularyBatch  [kernel.kallsyms]                          [k] fget
+     1.19%  VocabularyBatch  [kernel.kallsyms]                          [k] generic_file_read_iter
+     1.10%  VocabularyBatch  [kernel.kallsyms]                          [k] io_read
+     1.09%  VocabularyBatch  [kernel.kallsyms]                          [k] __do_sys_io_uring_enter
+     1.07%  VocabularyBatch  [kernel.kallsyms]                          [k] security_file_permission
+     1.03%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] std::_Function_handler<unsigned long (), ad_benchmark::BMVocabBatchLookupAttribution::runAllBenchmarks()::{lambda()#5}>::_M_invoke(std::_Any_data const&)
+            |          
+             --0.73%--VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+
+     1.01%  VocabularyBatch  libc.so.6                                  [.] __libc_pread
+     0.98%  VocabularyBatch  [kernel.kallsyms]                          [k] touch_atime
+     0.96%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] VocabularyInMemoryBinSearch::operator[](unsigned long) const
+            |          
+             --0.68%--VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+
+     0.90%  VocabularyBatch  [kernel.kallsyms]                          [k] io_issue_sqe
+     0.89%  VocabularyBatch  [kernel.kallsyms]                          [k] __io_submit_flush_completions
+     0.86%  VocabularyBatch  [kernel.kallsyms]                          [k] io_prep_rw
+     0.86%  VocabularyBatch  [kernel.kallsyms]                          [k] x64_sys_call
+     0.86%  VocabularyBatch  [kernel.kallsyms]                          [k] rep_movs_alternative
+     0.83%  VocabularyBatch  [kernel.kallsyms]                          [k] io_prep_read
+     0.82%  VocabularyBatch  [kernel.kallsyms]                          [k] entry_SYSCALL_64
+     0.79%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] ad_utility::IoUringPolicy::addBatch(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>, unsigned long)
+     0.78%  VocabularyBatch  [kernel.kallsyms]                          [k] io_submit_sqes
+     0.77%  VocabularyBatch  [kernel.kallsyms]                          [k] io_rw_init_file
+     0.76%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     0.72%  VocabularyBatch  [kernel.kallsyms]                          [k] io_submit_sqe
+     0.69%  VocabularyBatch  [kernel.kallsyms]                          [k] __io_prep_rw
+     0.68%  VocabularyBatch  [kernel.kallsyms]                          [k] io_init_req
+     0.64%  VocabularyBatch  [kernel.kallsyms]                          [k] __io_issue_sqe
+     0.57%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] ad_benchmark::(anonymous namespace)::runGroup(ad_benchmark::BenchmarkResults&, unsigned long&)
+     0.56%  VocabularyBatch  [kernel.kallsyms]                          [k] io_req_io_end
+     0.56%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] ad_utility::IoUringPolicy::drainOneCqe()
+     0.56%  VocabularyBatch  [kernel.kallsyms]                          [k] io_file_get_normal
+     0.55%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] VocabularyOnDisk::operator[][abi:cxx11](unsigned long) const
+     0.55%  VocabularyBatch  [kernel.kallsyms]                          [k] xas_start
+     0.54%  VocabularyBatch  [kernel.kallsyms]                          [k] __rcu_read_unlock
+     0.51%  VocabularyBatch  [kernel.kallsyms]                          [k] __io_import_rw_buffer
+     0.48%  VocabularyBatch  [kernel.kallsyms]                          [k] io_free_batch_list
+     0.47%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] VocabularyInMemoryBinSearch::wordAtPosition(unsigned long) const
+     0.46%  VocabularyBatch  [kernel.kallsyms]                          [k] entry_SYSRETQ_unsafe_stack
+     0.39%  VocabularyBatch  [kernel.kallsyms]                          [k] ktime_get_coarse_real_ts64_mg
+     0.38%  VocabularyBatch  [kernel.kallsyms]                          [k] srso_untrain_ret
+     0.37%  VocabularyBatch  liburing.so.2.15                           [.] io_uring_submit
+     0.36%  VocabularyBatch  [kernel.kallsyms]                          [k] __rcu_read_lock
+     0.28%  VocabularyBatch  [kernel.kallsyms]                          [k] folio_mark_accessed
+     0.27%  VocabularyBatch  libjemalloc.so.2                           [.] operator new(unsigned long)
+     0.26%  VocabularyBatch  [kernel.kallsyms]                          [k] page_copy_sane
+     0.26%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] ad_benchmark::(anonymous namespace)::manualTwoPhase(ad_utility::BatchManagerBase&, int, int, std::vector<unsigned long, std::allocator<unsigned long> > const&)
+     0.24%  VocabularyBatch  libjemalloc.so.2                           [.] operator delete(void*, unsigned long)
+     0.22%  VocabularyBatch  [kernel.kallsyms]                          [k] begin_current_label_crit_section
+     0.22%  VocabularyBatch  [kernel.kallsyms]                          [k] make_vfsgid
+     0.22%  VocabularyBatch  [kernel.kallsyms]                          [k] make_vfsuid
+     0.21%  VocabularyBatch  [kernel.kallsyms]                          [k] syscall_return_via_sysret
+     0.20%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] ad_utility::SyncIoPolicy::addBatch(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>, unsigned long) const
+     0.18%  VocabularyBatch  [kernel.kallsyms]                          [k] fput
+     0.18%  VocabularyBatch  [kernel.kallsyms]                          [k] __x64_sys_io_uring_enter
+     0.17%  VocabularyBatch  [kernel.kallsyms]                          [k] io_rw_recycle
+     0.16%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] absl::lts_20260107::container_internal::EraseMetaOnlyLarge(absl::lts_20260107::container_internal::CommonFields&, absl::lts_20260107::container_internal::ctrl_t const*, unsigned long)
+     0.16%  VocabularyBatch  [kernel.kallsyms]                          [k] fpregs_assert_state_consistent
+     0.16%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.16%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] ContiguousVocabBatchBuilder::ContiguousVocabBatchBuilder(std::span<unsigned long const, 18446744073709551615ul>)
+     0.14%  VocabularyBatch  [kernel.kallsyms]                          [k] __x86_indirect_thunk_rax
+     0.13%  VocabularyBatch  [kernel.kallsyms]                          [k] io_rw_alloc_async
+     0.13%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] VocabularyOnDisk::readStrings(ad_utility::BatchManagerBase&, std::span<VocabularyOnDisk::OffsetPair const, 18446744073709551615ul>) const
+     0.13%  VocabularyBatch  [kernel.kallsyms]                          [k] fdget
+     0.12%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] VocabularyInternalExternal::operator[][abi:cxx11](unsigned long) const
+     0.11%  VocabularyBatch  [kernel.kallsyms]                          [k] mutex_lock
+     0.11%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] VocabularyOnDisk::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.11%  VocabularyBatch  [kernel.kallsyms]                          [k] import_ubuf
+     0.11%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] VocabularyOnDisk::readOffsetPairs(ad_utility::BatchManagerBase&, std::span<unsigned long const, 18446744073709551615ul>) const
+     0.10%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] ad_utility::BatchManager<ad_utility::IoUringPolicy>::addBatch(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>)
+     0.10%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] std::_Function_handler<unsigned long (), ad_benchmark::BMVocabBatchLookupAttribution::runAllBenchmarks()::{lambda()#1}>::_M_invoke(std::_Any_data const&)
+     0.10%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] std::_Function_handler<unsigned long (), ad_benchmark::BMVocabBatchLookupAttribution::runAllBenchmarks()::{lambda()#6}>::_M_invoke(std::_Any_data const&)
+     0.09%  VocabularyBatch  VocabularyBatchLookupAttributionBenchmark  [.] operator new(unsigned long)@plt

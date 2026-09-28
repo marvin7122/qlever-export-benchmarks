@@ -1,0 +1,49 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 89K of event 'cpu/cycles/P'
+# Event count (approx.): 73760054915
+#
+# Overhead  Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+# ........  .................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    10.26%  [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+            |          
+             --7.31%--VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+
+     6.81%  [k] filemap_read
+     5.96%  [k] filemap_get_read_batch
+     3.61%  [k] srso_safe_ret
+     3.41%  [k] _copy_to_iter
+     3.05%  [k] atime_needs_update
+     3.02%  [k] vfs_read
+     2.21%  [k] copy_page_to_iter
+     2.16%  [k] srso_return_thunk
+     2.14%  [k] do_syscall_64
+     2.14%  [k] aa_file_perm
+     1.97%  [k] apparmor_file_permission
+     1.96%  [k] ext4_file_read_iter
+     1.73%  [k] filemap_get_pages
+     1.72%  [k] __io_read
+     1.72%  [k] current_time
+     1.69%  [k] xas_load
+     1.54%  [k] __fsnotify_parent
+     1.53%  [k] rw_verify_area
+     1.41%  [k] entry_SYSCALL_64_after_hwframe
+     1.26%  [k] kiocb_done
+     1.26%  [k] arch_exit_to_user_mode_prepare.isra.0
+     1.20%  [k] __x64_sys_pread64
+     1.19%  [k] fget
+     1.19%  [k] generic_file_read_iter
+     1.10%  [k] io_read
+     1.09%  [k] __do_sys_io_uring_enter
+     1.07%  [k] security_file_permission
+     1.03%  [.] std::_Function_handler<unsigned long (), ad_benchmark::BMVocabBatchLookupAttribution::runAllBenchmarks()::{lambda()#5}>::_M_invoke(std::_Any_data const&)
+     1.01%  [.] __libc_pread
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
