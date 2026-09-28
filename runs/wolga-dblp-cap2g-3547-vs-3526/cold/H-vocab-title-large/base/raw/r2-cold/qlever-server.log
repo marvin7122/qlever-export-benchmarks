@@ -1,0 +1,39 @@
+2026-09-28 22:39:56.794 - INFO: [1mQLever server CIKM-2668-g0ed8f9223, compiled on Mon Sep 28 14:57:53 UTC 2026 using git hash 0ed8f92[22m
+2026-09-28 22:39:56.794 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-09-28 22:39:56.802 - INFO: The git hash used to build this index was "65f84b4"
+2026-09-28 22:39:56.802 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words ...
+2026-09-28 22:39:56.820 - INFO: Done, number of words: 446,944,668
+2026-09-28 22:39:56.820 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 446,955
+2026-09-28 22:39:56.829 - INFO: Registered PSO permutation: #relations = 6, #blocks = 8,187, #triples = 255,805,025
+2026-09-28 22:39:56.851 - INFO: Registered PSO permutation: #relations = 96, #blocks = 51,023, #triples = 1,593,245,022
+2026-09-28 22:39:56.854 - INFO: Registered POS permutation: #relations = 6, #blocks = 8,187, #triples = 255,805,025
+2026-09-28 22:39:56.876 - INFO: Registered POS permutation: #relations = 96, #blocks = 51,023, #triples = 1,593,245,022
+2026-09-28 22:39:56.895 - INFO: Registered OPS permutation: #relations = 345,357,897, #blocks = 42,492, #triples = 1,593,245,022
+2026-09-28 22:39:56.914 - INFO: Registered OSP permutation: #relations = 345,357,897, #blocks = 42,492, #triples = 1,593,245,022
+2026-09-28 22:39:56.926 - INFO: Registered SPO permutation: #relations = 255,804,614, #blocks = 33,993, #triples = 1,593,245,022
+2026-09-28 22:39:56.936 - INFO: Registered SOP permutation: #relations = 255,804,614, #blocks = 33,993, #triples = 1,593,245,022
+2026-09-28 22:39:56.936 - INFO: Reading patterns from file /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns ...
+2026-09-28 22:39:56.937 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-09-28 22:40:04.898 - INFO: Initializing server ...
+2026-09-28 22:40:04.898 - INFO: No access token required for restricted API calls
+2026-09-28 22:40:04.898 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-09-28 22:40:05.133 - INFO: 
+2026-09-28 22:40:05.133 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:40:05.137 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large
+# Goal: external-vocabulary lookup pressure with larger bounded output.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?title }
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-28 22:40:05.137 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:40:05.144 - INFO: Query planning done in 11 ms
+2026-09-28 22:40:05.145 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:40:06.277 - INFO: Done processing query and sending result, total time was 1,143 ms
+2026-09-28 22:40:06.345 - INFO: 
+2026-09-28 22:40:06.345 - INFO: Request received via GET, no content type specified
+2026-09-28 22:40:06.345 - INFO: Processing command "cache-stats": get cache statistics

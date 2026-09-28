@@ -1,0 +1,58 @@
+{
+ "window_s": [
+  1790629177.6260953,
+  1790629189.255724
+ ],
+ "syscalls": {
+  "pread64": 167,
+  "io_uring_enter": 297007
+ },
+ "bytes_returned": {
+  "pread64": 3916776
+ },
+ "errors": {},
+ "request_size_hist": {
+  "<=16": 56,
+  "<=32": 28,
+  "<=64": 31,
+  "<=32768": 26,
+  "<=131072": 26
+ },
+ "io_uring_enter_to_submit": {
+  "n": 297007,
+  "median": 1,
+  "p90": 1,
+  "max": 256,
+  "sum": 398212
+ },
+ "io_uring_enter_min_complete": {
+  "median": 0,
+  "max": 1
+ },
+ "files": {
+  "/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets": {
+   "requests": 44,
+   "bytes_requested": 704,
+   "sequential_fraction": 0.093,
+   "seek_median_B": 112,
+   "seek_p90_B": 984,
+   "distinct_4k_pages": 1
+  },
+  "/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external": {
+   "requests": 44,
+   "bytes_requested": 992,
+   "sequential_fraction": 0.093,
+   "seek_median_B": 396,
+   "seek_p90_B": 1577,
+   "distinct_4k_pages": 2
+  },
+  "/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso": {
+   "requests": 79,
+   "bytes_requested": 3915080,
+   "sequential_fraction": 0.3333,
+   "seek_median_B": 31763,
+   "seek_p90_B": 150793,
+   "distinct_4k_pages": 72
+  }
+ }
+}

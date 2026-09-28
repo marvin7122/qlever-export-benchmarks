@@ -1,0 +1,3 @@
+#!/bin/sh
+# Wolga lane: u24 (Ubuntu 24.04, glibc 2.39) qlever-server run through the bundled u24 loader + libs.
+exec /local/data-ssd/stoetzem/wolga-libs/ld-linux-x86-64.so.2 --library-path /local/data-ssd/stoetzem/wolga-libs /local/data-ssd/stoetzem/wolga-dblp-lane/bin/0ed8f9223497196d8979accb24ac737becc42f2b/qlever-server.real "$@"

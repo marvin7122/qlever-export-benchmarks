@@ -1,0 +1,226 @@
+2026-09-28 22:41:47.281 - INFO: [1mQLever server v0.6.0-188-g42785c8c9, compiled on Mon Sep 28 17:53:25 UTC 2026 using git hash 42785c8[22m
+2026-09-28 22:41:47.281 - INFO: Runtime parameter set from the command line: vocabulary-iouring-page-cache-fast-path=false
+2026-09-28 22:41:47.281 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-09-28 22:41:47.289 - INFO: The git hash used to build this index was "65f84b4"
+2026-09-28 22:41:47.289 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words ...
+2026-09-28 22:41:47.307 - INFO: Done, number of words: 446,944,668
+2026-09-28 22:41:47.307 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 446,955
+2026-09-28 22:41:47.315 - INFO: Registered PSO permutation: #relations = 6, #blocks = 8,187, #triples = 255,805,025
+2026-09-28 22:41:47.338 - INFO: Registered PSO permutation: #relations = 96, #blocks = 51,023, #triples = 1,593,245,022
+2026-09-28 22:41:47.341 - INFO: Registered POS permutation: #relations = 6, #blocks = 8,187, #triples = 255,805,025
+2026-09-28 22:41:47.363 - INFO: Registered POS permutation: #relations = 96, #blocks = 51,023, #triples = 1,593,245,022
+2026-09-28 22:41:47.382 - INFO: Registered OPS permutation: #relations = 345,357,897, #blocks = 42,492, #triples = 1,593,245,022
+2026-09-28 22:41:47.401 - INFO: Registered OSP permutation: #relations = 345,357,897, #blocks = 42,492, #triples = 1,593,245,022
+2026-09-28 22:41:47.413 - INFO: Registered SPO permutation: #relations = 255,804,614, #blocks = 33,993, #triples = 1,593,245,022
+2026-09-28 22:41:47.424 - INFO: Registered SOP permutation: #relations = 255,804,614, #blocks = 33,993, #triples = 1,593,245,022
+2026-09-28 22:41:47.424 - INFO: Reading patterns from file /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns ...
+2026-09-28 22:41:47.424 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-09-28 22:41:55.584 - INFO: Initializing server ...
+2026-09-28 22:41:55.584 - INFO: No access token required for restricted API calls
+2026-09-28 22:41:55.585 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-09-28 22:41:55.869 - INFO: 
+2026-09-28 22:41:55.869 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:41:55.873 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large
+# Goal: external-vocabulary lookup pressure with larger bounded output.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?title }
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-28 22:41:55.873 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:41:55.880 - INFO: Query planning done in 11 ms
+2026-09-28 22:41:55.880 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:41:57.041 - INFO: Done processing query and sending result, total time was 1,172 ms
+2026-09-28 22:41:57.113 - INFO: 
+2026-09-28 22:41:57.113 - INFO: Request received via GET, no content type specified
+2026-09-28 22:41:57.113 - INFO: Processing command "cache-stats": get cache statistics
+2026-09-28 22:41:57.147 - INFO: 
+2026-09-28 22:41:57.147 - INFO: Request received via GET, no content type specified
+2026-09-28 22:41:57.147 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:41:57.177 - INFO: 
+2026-09-28 22:41:57.177 - INFO: Request received via GET, no content type specified
+2026-09-28 22:41:57.177 - INFO: Processing command "cache-stats": get cache statistics
+2026-09-28 22:41:57.208 - INFO: 
+2026-09-28 22:41:57.208 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:41:57.208 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large
+# Goal: external-vocabulary lookup pressure with larger bounded output.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?title }
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-28 22:41:57.208 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:41:57.208 - INFO: Query planning done in 0 ms
+2026-09-28 22:41:57.209 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:41:58.316 - INFO: Done processing query and sending result, total time was 1,107 ms
+2026-09-28 22:41:58.382 - INFO: 
+2026-09-28 22:41:58.382 - INFO: Request received via GET, no content type specified
+2026-09-28 22:41:58.382 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:41:58.414 - INFO: 
+2026-09-28 22:41:58.414 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:41:58.415 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large
+# Goal: external-vocabulary lookup pressure with larger bounded output.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?title }
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-28 22:41:58.415 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:41:58.415 - INFO: Query planning done in 0 ms
+2026-09-28 22:41:58.415 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:41:59.535 - INFO: Done processing query and sending result, total time was 1,120 ms
+2026-09-28 22:41:59.601 - INFO: 
+2026-09-28 22:41:59.601 - INFO: Request received via GET, no content type specified
+2026-09-28 22:41:59.601 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:41:59.637 - INFO: 
+2026-09-28 22:41:59.637 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:41:59.637 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large
+# Goal: external-vocabulary lookup pressure with larger bounded output.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?title }
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-28 22:41:59.637 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:41:59.637 - INFO: Query planning done in 0 ms
+2026-09-28 22:41:59.638 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:42:00.752 - INFO: Done processing query and sending result, total time was 1,115 ms
+2026-09-28 22:42:00.801 - INFO: 
+2026-09-28 22:42:00.801 - INFO: Request received via GET, no content type specified
+2026-09-28 22:42:00.801 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:42:00.836 - INFO: 
+2026-09-28 22:42:00.836 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:42:00.836 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large
+# Goal: external-vocabulary lookup pressure with larger bounded output.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?title }
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-28 22:42:00.836 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:42:00.837 - INFO: Query planning done in 0 ms
+2026-09-28 22:42:00.837 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:42:01.928 - INFO: Done processing query and sending result, total time was 1,091 ms
+2026-09-28 22:42:01.994 - INFO: 
+2026-09-28 22:42:01.994 - INFO: Request received via GET, no content type specified
+2026-09-28 22:42:01.994 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:42:02.028 - INFO: 
+2026-09-28 22:42:02.028 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:42:02.028 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large
+# Goal: external-vocabulary lookup pressure with larger bounded output.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?title }
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-28 22:42:02.028 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:42:02.028 - INFO: Query planning done in 0 ms
+2026-09-28 22:42:02.028 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:42:03.166 - INFO: Done processing query and sending result, total time was 1,138 ms
+2026-09-28 22:42:03.239 - INFO: 
+2026-09-28 22:42:03.239 - INFO: Request received via GET, no content type specified
+2026-09-28 22:42:03.239 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:42:03.270 - INFO: 
+2026-09-28 22:42:03.270 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:42:03.271 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large
+# Goal: external-vocabulary lookup pressure with larger bounded output.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?title }
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-28 22:42:03.271 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:42:03.271 - INFO: Query planning done in 0 ms
+2026-09-28 22:42:03.271 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:42:04.341 - INFO: Done processing query and sending result, total time was 1,070 ms
+2026-09-28 22:42:04.407 - INFO: 
+2026-09-28 22:42:04.407 - INFO: Request received via GET, no content type specified
+2026-09-28 22:42:04.407 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:42:04.443 - INFO: 
+2026-09-28 22:42:04.443 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:42:04.443 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large
+# Goal: external-vocabulary lookup pressure with larger bounded output.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?title }
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-28 22:42:04.443 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:42:04.444 - INFO: Query planning done in 0 ms
+2026-09-28 22:42:04.444 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:42:05.556 - INFO: Done processing query and sending result, total time was 1,112 ms
+2026-09-28 22:42:05.589 - INFO: 
+2026-09-28 22:42:05.589 - INFO: Request received via GET, no content type specified
+2026-09-28 22:42:05.589 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:42:05.620 - INFO: 
+2026-09-28 22:42:05.620 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:42:05.620 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large
+# Goal: external-vocabulary lookup pressure with larger bounded output.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?title }
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-28 22:42:05.620 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:42:05.620 - INFO: Query planning done in 0 ms
+2026-09-28 22:42:05.620 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:42:06.731 - INFO: Done processing query and sending result, total time was 1,111 ms
+2026-09-28 22:42:06.793 - INFO: 
+2026-09-28 22:42:06.793 - INFO: Request received via GET, no content type specified
+2026-09-28 22:42:06.793 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:42:06.831 - INFO: 
+2026-09-28 22:42:06.831 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:42:06.832 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large
+# Goal: external-vocabulary lookup pressure with larger bounded output.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?title }
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-28 22:42:06.832 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:42:06.832 - INFO: Query planning done in 0 ms
+2026-09-28 22:42:06.832 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:42:07.966 - INFO: Done processing query and sending result, total time was 1,134 ms
+2026-09-28 22:42:08.032 - INFO: 
+2026-09-28 22:42:08.032 - INFO: Request received via GET, no content type specified
+2026-09-28 22:42:08.032 - INFO: Processing command "cache-stats": get cache statistics

@@ -1,0 +1,73 @@
+{
+ "window_s": [
+  1790629398.6413834,
+  1790629408.0349567
+ ],
+ "syscalls": {
+  "pread64": 167,
+  "preadv2_nowait": 195264,
+  "preadv2": 195264,
+  "io_uring_enter": 2425
+ },
+ "bytes_returned": {
+  "pread64": 3916776,
+  "preadv2": 5621444
+ },
+ "errors": {
+  "preadv2:EAGAIN": 53755
+ },
+ "request_size_hist": {
+  "<=2": 1,
+  "<=4": 50,
+  "<=8": 601,
+  "<=16": 100611,
+  "<=32": 31670,
+  "<=64": 54482,
+  "<=128": 6613,
+  "<=256": 441,
+  "<=512": 48,
+  "<=1024": 44,
+  "<=2048": 105,
+  "<=4096": 678,
+  "<=8192": 35,
+  "<=32768": 26,
+  "<=131072": 26
+ },
+ "io_uring_enter_to_submit": {
+  "n": 2425,
+  "median": 0,
+  "p90": 106,
+  "max": 256,
+  "sum": 56935
+ },
+ "io_uring_enter_min_complete": {
+  "median": 1,
+  "max": 8
+ },
+ "files": {
+  "/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets": {
+   "requests": 97336,
+   "bytes_requested": 2377320,
+   "sequential_fraction": 0.0001,
+   "seek_median_B": 46320,
+   "seek_p90_B": 488096,
+   "distinct_4k_pages": 18651
+  },
+  "/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external": {
+   "requests": 98016,
+   "bytes_requested": 5131577,
+   "sequential_fraction": 0.0031,
+   "seek_median_B": 249112,
+   "seek_p90_B": 2629905,
+   "distinct_4k_pages": 53043
+  },
+  "/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso": {
+   "requests": 79,
+   "bytes_requested": 3915080,
+   "sequential_fraction": 0.3333,
+   "seek_median_B": 31763,
+   "seek_p90_B": 150793,
+   "distinct_4k_pages": 72
+  }
+ }
+}

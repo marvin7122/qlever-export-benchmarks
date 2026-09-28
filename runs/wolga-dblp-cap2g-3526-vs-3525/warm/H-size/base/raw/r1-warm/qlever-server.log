@@ -1,0 +1,370 @@
+2026-09-28 22:36:35.309 - INFO: [1mQLever server CIKM-2667-g533f800b8, compiled on Mon Sep 28 14:40:44 UTC 2026 using git hash 533f800[22m
+2026-09-28 22:36:35.310 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-09-28 22:36:35.311 - INFO: The git hash used to build this index was "65f84b4"
+2026-09-28 22:36:35.311 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words ...
+2026-09-28 22:36:35.336 - INFO: Done, number of words: 446,944,668
+2026-09-28 22:36:35.336 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 446,955
+2026-09-28 22:36:35.344 - INFO: Registered PSO permutation: #relations = 6, #blocks = 8,187, #triples = 255,805,025
+2026-09-28 22:36:35.367 - INFO: Registered PSO permutation: #relations = 96, #blocks = 51,023, #triples = 1,593,245,022
+2026-09-28 22:36:35.370 - INFO: Registered POS permutation: #relations = 6, #blocks = 8,187, #triples = 255,805,025
+2026-09-28 22:36:35.393 - INFO: Registered POS permutation: #relations = 96, #blocks = 51,023, #triples = 1,593,245,022
+2026-09-28 22:36:35.412 - INFO: Registered OPS permutation: #relations = 345,357,897, #blocks = 42,492, #triples = 1,593,245,022
+2026-09-28 22:36:35.430 - INFO: Registered OSP permutation: #relations = 345,357,897, #blocks = 42,492, #triples = 1,593,245,022
+2026-09-28 22:36:35.443 - INFO: Registered SPO permutation: #relations = 255,804,614, #blocks = 33,993, #triples = 1,593,245,022
+2026-09-28 22:36:35.453 - INFO: Registered SOP permutation: #relations = 255,804,614, #blocks = 33,993, #triples = 1,593,245,022
+2026-09-28 22:36:35.453 - INFO: Reading patterns from file /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns ...
+2026-09-28 22:36:35.454 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-09-28 22:36:43.498 - INFO: Initializing server ...
+2026-09-28 22:36:43.498 - INFO: No access token required for restricted API calls
+2026-09-28 22:36:43.498 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-09-28 22:36:43.646 - INFO: 
+2026-09-28 22:36:43.646 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:36:43.651 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-28 22:36:43.651 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:36:43.668 - INFO: Query planning done in 21 ms
+2026-09-28 22:36:43.709 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:36:47.480 - INFO: Done processing query and sending result, total time was 3,834 ms
+2026-09-28 22:36:47.540 - INFO: 
+2026-09-28 22:36:47.540 - INFO: Request received via GET, no content type specified
+2026-09-28 22:36:47.540 - INFO: Processing command "cache-stats": get cache statistics
+2026-09-28 22:36:47.581 - INFO: 
+2026-09-28 22:36:47.581 - INFO: Request received via GET, no content type specified
+2026-09-28 22:36:47.581 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:36:47.612 - INFO: 
+2026-09-28 22:36:47.612 - INFO: Request received via GET, no content type specified
+2026-09-28 22:36:47.612 - INFO: Processing command "cache-stats": get cache statistics
+2026-09-28 22:36:47.642 - INFO: 
+2026-09-28 22:36:47.642 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:36:47.643 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-28 22:36:47.643 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:36:47.644 - INFO: Query planning done in 2 ms
+2026-09-28 22:36:47.677 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:36:48.382 - INFO: Done processing query and sending result, total time was 739 ms
+2026-09-28 22:36:48.438 - INFO: 
+2026-09-28 22:36:48.438 - INFO: Request received via GET, no content type specified
+2026-09-28 22:36:48.438 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:36:48.468 - INFO: 
+2026-09-28 22:36:48.468 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:36:48.469 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-28 22:36:48.469 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:36:48.470 - INFO: Query planning done in 1 ms
+2026-09-28 22:36:48.502 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:36:49.199 - INFO: Done processing query and sending result, total time was 731 ms
+2026-09-28 22:36:49.262 - INFO: 
+2026-09-28 22:36:49.262 - INFO: Request received via GET, no content type specified
+2026-09-28 22:36:49.262 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:36:49.293 - INFO: 
+2026-09-28 22:36:49.293 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:36:49.293 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-28 22:36:49.293 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:36:49.294 - INFO: Query planning done in 1 ms
+2026-09-28 22:36:49.327 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:36:50.002 - INFO: Done processing query and sending result, total time was 709 ms
+2026-09-28 22:36:50.065 - INFO: 
+2026-09-28 22:36:50.065 - INFO: Request received via GET, no content type specified
+2026-09-28 22:36:50.065 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:36:50.101 - INFO: 
+2026-09-28 22:36:50.101 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:36:50.101 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-28 22:36:50.101 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:36:50.103 - INFO: Query planning done in 2 ms
+2026-09-28 22:36:50.135 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:36:50.816 - INFO: Done processing query and sending result, total time was 715 ms
+2026-09-28 22:36:50.879 - INFO: 
+2026-09-28 22:36:50.879 - INFO: Request received via GET, no content type specified
+2026-09-28 22:36:50.879 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:36:50.910 - INFO: 
+2026-09-28 22:36:50.910 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:36:50.910 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-28 22:36:50.910 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:36:50.911 - INFO: Query planning done in 1 ms
+2026-09-28 22:36:50.944 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:36:51.625 - INFO: Done processing query and sending result, total time was 715 ms
+2026-09-28 22:36:51.688 - INFO: 
+2026-09-28 22:36:51.688 - INFO: Request received via GET, no content type specified
+2026-09-28 22:36:51.688 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:36:51.719 - INFO: 
+2026-09-28 22:36:51.719 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:36:51.720 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-28 22:36:51.720 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:36:51.721 - INFO: Query planning done in 1 ms
+2026-09-28 22:36:51.752 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:36:52.441 - INFO: Done processing query and sending result, total time was 721 ms
+2026-09-28 22:36:52.504 - INFO: 
+2026-09-28 22:36:52.504 - INFO: Request received via GET, no content type specified
+2026-09-28 22:36:52.504 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:36:52.535 - INFO: 
+2026-09-28 22:36:52.535 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:36:52.536 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-28 22:36:52.536 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:36:52.538 - INFO: Query planning done in 2 ms
+2026-09-28 22:36:52.571 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:36:53.248 - INFO: Done processing query and sending result, total time was 712 ms
+2026-09-28 22:36:53.311 - INFO: 
+2026-09-28 22:36:53.311 - INFO: Request received via GET, no content type specified
+2026-09-28 22:36:53.311 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:36:53.341 - INFO: 
+2026-09-28 22:36:53.341 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:36:53.342 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-28 22:36:53.342 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:36:53.343 - INFO: Query planning done in 1 ms
+2026-09-28 22:36:53.371 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:36:54.025 - INFO: Done processing query and sending result, total time was 683 ms
+2026-09-28 22:36:54.088 - INFO: 
+2026-09-28 22:36:54.088 - INFO: Request received via GET, no content type specified
+2026-09-28 22:36:54.088 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:36:54.119 - INFO: 
+2026-09-28 22:36:54.119 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:36:54.119 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-28 22:36:54.119 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:36:54.120 - INFO: Query planning done in 1 ms
+2026-09-28 22:36:54.152 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:36:54.819 - INFO: Done processing query and sending result, total time was 700 ms
+2026-09-28 22:36:54.882 - INFO: 
+2026-09-28 22:36:54.882 - INFO: Request received via GET, no content type specified
+2026-09-28 22:36:54.882 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:36:54.912 - INFO: 
+2026-09-28 22:36:54.912 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:36:54.913 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-28 22:36:54.913 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:36:54.914 - INFO: Query planning done in 1 ms
+2026-09-28 22:36:54.946 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:36:55.643 - INFO: Done processing query and sending result, total time was 730 ms
+2026-09-28 22:36:55.706 - INFO: 
+2026-09-28 22:36:55.706 - INFO: Request received via GET, no content type specified
+2026-09-28 22:36:55.706 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:36:55.736 - INFO: 
+2026-09-28 22:36:55.736 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:36:55.737 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-28 22:36:55.737 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:36:55.738 - INFO: Query planning done in 2 ms
+2026-09-28 22:36:55.770 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:36:56.444 - INFO: Done processing query and sending result, total time was 708 ms
+2026-09-28 22:36:56.512 - INFO: 
+2026-09-28 22:36:56.512 - INFO: Request received via GET, no content type specified
+2026-09-28 22:36:56.512 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:36:56.542 - INFO: 
+2026-09-28 22:36:56.542 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:36:56.542 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-28 22:36:56.543 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:36:56.543 - INFO: Query planning done in 1 ms
+2026-09-28 22:36:56.576 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:36:57.258 - INFO: Done processing query and sending result, total time was 716 ms
+2026-09-28 22:36:57.321 - INFO: 
+2026-09-28 22:36:57.321 - INFO: Request received via GET, no content type specified
+2026-09-28 22:36:57.321 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:36:57.352 - INFO: 
+2026-09-28 22:36:57.352 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:36:57.352 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-28 22:36:57.352 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:36:57.354 - INFO: Query planning done in 2 ms
+2026-09-28 22:36:57.386 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:36:58.070 - INFO: Done processing query and sending result, total time was 717 ms
+2026-09-28 22:36:58.133 - INFO: 
+2026-09-28 22:36:58.133 - INFO: Request received via GET, no content type specified
+2026-09-28 22:36:58.133 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-28 22:36:58.164 - INFO: 
+2026-09-28 22:36:58.164 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 22:36:58.164 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep
+# Goal: isolate export cost from query-planning cost. Raise the year bound
+# across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?s ?p ?o }
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-28 22:36:58.164 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 22:36:58.165 - INFO: Query planning done in 1 ms
+2026-09-28 22:36:58.198 - INFO: Result has unknown size (not computed yet)
+2026-09-28 22:36:58.901 - INFO: Done processing query and sending result, total time was 737 ms
+2026-09-28 22:36:58.963 - INFO: 
+2026-09-28 22:36:58.963 - INFO: Request received via GET, no content type specified
+2026-09-28 22:36:58.963 - INFO: Processing command "cache-stats": get cache statistics

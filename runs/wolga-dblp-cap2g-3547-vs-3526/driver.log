@@ -1,0 +1,1017 @@
+[2026-09-28T20:38:57Z] server memory cap: MemoryMax=2G (2147483648 B), MemorySwapMax=0, user scope; preflight memory.max=2147483648
+[2026-09-28T20:38:58Z] PR #3547 dblp turtle_export queries=H-vocab-title-large H-size scenarios=cold,warm reps=3 mode=two binaries layout=fleet
+[2026-09-28T20:38:58Z] base:    /local/data-ssd/stoetzem/wolga-dblp-lane/runs/wolga-dblp-cap2g-3547-vs-3526/bin/qlever-server-base (0ed8f9223497196d8979accb24ac737becc42f2b) args='' form=''
+[2026-09-28T20:38:58Z] variant: /local/data-ssd/stoetzem/wolga-dblp-lane/runs/wolga-dblp-cap2g-3547-vs-3526/bin/qlever-server-variant (42785c8c95fda389c06af1cfd567bacff41eaffc) args='--set-runtime-parameter vocabulary-iouring-page-cache-fast-path=true' form=''
+[2026-09-28T20:38:58Z] variant2: /local/data-ssd/stoetzem/wolga-dblp-lane/runs/wolga-dblp-cap2g-3547-vs-3526/bin/qlever-server-variant (42785c8c95fda389c06af1cfd567bacff41eaffc) args='--set-runtime-parameter vocabulary-iouring-page-cache-fast-path=false' label='p8-3547-fastpath-off'
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=543027200B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.236045027s 15532320 bytes syscr=167 pread64=123 io_uring_enter=298853 read_bytes=727703552 cpu_s=5.120000
+[2026-09-28T20:39:09Z] pr3547-H-vocab-title-large-cold-base-r1 done
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=794046464B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=0.723898018s 15532320 bytes syscr=194832 pread64=167 io_uring_enter=35260 read_bytes=692916224 cpu_s=2.380000
+[2026-09-28T20:39:20Z] pr3547-H-vocab-title-large-cold-variant-r1 done
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=759259136B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.223571516s 15532320 bytes syscr=167 pread64=167 io_uring_enter=298733 read_bytes=727445504 cpu_s=5.150000
+[2026-09-28T20:39:31Z] pr3547-H-vocab-title-large-cold-variant2-r1 done
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=793788416B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.223514672s 15532320 bytes syscr=167 pread64=167 io_uring_enter=298808 read_bytes=723230720 cpu_s=5.120000
+[2026-09-28T20:39:44Z] pr3547-H-vocab-title-large-cold-variant2-r2 done
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=789573632B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=0.723946734s 15532320 bytes syscr=194832 pread64=167 io_uring_enter=35244 read_bytes=696758272 cpu_s=2.380000
+[2026-09-28T20:39:55Z] pr3547-H-vocab-title-large-cold-variant-r2 done
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=763101184B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.232365801s 15532320 bytes syscr=167 pread64=123 io_uring_enter=298716 read_bytes=736808960 cpu_s=5.110000
+[2026-09-28T20:40:06Z] pr3547-H-vocab-title-large-cold-base-r2 done
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=803155968B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.205148452s 15532320 bytes syscr=167 pread64=123 io_uring_enter=298691 read_bytes=727838720 cpu_s=5.100000
+[2026-09-28T20:40:17Z] pr3547-H-vocab-title-large-cold-base-r3 done
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=794181632B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=0.731689871s 15532320 bytes syscr=194832 pread64=167 io_uring_enter=34567 read_bytes=699105280 cpu_s=2.400000
+[2026-09-28T20:40:29Z] pr3547-H-vocab-title-large-cold-variant-r3 done
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=765448192B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.220013532s 15532320 bytes syscr=167 pread64=167 io_uring_enter=298617 read_bytes=715657216 cpu_s=5.020000
+[2026-09-28T20:40:40Z] pr3547-H-vocab-title-large-cold-variant2-r3 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.138777789s 15532320 bytes syscr=1527 pread64=1107 io_uring_enter=2671335 read_bytes=0 cpu_s=36.320000
+[2026-09-28T20:41:02Z] pr3547-H-vocab-title-large-warm-base-r1 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=0.383118036s 15532320 bytes syscr=5260488 pread64=4509 io_uring_enter=0 read_bytes=0 cpu_s=15.190000
+[2026-09-28T20:41:24Z] pr3547-H-vocab-title-large-warm-variant-r1 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.130198612s 15532320 bytes syscr=1527 pread64=1503 io_uring_enter=2671326 read_bytes=0 cpu_s=36.010000
+[2026-09-28T20:41:46Z] pr3547-H-vocab-title-large-warm-variant2-r1 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.148635224s 15532320 bytes syscr=1527 pread64=1503 io_uring_enter=2671335 read_bytes=0 cpu_s=36.830000
+[2026-09-28T20:42:08Z] pr3547-H-vocab-title-large-warm-variant2-r2 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=0.386952030s 15532320 bytes syscr=5065656 pread64=4342 io_uring_enter=0 read_bytes=0 cpu_s=14.670000
+[2026-09-28T20:42:30Z] pr3547-H-vocab-title-large-warm-variant-r2 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.168467644s 15532320 bytes syscr=1527 pread64=1107 io_uring_enter=2671372 read_bytes=0 cpu_s=37.270000
+[2026-09-28T20:42:52Z] pr3547-H-vocab-title-large-warm-base-r2 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.152708319s 15532320 bytes syscr=1527 pread64=1107 io_uring_enter=2671594 read_bytes=0 cpu_s=37.030000
+[2026-09-28T20:43:13Z] pr3547-H-vocab-title-large-warm-base-r3 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=0.388362311s 15532320 bytes syscr=5065656 pread64=4342 io_uring_enter=0 read_bytes=0 cpu_s=14.690000
+[2026-09-28T20:43:35Z] pr3547-H-vocab-title-large-warm-variant-r3 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.155988398s 15532320 bytes syscr=1527 pread64=1503 io_uring_enter=2671332 read_bytes=0 cpu_s=37.230000
+[2026-09-28T20:43:57Z] pr3547-H-vocab-title-large-warm-variant2-r3 done
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=793513984B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.285477089s 61418523 bytes syscr=1438 pread64=1350 io_uring_enter=12057 read_bytes=473116672 cpu_s=4.760000
+[2026-09-28T20:44:09Z] pr3547-H-size-cold-base-r1 done
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=539471872B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.182384722s 61418523 bytes syscr=248364 pread64=1438 io_uring_enter=16261 read_bytes=463765504 cpu_s=2.490000
+[2026-09-28T20:44:20Z] pr3547-H-size-cold-variant-r1 done
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=530116608B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.302344235s 61418523 bytes syscr=1438 pread64=1438 io_uring_enter=11874 read_bytes=473862144 cpu_s=4.750000
+[2026-09-28T20:44:33Z] pr3547-H-size-cold-variant2-r1 done
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=540213248B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.294507767s 61418523 bytes syscr=1438 pread64=1438 io_uring_enter=11958 read_bytes=474570752 cpu_s=4.650000
+[2026-09-28T20:44:44Z] pr3547-H-size-cold-variant2-r2 done
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=540921856B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.136285615s 61418523 bytes syscr=248364 pread64=1438 io_uring_enter=16165 read_bytes=464609280 cpu_s=2.450000
+[2026-09-28T20:44:55Z] pr3547-H-size-cold-variant-r2 done
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=530960384B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.292110982s 61418523 bytes syscr=1438 pread64=1350 io_uring_enter=11701 read_bytes=470867968 cpu_s=4.870000
+[2026-09-28T20:45:07Z] pr3547-H-size-cold-base-r2 done
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=537219072B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.361077497s 61418523 bytes syscr=1438 pread64=1350 io_uring_enter=11829 read_bytes=468881408 cpu_s=4.900000
+[2026-09-28T20:45:18Z] pr3547-H-size-cold-base-r3 done
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=535232512B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.141139185s 61418523 bytes syscr=248364 pread64=1438 io_uring_enter=16262 read_bytes=467468288 cpu_s=2.440000
+[2026-09-28T20:45:30Z] pr3547-H-size-cold-variant-r3 done
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.ops.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.osp.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.sop.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.spo.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pos.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.internal.index.pso.meta
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.meta-data.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.metrics-log.jsonl
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.server.resource-usage-log.tsv
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.settings.json
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.codebooks
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.external.offsets
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal
+/local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words.internal.ids
+our-files-only cold: evicted /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.* resident_before=533823488B resident_after=0B (fincore)
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.316214642s 61418523 bytes syscr=1438 pread64=1438 io_uring_enter=12018 read_bytes=471760896 cpu_s=4.870000
+[2026-09-28T20:45:42Z] pr3547-H-size-cold-variant2-r3 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.065131522s 61418523 bytes syscr=14404 pread64=13500 io_uring_enter=86586 read_bytes=0 cpu_s=38.390000
+[2026-09-28T20:46:04Z] pr3547-H-size-warm-base-r1 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=0.717577725s 61418523 bytes syscr=3477120 pread64=20132 io_uring_enter=0 read_bytes=0 cpu_s=19.490000
+[2026-09-28T20:46:26Z] pr3547-H-size-warm-variant-r1 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.075958071s 61418523 bytes syscr=14404 pread64=14380 io_uring_enter=86664 read_bytes=0 cpu_s=38.490000
+[2026-09-28T20:46:48Z] pr3547-H-size-warm-variant2-r1 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.022598075s 61418523 bytes syscr=14404 pread64=14380 io_uring_enter=86259 read_bytes=0 cpu_s=36.760000
+[2026-09-28T20:47:10Z] pr3547-H-size-warm-variant2-r2 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=0.718603479s 61418523 bytes syscr=3477120 pread64=20132 io_uring_enter=0 read_bytes=0 cpu_s=19.470000
+[2026-09-28T20:47:32Z] pr3547-H-size-warm-variant-r2 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.076682063s 61418523 bytes syscr=14404 pread64=13500 io_uring_enter=86439 read_bytes=0 cpu_s=38.270000
+[2026-09-28T20:47:54Z] pr3547-H-size-warm-base-r2 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.056612457s 61418523 bytes syscr=14404 pread64=13500 io_uring_enter=86461 read_bytes=0 cpu_s=37.850000
+[2026-09-28T20:48:16Z] pr3547-H-size-warm-base-r3 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=0.718406959s 61418523 bytes syscr=3477120 pread64=20132 io_uring_enter=0 read_bytes=0 cpu_s=19.790000
+[2026-09-28T20:48:38Z] pr3547-H-size-warm-variant-r3 done
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /local)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+rep 1/1: complete export=s e2e=1.077029434s 61418523 bytes syscr=14404 pread64=14380 io_uring_enter=86978 read_bytes=0 cpu_s=38.970000
+[2026-09-28T20:49:30Z] pr3547-H-size-warm-variant2-r3 done
+# Three-arm run: one base run, two comparisons
+
+## base vs variant (p8-3547-fastpath-on)
+## PR #3547 A/B on dblp (turtle_export)
+
+- Base: `0ed8f9223497196d8979accb24ac737becc42f2b` p7-3526-routing; server args: `(none)`
+- Variant: `42785c8c95fda389c06af1cfd567bacff41eaffc` p8-3547-fastpath-on; server args: `--set-runtime-parameter vocabulary-iouring-page-cache-fast-path=true`
+- Binaries: two binaries; host `wolga` (fleet layout)
+- Server query threads (`--num-simultaneous-queries`): 1
+- **Simulated out-of-memory regime**: every arm's qlever-server ran under a cgroup v2 cap `MemoryMax=2G`, `MemorySwapMax=0` (user `systemd-run --scope`); the cap charges the page cache, so the index cannot stay fully cached. No memcap samples recorded.
+- Reps: 3 per arm, query and scenario; arms interleaved per rep, order alternating (odd reps base first, even reps variant first); cold reps run after `clear-caches`.
+- Noise rule: within noise when |delta| < 1% or the min..max ranges overlap.
+
+### Timing (elapsed_s, end to end)
+
+| query | scenario | arm | n | median | min | max | delta vs base | verdict | correctness |
+|---|---|---|---|---|---|---|---|---|---|
+| H-vocab-title-large | cold | p7-3526-routing | 3 | 1.2324 | 1.2051 | 1.2360 |  |  |  |
+| H-vocab-title-large | cold | p8-3547-fastpath-on | 3 | 0.7239 | 0.7239 | 0.7317 | -41.26% | variant faster | identical bytes |
+| H-vocab-title-large | warm | p7-3526-routing | 3 | 1.1527 | 1.1388 | 1.1685 |  |  |  |
+| H-vocab-title-large | warm | p8-3547-fastpath-on | 3 | 0.3870 | 0.3831 | 0.3884 | -66.43% | variant faster | identical bytes |
+| H-size | cold | p7-3526-routing | 3 | 1.2921 | 1.2855 | 1.3611 |  |  |  |
+| H-size | cold | p8-3547-fastpath-on | 3 | 1.1411 | 1.1363 | 1.1824 | -11.68% | variant faster | identical bytes |
+| H-size | warm | p7-3526-routing | 3 | 1.0651 | 1.0566 | 1.0767 |  |  |  |
+| H-size | warm | p8-3547-fastpath-on | 3 | 0.7184 | 0.7176 | 0.7186 | -32.55% | variant faster | identical bytes |
+
+### Verdict
+
+- H-vocab-title-large cold: variant faster (-41.26%); correctness: identical bytes
+- H-vocab-title-large warm: variant faster (-66.43%); correctness: identical bytes
+- H-size cold: variant faster (-11.68%); correctness: identical bytes
+- H-size warm: variant faster (-32.55%); correctness: identical bytes
+
+### Gates
+
+- `gate-postflight-cold.log`: == POSTFLIGHT: PASS ==
+- `gate-postflight-warm.log`: == POSTFLIGHT: PASS ==
+- `gate-preflight-base.log`: == PREFLIGHT: PASS ==
+- `gate-preflight-variant.log`: == PREFLIGHT: PASS ==
+- `gate-verify-base.log`: VERDICT: PASS — binary is trustworthy for benchmarking
+- `gate-verify-variant.log`: VERDICT: PASS — binary is trustworthy for benchmarking
+
+### Problems
+
+None: every rep complete, non-empty and correct.
+
+Artifacts: `results.csv` (all reps), `<scenario>/<query>/<arm>/raw/` (harness output per rep), `correctness.tsv`, `build-env.txt`, `env-before.txt`, `env-after.txt`, `gate-*.log`, `driver.log`.
+
+## base vs variant2 (p8-3547-fastpath-off)
+## PR #3547 A/B on dblp (turtle_export)
+
+- Base: `0ed8f9223497196d8979accb24ac737becc42f2b` p7-3526-routing; server args: `(none)`
+- Variant: `42785c8c95fda389c06af1cfd567bacff41eaffc` p8-3547-fastpath-off; server args: `--set-runtime-parameter vocabulary-iouring-page-cache-fast-path=false`
+- Binaries: two binaries; host `wolga` (fleet layout)
+- Server query threads (`--num-simultaneous-queries`): 1
+- **Simulated out-of-memory regime**: every arm's qlever-server ran under a cgroup v2 cap `MemoryMax=2G`, `MemorySwapMax=0` (user `systemd-run --scope`); the cap charges the page cache, so the index cannot stay fully cached. No memcap samples recorded.
+- Reps: 3 per arm, query and scenario; arms interleaved per rep, order alternating (odd reps base first, even reps variant first); cold reps run after `clear-caches`.
+- Noise rule: within noise when |delta| < 1% or the min..max ranges overlap.
+
+### Timing (elapsed_s, end to end)
+
+| query | scenario | arm | n | median | min | max | delta vs base | verdict | correctness |
+|---|---|---|---|---|---|---|---|---|---|
+| H-vocab-title-large | cold | p7-3526-routing | 3 | 1.2324 | 1.2051 | 1.2360 |  |  |  |
+| H-vocab-title-large | cold | p8-3547-fastpath-off | 3 | 1.2235 | 1.2200 | 1.2236 | -0.72% | within noise | identical bytes |
+| H-vocab-title-large | warm | p7-3526-routing | 3 | 1.1527 | 1.1388 | 1.1685 |  |  |  |
+| H-vocab-title-large | warm | p8-3547-fastpath-off | 3 | 1.1486 | 1.1302 | 1.1560 | -0.35% | within noise | identical bytes |
+| H-size | cold | p7-3526-routing | 3 | 1.2921 | 1.2855 | 1.3611 |  |  |  |
+| H-size | cold | p8-3547-fastpath-off | 3 | 1.3023 | 1.2945 | 1.3162 | +0.79% | within noise | identical bytes |
+| H-size | warm | p7-3526-routing | 3 | 1.0651 | 1.0566 | 1.0767 |  |  |  |
+| H-size | warm | p8-3547-fastpath-off | 3 | 1.0760 | 1.0226 | 1.0770 | +1.02% | within noise | identical bytes |
+
+### Verdict
+
+- H-vocab-title-large cold: within noise (-0.72%); correctness: identical bytes
+- H-vocab-title-large warm: within noise (-0.35%); correctness: identical bytes
+- H-size cold: within noise (+0.79%); correctness: identical bytes
+- H-size warm: within noise (+1.02%); correctness: identical bytes
+
+### Gates
+
+- `gate-postflight-cold.log`: == POSTFLIGHT: PASS ==
+- `gate-postflight-warm.log`: == POSTFLIGHT: PASS ==
+- `gate-preflight-base.log`: == PREFLIGHT: PASS ==
+- `gate-preflight-variant.log`: == PREFLIGHT: PASS ==
+- `gate-verify-base.log`: VERDICT: PASS — binary is trustworthy for benchmarking
+- `gate-verify-variant.log`: VERDICT: PASS — binary is trustworthy for benchmarking
+
+### Problems
+
+None: every rep complete, non-empty and correct.
+
+Artifacts: `results.csv` (all reps), `<scenario>/<query>/<arm>/raw/` (harness output per rep), `correctness.tsv`, `build-env.txt`, `env-before.txt`, `env-after.txt`, `gate-*.log`, `driver.log`.
+[2026-09-28T20:49:31Z] finished rc=0 run=/local/data-ssd/stoetzem/wolga-dblp-lane/runs/wolga-dblp-cap2g-3547-vs-3526
