@@ -1,0 +1,59 @@
+2026-09-28 23:04:03.283 - INFO: [1mQLever server CIKM-2691-g476247bc2, compiled on Mon Sep 28 18:22:56 UTC 2026 using git hash 476247b[22m
+2026-09-28 23:04:03.283 - INFO: Runtime parameter set from the command line: vocabulary-iouring-page-cache-fast-path=true
+2026-09-28 23:04:03.283 - INFO: Runtime parameter set from the command line: vocabulary-bench-fadvise-random=true
+2026-09-28 23:04:03.283 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-09-28 23:04:03.284 - INFO: The git hash used to build this index was "65f84b4"
+2026-09-28 23:04:03.284 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.vocabulary.words ...
+2026-09-28 23:04:03.295 - INFO: Done, number of words: 446,944,668
+2026-09-28 23:04:03.295 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 446,955
+2026-09-28 23:04:03.301 - INFO: Registered PSO permutation: #relations = 6, #blocks = 8,187, #triples = 255,805,025
+2026-09-28 23:04:03.333 - INFO: Registered PSO permutation: #relations = 96, #blocks = 51,023, #triples = 1,593,245,022
+2026-09-28 23:04:03.337 - INFO: Registered POS permutation: #relations = 6, #blocks = 8,187, #triples = 255,805,025
+2026-09-28 23:04:03.356 - INFO: Registered POS permutation: #relations = 96, #blocks = 51,023, #triples = 1,593,245,022
+2026-09-28 23:04:03.370 - INFO: Registered OPS permutation: #relations = 345,357,897, #blocks = 42,492, #triples = 1,593,245,022
+2026-09-28 23:04:03.384 - INFO: Registered OSP permutation: #relations = 345,357,897, #blocks = 42,492, #triples = 1,593,245,022
+2026-09-28 23:04:03.393 - INFO: Registered SPO permutation: #relations = 255,804,614, #blocks = 33,993, #triples = 1,593,245,022
+2026-09-28 23:04:03.401 - INFO: Registered SOP permutation: #relations = 255,804,614, #blocks = 33,993, #triples = 1,593,245,022
+2026-09-28 23:04:03.401 - INFO: Reading patterns from file /local/data-ssd/stoetzem/qlever-indices/dblp/dblp.index.patterns ...
+2026-09-28 23:04:03.401 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-09-28 23:04:11.436 - INFO: Initializing server ...
+2026-09-28 23:04:11.436 - INFO: No access token required for restricted API calls
+2026-09-28 23:04:11.436 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-09-28 23:04:11.620 - INFO: 
+2026-09-28 23:04:11.621 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 23:04:11.624 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large
+# Goal: external-vocabulary lookup pressure with larger bounded output.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?title }
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-28 23:04:11.624 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 23:04:11.625 - INFO: Query planning done in 4 ms
+2026-09-28 23:04:11.625 - INFO: Result has unknown size (not computed yet)
+FASTPATH_STATS calls=92 offsetPairs=92622 offsetPairHits=92622 offsetPairsRing=0 offsetRuns=44886 offsetRunHits=44886 words=92622 wordHits=92622 wordsRing=0 wordBytes=2280340 wordHitBytes=2280340 preadvCalls=89243 preadvFull=89243 preadvEagain=0 preadvPartial=0 fadviseCalls=92
+FASTPATH_STATS calls=200 offsetPairs=199106 offsetPairHits=199106 offsetPairsRing=0 offsetRuns=97674 offsetRunHits=97674 words=199106 wordHits=199106 wordsRing=0 wordBytes=5130591 wordHitBytes=5130591 preadvCalls=194665 preadvFull=194665 preadvEagain=0 preadvPartial=0 fadviseCalls=200
+2026-09-28 23:04:12.030 - INFO: Done processing query and sending result, total time was 409 ms
+2026-09-28 23:04:12.098 - INFO: 
+2026-09-28 23:04:12.098 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-28 23:04:12.098 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large
+# Goal: external-vocabulary lookup pressure with larger bounded output.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?title }
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-28 23:04:12.098 - INFO: Requested media types of the result are: "text/turtle"
+2026-09-28 23:04:12.099 - INFO: Query planning done in 0 ms
+2026-09-28 23:04:12.099 - INFO: Result has unknown size (not computed yet)
+FASTPATH_STATS calls=258 offsetPairs=258030 offsetPairHits=257016 offsetPairsRing=0 offsetRuns=125096 offsetRunHits=125096 words=257016 wordHits=257016 wordsRing=0 wordBytes=6514631 wordHitBytes=6514631 preadvCalls=249871 preadvFull=249871 preadvEagain=0 preadvPartial=0 fadviseCalls=258
+FASTPATH_STATS calls=381 offsetPairs=381597 offsetPairHits=381597 offsetPairsRing=0 offsetRuns=186677 offsetRunHits=186677 words=381597 wordHits=381597 wordsRing=0 wordBytes=9782603 wordHitBytes=9782603 preadvCalls=372012 preadvFull=372012 preadvEagain=0 preadvPartial=0 fadviseCalls=381
+2026-09-28 23:04:12.486 - INFO: Done processing query and sending result, total time was 388 ms
