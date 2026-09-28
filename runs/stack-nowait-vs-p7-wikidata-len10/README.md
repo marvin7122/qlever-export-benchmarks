@@ -1,0 +1,6 @@
+# #3547 vs #3526 on Wikidata (Ural 5192, first attempt, 2026-09-28 19:16–21:09 UTC)
+
+- Arms (interleaved, 10 reps, order alternating): base = #3526 binary `0ed8f922` (ring only); variant = this PR's binary `51269ab4`, `vocabulary-iouring-page-cache-fast-path=true` (default); variant2 = the same binary with the flag `false`. Driver: `run.sh`. Cold = one execution after dropping the page cache; warm = the query looped back-to-back until >= 10 s, per-query time.
+- `vs-variant/` = base vs variant, `vs-variant2/` = base vs variant2; the same-binary comparison variant2 vs variant uses the same per-rep data (`results.csv`).
+- Discounted rep: `pr236-H-vocab-random-label-de-200k-cold-base-r8` (status failed, 0 bytes). Its server was killed at 20:39:34 UTC by another job's `fuser -k 7015/tcp` port cleanup (smoke test of a different harness outside the exclusive slot). This is the only cause of the `MISMATCH` marker and of the `mismatch/` body; every complete rep has identical output bytes. All other reps are undisturbed.
+- The queue retried the entry because of that rep (rc=1). The retry's run dir is NOT this one; its cold German reps between 21:15:30 and 21:18:15 UTC were disturbed by an rsync reading the index files on Ural.
