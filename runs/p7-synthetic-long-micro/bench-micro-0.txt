@@ -1,0 +1,28 @@
+2026-09-28 21:40:40.237 - INFO: Finished writing compressed vocabulary, size = 1171 B [uncompressed = 17298 B, ratio = 6%]
+2026-09-28 21:40:40.238 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/thesis/experiments/runs/p7-synthetic-long/tmp/compressedVocabLookupBatchMicro.words ...
+2026-09-28 21:40:40.238 - INFO: Done, number of words: 512
+2026-09-28 21:40:40.238 - INFO: Running measurement "sequential operator[] of group Synthetic micro-batches: 2,048 lookups into 512 words" ...
+2026-09-28 21:40:54.583 - INFO: Done in 14.3449 seconds.
+2026-09-28 21:40:54.583 - INFO: Running measurement "lookupBatch (PMR arena) of group Synthetic micro-batches: 2,048 lookups into 512 words" ...
+2026-09-28 21:41:06.201 - INFO: Done in 11.6189 seconds.
+#########################################################################
+# Benchmark class 'CompressedVocabulary::lookupBatch (synthetic micro)' #
+#########################################################################
+General metadata: {"time-of-measurement":"2026-09-28 21:40:40.238"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'Synthetic micro-batches: 2,048 lookups into 512 words'
+    Measurements:
+    
+        Single measurement 'sequential operator[]'
+            time: 14.3449s
+        
+        Single measurement 'lookupBatch (PMR arena)'
+            time: 11.6189s
+    
+    Tables: None
+
