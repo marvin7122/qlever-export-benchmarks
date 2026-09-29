@@ -1,0 +1,5 @@
+# PR 109 (DBLP). Hash map GROUP BY over a join with three aggregates per author
+# (COUNT, MIN, MAX of the year), so three random passes over the aggregation
+# data of ~3.8M groups per input block. Summed to one row.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+SELECT (SUM(?n) AS ?total) (SUM(YEAR(?last) - YEAR(?first)) AS ?span) { { SELECT ?author (COUNT(?year) AS ?n) (MIN(?year) AS ?first) (MAX(?year) AS ?last) { ?paper dblp:authoredBy ?author . ?paper dblp:yearOfPublication ?year } GROUP BY ?author } }

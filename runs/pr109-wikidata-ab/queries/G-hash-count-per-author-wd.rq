@@ -1,0 +1,5 @@
+# PR 109 (Wikidata truthy). Analogue of engine/G-hash-count-per-author: hash map
+# GROUP BY over the join of author (wdt:P50) and publication date (wdt:P577),
+# sorted by ?paper, grouped by ?author (millions of groups). Summed to one row.
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT (SUM(?n) AS ?total) (COUNT(?author) AS ?authors) { { SELECT ?author (COUNT(?date) AS ?n) { ?paper wdt:P50 ?author . ?paper wdt:P577 ?date } GROUP BY ?author } }

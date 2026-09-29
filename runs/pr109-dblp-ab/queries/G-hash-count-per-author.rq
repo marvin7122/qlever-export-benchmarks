@@ -1,0 +1,5 @@
+# PR 109 (DBLP). Hash map GROUP BY over a join: COUNT per author of the
+# (paper, author, year) join, which is sorted by ?paper, so the group index of
+# consecutive rows is random over ~3.8M authors. Summed to one row.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+SELECT (SUM(?n) AS ?total) (COUNT(?author) AS ?authors) { { SELECT ?author (COUNT(?year) AS ?n) { ?paper dblp:authoredBy ?author . ?paper dblp:yearOfPublication ?year } GROUP BY ?author } }
