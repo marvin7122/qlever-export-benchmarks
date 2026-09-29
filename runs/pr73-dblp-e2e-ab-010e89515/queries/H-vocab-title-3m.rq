@@ -1,0 +1,10 @@
+# Tier H-vocab, title literals, 3M rows: every row decodes one FSST-compressed
+# title literal from the on-disk-compressed vocabulary. Sized so that one warm
+# execution takes >= 10 s (the 100k-row H-vocab-title-large takes ~0.4 s).
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper dblp:title ?title }
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 3000000
