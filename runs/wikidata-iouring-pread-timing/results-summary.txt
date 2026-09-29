@@ -1,0 +1,15 @@
+# Time blocked in pread during German-label exports (baseline 7bd97790e9ee6d5b2f6305fd8fd1c8000b63710b)
+# pread_sum_s is an UPPER BOUND: ptrace stops inflate each call.
+
+## large-de-warm
+200	227.842008	504927346	rbytes=0	pread_calls=8886173 pread_sum_s=80.006
+
+## large-de-cold
+200	279.467106	504927346	rbytes=9615302656	pread_calls=8886173 pread_sum_s=127.080
+
+## scatter200k-de-warm
+200	41.198504	19297737	rbytes=0	pread_calls=1554045 pread_sum_s=13.015
+
+## scatter200k-de-cold
+200	65.688754	19297737	rbytes=3103010816	pread_calls=1554045 pread_sum_s=36.268
+

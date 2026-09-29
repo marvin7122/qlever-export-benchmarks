@@ -1,0 +1,41 @@
+# CPU load during disk I/O on German-label exports (baseline 7bd97790e9ee6d5b2f6305fd8fd1c8000b63710b, Wikidata truthy)
+
+Binary: /local/data-ssd/stoetzem/wt/bench/iouring-pre-baseline/build/qlever-server (no liburing linkage)
+Method: 1 warm + 2 cold reps per workload; cpu and read-rate sampler per rep.
+
+## large-de-warm
+200	15.190292	504927346	rbytes=0
+200	15.532469	504927346	rbytes=0
+wall_s=15.5 usr=3.9 sys=3.0 iowait=0.0 idle=93.0 proc_cpu_s=16.4 proc_cpu_pct=105.9
+peak_read_MBps=0 high_share=1.00 high_proc_cores=1.06
+
+## large-de-cold1
+200	60.590888	504927346	rbytes=9615302656
+200	60.597464	504927346	rbytes=9615302656
+wall_s=60.5 usr=1.1 sys=1.5 iowait=3.6 idle=93.8 proc_cpu_s=24.6 proc_cpu_pct=40.6
+peak_read_MBps=306 high_share=0.51 high_proc_cores=0.37
+
+## large-de-cold2
+200	60.543271	504927346	rbytes=9615302656
+200	60.580142	504927346	rbytes=9615302656
+wall_s=60.5 usr=1.1 sys=1.5 iowait=3.6 idle=93.9 proc_cpu_s=24.6 proc_cpu_pct=40.7
+peak_read_MBps=306 high_share=0.51 high_proc_cores=0.37
+
+## scatter200k-de-warm
+400	1.050393	5434	rbytes=0
+200	4.840522	19297737	rbytes=0
+wall_s=4.5 usr=3.8 sys=1.8 iowait=0.0 idle=94.3 proc_cpu_s=4.0 proc_cpu_pct=87.9
+peak_read_MBps=0 high_share=1.00 high_proc_cores=0.88
+
+## scatter200k-de-cold1
+400	1.052981	5434	rbytes=4096
+200	27.153357	19297737	rbytes=3103010816
+wall_s=27.0 usr=0.8 sys=0.9 iowait=4.2 idle=94.1 proc_cpu_s=7.6 proc_cpu_pct=28.1
+peak_read_MBps=547 high_share=0.09 high_proc_cores=0.68
+
+## scatter200k-de-cold2
+400	1.053278	5434	rbytes=4096
+200	27.157063	19297737	rbytes=3103010816
+wall_s=27.0 usr=0.8 sys=0.9 iowait=4.2 idle=94.1 proc_cpu_s=7.5 proc_cpu_pct=27.9
+peak_read_MBps=538 high_share=0.09 high_proc_cores=0.69
+
