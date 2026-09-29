@@ -1,0 +1,12 @@
+# Tier R1 SELECT companion (Wikidata truthy)
+# Same WHERE clause and LIMIT as R1.rq, SELECT instead of CONSTRUCT.
+# Analog of DBLP R1-select (run 122): bounded venue materialization.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT ?entity ?p ?o
+WHERE {
+  ?entity wdt:P31 wd:Q11424 ;
+          ?p ?o .
+}
+LIMIT 50000

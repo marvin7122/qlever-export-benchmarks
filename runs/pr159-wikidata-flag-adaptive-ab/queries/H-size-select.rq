@@ -1,0 +1,15 @@
+# Tier H-size SELECT companion (Wikidata truthy)
+# Same WHERE clause and LIMIT as H-size.rq, SELECT ?entity ?label
+# instead of CONSTRUCT. Analog of DBLP H-size-select (run 122):
+# year-bound output-size sweep on the label path.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entity ?label
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+LIMIT 100000
