@@ -41,3 +41,12 @@
 None: every rep complete, non-empty and correct.
 
 Artifacts: `results.csv` (all reps), `<scenario>/<query>/<arm>/raw/` (harness output per rep), `correctness.tsv`, `build-env.txt`, `env-before.txt`, `env-after.txt`, `gate-*.log`, `driver.log`.
+
+## Concern per row
+
+| query | scenario | arm | concern |
+|---|---|---|---|
+| H-vocab-label-large-de | cold | p15-controller-on | main claim: adaptive controller on, cold |
+| H-vocab-label-large-de | warm | p15-controller-on | regression guard: adaptive controller on, page-cache hits |
+| H-vocab-random-label-de-200k | cold | p15-controller-on | scattered access: adaptive controller on, cold |
+| H-vocab-random-label-de-200k | warm | p15-controller-on | regression guard: adaptive controller on, scattered hits |

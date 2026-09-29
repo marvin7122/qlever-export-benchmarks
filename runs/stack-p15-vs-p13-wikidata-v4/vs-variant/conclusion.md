@@ -41,3 +41,12 @@
 None: every rep complete, non-empty and correct.
 
 Artifacts: `results.csv` (all reps), `<scenario>/<query>/<arm>/raw/` (harness output per rep), `correctness.tsv`, `build-env.txt`, `env-before.txt`, `env-after.txt`, `gate-*.log`, `driver.log`.
+
+## Concern per row
+
+| query | scenario | arm | concern |
+|---|---|---|---|
+| H-vocab-label-large-de | cold | p15-controller-off | main claim: wave reap (controller off), cold |
+| H-vocab-label-large-de | warm | p15-controller-off | regression guard: wave reap on page-cache hits |
+| H-vocab-random-label-de-200k | cold | p15-controller-off | scattered access: wave reap, cold random lookups |
+| H-vocab-random-label-de-200k | warm | p15-controller-off | regression guard: scattered page-cache hits |
