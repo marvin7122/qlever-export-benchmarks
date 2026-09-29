@@ -1,0 +1,68 @@
+H-vocab-title-large: base warm 0.318 s (fastest of 3), 32 requests per measurement, 15532320 bytes, xxh3 6ef70863ccd3b9affcebefc1b2836236
+  t1 p9: 10.39 s, 0.3247 s/query
+  t1 head-off: 10.38 s, 0.3242 s/query
+  t1 head-on: 9.98 s, 0.3119 s/query
+  t2 head-on: 10.13 s, 0.3166 s/query
+  t2 head-off: 10.95 s, 0.3422 s/query
+  t2 p9: 10.26 s, 0.3206 s/query
+  t3 p9: 10.22 s, 0.3195 s/query
+  t3 head-off: 10.97 s, 0.3427 s/query
+  t3 head-on: 10.20 s, 0.3186 s/query
+  alloc alloc-off: 849088 allocations, 548419576 bytes, output identical: True
+  alloc alloc-on: 386146 allocations, 527158248 bytes, output identical: True
+H-vocab-title-xl: base warm 2.590 s (fastest of 3), 4 requests per measurement, 162446904 bytes, xxh3 96128cb92da89570c31066b49e572440
+  t1 p9: 10.98 s, 2.7443 s/query
+  t1 head-off: 11.08 s, 2.7692 s/query
+  t1 head-on: 10.58 s, 2.6456 s/query
+  t2 head-on: 10.35 s, 2.5876 s/query
+  t2 head-off: 10.65 s, 2.6615 s/query
+  t2 p9: 10.51 s, 2.6268 s/query
+  t3 p9: 10.98 s, 2.7458 s/query
+  t3 head-off: 10.87 s, 2.7184 s/query
+  t3 head-on: 10.11 s, 2.5269 s/query
+  alloc alloc-off: 9154797 allocations, 5882252020 bytes, output identical: True
+  alloc alloc-on: 4178747 allocations, 5640792901 bytes, output identical: True
+H-size: base warm 0.586 s (fastest of 3), 18 requests per measurement, 61418523 bytes, xxh3 dde2a34851a6029eead6c3430d7608af
+  t1 p9: 10.99 s, 0.6103 s/query
+  t1 head-off: 10.86 s, 0.6031 s/query
+  t1 head-on: 10.35 s, 0.5752 s/query
+  t2 head-on: 10.31 s, 0.5727 s/query
+  t2 head-off: 10.97 s, 0.6094 s/query
+  t2 p9: 10.98 s, 0.6098 s/query
+  t3 p9: 11.03 s, 0.6126 s/query
+  t3 head-off: 10.92 s, 0.6067 s/query
+  t3 head-on: 10.40 s, 0.5776 s/query
+  alloc alloc-off: 2371413 allocations, 946665088 bytes, output identical: True
+  alloc alloc-on: 519344 allocations, 886998547 bytes, output identical: True
+H-size-1990: base warm 6.216 s (fastest of 3), 2 requests per measurement, 799869938 bytes, xxh3 23eaa131dfe23c06c50642306e2320d2
+  t1 p9: 12.78 s, 6.3895 s/query
+  t1 head-off: 12.71 s, 6.3559 s/query
+  t1 head-on: 11.87 s, 5.9332 s/query
+  t2 head-on: 11.78 s, 5.8897 s/query
+  t2 head-off: 12.38 s, 6.1909 s/query
+  t2 p9: 12.43 s, 6.2173 s/query
+  t3 p9: 12.95 s, 6.4738 s/query
+  t3 head-off: 12.72 s, 6.3587 s/query
+  t3 head-on: 11.95 s, 5.9745 s/query
+  alloc alloc-off: 31270078 allocations, 11354965897 bytes, output identical: True
+  alloc alloc-on: 6787658 allocations, 10519525303 bytes, output identical: True
+{"query": "H-vocab-title-large", "arm": "p9", "trials": 3, "requests": 32, "median_s_per_query": 0.32056, "min": 0.31948, "max": 0.32474, "delta_vs_base_pct": 0.0, "verdict": "base", "instructions_per_query": 2929784912, "cycles_per_query": 1731545347, "bytes_per_query": 15532320}
+{"query": "H-vocab-title-large", "arm": "head-off", "trials": 3, "requests": 32, "median_s_per_query": 0.34215, "min": 0.32423, "max": 0.34266, "delta_vs_base_pct": 6.74, "verdict": "parity", "instructions_per_query": 2928161508, "cycles_per_query": 1726602045, "bytes_per_query": 15532320}
+{"query": "H-vocab-title-large", "arm": "head-on", "trials": 3, "requests": 32, "median_s_per_query": 0.31657, "min": 0.31188, "max": 0.31863, "delta_vs_base_pct": -1.24, "verdict": "parity", "instructions_per_query": 2793861543, "cycles_per_query": 1683840049, "bytes_per_query": 15532320}
+{"query": "H-vocab-title-large", "arm": "alloc-off", "alloc_count": 849088, "alloc_bytes": 548419576, "lines_per_query": 100000, "alloc_per_line": 8.491, "bytes_per_query": 15532320, "identical_to_base": true}
+{"query": "H-vocab-title-large", "arm": "alloc-on", "alloc_count": 386146, "alloc_bytes": 527158248, "lines_per_query": 100000, "alloc_per_line": 3.861, "bytes_per_query": 15532320, "identical_to_base": true}
+{"query": "H-vocab-title-xl", "arm": "p9", "trials": 3, "requests": 4, "median_s_per_query": 2.7443, "min": 2.62682, "max": 2.74582, "delta_vs_base_pct": 0.0, "verdict": "base", "instructions_per_query": 28634413783, "cycles_per_query": 17192300452, "bytes_per_query": 162446904}
+{"query": "H-vocab-title-xl", "arm": "head-off", "trials": 3, "requests": 4, "median_s_per_query": 2.71837, "min": 2.66152, "max": 2.76921, "delta_vs_base_pct": -0.94, "verdict": "parity", "instructions_per_query": 28621987522, "cycles_per_query": 16962198568, "bytes_per_query": 162446904}
+{"query": "H-vocab-title-xl", "arm": "head-on", "trials": 3, "requests": 4, "median_s_per_query": 2.58756, "min": 2.52686, "max": 2.64558, "delta_vs_base_pct": -5.71, "verdict": "parity", "instructions_per_query": 27169638460, "cycles_per_query": 16549190564, "bytes_per_query": 162446904}
+{"query": "H-vocab-title-xl", "arm": "alloc-off", "alloc_count": 9154797, "alloc_bytes": 5882252020, "lines_per_query": 1000000, "alloc_per_line": 9.155, "bytes_per_query": 162446904, "identical_to_base": true}
+{"query": "H-vocab-title-xl", "arm": "alloc-on", "alloc_count": 4178747, "alloc_bytes": 5640792901, "lines_per_query": 1000000, "alloc_per_line": 4.179, "bytes_per_query": 162446904, "identical_to_base": true}
+{"query": "H-size", "arm": "p9", "trials": 3, "requests": 18, "median_s_per_query": 0.61034, "min": 0.60979, "max": 0.61265, "delta_vs_base_pct": 0.0, "verdict": "base", "instructions_per_query": 8361331453, "cycles_per_query": 3995346056, "bytes_per_query": 61418523}
+{"query": "H-size", "arm": "head-off", "trials": 3, "requests": 18, "median_s_per_query": 0.60671, "min": 0.6031, "max": 0.60938, "delta_vs_base_pct": -0.59, "verdict": "parity", "instructions_per_query": 8350316616, "cycles_per_query": 3942844172, "bytes_per_query": 61418523}
+{"query": "H-size", "arm": "head-on", "trials": 3, "requests": 18, "median_s_per_query": 0.5752, "min": 0.57274, "max": 0.57763, "delta_vs_base_pct": -5.76, "verdict": "faster", "instructions_per_query": 8040901420, "cycles_per_query": 3846753280, "bytes_per_query": 61418523}
+{"query": "H-size", "arm": "alloc-off", "alloc_count": 2371413, "alloc_bytes": 946665088, "lines_per_query": 490650, "alloc_per_line": 4.833, "bytes_per_query": 61418523, "identical_to_base": true}
+{"query": "H-size", "arm": "alloc-on", "alloc_count": 519344, "alloc_bytes": 886998547, "lines_per_query": 490650, "alloc_per_line": 1.058, "bytes_per_query": 61418523, "identical_to_base": true}
+{"query": "H-size-1990", "arm": "p9", "trials": 3, "requests": 2, "median_s_per_query": 6.3895, "min": 6.21728, "max": 6.47376, "delta_vs_base_pct": 0.0, "verdict": "base", "instructions_per_query": 90237577869, "cycles_per_query": 43791888638, "bytes_per_query": 799869938}
+{"query": "H-size-1990", "arm": "head-off", "trials": 3, "requests": 2, "median_s_per_query": 6.35587, "min": 6.19086, "max": 6.35871, "delta_vs_base_pct": -0.53, "verdict": "parity", "instructions_per_query": 90173176434, "cycles_per_query": 43550404566, "bytes_per_query": 799869938}
+{"query": "H-size-1990", "arm": "head-on", "trials": 3, "requests": 2, "median_s_per_query": 5.93322, "min": 5.8897, "max": 5.9745, "delta_vs_base_pct": -7.14, "verdict": "faster", "instructions_per_query": 85805259918, "cycles_per_query": 41761183874, "bytes_per_query": 799869938}
+{"query": "H-size-1990", "arm": "alloc-off", "alloc_count": 31270078, "alloc_bytes": 11354965897, "lines_per_query": 6356475, "alloc_per_line": 4.919, "bytes_per_query": 799869938, "identical_to_base": true}
+{"query": "H-size-1990", "arm": "alloc-on", "alloc_count": 6787658, "alloc_bytes": 10519525303, "lines_per_query": 6356475, "alloc_per_line": 1.068, "bytes_per_query": 799869938, "identical_to_base": true}
