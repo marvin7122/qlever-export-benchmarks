@@ -1,0 +1,14 @@
+# Tier H -- duplicate heavy through an unused VALUES binding.
+# Each binding of ?duplicationWitness produces the same construct-template
+# triples. This tests duplication caused by multiplicity that is independent of
+# the template variables, unlike H-dedup.rq, whose multiplicity arises from a
+# join through publication signatures.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper ?p ?o }
+WHERE {
+  VALUES ?duplicationWitness { 1 2 3 4 }
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}

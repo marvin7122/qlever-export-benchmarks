@@ -1,0 +1,13 @@
+# Tier H — dedup-heavy
+# Goal: exercise CONSTRUCT result deduplication. A paper with multiple
+# signatures produces repeated (?paper ?p ?o) rows through this join.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+CONSTRUCT { ?paper ?p ?o }
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         dblp:hasSignature ?sig .
+  ?sig dblp:signatureCreator ?creator .
+  ?paper ?p ?o .
+}
