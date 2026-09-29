@@ -1,0 +1,2836 @@
+2026-09-29 05:36:18.677 - INFO: [1mQLever server v0.6.0-230-g67cf2ee3a, compiled on Mon Sep 28 19:27:43 UTC 2026 using git hash 67cf2ee[22m
+2026-09-29 05:36:18.677 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-09-29 05:36:18.678 - INFO: The git hash used to build this index was "65f84b4"
+2026-09-29 05:36:18.678 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/dblp/dblp.vocabulary.words ...
+2026-09-29 05:36:18.687 - INFO: Done, number of words: 446,944,668
+2026-09-29 05:36:18.687 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 446,955
+2026-09-29 05:36:18.694 - INFO: Registered PSO permutation: #relations = 6, #blocks = 8,187, #triples = 255,805,025
+2026-09-29 05:36:18.716 - INFO: Registered PSO permutation: #relations = 96, #blocks = 51,023, #triples = 1,593,245,022
+2026-09-29 05:36:18.719 - INFO: Registered POS permutation: #relations = 6, #blocks = 8,187, #triples = 255,805,025
+2026-09-29 05:36:18.741 - INFO: Registered POS permutation: #relations = 96, #blocks = 51,023, #triples = 1,593,245,022
+2026-09-29 05:36:18.760 - INFO: Registered OPS permutation: #relations = 345,357,897, #blocks = 42,492, #triples = 1,593,245,022
+2026-09-29 05:36:18.778 - INFO: Registered OSP permutation: #relations = 345,357,897, #blocks = 42,492, #triples = 1,593,245,022
+2026-09-29 05:36:18.790 - INFO: Registered SPO permutation: #relations = 255,804,614, #blocks = 33,993, #triples = 1,593,245,022
+2026-09-29 05:36:18.800 - INFO: Registered SOP permutation: #relations = 255,804,614, #blocks = 33,993, #triples = 1,593,245,022
+2026-09-29 05:36:18.800 - INFO: Reading patterns from file /local/data-ssd/stoetzem/dblp/dblp.index.patterns ...
+2026-09-29 05:36:18.800 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-09-29 05:36:26.752 - INFO: Initializing server ...
+2026-09-29 05:36:26.752 - INFO: No access token required for restricted API calls
+2026-09-29 05:36:26.752 - INFO: The server is ready, listening for requests on port 7121 ...
+2026-09-29 05:36:27.015 - INFO: 
+2026-09-29 05:36:27.015 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:27.015 - INFO: Processing command "stats": get index statistics
+2026-09-29 05:36:35.353 - INFO: 
+2026-09-29 05:36:35.353 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:35.353 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:35.372 - INFO: 
+2026-09-29 05:36:35.372 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:35.374 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:35.374 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:35.375 - INFO: Query planning done in 2 ms
+2026-09-29 05:36:35.375 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:40.417 - INFO: Done processing query and sending result, total time was 5,044 ms
+2026-09-29 05:36:41.404 - INFO: 
+2026-09-29 05:36:41.404 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:41.404 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:41.422 - INFO: 
+2026-09-29 05:36:41.422 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:41.422 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:41.422 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:41.422 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:41.422 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:41.831 - INFO: Done processing query and sending result, total time was 409 ms
+2026-09-29 05:36:41.851 - INFO: 
+2026-09-29 05:36:41.851 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:41.851 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:41.868 - INFO: 
+2026-09-29 05:36:41.868 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:41.869 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:41.869 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:41.869 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:41.869 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:42.277 - INFO: Done processing query and sending result, total time was 409 ms
+2026-09-29 05:36:42.297 - INFO: 
+2026-09-29 05:36:42.297 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:42.297 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:42.315 - INFO: 
+2026-09-29 05:36:42.315 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:42.315 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:42.315 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:42.315 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:42.316 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:42.727 - INFO: Done processing query and sending result, total time was 412 ms
+2026-09-29 05:36:42.746 - INFO: 
+2026-09-29 05:36:42.746 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:42.746 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:42.764 - INFO: 
+2026-09-29 05:36:42.764 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:42.764 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:42.764 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:42.765 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:42.765 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:43.174 - INFO: Done processing query and sending result, total time was 409 ms
+2026-09-29 05:36:43.193 - INFO: 
+2026-09-29 05:36:43.193 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:43.193 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:43.211 - INFO: 
+2026-09-29 05:36:43.211 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:43.211 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:43.211 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:43.211 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:43.211 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:43.620 - INFO: Done processing query and sending result, total time was 409 ms
+2026-09-29 05:36:43.640 - INFO: 
+2026-09-29 05:36:43.640 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:43.640 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:43.659 - INFO: 
+2026-09-29 05:36:43.659 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:43.659 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:43.659 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:43.659 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:43.659 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:44.071 - INFO: Done processing query and sending result, total time was 412 ms
+2026-09-29 05:36:44.091 - INFO: 
+2026-09-29 05:36:44.091 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:44.091 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:44.109 - INFO: 
+2026-09-29 05:36:44.109 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:44.109 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:44.109 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:44.109 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:44.109 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:44.520 - INFO: Done processing query and sending result, total time was 410 ms
+2026-09-29 05:36:44.540 - INFO: 
+2026-09-29 05:36:44.540 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:44.540 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:44.558 - INFO: 
+2026-09-29 05:36:44.558 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:44.558 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:44.558 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:44.559 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:44.559 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:44.974 - INFO: Done processing query and sending result, total time was 415 ms
+2026-09-29 05:36:44.993 - INFO: 
+2026-09-29 05:36:44.993 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:44.993 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:45.011 - INFO: 
+2026-09-29 05:36:45.011 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:45.011 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:45.011 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:45.011 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:45.012 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:45.426 - INFO: Done processing query and sending result, total time was 414 ms
+2026-09-29 05:36:45.445 - INFO: 
+2026-09-29 05:36:45.445 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:45.445 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:45.463 - INFO: 
+2026-09-29 05:36:45.463 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:45.463 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:45.463 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:45.464 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:45.464 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:45.873 - INFO: Done processing query and sending result, total time was 409 ms
+2026-09-29 05:36:45.892 - INFO: 
+2026-09-29 05:36:45.892 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:45.892 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:45.910 - INFO: 
+2026-09-29 05:36:45.910 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:45.910 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:45.910 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:45.911 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:45.911 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:46.323 - INFO: Done processing query and sending result, total time was 413 ms
+2026-09-29 05:36:46.343 - INFO: 
+2026-09-29 05:36:46.343 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:46.343 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:46.360 - INFO: 
+2026-09-29 05:36:46.360 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:46.361 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:46.361 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:46.361 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:46.361 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:46.766 - INFO: Done processing query and sending result, total time was 405 ms
+2026-09-29 05:36:46.787 - INFO: 
+2026-09-29 05:36:46.787 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:46.787 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:46.812 - INFO: 
+2026-09-29 05:36:46.812 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:46.812 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:46.812 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:46.812 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:46.812 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:47.218 - INFO: Done processing query and sending result, total time was 406 ms
+2026-09-29 05:36:47.239 - INFO: 
+2026-09-29 05:36:47.239 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:47.239 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:47.256 - INFO: 
+2026-09-29 05:36:47.256 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:47.257 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:47.257 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:47.257 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:47.257 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:47.662 - INFO: Done processing query and sending result, total time was 406 ms
+2026-09-29 05:36:47.683 - INFO: 
+2026-09-29 05:36:47.683 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:47.683 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:47.701 - INFO: 
+2026-09-29 05:36:47.701 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:47.701 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:47.701 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:47.701 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:47.701 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:48.108 - INFO: Done processing query and sending result, total time was 407 ms
+2026-09-29 05:36:48.128 - INFO: 
+2026-09-29 05:36:48.128 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:48.128 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:48.146 - INFO: 
+2026-09-29 05:36:48.146 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:48.146 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:48.146 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:48.146 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:48.146 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:48.554 - INFO: Done processing query and sending result, total time was 408 ms
+2026-09-29 05:36:48.574 - INFO: 
+2026-09-29 05:36:48.574 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:48.574 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:48.592 - INFO: 
+2026-09-29 05:36:48.592 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:48.592 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:48.592 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:48.592 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:48.592 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:49.005 - INFO: Done processing query and sending result, total time was 413 ms
+2026-09-29 05:36:49.026 - INFO: 
+2026-09-29 05:36:49.026 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:49.026 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:49.044 - INFO: 
+2026-09-29 05:36:49.044 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:49.044 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:49.044 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:49.044 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:49.045 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:49.452 - INFO: Done processing query and sending result, total time was 407 ms
+2026-09-29 05:36:49.472 - INFO: 
+2026-09-29 05:36:49.472 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:49.472 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:49.495 - INFO: 
+2026-09-29 05:36:49.495 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:49.496 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:49.496 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:49.496 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:49.496 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:49.903 - INFO: Done processing query and sending result, total time was 407 ms
+2026-09-29 05:36:49.923 - INFO: 
+2026-09-29 05:36:49.923 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:49.923 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:49.941 - INFO: 
+2026-09-29 05:36:49.941 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:49.941 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:49.941 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:49.941 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:49.941 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:50.351 - INFO: Done processing query and sending result, total time was 409 ms
+2026-09-29 05:36:50.371 - INFO: 
+2026-09-29 05:36:50.371 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:50.371 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:50.389 - INFO: 
+2026-09-29 05:36:50.389 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:50.389 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:50.389 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:50.389 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:50.389 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:50.800 - INFO: Done processing query and sending result, total time was 411 ms
+2026-09-29 05:36:50.820 - INFO: 
+2026-09-29 05:36:50.820 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:50.820 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:50.838 - INFO: 
+2026-09-29 05:36:50.838 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:50.838 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:50.838 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:50.839 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:50.839 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:51.246 - INFO: Done processing query and sending result, total time was 407 ms
+2026-09-29 05:36:51.266 - INFO: 
+2026-09-29 05:36:51.266 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:51.266 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:51.283 - INFO: 
+2026-09-29 05:36:51.283 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:51.284 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:51.284 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:51.284 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:51.284 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:51.695 - INFO: Done processing query and sending result, total time was 411 ms
+2026-09-29 05:36:51.714 - INFO: 
+2026-09-29 05:36:51.714 - INFO: Request received via GET, no content type specified
+2026-09-29 05:36:51.714 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:36:51.732 - INFO: 
+2026-09-29 05:36:51.732 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:36:51.732 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:36:51.732 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:36:51.732 - INFO: Query planning done in 0 ms
+2026-09-29 05:36:51.732 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:36:52.144 - INFO: Done processing query and sending result, total time was 412 ms
+2026-09-29 05:37:34.765 - INFO: 
+2026-09-29 05:37:34.765 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:34.765 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:34.783 - INFO: 
+2026-09-29 05:37:34.783 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:34.783 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:34.783 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:34.783 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:34.784 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:35.193 - INFO: Done processing query and sending result, total time was 410 ms
+2026-09-29 05:37:35.213 - INFO: 
+2026-09-29 05:37:35.213 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:35.213 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:35.231 - INFO: 
+2026-09-29 05:37:35.231 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:35.232 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:35.232 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:35.232 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:35.232 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:35.640 - INFO: Done processing query and sending result, total time was 408 ms
+2026-09-29 05:37:35.660 - INFO: 
+2026-09-29 05:37:35.660 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:35.660 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:35.678 - INFO: 
+2026-09-29 05:37:35.678 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:35.678 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:35.678 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:35.679 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:35.679 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:36.086 - INFO: Done processing query and sending result, total time was 408 ms
+2026-09-29 05:37:36.107 - INFO: 
+2026-09-29 05:37:36.107 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:36.107 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:36.125 - INFO: 
+2026-09-29 05:37:36.125 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:36.125 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:36.125 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:36.125 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:36.125 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:36.533 - INFO: Done processing query and sending result, total time was 408 ms
+2026-09-29 05:37:36.553 - INFO: 
+2026-09-29 05:37:36.553 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:36.553 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:36.571 - INFO: 
+2026-09-29 05:37:36.571 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:36.571 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:36.571 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:36.571 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:36.571 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:36.980 - INFO: Done processing query and sending result, total time was 409 ms
+2026-09-29 05:37:37.000 - INFO: 
+2026-09-29 05:37:37.000 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:37.000 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:37.025 - INFO: 
+2026-09-29 05:37:37.025 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:37.026 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:37.026 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:37.026 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:37.026 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:37.439 - INFO: Done processing query and sending result, total time was 413 ms
+2026-09-29 05:37:37.459 - INFO: 
+2026-09-29 05:37:37.459 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:37.459 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:37.477 - INFO: 
+2026-09-29 05:37:37.477 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:37.477 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:37.477 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:37.477 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:37.477 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:37.888 - INFO: Done processing query and sending result, total time was 411 ms
+2026-09-29 05:37:37.911 - INFO: 
+2026-09-29 05:37:37.911 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:37.911 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:37.929 - INFO: 
+2026-09-29 05:37:37.929 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:37.930 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:37.930 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:37.930 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:37.930 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:38.348 - INFO: Done processing query and sending result, total time was 418 ms
+2026-09-29 05:37:38.368 - INFO: 
+2026-09-29 05:37:38.368 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:38.368 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:38.386 - INFO: 
+2026-09-29 05:37:38.386 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:38.386 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:38.386 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:38.387 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:38.387 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:38.797 - INFO: Done processing query and sending result, total time was 410 ms
+2026-09-29 05:37:38.817 - INFO: 
+2026-09-29 05:37:38.817 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:38.817 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:38.835 - INFO: 
+2026-09-29 05:37:38.835 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:38.835 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:38.835 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:38.835 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:38.835 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:39.248 - INFO: Done processing query and sending result, total time was 412 ms
+2026-09-29 05:37:39.268 - INFO: 
+2026-09-29 05:37:39.268 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:39.268 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:39.285 - INFO: 
+2026-09-29 05:37:39.285 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:39.286 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:39.286 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:39.286 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:39.286 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:39.691 - INFO: Done processing query and sending result, total time was 405 ms
+2026-09-29 05:37:39.711 - INFO: 
+2026-09-29 05:37:39.711 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:39.711 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:39.736 - INFO: 
+2026-09-29 05:37:39.736 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:39.736 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:39.736 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:39.736 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:39.736 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:40.141 - INFO: Done processing query and sending result, total time was 405 ms
+2026-09-29 05:37:40.162 - INFO: 
+2026-09-29 05:37:40.162 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:40.162 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:40.180 - INFO: 
+2026-09-29 05:37:40.180 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:40.180 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:40.180 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:40.180 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:40.180 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:40.588 - INFO: Done processing query and sending result, total time was 407 ms
+2026-09-29 05:37:40.608 - INFO: 
+2026-09-29 05:37:40.608 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:40.608 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:40.626 - INFO: 
+2026-09-29 05:37:40.626 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:40.626 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:40.626 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:40.626 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:40.626 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:41.038 - INFO: Done processing query and sending result, total time was 411 ms
+2026-09-29 05:37:41.058 - INFO: 
+2026-09-29 05:37:41.058 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:41.058 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:41.076 - INFO: 
+2026-09-29 05:37:41.076 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:41.076 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:41.076 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:41.076 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:41.076 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:41.484 - INFO: Done processing query and sending result, total time was 408 ms
+2026-09-29 05:37:41.504 - INFO: 
+2026-09-29 05:37:41.504 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:41.504 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:41.522 - INFO: 
+2026-09-29 05:37:41.522 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:41.523 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:41.523 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:41.523 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:41.523 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:41.930 - INFO: Done processing query and sending result, total time was 407 ms
+2026-09-29 05:37:41.950 - INFO: 
+2026-09-29 05:37:41.950 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:41.950 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:41.968 - INFO: 
+2026-09-29 05:37:41.968 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:41.968 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:41.968 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:41.968 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:41.968 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:42.375 - INFO: Done processing query and sending result, total time was 407 ms
+2026-09-29 05:37:42.395 - INFO: 
+2026-09-29 05:37:42.395 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:42.395 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:42.413 - INFO: 
+2026-09-29 05:37:42.413 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:42.413 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:42.413 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:42.413 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:42.413 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:42.821 - INFO: Done processing query and sending result, total time was 407 ms
+2026-09-29 05:37:42.841 - INFO: 
+2026-09-29 05:37:42.841 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:42.841 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:42.867 - INFO: 
+2026-09-29 05:37:42.867 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:42.868 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:42.868 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:42.868 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:42.868 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:43.279 - INFO: Done processing query and sending result, total time was 412 ms
+2026-09-29 05:37:43.299 - INFO: 
+2026-09-29 05:37:43.299 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:43.299 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:43.317 - INFO: 
+2026-09-29 05:37:43.317 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:43.317 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:43.317 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:43.318 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:43.318 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:43.727 - INFO: Done processing query and sending result, total time was 409 ms
+2026-09-29 05:37:43.747 - INFO: 
+2026-09-29 05:37:43.747 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:43.747 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:43.765 - INFO: 
+2026-09-29 05:37:43.765 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:43.765 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:43.765 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:43.765 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:43.765 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:44.174 - INFO: Done processing query and sending result, total time was 409 ms
+2026-09-29 05:37:44.194 - INFO: 
+2026-09-29 05:37:44.194 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:44.194 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:44.212 - INFO: 
+2026-09-29 05:37:44.212 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:44.212 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:44.212 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:44.213 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:44.213 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:44.621 - INFO: Done processing query and sending result, total time was 408 ms
+2026-09-29 05:37:44.641 - INFO: 
+2026-09-29 05:37:44.641 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:44.641 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:44.658 - INFO: 
+2026-09-29 05:37:44.659 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:44.659 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:44.659 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:44.659 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:44.659 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:45.067 - INFO: Done processing query and sending result, total time was 408 ms
+2026-09-29 05:37:45.087 - INFO: 
+2026-09-29 05:37:45.087 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:45.087 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:45.105 - INFO: 
+2026-09-29 05:37:45.105 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:45.105 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:45.105 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:45.105 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:45.105 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:45.515 - INFO: Done processing query and sending result, total time was 409 ms
+2026-09-29 05:37:56.226 - INFO: 
+2026-09-29 05:37:56.226 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:56.226 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:56.244 - INFO: 
+2026-09-29 05:37:56.244 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:56.244 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:56.244 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:56.244 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:56.245 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:56.628 - INFO: Done processing query and sending result, total time was 384 ms
+2026-09-29 05:37:56.648 - INFO: 
+2026-09-29 05:37:56.648 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:56.648 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:56.665 - INFO: 
+2026-09-29 05:37:56.665 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:56.666 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:56.666 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:56.666 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:56.666 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:57.043 - INFO: Done processing query and sending result, total time was 378 ms
+2026-09-29 05:37:57.063 - INFO: 
+2026-09-29 05:37:57.063 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:57.063 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:57.081 - INFO: 
+2026-09-29 05:37:57.081 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:57.081 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:57.081 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:57.081 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:57.081 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:57.459 - INFO: Done processing query and sending result, total time was 378 ms
+2026-09-29 05:37:57.479 - INFO: 
+2026-09-29 05:37:57.479 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:57.479 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:57.497 - INFO: 
+2026-09-29 05:37:57.497 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:57.497 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:57.497 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:57.497 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:57.497 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:57.875 - INFO: Done processing query and sending result, total time was 378 ms
+2026-09-29 05:37:57.894 - INFO: 
+2026-09-29 05:37:57.894 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:57.894 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:57.912 - INFO: 
+2026-09-29 05:37:57.912 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:57.912 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:57.912 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:57.913 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:57.913 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:58.298 - INFO: Done processing query and sending result, total time was 385 ms
+2026-09-29 05:37:58.317 - INFO: 
+2026-09-29 05:37:58.317 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:58.317 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:58.335 - INFO: 
+2026-09-29 05:37:58.335 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:58.335 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:58.335 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:58.336 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:58.336 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:58.715 - INFO: Done processing query and sending result, total time was 380 ms
+2026-09-29 05:37:58.734 - INFO: 
+2026-09-29 05:37:58.734 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:58.734 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:58.752 - INFO: 
+2026-09-29 05:37:58.752 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:58.752 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:58.752 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:58.753 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:58.753 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:59.131 - INFO: Done processing query and sending result, total time was 379 ms
+2026-09-29 05:37:59.151 - INFO: 
+2026-09-29 05:37:59.151 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:59.151 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:59.169 - INFO: 
+2026-09-29 05:37:59.169 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:59.169 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:59.169 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:59.169 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:59.169 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:59.547 - INFO: Done processing query and sending result, total time was 378 ms
+2026-09-29 05:37:59.567 - INFO: 
+2026-09-29 05:37:59.567 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:59.567 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:37:59.592 - INFO: 
+2026-09-29 05:37:59.592 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:37:59.592 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:37:59.592 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:37:59.592 - INFO: Query planning done in 0 ms
+2026-09-29 05:37:59.592 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:37:59.970 - INFO: Done processing query and sending result, total time was 377 ms
+2026-09-29 05:37:59.989 - INFO: 
+2026-09-29 05:37:59.989 - INFO: Request received via GET, no content type specified
+2026-09-29 05:37:59.989 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:00.007 - INFO: 
+2026-09-29 05:38:00.007 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:00.007 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:38:00.007 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:00.007 - INFO: Query planning done in 0 ms
+2026-09-29 05:38:00.007 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:00.386 - INFO: Done processing query and sending result, total time was 378 ms
+2026-09-29 05:38:00.405 - INFO: 
+2026-09-29 05:38:00.405 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:00.405 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:00.423 - INFO: 
+2026-09-29 05:38:00.423 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:00.423 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:38:00.424 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:00.424 - INFO: Query planning done in 0 ms
+2026-09-29 05:38:00.424 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:00.802 - INFO: Done processing query and sending result, total time was 378 ms
+2026-09-29 05:38:00.821 - INFO: 
+2026-09-29 05:38:00.822 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:00.822 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:00.839 - INFO: 
+2026-09-29 05:38:00.839 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:00.840 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:38:00.840 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:00.840 - INFO: Query planning done in 0 ms
+2026-09-29 05:38:00.840 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:01.222 - INFO: Done processing query and sending result, total time was 382 ms
+2026-09-29 05:38:01.242 - INFO: 
+2026-09-29 05:38:01.242 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:01.242 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:01.260 - INFO: 
+2026-09-29 05:38:01.260 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:01.260 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:38:01.260 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:01.260 - INFO: Query planning done in 0 ms
+2026-09-29 05:38:01.260 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:01.640 - INFO: Done processing query and sending result, total time was 380 ms
+2026-09-29 05:38:01.660 - INFO: 
+2026-09-29 05:38:01.660 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:01.660 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:01.678 - INFO: 
+2026-09-29 05:38:01.678 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:01.678 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:38:01.678 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:01.678 - INFO: Query planning done in 0 ms
+2026-09-29 05:38:01.678 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:02.067 - INFO: Done processing query and sending result, total time was 388 ms
+2026-09-29 05:38:02.086 - INFO: 
+2026-09-29 05:38:02.086 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:02.086 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:02.104 - INFO: 
+2026-09-29 05:38:02.104 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:02.104 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:38:02.104 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:02.105 - INFO: Query planning done in 0 ms
+2026-09-29 05:38:02.105 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:02.486 - INFO: Done processing query and sending result, total time was 381 ms
+2026-09-29 05:38:02.505 - INFO: 
+2026-09-29 05:38:02.505 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:02.505 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:02.523 - INFO: 
+2026-09-29 05:38:02.523 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:02.523 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:38:02.523 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:02.523 - INFO: Query planning done in 0 ms
+2026-09-29 05:38:02.524 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:02.909 - INFO: Done processing query and sending result, total time was 386 ms
+2026-09-29 05:38:02.929 - INFO: 
+2026-09-29 05:38:02.929 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:02.929 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:02.946 - INFO: 
+2026-09-29 05:38:02.946 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:02.947 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:38:02.947 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:02.947 - INFO: Query planning done in 0 ms
+2026-09-29 05:38:02.947 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:03.337 - INFO: Done processing query and sending result, total time was 390 ms
+2026-09-29 05:38:03.357 - INFO: 
+2026-09-29 05:38:03.357 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:03.357 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:03.374 - INFO: 
+2026-09-29 05:38:03.374 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:03.375 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:38:03.375 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:03.375 - INFO: Query planning done in 0 ms
+2026-09-29 05:38:03.375 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:03.755 - INFO: Done processing query and sending result, total time was 380 ms
+2026-09-29 05:38:03.774 - INFO: 
+2026-09-29 05:38:03.774 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:03.774 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:03.792 - INFO: 
+2026-09-29 05:38:03.792 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:03.792 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:38:03.792 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:03.792 - INFO: Query planning done in 0 ms
+2026-09-29 05:38:03.792 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:04.172 - INFO: Done processing query and sending result, total time was 380 ms
+2026-09-29 05:38:04.192 - INFO: 
+2026-09-29 05:38:04.192 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:04.192 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:04.209 - INFO: 
+2026-09-29 05:38:04.209 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:04.210 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:38:04.210 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:04.210 - INFO: Query planning done in 0 ms
+2026-09-29 05:38:04.210 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:04.596 - INFO: Done processing query and sending result, total time was 386 ms
+2026-09-29 05:38:04.616 - INFO: 
+2026-09-29 05:38:04.616 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:04.616 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:04.633 - INFO: 
+2026-09-29 05:38:04.633 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:04.634 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:38:04.634 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:04.634 - INFO: Query planning done in 0 ms
+2026-09-29 05:38:04.634 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:05.015 - INFO: Done processing query and sending result, total time was 381 ms
+2026-09-29 05:38:05.034 - INFO: 
+2026-09-29 05:38:05.034 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:05.034 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:05.059 - INFO: 
+2026-09-29 05:38:05.059 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:05.059 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:38:05.059 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:05.059 - INFO: Query planning done in 0 ms
+2026-09-29 05:38:05.060 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:05.439 - INFO: Done processing query and sending result, total time was 379 ms
+2026-09-29 05:38:05.458 - INFO: 
+2026-09-29 05:38:05.458 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:05.458 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:05.476 - INFO: 
+2026-09-29 05:38:05.476 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:05.476 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:38:05.476 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:05.476 - INFO: Query planning done in 0 ms
+2026-09-29 05:38:05.477 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:05.854 - INFO: Done processing query and sending result, total time was 378 ms
+2026-09-29 05:38:05.874 - INFO: 
+2026-09-29 05:38:05.874 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:05.874 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:05.892 - INFO: 
+2026-09-29 05:38:05.892 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:05.892 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:38:05.892 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:05.892 - INFO: Query planning done in 0 ms
+2026-09-29 05:38:05.892 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:06.277 - INFO: Done processing query and sending result, total time was 385 ms
+2026-09-29 05:38:06.296 - INFO: 
+2026-09-29 05:38:06.296 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:06.296 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:06.314 - INFO: 
+2026-09-29 05:38:06.314 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:06.314 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — title literals, large, SELECT variant for profiling
+# Goal: stress external-vocabulary lookup on the SELECT CSV export path.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?title
+WHERE {
+  ?paper dblp:title ?title .
+}
+LIMIT 100000
+
+2026-09-29 05:38:06.314 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:06.314 - INFO: Query planning done in 0 ms
+2026-09-29 05:38:06.315 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:06.695 - INFO: Done processing query and sending result, total time was 380 ms
+2026-09-29 05:38:17.348 - INFO: 
+2026-09-29 05:38:17.348 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:17.348 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:17.366 - INFO: 
+2026-09-29 05:38:17.366 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:17.367 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep (SELECT variant)
+# Goal: isolate SELECT CSV/TSV export cost from query-planning cost. Raise
+# the year bound across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?s ?p ?o
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-29 05:38:17.367 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:17.370 - INFO: Query planning done in 4 ms
+2026-09-29 05:38:17.397 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:21.210 - INFO: Done processing query and sending result, total time was 3,843 ms
+2026-09-29 05:38:26.165 - INFO: 
+2026-09-29 05:38:26.165 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:26.165 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:26.183 - INFO: 
+2026-09-29 05:38:26.183 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:26.183 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep (SELECT variant)
+# Goal: isolate SELECT CSV/TSV export cost from query-planning cost. Raise
+# the year bound across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?s ?p ?o
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-29 05:38:26.183 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:26.184 - INFO: Query planning done in 1 ms
+2026-09-29 05:38:26.206 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:28.479 - INFO: Done processing query and sending result, total time was 2,296 ms
+2026-09-29 05:38:28.499 - INFO: 
+2026-09-29 05:38:28.499 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:28.499 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:28.517 - INFO: 
+2026-09-29 05:38:28.517 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:28.517 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep (SELECT variant)
+# Goal: isolate SELECT CSV/TSV export cost from query-planning cost. Raise
+# the year bound across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?s ?p ?o
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-29 05:38:28.517 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:28.518 - INFO: Query planning done in 1 ms
+2026-09-29 05:38:28.539 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:30.989 - INFO: Done processing query and sending result, total time was 2,472 ms
+2026-09-29 05:38:31.008 - INFO: 
+2026-09-29 05:38:31.008 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:31.008 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:31.026 - INFO: 
+2026-09-29 05:38:31.026 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:31.027 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep (SELECT variant)
+# Goal: isolate SELECT CSV/TSV export cost from query-planning cost. Raise
+# the year bound across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?s ?p ?o
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-29 05:38:31.027 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:31.027 - INFO: Query planning done in 1 ms
+2026-09-29 05:38:31.049 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:33.497 - INFO: Done processing query and sending result, total time was 2,470 ms
+2026-09-29 05:38:33.516 - INFO: 
+2026-09-29 05:38:33.516 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:33.516 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:33.534 - INFO: 
+2026-09-29 05:38:33.534 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:33.535 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep (SELECT variant)
+# Goal: isolate SELECT CSV/TSV export cost from query-planning cost. Raise
+# the year bound across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?s ?p ?o
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-29 05:38:33.535 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:33.536 - INFO: Query planning done in 1 ms
+2026-09-29 05:38:33.558 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:36.040 - INFO: Done processing query and sending result, total time was 2,505 ms
+2026-09-29 05:38:36.059 - INFO: 
+2026-09-29 05:38:36.059 - INFO: Request received via GET, no content type specified
+2026-09-29 05:38:36.059 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:38:36.078 - INFO: 
+2026-09-29 05:38:36.078 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:38:36.079 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep (SELECT variant)
+# Goal: isolate SELECT CSV/TSV export cost from query-planning cost. Raise
+# the year bound across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?s ?p ?o
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-29 05:38:36.079 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:38:36.080 - INFO: Query planning done in 1 ms
+2026-09-29 05:38:36.096 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:38:38.515 - INFO: Done processing query and sending result, total time was 2,436 ms
+2026-09-29 05:39:27.524 - INFO: 
+2026-09-29 05:39:27.524 - INFO: Request received via GET, no content type specified
+2026-09-29 05:39:27.524 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:39:27.542 - INFO: 
+2026-09-29 05:39:27.542 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:39:27.542 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep (SELECT variant)
+# Goal: isolate SELECT CSV/TSV export cost from query-planning cost. Raise
+# the year bound across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?s ?p ?o
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-29 05:39:27.542 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:39:27.543 - INFO: Query planning done in 1 ms
+2026-09-29 05:39:27.566 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:39:30.001 - INFO: Done processing query and sending result, total time was 2,459 ms
+2026-09-29 05:39:30.021 - INFO: 
+2026-09-29 05:39:30.021 - INFO: Request received via GET, no content type specified
+2026-09-29 05:39:30.021 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:39:30.038 - INFO: 
+2026-09-29 05:39:30.038 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:39:30.039 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep (SELECT variant)
+# Goal: isolate SELECT CSV/TSV export cost from query-planning cost. Raise
+# the year bound across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?s ?p ?o
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-29 05:39:30.039 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:39:30.040 - INFO: Query planning done in 1 ms
+2026-09-29 05:39:30.062 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:39:32.512 - INFO: Done processing query and sending result, total time was 2,473 ms
+2026-09-29 05:39:32.531 - INFO: 
+2026-09-29 05:39:32.531 - INFO: Request received via GET, no content type specified
+2026-09-29 05:39:32.531 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:39:32.556 - INFO: 
+2026-09-29 05:39:32.556 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:39:32.557 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep (SELECT variant)
+# Goal: isolate SELECT CSV/TSV export cost from query-planning cost. Raise
+# the year bound across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?s ?p ?o
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-29 05:39:32.557 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:39:32.558 - INFO: Query planning done in 1 ms
+2026-09-29 05:39:32.580 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:39:34.960 - INFO: Done processing query and sending result, total time was 2,403 ms
+2026-09-29 05:39:34.979 - INFO: 
+2026-09-29 05:39:34.979 - INFO: Request received via GET, no content type specified
+2026-09-29 05:39:34.979 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:39:34.997 - INFO: 
+2026-09-29 05:39:34.997 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:39:34.997 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep (SELECT variant)
+# Goal: isolate SELECT CSV/TSV export cost from query-planning cost. Raise
+# the year bound across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?s ?p ?o
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-29 05:39:34.997 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:39:34.998 - INFO: Query planning done in 1 ms
+2026-09-29 05:39:35.021 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:39:37.266 - INFO: Done processing query and sending result, total time was 2,269 ms
+2026-09-29 05:39:37.286 - INFO: 
+2026-09-29 05:39:37.286 - INFO: Request received via GET, no content type specified
+2026-09-29 05:39:37.286 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:39:37.303 - INFO: 
+2026-09-29 05:39:37.303 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:39:37.304 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep (SELECT variant)
+# Goal: isolate SELECT CSV/TSV export cost from query-planning cost. Raise
+# the year bound across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?s ?p ?o
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-29 05:39:37.304 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:39:37.305 - INFO: Query planning done in 1 ms
+2026-09-29 05:39:37.327 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:39:39.723 - INFO: Done processing query and sending result, total time was 2,419 ms
+2026-09-29 05:39:51.940 - INFO: 
+2026-09-29 05:39:51.940 - INFO: Request received via GET, no content type specified
+2026-09-29 05:39:51.940 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:39:51.958 - INFO: 
+2026-09-29 05:39:51.958 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:39:51.959 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep (SELECT variant)
+# Goal: isolate SELECT CSV/TSV export cost from query-planning cost. Raise
+# the year bound across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?s ?p ?o
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-29 05:39:51.959 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:39:51.960 - INFO: Query planning done in 1 ms
+2026-09-29 05:39:51.980 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:39:54.440 - INFO: Done processing query and sending result, total time was 2,481 ms
+2026-09-29 05:39:54.459 - INFO: 
+2026-09-29 05:39:54.459 - INFO: Request received via GET, no content type specified
+2026-09-29 05:39:54.459 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:39:54.477 - INFO: 
+2026-09-29 05:39:54.477 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:39:54.478 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep (SELECT variant)
+# Goal: isolate SELECT CSV/TSV export cost from query-planning cost. Raise
+# the year bound across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?s ?p ?o
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-29 05:39:54.478 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:39:54.479 - INFO: Query planning done in 1 ms
+2026-09-29 05:39:54.501 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:39:56.906 - INFO: Done processing query and sending result, total time was 2,428 ms
+2026-09-29 05:39:56.925 - INFO: 
+2026-09-29 05:39:56.925 - INFO: Request received via GET, no content type specified
+2026-09-29 05:39:56.925 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:39:56.943 - INFO: 
+2026-09-29 05:39:56.943 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:39:56.944 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep (SELECT variant)
+# Goal: isolate SELECT CSV/TSV export cost from query-planning cost. Raise
+# the year bound across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?s ?p ?o
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-29 05:39:56.944 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:39:56.945 - INFO: Query planning done in 1 ms
+2026-09-29 05:39:56.967 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:39:59.415 - INFO: Done processing query and sending result, total time was 2,471 ms
+2026-09-29 05:39:59.434 - INFO: 
+2026-09-29 05:39:59.434 - INFO: Request received via GET, no content type specified
+2026-09-29 05:39:59.434 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:39:59.452 - INFO: 
+2026-09-29 05:39:59.452 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:39:59.453 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep (SELECT variant)
+# Goal: isolate SELECT CSV/TSV export cost from query-planning cost. Raise
+# the year bound across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?s ?p ?o
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-29 05:39:59.453 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:39:59.454 - INFO: Query planning done in 1 ms
+2026-09-29 05:39:59.475 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:01.936 - INFO: Done processing query and sending result, total time was 2,483 ms
+2026-09-29 05:40:01.955 - INFO: 
+2026-09-29 05:40:01.955 - INFO: Request received via GET, no content type specified
+2026-09-29 05:40:01.955 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:40:01.981 - INFO: 
+2026-09-29 05:40:01.981 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:40:01.981 - INFO: Processing the following SPARQL query:
+# Tier H — size-sweep (SELECT variant)
+# Goal: isolate SELECT CSV/TSV export cost from query-planning cost. Raise
+# the year bound across runs, for example 1970, 1990, 2010, and 2023.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?s ?p ?o
+WHERE {
+  ?s a dblp:Publication ;
+     dblp:yearOfPublication ?year ;
+     ?p ?o .
+  FILTER(?year <= "1970"^^<http://www.w3.org/2001/XMLSchema#gYear>)
+}
+
+2026-09-29 05:40:01.981 - INFO: Requested media types of the result are: "text/tab-separated-values"
+2026-09-29 05:40:01.982 - INFO: Query planning done in 1 ms
+2026-09-29 05:40:02.003 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:04.451 - INFO: Done processing query and sending result, total time was 2,469 ms
+2026-09-29 05:40:16.649 - INFO: 
+2026-09-29 05:40:16.649 - INFO: Request received via GET, no content type specified
+2026-09-29 05:40:16.649 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:40:16.667 - INFO: 
+2026-09-29 05:40:16.667 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:40:16.667 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:40:16.667 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:40:16.667 - INFO: Query planning done in 0 ms
+2026-09-29 05:40:16.672 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:17.651 - INFO: Done processing query and sending result, total time was 984 ms
+2026-09-29 05:40:19.208 - INFO: 
+2026-09-29 05:40:19.208 - INFO: Request received via GET, no content type specified
+2026-09-29 05:40:19.208 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:40:19.226 - INFO: 
+2026-09-29 05:40:19.226 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:40:19.226 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:40:19.226 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:40:19.227 - INFO: Query planning done in 0 ms
+2026-09-29 05:40:19.229 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:19.919 - INFO: Done processing query and sending result, total time was 693 ms
+2026-09-29 05:40:19.938 - INFO: 
+2026-09-29 05:40:19.938 - INFO: Request received via GET, no content type specified
+2026-09-29 05:40:19.938 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:40:19.964 - INFO: 
+2026-09-29 05:40:19.964 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:40:19.964 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:40:19.964 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:40:19.964 - INFO: Query planning done in 0 ms
+2026-09-29 05:40:19.977 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:20.663 - INFO: Done processing query and sending result, total time was 698 ms
+2026-09-29 05:40:20.682 - INFO: 
+2026-09-29 05:40:20.682 - INFO: Request received via GET, no content type specified
+2026-09-29 05:40:20.682 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:40:20.700 - INFO: 
+2026-09-29 05:40:20.700 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:40:20.700 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:40:20.700 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:40:20.701 - INFO: Query planning done in 0 ms
+2026-09-29 05:40:20.703 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:21.393 - INFO: Done processing query and sending result, total time was 693 ms
+2026-09-29 05:40:21.412 - INFO: 
+2026-09-29 05:40:21.412 - INFO: Request received via GET, no content type specified
+2026-09-29 05:40:21.412 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:40:21.430 - INFO: 
+2026-09-29 05:40:21.430 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:40:21.430 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:40:21.430 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:40:21.431 - INFO: Query planning done in 0 ms
+2026-09-29 05:40:21.433 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:22.120 - INFO: Done processing query and sending result, total time was 689 ms
+2026-09-29 05:40:22.139 - INFO: 
+2026-09-29 05:40:22.139 - INFO: Request received via GET, no content type specified
+2026-09-29 05:40:22.139 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:40:22.157 - INFO: 
+2026-09-29 05:40:22.157 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:40:22.157 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:40:22.158 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:40:22.158 - INFO: Query planning done in 0 ms
+2026-09-29 05:40:22.160 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:22.848 - INFO: Done processing query and sending result, total time was 690 ms
+2026-09-29 05:40:22.867 - INFO: 
+2026-09-29 05:40:22.867 - INFO: Request received via GET, no content type specified
+2026-09-29 05:40:22.867 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:40:22.885 - INFO: 
+2026-09-29 05:40:22.885 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:40:22.885 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:40:22.885 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:40:22.886 - INFO: Query planning done in 0 ms
+2026-09-29 05:40:22.888 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:23.574 - INFO: Done processing query and sending result, total time was 688 ms
+2026-09-29 05:40:23.593 - INFO: 
+2026-09-29 05:40:23.593 - INFO: Request received via GET, no content type specified
+2026-09-29 05:40:23.593 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:40:23.611 - INFO: 
+2026-09-29 05:40:23.611 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:40:23.611 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:40:23.611 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:40:23.611 - INFO: Query planning done in 0 ms
+2026-09-29 05:40:23.614 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:24.291 - INFO: Done processing query and sending result, total time was 680 ms
+2026-09-29 05:40:24.311 - INFO: 
+2026-09-29 05:40:24.311 - INFO: Request received via GET, no content type specified
+2026-09-29 05:40:24.311 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:40:24.336 - INFO: 
+2026-09-29 05:40:24.336 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:40:24.337 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:40:24.337 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:40:24.337 - INFO: Query planning done in 0 ms
+2026-09-29 05:40:24.340 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:25.023 - INFO: Done processing query and sending result, total time was 686 ms
+2026-09-29 05:40:25.043 - INFO: 
+2026-09-29 05:40:25.043 - INFO: Request received via GET, no content type specified
+2026-09-29 05:40:25.043 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:40:25.061 - INFO: 
+2026-09-29 05:40:25.061 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:40:25.061 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:40:25.061 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:40:25.061 - INFO: Query planning done in 0 ms
+2026-09-29 05:40:25.063 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:25.748 - INFO: Done processing query and sending result, total time was 687 ms
+2026-09-29 05:40:25.768 - INFO: 
+2026-09-29 05:40:25.768 - INFO: Request received via GET, no content type specified
+2026-09-29 05:40:25.768 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:40:25.785 - INFO: 
+2026-09-29 05:40:25.785 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:40:25.786 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:40:25.786 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:40:25.786 - INFO: Query planning done in 0 ms
+2026-09-29 05:40:25.788 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:26.474 - INFO: Done processing query and sending result, total time was 688 ms
+2026-09-29 05:40:26.493 - INFO: 
+2026-09-29 05:40:26.493 - INFO: Request received via GET, no content type specified
+2026-09-29 05:40:26.494 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:40:26.511 - INFO: 
+2026-09-29 05:40:26.511 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:40:26.512 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:40:26.512 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:40:26.512 - INFO: Query planning done in 0 ms
+2026-09-29 05:40:26.514 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:27.200 - INFO: Done processing query and sending result, total time was 688 ms
+2026-09-29 05:40:27.219 - INFO: 
+2026-09-29 05:40:27.219 - INFO: Request received via GET, no content type specified
+2026-09-29 05:40:27.220 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:40:27.237 - INFO: 
+2026-09-29 05:40:27.237 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:40:27.238 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:40:27.238 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:40:27.238 - INFO: Query planning done in 0 ms
+2026-09-29 05:40:27.240 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:27.927 - INFO: Done processing query and sending result, total time was 689 ms
+2026-09-29 05:40:27.946 - INFO: 
+2026-09-29 05:40:27.946 - INFO: Request received via GET, no content type specified
+2026-09-29 05:40:27.946 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:40:27.964 - INFO: 
+2026-09-29 05:40:27.964 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:40:27.964 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:40:27.964 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:40:27.964 - INFO: Query planning done in 0 ms
+2026-09-29 05:40:27.967 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:28.651 - INFO: Done processing query and sending result, total time was 687 ms
+2026-09-29 05:40:28.671 - INFO: 
+2026-09-29 05:40:28.671 - INFO: Request received via GET, no content type specified
+2026-09-29 05:40:28.671 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:40:28.688 - INFO: 
+2026-09-29 05:40:28.688 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:40:28.689 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:40:28.689 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:40:28.689 - INFO: Query planning done in 0 ms
+2026-09-29 05:40:28.691 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:29.362 - INFO: Done processing query and sending result, total time was 673 ms
+2026-09-29 05:40:29.381 - INFO: 
+2026-09-29 05:40:29.381 - INFO: Request received via GET, no content type specified
+2026-09-29 05:40:29.381 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:40:29.408 - INFO: 
+2026-09-29 05:40:29.408 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:40:29.408 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:40:29.408 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:40:29.408 - INFO: Query planning done in 0 ms
+2026-09-29 05:40:29.411 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:40:30.076 - INFO: Done processing query and sending result, total time was 668 ms
+2026-09-29 05:41:12.545 - INFO: 
+2026-09-29 05:41:12.545 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:12.545 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:12.571 - INFO: 
+2026-09-29 05:41:12.571 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:12.571 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:12.571 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:12.571 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:12.574 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:13.243 - INFO: Done processing query and sending result, total time was 672 ms
+2026-09-29 05:41:13.262 - INFO: 
+2026-09-29 05:41:13.262 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:13.262 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:13.280 - INFO: 
+2026-09-29 05:41:13.280 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:13.280 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:13.280 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:13.281 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:13.284 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:13.936 - INFO: Done processing query and sending result, total time was 655 ms
+2026-09-29 05:41:13.955 - INFO: 
+2026-09-29 05:41:13.955 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:13.955 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:13.973 - INFO: 
+2026-09-29 05:41:13.973 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:13.973 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:13.973 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:13.973 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:13.976 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:14.657 - INFO: Done processing query and sending result, total time was 684 ms
+2026-09-29 05:41:14.676 - INFO: 
+2026-09-29 05:41:14.676 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:14.676 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:14.694 - INFO: 
+2026-09-29 05:41:14.694 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:14.694 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:14.694 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:14.695 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:14.697 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:15.366 - INFO: Done processing query and sending result, total time was 672 ms
+2026-09-29 05:41:15.385 - INFO: 
+2026-09-29 05:41:15.385 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:15.385 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:15.403 - INFO: 
+2026-09-29 05:41:15.403 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:15.403 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:15.403 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:15.403 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:15.405 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:16.084 - INFO: Done processing query and sending result, total time was 681 ms
+2026-09-29 05:41:16.102 - INFO: 
+2026-09-29 05:41:16.102 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:16.102 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:16.120 - INFO: 
+2026-09-29 05:41:16.120 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:16.120 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:16.121 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:16.121 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:16.123 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:16.762 - INFO: Done processing query and sending result, total time was 641 ms
+2026-09-29 05:41:16.781 - INFO: 
+2026-09-29 05:41:16.781 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:16.781 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:16.799 - INFO: 
+2026-09-29 05:41:16.799 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:16.799 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:16.799 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:16.800 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:16.802 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:17.437 - INFO: Done processing query and sending result, total time was 637 ms
+2026-09-29 05:41:17.456 - INFO: 
+2026-09-29 05:41:17.456 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:17.456 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:17.474 - INFO: 
+2026-09-29 05:41:17.474 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:17.474 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:17.474 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:17.475 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:17.477 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:18.111 - INFO: Done processing query and sending result, total time was 636 ms
+2026-09-29 05:41:18.130 - INFO: 
+2026-09-29 05:41:18.130 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:18.130 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:18.148 - INFO: 
+2026-09-29 05:41:18.148 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:18.148 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:18.148 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:18.149 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:18.152 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:18.804 - INFO: Done processing query and sending result, total time was 655 ms
+2026-09-29 05:41:18.823 - INFO: 
+2026-09-29 05:41:18.823 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:18.823 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:18.840 - INFO: 
+2026-09-29 05:41:18.840 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:18.841 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:18.841 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:18.841 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:18.844 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:19.475 - INFO: Done processing query and sending result, total time was 634 ms
+2026-09-29 05:41:19.494 - INFO: 
+2026-09-29 05:41:19.494 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:19.494 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:19.512 - INFO: 
+2026-09-29 05:41:19.512 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:19.512 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:19.512 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:19.513 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:19.515 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:20.168 - INFO: Done processing query and sending result, total time was 656 ms
+2026-09-29 05:41:20.187 - INFO: 
+2026-09-29 05:41:20.187 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:20.187 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:20.205 - INFO: 
+2026-09-29 05:41:20.205 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:20.206 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:20.206 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:20.206 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:20.208 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:20.898 - INFO: Done processing query and sending result, total time was 693 ms
+2026-09-29 05:41:20.917 - INFO: 
+2026-09-29 05:41:20.917 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:20.917 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:20.936 - INFO: 
+2026-09-29 05:41:20.936 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:20.936 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:20.936 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:20.936 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:20.939 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:21.630 - INFO: Done processing query and sending result, total time was 694 ms
+2026-09-29 05:41:21.649 - INFO: 
+2026-09-29 05:41:21.649 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:21.649 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:21.675 - INFO: 
+2026-09-29 05:41:21.675 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:21.675 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:21.675 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:21.675 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:21.678 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:22.365 - INFO: Done processing query and sending result, total time was 690 ms
+2026-09-29 05:41:22.384 - INFO: 
+2026-09-29 05:41:22.384 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:22.384 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:22.402 - INFO: 
+2026-09-29 05:41:22.402 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:22.403 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:22.403 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:22.403 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:22.405 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:23.091 - INFO: Done processing query and sending result, total time was 688 ms
+2026-09-29 05:41:33.902 - INFO: 
+2026-09-29 05:41:33.902 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:33.902 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:33.920 - INFO: 
+2026-09-29 05:41:33.920 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:33.920 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:33.920 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:33.921 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:33.923 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:34.612 - INFO: Done processing query and sending result, total time was 691 ms
+2026-09-29 05:41:34.631 - INFO: 
+2026-09-29 05:41:34.631 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:34.631 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:34.649 - INFO: 
+2026-09-29 05:41:34.649 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:34.649 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:34.649 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:34.649 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:34.652 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:35.337 - INFO: Done processing query and sending result, total time was 688 ms
+2026-09-29 05:41:35.356 - INFO: 
+2026-09-29 05:41:35.356 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:35.356 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:35.374 - INFO: 
+2026-09-29 05:41:35.374 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:35.374 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:35.374 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:35.375 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:35.377 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:36.067 - INFO: Done processing query and sending result, total time was 693 ms
+2026-09-29 05:41:36.086 - INFO: 
+2026-09-29 05:41:36.086 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:36.086 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:36.104 - INFO: 
+2026-09-29 05:41:36.104 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:36.104 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:36.104 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:36.105 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:36.107 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:36.789 - INFO: Done processing query and sending result, total time was 685 ms
+2026-09-29 05:41:36.808 - INFO: 
+2026-09-29 05:41:36.808 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:36.808 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:36.826 - INFO: 
+2026-09-29 05:41:36.826 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:36.826 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:36.826 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:36.827 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:36.829 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:37.518 - INFO: Done processing query and sending result, total time was 691 ms
+2026-09-29 05:41:37.537 - INFO: 
+2026-09-29 05:41:37.537 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:37.537 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:37.554 - INFO: 
+2026-09-29 05:41:37.554 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:37.555 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:37.555 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:37.555 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:37.557 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:38.244 - INFO: Done processing query and sending result, total time was 689 ms
+2026-09-29 05:41:38.263 - INFO: 
+2026-09-29 05:41:38.263 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:38.263 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:38.280 - INFO: 
+2026-09-29 05:41:38.280 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:38.281 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:38.281 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:38.281 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:38.283 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:38.972 - INFO: Done processing query and sending result, total time was 691 ms
+2026-09-29 05:41:38.990 - INFO: 
+2026-09-29 05:41:38.990 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:38.990 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:39.008 - INFO: 
+2026-09-29 05:41:39.008 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:39.008 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:39.008 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:39.009 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:39.011 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:39.692 - INFO: Done processing query and sending result, total time was 684 ms
+2026-09-29 05:41:39.711 - INFO: 
+2026-09-29 05:41:39.711 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:39.711 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:39.736 - INFO: 
+2026-09-29 05:41:39.736 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:39.736 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:39.736 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:39.737 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:39.740 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:40.385 - INFO: Done processing query and sending result, total time was 649 ms
+2026-09-29 05:41:40.404 - INFO: 
+2026-09-29 05:41:40.404 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:40.404 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:40.422 - INFO: 
+2026-09-29 05:41:40.422 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:40.422 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:40.422 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:40.423 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:40.425 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:41.077 - INFO: Done processing query and sending result, total time was 654 ms
+2026-09-29 05:41:41.096 - INFO: 
+2026-09-29 05:41:41.096 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:41.096 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:41.114 - INFO: 
+2026-09-29 05:41:41.114 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:41.114 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:41.114 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:41.114 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:41.118 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:41.802 - INFO: Done processing query and sending result, total time was 688 ms
+2026-09-29 05:41:41.821 - INFO: 
+2026-09-29 05:41:41.821 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:41.821 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:41.839 - INFO: 
+2026-09-29 05:41:41.839 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:41.839 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:41.839 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:41.839 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:41.842 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:42.532 - INFO: Done processing query and sending result, total time was 693 ms
+2026-09-29 05:41:42.551 - INFO: 
+2026-09-29 05:41:42.551 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:42.551 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:42.569 - INFO: 
+2026-09-29 05:41:42.569 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:42.569 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:42.569 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:42.569 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:42.572 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:43.266 - INFO: Done processing query and sending result, total time was 696 ms
+2026-09-29 05:41:43.285 - INFO: 
+2026-09-29 05:41:43.285 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:43.285 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:43.302 - INFO: 
+2026-09-29 05:41:43.303 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:43.303 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:43.303 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:43.303 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:43.305 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:43.994 - INFO: Done processing query and sending result, total time was 691 ms
+2026-09-29 05:41:44.013 - INFO: 
+2026-09-29 05:41:44.013 - INFO: Request received via GET, no content type specified
+2026-09-29 05:41:44.013 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-09-29 05:41:44.031 - INFO: 
+2026-09-29 05:41:44.031 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-09-29 05:41:44.031 - INFO: Processing the following SPARQL query:
+# Tier R2 — STATE (real-world, large result) — SELECT variant
+# Unbounded materialization of the same DBLP venue subgraph as CSV/TSV rows.
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+SELECT ?paper ?p ?o
+WHERE {
+  ?paper a dblp:Publication ;
+         dblp:publishedInStream <https://dblp.org/streams/conf/stoc> ;
+         ?p ?o .
+}
+
+2026-09-29 05:41:44.031 - INFO: Requested media types of the result are: "text/csv"
+2026-09-29 05:41:44.031 - INFO: Query planning done in 0 ms
+2026-09-29 05:41:44.033 - INFO: Result has unknown size (not computed yet)
+2026-09-29 05:41:44.719 - INFO: Done processing query and sending result, total time was 688 ms
