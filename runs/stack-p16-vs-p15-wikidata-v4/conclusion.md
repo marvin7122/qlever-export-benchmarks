@@ -41,3 +41,12 @@
 None: every rep complete, non-empty and correct.
 
 Artifacts: `results.csv` (all reps), `<scenario>/<query>/<arm>/raw/` (harness output per rep), `correctness.tsv`, `build-env.txt`, `env-before.txt`, `env-after.txt`, `gate-*.log`, `driver.log`.
+
+## Concern per row
+
+| query | scenario | arm | concern |
+|---|---|---|---|
+| H-vocab-label-large-de | cold | variant dbaff3f8 | main claim: fiber waves overlap per-column lookups, cold |
+| H-vocab-label-large-de | warm | variant dbaff3f8 | regression guard: fiber setup cost on page-cache hits |
+| H-vocab-random-label-de-200k | cold | variant dbaff3f8 | scattered access: fiber waves, cold random lookups |
+| H-vocab-random-label-de-200k | warm | variant dbaff3f8 | regression guard: fiber cost, scattered hits |
