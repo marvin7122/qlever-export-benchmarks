@@ -1,0 +1,4 @@
+arm	scenario	runtime_params	pread	preadv2	preadv2_nowait	preadv2_eagain	io_uring_enter	liburing_submit	read_bytes	syscr	majflt	minflt	cpu_s	instructions_u	strace_syscalls	io_pattern	bytes	xxh3_128	elapsed_s_screening	note	error
+p7-3526	warm	-	601720	0	0	0	0	263576	0	1201747	0	221064	4.85	29318941734	-	-	19297737	1ad67f5d778a56661d17804e27bc74f9	4.506		
+p8-off	warm	vocabulary-iouring-page-cache-fast-path=false	1201735	0	0	0	0	263576	3067904	1201747	2	210152	5.06	30418954836	-	-	19297737	1ad67f5d778a56661d17804e27bc74f9	4.736		
+p8-on	warm	vocabulary-iouring-page-cache-fast-path=true	1201735	348919	348919	0	0	0	0	1550662	0	218990	5.04	30325420733	-	-	19297737	1ad67f5d778a56661d17804e27bc74f9	4.726		
