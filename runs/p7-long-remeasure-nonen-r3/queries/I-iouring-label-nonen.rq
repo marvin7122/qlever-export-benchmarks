@@ -1,0 +1,18 @@
+# Treatment query for wait / utilization (PR 47).
+# Same humans + rdfs:label scan as H-vocab-label-large.
+# languages-internal is ["en"] only. These tags are on-disk compressed.
+# Several languages so cold wall time is at least 30 s on master.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(
+    LANG(?label) = "de" || LANG(?label) = "fr" || LANG(?label) = "es" ||
+    LANG(?label) = "it" || LANG(?label) = "nl" || LANG(?label) = "pl" ||
+    LANG(?label) = "pt" || LANG(?label) = "ru"
+  )
+}
