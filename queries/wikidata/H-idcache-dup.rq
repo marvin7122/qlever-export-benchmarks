@@ -1,0 +1,13 @@
+# Duplication-heavy IdCache workload (H-dedup-values shape, sized for >=10 s
+# cold on Wikidata truthy). VALUES binds a witness unused in the template, so
+# each distinct (?entity,?p,?o) row repeats exactly 4x consecutively: 75% of
+# row-cells repeat an Id seen 1-3 rows earlier. Dedup mode none (default).
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+CONSTRUCT { ?entity ?p ?o }
+WHERE {
+  VALUES ?duplicationWitness { 1 2 3 4 }
+  ?entity wdt:P31 wd:Q11424 ;
+          ?p ?o .
+}
+LIMIT 1200000
