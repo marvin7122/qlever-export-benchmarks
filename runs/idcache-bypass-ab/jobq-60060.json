@@ -1,0 +1,65 @@
+{
+ "claimed": "2026-09-29T10:45:02Z",
+ "command": [
+  "/local/data-ssd/stoetzem/incoming/idcache-bypass-ab.sh",
+  "--purpose",
+  "thesis",
+  "36545447717",
+  "idcache-bypass-ab",
+  "##QBRANCH=bench/idcache-bypass"
+ ],
+ "created": "2026-09-29T10:42:48Z",
+ "dry": {
+  "at": "2026-09-29T10:42:49Z",
+  "ok": true,
+  "records": [
+   {
+    "member": 60060,
+    "mode": "static",
+    "ok": true,
+    "why": "static: bash -n, test -x, 245-line path scan ok"
+   }
+  ],
+  "why": ""
+ },
+ "finished": "2026-09-29T10:58:15Z",
+ "gate": "ok",
+ "gate_reason": "",
+ "gate_records": [
+  {
+   "member": 60060,
+   "qbranch": "bench/idcache-bypass",
+   "qbranch_origin_sha": "30f03ee02da14a81dbc76b52ee4f3506fb0b92dc"
+  }
+ ],
+ "gate_ts": 1790678701.6637201,
+ "history": [
+  "2026-09-29T10:42:48Z submitted",
+  "2026-09-29T10:45:02Z claimed by ural-wq slot #5266 (gates passed; day window)",
+  "2026-09-29T10:58:15Z finished rc=0"
+ ],
+ "hold_timeout_min": 720,
+ "id": 60060,
+ "kind": "e2e",
+ "notes": "",
+ "owner": "idcache-measurement",
+ "preflight": [
+  {
+   "bins": [],
+   "qbranch": "bench/idcache-bypass",
+   "qbranch_origin_sha": "30f03ee02da14a81dbc76b52ee4f3506fb0b92dc",
+   "script": "/local/data-ssd/stoetzem/incoming/idcache-bypass-ab.sh",
+   "script_sha256": "804fdadff1da3e1a0fb35bbba43fdfbb1aadcbe16b786e42dfdbb66a9e15e894"
+  }
+ ],
+ "priority": 95,
+ "priority_source": "explicit",
+ "qbranch": "bench/idcache-bypass",
+ "qbranch_sha_at_submit": "30f03ee02da14a81dbc76b52ee4f3506fb0b92dc",
+ "rc": 0,
+ "rundirs": [
+  "/local/data-ssd/stoetzem/thesis/experiments/runs/idcache-bypass-ab"
+ ],
+ "slot_seq": "5266",
+ "verdict": false
+}

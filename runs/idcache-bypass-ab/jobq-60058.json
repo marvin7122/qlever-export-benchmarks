@@ -1,0 +1,66 @@
+{
+ "claimed": "2026-09-29T10:40:49Z",
+ "command": [
+  "/local/data-ssd/stoetzem/incoming/idcache-bypass-ab.sh",
+  "--purpose",
+  "thesis",
+  "36545447717",
+  "idcache-bypass-ab",
+  "##QBRANCH=bench/idcache-bypass"
+ ],
+ "created": "2026-09-29T08:55:33Z",
+ "dry": {
+  "at": "2026-09-29T08:55:34Z",
+  "ok": true,
+  "records": [
+   {
+    "member": 60058,
+    "mode": "static",
+    "ok": true,
+    "why": "static: bash -n, test -x, 245-line path scan ok"
+   }
+  ],
+  "why": ""
+ },
+ "finished": "2026-09-29T10:41:22Z",
+ "gate": "ok",
+ "gate_reason": "",
+ "gate_records": [
+  {
+   "member": 60058,
+   "qbranch": "bench/idcache-bypass",
+   "qbranch_origin_sha": "30f03ee02da14a81dbc76b52ee4f3506fb0b92dc"
+  }
+ ],
+ "gate_ts": 1790678448.9497705,
+ "history": [
+  "2026-09-29T08:55:33Z submitted",
+  "2026-09-29T09:57:13Z prio 60 -> 90 by idcache-measurement",
+  "2026-09-29T10:40:49Z claimed by ural-wq slot #5264 (gates passed; day window)",
+  "2026-09-29T10:41:22Z finished rc=1"
+ ],
+ "hold_timeout_min": 720,
+ "id": 60058,
+ "kind": "e2e",
+ "notes": "IdCache bypass A/B (purpose=thesis): same binary 30f03ee02, cache-on vs cache-off, large-de + 4x-dup, 1 warm + 3 interleaved cold trials",
+ "owner": "idcache-measurement",
+ "preflight": [
+  {
+   "bins": [],
+   "qbranch": "bench/idcache-bypass",
+   "qbranch_origin_sha": "30f03ee02da14a81dbc76b52ee4f3506fb0b92dc",
+   "script": "/local/data-ssd/stoetzem/incoming/idcache-bypass-ab.sh",
+   "script_sha256": "35d3cb68d8a2cce9a2aeee80f8ca3207f8f9d90f4c4f4c21705f07fe2a1af59f"
+  }
+ ],
+ "priority": 90,
+ "priority_source": "explicit",
+ "qbranch": "bench/idcache-bypass",
+ "qbranch_sha_at_submit": "30f03ee02da14a81dbc76b52ee4f3506fb0b92dc",
+ "rc": 1,
+ "rundirs": [
+  "/local/data-ssd/stoetzem/thesis/experiments/runs/idcache-bypass-ab"
+ ],
+ "slot_seq": "5264",
+ "verdict": false
+}

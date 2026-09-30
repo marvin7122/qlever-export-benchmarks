@@ -1,0 +1,10 @@
+large-de cache-on: wall median=23.59s min=23.26s max=23.67s trials=['23.67', '23.26', '23.59']
+large-de cache-off: wall median=22.68s min=22.67s max=22.80s trials=['22.68', '22.67', '22.80']
+large-de delta bypass-vs-cache: -3.86% (off=22.68s on=23.59s)
+large-de: bodies byte-identical across arms and trials
+dup cache-on: wall median=1.71s min=1.70s max=1.73s trials=['1.71', '1.73', '1.70']
+dup cache-off: wall median=1.72s min=1.71s max=1.72s trials=['1.72', '1.72', '1.71']
+dup delta bypass-vs-cache: +0.32% (off=1.72s on=1.71s)
+WARN dup: a cold trial is below 10 s
+dup: bodies byte-identical across arms and trials
+SUMMARY: PASS
