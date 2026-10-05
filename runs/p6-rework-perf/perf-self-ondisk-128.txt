@@ -1,0 +1,70 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 29K of event 'cpu/cycles/P'
+# Event count (approx.): 39375048907
+#
+# Overhead  Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+# ........  ................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+     9.50%  [k] filemap_read
+     7.64%  [k] filemap_get_read_batch
+     3.86%  [k] _copy_to_iter
+     3.73%  [k] atime_needs_update
+     3.71%  [k] srso_safe_ret
+     2.87%  [k] vfs_read
+     2.85%  [k] copy_page_to_iter
+     2.83%  [k] srso_return_thunk
+     2.70%  [k] aa_file_perm
+     2.45%  [k] apparmor_file_permission
+     2.40%  [k] ext4_file_read_iter
+     2.27%  [k] __io_read
+     2.23%  [k] filemap_get_pages
+     2.19%  [k] xas_load
+     2.01%  [k] do_syscall_64
+     1.83%  [k] io_init_req
+     1.82%  [k] current_time
+     1.81%  [k] rw_verify_area
+     1.75%  [k] entry_SYSCALL_64_after_hwframe
+     1.73%  [k] kiocb_done
+     1.51%  [k] generic_file_read_iter
+     1.48%  [k] rep_movs_alternative
+     1.45%  [k] io_read
+     1.43%  [k] security_file_permission
+     1.39%  [k] __x64_sys_pread64
+     1.33%  [k] arch_exit_to_user_mode_prepare.isra.0
+     1.29%  [k] touch_atime
+     1.26%  [k] io_issue_sqe
+     1.22%  [k] __io_prep_rw
+     1.14%  [k] io_prep_rw
+     1.13%  [k] fget
+     1.13%  [.] VocabularyOnDisk::operator[][abi:cxx11](unsigned long) const
+     1.07%  [.] __libc_pread
+     1.06%  [k] io_submit_sqe
+     1.00%  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     0.98%  [k] io_prep_read
+     0.96%  [k] io_rw_init_file
+     0.81%  [k] x64_sys_call
+     0.79%  [.] fileno_unlocked
+     0.78%  [k] io_free_batch_list
+     0.76%  [k] __io_issue_sqe
+     0.72%  [k] xas_start
+     0.67%  [k] io_submit_sqes
+     0.67%  [k] __rcu_read_unlock
+     0.66%  [k] __io_import_rw_buffer
+     0.65%  [k] entry_SYSCALL_64
+     0.64%  [k] io_file_get_normal
+     0.60%  [k] ktime_get_coarse_real_ts64_mg
+     0.57%  [k] __rcu_read_lock
+     0.56%  [k] folio_mark_accessed
+     0.47%  [k] __io_submit_flush_completions
+     0.45%  [.] ad_utility::IoUringPolicy::addBatch(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>, unsigned long)
+     0.43%  [.] _ZN12ad_benchmark21measureTimeOfFunctionIZZZNS_23BMVocabBatchLookupMicro16runAllBenchmarksEvENKUlRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_RKT_RKSt6vectorImSaImEEE_clI16VocabularyOnDiskEEDaS9_S9_SC_SH_ENKUlS9_SC_E_clIZZZNS1_16runAllBenchmarksEvENKSJ_ISK_EEDaS9_S9_SC_SH_ENKUlvE_clEvEUlvE_EEDaS9_SC_EUlvE_EEfSC_St17basic_string_viewIcS5_E
+     0.42%  [k] entry_SYSRETQ_unsafe_stack
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

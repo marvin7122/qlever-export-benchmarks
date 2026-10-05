@@ -1,0 +1,34 @@
+2026-10-05 19:38:05.115 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p6-rework-micro/qleverVocabBatchMicro/micro.hybrid ...
+2026-10-05 19:38:05.115 - INFO: Done, number of words: 4096
+2026-10-05 19:38:05.115 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 2049
+2026-10-05 19:38:05.115 - INFO: Running measurement "single lookups of group VocabularyInternalExternal, batch size 2048" ...
+VOCAB_LOOKUP	hybrid-2048	single lookups	559.356	873	1.00007
+2026-10-05 19:38:06.115 - INFO: Done in 1.00012 seconds.
+2026-10-05 19:38:06.115 - INFO: Running measurement "lookupBatch of group VocabularyInternalExternal, batch size 2048" ...
+VOCAB_LOOKUP	hybrid-2048	lookupBatch	697.76	700	1.00031
+2026-10-05 19:38:07.116 - INFO: Done in 1.00033 seconds.
+micro-benchmark checksum: 185367039
+############################################################
+# Benchmark class 'Vocabulary lookupBatch micro-benchmark' #
+############################################################
+General metadata: {"time-of-measurement":"2026-10-05 19:38:05.113"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'VocabularyInternalExternal, batch size 2048'
+    metadata: {"min-seconds-per-measurement":1.0}
+    Measurements:
+    
+        Single measurement 'single lookups'
+            metadata: {"ns-per-word":559.3559732513603,"batches":873}
+            time: 1.00012s
+        
+        Single measurement 'lookupBatch'
+            metadata: {"ns-per-word":697.7598681640624,"batches":700}
+            time: 1.00033s
+    
+    Tables: None
+

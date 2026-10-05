@@ -1,0 +1,87 @@
+Running main() from gmock_main.cc
+[==========] Running 33 tests from 5 test suites.
+[----------] Global test environment set-up.
+[----------] 13 tests from IoUringManagerTest/0, where TypeParam = ad_utility::BatchManager<ad_utility::IoUringPolicy>
+[ RUN      ] IoUringManagerTest/0.SingleBatch
+[       OK ] IoUringManagerTest/0.SingleBatch (0 ms)
+[ RUN      ] IoUringManagerTest/0.mismatchedSpanLengthsThrow
+[       OK ] IoUringManagerTest/0.mismatchedSpanLengthsThrow (0 ms)
+[ RUN      ] IoUringManagerTest/0.MultipleBatchesSequential
+[       OK ] IoUringManagerTest/0.MultipleBatchesSequential (0 ms)
+[ RUN      ] IoUringManagerTest/0.WaitOutOfOrder
+[       OK ] IoUringManagerTest/0.WaitOutOfOrder (0 ms)
+[ RUN      ] IoUringManagerTest/0.BatchLargerThanRing
+[       OK ] IoUringManagerTest/0.BatchLargerThanRing (0 ms)
+[ RUN      ] IoUringManagerTest/0.RingOverflowReapsCompletionsOfEarlierBatch
+[       OK ] IoUringManagerTest/0.RingOverflowReapsCompletionsOfEarlierBatch (0 ms)
+[ RUN      ] IoUringManagerTest/0.MultipleSmallBatchesPipelined
+[       OK ] IoUringManagerTest/0.MultipleSmallBatchesPipelined (0 ms)
+[ RUN      ] IoUringManagerTest/0.ReadPastEofThrows
+[       OK ] IoUringManagerTest/0.ReadPastEofThrows (0 ms)
+[ RUN      ] IoUringManagerTest/0.LargeReads
+[       OK ] IoUringManagerTest/0.LargeReads (0 ms)
+[ RUN      ] IoUringManagerTest/0.differingReadSizes
+[       OK ] IoUringManagerTest/0.differingReadSizes (0 ms)
+[ RUN      ] IoUringManagerTest/0.zeroLengthReadsWithNonZeroLengthReads
+[       OK ] IoUringManagerTest/0.zeroLengthReadsWithNonZeroLengthReads (0 ms)
+[ RUN      ] IoUringManagerTest/0.waitOnNonExistingBatch
+[       OK ] IoUringManagerTest/0.waitOnNonExistingBatch (0 ms)
+[ RUN      ] IoUringManagerTest/0.fakeHandle
+[       OK ] IoUringManagerTest/0.fakeHandle (0 ms)
+[----------] 13 tests from IoUringManagerTest/0 (2 ms total)
+
+[----------] 13 tests from IoUringManagerTest/1, where TypeParam = ad_utility::BatchManager<ad_utility::SyncIoPolicy>
+[ RUN      ] IoUringManagerTest/1.SingleBatch
+[       OK ] IoUringManagerTest/1.SingleBatch (0 ms)
+[ RUN      ] IoUringManagerTest/1.mismatchedSpanLengthsThrow
+[       OK ] IoUringManagerTest/1.mismatchedSpanLengthsThrow (0 ms)
+[ RUN      ] IoUringManagerTest/1.MultipleBatchesSequential
+[       OK ] IoUringManagerTest/1.MultipleBatchesSequential (0 ms)
+[ RUN      ] IoUringManagerTest/1.WaitOutOfOrder
+[       OK ] IoUringManagerTest/1.WaitOutOfOrder (0 ms)
+[ RUN      ] IoUringManagerTest/1.BatchLargerThanRing
+[       OK ] IoUringManagerTest/1.BatchLargerThanRing (0 ms)
+[ RUN      ] IoUringManagerTest/1.RingOverflowReapsCompletionsOfEarlierBatch
+[       OK ] IoUringManagerTest/1.RingOverflowReapsCompletionsOfEarlierBatch (0 ms)
+[ RUN      ] IoUringManagerTest/1.MultipleSmallBatchesPipelined
+[       OK ] IoUringManagerTest/1.MultipleSmallBatchesPipelined (0 ms)
+[ RUN      ] IoUringManagerTest/1.ReadPastEofThrows
+[       OK ] IoUringManagerTest/1.ReadPastEofThrows (0 ms)
+[ RUN      ] IoUringManagerTest/1.LargeReads
+[       OK ] IoUringManagerTest/1.LargeReads (0 ms)
+[ RUN      ] IoUringManagerTest/1.differingReadSizes
+[       OK ] IoUringManagerTest/1.differingReadSizes (0 ms)
+[ RUN      ] IoUringManagerTest/1.zeroLengthReadsWithNonZeroLengthReads
+[       OK ] IoUringManagerTest/1.zeroLengthReadsWithNonZeroLengthReads (0 ms)
+[ RUN      ] IoUringManagerTest/1.waitOnNonExistingBatch
+[       OK ] IoUringManagerTest/1.waitOnNonExistingBatch (0 ms)
+[ RUN      ] IoUringManagerTest/1.fakeHandle
+[       OK ] IoUringManagerTest/1.fakeHandle (0 ms)
+[----------] 13 tests from IoUringManagerTest/1 (1 ms total)
+
+[----------] 3 tests from ReadFullyOrThrow
+[ RUN      ] ReadFullyOrThrow.FullReadSucceeds
+[       OK ] ReadFullyOrThrow.FullReadSucceeds (0 ms)
+[ RUN      ] ReadFullyOrThrow.PreadFailureThrows
+[       OK ] ReadFullyOrThrow.PreadFailureThrows (0 ms)
+[ RUN      ] ReadFullyOrThrow.ShortReadThrows
+[       OK ] ReadFullyOrThrow.ShortReadThrows (0 ms)
+[----------] 3 tests from ReadFullyOrThrow (0 ms total)
+
+[----------] 2 tests from IoUringManagerDrop
+[ RUN      ] IoUringManagerDrop.dropSyncManagerHasNothingInFlight
+[       OK ] IoUringManagerDrop.dropSyncManagerHasNothingInFlight (0 ms)
+[ RUN      ] IoUringManagerDrop.dropRunningManager
+[       OK ] IoUringManagerDrop.dropRunningManager (0 ms)
+[----------] 2 tests from IoUringManagerDrop (0 ms total)
+
+[----------] 2 tests from MakeBatchManager
+[ RUN      ] MakeBatchManager.syncBackendWhenIoUringNotPreferred
+[       OK ] MakeBatchManager.syncBackendWhenIoUringNotPreferred (0 ms)
+[ RUN      ] MakeBatchManager.backendMatchesFlagWhenIoUringPreferred
+[       OK ] MakeBatchManager.backendMatchesFlagWhenIoUringPreferred (0 ms)
+[----------] 2 tests from MakeBatchManager (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 33 tests from 5 test suites ran. (4 ms total)
+[  PASSED  ] 33 tests.

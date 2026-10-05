@@ -1,0 +1,101 @@
+# part 6 rework synthetic rows, ns per word, median [min-max], each measurement >= 10 s
+
+## ondisk-128
+base | lookupBatch | 1332.7 [1296.1-1405.1] mean 1349.5 n=10
+base | single lookups | 1030.8 [999.0-1084.4] mean 1040.9 n=10
+orig | lookupBatch | 1352.2 [1293.5-1590.3] mean 1381.0 n=10
+orig | single lookups | 1038.2 [1004.3-1139.4] mean 1055.2 n=10
+reap | lookupBatch | 1347.0 [1313.2-1438.1] mean 1357.6 n=10
+reap | single lookups | 1033.3 [1005.8-1113.8] mean 1051.8 n=10
+reapslots | lookupBatch | 1326.8 [1278.5-1499.7] mean 1347.0 n=10
+reapslots | single lookups | 1044.5 [1001.0-1193.8] mean 1062.9 n=10
+same binary (base): lookupBatch vs single lookups: +29.3 % slower
+same binary (orig): lookupBatch vs single lookups: +30.2 % slower
+same binary (reap): lookupBatch vs single lookups: +30.4 % slower
+same binary (reapslots): lookupBatch vs single lookups: +27.0 % slower
+cross binary: lookupBatch orig vs base: +1.5 % parity
+cross binary: single lookups orig vs base: +0.7 % parity
+cross binary: lookupBatch reap vs base: +1.1 % parity
+cross binary: single lookups reap vs base: +0.3 % parity
+cross binary: lookupBatch reapslots vs base: -0.4 % parity
+cross binary: single lookups reapslots vs base: +1.3 % parity
+
+## hybrid-128
+base | lookupBatch | 512.5 [494.5-606.2] mean 535.3 n=10
+base | single lookups | 507.1 [496.7-600.8] mean 537.8 n=10
+orig | lookupBatch | 627.0 [610.9-752.9] mean 643.1 n=10
+orig | single lookups | 500.3 [492.7-590.1] mean 512.6 n=10
+reap | lookupBatch | 640.0 [612.5-752.6] mean 664.4 n=10
+reap | single lookups | 499.9 [488.3-553.9] mean 511.1 n=10
+reapslots | lookupBatch | 637.0 [595.0-734.6] mean 650.5 n=10
+reapslots | single lookups | 506.9 [486.3-591.8] mean 514.3 n=10
+same binary (base): lookupBatch vs single lookups: +1.1 % parity
+same binary (orig): lookupBatch vs single lookups: +25.3 % slower
+same binary (reap): lookupBatch vs single lookups: +28.0 % slower
+same binary (reapslots): lookupBatch vs single lookups: +25.7 % slower
+cross binary: lookupBatch orig vs base: +22.3 % slower
+cross binary: single lookups orig vs base: -1.3 % parity
+cross binary: lookupBatch reap vs base: +24.9 % slower
+cross binary: single lookups reap vs base: -1.4 % parity
+cross binary: lookupBatch reapslots vs base: +24.3 % parity
+cross binary: single lookups reapslots vs base: -0.0 % parity
+
+## ondisk-2048
+base | lookupBatch | 1822.1 [1775.8-2226.9] mean 1919.9 n=10
+base | single lookups | 1005.7 [986.7-1249.2] mean 1062.4 n=10
+orig | lookupBatch | 1811.3 [1794.4-2100.5] mean 1845.3 n=10
+orig | single lookups | 1008.3 [989.5-1079.2] mean 1016.0 n=10
+reap | lookupBatch | 1309.8 [1294.5-1606.8] mean 1375.4 n=10
+reap | single lookups | 1018.3 [1001.0-1107.3] mean 1030.1 n=10
+reapslots | lookupBatch | 1289.3 [1267.5-1503.8] mean 1335.4 n=10
+reapslots | single lookups | 1013.2 [998.9-1170.1] mean 1028.4 n=10
+same binary (base): lookupBatch vs single lookups: +81.2 % slower
+same binary (orig): lookupBatch vs single lookups: +79.6 % slower
+same binary (reap): lookupBatch vs single lookups: +28.6 % slower
+same binary (reapslots): lookupBatch vs single lookups: +27.2 % slower
+cross binary: lookupBatch orig vs base: -0.6 % parity
+cross binary: single lookups orig vs base: +0.3 % parity
+cross binary: lookupBatch reap vs base: -28.1 % faster
+cross binary: single lookups reap vs base: +1.3 % parity
+cross binary: lookupBatch reapslots vs base: -29.2 % faster
+cross binary: single lookups reapslots vs base: +0.7 % parity
+
+## hybrid-2048
+base | lookupBatch | 624.4 [583.4-823.6] mean 679.2 n=10
+base | single lookups | 587.3 [568.2-793.4] mean 650.7 n=10
+orig | lookupBatch | 1126.2 [917.7-1302.6] mean 1109.0 n=10
+orig | single lookups | 664.6 [564.5-799.3] mean 679.6 n=10
+reap | lookupBatch | 761.5 [693.3-1045.3] mean 837.1 n=10
+reap | single lookups | 616.7 [562.3-817.3] mean 664.5 n=10
+reapslots | lookupBatch | 723.3 [685.5-977.8] mean 790.3 n=10
+reapslots | single lookups | 615.2 [569.9-791.0] mean 658.0 n=10
+same binary (base): lookupBatch vs single lookups: +6.3 % parity
+same binary (orig): lookupBatch vs single lookups: +69.5 % slower
+same binary (reap): lookupBatch vs single lookups: +23.5 % parity
+same binary (reapslots): lookupBatch vs single lookups: +17.6 % parity
+cross binary: lookupBatch orig vs base: +80.4 % slower
+cross binary: single lookups orig vs base: +13.2 % parity
+cross binary: lookupBatch reap vs base: +22.0 % parity
+cross binary: single lookups reap vs base: +5.0 % parity
+cross binary: lookupBatch reapslots vs base: +15.8 % parity
+cross binary: single lookups reapslots vs base: +4.8 % parity
+
+## e2e-200k-50k
+base | lookupBatch | 1170.2 [1132.3-1235.1] mean 1180.5 n=10
+base | sequential single-word lookups | 1110.8 [1091.3-1170.4] mean 1121.9 n=10
+orig | lookupBatch | 1548.9 [1531.2-1581.1] mean 1550.4 n=10
+orig | sequential single-word lookups | 1136.3 [1076.7-1171.5] mean 1129.2 n=10
+reap | lookupBatch | 1178.2 [1152.8-1201.1] mean 1177.1 n=10
+reap | sequential single-word lookups | 1120.5 [1088.1-1206.2] mean 1132.5 n=10
+reapslots | lookupBatch | 1140.6 [1113.1-1189.3] mean 1148.0 n=10
+reapslots | sequential single-word lookups | 1128.3 [1090.1-1199.0] mean 1130.4 n=10
+same binary (base): lookupBatch vs sequential single-word lookups: +5.4 % parity
+same binary (orig): lookupBatch vs sequential single-word lookups: +36.3 % slower
+same binary (reap): lookupBatch vs sequential single-word lookups: +5.1 % parity
+same binary (reapslots): lookupBatch vs sequential single-word lookups: +1.1 % parity
+cross binary: lookupBatch orig vs base: +32.4 % slower
+cross binary: sequential single-word lookups orig vs base: +2.3 % parity
+cross binary: lookupBatch reap vs base: +0.7 % parity
+cross binary: sequential single-word lookups reap vs base: +0.9 % parity
+cross binary: lookupBatch reapslots vs base: -2.5 % parity
+cross binary: sequential single-word lookups reapslots vs base: +1.6 % parity

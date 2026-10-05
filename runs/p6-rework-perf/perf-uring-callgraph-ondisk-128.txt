@@ -1,0 +1,300 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 29K of event 'cpu/cycles/P'
+# Event count (approx.): 39375048907
+#
+# Children      Self  Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+# ........  ........  .................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    90.41%     1.75%  [.] entry_SYSCALL_64_after_hwframe
+            |          
+             --88.66%--entry_SYSCALL_64_after_hwframe
+                       |          
+                        --86.45%--do_syscall_64
+                                  |          
+                                   --83.07%--x64_sys_call
+                                             |          
+                                             |--47.35%--__x64_sys_io_uring_enter
+                                             |          |          
+                                             |           --47.33%--__do_sys_io_uring_enter
+                                             |                     |          
+                                             |                      --47.03%--io_submit_sqes
+                                             |                                |          
+                                             |                                 --43.48%--io_submit_sqe
+                                             |                                           |          
+                                             |                                           |--36.38%--io_issue_sqe
+                                             |                                           |          |          
+                                             |                                           |           --32.60%--__io_issue_sqe
+                                             |                                           |                     |          
+                                             |                                           |                      --31.65%--io_read
+                                             |                                           |                                |          
+                                             |                                           |                                 --27.27%--__io_read
+                                             |                                           |                                           |          
+                                             |                                           |                                           |--19.14%--ext4_file_read_iter
+                                             |                                           |                                           |          |          
+                                             |                                           |                                           |           --18.32%--generic_file_read_iter
+                                             |                                           |                                           |                     |          
+                                             |                                           |                                           |                      --17.34%--filemap_read
+                                             |                                           |                                           |                                |          
+                                             |                                           |                                           |                                |--5.81%--filemap_get_pages
+                                             |                                           |                                           |                                |          |          
+                                             |                                           |                                           |                                |           --3.95%--filemap_get_read_batch
+                                             |                                           |                                           |                                |          
+                                             |                                           |                                           |                                |--3.51%--touch_atime
+                                             |                                           |                                           |                                |          
+                                             |                                           |                                           |                                 --3.46%--copy_page_to_iter
+                                             |                                           |                                           |          
+                                             |                                           |                                            --4.29%--rw_verify_area
+                                             |                                           |                                                      |          
+                                             |                                           |                                                       --3.37%--security_file_permission
+                                             |                                           |          
+                                             |                                            --4.88%--io_init_req
+                                             |                                                      |          
+                                             |                                                       --3.91%--io_prep_read
+                                             |                                                                 |          
+                                             |                                                                  --3.75%--io_prep_rw
+                                             |          
+                                              --35.47%--__x64_sys_pread64
+                                                        |          
+                                                         --33.08%--vfs_read
+                                                                   |          
+                                                                   |--25.36%--ext4_file_read_iter
+                                                                   |          |          
+                                                                   |           --23.81%--generic_file_read_iter
+                                                                   |                     |          
+                                                                   |                      --22.53%--filemap_read
+                                                                   |                                |          
+                                                                   |                                |--7.52%--filemap_get_pages
+                                                                   |                                |          |          
+                                                                   |                                |           --5.09%--filemap_get_read_batch
+                                                                   |                                |          
+                                                                   |                                |--4.67%--copy_page_to_iter
+                                                                   |                                |          
+                                                                   |                                 --4.57%--touch_atime
+                                                                   |                                           |          
+                                                                   |                                            --3.48%--atime_needs_update
+                                                                   |          
+                                                                    --4.64%--rw_verify_area
+                                                                              |          
+                                                                               --3.74%--security_file_permission
+
+    88.52%     2.01%  [.] do_syscall_64
+            |          
+             --86.52%--do_syscall_64
+                       |          
+                        --83.10%--x64_sys_call
+                                  |          
+                                  |--47.35%--__x64_sys_io_uring_enter
+                                  |          |          
+                                  |           --47.33%--__do_sys_io_uring_enter
+                                  |                     |          
+                                  |                      --47.03%--io_submit_sqes
+                                  |                                |          
+                                  |                                 --43.48%--io_submit_sqe
+                                  |                                           |          
+                                  |                                           |--36.38%--io_issue_sqe
+                                  |                                           |          |          
+                                  |                                           |           --32.60%--__io_issue_sqe
+                                  |                                           |                     |          
+                                  |                                           |                      --31.65%--io_read
+                                  |                                           |                                |          
+                                  |                                           |                                 --27.27%--__io_read
+                                  |                                           |                                           |          
+                                  |                                           |                                           |--19.15%--ext4_file_read_iter
+                                  |                                           |                                           |          |          
+                                  |                                           |                                           |           --18.33%--generic_file_read_iter
+                                  |                                           |                                           |                     |          
+                                  |                                           |                                           |                      --17.34%--filemap_read
+                                  |                                           |                                           |                                |          
+                                  |                                           |                                           |                                |--5.81%--filemap_get_pages
+                                  |                                           |                                           |                                |          |          
+                                  |                                           |                                           |                                |           --3.95%--filemap_get_read_batch
+                                  |                                           |                                           |                                |          
+                                  |                                           |                                           |                                |--3.51%--touch_atime
+                                  |                                           |                                           |                                |          
+                                  |                                           |                                           |                                 --3.46%--copy_page_to_iter
+                                  |                                           |                                           |          
+                                  |                                           |                                            --4.29%--rw_verify_area
+                                  |                                           |                                                      |          
+                                  |                                           |                                                       --3.37%--security_file_permission
+                                  |                                           |          
+                                  |                                            --4.88%--io_init_req
+                                  |                                                      |          
+                                  |                                                       --3.91%--io_prep_read
+                                  |                                                                 |          
+                                  |                                                                  --3.75%--io_prep_rw
+                                  |          
+                                   --35.49%--__x64_sys_pread64
+                                             |          
+                                              --33.12%--vfs_read
+                                                        |          
+                                                        |--25.33%--ext4_file_read_iter
+                                                        |          |          
+                                                        |           --23.81%--generic_file_read_iter
+                                                        |                     |          
+                                                        |                      --22.55%--filemap_read
+                                                        |                                |          
+                                                        |                                |--7.61%--filemap_get_pages
+                                                        |                                |          |          
+                                                        |                                |           --5.17%--filemap_get_read_batch
+                                                        |                                |          
+                                                        |                                |--4.66%--copy_page_to_iter
+                                                        |                                |          
+                                                        |                                 --4.54%--touch_atime
+                                                        |                                           |          
+                                                        |                                            --3.46%--atime_needs_update
+                                                        |          
+                                                         --4.71%--rw_verify_area
+                                                                   |          
+                                                                    --3.79%--security_file_permission
+
+    84.90%     0.81%  [.] x64_sys_call
+            |          
+             --84.09%--x64_sys_call
+                       |          
+                       |--47.35%--__x64_sys_io_uring_enter
+                       |          |          
+                       |           --47.33%--__do_sys_io_uring_enter
+                       |                     |          
+                       |                      --47.03%--io_submit_sqes
+                       |                                |          
+                       |                                 --43.48%--io_submit_sqe
+                       |                                           |          
+                       |                                           |--36.38%--io_issue_sqe
+                       |                                           |          |          
+                       |                                           |           --32.60%--__io_issue_sqe
+                       |                                           |                     |          
+                       |                                           |                      --31.65%--io_read
+                       |                                           |                                |          
+                       |                                           |                                 --27.27%--__io_read
+                       |                                           |                                           |          
+                       |                                           |                                           |--19.14%--ext4_file_read_iter
+                       |                                           |                                           |          |          
+                       |                                           |                                           |           --18.32%--generic_file_read_iter
+                       |                                           |                                           |                     |          
+                       |                                           |                                           |                      --17.34%--filemap_read
+                       |                                           |                                           |                                |          
+                       |                                           |                                           |                                |--5.81%--filemap_get_pages
+                       |                                           |                                           |                                |          |          
+                       |                                           |                                           |                                |           --3.94%--filemap_get_read_batch
+                       |                                           |                                           |                                |          
+                       |                                           |                                           |                                |--3.51%--touch_atime
+                       |                                           |                                           |                                |          
+                       |                                           |                                           |                                 --3.46%--copy_page_to_iter
+                       |                                           |                                           |          
+                       |                                           |                                            --4.29%--rw_verify_area
+                       |                                           |                                                      |          
+                       |                                           |                                                       --3.37%--security_file_permission
+                       |                                           |          
+                       |                                            --4.88%--io_init_req
+                       |                                                      |          
+                       |                                                       --3.91%--io_prep_read
+                       |                                                                 |          
+                       |                                                                  --3.75%--io_prep_rw
+                       |          
+                        --35.96%--__x64_sys_pread64
+                                  |          
+                                   --33.53%--vfs_read
+                                             |          
+                                             |--25.39%--ext4_file_read_iter
+                                             |          |          
+                                             |           --23.87%--generic_file_read_iter
+                                             |                     |          
+                                             |                      --22.61%--filemap_read
+                                             |                                |          
+                                             |                                |--7.62%--filemap_get_pages
+                                             |                                |          |          
+                                             |                                |           --5.17%--filemap_get_read_batch
+                                             |                                |          
+                                             |                                |--4.67%--copy_page_to_iter
+                                             |                                |          
+                                             |                                 --4.55%--touch_atime
+                                             |                                           |          
+                                             |                                            --3.47%--atime_needs_update
+                                             |          
+                                              --4.94%--rw_verify_area
+                                                        |          
+                                                         --4.00%--security_file_permission
+                                                                   |          
+                                                                    --3.15%--apparmor_file_permission
+
+    47.48%     0.01%  [.] io_uring_submit
+            |          
+             --47.47%--io_uring_submit
+                       |          
+                        --47.42%--entry_SYSCALL_64_after_hwframe
+                                  |          
+                                   --47.39%--do_syscall_64
+                                             |          
+                                              --47.35%--x64_sys_call
+                                                        |          
+                                                         --47.35%--__x64_sys_io_uring_enter
+                                                                   |          
+                                                                    --47.33%--__do_sys_io_uring_enter
+                                                                              |          
+                                                                               --47.03%--io_submit_sqes
+                                                                                         |          
+                                                                                          --43.49%--io_submit_sqe
+                                                                                                    |          
+                                                                                                    |--36.38%--io_issue_sqe
+                                                                                                    |          |          
+                                                                                                    |           --32.60%--__io_issue_sqe
+                                                                                                    |                     |          
+                                                                                                    |                      --31.65%--io_read
+                                                                                                    |                                |          
+                                                                                                    |                                 --27.27%--__io_read
+                                                                                                    |                                           |          
+                                                                                                    |                                           |--19.15%--ext4_file_read_iter
+                                                                                                    |                                           |          |          
+                                                                                                    |                                           |           --18.33%--generic_file_read_iter
+                                                                                                    |                                           |                     |          
+                                                                                                    |                                           |                      --17.34%--filemap_read
+                                                                                                    |                                           |                                |          
+                                                                                                    |                                           |                                |--5.81%--filemap_get_pages
+                                                                                                    |                                           |                                |          |          
+                                                                                                    |                                           |                                |           --3.95%--filemap_get_read_batch
+                                                                                                    |                                           |                                |          
+                                                                                                    |                                           |                                |--3.51%--touch_atime
+                                                                                                    |                                           |                                |          
+                                                                                                    |                                           |                                 --3.46%--copy_page_to_iter
+                                                                                                    |                                           |          
+                                                                                                    |                                            --4.29%--rw_verify_area
+                                                                                                    |                                                      |          
+                                                                                                    |                                                       --3.37%--security_file_permission
+                                                                                                    |          
+                                                                                                     --4.88%--io_init_req
+                                                                                                               |          
+                                                                                                                --3.91%--io_prep_read
+                                                                                                                          |          
+                                                                                                                           --3.75%--io_prep_rw
+
+    47.36%     0.00%  [.] __x64_sys_io_uring_enter
+            |          
+             --47.35%--__x64_sys_io_uring_enter
+                       |          
+                        --47.34%--__do_sys_io_uring_enter
+                                  |          
+                                   --47.03%--io_submit_sqes
+                                             |          
+                                              --43.49%--io_submit_sqe
+                                                        |          
+                                                        |--36.38%--io_issue_sqe
+                                                        |          |          
+                                                        |           --32.60%--__io_issue_sqe
+                                                        |                     |          
+                                                        |                      --31.65%--io_read
+                                                        |                                |          
+                                                        |                                 --27.27%--__io_read
+                                                        |                                           |          
+                                                        |                                           |--19.15%--ext4_file_read_iter
+                                                        |                                           |          |          
+                                                        |                                           |           --18.33%--generic_file_read_iter
+                                                        |                                           |                     |          
+                                                        |                                           |                      --17.34%--filemap_read
+                                                        |                                           |                                |          
+                                                        |                                           |                                |--5.81%--filemap_get_pages
+                                                        |                                           |                                |          |          
+                                                        |                                           |                                |           --3.95%--filemap_get_read_batch

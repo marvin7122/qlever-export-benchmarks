@@ -1,0 +1,38 @@
+2026-10-05 20:03:44.891 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p6-rework-micro/qleverVocabBatchEndToEnd/endtoend.hybrid ...
+2026-10-05 20:03:44.896 - INFO: Done, number of words: 200000
+2026-10-05 20:03:44.896 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 100001
+2026-10-05 20:03:44.899 - INFO: Running measurement "lookupBatch of group VocabularyInternalExternal, 200k words, 50k shuffled lookups" ...
+2026-10-05 20:03:54.913 - INFO: Done in 10.0137 seconds.
+VOCAB_LOOKUP	e2e-200k-50k	lookupBatch	1157.66	173	10.0137
+2026-10-05 20:03:54.913 - INFO: Running measurement "sequential single-word lookups of group VocabularyInternalExternal, 200k words, 50k shuffled lookups" ...
+2026-10-05 20:04:04.959 - INFO: Done in 10.0466 seconds.
+VOCAB_LOOKUP	e2e-200k-50k	sequential single-word lookups	1097.99	183	10.0466
+end-to-end checksum: 1059396192
+#################################################################
+# Benchmark class 'Vocabulary lookupBatch end-to-end benchmark' #
+#################################################################
+General metadata: {"time-of-measurement":"2026-10-05 20:03:44.825"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'VocabularyInternalExternal, 200k words, 50k shuffled lookups'
+    metadata: {
+      "num-words": 200000,
+      "num-queries": 50000,
+      "min-seconds-per-measurement": 10.0
+    }
+    Measurements:
+    
+        Single measurement 'lookupBatch'
+            metadata: {"ns-per-word":1157.6584571098265,"rounds":173}
+            time: 10.0137s
+        
+        Single measurement 'sequential single-word lookups'
+            metadata: {"ns-per-word":1097.9866669945354,"rounds":183}
+            time: 10.0466s
+    
+    Tables: None
+

@@ -1,0 +1,43 @@
+job=90026 lane=micro start=2026-10-05T18:05:38Z
+script=/local/data-ssd/stoetzem/incoming/p6-rework-perf.sh sha256=149524c006fbae8d27047fcbf4f8f79b8ac84e156a8816987d60825d8613a8df
+args=/local/data-ssd/stoetzem/thesis/experiments/runs/p6-rework-perf e508af5dcd7ff44c07b1da47cd5c0d60340db221
+qbranch=rework/p6-reap-slots sha=e508af5dcd7ff44c07b1da47cd5c0d60340db221
+host=ural kernel=7.0.0-28-generic loadavg=21.42 21.36 17.01 23/1310 1242349
+ural-wq running at start: 5288|bench
+--- bin-cache/e508af5dcd7ff44c07b1da47cd5c0d60340db221: CMakeCache.txt META-qlever-server META-VocabularyBatchLookupEndToEndBenchmark META-VocabularyBatchLookupMicroBenchmark qlever-server VocabularyBatchLookupEndToEndBenchmark VocabularyBatchLookupMicroBenchmark 
+  META-qlever-server: branch=rework/p6-reap-slots
+  META-qlever-server: sha=e508af5dcd7ff44c07b1da47cd5c0d60340db221
+  META-qlever-server: target=qlever-server
+  META-qlever-server: flavor=u24
+  META-qlever-server: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-qlever-server: build_type=Release
+  META-qlever-server: cxx_flags_release=-O3 -DNDEBUG
+  META-qlever-server: exe_linker_flags=
+  META-qlever-server: linker=default ld
+  META-qlever-server: profile=b3c465cfff4a
+  META-qlever-server: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-qlever-server: built_utc=2026-10-05T17:05:30Z host=wolga wq_seq=276
+  META-VocabularyBatchLookupEndToEndBenchmark: branch=rework/p6-reap-slots
+  META-VocabularyBatchLookupEndToEndBenchmark: sha=e508af5dcd7ff44c07b1da47cd5c0d60340db221
+  META-VocabularyBatchLookupEndToEndBenchmark: target=VocabularyBatchLookupEndToEndBenchmark
+  META-VocabularyBatchLookupEndToEndBenchmark: flavor=u24
+  META-VocabularyBatchLookupEndToEndBenchmark: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-VocabularyBatchLookupEndToEndBenchmark: build_type=Release
+  META-VocabularyBatchLookupEndToEndBenchmark: cxx_flags_release=-O3 -DNDEBUG
+  META-VocabularyBatchLookupEndToEndBenchmark: exe_linker_flags=
+  META-VocabularyBatchLookupEndToEndBenchmark: linker=default ld
+  META-VocabularyBatchLookupEndToEndBenchmark: profile=b3c465cfff4a
+  META-VocabularyBatchLookupEndToEndBenchmark: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-VocabularyBatchLookupEndToEndBenchmark: built_utc=2026-10-05T16:55:51Z host=wolga wq_seq=274
+  META-VocabularyBatchLookupMicroBenchmark: branch=rework/p6-reap-slots
+  META-VocabularyBatchLookupMicroBenchmark: sha=e508af5dcd7ff44c07b1da47cd5c0d60340db221
+  META-VocabularyBatchLookupMicroBenchmark: target=VocabularyBatchLookupMicroBenchmark
+  META-VocabularyBatchLookupMicroBenchmark: flavor=u24
+  META-VocabularyBatchLookupMicroBenchmark: compiler=/usr/bin/c++ (c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)
+  META-VocabularyBatchLookupMicroBenchmark: build_type=Release
+  META-VocabularyBatchLookupMicroBenchmark: cxx_flags_release=-O3 -DNDEBUG
+  META-VocabularyBatchLookupMicroBenchmark: exe_linker_flags=
+  META-VocabularyBatchLookupMicroBenchmark: linker=default ld
+  META-VocabularyBatchLookupMicroBenchmark: profile=b3c465cfff4a
+  META-VocabularyBatchLookupMicroBenchmark: profile_desc=flavor=u24 image=localhost/qlever-ci:gcc12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 -DUSE_IO_URING=ON -DENABLE_BENCHMARKS=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+  META-VocabularyBatchLookupMicroBenchmark: built_utc=2026-10-05T16:55:51Z host=wolga wq_seq=274
