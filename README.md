@@ -10,6 +10,18 @@ private thesis repository with their original directory names
 (`experiments/runs/<dir>` there, `runs/<dir>` here). The PR descriptions link
 to directories in this repository.
 
+## Runs used in the colloquium talk (2026-10-26)
+
+Each of these directories has a `README.md` that says what the run measures and which numbers the slides take from it.
+
+1. [`io-wait-null-ab-2`](runs/io-wait-null-ab-2/): size of the German sequential export: 8.9 million blocking reads, 0.5 GB of output.
+2. [`nowait8-readahead-fadv-random`](runs/nowait8-readahead-fadv-random/): share of name reads served from the page cache, cold: 92.4 % sequential, 20.9 % scattered.
+3. [`pr81-fast-export-wikidata-ab`](runs/pr81-fast-export-wikidata-ab/): English-label control export: 27.83 s cold, 27.72 s warm, CPU-bound.
+4. [`wikidata-routing-ab`](runs/wikidata-routing-ab/): master vs io_uring routing on German-label exports, cold and warm.
+5. [`wikidata-iouring-stall-compare-de`](runs/wikidata-iouring-stall-compare-de/): baseline wall time vs CPU time, the upper bound if all waiting disappeared.
+6. [`stack-nowait-vs-p7-wikidata-len10`](runs/stack-nowait-vs-p7-wikidata-len10/): ring only vs ring + page-cache fast path, 10 trials.
+7. [`stack-p7-vs-p6-wikidata`](runs/stack-p7-vs-p6-wikidata/): the "before (pread)" bars: stack part 6 (#3525) vs part 7 (#3526).
+
 ## Machine
 
 All A/B runs ran on the benchmark host `ural` unless a run's env file says otherwise:
