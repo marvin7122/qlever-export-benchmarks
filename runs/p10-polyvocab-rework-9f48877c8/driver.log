@@ -1,0 +1,116 @@
+base b093e69972ee5a8166f561618cbe4cf59fc655bd sha256 3758ec4d8f33345dd9f855c440b8fd12fda161af01c4a6b5500d77e9a3506927
+v0 e274aadfb5bf328538e73ecbbfa09dd0d4857e9a sha256 dc0ab309cbbc5a4ec6b978ebd7495c16ff8d89a4a3d6192b369158a3a4784549
+v1 bdb5da6bf174fdc3a37262d902dbe1f5cf892d24 sha256 a2bc54b7d671f0d0cfd84fb0b8c492fb675ffda45179b681f54522c4f77cf478
+v2 9f48877c80a72b84c299728d718f18a92f63bc3d sha256 2463cca5333172ed8785afac11724bad5fe25c330bd53a540204dbd0788c6635
+calibration compressed: fastest 0.158626 s at 500 reps -> 37825 reps
+calibration uncompressed: fastest 0.079739 s at 500 reps -> 75246 reps
+trial 0 done 21:41:31 load 18.86 18.12 12.98
+trial 1 done 21:49:46 load 18.83 19.00 15.61
+trial 2 done 21:57:20 load 4.41 9.96 12.85
+trial 3 done 22:04:36 load 17.58 11.24 11.72
+trial 4 done 22:12:55 load 19.42 17.66 14.77
+trial 5 done 22:21:12 load 19.12 19.09 16.74
+trial 6 done 22:29:02 load 6.89 12.31 14.81
+trial 7 done 22:35:56 load 2.33 5.56 10.76
+trial 8 done 22:42:59 load 2.60 4.31 8.31
+trial 9 done 22:49:47 load 1.77 3.11 6.44
+trial 10 done 22:56:33 load 5.67 4.19 5.74
+group | binary | measurement | n | median s | min..max s | mean s | median ns/word
+compressed | base | batched lookupBatch | 10 | 11.06 | 9.15..12.77 | 10.97 | 142.8
+compressed | base | concrete lookupBatch (no dispatch) | 10 | 11.08 | 9.15..12.82 | 10.97 | 143.0
+compressed | base | sequential operator[] | 10 | 17.61 | 14.08..20.23 | 17.25 | 227.3
+compressed | v0 | batched lookupBatch | 10 | 11.70 | 9.31..12.86 | 11.20 | 151.0
+compressed | v0 | batched lookupBatch with builder | 10 | 11.83 | 9.21..12.83 | 11.54 | 152.7
+compressed | v0 | batched lookupBatch with tracked builder | 10 | 11.76 | 9.24..12.69 | 11.50 | 151.8
+compressed | v0 | concrete lookupBatch (no dispatch) | 10 | 11.73 | 9.18..12.96 | 11.50 | 151.5
+compressed | v0 | sequential operator[] | 10 | 17.84 | 13.77..20.17 | 17.12 | 230.2
+compressed | v1 | batched lookupBatch | 10 | 12.13 | 10.05..12.75 | 11.90 | 156.6
+compressed | v1 | batched lookupBatch with builder | 10 | 12.38 | 11.13..12.84 | 12.17 | 159.8
+compressed | v1 | batched lookupBatch with tracked builder | 10 | 11.98 | 10.20..12.58 | 11.78 | 154.6
+compressed | v1 | concrete lookupBatch (no dispatch) | 10 | 11.99 | 10.38..12.77 | 11.84 | 154.7
+compressed | v1 | sequential operator[] | 10 | 18.84 | 14.26..20.11 | 18.31 | 243.2
+compressed | v2 | batched lookupBatch | 10 | 12.02 | 10.83..12.60 | 11.91 | 155.2
+compressed | v2 | batched lookupBatch with builder | 10 | 11.87 | 9.90..12.60 | 11.61 | 153.3
+compressed | v2 | batched lookupBatch with tracked builder | 10 | 11.92 | 9.18..12.48 | 11.48 | 153.8
+compressed | v2 | concrete lookupBatch (no dispatch) | 10 | 11.34 | 9.18..12.54 | 11.25 | 146.3
+compressed | v2 | sequential operator[] | 10 | 18.90 | 15.78..20.08 | 18.61 | 243.9
+uncompressed | base | batched lookupBatch | 10 | 10.74 | 9.55..12.44 | 11.00 | 69.7
+uncompressed | base | concrete lookupBatch (no dispatch) | 10 | 11.62 | 9.52..12.50 | 11.49 | 75.4
+uncompressed | base | sequential operator[] | 10 | 12.60 | 11.17..14.80 | 12.93 | 81.7
+uncompressed | v0 | batched lookupBatch | 10 | 11.78 | 9.62..12.45 | 11.48 | 76.4
+uncompressed | v0 | batched lookupBatch with builder | 10 | 13.45 | 10.89..14.65 | 13.27 | 87.3
+uncompressed | v0 | batched lookupBatch with tracked builder | 10 | 12.85 | 10.81..14.51 | 13.03 | 83.4
+uncompressed | v0 | concrete lookupBatch (no dispatch) | 10 | 11.22 | 9.56..12.44 | 11.28 | 72.8
+uncompressed | v0 | sequential operator[] | 10 | 15.00 | 11.51..16.26 | 14.68 | 97.3
+uncompressed | v1 | batched lookupBatch | 10 | 11.41 | 9.51..12.51 | 11.24 | 74.0
+uncompressed | v1 | batched lookupBatch with builder | 10 | 12.28 | 10.24..13.44 | 12.21 | 79.7
+uncompressed | v1 | batched lookupBatch with tracked builder | 10 | 12.36 | 10.48..13.46 | 12.28 | 80.2
+uncompressed | v1 | concrete lookupBatch (no dispatch) | 10 | 11.09 | 9.45..12.22 | 11.00 | 72.0
+uncompressed | v1 | sequential operator[] | 10 | 13.89 | 11.49..15.40 | 13.83 | 90.1
+uncompressed | v2 | batched lookupBatch | 10 | 10.89 | 9.50..12.16 | 10.92 | 70.7
+uncompressed | v2 | batched lookupBatch with builder | 10 | 10.85 | 9.51..12.25 | 10.82 | 70.4
+uncompressed | v2 | batched lookupBatch with tracked builder | 10 | 11.47 | 10.13..13.30 | 11.64 | 74.4
+uncompressed | v2 | concrete lookupBatch (no dispatch) | 10 | 10.60 | 9.40..12.13 | 10.68 | 68.8
+uncompressed | v2 | sequential operator[] | 10 | 13.41 | 11.13..14.90 | 13.33 | 87.0
+
+builder arms vs plain 'batched lookupBatch' of the same binary:
+compressed | v0 | batched lookupBatch with builder | +1.1 % | parity
+compressed | v0 | batched lookupBatch with tracked builder | +0.5 % | parity
+compressed | v1 | batched lookupBatch with builder | +2.1 % | parity
+compressed | v1 | batched lookupBatch with tracked builder | -1.3 % | parity
+compressed | v2 | batched lookupBatch with builder | -1.2 % | parity
+compressed | v2 | batched lookupBatch with tracked builder | -0.9 % | parity
+uncompressed | v0 | batched lookupBatch with builder | +14.3 % | parity
+uncompressed | v0 | batched lookupBatch with tracked builder | +9.1 % | parity
+uncompressed | v1 | batched lookupBatch with builder | +7.6 % | parity
+uncompressed | v1 | batched lookupBatch with tracked builder | +8.3 % | parity
+uncompressed | v2 | batched lookupBatch with builder | -0.4 % | parity
+uncompressed | v2 | batched lookupBatch with tracked builder | +5.3 % | parity
+
+same arm vs base (stack/07c) and vs v0 (before fix):
+compressed | base vs v0 | batched lookupBatch | -5.5 % | parity
+compressed | base vs v0 | concrete lookupBatch (no dispatch) | -5.6 % | parity
+compressed | base vs v0 | sequential operator[] | -1.3 % | parity
+compressed | v0 vs base | batched lookupBatch | +5.8 % | parity
+compressed | v0 vs base | concrete lookupBatch (no dispatch) | +5.9 % | parity
+compressed | v0 vs base | sequential operator[] | +1.3 % | parity
+compressed | v1 vs base | batched lookupBatch | +9.6 % | parity
+compressed | v1 vs v0 | batched lookupBatch | +3.7 % | parity
+compressed | v1 vs v0 | batched lookupBatch with builder | +4.6 % | parity
+compressed | v1 vs v0 | batched lookupBatch with tracked builder | +1.8 % | parity
+compressed | v1 vs base | concrete lookupBatch (no dispatch) | +8.2 % | parity
+compressed | v1 vs v0 | concrete lookupBatch (no dispatch) | +2.2 % | parity
+compressed | v1 vs base | sequential operator[] | +7.0 % | parity
+compressed | v1 vs v0 | sequential operator[] | +5.6 % | parity
+compressed | v2 vs base | batched lookupBatch | +8.7 % | parity
+compressed | v2 vs v0 | batched lookupBatch | +2.7 % | parity
+compressed | v2 vs v0 | batched lookupBatch with builder | +0.4 % | parity
+compressed | v2 vs v0 | batched lookupBatch with tracked builder | +1.3 % | parity
+compressed | v2 vs base | concrete lookupBatch (no dispatch) | +2.3 % | parity
+compressed | v2 vs v0 | concrete lookupBatch (no dispatch) | -3.4 % | parity
+compressed | v2 vs base | sequential operator[] | +7.3 % | parity
+compressed | v2 vs v0 | sequential operator[] | +5.9 % | parity
+uncompressed | base vs v0 | batched lookupBatch | -8.8 % | parity
+uncompressed | base vs v0 | concrete lookupBatch (no dispatch) | +3.6 % | parity
+uncompressed | base vs v0 | sequential operator[] | -16.0 % | parity
+uncompressed | v0 vs base | batched lookupBatch | +9.6 % | parity
+uncompressed | v0 vs base | concrete lookupBatch (no dispatch) | -3.5 % | parity
+uncompressed | v0 vs base | sequential operator[] | +19.1 % | parity
+uncompressed | v1 vs base | batched lookupBatch | +6.2 % | parity
+uncompressed | v1 vs v0 | batched lookupBatch | -3.1 % | parity
+uncompressed | v1 vs v0 | batched lookupBatch with builder | -8.7 % | parity
+uncompressed | v1 vs v0 | batched lookupBatch with tracked builder | -3.8 % | parity
+uncompressed | v1 vs base | concrete lookupBatch (no dispatch) | -4.5 % | parity
+uncompressed | v1 vs v0 | concrete lookupBatch (no dispatch) | -1.1 % | parity
+uncompressed | v1 vs base | sequential operator[] | +10.2 % | parity
+uncompressed | v1 vs v0 | sequential operator[] | -7.4 % | parity
+uncompressed | v2 vs base | batched lookupBatch | +1.4 % | parity
+uncompressed | v2 vs v0 | batched lookupBatch | -7.5 % | parity
+uncompressed | v2 vs v0 | batched lookupBatch with builder | -19.4 % | parity
+uncompressed | v2 vs v0 | batched lookupBatch with tracked builder | -10.8 % | parity
+uncompressed | v2 vs base | concrete lookupBatch (no dispatch) | -8.8 % | parity
+uncompressed | v2 vs v0 | concrete lookupBatch (no dispatch) | -5.5 % | parity
+uncompressed | v2 vs base | sequential operator[] | +6.4 % | parity
+uncompressed | v2 vs v0 | sequential operator[] | -10.6 % | parity
+
+BENCH_EXIT=0

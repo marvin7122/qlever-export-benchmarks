@@ -1,0 +1,43 @@
+2026-10-06 00:08:54.805 - INFO: Finished writing compressed vocabulary, size = 7219 B [uncompressed = 141.3 kB, ratio = 5%]
+2026-10-06 00:08:54.805 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p10-polyvocab/polyVocabLookupBatchMicroC.words ...
+2026-10-06 00:08:54.805 - INFO: Done, number of words: 2048
+2026-10-06 00:08:54.805 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 2048
+2026-10-06 00:08:54.806 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p10-polyvocab/polyVocabLookupBatchMicroU ...
+2026-10-06 00:08:54.807 - INFO: Done, number of words: 2048
+2026-10-06 00:08:54.807 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 2048
+2026-10-06 00:08:54.807 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p10-polyvocab/polyVocabLookupBatchMicroC.words ...
+2026-10-06 00:08:54.807 - INFO: Done, number of words: 2048
+2026-10-06 00:08:54.807 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 2048
+2026-10-06 00:08:54.807 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p10-polyvocab/polyVocabLookupBatchMicroU ...
+2026-10-06 00:08:54.807 - INFO: Done, number of words: 2048
+2026-10-06 00:08:54.807 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 2048
+2026-10-06 00:08:54.808 - INFO: Running measurement "sequential operator[] of group Synthetic micro-batches: 2,048 lookups into 2,048 words (on-disk uncompressed, copy path)" ...
+2026-10-06 00:09:09.605 - INFO: Done in 14.7974 seconds.
+2026-10-06 00:09:09.605 - INFO: Running measurement "batched lookupBatch of group Synthetic micro-batches: 2,048 lookups into 2,048 words (on-disk uncompressed, copy path)" ...
+2026-10-06 00:09:22.044 - INFO: Done in 12.4392 seconds.
+2026-10-06 00:09:22.044 - INFO: Running measurement "concrete lookupBatch (no dispatch) of group Synthetic micro-batches: 2,048 lookups into 2,048 words (on-disk uncompressed, copy path)" ...
+2026-10-06 00:09:34.549 - INFO: Done in 12.5048 seconds.
+##########################################################################
+# Benchmark class 'PolymorphicVocabulary::lookupBatch (synthetic micro)' #
+##########################################################################
+General metadata: {"time-of-measurement":"2026-10-06 00:08:54.808"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'Synthetic micro-batches: 2,048 lookups into 2,048 words (on-disk uncompressed, copy path)'
+    Measurements:
+    
+        Single measurement 'sequential operator[]'
+            time: 14.7974s
+        
+        Single measurement 'batched lookupBatch'
+            time: 12.4392s
+        
+        Single measurement 'concrete lookupBatch (no dispatch)'
+            time: 12.5048s
+    
+    Tables: None
+

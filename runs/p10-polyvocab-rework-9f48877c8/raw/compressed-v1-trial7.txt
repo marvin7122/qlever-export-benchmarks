@@ -1,0 +1,53 @@
+2026-10-06 00:31:34.026 - INFO: Finished writing compressed vocabulary, size = 7219 B [uncompressed = 141.3 kB, ratio = 5%]
+2026-10-06 00:31:34.026 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p10-polyvocab/polyVocabLookupBatchMicroC.words ...
+2026-10-06 00:31:34.026 - INFO: Done, number of words: 2048
+2026-10-06 00:31:34.026 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 2048
+2026-10-06 00:31:34.027 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p10-polyvocab/polyVocabLookupBatchMicroU ...
+2026-10-06 00:31:34.027 - INFO: Done, number of words: 2048
+2026-10-06 00:31:34.027 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 2048
+2026-10-06 00:31:34.027 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p10-polyvocab/polyVocabLookupBatchMicroC.words ...
+2026-10-06 00:31:34.027 - INFO: Done, number of words: 2048
+2026-10-06 00:31:34.027 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 2048
+2026-10-06 00:31:34.027 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/bench-tmp/p10-polyvocab/polyVocabLookupBatchMicroU ...
+2026-10-06 00:31:34.028 - INFO: Done, number of words: 2048
+2026-10-06 00:31:34.028 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 2048
+2026-10-06 00:31:34.028 - INFO: Running measurement "sequential operator[] of group Synthetic micro-batches: 2,048 lookups into 2,048 words (on-disk compressed, builder path)" ...
+2026-10-06 00:31:49.898 - INFO: Done in 15.8703 seconds.
+2026-10-06 00:31:49.898 - INFO: Running measurement "batched lookupBatch of group Synthetic micro-batches: 2,048 lookups into 2,048 words (on-disk compressed, builder path)" ...
+2026-10-06 00:32:01.774 - INFO: Done in 11.8761 seconds.
+2026-10-06 00:32:01.774 - INFO: Running measurement "batched lookupBatch with builder of group Synthetic micro-batches: 2,048 lookups into 2,048 words (on-disk compressed, builder path)" ...
+2026-10-06 00:32:13.714 - INFO: Done in 11.94 seconds.
+2026-10-06 00:32:13.714 - INFO: Running measurement "batched lookupBatch with tracked builder of group Synthetic micro-batches: 2,048 lookups into 2,048 words (on-disk compressed, builder path)" ...
+2026-10-06 00:32:25.418 - INFO: Done in 11.7033 seconds.
+2026-10-06 00:32:25.418 - INFO: Running measurement "concrete lookupBatch (no dispatch) of group Synthetic micro-batches: 2,048 lookups into 2,048 words (on-disk compressed, builder path)" ...
+2026-10-06 00:32:37.117 - INFO: Done in 11.6998 seconds.
+##########################################################################
+# Benchmark class 'PolymorphicVocabulary::lookupBatch (synthetic micro)' #
+##########################################################################
+General metadata: {"time-of-measurement":"2026-10-06 00:31:34.028"}
+
+No configuration options were defined.
+
+####################
+# Group benchmarks #
+####################
+Group 'Synthetic micro-batches: 2,048 lookups into 2,048 words (on-disk compressed, builder path)'
+    Measurements:
+    
+        Single measurement 'sequential operator[]'
+            time: 15.8703s
+        
+        Single measurement 'batched lookupBatch'
+            time: 11.8761s
+        
+        Single measurement 'batched lookupBatch with builder'
+            time: 11.94s
+        
+        Single measurement 'batched lookupBatch with tracked builder'
+            time: 11.7033s
+        
+        Single measurement 'concrete lookupBatch (no dispatch)'
+            time: 11.6998s
+    
+    Tables: None
+

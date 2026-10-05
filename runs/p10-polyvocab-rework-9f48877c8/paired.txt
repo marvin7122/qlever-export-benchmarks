@@ -1,0 +1,22 @@
+Paired per trial (same process): builder arm / plain 'batched lookupBatch' - 1; median [min..max] over 10 trials
+compressed | v0 | batched lookupBatch with builder | -0.6 % [-2.8..+22.8]
+compressed | v0 | batched lookupBatch with tracked builder | -0.8 % [-2.6..+25.4]
+compressed | v1 | batched lookupBatch with builder | -0.5 % [-2.5..+16.5]
+compressed | v1 | batched lookupBatch with tracked builder | -1.5 % [-9.2..+15.6]
+compressed | v2 | batched lookupBatch with builder | -0.4 % [-17.6..+1.2]
+compressed | v2 | batched lookupBatch with tracked builder | -1.4 % [-23.6..+2.1]
+uncompressed | v0 | batched lookupBatch with builder | +16.2 % [+8.6..+19.1]
+uncompressed | v0 | batched lookupBatch with tracked builder | +15.2 % [+7.5..+16.7]
+uncompressed | v1 | batched lookupBatch with builder | +9.5 % [-9.8..+15.2]
+uncompressed | v1 | batched lookupBatch with tracked builder | +9.8 % [+1.6..+13.1]
+uncompressed | v2 | batched lookupBatch with builder | +0.1 % [-6.8..+1.3]
+uncompressed | v2 | batched lookupBatch with tracked builder | +9.3 % [-2.7..+10.3]
+
+perf stat, uncompressed group, full length (75,246 x 2,048 = 154.1 M words): instructions:u per word
+base-batched-lookupBatch | 318
+v0-batched-lookupBatch-with-builder | 460
+v0-batched-lookupBatch-with-tracked-builder | 459
+v1-batched-lookupBatch-with-builder | 365
+v1-batched-lookupBatch-with-tracked-builder | 365
+v2-batched-lookupBatch-with-builder | 324
+v2-batched-lookupBatch-with-tracked-builder | 365
