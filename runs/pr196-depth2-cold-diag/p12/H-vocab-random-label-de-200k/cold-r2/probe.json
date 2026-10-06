@@ -1,0 +1,167 @@
+{
+ "arm": "p12",
+ "query": "H-vocab-random-label-de-200k",
+ "tag": "cold-r2",
+ "http": "200",
+ "ttfb_s": 8.649143,
+ "curl_total_s": 11.701283,
+ "bytes": 19297737,
+ "wall_s": 11.738201631233096,
+ "sha256": "497dacfdffcc71ac2acc3f748140e9d6b27586f7d7b743ccdb98289101fb4ad9",
+ "sampler_ticks": 11750,
+ "sample_hz": 1000.0,
+ "threads": [
+  {
+   "tid": 1117886,
+   "comm": "qlever-server",
+   "utime": 185,
+   "stime": 209,
+   "run_ns": 3944493541,
+   "delay_ns": 115793638,
+   "slices": 49090,
+   "read_bytes": 1524797440,
+   "vcs": 49024,
+   "nvcs": 66
+  },
+  {
+   "tid": 1117882,
+   "comm": "qlever-server",
+   "utime": 12,
+   "stime": 23,
+   "run_ns": 353892996,
+   "delay_ns": 773041,
+   "slices": 15,
+   "read_bytes": 8192,
+   "vcs": 3,
+   "nvcs": 12
+  },
+  {
+   "tid": 1117887,
+   "comm": "qlever-server",
+   "utime": 2,
+   "stime": 2,
+   "run_ns": 53225118,
+   "delay_ns": 1843371,
+   "slices": 2367,
+   "read_bytes": 0,
+   "vcs": 2366,
+   "nvcs": 1
+  },
+  {
+   "tid": 1117885,
+   "comm": "qlever-server",
+   "utime": 0,
+   "stime": 0,
+   "run_ns": 2035251,
+   "delay_ns": 223781,
+   "slices": 2,
+   "read_bytes": 0,
+   "vcs": 2,
+   "nvcs": 0
+  }
+ ],
+ "sampler": {
+  "1117513": {
+   "comm": "qlever-server",
+   "samples": {
+    "S|futex|futex_do_wait": 200
+   }
+  },
+  "1117514": {
+   "comm": "qlever-server",
+   "samples": {
+    "S|futex|futex_do_wait": 200
+   }
+  },
+  "1117882": {
+   "comm": "qlever-server",
+   "samples": {
+    "S|futex|futex_do_wait": 470,
+    "R|-|-": 330,
+    "D|pread64|folio_wait_bit_common": 2
+   }
+  },
+  "1117883": {
+   "comm": "qlever-server",
+   "samples": {
+    "S|futex|futex_do_wait": 200
+   }
+  },
+  "1117884": {
+   "comm": "qlever-server",
+   "samples": {
+    "S|futex|futex_do_wait": 200
+   }
+  },
+  "1117885": {
+   "comm": "qlever-server",
+   "samples": {
+    "S|futex|futex_do_wait": 200
+   }
+  },
+  "1117886": {
+   "comm": "qlever-server",
+   "samples": {
+    "R|-|-": 3767,
+    "D|pread64|folio_wait_bit_common": 1497,
+    "S|futex|futex_do_wait": 1073,
+    "D|pread64|0": 698,
+    "D|running|0": 551,
+    "D|running|folio_wait_bit_common": 388,
+    "S|epoll_wait|ep_poll": 24,
+    "D|running|prepare_task_switch": 2,
+    "D|running|perf_event_update_userpage": 2,
+    "S|running|0": 1,
+    "D|running|iommu_map": 1,
+    "D|running|sched_balance_newidle": 1,
+    "D|running|event_sched_out": 1,
+    "D|running|__schedule": 1,
+    "D|running|pick_next_task_fair": 1,
+    "D|pread64|raw_spin_rq_unlock": 1,
+    "D|running|sched_clock_noinstr": 1,
+    "D|running|pick_next_task": 1,
+    "D|-1|softleaf_entry_wait_on_locked": 1,
+    "D|running|iommu_dma_map_phys": 1
+   }
+  },
+  "1117887": {
+   "comm": "qlever-server",
+   "samples": {
+    "S|epoll_wait|ep_poll": 400
+   }
+  },
+  "1117923": {
+   "comm": "qlever-server",
+   "samples": {
+    "S|futex|futex_do_wait": 201
+   }
+  },
+  "1118113": {
+   "comm": "qlever-server",
+   "samples": {
+    "S|futex|futex_do_wait": 400
+   }
+  },
+  "1118114": {
+   "comm": "qlever-server",
+   "samples": {
+    "S|futex|futex_do_wait": 394,
+    "R|-|-": 6
+   }
+  },
+  "1118115": {
+   "comm": "qlever-server",
+   "samples": {
+    "S|futex|futex_do_wait": 194,
+    "R|-|-": 6
+   }
+  },
+  "1118116": {
+   "comm": "qlever-server",
+   "samples": {
+    "R|-|-": 2808,
+    "S|futex|futex_do_wait": 104
+   }
+  }
+ }
+}

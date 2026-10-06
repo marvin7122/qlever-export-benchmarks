@@ -1,0 +1,108 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 27K of event 'cpu/cycles/P'
+# Event count (approx.): 109801482189
+#
+# Overhead  Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+# ........  ..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+     9.02%  [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+            |          
+             --8.48%--VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+
+     6.74%  [k] filemap_get_read_batch
+            |          
+             --2.76%--xas_load
+                       |          
+                        --2.69%--filemap_get_read_batch
+                                  filemap_get_pages
+                                  filemap_read
+                                  generic_file_read_iter
+                                  ext4_file_read_iter
+                                  |          
+                                   --2.66%--do_iter_readv_writev
+                                             vfs_readv
+                                             do_preadv
+                                             __x64_sys_preadv2
+                                             x64_sys_call
+                                             do_syscall_64
+                                             entry_SYSCALL_64_after_hwframe
+                                             preadv64v2
+                                             ad_utility::readPageCacheHits(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>)
+
+     4.38%  [k] _copy_to_iter
+            |          
+            |--1.46%--xas_load
+            |          |          
+            |           --1.43%--filemap_get_read_batch
+            |                     filemap_get_pages
+            |                     filemap_read
+            |                     generic_file_read_iter
+            |                     ext4_file_read_iter
+            |                     |          
+            |                      --1.42%--do_iter_readv_writev
+            |                                vfs_readv
+            |                                do_preadv
+            |                                __x64_sys_preadv2
+            |                                x64_sys_call
+            |                                do_syscall_64
+            |                                entry_SYSCALL_64_after_hwframe
+            |                                preadv64v2
+            |                                ad_utility::readPageCacheHits(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>)
+            |          
+             --1.17%--filemap_get_read_batch
+                       filemap_get_pages
+                       filemap_read
+                       generic_file_read_iter
+                       ext4_file_read_iter
+                       |          
+                        --1.16%--do_iter_readv_writev
+                                  vfs_readv
+                                  do_preadv
+                                  __x64_sys_preadv2
+                                  x64_sys_call
+                                  do_syscall_64
+                                  entry_SYSCALL_64_after_hwframe
+                                  preadv64v2
+                                  ad_utility::readPageCacheHits(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>)
+
+     3.59%  [k] filemap_read
+            |          
+             --1.34%--xas_load
+                       |          
+                        --1.33%--filemap_get_read_batch
+                                  filemap_get_pages
+                                  filemap_read
+                                  generic_file_read_iter
+                                  ext4_file_read_iter
+                                  |          
+                                   --1.31%--do_iter_readv_writev
+                                             vfs_readv
+                                             do_preadv
+                                             __x64_sys_preadv2
+                                             x64_sys_call
+                                             do_syscall_64
+                                             entry_SYSCALL_64_after_hwframe
+                                             preadv64v2
+                                             ad_utility::readPageCacheHits(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>)
+
+     2.33%  [.] qlever::constructExport::ConstructBatchEvaluator::evaluateVariableByColumn(unsigned long, qlever::constructExport::BatchEvaluationContext const&, LocalVocab const&, Index const&, ad_utility::util::LRUCacheWithStatistics<ValueId, std::optional<std::shared_ptr<qlever::constructExport::EvaluatedTermData const> > >&)
+            |          
+             --1.12%--qlever::constructExport::ConstructBatchEvaluator::evaluateVariableByColumn(unsigned long, qlever::constructExport::BatchEvaluationContext const&, LocalVocab const&, Index const&, ad_utility::util::LRUCacheWithStatistics<ValueId, std::optional<std::shared_ptr<qlever::constructExport::EvaluatedTermData const> > >&)
+
+     2.21%  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     2.11%  [k] srso_safe_ret
+     1.85%  [k] srso_return_thunk
+     1.85%  [k] kernel_init_pages
+     1.58%  [k] vfs_readv
+     1.49%  [.] fsst_decompress
+     1.42%  [k] xas_load
+     1.03%  [k] atime_needs_update
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

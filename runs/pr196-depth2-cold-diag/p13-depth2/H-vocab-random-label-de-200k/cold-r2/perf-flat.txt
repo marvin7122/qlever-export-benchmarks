@@ -1,0 +1,106 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 7K of event 'cpu/cycles/P'
+# Event count (approx.): 30234594687
+#
+# Overhead  Command        Shared Object           Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+# ........  .............  ......................  .....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+     3.43%  qlever-server  libicui18n.so.74.2      [.] icu_74::RuleBasedCollator::doCompare(unsigned char const*, int, unsigned char const*, int, UErrorCode&) const
+     2.99%  qlever-server  qlever-server           [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+     2.83%  qlever-server  [kernel.kallsyms]       [k] kernel_init_pages
+     2.50%  qlever-server  [kernel.kallsyms]       [k] filemap_get_read_batch
+     2.34%  qlever-server  qlever-server           [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     2.26%  qlever-server  qlever-server           [.] fsst_decompress
+     2.01%  qlever-server  qlever-server           [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+     1.65%  qlever-server  [kernel.kallsyms]       [k] srso_return_thunk
+     1.64%  qlever-server  [kernel.kallsyms]       [k] srso_safe_ret
+     1.59%  qlever-server  qlever-server           [.] ad_utility::vocabulary::detail::DecoderMultiplexer<FsstRepeatedDecoder<2ul> >::decompress[abi:cxx11](std::basic_string_view<char, std::char_traits<char> >, unsigned long) const
+     1.56%  qlever-server  qlever-server           [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::resize(unsigned long, char) [clone .constprop.0]
+     1.22%  qlever-server  [kernel.kallsyms]       [k] pt_iommu_amdv1_iova_to_phys
+     1.20%  qlever-server  [kernel.kallsyms]       [k] filemap_read
+     1.18%  qlever-server  [kernel.kallsyms]       [k] _copy_to_iter
+     1.09%  qlever-server  [kernel.kallsyms]       [k] xas_load
+     1.04%  qlever-server  libjemalloc.so.2        [.] operator delete(void*, unsigned long)
+     1.00%  qlever-server  [kernel.kallsyms]       [k] bio_associate_blkg_from_css
+     0.84%  qlever-server  [kernel.kallsyms]       [k] __rcu_read_unlock
+     0.81%  qlever-server  qlever-server           [.] WordAndIndex CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lower_bound<std::basic_string_view<char, std::char_traits<char> >, UnicodeVocabulary<PolymorphicVocabulary, TripleComponentComparatorImpl<LocaleManagerICU> >::getPositionOfWord<std::basic_string_view<char, std::char_traits<char> > >(std::basic_string_view<char, std::char_traits<char> > const&) const::{lambda(auto:1 const&, auto:2 const&)#1}>(std::basic_string_view<char, std::char_traits<char> > const&, UnicodeVocabulary<PolymorphicVocabulary, TripleComponentComparatorImpl<LocaleManagerICU> >::getPositionOfWord<std::basic_string_view<char, std::char_traits<char> > >(std::basic_string_view<char, std::char_traits<char> > const&) const::{lambda(auto:1 const&, auto:2 const&)#1}) const
+     0.74%  qlever-server  qlever-server           [.] FsstDecoder::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     0.73%  qlever-server  [kernel.kallsyms]       [k] ext4_mpage_readpages
+     0.73%  qlever-server  [kernel.kallsyms]       [k] lruvec_stat_mod_folio
+     0.73%  qlever-server  qlever-server           [.] void ql::resize_and_overwrite<char, std::char_traits<char>, std::allocator<char>, detail::decompressToOwnedString<FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1}>(unsigned long, FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1})::{lambda(char*, unsigned long)#1}>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long, detail::decompressToOwnedString<FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1}>(unsigned long, FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1})::{lambda(char*, unsigned long)#1}&&)
+     0.71%  qlever-server  libjemalloc.so.2        [.] operator new(unsigned long)
+     0.69%  qlever-server  libicui18n.so.74.2      [.] icu_74::CollationFastLatin::compareUTF8(unsigned short const*, unsigned short const*, int, unsigned char const*, int, unsigned char const*, int)
+     0.69%  qlever-server  qlever-server           [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
+     0.68%  qlever-server  [kernel.kallsyms]       [k] vfs_read
+     0.62%  qlever-server  [kernel.kallsyms]       [k] __filemap_add_folio
+     0.61%  qlever-server  [kernel.kallsyms]       [k] filemap_get_pages
+     0.58%  qlever-server  [kernel.kallsyms]       [k] lru_add
+     0.58%  qlever-server  [kernel.kallsyms]       [k] blk_mq_submit_bio
+     0.57%  qlever-server  qlever-server           [.] ValueId::compareThreeWay(ValueId const&) const
+     0.55%  qlever-server  qlever-server           [.] FsstDecoder::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>) const
+     0.55%  qlever-server  [kernel.kallsyms]       [k] do_syscall_64
+     0.49%  qlever-server  [kernel.kallsyms]       [k] charge_memcg
+     0.49%  qlever-server  [kernel.kallsyms]       [k] mod_memcg_lruvec_state
+     0.49%  qlever-server  [kernel.kallsyms]       [k] rmqueue.isra.0
+     0.48%  qlever-server  [kernel.kallsyms]       [k] atime_needs_update
+     0.47%  qlever-server  [kernel.kallsyms]       [k] bio_associate_blkg
+     0.45%  qlever-server  [kernel.kallsyms]       [k] lru_gen_add_folio
+     0.45%  qlever-server  [kernel.kallsyms]       [k] fdget
+     0.43%  qlever-server  qlever-server           [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+     0.42%  qlever-server  [kernel.kallsyms]       [k] __x64_sys_pread64
+     0.42%  qlever-server  [kernel.kallsyms]       [k] __mem_cgroup_charge
+     0.41%  qlever-server  [kernel.kallsyms]       [k] get_mem_cgroup_from_mm
+     0.39%  qlever-server  qlever-server           [.] qlever::constructExport::ConstructBatchEvaluator::evaluateVariableByColumn(unsigned long, qlever::constructExport::BatchEvaluationContext const&, LocalVocab const&, Index const&, ad_utility::util::LRUCacheWithStatistics<ValueId, std::optional<std::shared_ptr<qlever::constructExport::EvaluatedTermData const> > >&)
+     0.38%  qlever-server  [kernel.kallsyms]       [k] aa_file_perm
+     0.38%  qlever-server  [kernel.kallsyms]       [k] apparmor_file_permission
+     0.37%  qlever-server  [kernel.kallsyms]       [k] get_page_from_freelist
+     0.35%  qlever-server  [kernel.kallsyms]       [k] blk_mq_end_request_batch
+     0.35%  qlever-server  [kernel.kallsyms]       [k] rmqueue_bulk
+     0.34%  qlever-server  [nvme]                  [k] nvme_poll_cq
+     0.34%  qlever-server  [kernel.kallsyms]       [k] copy_page_to_iter
+     0.34%  qlever-server  [kernel.kallsyms]       [k] entry_SYSCALL_64_after_hwframe
+     0.33%  qlever-server  [kernel.kallsyms]       [k] do_anonymous_page
+     0.33%  qlever-server  [kernel.kallsyms]       [k] xa_load
+     0.33%  qlever-server  [kernel.kallsyms]       [k] ext4_file_read_iter
+     0.33%  qlever-server  [kernel.kallsyms]       [k] __alloc_frozen_pages_noprof
+     0.31%  qlever-server  [kernel.kallsyms]       [k] blk_cgroup_congested
+     0.31%  qlever-server  [kernel.kallsyms]       [k] arch_exit_to_user_mode_prepare.isra.0
+     0.31%  qlever-server  [kernel.kallsyms]       [k] __rcu_read_lock
+     0.30%  qlever-server  [kernel.kallsyms]       [k] amdv1_map_range
+     0.30%  qlever-server  [kernel.kallsyms]       [k] __handle_mm_fault
+     0.29%  qlever-server  [kernel.kallsyms]       [k] generic_file_read_iter
+     0.29%  qlever-server  [kernel.kallsyms]       [k] xas_start
+     0.28%  qlever-server  [kernel.kallsyms]       [k] mod_lruvec_state
+     0.28%  qlever-server  [kernel.kallsyms]       [k] page_cache_sync_ra
+     0.27%  qlever-server  [kernel.kallsyms]       [k] memcg1_commit_charge
+     0.26%  qlever-server  [kernel.kallsyms]       [k] xas_store
+     0.25%  qlever-server  [kernel.kallsyms]       [k] bio_endio
+     0.25%  qlever-server  [kernel.kallsyms]       [k] rw_verify_area
+     0.25%  qlever-server  qlever-server           [.] antlrcpp::Utf8::strictEncode[abi:cxx11](std::basic_string_view<char32_t, std::char_traits<char32_t> >)
+     0.24%  qlever-server  [kernel.kallsyms]       [k] filemap_add_folio
+     0.24%  qlever-server  qlever-server           [.] parsedQuery::SparqlValues::valuesToString[abi:cxx11]() const
+     0.23%  qlever-server  [kernel.kallsyms]       [k] vfs_readv
+     0.23%  qlever-server  [kernel.kallsyms]       [k] current_time
+     0.23%  qlever-server  [kernel.kallsyms]       [k] x64_sys_call
+     0.23%  qlever-server  [kernel.kallsyms]       [k] rep_movs_alternative
+     0.22%  qlever-server  [kernel.kallsyms]       [k] submit_bio_noacct
+     0.22%  qlever-server  qlever-server           [.] antlr4::atn::LexerATNSimulator::execATN(antlr4::CharStream*, antlr4::dfa::DFAState*)
+     0.22%  qlever-server  [kernel.kallsyms]       [k] xas_find_conflict
+     0.22%  qlever-server  [kernel.kallsyms]       [k] md_end_clone_io
+     0.21%  qlever-server  [kernel.kallsyms]       [k] __submit_bio
+     0.21%  qlever-server  libc.so.6               [.] __libc_pread
+     0.21%  qlever-server  [kernel.kallsyms]       [k] policy_nodemask
+     0.20%  qlever-server  [kernel.kallsyms]       [k] bio_alloc_bioset
+     0.20%  qlever-server  qlever-server           [.] ad_utility::File::read(void*, unsigned long, long) const [clone .isra.0]
+     0.20%  qlever-server  [kernel.kallsyms]       [k] blk_cgroup_bio_start
+     0.20%  qlever-server  [kernel.kallsyms]       [k] security_file_permission
+     0.20%  qlever-server  [kernel.kallsyms]       [k] __unmap_range
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

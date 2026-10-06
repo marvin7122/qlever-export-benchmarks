@@ -1,0 +1,39 @@
+{
+ "arms": [
+  {
+   "label": "p12",
+   "bin": "/local/data-ssd/stoetzem/bin-cache/f8cca285e3d0d3400dd51be97b5ebf078cd454de/qlever-server",
+   "rp": [],
+   "version": "/local/data-ssd/stoetzem/bin-cache/f8cca285e3d0d3400dd51be97b5ebf078cd454de/qlever-server v0.6.0-310-gf8cca285e"
+  },
+  {
+   "label": "two-stage-d2",
+   "bin": "/local/data-ssd/stoetzem/bin-cache/6d2f7faa07d8df4f2a7181d45741c6e0c9236d9f/qlever-server",
+   "rp": [
+    "construct-export-pipeline-depth=2"
+   ],
+   "version": "/local/data-ssd/stoetzem/bin-cache/6d2f7faa07d8df4f2a7181d45741c6e0c9236d9f/qlever-server CIKM-3005-g6d2f7faa0"
+  },
+  {
+   "label": "three-stage-d2",
+   "bin": "/local/data-ssd/stoetzem/bin-cache/6d2f7faa07d8df4f2a7181d45741c6e0c9236d9f/qlever-server",
+   "rp": [
+    "construct-export-pipeline-depth=2",
+    "construct-export-pipeline-split-lookup=true"
+   ],
+   "version": "/local/data-ssd/stoetzem/bin-cache/6d2f7faa07d8df4f2a7181d45741c6e0c9236d9f/qlever-server CIKM-3005-g6d2f7faa0"
+  }
+ ],
+ "queries": [
+  "/local/data-ssd/stoetzem/incoming/pr162-queries/H-vocab-label-large-de.rq"
+ ],
+ "cold_reps": 1,
+ "perf_rep": 0,
+ "index_basename": "/local/data-ssd/stoetzem/wikidata/wikidata",
+ "server_cpus": "0-2",
+ "client_cpu": 3,
+ "driver_cpu": 4,
+ "sample_hz": 1000.0,
+ "kernel": "7.0.0-28-generic",
+ "host": "ural"
+}

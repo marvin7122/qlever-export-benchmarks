@@ -1,0 +1,87 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 17K of event 'cpu/cycles/P'
+# Event count (approx.): 66925583359
+#
+# Overhead  Command        Shared Object        Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+# ........  .............  ...................  ........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    15.84%  qlever-server  qlever-server        [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+     8.18%  qlever-server  [kernel.kallsyms]    [k] filemap_get_read_batch
+     6.55%  qlever-server  [kernel.kallsyms]    [k] _copy_to_iter
+     5.35%  qlever-server  [kernel.kallsyms]    [k] filemap_read
+     2.91%  qlever-server  qlever-server        [.] qlever::constructExport::ConstructBatchEvaluator::evaluateVariableByColumn(unsigned long, qlever::constructExport::BatchEvaluationContext const&, LocalVocab const&, Index const&, ad_utility::util::LRUCacheWithStatistics<ValueId, std::optional<std::shared_ptr<qlever::constructExport::EvaluatedTermData const> > >&)
+     2.69%  qlever-server  qlever-server        [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     2.30%  qlever-server  qlever-server        [.] fsst_decompress
+     2.25%  qlever-server  [kernel.kallsyms]    [k] vfs_readv
+     1.93%  qlever-server  [kernel.kallsyms]    [k] srso_safe_ret
+     1.51%  qlever-server  qlever-server        [.] ValueId::compareThreeWay(ValueId const&) const
+     1.42%  qlever-server  [kernel.kallsyms]    [k] do_preadv
+     1.37%  qlever-server  [kernel.kallsyms]    [k] do_syscall_64
+     1.35%  qlever-server  qlever-server        [.] qlever::constructExport::instantiateBatch(qlever::constructExport::PreprocessedConstructTemplate const&, qlever::constructExport::BatchEvaluationResult const&, unsigned long, std::optional<qlever::constructExport::DeduplicationParams>)
+     1.29%  qlever-server  [kernel.kallsyms]    [k] atime_needs_update
+     1.21%  qlever-server  qlever-server        [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const
+     1.18%  qlever-server  [kernel.kallsyms]    [k] do_iter_readv_writev
+     1.15%  qlever-server  [kernel.kallsyms]    [k] xas_load
+     1.13%  qlever-server  [kernel.kallsyms]    [k] copy_iovec_from_user
+     1.00%  qlever-server  [kernel.kallsyms]    [k] srso_return_thunk
+     0.97%  qlever-server  [kernel.kallsyms]    [k] fdget
+     0.97%  qlever-server  qlever-server        [.] std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
+     0.95%  qlever-server  [kernel.kallsyms]    [k] apparmor_file_permission
+     0.94%  qlever-server  [kernel.kallsyms]    [k] filemap_get_pages
+     0.94%  qlever-server  [kernel.kallsyms]    [k] aa_file_perm
+     0.92%  qlever-server  qlever-server        [.] RdfEscaping::validRDFLiteralFromNormalized[abi:cxx11](std::basic_string_view<char, std::char_traits<char> >)
+     0.90%  qlever-server  [kernel.kallsyms]    [k] copy_page_to_iter
+     0.88%  qlever-server  [kernel.kallsyms]    [k] ext4_file_read_iter
+     0.87%  qlever-server  [kernel.kallsyms]    [k] rw_verify_area
+     0.86%  qlever-server  libc.so.6            [.] preadv64v2
+     0.84%  qlever-server  [kernel.kallsyms]    [k] __import_iovec
+     0.82%  qlever-server  [kernel.kallsyms]    [k] current_time
+     0.79%  qlever-server  libjemalloc.so.2     [.] operator new(unsigned long)
+     0.77%  qlever-server  [kernel.kallsyms]    [k] entry_SYSCALL_64_after_hwframe
+     0.74%  qlever-server  libjemalloc.so.2     [.] operator delete(void*, unsigned long)
+     0.69%  qlever-server  qlever-server        [.] ad_utility::readPageCacheHits(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>)
+     0.67%  qlever-server  [kernel.kallsyms]    [k] arch_exit_to_user_mode_prepare.isra.0
+     0.62%  qlever-server  qlever-server        [.] FsstDecoder::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>) const
+     0.61%  qlever-server  [kernel.kallsyms]    [k] generic_file_read_iter
+     0.55%  qlever-server  [kernel.kallsyms]    [k] x64_sys_call
+     0.54%  qlever-server  qlever-server        [.] void std::__introsort_loop<__gnu_cxx::__normal_iterator<std::pair<long, ValueId>*, std::vector<std::pair<long, ValueId>, std::allocator<std::pair<long, ValueId> > > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::ranges::__detail::__make_comp_proj<std::ranges::less, ad_utility::detail::SecondImpl>(std::ranges::less&, ad_utility::detail::SecondImpl&)::{lambda(auto:1&&, auto:2&&)#1}> >(__gnu_cxx::__normal_iterator<std::pair<long, ValueId>*, std::vector<std::pair<long, ValueId>, std::allocator<std::pair<long, ValueId> > > >, __gnu_cxx::__normal_iterator<std::pair<long, ValueId>*, std::vector<std::pair<long, ValueId>, std::allocator<std::pair<long, ValueId> > > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::ranges::__detail::__make_comp_proj<std::ranges::less, ad_utility::detail::SecondImpl>(std::ranges::less&, ad_utility::detail::SecondImpl&)::{lambda(auto:1&&, auto:2&&)#1}>)
+     0.52%  qlever-server  qlever-server        [.] FsstRepeatedDecoder<2ul>::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     0.52%  qlever-server  [kernel.kallsyms]    [k] security_file_permission
+     0.51%  qlever-server  qlever-server        [.] std::vector<std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> >, std::allocator<std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> > > > ql::exportIds::idsToStringAndType<false, false, ql::identity>(Index const&, std::span<ValueId const, 18446744073709551615ul>, LocalVocab const&, ql::identity const&)
+     0.50%  qlever-server  qlever-server        [.] void ad_utility::detail::BlockZipperJoinImplCRTP<ad_utility::detail::BlockZipperJoinImpl<ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, std::less<void>, ad_utility::AddCombinedRowToIdTable, ad_utility::detail::AlwaysFalse>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, std::less<void>, ad_utility::AddCombinedRowToIdTable, ad_utility::detail::AlwaysFalse>::joinAndRemoveLessThanCurrentEl<false>(std::vector<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> >, std::allocator<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> > > >&, std::vector<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> >, std::allocator<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> > > >&, ValueId const&)
+     0.48%  qlever-server  qlever-server        [.] FsstRepeatedDecoder<2ul>::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+     0.47%  qlever-server  [kernel.kallsyms]    [k] touch_atime
+     0.47%  qlever-server  [kernel.kallsyms]    [k] entry_SYSCALL_64
+     0.43%  qlever-server  [kernel.kallsyms]    [k] __x64_sys_preadv2
+     0.39%  qlever-server  [kernel.kallsyms]    [k] rep_movs_alternative
+     0.39%  qlever-server  qlever-server        [.] FsstDecoder::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     0.38%  qlever-server  [kernel.kallsyms]    [k] import_iovec
+     0.37%  qlever-server  qlever-server        [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+     0.36%  qlever-server  qlever-server        [.] ad_utility::vocabulary::detail::DecoderMultiplexer<FsstRepeatedDecoder<2ul> >::decompressInto(std::basic_string_view<char, std::char_traits<char> >, unsigned long, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+     0.34%  qlever-server  qlever-server        [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.34%  qlever-server  qlever-server        [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
+     0.33%  qlever-server  qlever-server        [.] absl::lts_20260107::container_internal::EraseMetaOnlyLarge(absl::lts_20260107::container_internal::CommonFields&, absl::lts_20260107::container_internal::ctrl_t const*, unsigned long)
+     0.32%  qlever-server  qlever-server        [.] qlever::constructExport::ConstructBatchEvaluator::stringAndTypeToEvaluatedTerm(std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> >&&)
+     0.31%  qlever-server  qlever-server        [.] absl::lts_20260107::strings_internal::CatPieces[abi:cxx11](std::initializer_list<std::basic_string_view<char, std::char_traits<char> > >)
+     0.30%  qlever-server  [kernel.kallsyms]    [k] entry_SYSRETQ_unsafe_stack
+     0.27%  qlever-server  qlever-server        [.] VocabularyOnDisk::readOffsetPairs(ad_utility::BatchManagerBase&, std::span<unsigned long const, 18446744073709551615ul>, bool) const
+     0.26%  qlever-server  qlever-server        [.] absl::lts_20260107::container_internal::raw_hash_set<absl::lts_20260107::container_internal::FlatHashMapPolicy<ValueId, std::pair<std::optional<std::shared_ptr<qlever::constructExport::EvaluatedTermData const> >, std::_List_iterator<ValueId> > >>::iterator absl::lts_20260107::container_internal::raw_hash_set<absl::lts_20260107::container_internal::FlatHashMapPolicy<ValueId, std::pair<std::optional<std::shared_ptr<qlever::constructExport::EvaluatedTermData const> >, std::_List_iterator<ValueId> > >>::find<ValueId>(ValueId const&)
+     0.25%  qlever-server  qlever-server        [.] absl::lts_20260107::hash_internal::MixingHashState AbslHashValue<absl::lts_20260107::hash_internal::MixingHashState>(absl::lts_20260107::hash_internal::MixingHashState, ValueId const&)
+     0.24%  qlever-server  qlever-server        [.] void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [clone .isra.0]
+     0.23%  qlever-server  qlever-server        [.] absl::lts_20260107::container_internal::(anonymous namespace)::find_first_non_full(absl::lts_20260107::container_internal::CommonFields const&, unsigned long)
+     0.23%  qlever-server  qlever-server        [.] qlever::constructExport::formatTriple[abi:cxx11](qlever::constructExport::EvaluatedTriple const&, ad_utility::MediaType const&)
+     0.22%  qlever-server  libc.so.6            [.] 0x0000000000188d1f
+     0.22%  qlever-server  [kernel.kallsyms]    [k] srso_untrain_ret
+     0.21%  qlever-server  [kernel.kallsyms]    [k] xas_start
+     0.21%  qlever-server  [kernel.kallsyms]    [k] kfree
+     0.21%  qlever-server  [kernel.kallsyms]    [k] __rcu_read_lock
+     0.21%  qlever-server  qlever-server        [.] ad_utility::AddCombinedRowToIdTable::flush()
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

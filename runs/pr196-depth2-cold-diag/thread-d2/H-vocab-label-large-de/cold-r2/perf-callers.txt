@@ -1,0 +1,95 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 28K of event 'cpu/cycles/P'
+# Event count (approx.): 113707452251
+#
+# Overhead  Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+# ........  ..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+     9.19%  [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+            |          
+             --8.65%--VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+
+     7.39%  [k] filemap_get_read_batch
+            |          
+             --1.81%--xas_load
+                       |          
+                        --1.78%--filemap_get_read_batch
+                                  filemap_get_pages
+                                  filemap_read
+                                  generic_file_read_iter
+                                  ext4_file_read_iter
+                                  |          
+                                   --1.76%--do_iter_readv_writev
+                                             vfs_readv
+                                             do_preadv
+                                             __x64_sys_preadv2
+                                             x64_sys_call
+                                             do_syscall_64
+                                             entry_SYSCALL_64_after_hwframe
+                                             preadv64v2
+                                             ad_utility::readPageCacheHits(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>)
+
+     4.32%  [k] _copy_to_iter
+            |          
+             --1.85%--xas_load
+                       |          
+                        --1.76%--filemap_get_read_batch
+                                  filemap_get_pages
+                                  filemap_read
+                                  generic_file_read_iter
+                                  ext4_file_read_iter
+                                  |          
+                                   --1.75%--do_iter_readv_writev
+                                             vfs_readv
+                                             do_preadv
+                                             __x64_sys_preadv2
+                                             x64_sys_call
+                                             do_syscall_64
+                                             entry_SYSCALL_64_after_hwframe
+                                             preadv64v2
+                                             ad_utility::readPageCacheHits(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>)
+
+     3.09%  [k] filemap_read
+            |          
+             --1.02%--xas_load
+                       |          
+                        --1.01%--filemap_get_read_batch
+                                  filemap_get_pages
+                                  filemap_read
+                                  generic_file_read_iter
+                                  ext4_file_read_iter
+                                  do_iter_readv_writev
+                                  vfs_readv
+                                  do_preadv
+                                  __x64_sys_preadv2
+                                  x64_sys_call
+                                  do_syscall_64
+                                  entry_SYSCALL_64_after_hwframe
+                                  preadv64v2
+                                  ad_utility::readPageCacheHits(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>)
+
+     2.57%  [.] qlever::constructExport::ConstructBatchEvaluator::evaluateVariableByColumn(unsigned long, qlever::constructExport::BatchEvaluationContext const&, LocalVocab const&, Index const&, ad_utility::util::LRUCacheWithStatistics<ValueId, std::optional<std::shared_ptr<qlever::constructExport::EvaluatedTermData const> > >&)
+            |          
+             --1.16%--qlever::constructExport::ConstructBatchEvaluator::evaluateVariableByColumn(unsigned long, qlever::constructExport::BatchEvaluationContext const&, LocalVocab const&, Index const&, ad_utility::util::LRUCacheWithStatistics<ValueId, std::optional<std::shared_ptr<qlever::constructExport::EvaluatedTermData const> > >&)
+
+     2.17%  [k] srso_safe_ret
+     1.90%  [.] fsst_decompress
+            |          
+             --1.33%--fsst_decompress
+
+     1.77%  [k] srso_return_thunk
+     1.72%  [k] kernel_init_pages
+     1.71%  [k] vfs_readv
+     1.62%  [k] xas_load
+     1.45%  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     1.18%  [.] ValueId::compareThreeWay(ValueId const&) const
+     1.01%  [k] atime_needs_update
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
