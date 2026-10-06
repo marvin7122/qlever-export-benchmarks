@@ -1,0 +1,111 @@
+2026-10-06 14:10:42.703 - INFO: [1mQLever server CIKM-2753-g60f854f42, compiled on Tue Oct  6 07:51:15 UTC 2026 using git hash 60f854f[22m
+2026-10-06 14:10:42.703 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-10-06 14:10:42.708 - INFO: The git hash used to build this index was "65f84b4"
+2026-10-06 14:10:42.708 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-10-06 14:10:59.053 - INFO: Done, number of words: 1,580,300,680
+2026-10-06 14:10:59.053 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-10-06 14:10:59.155 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-06 14:10:59.283 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-06 14:10:59.377 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-06 14:10:59.512 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-06 14:10:59.630 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-06 14:10:59.744 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-06 14:10:59.820 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-06 14:10:59.886 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-06 14:10:59.886 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-10-06 14:11:01.630 - WARN: The geo points of this index use the encoding "lat-major", which is deprecated and will not be supported for much longer; with this encoding, a spatial prefilter on points can only restrict the latitude; please build the index with the default encoding "z-order" (just omit the option `--geo-point-encoding` of `qlever-index`)
+2026-10-06 14:11:01.630 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-10-06 14:11:12.334 - INFO: Initializing server ...
+2026-10-06 14:11:12.334 - INFO: No access token required for restricted API calls
+2026-10-06 14:11:12.334 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-10-06 14:11:12.711 - INFO: 
+2026-10-06 14:11:12.711 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-06 14:11:13.322 - INFO: Processing the following SPARQL query:
+# Tier H-vocab -- VALUES entity IRIs, German labels, 200k subjects
+# Physical: no class scan. VALUES binds 200k subjects (wd:Q1..Q200000).
+# Each subject does an S+P bound SPO scan of rdfs:label with LANG de.
+# German literals are external tier (not in languages-internal), so every
+# lookup is a guaranteed external miss on cold caches. Sized so warm reps
+# exceed 3 s for stable 2 Hz sampling.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  VALUES ?entity {
+    wd:Q1 wd:Q2 wd:Q3 wd:Q4 wd:Q5 wd:Q6 wd:Q7 wd:Q8
+    wd:Q9 wd:Q10 wd:Q11 wd:Q12 wd:Q13 wd:Q14 wd:Q15 wd:Q16
+    wd:Q17 wd:Q18 wd:Q19 wd:Q20 wd:Q21 wd:Q22 wd:Q23 wd:Q24
+    wd:Q25 wd:Q26 wd:Q27 wd:Q28 wd:Q29 wd:Q30 wd:Q31 wd:Q32
+    wd:Q33 wd:Q34 wd:Q35 wd:Q36 wd:Q37 wd:Q38 wd:Q39 wd:Q40
+    wd:Q41 wd:Q42 wd:Q43 wd:Q44 wd:Q45 wd:Q46 wd:Q47 wd:Q48
+    wd:Q49 wd:Q50 wd:Q51 wd:Q52 wd:Q53 wd:Q54 wd:Q55 wd:Q56
+    wd:Q57 wd:Q58 wd:Q59 wd:Q60 wd:Q61 wd:Q62 wd:Q63 wd:Q64
+    wd:Q65 wd:Q66 wd:Q67 wd:Q68 wd:Q69 wd:Q70 wd:Q71 wd:Q72
+    wd:Q73 wd:Q74 wd:Q75 wd:Q76 wd:Q77 wd:Q78 wd:Q79 wd:Q80
+    wd:Q81 wd:Q82 wd:Q83 wd:Q84 wd:Q85 wd:Q86 wd:Q87 wd:Q88
+    wd:Q89 wd:Q90 wd:Q91 wd:Q92 wd:Q93 wd:Q94 wd:Q95 wd:Q96
+    wd:Q97 wd:Q98 wd:Q99 wd:Q100 wd:Q101 wd:Q102 wd:Q103 wd:Q104
+    wd:Q105 wd:Q106 wd:Q107 wd:Q108 wd:Q109 wd:Q110 wd:Q111 wd:Q112
+    wd:Q113 wd:Q114 wd:Q115 wd:Q116 wd:Q117 wd:Q118 wd:Q119 wd:Q120
+    wd:Q121 wd:Q122 wd:Q123 wd:Q124 wd:Q125 wd:Q126 wd:Q127 wd:Q128
+    wd:Q129 wd:Q130 wd:Q131 wd:Q132 wd:Q133 wd:Q134 wd:Q135 wd:Q136
+    wd:Q137 wd:Q138 wd:Q139 wd:Q140 wd:Q141 wd:Q142 wd:Q143 wd:Q144
+    wd:Q145 wd:Q146 wd:Q147 wd:Q148 wd:Q149 wd:Q150 wd:Q151 wd:Q152
+    wd:Q153 wd:Q154 wd:Q155 wd:Q156 wd:Q157 wd:Q158 wd:Q159 wd:Q160
+    wd:Q161 wd:Q162 wd:Q163 wd:Q164 wd:Q165 wd:Q166 wd:Q167 wd:Q168
+    wd:Q169 wd:Q170 wd:Q171 wd:Q172 wd:Q173 wd:Q174 wd:Q175 wd:Q176
+    wd:Q177 wd:Q178 wd:Q179 wd:Q180 wd:Q181 wd:Q182 wd:Q183 wd:Q184
+    wd:Q185 wd:Q186 wd:Q187 wd:Q188 wd:Q189 wd:Q190 wd:Q191 wd:Q192
+    wd:Q193 wd:Q194 wd:Q195 wd:Q196 wd:Q197 wd:Q198 wd:Q199 wd:Q200
+    wd:Q201 wd:Q202 wd:Q203 wd:Q204 wd:Q205 wd:Q206 wd:Q207 wd:Q208
+    wd:Q209 wd:Q210 wd:Q211 wd:Q212 wd:Q213 wd:Q214 wd:Q215 wd:Q216
+    wd:Q217 wd:Q218 wd:Q219 wd:Q220 wd:Q221 wd:Q222 wd:Q223 wd:Q224
+    wd:Q225 wd:Q226 wd:Q227 wd:Q228 wd:Q229 wd:Q230 wd:Q231 wd:Q232
+    wd:Q233 wd:Q234 wd:Q235 wd:Q236 wd:Q237 wd:Q238 wd:Q239 wd:Q240
+    wd:Q241 wd:Q242 wd:Q243 wd:Q244 wd:Q245 wd:Q246 wd:Q247 wd:Q248
+    wd:Q249 wd:Q250 wd:Q251 wd:Q252 wd:Q253 wd:Q254 wd:Q255 wd:Q256
+    wd:Q257 wd:Q258 wd:Q259 wd:Q260 wd:Q261 wd:Q262 wd:Q263 wd:Q264
+    wd:Q265 wd:Q266 wd:Q267 wd:Q268 wd:Q269 wd:Q270 wd:Q271 wd:Q272
+    wd:Q273 wd:Q274 wd:Q275 wd:Q276 wd:Q277 wd:Q278 wd:Q279 wd:Q280
+    wd:Q281 wd:Q282 wd:Q283 wd:Q284 wd:Q285 wd:Q286 wd:Q287 wd:Q288
+    wd:Q289 wd:Q290 wd:Q291 wd:Q292 wd:Q293 wd:Q294 wd:Q295 wd:Q296
+    wd:Q297 wd:Q298 wd:Q299 wd:Q300 wd:Q301 wd:Q302 wd:Q303 wd:Q304
+    wd:Q305 wd:Q306 wd:Q307 wd:Q308 wd:Q309 wd:Q310 wd:Q311 wd:Q312
+    wd:Q313 wd:Q314 wd:Q315 wd:Q316 wd:Q317 wd:Q318 wd:Q319 wd:Q320
+    wd:Q321 wd:Q322 wd:Q323 wd:Q324 wd:Q325 wd:Q326 wd:Q327 wd:Q328
+    wd:Q329 wd:Q330 wd:Q331 wd:Q332 wd:Q333 wd:Q334 wd:Q335 wd:Q336
+    wd:Q337 wd:Q338 wd:Q339 wd:Q340 wd:Q341 wd:Q342 wd:Q343 wd:Q344
+    wd:Q345 wd:Q346 wd:Q347 wd:Q348 wd:Q349 wd:Q350 wd:Q351 wd:Q352
+    wd:Q353 wd:Q354 wd:Q355 wd:Q356 wd:Q357 wd:Q358 wd:Q359 wd:Q360
+    wd:Q361 wd:Q362 wd:Q363 wd:Q364 wd:Q365 wd:Q366 wd:Q367 wd:Q368
+    wd:Q369 wd:Q370 wd:Q371 wd:Q372 wd:Q373 wd:Q374 wd:Q375 wd:Q376
+    wd:Q377 wd:Q378 wd:Q379 wd:Q380 wd:Q381 wd:Q382 wd:Q383 wd:Q384
+    wd:Q385 wd:Q386 wd:Q387 wd:Q388 wd:Q389 wd:Q390 wd:Q391 wd:Q392
+    wd:Q393 wd:Q394 wd:Q395 wd:Q396 wd:Q397 wd:Q398 wd:Q399 wd:Q400
+    wd:Q401 wd:Q402 wd:Q403 wd:Q404 wd:Q405 wd:Q406 wd:Q407 wd:Q408
+    wd:Q409 wd:Q410 wd:Q411 wd:Q412 wd:Q413 wd:Q414 wd:Q415 wd:Q416
+    wd:Q417 wd:Q418 wd:Q419 wd:Q420 wd:Q421 wd:Q422 wd:Q423 wd:Q424
+    wd:Q425 wd:Q426 wd:Q427 wd:Q428 wd:Q429 wd:Q430 wd:Q431 wd:Q432
+    wd:Q433 wd:Q434 wd:Q435 wd:Q436 wd:Q437 wd:Q438 wd:Q439 wd:Q440
+    wd:Q441 wd:Q442 wd:Q443 wd:Q444 wd:Q445 wd:Q446 wd:Q447 wd:Q448
+    wd:Q449 wd:Q450 wd:Q451 wd:Q452 wd:Q453 wd:Q454 wd:Q455 wd:Q456
+    wd:Q457 wd:Q458 wd:Q459 wd:Q460 wd:Q461 wd:Q462 wd:Q463 wd:Q464
+    wd:Q465 wd:Q466 wd:Q467 wd:Q468 wd:Q469 wd:Q470 wd:Q471 wd:Q472
+    wd:Q473 wd:Q474 wd:Q475 wd:Q476 wd:Q477 wd:Q478 wd:Q479 wd:Q480
+    wd:Q481 wd:Q482 wd:Q483 wd:Q484 wd:Q485 wd:Q486 wd:Q487 wd:Q488
+    wd:Q489 wd:Q490 wd:Q491 wd:Q492 wd:Q493 wd:Q494 wd:Q495 wd:Q496
+    wd:Q497 wd:Q498 wd:Q499 wd:Q500 wd:Q501 wd:Q502 wd:Q503 wd:Q504
+    wd:Q505 wd:Q506 wd:Q507 wd:Q508 wd:Q509 wd:Q510 wd:Q511 wd:Q512
+    wd:Q513 wd:Q514 wd:Q515 wd:Q516 wd:Q517 wd:Q518 wd:Q519 wd:Q520
+    wd:Q521 wd:Q522 wd:Q523 wd:Q524 wd:Q525 wd:Q526 wd:Q527 wd:Q528
+    wd:Q529 wd:Q530 wd:Q531 wd:Q532 wd:Q533 wd:Q534 wd:Q53...
+2026-10-06 14:11:13.322 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-06 14:11:13.754 - INFO: Query planning done in 1,042 ms
+2026-10-06 14:11:22.591 - INFO: Number of tuples in VALUES clause: 200,000
+2026-10-06 14:11:22.591 - INFO: Number of entries in local vocabulary per column: 10579
+2026-10-06 14:11:22.662 - INFO: Result has unknown size (not computed yet)
+2026-10-06 14:11:26.737 - INFO: Done processing query and sending result, total time was 14,026 ms
+2026-10-06 14:11:26.756 - INFO: 
+2026-10-06 14:11:26.756 - INFO: Request received via GET, no content type specified
+2026-10-06 14:11:26.756 - INFO: Processing command "cache-stats": get cache statistics

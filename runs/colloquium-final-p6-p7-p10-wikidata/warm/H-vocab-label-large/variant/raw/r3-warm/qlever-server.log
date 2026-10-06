@@ -1,0 +1,80 @@
+2026-10-06 15:51:46.745 - INFO: [1mQLever server CIKM-2801-g4dd60f853, compiled on Tue Oct  6 07:51:44 UTC 2026 using git hash 4dd60f8[22m
+2026-10-06 15:51:46.745 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-10-06 15:51:46.747 - INFO: The git hash used to build this index was "65f84b4"
+2026-10-06 15:51:46.747 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-10-06 15:52:00.006 - INFO: Done, number of words: 1,580,300,680
+2026-10-06 15:52:00.006 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-10-06 15:52:00.083 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-06 15:52:00.179 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-06 15:52:00.250 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-06 15:52:00.348 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-06 15:52:00.429 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-06 15:52:00.512 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-06 15:52:00.569 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-06 15:52:00.624 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-06 15:52:00.624 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-10-06 15:52:02.041 - WARN: The geo points of this index use the encoding "lat-major", which is deprecated and will not be supported for much longer; with this encoding, a spatial prefilter on points can only restrict the latitude; please build the index with the default encoding "z-order" (just omit the option `--geo-point-encoding` of `qlever-index`)
+2026-10-06 15:52:02.041 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-10-06 15:52:10.075 - INFO: Initializing server ...
+2026-10-06 15:52:10.075 - INFO: No access token required for restricted API calls
+2026-10-06 15:52:10.075 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-10-06 15:52:10.306 - INFO: 
+2026-10-06 15:52:10.306 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-06 15:52:10.308 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan, label vocabulary, 1.3 GiB Turtle
+# serialize. Same query as wikidata-construct-humans-label-en.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-10-06 15:52:10.308 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-06 15:52:10.312 - INFO: Query planning done in 6 ms
+2026-10-06 15:52:10.312 - INFO: Result has unknown size (not computed yet)
+2026-10-06 15:52:35.580 - INFO: Done processing query and sending result, total time was 25,274 ms
+2026-10-06 15:52:35.598 - INFO: 
+2026-10-06 15:52:35.598 - INFO: Request received via GET, no content type specified
+2026-10-06 15:52:35.598 - INFO: Processing command "cache-stats": get cache statistics
+2026-10-06 15:52:35.615 - INFO: 
+2026-10-06 15:52:35.615 - INFO: Request received via GET, no content type specified
+2026-10-06 15:52:35.615 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-06 15:52:35.632 - INFO: 
+2026-10-06 15:52:35.632 - INFO: Request received via GET, no content type specified
+2026-10-06 15:52:35.632 - INFO: Processing command "cache-stats": get cache statistics
+2026-10-06 15:52:35.650 - INFO: 
+2026-10-06 15:52:35.650 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-06 15:52:35.650 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan, label vocabulary, 1.3 GiB Turtle
+# serialize. Same query as wikidata-construct-humans-label-en.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-10-06 15:52:35.650 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-06 15:52:35.650 - INFO: Query planning done in 0 ms
+2026-10-06 15:52:35.650 - INFO: Result has unknown size (not computed yet)
+2026-10-06 15:53:14.693 - INFO: Done processing query and sending result, total time was 39,043 ms
+2026-10-06 15:53:14.721 - INFO: 
+2026-10-06 15:53:14.721 - INFO: Request received via GET, no content type specified
+2026-10-06 15:53:14.722 - INFO: Processing command "cache-stats": get cache statistics
