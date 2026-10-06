@@ -1,0 +1,70 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 28K of event 'cpu/cycles/P'
+# Event count (approx.): 111035742166
+#
+# Overhead  Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+# ........  ..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+     8.98%  [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+     6.26%  [k] filemap_get_read_batch
+     4.32%  [k] _copy_to_iter
+     3.90%  [k] filemap_read
+     2.20%  [.] qlever::constructExport::ConstructBatchEvaluator::evaluateVariableByColumn(unsigned long, qlever::constructExport::BatchEvaluationContext const&, LocalVocab const&, Index const&, ad_utility::util::LRUCacheWithStatistics<ValueId, std::optional<std::shared_ptr<qlever::constructExport::EvaluatedTermData const> > >&)
+     1.80%  [k] srso_safe_ret
+     1.78%  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     1.66%  [k] vfs_readv
+     1.47%  [.] fsst_decompress
+     1.45%  [k] srso_return_thunk
+     1.37%  [k] kernel_init_pages
+     1.29%  [k] xas_load
+     0.94%  [k] atime_needs_update
+     0.92%  [.] qlever::constructExport::instantiateBatch(qlever::constructExport::PreprocessedConstructTemplate const&, qlever::constructExport::BatchEvaluationResult const&, unsigned long, std::optional<qlever::constructExport::DeduplicationParams>)
+     0.89%  [k] do_preadv
+     0.84%  [k] do_syscall_64
+     0.81%  [k] pt_iommu_amdv1_iova_to_phys
+     0.77%  [k] do_iter_readv_writev
+     0.75%  [k] copy_iovec_from_user
+     0.71%  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::appendDecodedWords(std::span<unsigned long const, 18446744073709551615ul>, VocabBatchLookupResult const&, ArenaVocabBatchBuilder&) const
+     0.71%  [k] copy_page_to_iter
+     0.69%  [k] fdget
+     0.63%  [.] RdfEscaping::validRDFLiteralFromNormalized[abi:cxx11](std::basic_string_view<char, std::char_traits<char> >)
+     0.63%  [k] ext4_file_read_iter
+     0.62%  [k] aa_file_perm
+     0.62%  [.] operator new(unsigned long)
+     0.62%  [k] apparmor_file_permission
+     0.58%  [k] current_time
+     0.56%  [k] filemap_get_pages
+     0.54%  [k] entry_SYSCALL_64_after_hwframe
+     0.54%  [k] __import_iovec
+     0.53%  [k] rw_verify_area
+     0.52%  [.] ValueId::compareThreeWay(ValueId const&) const
+     0.52%  [.] ad_utility::readPageCacheHits(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>)
+     0.51%  [.] std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
+     0.51%  [k] __rcu_read_unlock
+     0.49%  [k] arch_exit_to_user_mode_prepare.isra.0
+     0.49%  [k] __filemap_add_folio
+     0.48%  [k] bio_associate_blkg_from_css
+     0.47%  [.] preadv64v2
+     0.47%  [.] operator delete(void*, unsigned long)
+     0.41%  [k] xa_load
+     0.38%  [.] FsstDecoder::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>) const
+     0.36%  [k] page_cache_ra_unbounded
+     0.35%  [k] security_file_permission
+     0.35%  [.] std::vector<std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> >, std::allocator<std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> > > > ql::exportIds::idsToStringAndTypeDepth2<false, false, ql::identity>(Index const&, std::span<ValueId const, 18446744073709551615ul>, LocalVocab const&, ql::identity const&)
+     0.34%  [.] void std::__introsort_loop<__gnu_cxx::__normal_iterator<std::pair<long, ValueId>*, std::vector<std::pair<long, ValueId>, std::allocator<std::pair<long, ValueId> > > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::ranges::__detail::__make_comp_proj<std::ranges::less, ad_utility::detail::SecondImpl>(std::ranges::less&, ad_utility::detail::SecondImpl&)::{lambda(auto:1&&, auto:2&&)#1}> >(__gnu_cxx::__normal_iterator<std::pair<long, ValueId>*, std::vector<std::pair<long, ValueId>, std::allocator<std::pair<long, ValueId> > > >, __gnu_cxx::__normal_iterator<std::pair<long, ValueId>*, std::vector<std::pair<long, ValueId>, std::allocator<std::pair<long, ValueId> > > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::ranges::__detail::__make_comp_proj<std::ranges::less, ad_utility::detail::SecondImpl>(std::ranges::less&, ad_utility::detail::SecondImpl&)::{lambda(auto:1&&, auto:2&&)#1}>)
+     0.34%  [.] ad_utility::vocabulary::detail::DecoderMultiplexer<FsstRepeatedDecoder<2ul> >::decompressInto(std::basic_string_view<char, std::char_traits<char> >, unsigned long, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+     0.34%  [k] ext4_mpage_readpages
+     0.33%  [.] qlever::constructExport::ConstructBatchEvaluator::stringAndTypeToEvaluatedTerm(std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> >&&)
+     0.31%  [.] absl::lts_20260107::container_internal::raw_hash_set<absl::lts_20260107::container_internal::FlatHashMapPolicy<ValueId, std::pair<std::optional<std::shared_ptr<qlever::constructExport::EvaluatedTermData const> >, std::_List_iterator<ValueId> > >>::iterator absl::lts_20260107::container_internal::raw_hash_set<absl::lts_20260107::container_internal::FlatHashMapPolicy<ValueId, std::pair<std::optional<std::shared_ptr<qlever::constructExport::EvaluatedTermData const> >, std::_List_iterator<ValueId> > >>::find<ValueId>(ValueId const&)
+     0.31%  [k] touch_atime
+     0.31%  [.] FsstRepeatedDecoder<2ul>::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     0.31%  [k] get_mem_cgroup_from_mm
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

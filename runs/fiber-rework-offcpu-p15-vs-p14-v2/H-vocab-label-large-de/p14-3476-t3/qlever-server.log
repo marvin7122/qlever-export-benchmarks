@@ -1,0 +1,47 @@
+2026-10-06 07:26:11.238 - INFO: [1mQLever server v0.6.0-308-g95f657ab9, compiled on Mon Sep 28 19:27:32 UTC 2026 using git hash 95f657a[22m
+2026-10-06 07:26:11.239 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-10-06 07:26:11.240 - INFO: The git hash used to build this index was "65f84b4"
+2026-10-06 07:26:11.240 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-10-06 07:26:24.566 - INFO: Done, number of words: 1,580,300,680
+2026-10-06 07:26:24.566 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-10-06 07:26:24.645 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-06 07:26:24.743 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-06 07:26:24.815 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-06 07:26:24.914 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-06 07:26:24.997 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-06 07:26:25.081 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-06 07:26:25.138 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-06 07:26:25.194 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-06 07:26:25.195 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-10-06 07:26:26.680 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-10-06 07:26:34.759 - INFO: Initializing server ...
+2026-10-06 07:26:34.759 - INFO: No access token required for restricted API calls
+2026-10-06 07:26:34.759 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-10-06 07:26:36.011 - INFO: 
+2026-10-06 07:26:36.011 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-06 07:26:36.014 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-10-06 07:26:36.014 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-06 07:26:36.017 - INFO: Query planning done in 5 ms
+2026-10-06 07:26:36.017 - INFO: Result has unknown size (not computed yet)
+2026-10-06 07:27:01.300 - INFO: Done processing query and sending result, total time was 25,289 ms

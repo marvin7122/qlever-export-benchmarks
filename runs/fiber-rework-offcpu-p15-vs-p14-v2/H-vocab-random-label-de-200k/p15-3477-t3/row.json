@@ -1,0 +1,103 @@
+{
+ "query": "H-vocab-random-label-de-200k",
+ "arm": "p15-3477",
+ "trial": 3,
+ "evict_rc": 0,
+ "status": 200,
+ "bytes": 19297737,
+ "xxh3_128": "1ad67f5d778a56661d17804e27bc74f9",
+ "elapsed_s": 10.551,
+ "export_tid": 1742936,
+ "export_run_s": 4.505,
+ "export_runq_s": 0.003,
+ "export_offcpu_s": 6.043,
+ "server_cpu_s": 7.732,
+ "sampler_iterations": 9055,
+ "export_samples": 9055,
+ "export_sleep_samples": 5146,
+ "export_offcpu_by_syscall_s": {
+  "D:pread64": 2.959,
+  "S:futex": 2.823,
+  "D:running": 0.234,
+  "S:epoll_wait": 0.021,
+  "S:running": 0.006
+ },
+ "export_state_samples": {
+  "R": 3909,
+  "D:pread64": 2520,
+  "S:futex": 2404,
+  "D:running": 199,
+  "S:epoll_wait": 18,
+  "S:running": 5
+ },
+ "top_threads": [
+  {
+   "tid": 1742936,
+   "comm": "qlever-server",
+   "run_s": 4.505244795,
+   "runq_s": 0.002701324
+  },
+  {
+   "tid": 1743056,
+   "comm": "qlever-server",
+   "run_s": 2.398676563,
+   "runq_s": 0.00069595
+  },
+  {
+   "tid": 1742931,
+   "comm": "qlever-server",
+   "run_s": 0.320117938,
+   "runq_s": 0.0001642
+  },
+  {
+   "tid": 1743045,
+   "comm": "qlever-server",
+   "run_s": 0.217200792,
+   "runq_s": 0.000678301
+  },
+  {
+   "tid": 1743044,
+   "comm": "qlever-server",
+   "run_s": 0.192371659,
+   "runq_s": 0.00019439
+  },
+  {
+   "tid": 1743043,
+   "comm": "qlever-server",
+   "run_s": 0.063762582,
+   "runq_s": 0.003587611
+  }
+ ],
+ "thread_samples": {
+  "1742936": {
+   "S:epoll_wait": 18,
+   "R": 3909,
+   "S:running": 5,
+   "S:futex": 2404,
+   "D:pread64": 2520,
+   "D:running": 199
+  },
+  "1743056": {
+   "R": 2007,
+   "S:io_uring_enter": 3,
+   "S:futex": 88
+  },
+  "1742931": {
+   "S:futex": 8778,
+   "R": 276,
+   "D:pread64": 1
+  },
+  "1743045": {
+   "S:futex": 1260,
+   "R": 162
+  },
+  "1743044": {
+   "R": 133,
+   "S:futex": 1288
+  },
+  "1743043": {
+   "S:futex": 2299,
+   "R": 47
+  }
+ }
+}

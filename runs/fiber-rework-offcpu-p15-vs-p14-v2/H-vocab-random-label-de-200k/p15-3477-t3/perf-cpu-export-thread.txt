@@ -1,0 +1,48 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 7K of event 'cpu/cycles/P'
+# Event count (approx.): 30446869054
+#
+# Overhead  Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+# ........  .....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+     3.65%  [.] icu_74::RuleBasedCollator::doCompare(unsigned char const*, int, unsigned char const*, int, UErrorCode&) const
+     2.81%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+     2.06%  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     1.68%  [.] fsst_decompress
+     1.63%  [.] ad_utility::vocabulary::detail::DecoderMultiplexer<FsstRepeatedDecoder<2ul> >::decompress[abi:cxx11](std::basic_string_view<char, std::char_traits<char> >, unsigned long) const
+     1.51%  [k] kernel_init_pages
+     1.22%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::resize(unsigned long, char) [clone .constprop.0]
+     1.12%  [k] filemap_get_read_batch
+     1.08%  [.] WordAndIndex CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lower_bound<std::basic_string_view<char, std::char_traits<char> >, UnicodeVocabulary<PolymorphicVocabulary, TripleComponentComparatorImpl<LocaleManagerICU> >::getPositionOfWord<std::basic_string_view<char, std::char_traits<char> > >(std::basic_string_view<char, std::char_traits<char> > const&) const::{lambda(auto:1 const&, auto:2 const&)#1}>(std::basic_string_view<char, std::char_traits<char> > const&, UnicodeVocabulary<PolymorphicVocabulary, TripleComponentComparatorImpl<LocaleManagerICU> >::getPositionOfWord<std::basic_string_view<char, std::char_traits<char> > >(std::basic_string_view<char, std::char_traits<char> > const&) const::{lambda(auto:1 const&, auto:2 const&)#1}) const
+     1.02%  [k] _copy_to_iter
+     0.98%  [k] srso_safe_ret
+     0.90%  [k] filemap_read
+     0.65%  [k] srso_return_thunk
+     0.65%  [k] xas_load
+     0.65%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
+     0.64%  [.] icu_74::CollationFastLatin::compareUTF8(unsigned short const*, unsigned short const*, int, unsigned char const*, int, unsigned char const*, int)
+     0.63%  [.] FsstDecoder::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     0.61%  [.] operator delete(void*, unsigned long)
+     0.60%  [.] FsstDecoder::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>) const
+     0.60%  [.] void ql::resize_and_overwrite<char, std::char_traits<char>, std::allocator<char>, detail::decompressToOwnedString<FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1}>(unsigned long, FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1})::{lambda(char*, unsigned long)#1}>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long, detail::decompressToOwnedString<FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1}>(unsigned long, FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1})::{lambda(char*, unsigned long)#1}&&)
+     0.55%  [k] __x64_sys_pread64
+     0.54%  [k] vfs_read
+     0.52%  [.] operator new(unsigned long)
+     0.43%  [k] lruvec_stat_mod_folio
+     0.40%  [k] copy_page_to_iter
+     0.37%  [k] fdget
+     0.36%  [k] do_syscall_64
+     0.36%  [k] atime_needs_update
+     0.35%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+     0.34%  [k] lru_add
+     0.31%  [k] ext4_mpage_readpages
+     0.31%  [k] filemap_get_pages
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

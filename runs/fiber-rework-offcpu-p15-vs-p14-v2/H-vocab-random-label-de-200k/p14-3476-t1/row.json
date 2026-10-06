@@ -1,0 +1,110 @@
+{
+ "query": "H-vocab-random-label-de-200k",
+ "arm": "p14-3476",
+ "trial": 1,
+ "evict_rc": 0,
+ "status": 200,
+ "bytes": 19297737,
+ "xxh3_128": "1ad67f5d778a56661d17804e27bc74f9",
+ "elapsed_s": 10.691,
+ "export_tid": 1739280,
+ "export_run_s": 4.469,
+ "export_runq_s": 0.005,
+ "export_offcpu_s": 6.217,
+ "server_cpu_s": 7.925,
+ "sampler_iterations": 9135,
+ "export_samples": 9135,
+ "export_sleep_samples": 5211,
+ "export_offcpu_by_syscall_s": {
+  "D:pread64": 2.884,
+  "S:epoll_wait": 2.485,
+  "S:futex": 0.598,
+  "D:running": 0.242,
+  "D:nr-1": 0.006,
+  "S:running": 0.002
+ },
+ "export_state_samples": {
+  "R": 3924,
+  "D:pread64": 2417,
+  "S:epoll_wait": 2083,
+  "S:futex": 501,
+  "D:running": 203,
+  "D:nr-1": 5,
+  "S:running": 2
+ },
+ "top_threads": [
+  {
+   "tid": 1739280,
+   "comm": "qlever-server",
+   "run_s": 4.468651367,
+   "runq_s": 0.004671513
+  },
+  {
+   "tid": 1739320,
+   "comm": "qlever-server",
+   "run_s": 2.485228421,
+   "runq_s": 0.001396521
+  },
+  {
+   "tid": 1739275,
+   "comm": "qlever-server",
+   "run_s": 0.309220462,
+   "runq_s": 5.774e-05
+  },
+  {
+   "tid": 1739319,
+   "comm": "qlever-server",
+   "run_s": 0.237617222,
+   "runq_s": 7.402e-05
+  },
+  {
+   "tid": 1739318,
+   "comm": "qlever-server",
+   "run_s": 0.229728843,
+   "runq_s": 8.949e-05
+  },
+  {
+   "tid": 1739279,
+   "comm": "qlever-server",
+   "run_s": 0.125121848,
+   "runq_s": 0.002078082
+  }
+ ],
+ "thread_samples": {
+  "1739280": {
+   "S:epoll_wait": 2083,
+   "R": 3924,
+   "S:running": 2,
+   "S:futex": 501,
+   "D:nr-1": 5,
+   "D:pread64": 2417,
+   "D:running": 203
+  },
+  "1739320": {
+   "R": 2070,
+   "S:futex": 107,
+   "S:io_uring_enter": 2
+  },
+  "1739275": {
+   "S:futex": 8866,
+   "R": 268,
+   "D:pread64": 1
+  },
+  "1739319": {
+   "R": 188,
+   "S:futex": 1271,
+   "S:running": 1
+  },
+  "1739318": {
+   "S:futex": 1280,
+   "R": 180,
+   "S:running": 1
+  },
+  "1739279": {
+   "S:futex": 1997,
+   "R": 111,
+   "S:running": 7,
+   "S:epoll_wait": 7020
+  }
+ }
+}
