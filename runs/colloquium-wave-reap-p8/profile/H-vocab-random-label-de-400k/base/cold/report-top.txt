@@ -1,0 +1,57 @@
+     4.00%  libicui18n.so.74.2            [.] icu_74::RuleBasedCollator::doCompare(unsigned char const*, int, unsigned char const*, int, UErrorCode&) const
+     2.98%  qlever-server                 [.] ad_utility::vocabulary::detail::DecoderMultiplexer<FsstRepeatedDecoder<2ul> >::decompress[abi:cxx11](std::basic_string_view<char, std::char_traits<char> >, unsigned long) const
+     2.81%  qlever-server                 [.] fsst_decompress
+     2.26%  qlever-server                 [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     2.10%  [kernel.kallsyms]             [k] filemap_get_read_batch
+     2.01%  [kernel.kallsyms]             [k] kernel_init_pages
+     1.91%  qlever-server                 [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+     1.76%  [kernel.kallsyms]             [k] srso_safe_ret
+     1.59%  [kernel.kallsyms]             [k] srso_return_thunk
+     1.56%  [kernel.kallsyms]             [k] filemap_read
+     1.25%  [kernel.kallsyms]             [k] _copy_to_iter
+     1.25%  qlever-server                 [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+     1.13%  qlever-server                 [.] WordAndIndex CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lower_bound<std::basic_string_view<char, std::char_traits<char> >, UnicodeVocabulary<PolymorphicVocabulary, TripleComponentComparatorImpl<LocaleManagerICU> >::getPositionOfWord<std::basic_string_view<char, std::char_traits<char> > >(std::basic_string_view<char, std::char_traits<char> > const&) const::{lambda(auto:1 const&, auto:2 const&)#1}>(std::basic_string_view<char, std::char_traits<char> > const&, UnicodeVocabulary<PolymorphicVocabulary, TripleComponentComparatorImpl<LocaleManagerICU> >::getPositionOfWord<std::basic_string_view<char, std::char_traits<char> > >(std::basic_string_view<char, std::char_traits<char> > const&) const::{lambda(auto:1 const&, auto:2 const&)#1}) const
+     1.06%  qlever-server                 [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::resize(unsigned long, char) [clone .constprop.0]
+     1.01%  [kernel.kallsyms]             [k] xas_load
+     1.01%  qlever-server                 [.] FsstDecoder::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>) const
+     0.87%  libicui18n.so.74.2            [.] icu_74::CollationFastLatin::compareUTF8(unsigned short const*, unsigned short const*, int, unsigned char const*, int, unsigned char const*, int)
+     0.84%  qlever-server                 [.] void ql::resize_and_overwrite<char, std::char_traits<char>, std::allocator<char>, detail::decompressToOwnedString<FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1}>(unsigned long, FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1})::{lambda(char*, unsigned long)#1}>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long, detail::decompressToOwnedString<FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1}>(unsigned long, FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1})::{lambda(char*, unsigned long)#1}&&)
+     0.81%  libjemalloc.so.2              [.] operator delete(void*, unsigned long)
+     0.78%  [kernel.kallsyms]             [k] iommu_dma_unmap_phys
+     0.78%  qlever-server                 [.] FsstDecoder::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     0.72%  libjemalloc.so.2              [.] operator new(unsigned long)
+     0.67%  [kernel.kallsyms]             [k] __rcu_read_unlock
+     0.67%  [kernel.kallsyms]             [k] bio_associate_blkg_from_css
+     0.65%  qlever-server                 [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
+     0.58%  [kernel.kallsyms]             [k] atime_needs_update
+     0.58%  qlever-server                 [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+     0.57%  [kernel.kallsyms]             [k] vfs_read
+     0.57%  [kernel.kallsyms]             [k] filemap_get_pages
+     0.52%  [kernel.kallsyms]             [k] do_syscall_64
+     0.51%  [kernel.kallsyms]             [k] entry_SYSCALL_64_after_hwframe
+     0.50%  qlever-server                 [.] ValueId::compareThreeWay(ValueId const&) const
+     0.50%  [kernel.kallsyms]             [k] aa_file_perm
+     0.48%  [kernel.kallsyms]             [k] do_page_cache_ra
+     0.47%  [kernel.kallsyms]             [k] ext4_mpage_readpages
+     0.45%  [kernel.kallsyms]             [k] lru_add
+     0.43%  [kernel.kallsyms]             [k] __alloc_frozen_pages_noprof
+     0.42%  [kernel.kallsyms]             [k] __filemap_add_folio
+     0.40%  [kernel.kallsyms]             [k] __rcu_read_lock
+     0.39%  [kernel.kallsyms]             [k] current_time
+     0.39%  [kernel.kallsyms]             [k] rmqueue.isra.0
+     0.37%  [kernel.kallsyms]             [k] lruvec_stat_mod_folio
+     0.36%  [kernel.kallsyms]             [k] copy_page_to_iter
+     0.36%  [kernel.kallsyms]             [k] mod_memcg_lruvec_state
+     0.35%  [kernel.kallsyms]             [k] ext4_file_read_iter
+     0.35%  [kernel.kallsyms]             [k] __x64_sys_pread64
+     0.35%  qlever-server                 [.] qlever::constructExport::ConstructBatchEvaluator::evaluateVariableByColumn(unsigned long, qlever::constructExport::BatchEvaluationContext const&, LocalVocab const&, Index const&, ad_utility::util::LRUCacheWithStatistics<ValueId, std::optional<std::shared_ptr<qlever::constructExport::EvaluatedTermData const> > >&)
+     0.34%  [kernel.kallsyms]             [k] blk_mq_end_request_batch
+     0.34%  [kernel.kallsyms]             [k] apparmor_file_permission
+     0.33%  [nvme]                        [k] nvme_poll_cq
+     0.33%  [kernel.kallsyms]             [k] xa_load
+     0.33%  [kernel.kallsyms]             [k] fdget
+     0.33%  [kernel.kallsyms]             [k] blk_mq_submit_bio
+     0.32%  [kernel.kallsyms]             [k] amdv1_map_range
+     0.32%  [kernel.kallsyms]             [k] bio_associate_blkg
+     0.32%  [kernel.kallsyms]             [k] do_anonymous_page
+     0.30%  [kernel.kallsyms]             [k] __mem_cgroup_charge

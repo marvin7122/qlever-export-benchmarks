@@ -1,0 +1,23 @@
+    25.02%     0.07%  [.] preadv2
+    23.47%     0.05%  [.] preadv64v2
+    22.56%     0.04%  [.] __x64_sys_preadv2
+    22.50%     0.11%  [.] do_preadv
+     2.85%     0.00%  [.] io_uring_submit
+     2.85%     0.00%  [.] __do_sys_io_uring_enter
+     2.85%     0.00%  [.] __x64_sys_io_uring_enter
+     0.24%     0.08%  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const
+     0.23%     0.00%  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.18%     0.13%  [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.13%     0.00%  [.] VocabularyOnDisk::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.11%     0.08%  [.] ad_utility::IoUringPolicy::addBatch(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>, unsigned long)
+     0.02%     0.01%  [.] ad_utility::IoUringPolicy::processCqe(int, unsigned long)
+     0.02%     0.01%  [.] preadv2@plt
+     0.01%     0.00%  [.] io_uring_submit
+     0.01%     0.01%  [.] ad_utility::BatchManager<ad_utility::IoUringPolicy>::addBatch(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>)
+     0.01%     0.01%  [.] io_uring_wait_cqes
+     0.01%     0.00%  [.] drain_obj_stock
+     0.01%     0.00%  [.] ad_utility::IoUringPolicy::drainAtLeast(unsigned int)
+     0.01%     0.00%  [.] __io_uring_get_cqe@plt
+     0.01%     0.00%  [.] __io_uring_get_cqe
+     0.01%     0.01%  [.] Vocabulary<PolymorphicVocabulary, TripleComponentComparatorImpl<LocaleManagerICU>, ad_utility::TypedIndex<unsigned long, vocabIndexTag> >::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.00%     0.00%  [.] io_uring_peek_batch_cqe

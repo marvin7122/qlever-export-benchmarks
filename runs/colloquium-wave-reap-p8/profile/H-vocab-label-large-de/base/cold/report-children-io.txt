@@ -1,0 +1,26 @@
+    55.24%     0.31%  [.] preadv2
+    48.29%     0.47%  [.] preadv64v2
+    45.16%     0.22%  [.] __x64_sys_preadv2
+    44.86%     0.74%  [.] do_preadv
+     2.07%     0.01%  [.] __x64_sys_io_uring_enter
+     2.06%     0.01%  [.] io_uring_submit
+     2.04%     0.04%  [.] __do_sys_io_uring_enter
+     1.68%     0.85%  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const
+     1.52%     0.00%  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.57%     0.01%  [.] VocabularyOnDisk::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.53%     0.42%  [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.19%     0.09%  [.] ad_utility::IoUringPolicy::addBatch(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>, unsigned long)
+     0.12%     0.01%  [.] io_uring_submit
+     0.08%     0.00%  [.] _io_uring_get_cqe
+     0.07%     0.04%  [.] ad_utility::IoUringPolicy::drainOneCqe()
+     0.04%     0.01%  [.] PolymorphicVocabulary::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.03%     0.03%  [.] preadv2@plt
+     0.02%     0.00%  [.] io_uring_submit
+     0.02%     0.01%  [.] ad_utility::BatchManager<ad_utility::IoUringPolicy>::addBatch(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>)
+     0.01%     0.00%  [.] __io_uring_add_tctx_node
+     0.01%     0.01%  [.] ad_utility::IoUringPolicy::wait(unsigned long)
+     0.01%     0.00%  [k] __io_uring_add_tctx_node_from_submit
+     0.01%     0.01%  [.] ad_utility::BatchManager<ad_utility::IoUringPolicy>::wait(unsigned long)
+     0.01%     0.01%  [.] Vocabulary<PolymorphicVocabulary, TripleComponentComparatorImpl<LocaleManagerICU>, ad_utility::TypedIndex<unsigned long, vocabIndexTag> >::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.00%     0.00%  [.] io_uring_submit@plt
+     0.00%     0.00%  [.] ad_utility::IoUringPolicy::drainOneCqe()

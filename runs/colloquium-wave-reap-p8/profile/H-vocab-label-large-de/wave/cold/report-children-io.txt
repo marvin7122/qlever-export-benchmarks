@@ -1,0 +1,31 @@
+    57.17%     0.38%  [.] preadv2
+    49.83%     0.51%  [.] preadv64v2
+    46.41%     0.18%  [.] __x64_sys_preadv2
+    46.07%     0.60%  [.] do_preadv
+     2.03%     0.01%  [.] __x64_sys_io_uring_enter
+     2.03%     0.01%  [.] __do_sys_io_uring_enter
+     1.98%     0.01%  [.] io_uring_submit
+     1.36%     0.01%  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     1.29%     0.57%  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const
+     0.58%     0.46%  [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.52%     0.00%  [.] VocabularyOnDisk::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.11%     0.07%  [.] ad_utility::IoUringPolicy::addBatch(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>, unsigned long)
+     0.08%     0.01%  [.] _io_uring_get_cqe
+     0.07%     0.02%  [.] ad_utility::IoUringPolicy::processCqe(int, unsigned long)
+     0.04%     0.03%  [.] preadv2@plt
+     0.03%     0.01%  [.] ad_utility::BatchManager<ad_utility::IoUringPolicy>::wait(unsigned long)
+     0.03%     0.01%  [.] PolymorphicVocabulary::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.02%     0.01%  [.] __io_uring_get_cqe
+     0.02%     0.02%  [.] ad_utility::IoUringPolicy::drainAtLeast(unsigned int)
+     0.02%     0.00%  [.] io_uring_submit
+     0.02%     0.00%  [.] io_uring_wait_cqes@plt
+     0.02%     0.01%  [.] Vocabulary<PolymorphicVocabulary, TripleComponentComparatorImpl<LocaleManagerICU>, ad_utility::TypedIndex<unsigned long, vocabIndexTag> >::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.01%     0.00%  [.] __io_uring_add_tctx_node_from_submit
+     0.01%     0.01%  [.] ad_utility::BatchManager<ad_utility::IoUringPolicy>::addBatch(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>)
+     0.01%     0.01%  [.] io_uring_peek_batch_cqe
+     0.01%     0.00%  [.] __io_uring_add_tctx_node
+     0.01%     0.00%  [.] ad_utility::IoUringPolicy::wait(unsigned long)
+     0.01%     0.01%  [.] io_uring_wait_cqes
+     0.01%     0.00%  [.] io_uring_submit@plt
+     0.01%     0.00%  [.] __io_uring_get_cqe@plt
+     0.01%     0.00%  [.] ad_utility::IoUringPolicy::submitOrThrow()

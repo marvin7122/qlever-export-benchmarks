@@ -1,0 +1,21 @@
+    23.75%     0.06%  [.] preadv64v2
+    22.92%     0.05%  [.] __x64_sys_preadv2
+    22.84%     0.06%  [.] do_preadv
+    20.68%     0.05%  [.] preadv2
+     4.64%     0.01%  [.] preadv2
+     3.44%     0.00%  [.] io_uring_submit
+     3.14%     0.02%  [.] __x64_sys_io_uring_enter
+     3.10%     0.04%  [.] __do_sys_io_uring_enter
+     0.27%     0.00%  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.26%     0.01%  [.] io_uring_submit
+     0.24%     0.09%  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const
+     0.22%     0.10%  [.] ad_utility::IoUringPolicy::addBatch(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>, unsigned long)
+     0.15%     0.04%  [.] ad_utility::IoUringPolicy::drainOneCqe()
+     0.13%     0.11%  [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.10%     0.00%  [.] VocabularyOnDisk::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.07%     0.00%  [.] io_uring_submit
+     0.03%     0.03%  [.] preadv2@plt
+     0.01%     0.01%  [k] drain_obj_stock
+     0.01%     0.01%  [.] PolymorphicVocabulary::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.01%     0.00%  [.] ad_utility::BatchManager<ad_utility::IoUringPolicy>::wait(unsigned long)
+     0.01%     0.00%  [.] absl::lts_20260107::container_internal::raw_hash_set<absl::lts_20260107::container_internal::FlatHashMapPolicy<unsigned long, ad_utility::IoUringPolicy::InFlightRead>>::transfer_unprobed_elements_to_next_capacity_fn(absl::lts_20260107::container_internal::CommonFields&, absl::lts_20260107::container_internal::ctrl_t const*, void*, void*, void (*)(void*, unsigned char, unsigned long, unsigned long))
