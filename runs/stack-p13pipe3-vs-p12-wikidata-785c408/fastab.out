@@ -1,0 +1,58 @@
+[2026-09-29T12:34:49Z] fastab: arms ['base', 'variant'], warm servers 2 (toggle-rp=True), scenarios cold,warm, reps 3, early-stop True (gap > 10%), min-measure-s 10, screening False (cold: ['H-vocab-label-large-de', 'H-vocab-random-label-de-200k', 'H-vocab-label-large']), load gate 0.5 CPUs on [0, 1, 2, 3, 8, 9, 10, 11], pin server [0, 1, 2] client 3, cycles True, serving files 25 (200.7 GiB), MemAvailable 118.4 GiB
+[2026-09-29T12:35:47Z] pr3506-H-vocab-label-large-de-cold-base-r1 done: complete 23.657s x1 (cold-base)
+[2026-09-29T12:35:52Z] load gate cold-H-vocab-label-large-de-variant-r1: foreign load 6.92 CPUs > 0.5, waiting
+[2026-09-29T12:37:56Z] pr3506-H-vocab-label-large-de-cold-variant-r1 done: complete 23.990s x1 (cold-variant)
+[2026-09-29T12:38:00Z] load gate cold-H-vocab-label-large-de-variant-r2: foreign load 1.00 CPUs > 0.5, waiting
+[2026-09-29T12:39:26Z] pr3506-H-vocab-label-large-de-cold-variant-r2 done: complete 23.063s x1 (cold-variant)
+[2026-09-29T12:40:25Z] pr3506-H-vocab-label-large-de-cold-base-r2 done: complete 22.987s x1 (cold-base)
+[2026-09-29T12:41:26Z] pr3506-H-vocab-label-large-de-cold-base-r3 done: complete 25.888s x1 (cold-base)
+[2026-09-29T12:41:32Z] load gate cold-H-vocab-label-large-de-variant-r3: foreign load 5.59 CPUs > 0.5, waiting
+[2026-09-29T12:47:47Z] pr3506-H-vocab-label-large-de-cold-variant-r3 done: complete 23.463s x1 (cold-variant)
+[2026-09-29T12:48:33Z] pr3506-H-vocab-random-label-de-200k-cold-base-r1 done: complete 10.413s x1 (cold-base)
+[2026-09-29T12:49:17Z] pr3506-H-vocab-random-label-de-200k-cold-variant-r1 done: complete 10.274s x1 (cold-variant)
+[2026-09-29T12:50:02Z] pr3506-H-vocab-random-label-de-200k-cold-variant-r2 done: complete 10.323s x1 (cold-variant)
+[2026-09-29T12:50:53Z] pr3506-H-vocab-random-label-de-200k-cold-base-r2 done: complete 12.963s x1 (cold-base)
+[2026-09-29T12:50:58Z] load gate cold-H-vocab-random-label-de-200k-base-r3: foreign load 4.01 CPUs > 0.5, waiting
+[2026-09-29T12:55:55Z] pr3506-H-vocab-random-label-de-200k-cold-base-r3 done: complete 10.302s x1 (cold-base)
+[2026-09-29T12:56:39Z] pr3506-H-vocab-random-label-de-200k-cold-variant-r3 done: complete 10.294s x1 (cold-variant)
+[2026-09-29T12:57:35Z] pr3506-H-vocab-label-large-cold-base-r1 done: complete 21.435s x1 (cold-base)
+[2026-09-29T12:58:49Z] pr3506-H-vocab-label-large-cold-variant-r1 done: complete 34.965s x1 (cold-variant)
+[2026-09-29T12:58:54Z] load gate cold-H-vocab-label-large-variant-r2: foreign load 3.03 CPUs > 0.5, waiting
+[2026-09-29T13:02:57Z] pr3506-H-vocab-label-large-cold-variant-r2 done: complete 22.190s x1 (cold-variant)
+[2026-09-29T13:03:52Z] pr3506-H-vocab-label-large-cold-base-r2 done: complete 21.376s x1 (cold-base)
+[2026-09-29T13:04:48Z] pr3506-H-vocab-label-large-cold-base-r3 done: complete 21.708s x1 (cold-base)
+[2026-09-29T13:05:43Z] pr3506-H-vocab-label-large-cold-variant-r3 done: complete 21.673s x1 (cold-variant)
+[2026-09-29T13:05:46Z] phase cold took 1856 s
+[2026-09-29T13:06:13Z] warm servers: warm-base port 7041 ready 22.5s rss 22.3 GiB; warm-variant port 7042 ready 22.6s rss 22.3 GiB; MemAvailable 73.3 GiB
+[2026-09-29T13:06:40Z] warm-up H-vocab-label-large-de base: HTTP 200 23.34s
+[2026-09-29T13:06:58Z] warm-up H-vocab-label-large-de variant: HTTP 200 15.41s
+[2026-09-29T13:07:13Z] pr3506-H-vocab-label-large-de-warm-base-r1 done: complete 15.250s x1 (warm-base)
+[2026-09-29T13:07:29Z] pr3506-H-vocab-label-large-de-warm-variant-r1 done: complete 15.270s x1 (warm-variant)
+[2026-09-29T13:07:45Z] pr3506-H-vocab-label-large-de-warm-variant-r2 done: complete 15.389s x1 (warm-variant)
+[2026-09-29T13:08:00Z] pr3506-H-vocab-label-large-de-warm-base-r2 done: complete 15.399s x1 (warm-base)
+[2026-09-29T13:08:00Z] early stop: H-vocab-label-large-de warm cycles CV < 1% in every arm after 2 trials
+[2026-09-29T13:08:00Z] early stop: H-vocab-label-large-de warm after 2 trials
+[2026-09-29T13:08:18Z] perf H-vocab-label-large-de base: HTTP 200 15.81s
+[2026-09-29T13:08:35Z] perf H-vocab-label-large-de variant: HTTP 200 15.60s
+[2026-09-29T13:08:46Z] warm-up H-vocab-random-label-de-200k base: HTTP 200 8.78s
+[2026-09-29T13:08:50Z] warm-up H-vocab-random-label-de-200k variant: HTTP 200 3.95s
+[2026-09-29T13:09:03Z] pr3506-H-vocab-random-label-de-200k-warm-base-r1 done: complete 3.975s x3 (warm-base)
+[2026-09-29T13:09:15Z] pr3506-H-vocab-random-label-de-200k-warm-variant-r1 done: complete 3.943s x3 (warm-variant)
+[2026-09-29T13:09:27Z] pr3506-H-vocab-random-label-de-200k-warm-variant-r2 done: complete 3.982s x3 (warm-variant)
+[2026-09-29T13:09:40Z] pr3506-H-vocab-random-label-de-200k-warm-base-r2 done: complete 4.005s x3 (warm-base)
+[2026-09-29T13:09:40Z] early stop: H-vocab-random-label-de-200k warm cycles CV < 1% in every arm after 2 trials
+[2026-09-29T13:09:40Z] early stop: H-vocab-random-label-de-200k warm after 2 trials
+[2026-09-29T13:09:45Z] perf H-vocab-random-label-de-200k base: HTTP 200 4.03s
+[2026-09-29T13:09:50Z] perf H-vocab-random-label-de-200k variant: HTTP 200 4.12s
+[2026-09-29T13:10:19Z] warm-up H-vocab-label-large base: HTTP 200 21.87s
+[2026-09-29T13:10:46Z] warm-up H-vocab-label-large variant: HTTP 200 21.87s
+[2026-09-29T13:11:07Z] pr3506-H-vocab-label-large-warm-base-r1 done: complete 21.397s x1 (warm-base)
+[2026-09-29T13:11:29Z] pr3506-H-vocab-label-large-warm-variant-r1 done: complete 21.268s x1 (warm-variant)
+[2026-09-29T13:11:51Z] pr3506-H-vocab-label-large-warm-variant-r2 done: complete 21.595s x1 (warm-variant)
+[2026-09-29T13:12:13Z] pr3506-H-vocab-label-large-warm-base-r2 done: complete 21.600s x1 (warm-base)
+[2026-09-29T13:12:13Z] early stop: H-vocab-label-large warm cycles CV < 1% in every arm after 2 trials
+[2026-09-29T13:12:13Z] early stop: H-vocab-label-large warm after 2 trials
+[2026-09-29T13:12:36Z] perf H-vocab-label-large base: HTTP 200 21.74s
+[2026-09-29T13:13:08Z] perf H-vocab-label-large variant: HTTP 200 29.84s
+[2026-09-29T13:13:08Z] warm servers after trials: warm-base rss 22.4 GiB; warm-variant rss 22.4 GiB; MemAvailable 65.7 GiB
+[2026-09-29T13:13:13Z] phase warm took 447 s
