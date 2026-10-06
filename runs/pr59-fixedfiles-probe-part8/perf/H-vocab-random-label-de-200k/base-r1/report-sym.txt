@@ -1,0 +1,367 @@
+     3.21%  [.] icu_74::RuleBasedCollator::doCompare(unsigned char const*, int, unsigned char const*, int, UErrorCode&) const
+     2.45%  [k] kernel_init_pages
+     2.42%  [k] filemap_get_read_batch
+     2.28%  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     2.25%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+     2.25%  [.] fsst_decompress
+     1.98%  [.] ad_utility::vocabulary::detail::DecoderMultiplexer<FsstRepeatedDecoder<2ul> >::decompress[abi:cxx11](std::basic_string_view<char, std::char_traits<char> >, unsigned long) const
+     1.92%  [k] srso_safe_ret
+     1.60%  [.] VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+     1.55%  [k] srso_return_thunk
+     1.42%  [k] filemap_read
+     1.32%  [k] _copy_to_iter
+     1.25%  [.] WordAndIndex CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lower_bound<std::basic_string_view<char, std::char_traits<char> >, UnicodeVocabulary<PolymorphicVocabulary, TripleComponentComparatorImpl<LocaleManagerICU> >::getPositionOfWord<std::basic_string_view<char, std::char_traits<char> > >(std::basic_string_view<char, std::char_traits<char> > const&) const::{lambda(auto:1 const&, auto:2 const&)#1}>(std::basic_string_view<char, std::char_traits<char> > const&, UnicodeVocabulary<PolymorphicVocabulary, TripleComponentComparatorImpl<LocaleManagerICU> >::getPositionOfWord<std::basic_string_view<char, std::char_traits<char> > >(std::basic_string_view<char, std::char_traits<char> > const&) const::{lambda(auto:1 const&, auto:2 const&)#1}) const
+     1.04%  [k] xas_load
+     1.04%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::resize(unsigned long, char) [clone .constprop.0]
+     0.95%  [k] pt_iommu_amdv1_iova_to_phys
+     0.79%  [.] FsstDecoder::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>) const
+     0.75%  [k] __rcu_read_unlock
+     0.74%  [k] bio_associate_blkg_from_css
+     0.72%  [.] FsstDecoder::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     0.70%  [.] icu_74::CollationFastLatin::compareUTF8(unsigned short const*, unsigned short const*, int, unsigned char const*, int, unsigned char const*, int)
+     0.67%  [.] void ql::resize_and_overwrite<char, std::char_traits<char>, std::allocator<char>, detail::decompressToOwnedString<FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1}>(unsigned long, FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1})::{lambda(char*, unsigned long)#1}>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long, detail::decompressToOwnedString<FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1}>(unsigned long, FsstDecoder::decompress(std::basic_string_view<char, std::char_traits<char> >) const::{lambda(std::span<char, 18446744073709551615ul>)#1})::{lambda(char*, unsigned long)#1}&&)
+     0.58%  [k] atime_needs_update
+     0.58%  [k] vfs_read
+     0.55%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
+     0.52%  [k] do_syscall_64
+     0.52%  [k] __filemap_add_folio
+     0.51%  [k] aa_file_perm
+     0.49%  [.] operator new(unsigned long)
+     0.49%  [k] filemap_get_pages
+     0.49%  [k] lruvec_stat_mod_folio
+     0.49%  [.] ValueId::compareThreeWay(ValueId const&) const
+     0.48%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+     0.47%  [k] lru_add
+     0.47%  [k] ext4_mpage_readpages
+     0.47%  [k] blk_mq_end_request_batch
+     0.47%  [.] operator delete(void*, unsigned long)
+     0.45%  [k] __alloc_frozen_pages_noprof
+     0.43%  [k] xa_load
+     0.43%  [k] __rcu_read_lock
+     0.42%  [k] mod_memcg_lruvec_state
+     0.40%  [k] fdget
+     0.39%  [k] __x64_sys_pread64
+     0.39%  [k] apparmor_file_permission
+     0.39%  [k] blk_mq_submit_bio
+     0.38%  [k] nvme_poll_cq
+     0.37%  [k] entry_SYSCALL_64_after_hwframe
+     0.37%  [k] ext4_file_read_iter
+     0.37%  [k] get_mem_cgroup_from_mm
+     0.37%  [k] bio_associate_blkg
+     0.35%  [k] current_time
+     0.34%  [k] charge_memcg
+     0.34%  [k] rw_verify_area
+     0.33%  [k] copy_page_to_iter
+     0.32%  [k] lru_gen_add_folio
+     0.31%  [k] rmqueue.isra.0
+     0.31%  [k] get_page_from_freelist
+     0.30%  [k] page_cache_ra_unbounded
+     0.30%  [k] do_anonymous_page
+     0.29%  [k] __unmap_range
+     0.29%  [k] __mem_cgroup_charge
+     0.29%  [k] blk_cgroup_congested
+     0.29%  [k] arch_exit_to_user_mode_prepare.isra.0
+     0.28%  [k] xas_store
+     0.27%  [k] filemap_add_folio
+     0.26%  [k] x64_sys_call
+     0.26%  [k] iommu_dma_unmap_phys
+     0.25%  [k] ext4_sb_block_valid
+     0.25%  [k] __submit_bio
+     0.25%  [k] memcg1_commit_charge
+     0.25%  [k] xas_start
+     0.25%  [k] page_cache_sync_ra
+     0.24%  [k] xas_find_conflict
+     0.24%  [k] amdv1_map_range
+     0.24%  [.] antlr4::atn::LexerATNSimulator::execATN(antlr4::CharStream*, antlr4::dfa::DFAState*)
+     0.24%  [k] __handle_mm_fault
+     0.24%  [k] bio_alloc_bioset
+     0.24%  [k] md_handle_request
+     0.24%  [.] qlever::constructExport::ConstructBatchEvaluator::evaluateVariableByColumn(unsigned long, qlever::constructExport::BatchEvaluationContext const&, LocalVocab const&, Index const&, ad_utility::util::LRUCacheWithStatistics<ValueId, std::optional<std::shared_ptr<qlever::constructExport::EvaluatedTermData const> > >&)
+     0.23%  [k] generic_file_read_iter
+     0.23%  [.] __libc_pread
+     0.22%  [k] handle_edge_irq
+     0.22%  [k] __read_end_io
+     0.22%  [.] antlrcpp::Utf8::strictEncode[abi:cxx11](std::basic_string_view<char32_t, std::char_traits<char32_t> >)
+     0.22%  [k] vfs_readv
+     0.21%  [k] touch_atime
+     0.21%  [k] alloc_pages_mpol
+     0.21%  [k] rmqueue_bulk
+     0.20%  [k] native_irq_return_iret
+     0.20%  [k] entry_SYSCALL_64
+     0.20%  [k] rep_movs_alternative
+     0.20%  [k] read_pages
+     0.19%  [k] do_page_cache_ra
+     0.19%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) [clone .isra.0]
+     0.19%  [k] bio_endio
+     0.18%  [k] read_tsc
+     0.18%  [k] submit_bio_noacct
+     0.18%  [k] count_memcg_events
+     0.18%  [k] security_file_permission
+     0.18%  [k] ext4_es_lookup_extent
+     0.17%  [.] void ad_utility::detail::BlockZipperJoinImplCRTP<ad_utility::detail::BlockZipperJoinImpl<ad_utility::detail::JoinSide<ad_utility::IdTableAndFirstCols<1ul, columnBasedIdTable::IdTable<ValueId, 0, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)0> >*, ad_utility::IdTableAndFirstCols<1ul, columnBasedIdTable::IdTable<ValueId, 0, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)0> >*, ql::identity, std::monostate>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, std::less<void>, ad_utility::AddCombinedRowToIdTable, ad_utility::detail::AlwaysFalse>, ad_utility::detail::JoinSide<ad_utility::IdTableAndFirstCols<1ul, columnBasedIdTable::IdTable<ValueId, 0, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)0> >*, ad_utility::IdTableAndFirstCols<1ul, columnBasedIdTable::IdTable<ValueId, 0, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)0> >*, ql::identity, std::monostate>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, std::less<void>, ad_utility::AddCombinedRowToIdTable, ad_utility::detail::AlwaysFalse>::joinAndRemoveLessThanCurrentEl<false>(std::vector<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, columnBasedIdTable::IdTable<ValueId, 0, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)0> > >, std::allocator<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, columnBasedIdTable::IdTable<ValueId, 0, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)0> > > > >&, std::vector<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> >, std::allocator<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> > > >&, ValueId const&)
+     0.17%  [k] raid0_map_submit_bio
+     0.17%  [k] handle_mm_fault
+     0.17%  [.] TripleComponent::toString[abi:cxx11]() const
+     0.17%  [.] icu_74::UnicodeSet::contains(int) const
+     0.16%  [k] mod_lruvec_state
+     0.16%  [k] try_charge_memcg
+     0.16%  [k] mod_node_page_state
+     0.16%  [.] 0x0000000000188d1f
+     0.16%  [.] icu_74::BMPSet::contains(int) const
+     0.16%  [k] __submit_bio_noacct
+     0.16%  [k] post_alloc_hook
+     0.16%  [.] std::basic_streambuf<char, std::char_traits<char> >::xsputn(char const*, long)
+     0.15%  [k] __x86_indirect_thunk_rax
+     0.15%  [k] nvme_queue_rqs
+     0.15%  [k] md_end_clone_io
+     0.15%  [k] md_account_bio
+     0.15%  [k] submit_bio_noacct_nocheck
+     0.15%  [.] operator new(unsigned long)@plt
+     0.15%  [k] policy_nodemask
+     0.15%  [.] VocabularyOnDisk::operator[][abi:cxx11](unsigned long) const
+     0.15%  [.] 0x000000000018973e
+     0.15%  [.] 0x00000000001897ba
+     0.14%  [k] srso_untrain_ret
+     0.14%  [k] __rmqueue_pcplist
+     0.14%  [k] dequeue_entity
+     0.14%  [k] common_interrupt
+     0.14%  [.] 0x0000000000077345
+     0.14%  [.] ad_utility::File::read(void*, unsigned long, long) const [clone .isra.0]
+     0.14%  [.] 0x0000000000077352
+     0.14%  [k] folio_batch_move_lru
+     0.14%  [k] bio_split_io_at
+     0.14%  [k] filemap_alloc_folio_noprof
+     0.14%  [.] operator delete(void*, unsigned long)@plt
+     0.13%  [.] operator new(unsigned long)
+     0.13%  [.] 0x0000000000188f45
+     0.13%  [k] radix_tree_lookup
+     0.13%  [.] VocabularyInMemoryBinSearch::indexAtPosition(unsigned long) const
+     0.13%  [.] antlr4::CommonTokenStream::LT(long)
+     0.13%  [.] 0x0000000000077237
+     0.13%  [.] pthread_mutex_lock
+     0.13%  [.] std::basic_ios<char, std::char_traits<char> >::_M_cache_locale(std::locale const&)
+     0.13%  [.] __dynamic_cast
+     0.13%  [k] folio_alloc_noprof
+     0.13%  [.] antlr4::atn::LexerATNSimulator::getExistingTargetState(antlr4::dfa::DFAState*, unsigned long)
+     0.13%  [k] __iommu_unmap
+     0.13%  [k] do_user_addr_fault
+     0.13%  [.] CompressedVocabulary<VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ArenaVocabBatchBuilder&) const
+     0.12%  [.] std::locale::locale()
+     0.12%  [k] amdv1_unmap_range
+     0.12%  [.] parsedQuery::SparqlValues::valuesToString[abi:cxx11]() const
+     0.12%  [k] wbt_wait
+     0.12%  [k] __iommu_dma_unmap
+     0.12%  [k] md_submit_bio
+     0.12%  [k] __css_rstat_updated
+     0.12%  [k] blk_cgroup_bio_start
+     0.12%  [k] lock_vma_under_rcu
+     0.12%  [k] handle_irq_event
+     0.12%  [k] do_iter_readv_writev
+     0.12%  [k] filemap_update_page
+     0.12%  [k] iommu_dma_free_iova
+     0.12%  [k] bio_add_page
+     0.12%  [k] nvme_map_data
+     0.12%  [k] __blk_mq_alloc_requests
+     0.12%  [.] pthread_rwlock_unlock
+     0.12%  [k] blk_mq_dispatch_queue_requests
+     0.11%  [k] nvme_prep_rq.part.0
+     0.11%  [k] do_preadv
+     0.11%  [.] std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::overflow(int)
+     0.11%  [k] iommu_map
+     0.11%  [k] nvme_irq
+     0.11%  [k] nvme_submit_cmds.part.0
+     0.11%  [k] __map_single_page1.isra.0
+     0.11%  [k] nvme_pci_complete_batch
+     0.11%  [k] handle_pte_fault
+     0.11%  [k] iommu_dma_map_phys
+     0.11%  [k] ext4_map_blocks
+     0.11%  [k] raid0_make_request
+     0.10%  [k] exc_page_fault
+     0.10%  [k] folio_add_lru
+     0.10%  [k] workingset_update_node
+     0.10%  [.] absl::lts_20260107::container_internal::raw_hash_set<absl::lts_20260107::container_internal::FlatHashSetPolicy<TripleComponent>>::transfer_unprobed_elements_to_next_capacity_fn(absl::lts_20260107::container_internal::CommonFields&, absl::lts_20260107::container_internal::ctrl_t const*, void*, void*, void (*)(void*, unsigned char, unsigned long, unsigned long))
+     0.10%  [.] 0x0000000000188f3b
+     0.10%  [.] icu_74::RuleBasedCollator::compareUTF8(icu_74::StringPiece const&, icu_74::StringPiece const&, UErrorCode&) const
+     0.10%  [k] update_curr
+     0.10%  [k] free_unref_folios
+     0.10%  [.] qlever::constructExport::instantiateBatch(qlever::constructExport::PreprocessedConstructTemplate const&, qlever::constructExport::BatchEvaluationResult const&, unsigned long, std::optional<qlever::constructExport::DeduplicationParams>)
+     0.10%  [k] alloc_iova_fast
+     0.10%  [k] __do_sys_io_uring_enter
+     0.10%  [.] Vocabulary<PolymorphicVocabulary, TripleComponentComparatorImpl<LocaleManagerICU>, ad_utility::TypedIndex<unsigned long, vocabIndexTag> >::getPositionOfWord(std::basic_string_view<char, std::char_traits<char> >) const
+     0.10%  [.] antlr4::DefaultErrorStrategy::sync(antlr4::Parser*)
+     0.10%  [.] memset@plt
+     0.10%  [k] ext4_readahead
+     0.10%  [.] dlsym
+     0.10%  [.] _dl_catch_exception
+     0.10%  [.] std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
+     0.10%  [.] 0x0000000000077378
+     0.10%  [k] asm_common_interrupt
+     0.09%  [.] std::pair<absl::lts_20260107::container_internal::raw_hash_set<absl::lts_20260107::container_internal::FlatHashSetPolicy<TripleComponent>>::iterator, bool> absl::lts_20260107::container_internal::raw_hash_set<absl::lts_20260107::container_internal::FlatHashSetPolicy<TripleComponent>>::find_or_prepare_insert_large<TripleComponent>(TripleComponent const&)
+     0.09%  [k] ktime_get
+     0.09%  [k] alloc_anon_folio
+     0.09%  [k] blk_mq_complete_request_remote
+     0.09%  [.] _dl_find_dso_for_object
+     0.09%  [k] apic_ack_irq
+     0.09%  [k] kmem_cache_free
+     0.09%  [.] pread
+     0.09%  [k] copy_iovec_from_user
+     0.09%  [k] fget
+     0.09%  [k] __radix_tree_lookup
+     0.09%  [.] std::ios_base::_M_init()
+     0.09%  [k] fput
+     0.09%  [.] SparqlQleverVisitor::visit[abi:cxx11](SparqlAutomaticParser::PnameLnContext*)
+     0.09%  [.] std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+     0.09%  [.] ad_utility::readPageCacheHits(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>)
+     0.09%  [k] irq_chip_ack_parent
+     0.09%  [k] ktime_get_coarse_real_ts64_mg
+     0.09%  [k] _raw_spin_lock_irqsave
+     0.09%  [.] antlr4::Lexer::nextToken()
+     0.09%  [k] folio_mark_accessed
+     0.09%  [k] bio_split_to_limits
+     0.09%  [k] submit_bio
+     0.09%  [.] 0x0000000000189714
+     0.09%  [k] blk_stat_add
+     0.09%  [k] folios_put_refs
+     0.09%  [k] __refill_objects_node
+     0.08%  [k] do_map.isra.0
+     0.08%  [k] blk_account_io_start
+     0.08%  [k] entry_SYSRETQ_unsafe_stack
+     0.08%  [k] update_cfs_rq_load_avg
+     0.08%  [k] __memcg_slab_post_alloc_hook
+     0.08%  [k] mempool_free
+     0.08%  [k] free_iova_fast
+     0.08%  [k] blk_mq_start_request
+     0.08%  [k] _raw_spin_lock
+     0.08%  [k] bio_alloc_clone
+     0.08%  [.] std::locale::id::_M_id() const
+     0.08%  [.] operator delete(void*, unsigned long)
+     0.08%  [.] 0x00000000000650db
+     0.08%  [.] 0x00000000000772ee
+     0.08%  [k] blk_mq_flush_plug_list
+     0.08%  [k] mempool_alloc_slab
+     0.08%  [k] page_cache_prev_miss
+     0.08%  [.] icu_74::UnicodeSet::contains(int) const@plt
+     0.08%  [.] __cxxabiv1::__si_class_type_info::__do_dyncast(long, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+     0.08%  [k] __iova_to_phys2.isra.0
+     0.08%  [.] 0x00000000000772f0
+     0.08%  [.] pthread_mutex_unlock
+     0.08%  [k] __pte_offset_map
+     0.08%  [k] io_rw_alloc_async
+     0.08%  [k] bio_add_folio
+     0.08%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long)
+     0.07%  [k] __raw_spin_lock_irqsave
+     0.07%  [.] 0x00000000000772e1
+     0.07%  [k] zap_present_ptes.constprop.0
+     0.07%  [.] preadv64v2
+     0.07%  [.] 0x0000000000077432
+     0.07%  [k] xas_create
+     0.07%  [k] blk_mq_get_tag
+     0.07%  [k] __sched_balance_update_blocked_averages
+     0.07%  [k] iommu_map_nosync
+     0.07%  [.] adler32_z
+     0.07%  [k] make_range_ul
+     0.07%  [k] __io_submit_flush_completions
+     0.07%  [k] __io_read
+     0.07%  [k] mpage_end_io
+     0.07%  [k] _pt_iter_first.constprop.0
+     0.07%  [k] io_issue_sqe
+     0.07%  [.] LocalVocabContext::lookupWordInVocabularies(std::basic_string_view<char, std::char_traits<char> >) const
+     0.07%  [k] io_submit_sqes
+     0.07%  [k] io_read
+     0.07%  [k] vma_alloc_folio_noprof
+     0.07%  [.] RdfEscaping::validRDFLiteralFromNormalized[abi:cxx11](std::basic_string_view<char, std::char_traits<char> >)
+     0.07%  [.] boost::iostreams::detail::indirect_streambuf<boost::iostreams::back_insert_device<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::char_traits<char>, std::allocator<char>, boost::iostreams::output>::overflow(int)
+     0.07%  [.] antlr4::misc::IntervalSet::IntervalSet(antlr4::misc::IntervalSet const&)
+     0.07%  [k] bio_split_rw
+     0.07%  [.] void std::__introsort_loop<ad_utility::IteratorForAccessOperator<columnBasedIdTable::IdTable<ValueId, 1, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)1>, columnBasedIdTable::IdTable<ValueId, 1, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)1>::IteratorHelper<columnBasedIdTable::RowReferenceImpl::RowReferenceWithRestrictedAccess<columnBasedIdTable::IdTable<ValueId, 1, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)1>, (ad_utility::IsConst)1> >, (ad_utility::IsConst)1, columnBasedIdTable::Row<ValueId, 1>, columnBasedIdTable::RowReference<columnBasedIdTable::IdTable<ValueId, 1, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)1>, (ad_utility::IsConst)1> >, long, __gnu_cxx::__ops::_Iter_comp_iter<IdTableUtils::sort<1ul>(IdTable*, unsigned long)::{lambda(auto:1 const&, auto:2 const&)#1}> >(ad_utility::IteratorForAccessOperator<columnBasedIdTable::IdTable<ValueId, 1, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)1>, columnBasedIdTable::IdTable<ValueId, 1, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)1>::IteratorHelper<columnBasedIdTable::RowReferenceImpl::RowReferenceWithRestrictedAccess<columnBasedIdTable::IdTable<ValueId, 1, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)1>, (ad_utility::IsConst)1> >, (ad_utility::IsConst)1, columnBasedIdTable::Row<ValueId, 1>, columnBasedIdTable::RowReference<columnBasedIdTable::IdTable<ValueId, 1, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)1>, (ad_utility::IsConst)1> >, ad_utility::IteratorForAccessOperator<columnBasedIdTable::IdTable<ValueId, 1, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)1>, columnBasedIdTable::IdTable<ValueId, 1, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)1>::IteratorHelper<columnBasedIdTable::RowReferenceImpl::RowReferenceWithRestrictedAccess<columnBasedIdTable::IdTable<ValueId, 1, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)1>, (ad_utility::IsConst)1> >, (ad_utility::IsConst)1, columnBasedIdTable::Row<ValueId, 1>, columnBasedIdTable::RowReference<columnBasedIdTable::IdTable<ValueId, 1, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)1>, (ad_utility::IsConst)1> >, long, __gnu_cxx::__ops::_Iter_comp_iter<IdTableUtils::sort<1ul>(IdTable*, unsigned long)::{lambda(auto:1 const&, auto:2 const&)#1}>)
+     0.07%  [k] io_init_req
+     0.07%  [k] error_entry
+     0.07%  [k] lru_gen_del_folio.constprop.0
+     0.07%  [k] bio_free
+     0.07%  [k] kthread_blkcg
+     0.07%  [.] absl::lts_20260107::hash_internal::(anonymous namespace)::LowLevelHashLenGt64(unsigned long, void const*, unsigned long)
+     0.07%  [k] update_io_ticks
+     0.07%  [k] pte_offset_map_lock
+     0.07%  [k] kiocb_done
+     0.07%  [k] _raw_spin_unlock
+     0.07%  [k] __iommu_dma_map
+     0.07%  [.] std::locale::operator=(std::locale const&)
+     0.07%  [.] VocabularyInMemoryBinSearch::iteratorToWordAndIndex(ad_utility::IteratorForAccessOperator<CompactVectorOfStrings<char>, ad_utility::AccessViaBracketOperator, (ad_utility::IsConst)0, void, void>) const
+     0.07%  [.] 0x000000000007776b
+     0.07%  [k] __mod_zone_page_state
+     0.07%  [k] sched_balance_newidle
+     0.07%  [k] mas_walk
+     0.07%  [k] irqentry_exit
+     0.07%  [k] __folio_batch_add_and_move
+     0.07%  [.] 0x00000000000772da
+     0.06%  [k] bio_put
+     0.06%  [k] fpregs_assert_state_consistent
+     0.06%  [k] __check_block_validity.constprop.0
+     0.06%  [k] blk_mq_sched_bio_merge
+     0.06%  [.] 0x0000000000077356
+     0.06%  [.] toValueIdOrBounds(TripleComponent const&, IndexImpl const&)
+     0.06%  [.] SparqlAutomaticParser::iri()
+     0.06%  [k] _raw_spin_unlock_irqrestore
+     0.06%  [k] __import_iovec
+     0.06%  [k] wbt_done
+     0.06%  [k] begin_current_label_crit_section
+     0.06%  [.] 0x000000000007731c
+     0.06%  [.] absl::lts_20260107::container_internal::EraseMetaOnlyLarge(absl::lts_20260107::container_internal::CommonFields&, absl::lts_20260107::container_internal::ctrl_t const*, unsigned long)
+     0.06%  [.] 0x00000000000774b8
+     0.06%  [k] dma_unmap_phys
+     0.06%  [.] 0x0000000000077304
+     0.06%  [.] 0x00000000000775ca
+     0.06%  [k] __map_range_leaf
+     0.06%  [.] SparqlAutomaticParser::prefixedName()
+     0.06%  [k] mempool_alloc_noprof
+     0.06%  [k] __next_zones_zonelist
+     0.06%  [.] FsstRepeatedDecoder<2ul>::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+     0.06%  [.] 0x000000000000a62b
+     0.06%  [k] _raw_spin_lock_irq
+     0.06%  [.] 0x00000000000772d6
+     0.06%  [k] sbitmap_find_bit
+     0.06%  [.] 0x0000000000077226
+     0.06%  [k] __irq_exit_rcu
+     0.06%  [k] dma_map_phys
+     0.06%  [k] io_prep_read
+     0.06%  [.] VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.06%  [.] 0x0000000000077450
+     0.06%  [.] absl::lts_20260107::hash_internal::CombineLargeContiguousImplOn64BitLengthGt32(unsigned long, unsigned char const*, unsigned long)
+     0.06%  [.] SparqlAutomaticParser::dataBlockValue()
+     0.06%  [.] 0x00000000000775c7
+     0.06%  [k] io_prep_rw
+     0.06%  [k] nvme_setup_rw
+     0.06%  [.] 0x000000000000a5ad
+     0.06%  [k] __io_prep_rw
+     0.06%  [k] __update_load_avg_cfs_rq
+     0.06%  [.] 0x0000000000077338
+     0.06%  [k] fq_ring_free_locked
+     0.06%  [.] 0x00000000000774bb
+     0.05%  [.] 0x000000000000a640
+     0.05%  [k] _raw_spin_unlock_irq
+     0.05%  [.] 0x000000000007741e
+     0.05%  [.] 0x00000000000772c9
+     0.05%  [k] xas_nomem
+     0.05%  [.] 0x000000000007723a
+     0.05%  [.] WordAndIndex::index() const
+     0.05%  [k] sbitmap_get
+     0.05%  [k] nvme_setup_cmd
+     0.05%  [.] 0x0000000000077372
+     0.05%  [k] iommu_dma_alloc_iova
+     0.05%  [k] wbt_track
+     0.05%  [k] amd_iommu_iotlb_sync_map
+     0.05%  [k] wbt_issue
+     0.05%  [k] add_interrupt_randomness
+     0.05%  [.] std::locale::~locale()
+     0.05%  [k] make_vfsuid
+     0.05%  [k] kmem_cache_alloc_noprof
+     0.05%  [k] make_vfsgid
+     0.05%  [k] mempool_free_slab
+     0.05%  [k] sbitmap_queue_clear_batch
+     0.05%  [k] page_copy_sane
+     0.05%  [.] ad_utility::getUTF8Prefix(std::basic_string_view<char, std::char_traits<char> >, unsigned long)
+     0.05%  [k] update_load_avg
+     0.05%  [.] 0x00000000000771f4
+     0.05%  [.] ad_utility::IoUringPolicy::addBatch(int, std::span<unsigned long const, 18446744073709551615ul>, std::span<unsigned long const, 18446744073709551615ul>, std::span<char*, 18446744073709551615ul>, unsigned long)
+     0.05%  [k] pte_offset_map_rw_nolock
+     0.05%  [.] nlohmann::json_abi_v3_12_0::detail::serializer<nlohmann::json_abi_v3_12_0::basic_json<nlohmann::json_abi_v3_12_0::ordered_map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_12_0::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void> >::dump_escaped(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool)
