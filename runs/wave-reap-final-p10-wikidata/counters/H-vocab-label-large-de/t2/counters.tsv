@@ -1,0 +1,7 @@
+arm	scenario	runtime_params	pread	preadv2	preadv2_nowait	preadv2_eagain	io_uring_enter	liburing_submit	read_bytes	syscr	majflt	minflt	cpu_s	instructions_u	cycles	instructions	strace_syscalls	io_pattern	bytes	xxh3_128	elapsed_s_screening	note	error
+wave	warm	-	2633	8878901	8878901	0	0	0	0	8882374	0	124919	184.88	55361188954	540160910756	294070603726	-	pread64=0 preadv2=0 (nowait 0, EAGAIN 0) io_uring_enter=0 batch_med=0 batch_sum=0	504927346	667b4be896acd8fd34c3a99219789510	419.97 (strace'd)		
+base	warm	-	2633	8878901	8878901	0	0	0	3162112	8882326	2	116910	177.82	52608194963	510553118848	278549182510	-	pread64=0 preadv2=0 (nowait 0, EAGAIN 0) io_uring_enter=0 batch_med=0 batch_sum=0	504927346	667b4be896acd8fd34c3a99219789510	396.613 (strace'd)		
+wave	cold	-	2633	8878901	8878901	569300	0	9525	9458913280	8882174	5	112332	168.47	61305595948	480697606831	285236751959	-	pread64=0 preadv2=0 (nowait 0, EAGAIN 0) io_uring_enter=9543 batch_med=24 batch_sum=569829	504927346	667b4be896acd8fd34c3a99219789510	318.934 (strace'd)	evict-cmd rc=0: Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).	
+base	cold	-	2633	8878901	8878901	565882	0	154652	9466544128	8882322	7	119088	190.29	61511964223	557194010164	300843556059	-	pread64=0 preadv2=0 (nowait 0, EAGAIN 0) io_uring_enter=154666 batch_med=1 batch_sum=566401	504927346	667b4be896acd8fd34c3a99219789510	394.023 (strace'd)	evict-cmd rc=0: Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).	
