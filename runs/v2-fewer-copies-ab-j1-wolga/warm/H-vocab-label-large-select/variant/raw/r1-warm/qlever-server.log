@@ -1,0 +1,82 @@
+2026-10-07 22:30:01.869 - INFO: [1mQLever server CIKM-3083-g719615ab5, compiled on Wed Oct  7 15:35:29 UTC 2026 using git hash 719615a[22m
+2026-10-07 22:30:01.869 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-10-07 22:30:01.871 - INFO: The git hash used to build this index was "65f84b4"
+2026-10-07 22:30:01.871 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/qlever-indices/wikidata-3159/wikidata.vocabulary.words ...
+2026-10-07 22:30:23.439 - INFO: Done, number of words: 1,580,300,680
+2026-10-07 22:30:23.439 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-10-07 22:30:23.554 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 22:30:23.681 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 22:30:23.783 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 22:30:23.923 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 22:30:24.044 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 22:30:24.162 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 22:30:24.243 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 22:30:24.326 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 22:30:24.326 - INFO: Reading patterns from file /local/data-ssd/stoetzem/qlever-indices/wikidata-3159/wikidata.index.patterns ...
+2026-10-07 22:30:26.741 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-10-07 22:30:38.071 - INFO: Initializing server ...
+2026-10-07 22:30:38.071 - INFO: ExportEngineV2 serialize posts onto queryThreadPool_ (1 threads); no extra V2 pool. Helpers stop admitting when another query is registered.
+2026-10-07 22:30:38.071 - INFO: No access token required for restricted API calls
+2026-10-07 22:30:38.072 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-10-07 22:30:38.283 - INFO: 
+2026-10-07 22:30:38.283 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 22:30:38.291 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large (SELECT companion)
+# Same WHERE clause as H-vocab-label-large.rq, but SELECT ?entity ?label
+# instead of CONSTRUCT. Used by run 124 (export term-lookup perf profile)
+# to attribute SELECT export CPU between vocabulary lookup and formatting.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entity ?label
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-10-07 22:30:38.292 - INFO: Requested media types of the result are: "text/csv"
+2026-10-07 22:30:38.294 - INFO: Query planning done in 11 ms
+2026-10-07 22:30:38.294 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-07 22:30:38.294 - INFO: Using ExportEngineV2 for text/csv export
+2026-10-07 22:30:38.296 - INFO: Result has unknown size (not computed yet)
+2026-10-07 22:30:38.296 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-07 22:30:54.710 - INFO: Done processing query and sending result, total time was 16,426 ms
+2026-10-07 22:30:54.749 - INFO: 
+2026-10-07 22:30:54.749 - INFO: Request received via GET, no content type specified
+2026-10-07 22:30:54.750 - INFO: Processing command "cache-stats": get cache statistics
+2026-10-07 22:30:54.795 - INFO: 
+2026-10-07 22:30:54.795 - INFO: Request received via GET, no content type specified
+2026-10-07 22:30:54.795 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 22:30:54.834 - INFO: 
+2026-10-07 22:30:54.834 - INFO: Request received via GET, no content type specified
+2026-10-07 22:30:54.834 - INFO: Processing command "cache-stats": get cache statistics
+2026-10-07 22:30:54.878 - INFO: 
+2026-10-07 22:30:54.878 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 22:30:54.878 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large (SELECT companion)
+# Same WHERE clause as H-vocab-label-large.rq, but SELECT ?entity ?label
+# instead of CONSTRUCT. Used by run 124 (export term-lookup perf profile)
+# to attribute SELECT export CPU between vocabulary lookup and formatting.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entity ?label
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-10-07 22:30:54.878 - INFO: Requested media types of the result are: "text/csv"
+2026-10-07 22:30:54.879 - INFO: Query planning done in 1 ms
+2026-10-07 22:30:54.879 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-07 22:30:54.879 - INFO: Using ExportEngineV2 for text/csv export
+2026-10-07 22:30:54.879 - INFO: Result has unknown size (not computed yet)
+2026-10-07 22:30:54.879 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-07 22:31:10.962 - INFO: Done processing query and sending result, total time was 16,083 ms
+2026-10-07 22:31:10.994 - INFO: 
+2026-10-07 22:31:10.994 - INFO: Request received via GET, no content type specified
+2026-10-07 22:31:10.994 - INFO: Processing command "cache-stats": get cache statistics
