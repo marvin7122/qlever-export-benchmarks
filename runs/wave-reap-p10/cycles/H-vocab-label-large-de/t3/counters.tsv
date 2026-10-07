@@ -1,0 +1,13 @@
+arm	scenario	runtime_params	pread	preadv2	preadv2_nowait	preadv2_eagain	io_uring_enter	liburing_submit	read_bytes	syscr	majflt	minflt	cpu_s	instructions_u	cycles	instructions	strace_syscalls	io_pattern	bytes	xxh3_128	elapsed_s_screening	note	error
+base	warm	-	2633	8878901	8878901	0	0	0	3162112	8881570	2	21043	22.54	80471104682	89003090577	100867462751	-	-	504927346	667b4be896acd8fd34c3a99219789510	18.749		
+wave	warm	-	2633	8878901	8878901	0	0	0	3158016	8881570	2	21192	20.35	77798035418	80405074597	98129163630	-	-	504927346	667b4be896acd8fd34c3a99219789510	16.779		
+base-fpoff	warm	vocabulary-iouring-page-cache-fast-path=false	2633	0	0	0	0	6625868	0	2677	0	19533	27.63	77160293432	110197819782	104724267696	-	-	504927346	667b4be896acd8fd34c3a99219789510	23.809		
+wave-fpoff	warm	vocabulary-iouring-page-cache-fast-path=false	2633	0	0	0	0	35302	0	2669	0	18441	21.02	68872974127	83104793897	91767773871	-	-	504927346	667b4be896acd8fd34c3a99219789510	17.301		
+base	cold	-	2633	8878901	8878901	584584	0	167542	9446850560	8881586	5	30873	28.21	86604032440	113524676926	127493178843	-	-	504927346	667b4be896acd8fd34c3a99219789510	24.809	evict-cmd rc=0: Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).	
+wave	cold	-	2633	8878901	8878901	583269	0	9566	9446846464	8881598	5	35653	35.04	86421971496	142455807534	127266822466	-	-	504927346	667b4be896acd8fd34c3a99219789510	31.287	evict-cmd rc=0: Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).	
+base-fpoff	cold	vocabulary-iouring-page-cache-fast-path=false	2633	0	0	0	0	6625868	9433010176	2689	5	36749	32.03	82723390233	131599889555	131267048346	-	-	504927346	667b4be896acd8fd34c3a99219789510	28.511	evict-cmd rc=0: Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).	
+wave-fpoff	cold	vocabulary-iouring-page-cache-fast-path=false	2633	0	0	0	0	40928	9440272384	2681	5	26883	26.58	74480221224	106868492641	117724652105	-	-	504927346	667b4be896acd8fd34c3a99219789510	23.436	evict-cmd rc=0: Caches dropped successfully (synced, then wrote 1
+ to /proc/sys/vm/drop_caches).	
