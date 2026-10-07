@@ -1,0 +1,58 @@
+    43.29%  [.] ad_utility::vocabulary::VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+     9.06%  [.] fsst_decompress
+     8.81%  [.] ad_utility::vocabulary::VocabularyInMemoryBinSearch::wordAtPosition(unsigned long) const
+     5.54%  [.] ad_utility::vocabulary::makePmrVocabBatchLookupResult(std::span<std::basic_string_view<char, std::char_traits<char> > const, 18446744073709551615ul>)
+     4.92%  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     1.76%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > ql::engine::export_v2::(anonymous namespace)::escapeCell<(ql::engine::export_v2::RowFormat)0>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+     1.27%  [.] std::vector<std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> >, std::allocator<std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> > > > ql::exportIds::idsToStringAndType<true, false, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > (std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)>(Index const&, std::span<ValueId const, 18446744073709551615ul>, LocalVocab const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > ( const&)(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >))
+     1.09%  [.] 0x000000000007772d
+     0.90%  [.] ValueId::compareThreeWay(ValueId const&) const
+     0.90%  [.] ad_utility::vocabulary::CompressedVocabulary<ad_utility::vocabulary::VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ad_utility::vocabulary::ArenaVocabBatchBuilder&) const
+     0.74%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+     0.65%  [.] void ad_utility::detail::BlockZipperJoinImplCRTP<ad_utility::detail::BlockZipperJoinImpl<ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, std::less<void>, ad_utility::AddCombinedRowToIdTable, ad_utility::detail::AlwaysFalse>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, std::less<void>, ad_utility::AddCombinedRowToIdTable, ad_utility::detail::AlwaysFalse>::joinAndRemoveLessThanCurrentEl<false>(std::vector<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> >, std::allocator<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> > > >&, std::vector<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> >, std::allocator<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> > > >&, ValueId const&)
+     0.62%  [.] ql::engine::export_v2::ExportEngineV2::appendSerializedRows(columnBasedIdTable::IdTable<ValueId, 0, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)0> const&, LocalVocab const&, ql::engine::export_v2::RowFormat, qlever::export_v2::ScatterGatherChunkBuilder&, Index const&, std::span<std::optional<unsigned long> const, 18446744073709551615ul>, unsigned long, unsigned long, std::span<ql::engine::export_v2::ColumnLattice const, 18446744073709551615ul>)
+     0.60%  [.] FsstDecoder::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     0.54%  [.] std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> > ql::exportIds::literalOrIriToStringAndType<true, false, ad_utility::triple_component::LiteralOrIriView, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > (&)(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)>(ad_utility::triple_component::LiteralOrIriView const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > (&)(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >))
+     0.50%  [.] 0x0000000000188d22
+     0.50%  [.] FsstRepeatedDecoder<2ul>::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+     0.48%  [.] FsstDecoder::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>) const
+     0.45%  [.] operator new(unsigned long)
+     0.44%  [k] rep_movs_alternative
+     0.44%  [.] ad_utility::vocabulary::detail::DecoderMultiplexer<FsstRepeatedDecoder<2ul> >::decompressInto(std::basic_string_view<char, std::char_traits<char> >, unsigned long, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+     0.41%  [.] ad_utility::AddCombinedRowToIdTable::flush()
+     0.38%  [.] 0x0000000000077763
+     0.32%  [.] 0x00000000000771f4
+     0.30%  [.] 0x000000000007735a
+     0.29%  [.] 0x00000000000773e7
+     0.29%  [.] 0x0000000000188f40
+     0.29%  [.] 0x0000000000188f33
+     0.27%  [.] FsstRepeatedDecoder<2ul>::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     0.27%  [.] ad_utility::vocabulary::VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.26%  [.] 0x00000000000650d3
+     0.26%  [.] ad_utility::triple_component::BasicLiteral<false>::BasicLiteral(std::basic_string_view<char, std::char_traits<char> >, unsigned long)
+     0.25%  [.] void ad_utility::AddCombinedRowToIdTable::addRows<std::ranges::iota_view<unsigned long, unsigned long>, std::ranges::iota_view<unsigned long, unsigned long> >(std::ranges::iota_view<unsigned long, unsigned long> const&, std::ranges::iota_view<unsigned long, unsigned long> const&) [clone .isra.0]
+     0.23%  [.] operator delete(void*, unsigned long)
+     0.23%  [.] 0x0000000000188f4a
+     0.22%  [.] unsigned int ql::engine::export_v2::detail::scanChunkAvx2<(ql::engine::export_v2::EscapeFormat)0>(char const*)
+     0.22%  [k] kernel_init_pages
+     0.22%  [.] ValueId::compareThreeWay(ValueId const&) const [clone .constprop.1]
+     0.22%  [.] 0x0000000000188f29
+     0.22%  [.] 0x0000000000188d05
+     0.19%  [.] 0x00000000000774bb
+     0.19%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, unsigned long, std::allocator<char> const&) [clone .isra.0]
+     0.17%  [.] 0x00000000000775de
+     0.17%  [.] 0x00000000000774d7
+     0.17%  [.] 0x0000000000077356
+     0.16%  [.] ad_utility::triple_component::BasicLiteralOrIri<false>::getLiteral() const
+     0.16%  [.] 0x0000000000077211
+     0.16%  [.] 0x0000000000077310
+     0.13%  [.] 0x00000000000772bd
+     0.13%  [.] 0x00000000000773ea
+     0.12%  [.] 0x000000000007721a
+     0.12%  [.] 0x0000000000077226
+     0.12%  [.] 0x000000000007722e
+     0.11%  [.] 0x00000000000774e3
+     0.11%  [.] 0x00000000000771ef
+     0.11%  [.] pthread_mutex_trylock
+     0.11%  [.] 0x00000000000775db
+     0.10%  [.] ql::exportIds::partitionIdPositions(std::span<ValueId const, 18446744073709551615ul>)

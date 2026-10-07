@@ -1,0 +1,79 @@
+2026-10-07 22:48:49.072 - INFO: [1mQLever server CIKM-3084-g022c22472, compiled on Wed Oct  7 18:21:17 UTC 2026 using git hash 022c224[22m
+2026-10-07 22:48:49.072 - INFO: Runtime parameter set from the command line: vocabulary-internal-rank-lookup=false
+2026-10-07 22:48:49.072 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-10-07 22:48:49.073 - INFO: The git hash used to build this index was "65f84b4"
+2026-10-07 22:48:49.073 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-10-07 22:49:04.951 - INFO: Done, number of words: 1,580,300,680
+2026-10-07 22:49:04.951 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-10-07 22:49:05.049 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 22:49:05.171 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 22:49:05.259 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 22:49:05.379 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 22:49:05.481 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 22:49:05.581 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 22:49:05.651 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 22:49:05.720 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 22:49:05.720 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-10-07 22:49:07.391 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-10-07 22:49:17.495 - INFO: Initializing server ...
+2026-10-07 22:49:17.496 - INFO: ExportEngineV2 serialize posts onto queryThreadPool_ (8 threads); no extra V2 pool. Helpers stop admitting when another query is registered.
+2026-10-07 22:49:17.496 - INFO: No access token required for restricted API calls
+2026-10-07 22:49:17.496 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-10-07 22:49:17.670 - INFO: 
+2026-10-07 22:49:17.670 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 22:49:17.675 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels of all humans, SELECT CSV (combo v2 + rank
+# lookup run, 2026-10-07). Same prefixes and WHERE clause as
+# incoming/pr162-queries/H-vocab-label-large-de.rq, but SELECT instead of
+# CONSTRUCT. German literals are external (on disk): every label lookup goes
+# through the on-disk vocabulary, so this query measures SSD reads.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?person ?name WHERE {
+  ?person wdt:P31 wd:Q5 .
+  ?person rdfs:label ?name .
+  FILTER(LANG(?name) = "de")
+}
+
+2026-10-07 22:49:17.675 - INFO: Requested media types of the result are: "text/csv"
+2026-10-07 22:49:17.676 - INFO: Query planning done in 6 ms
+2026-10-07 22:49:17.677 - INFO: ExportEngine: LegacyV1 [Reason: Legacy V1 selected (explicitly requested via query parameter or header override)]
+2026-10-07 22:49:17.677 - INFO: Result has unknown size (not computed yet)
+2026-10-07 22:50:57.617 - INFO: Done processing query and sending result, total time was 99,946 ms
+2026-10-07 22:50:57.640 - INFO: 
+2026-10-07 22:50:57.640 - INFO: Request received via GET, no content type specified
+2026-10-07 22:50:57.640 - INFO: Processing command "cache-stats": get cache statistics
+2026-10-07 22:50:57.664 - INFO: 
+2026-10-07 22:50:57.664 - INFO: Request received via GET, no content type specified
+2026-10-07 22:50:57.664 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 22:50:57.689 - INFO: 
+2026-10-07 22:50:57.689 - INFO: Request received via GET, no content type specified
+2026-10-07 22:50:57.689 - INFO: Processing command "cache-stats": get cache statistics
+2026-10-07 22:50:57.716 - INFO: 
+2026-10-07 22:50:57.716 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 22:50:57.716 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels of all humans, SELECT CSV (combo v2 + rank
+# lookup run, 2026-10-07). Same prefixes and WHERE clause as
+# incoming/pr162-queries/H-vocab-label-large-de.rq, but SELECT instead of
+# CONSTRUCT. German literals are external (on disk): every label lookup goes
+# through the on-disk vocabulary, so this query measures SSD reads.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?person ?name WHERE {
+  ?person wdt:P31 wd:Q5 .
+  ?person rdfs:label ?name .
+  FILTER(LANG(?name) = "de")
+}
+
+2026-10-07 22:50:57.716 - INFO: Requested media types of the result are: "text/csv"
+2026-10-07 22:50:57.717 - INFO: Query planning done in 0 ms
+2026-10-07 22:50:57.717 - INFO: ExportEngine: LegacyV1 [Reason: Legacy V1 selected (explicitly requested via query parameter or header override)]
+2026-10-07 22:50:57.717 - INFO: Result has unknown size (not computed yet)
+2026-10-07 22:51:21.724 - INFO: Done processing query and sending result, total time was 24,008 ms
+2026-10-07 22:51:21.747 - INFO: 
+2026-10-07 22:51:21.747 - INFO: Request received via GET, no content type specified
+2026-10-07 22:51:21.747 - INFO: Processing command "cache-stats": get cache statistics

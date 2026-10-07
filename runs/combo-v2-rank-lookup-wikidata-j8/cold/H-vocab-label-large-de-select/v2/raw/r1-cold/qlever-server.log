@@ -1,0 +1,49 @@
+2026-10-07 22:24:07.275 - INFO: [1mQLever server CIKM-3084-g022c22472, compiled on Wed Oct  7 18:21:17 UTC 2026 using git hash 022c224[22m
+2026-10-07 22:24:07.275 - INFO: Runtime parameter set from the command line: vocabulary-internal-rank-lookup=false
+2026-10-07 22:24:07.275 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-10-07 22:24:07.277 - INFO: The git hash used to build this index was "65f84b4"
+2026-10-07 22:24:07.277 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-10-07 22:24:21.716 - INFO: Done, number of words: 1,580,300,680
+2026-10-07 22:24:21.716 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-10-07 22:24:21.805 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 22:24:21.911 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 22:24:21.994 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 22:24:22.099 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 22:24:22.188 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 22:24:22.277 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 22:24:22.336 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 22:24:22.402 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 22:24:22.402 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-10-07 22:24:23.918 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-10-07 22:24:32.843 - INFO: Initializing server ...
+2026-10-07 22:24:32.843 - INFO: ExportEngineV2 serialize posts onto queryThreadPool_ (8 threads); no extra V2 pool. Helpers stop admitting when another query is registered.
+2026-10-07 22:24:32.844 - INFO: No access token required for restricted API calls
+2026-10-07 22:24:32.844 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-10-07 22:24:33.111 - INFO: 
+2026-10-07 22:24:33.111 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 22:24:33.114 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels of all humans, SELECT CSV (combo v2 + rank
+# lookup run, 2026-10-07). Same prefixes and WHERE clause as
+# incoming/pr162-queries/H-vocab-label-large-de.rq, but SELECT instead of
+# CONSTRUCT. German literals are external (on disk): every label lookup goes
+# through the on-disk vocabulary, so this query measures SSD reads.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?person ?name WHERE {
+  ?person wdt:P31 wd:Q5 .
+  ?person rdfs:label ?name .
+  FILTER(LANG(?name) = "de")
+}
+
+2026-10-07 22:24:33.114 - INFO: Requested media types of the result are: "text/csv"
+2026-10-07 22:24:33.115 - INFO: Query planning done in 3 ms
+2026-10-07 22:24:33.115 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-07 22:24:33.115 - INFO: Using ExportEngineV2 for text/csv export
+2026-10-07 22:24:33.115 - INFO: Result has unknown size (not computed yet)
+2026-10-07 22:24:33.115 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-07 22:24:38.294 - INFO: Done processing query and sending result, total time was 5,182 ms
+2026-10-07 22:24:38.316 - INFO: 
+2026-10-07 22:24:38.316 - INFO: Request received via GET, no content type specified
+2026-10-07 22:24:38.316 - INFO: Processing command "cache-stats": get cache statistics

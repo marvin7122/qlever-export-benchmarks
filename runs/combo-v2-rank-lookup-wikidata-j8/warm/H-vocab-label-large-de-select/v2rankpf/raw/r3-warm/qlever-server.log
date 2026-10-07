@@ -1,0 +1,199 @@
+2026-10-07 22:51:31.198 - INFO: [1mQLever server CIKM-3084-g022c22472, compiled on Wed Oct  7 18:21:17 UTC 2026 using git hash 022c224[22m
+2026-10-07 22:51:31.198 - INFO: Runtime parameter set from the command line: vocabulary-internal-rank-lookup=true
+2026-10-07 22:51:31.198 - INFO: Runtime parameter set from the command line: vocabulary-internal-rank-prefetch-distance=16
+2026-10-07 22:51:31.198 - INFO: Runtime parameter set from the command line: vocabulary-internal-rank-hugepages=true
+2026-10-07 22:51:31.198 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-10-07 22:51:31.199 - INFO: The git hash used to build this index was "65f84b4"
+2026-10-07 22:51:31.199 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-10-07 22:51:46.243 - INFO: Done, number of words: 1,580,300,680
+2026-10-07 22:51:46.243 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-10-07 22:51:48.010 - INFO: Rank directory of the internal vocabulary: 225,757,248 bytes for 1,580,300,680 vocabulary indices
+2026-10-07 22:51:48.409 - INFO: Huge pages for the rank directory requested (transparent huge pages: madvise): 226492416 of 226,492,416 allocated bytes on huge pages
+2026-10-07 22:51:48.493 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 22:51:48.598 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 22:51:48.688 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 22:51:48.804 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 22:51:48.902 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 22:51:49.001 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 22:51:49.067 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 22:51:49.128 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 22:51:49.128 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-10-07 22:51:50.786 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-10-07 22:52:00.755 - INFO: Initializing server ...
+2026-10-07 22:52:00.755 - INFO: ExportEngineV2 serialize posts onto queryThreadPool_ (8 threads); no extra V2 pool. Helpers stop admitting when another query is registered.
+2026-10-07 22:52:00.755 - INFO: No access token required for restricted API calls
+2026-10-07 22:52:00.755 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-10-07 22:52:01.029 - INFO: 
+2026-10-07 22:52:01.029 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 22:52:01.032 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels of all humans, SELECT CSV (combo v2 + rank
+# lookup run, 2026-10-07). Same prefixes and WHERE clause as
+# incoming/pr162-queries/H-vocab-label-large-de.rq, but SELECT instead of
+# CONSTRUCT. German literals are external (on disk): every label lookup goes
+# through the on-disk vocabulary, so this query measures SSD reads.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?person ?name WHERE {
+  ?person wdt:P31 wd:Q5 .
+  ?person rdfs:label ?name .
+  FILTER(LANG(?name) = "de")
+}
+
+2026-10-07 22:52:01.032 - INFO: Requested media types of the result are: "text/csv"
+2026-10-07 22:52:01.034 - INFO: Query planning done in 4 ms
+2026-10-07 22:52:01.034 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-07 22:52:01.034 - INFO: Using ExportEngineV2 for text/csv export
+2026-10-07 22:52:01.034 - INFO: Result has unknown size (not computed yet)
+2026-10-07 22:52:01.034 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-07 22:52:06.894 - INFO: Done processing query and sending result, total time was 5,865 ms
+2026-10-07 22:52:06.917 - INFO: 
+2026-10-07 22:52:06.917 - INFO: Request received via GET, no content type specified
+2026-10-07 22:52:06.917 - INFO: Processing command "cache-stats": get cache statistics
+2026-10-07 22:52:06.937 - INFO: 
+2026-10-07 22:52:06.937 - INFO: Request received via GET, no content type specified
+2026-10-07 22:52:06.937 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 22:52:06.959 - INFO: 
+2026-10-07 22:52:06.959 - INFO: Request received via GET, no content type specified
+2026-10-07 22:52:06.959 - INFO: Processing command "cache-stats": get cache statistics
+2026-10-07 22:52:06.979 - INFO: 
+2026-10-07 22:52:06.979 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 22:52:06.979 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels of all humans, SELECT CSV (combo v2 + rank
+# lookup run, 2026-10-07). Same prefixes and WHERE clause as
+# incoming/pr162-queries/H-vocab-label-large-de.rq, but SELECT instead of
+# CONSTRUCT. German literals are external (on disk): every label lookup goes
+# through the on-disk vocabulary, so this query measures SSD reads.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?person ?name WHERE {
+  ?person wdt:P31 wd:Q5 .
+  ?person rdfs:label ?name .
+  FILTER(LANG(?name) = "de")
+}
+
+2026-10-07 22:52:06.979 - INFO: Requested media types of the result are: "text/csv"
+2026-10-07 22:52:06.980 - INFO: Query planning done in 0 ms
+2026-10-07 22:52:06.980 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-07 22:52:06.980 - INFO: Using ExportEngineV2 for text/csv export
+2026-10-07 22:52:06.980 - INFO: Result has unknown size (not computed yet)
+2026-10-07 22:52:06.980 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-07 22:52:09.306 - INFO: Done processing query and sending result, total time was 2,326 ms
+2026-10-07 22:52:09.326 - INFO: 
+2026-10-07 22:52:09.326 - INFO: Request received via GET, no content type specified
+2026-10-07 22:52:09.326 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 22:52:09.358 - INFO: 
+2026-10-07 22:52:09.358 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 22:52:09.359 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels of all humans, SELECT CSV (combo v2 + rank
+# lookup run, 2026-10-07). Same prefixes and WHERE clause as
+# incoming/pr162-queries/H-vocab-label-large-de.rq, but SELECT instead of
+# CONSTRUCT. German literals are external (on disk): every label lookup goes
+# through the on-disk vocabulary, so this query measures SSD reads.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?person ?name WHERE {
+  ?person wdt:P31 wd:Q5 .
+  ?person rdfs:label ?name .
+  FILTER(LANG(?name) = "de")
+}
+
+2026-10-07 22:52:09.359 - INFO: Requested media types of the result are: "text/csv"
+2026-10-07 22:52:09.359 - INFO: Query planning done in 0 ms
+2026-10-07 22:52:09.359 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-07 22:52:09.359 - INFO: Using ExportEngineV2 for text/csv export
+2026-10-07 22:52:09.359 - INFO: Result has unknown size (not computed yet)
+2026-10-07 22:52:09.359 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-07 22:52:11.666 - INFO: Done processing query and sending result, total time was 2,307 ms
+2026-10-07 22:52:11.682 - INFO: 
+2026-10-07 22:52:11.682 - INFO: Request received via GET, no content type specified
+2026-10-07 22:52:11.682 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 22:52:11.703 - INFO: 
+2026-10-07 22:52:11.703 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 22:52:11.704 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels of all humans, SELECT CSV (combo v2 + rank
+# lookup run, 2026-10-07). Same prefixes and WHERE clause as
+# incoming/pr162-queries/H-vocab-label-large-de.rq, but SELECT instead of
+# CONSTRUCT. German literals are external (on disk): every label lookup goes
+# through the on-disk vocabulary, so this query measures SSD reads.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?person ?name WHERE {
+  ?person wdt:P31 wd:Q5 .
+  ?person rdfs:label ?name .
+  FILTER(LANG(?name) = "de")
+}
+
+2026-10-07 22:52:11.704 - INFO: Requested media types of the result are: "text/csv"
+2026-10-07 22:52:11.704 - INFO: Query planning done in 0 ms
+2026-10-07 22:52:11.704 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-07 22:52:11.704 - INFO: Using ExportEngineV2 for text/csv export
+2026-10-07 22:52:11.704 - INFO: Result has unknown size (not computed yet)
+2026-10-07 22:52:11.704 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-07 22:52:14.039 - INFO: Done processing query and sending result, total time was 2,335 ms
+2026-10-07 22:52:14.061 - INFO: 
+2026-10-07 22:52:14.061 - INFO: Request received via GET, no content type specified
+2026-10-07 22:52:14.061 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 22:52:14.085 - INFO: 
+2026-10-07 22:52:14.085 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 22:52:14.085 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels of all humans, SELECT CSV (combo v2 + rank
+# lookup run, 2026-10-07). Same prefixes and WHERE clause as
+# incoming/pr162-queries/H-vocab-label-large-de.rq, but SELECT instead of
+# CONSTRUCT. German literals are external (on disk): every label lookup goes
+# through the on-disk vocabulary, so this query measures SSD reads.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?person ?name WHERE {
+  ?person wdt:P31 wd:Q5 .
+  ?person rdfs:label ?name .
+  FILTER(LANG(?name) = "de")
+}
+
+2026-10-07 22:52:14.085 - INFO: Requested media types of the result are: "text/csv"
+2026-10-07 22:52:14.086 - INFO: Query planning done in 0 ms
+2026-10-07 22:52:14.086 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-07 22:52:14.086 - INFO: Using ExportEngineV2 for text/csv export
+2026-10-07 22:52:14.086 - INFO: Result has unknown size (not computed yet)
+2026-10-07 22:52:14.086 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-07 22:52:16.425 - INFO: Done processing query and sending result, total time was 2,340 ms
+2026-10-07 22:52:16.447 - INFO: 
+2026-10-07 22:52:16.447 - INFO: Request received via GET, no content type specified
+2026-10-07 22:52:16.447 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 22:52:16.467 - INFO: 
+2026-10-07 22:52:16.467 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 22:52:16.468 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels of all humans, SELECT CSV (combo v2 + rank
+# lookup run, 2026-10-07). Same prefixes and WHERE clause as
+# incoming/pr162-queries/H-vocab-label-large-de.rq, but SELECT instead of
+# CONSTRUCT. German literals are external (on disk): every label lookup goes
+# through the on-disk vocabulary, so this query measures SSD reads.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?person ?name WHERE {
+  ?person wdt:P31 wd:Q5 .
+  ?person rdfs:label ?name .
+  FILTER(LANG(?name) = "de")
+}
+
+2026-10-07 22:52:16.468 - INFO: Requested media types of the result are: "text/csv"
+2026-10-07 22:52:16.469 - INFO: Query planning done in 1 ms
+2026-10-07 22:52:16.469 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-07 22:52:16.469 - INFO: Using ExportEngineV2 for text/csv export
+2026-10-07 22:52:16.469 - INFO: Result has unknown size (not computed yet)
+2026-10-07 22:52:16.469 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-07 22:52:18.709 - INFO: Done processing query and sending result, total time was 2,241 ms
+2026-10-07 22:52:18.732 - INFO: 
+2026-10-07 22:52:18.732 - INFO: Request received via GET, no content type specified
+2026-10-07 22:52:18.732 - INFO: Processing command "cache-stats": get cache statistics

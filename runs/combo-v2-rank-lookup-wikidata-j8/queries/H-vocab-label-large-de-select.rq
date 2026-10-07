@@ -1,0 +1,14 @@
+# Tier H-vocab — German labels of all humans, SELECT CSV (combo v2 + rank
+# lookup run, 2026-10-07). Same prefixes and WHERE clause as
+# incoming/pr162-queries/H-vocab-label-large-de.rq, but SELECT instead of
+# CONSTRUCT. German literals are external (on disk): every label lookup goes
+# through the on-disk vocabulary, so this query measures SSD reads.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?person ?name WHERE {
+  ?person wdt:P31 wd:Q5 .
+  ?person rdfs:label ?name .
+  FILTER(LANG(?name) = "de")
+}

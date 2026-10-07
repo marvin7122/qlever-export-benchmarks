@@ -1,0 +1,199 @@
+2026-10-07 22:55:12.243 - INFO: [1mQLever server CIKM-3084-g022c22472, compiled on Wed Oct  7 18:21:17 UTC 2026 using git hash 022c224[22m
+2026-10-07 22:55:12.243 - INFO: Runtime parameter set from the command line: vocabulary-internal-rank-lookup=true
+2026-10-07 22:55:12.243 - INFO: Runtime parameter set from the command line: vocabulary-internal-rank-prefetch-distance=16
+2026-10-07 22:55:12.243 - INFO: Runtime parameter set from the command line: vocabulary-internal-rank-hugepages=true
+2026-10-07 22:55:12.243 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-10-07 22:55:12.244 - INFO: The git hash used to build this index was "65f84b4"
+2026-10-07 22:55:12.244 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-10-07 22:55:26.682 - INFO: Done, number of words: 1,580,300,680
+2026-10-07 22:55:26.682 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-10-07 22:55:28.280 - INFO: Rank directory of the internal vocabulary: 225,757,248 bytes for 1,580,300,680 vocabulary indices
+2026-10-07 22:55:28.668 - INFO: Huge pages for the rank directory requested (transparent huge pages: madvise): 226492416 of 226,492,416 allocated bytes on huge pages
+2026-10-07 22:55:28.758 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 22:55:28.868 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 22:55:28.946 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 22:55:29.055 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 22:55:29.151 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 22:55:29.242 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 22:55:29.301 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 22:55:29.366 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 22:55:29.366 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-10-07 22:55:30.920 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-10-07 22:55:39.940 - INFO: Initializing server ...
+2026-10-07 22:55:39.941 - INFO: ExportEngineV2 serialize posts onto queryThreadPool_ (8 threads); no extra V2 pool. Helpers stop admitting when another query is registered.
+2026-10-07 22:55:39.941 - INFO: No access token required for restricted API calls
+2026-10-07 22:55:39.941 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-10-07 22:55:40.070 - INFO: 
+2026-10-07 22:55:40.070 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 22:55:40.073 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large (SELECT companion)
+# Same WHERE clause as H-vocab-label-large.rq, but SELECT ?entity ?label
+# instead of CONSTRUCT. Used by run 124 (export term-lookup perf profile)
+# to attribute SELECT export CPU between vocabulary lookup and formatting.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entity ?label
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-10-07 22:55:40.073 - INFO: Requested media types of the result are: "text/csv"
+2026-10-07 22:55:40.074 - INFO: Query planning done in 3 ms
+2026-10-07 22:55:40.074 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-07 22:55:40.074 - INFO: Using ExportEngineV2 for text/csv export
+2026-10-07 22:55:40.075 - INFO: Result has unknown size (not computed yet)
+2026-10-07 22:55:40.075 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-07 22:55:42.179 - INFO: Done processing query and sending result, total time was 2,108 ms
+2026-10-07 22:55:42.199 - INFO: 
+2026-10-07 22:55:42.199 - INFO: Request received via GET, no content type specified
+2026-10-07 22:55:42.199 - INFO: Processing command "cache-stats": get cache statistics
+2026-10-07 22:55:42.217 - INFO: 
+2026-10-07 22:55:42.217 - INFO: Request received via GET, no content type specified
+2026-10-07 22:55:42.217 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 22:55:42.236 - INFO: 
+2026-10-07 22:55:42.236 - INFO: Request received via GET, no content type specified
+2026-10-07 22:55:42.236 - INFO: Processing command "cache-stats": get cache statistics
+2026-10-07 22:55:43.261 - INFO: 
+2026-10-07 22:55:43.261 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 22:55:43.262 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large (SELECT companion)
+# Same WHERE clause as H-vocab-label-large.rq, but SELECT ?entity ?label
+# instead of CONSTRUCT. Used by run 124 (export term-lookup perf profile)
+# to attribute SELECT export CPU between vocabulary lookup and formatting.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entity ?label
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-10-07 22:55:43.262 - INFO: Requested media types of the result are: "text/csv"
+2026-10-07 22:55:43.262 - INFO: Query planning done in 0 ms
+2026-10-07 22:55:43.262 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-07 22:55:43.262 - INFO: Using ExportEngineV2 for text/csv export
+2026-10-07 22:55:43.263 - INFO: Result has unknown size (not computed yet)
+2026-10-07 22:55:43.263 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-07 22:55:45.215 - INFO: Done processing query and sending result, total time was 1,954 ms
+2026-10-07 22:55:45.237 - INFO: 
+2026-10-07 22:55:45.237 - INFO: Request received via GET, no content type specified
+2026-10-07 22:55:45.237 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 22:55:45.259 - INFO: 
+2026-10-07 22:55:45.259 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 22:55:45.259 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large (SELECT companion)
+# Same WHERE clause as H-vocab-label-large.rq, but SELECT ?entity ?label
+# instead of CONSTRUCT. Used by run 124 (export term-lookup perf profile)
+# to attribute SELECT export CPU between vocabulary lookup and formatting.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entity ?label
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-10-07 22:55:45.259 - INFO: Requested media types of the result are: "text/csv"
+2026-10-07 22:55:45.260 - INFO: Query planning done in 0 ms
+2026-10-07 22:55:45.260 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-07 22:55:45.260 - INFO: Using ExportEngineV2 for text/csv export
+2026-10-07 22:55:45.260 - INFO: Result has unknown size (not computed yet)
+2026-10-07 22:55:45.260 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-07 22:55:47.267 - INFO: Done processing query and sending result, total time was 2,008 ms
+2026-10-07 22:55:47.287 - INFO: 
+2026-10-07 22:55:47.287 - INFO: Request received via GET, no content type specified
+2026-10-07 22:55:47.287 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 22:55:47.309 - INFO: 
+2026-10-07 22:55:47.309 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 22:55:47.310 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large (SELECT companion)
+# Same WHERE clause as H-vocab-label-large.rq, but SELECT ?entity ?label
+# instead of CONSTRUCT. Used by run 124 (export term-lookup perf profile)
+# to attribute SELECT export CPU between vocabulary lookup and formatting.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entity ?label
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-10-07 22:55:47.310 - INFO: Requested media types of the result are: "text/csv"
+2026-10-07 22:55:47.310 - INFO: Query planning done in 0 ms
+2026-10-07 22:55:47.310 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-07 22:55:47.310 - INFO: Using ExportEngineV2 for text/csv export
+2026-10-07 22:55:47.311 - INFO: Result has unknown size (not computed yet)
+2026-10-07 22:55:47.311 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-07 22:55:49.423 - INFO: Done processing query and sending result, total time was 2,113 ms
+2026-10-07 22:55:49.445 - INFO: 
+2026-10-07 22:55:49.445 - INFO: Request received via GET, no content type specified
+2026-10-07 22:55:49.445 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 22:55:49.467 - INFO: 
+2026-10-07 22:55:49.467 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 22:55:49.468 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large (SELECT companion)
+# Same WHERE clause as H-vocab-label-large.rq, but SELECT ?entity ?label
+# instead of CONSTRUCT. Used by run 124 (export term-lookup perf profile)
+# to attribute SELECT export CPU between vocabulary lookup and formatting.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entity ?label
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-10-07 22:55:49.468 - INFO: Requested media types of the result are: "text/csv"
+2026-10-07 22:55:49.468 - INFO: Query planning done in 0 ms
+2026-10-07 22:55:49.468 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-07 22:55:49.468 - INFO: Using ExportEngineV2 for text/csv export
+2026-10-07 22:55:49.468 - INFO: Result has unknown size (not computed yet)
+2026-10-07 22:55:49.468 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-07 22:55:51.437 - INFO: Done processing query and sending result, total time was 1,969 ms
+2026-10-07 22:55:51.457 - INFO: 
+2026-10-07 22:55:51.457 - INFO: Request received via GET, no content type specified
+2026-10-07 22:55:51.457 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 22:55:51.476 - INFO: 
+2026-10-07 22:55:51.476 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 22:55:51.476 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — English labels, large (SELECT companion)
+# Same WHERE clause as H-vocab-label-large.rq, but SELECT ?entity ?label
+# instead of CONSTRUCT. Used by run 124 (export term-lookup perf profile)
+# to attribute SELECT export CPU between vocabulary lookup and formatting.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entity ?label
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+
+2026-10-07 22:55:51.476 - INFO: Requested media types of the result are: "text/csv"
+2026-10-07 22:55:51.477 - INFO: Query planning done in 0 ms
+2026-10-07 22:55:51.477 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-07 22:55:51.477 - INFO: Using ExportEngineV2 for text/csv export
+2026-10-07 22:55:51.477 - INFO: Result has unknown size (not computed yet)
+2026-10-07 22:55:51.477 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-07 22:55:53.485 - INFO: Done processing query and sending result, total time was 2,008 ms
+2026-10-07 22:55:54.726 - INFO: 
+2026-10-07 22:55:54.726 - INFO: Request received via GET, no content type specified
+2026-10-07 22:55:54.726 - INFO: Processing command "cache-stats": get cache statistics

@@ -1,0 +1,93 @@
+    10.69%  [.] fsst_decompress
+     9.94%  [.] ad_utility::vocabulary::VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     8.58%  [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     8.27%  [.] ad_utility::vocabulary::VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+     3.38%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > ql::engine::export_v2::(anonymous namespace)::escapeCell<(ql::engine::export_v2::RowFormat)0>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+     2.91%  [.] 0x000000000007772d
+     2.53%  [.] std::vector<std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> >, std::allocator<std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> > > > ql::exportIds::idsToStringAndType<true, false, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > (std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)>(Index const&, std::span<ValueId const, 18446744073709551615ul>, LocalVocab const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > ( const&)(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >))
+     2.32%  [.] ad_utility::vocabulary::makePmrVocabBatchLookupResult(std::span<std::basic_string_view<char, std::char_traits<char> > const, 18446744073709551615ul>)
+     1.97%  [.] ad_utility::vocabulary::CompressedVocabulary<ad_utility::vocabulary::VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ad_utility::vocabulary::ArenaVocabBatchBuilder&) const
+     1.81%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+     1.80%  [.] ValueId::compareThreeWay(ValueId const&) const
+     1.79%  [.] ad_utility::vocabulary::VocabularyInMemoryBinSearch::wordAtPosition(unsigned long) const
+     1.46%  [.] void ad_utility::detail::BlockZipperJoinImplCRTP<ad_utility::detail::BlockZipperJoinImpl<ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, std::less<void>, ad_utility::AddCombinedRowToIdTable, ad_utility::detail::AlwaysFalse>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, std::less<void>, ad_utility::AddCombinedRowToIdTable, ad_utility::detail::AlwaysFalse>::joinAndRemoveLessThanCurrentEl<false>(std::vector<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> >, std::allocator<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> > > >&, std::vector<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> >, std::allocator<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> > > >&, ValueId const&)
+     1.29%  [.] FsstDecoder::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>) const
+     1.21%  [.] FsstDecoder::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     1.17%  [.] FsstRepeatedDecoder<2ul>::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+     1.13%  [.] 0x0000000000188d22
+     1.09%  [.] ql::engine::export_v2::ExportEngineV2::appendSerializedRows(columnBasedIdTable::IdTable<ValueId, 0, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)0> const&, LocalVocab const&, ql::engine::export_v2::RowFormat, qlever::export_v2::ScatterGatherChunkBuilder&, Index const&, std::span<std::optional<unsigned long> const, 18446744073709551615ul>, unsigned long, unsigned long, std::span<ql::engine::export_v2::ColumnLattice const, 18446744073709551615ul>)
+     1.03%  [.] __popcountdi2
+     1.00%  [.] std::optional<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*> > ql::exportIds::literalOrIriToStringAndType<true, false, ad_utility::triple_component::LiteralOrIriView, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > (&)(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)>(ad_utility::triple_component::LiteralOrIriView const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > (&)(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >))
+     0.91%  [.] 0x000000000007722e
+     0.88%  [.] ad_utility::vocabulary::detail::DecoderMultiplexer<FsstRepeatedDecoder<2ul> >::decompressInto(std::basic_string_view<char, std::char_traits<char> >, unsigned long, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+     0.72%  [.] 0x0000000000077763
+     0.71%  [.] FsstRepeatedDecoder<2ul>::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     0.69%  [.] 0x00000000000650d3
+     0.67%  [.] operator new(unsigned long)
+     0.67%  [.] ad_utility::AddCombinedRowToIdTable::flush()
+     0.65%  [.] 0x00000000000773e7
+     0.61%  [.] 0x00000000000771f4
+     0.58%  [.] 0x000000000007735a
+     0.55%  [.] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, unsigned long, std::allocator<char> const&) [clone .isra.0]
+     0.55%  [.] 0x0000000000188f40
+     0.55%  [k] rep_movs_alternative
+     0.51%  [.] ad_utility::triple_component::BasicLiteral<false>::BasicLiteral(std::basic_string_view<char, std::char_traits<char> >, unsigned long)
+     0.51%  [.] unsigned int ql::engine::export_v2::detail::scanChunkAvx2<(ql::engine::export_v2::EscapeFormat)0>(char const*)
+     0.50%  [.] operator delete(void*, unsigned long)
+     0.48%  [.] 0x0000000000077356
+     0.48%  [k] kernel_init_pages
+     0.44%  [.] void ad_utility::AddCombinedRowToIdTable::addRows<std::ranges::iota_view<unsigned long, unsigned long>, std::ranges::iota_view<unsigned long, unsigned long> >(std::ranges::iota_view<unsigned long, unsigned long> const&, std::ranges::iota_view<unsigned long, unsigned long> const&) [clone .isra.0]
+     0.42%  [.] 0x0000000000188f29
+     0.41%  [.] 0x0000000000188f4a
+     0.40%  [.] 0x00000000000774bb
+     0.38%  [.] 0x0000000000188f33
+     0.35%  [.] 0x00000000000774d7
+     0.32%  [.] 0x0000000000077211
+     0.32%  [.] 0x0000000000077310
+     0.32%  [.] 0x00000000000772e1
+     0.32%  [.] 0x00000000000775de
+     0.31%  [.] 0x0000000000077226
+     0.30%  [.] 0x000000000007733f
+     0.27%  [.] 0x00000000000775db
+     0.26%  [.] ad_utility::triple_component::BasicLiteral<false>::fromStringRepresentation(std::basic_string_view<char, std::char_traits<char> >)
+     0.26%  [.] std::optional<std::basic_string_view<char, std::char_traits<char> > > ql::exportIds::blankNodeIriToString<ad_utility::triple_component::IriView>(ad_utility::triple_component::IriView const&)
+     0.25%  [.] ad_utility::triple_component::BasicLiteralOrIri<false>::getLiteral() const
+     0.24%  [.] 0x00000000000773ea
+     0.23%  [.] 0x000000000007732a
+     0.23%  [.] ValueId::compareThreeWay(ValueId const&) const [clone .constprop.1]
+     0.22%  [.] 0x000000000007725f
+     0.22%  [.] 0x0000000000077307
+     0.21%  [.] 0x000000000007721a
+     0.21%  [.] 0x0000000000077724
+     0.19%  [.] 0x00000000000774e3
+     0.18%  [.] 0x0000000000077233
+     0.18%  [.] 0x0000000000077450
+     0.17%  [.] ql::exportIds::partitionIdPositions(std::span<ValueId const, 18446744073709551615ul>)
+     0.17%  [.] 0x0000000000077443
+     0.17%  [.] 0x00000000000771ef
+     0.17%  [.] 0x00000000000772bd
+     0.16%  [.] 0x0000000000077215
+     0.15%  [.] 0x0000000000077251
+     0.15%  [.] pthread_mutex_trylock
+     0.14%  [.] 0x0000000000077222
+     0.14%  [.] 0x000000000007723f
+     0.14%  [.] 0x00000000000774d2
+     0.14%  [.] 0x0000000000188d05
+     0.14%  [.] 0x0000000000077268
+     0.13%  [.] ad_utility::triple_component::BasicIri<false>::fromStringRepresentation(std::basic_string_view<char, std::char_traits<char> >)
+     0.13%  [.] 0x0000000000077304
+     0.13%  [.] 0x0000000000077323
+     0.13%  [.] 0x0000000000077317
+     0.13%  [.] 0x00000000000772d6
+     0.13%  [.] 0x00000000000772e8
+     0.13%  [.] 0x00000000000af977
+     0.13%  [.] 0x0000000000077244
+     0.12%  [.] 0x00000000001b5de0
+     0.12%  [.] 0x000000000007734c
+     0.11%  [.] 0x0000000000188f3b
+     0.11%  [.] 0x0000000000188d19
+     0.11%  [.] 0x00000000000772ab
+     0.10%  [.] operator new(unsigned long)@plt
+     0.10%  [.] 0x0000000000077237
+     0.10%  [.] 0x0000000000188f45
+     0.10%  [.] 0x000000000007723a
