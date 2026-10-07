@@ -1,0 +1,115 @@
+Running main() from gmock_main.cc
+[==========] Running 45 tests from 6 test suites.
+[----------] Global test environment set-up.
+[----------] 15 tests from IoUringManagerTest/0, where TypeParam = ad_utility::BatchManager<ad_utility::IoUringPolicy>
+[ RUN      ] IoUringManagerTest/0.SingleBatch
+[       OK ] IoUringManagerTest/0.SingleBatch (0 ms)
+[ RUN      ] IoUringManagerTest/0.mismatchedSpanLengthsThrow
+[       OK ] IoUringManagerTest/0.mismatchedSpanLengthsThrow (0 ms)
+[ RUN      ] IoUringManagerTest/0.MultipleBatchesSequential
+[       OK ] IoUringManagerTest/0.MultipleBatchesSequential (0 ms)
+[ RUN      ] IoUringManagerTest/0.WaitOutOfOrder
+[       OK ] IoUringManagerTest/0.WaitOutOfOrder (0 ms)
+[ RUN      ] IoUringManagerTest/0.BatchLargerThanRing
+[       OK ] IoUringManagerTest/0.BatchLargerThanRing (0 ms)
+[ RUN      ] IoUringManagerTest/0.BatchMuchLargerThanTinyRing
+[       OK ] IoUringManagerTest/0.BatchMuchLargerThanTinyRing (0 ms)
+[ RUN      ] IoUringManagerTest/0.WaveReapCompletesOtherBatches
+[       OK ] IoUringManagerTest/0.WaveReapCompletesOtherBatches (0 ms)
+[ RUN      ] IoUringManagerTest/0.ErrorInWaveKeepsOtherBatchesConsistent
+[       OK ] IoUringManagerTest/0.ErrorInWaveKeepsOtherBatchesConsistent (0 ms)
+[ RUN      ] IoUringManagerTest/0.MultipleSmallBatchesPipelined
+[       OK ] IoUringManagerTest/0.MultipleSmallBatchesPipelined (0 ms)
+[ RUN      ] IoUringManagerTest/0.ReadPastEofThrows
+[       OK ] IoUringManagerTest/0.ReadPastEofThrows (0 ms)
+[ RUN      ] IoUringManagerTest/0.LargeReads
+[       OK ] IoUringManagerTest/0.LargeReads (0 ms)
+[ RUN      ] IoUringManagerTest/0.differingReadSizes
+[       OK ] IoUringManagerTest/0.differingReadSizes (0 ms)
+[ RUN      ] IoUringManagerTest/0.zeroLengthReadsWithNonZeroLengthReads
+[       OK ] IoUringManagerTest/0.zeroLengthReadsWithNonZeroLengthReads (0 ms)
+[ RUN      ] IoUringManagerTest/0.waitOnNonExistingBatch
+[       OK ] IoUringManagerTest/0.waitOnNonExistingBatch (0 ms)
+[ RUN      ] IoUringManagerTest/0.fakeHandle
+[       OK ] IoUringManagerTest/0.fakeHandle (0 ms)
+[----------] 15 tests from IoUringManagerTest/0 (3 ms total)
+
+[----------] 15 tests from IoUringManagerTest/1, where TypeParam = ad_utility::BatchManager<ad_utility::SyncIoPolicy>
+[ RUN      ] IoUringManagerTest/1.SingleBatch
+[       OK ] IoUringManagerTest/1.SingleBatch (0 ms)
+[ RUN      ] IoUringManagerTest/1.mismatchedSpanLengthsThrow
+[       OK ] IoUringManagerTest/1.mismatchedSpanLengthsThrow (0 ms)
+[ RUN      ] IoUringManagerTest/1.MultipleBatchesSequential
+[       OK ] IoUringManagerTest/1.MultipleBatchesSequential (0 ms)
+[ RUN      ] IoUringManagerTest/1.WaitOutOfOrder
+[       OK ] IoUringManagerTest/1.WaitOutOfOrder (0 ms)
+[ RUN      ] IoUringManagerTest/1.BatchLargerThanRing
+[       OK ] IoUringManagerTest/1.BatchLargerThanRing (0 ms)
+[ RUN      ] IoUringManagerTest/1.BatchMuchLargerThanTinyRing
+[       OK ] IoUringManagerTest/1.BatchMuchLargerThanTinyRing (0 ms)
+[ RUN      ] IoUringManagerTest/1.WaveReapCompletesOtherBatches
+[       OK ] IoUringManagerTest/1.WaveReapCompletesOtherBatches (0 ms)
+[ RUN      ] IoUringManagerTest/1.ErrorInWaveKeepsOtherBatchesConsistent
+[       OK ] IoUringManagerTest/1.ErrorInWaveKeepsOtherBatchesConsistent (0 ms)
+[ RUN      ] IoUringManagerTest/1.MultipleSmallBatchesPipelined
+[       OK ] IoUringManagerTest/1.MultipleSmallBatchesPipelined (0 ms)
+[ RUN      ] IoUringManagerTest/1.ReadPastEofThrows
+[       OK ] IoUringManagerTest/1.ReadPastEofThrows (0 ms)
+[ RUN      ] IoUringManagerTest/1.LargeReads
+[       OK ] IoUringManagerTest/1.LargeReads (0 ms)
+[ RUN      ] IoUringManagerTest/1.differingReadSizes
+[       OK ] IoUringManagerTest/1.differingReadSizes (0 ms)
+[ RUN      ] IoUringManagerTest/1.zeroLengthReadsWithNonZeroLengthReads
+[       OK ] IoUringManagerTest/1.zeroLengthReadsWithNonZeroLengthReads (0 ms)
+[ RUN      ] IoUringManagerTest/1.waitOnNonExistingBatch
+[       OK ] IoUringManagerTest/1.waitOnNonExistingBatch (0 ms)
+[ RUN      ] IoUringManagerTest/1.fakeHandle
+[       OK ] IoUringManagerTest/1.fakeHandle (0 ms)
+[----------] 15 tests from IoUringManagerTest/1 (1 ms total)
+
+[----------] 3 tests from ReadFullyOrThrow
+[ RUN      ] ReadFullyOrThrow.FullReadSucceeds
+[       OK ] ReadFullyOrThrow.FullReadSucceeds (0 ms)
+[ RUN      ] ReadFullyOrThrow.PreadFailureThrows
+[       OK ] ReadFullyOrThrow.PreadFailureThrows (0 ms)
+[ RUN      ] ReadFullyOrThrow.ShortReadThrows
+[       OK ] ReadFullyOrThrow.ShortReadThrows (0 ms)
+[----------] 3 tests from ReadFullyOrThrow (0 ms total)
+
+[----------] 2 tests from IoUringManagerDrop
+[ RUN      ] IoUringManagerDrop.dropSyncManagerHasNothingInFlight
+[       OK ] IoUringManagerDrop.dropSyncManagerHasNothingInFlight (0 ms)
+[ RUN      ] IoUringManagerDrop.dropRunningManager
+[       OK ] IoUringManagerDrop.dropRunningManager (0 ms)
+[----------] 2 tests from IoUringManagerDrop (0 ms total)
+
+[----------] 2 tests from MakeBatchManager
+[ RUN      ] MakeBatchManager.syncBackendWhenIoUringNotPreferred
+[       OK ] MakeBatchManager.syncBackendWhenIoUringNotPreferred (0 ms)
+[ RUN      ] MakeBatchManager.backendMatchesFlagWhenIoUringPreferred
+[       OK ] MakeBatchManager.backendMatchesFlagWhenIoUringPreferred (0 ms)
+[----------] 2 tests from MakeBatchManager (0 ms total)
+
+[----------] 8 tests from ReadPageCacheHits
+[ RUN      ] ReadPageCacheHits.hitOnlyBatch
+[       OK ] ReadPageCacheHits.hitOnlyBatch (0 ms)
+[ RUN      ] ReadPageCacheHits.missOnlyBatch
+[       OK ] ReadPageCacheHits.missOnlyBatch (0 ms)
+[ RUN      ] ReadPageCacheHits.mixedBatchWithShortRead
+[       OK ] ReadPageCacheHits.mixedBatchWithShortRead (0 ms)
+[ RUN      ] ReadPageCacheHits.notCachedReadsAreReturned
+[       OK ] ReadPageCacheHits.notCachedReadsAreReturned (0 ms)
+[ RUN      ] ReadPageCacheHits.partialAndZeroByteReads
+[       OK ] ReadPageCacheHits.partialAndZeroByteReads (0 ms)
+[ RUN      ] ReadPageCacheHits.notSupportedDisablesTheFastPath
+2026-10-07 23:03:26.689 - WARN: preadv2 with RWF_NOWAIT is not supported for the vocabulary files; reading them without the page-cache fast path
+[       OK ] ReadPageCacheHits.notSupportedDisablesTheFastPath (0 ms)
+[ RUN      ] ReadPageCacheHits.runsAreSplitAtIovMax
+[       OK ] ReadPageCacheHits.runsAreSplitAtIovMax (0 ms)
+[ RUN      ] ReadPageCacheHits.emptyBatchAndContract
+[       OK ] ReadPageCacheHits.emptyBatchAndContract (0 ms)
+[----------] 8 tests from ReadPageCacheHits (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 45 tests from 6 test suites ran. (7 ms total)
+[  PASSED  ] 45 tests.

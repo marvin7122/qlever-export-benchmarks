@@ -1,0 +1,52 @@
+Running main() from gmock_main.cc
+[==========] Running 21 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 21 tests from VocabularyOnDisk
+[ RUN      ] VocabularyOnDisk.LowerUpperBoundStdLess
+[       OK ] VocabularyOnDisk.LowerUpperBoundStdLess (0 ms)
+[ RUN      ] VocabularyOnDisk.LowerUpperBoundNumeric
+[       OK ] VocabularyOnDisk.LowerUpperBoundNumeric (0 ms)
+[ RUN      ] VocabularyOnDisk.AccessOperator
+[       OK ] VocabularyOnDisk.AccessOperator (0 ms)
+[ RUN      ] VocabularyOnDisk.AccessOperatorWithNonContiguousIds
+[       OK ] VocabularyOnDisk.AccessOperatorWithNonContiguousIds (0 ms)
+[ RUN      ] VocabularyOnDisk.EmptyVocabulary
+[       OK ] VocabularyOnDisk.EmptyVocabulary (1 ms)
+[ RUN      ] VocabularyOnDisk.ReadLegacyMmapVectorOffsetsFormat
+[       OK ] VocabularyOnDisk.ReadLegacyMmapVectorOffsetsFormat (0 ms)
+[ RUN      ] VocabularyOnDisk.ScanAll
+[       OK ] VocabularyOnDisk.ScanAll (2 ms)
+[ RUN      ] VocabularyOnDisk.ScanAllEmptyVocabulary
+[       OK ] VocabularyOnDisk.ScanAllEmptyVocabulary (0 ms)
+[ RUN      ] VocabularyOnDisk.ScanAllByteLimitForcesMultipleBatches
+[       OK ] VocabularyOnDisk.ScanAllByteLimitForcesMultipleBatches (85 ms)
+[ RUN      ] VocabularyOnDisk.ScanAllSingleWordExceedsLimit
+[       OK ] VocabularyOnDisk.ScanAllSingleWordExceedsLimit (87 ms)
+[ RUN      ] VocabularyOnDisk.OffsetsAreMemoryMappedAfterOpen
+[       OK ] VocabularyOnDisk.OffsetsAreMemoryMappedAfterOpen (0 ms)
+[ RUN      ] VocabularyOnDisk.LookupBatchWorksWhenOffsetsNotMemoryMapped
+[       OK ] VocabularyOnDisk.LookupBatchWorksWhenOffsetsNotMemoryMapped (0 ms)
+[ RUN      ] VocabularyOnDisk.LookupBatchMatchesIndividualLookups
+[       OK ] VocabularyOnDisk.LookupBatchMatchesIndividualLookups (0 ms)
+[ RUN      ] VocabularyOnDisk.LookupBatchPageCacheFastPathIsByteIdentical
+[       OK ] VocabularyOnDisk.LookupBatchPageCacheFastPathIsByteIdentical (0 ms)
+[ RUN      ] VocabularyOnDisk.LookupBatchPageCacheMissesGoThroughTheManager
+2026-10-07 23:03:26.670 - WARN: preadv2 with RWF_NOWAIT is not supported for the vocabulary files; reading them without the page-cache fast path
+[       OK ] VocabularyOnDisk.LookupBatchPageCacheMissesGoThroughTheManager (0 ms)
+[ RUN      ] VocabularyOnDisk.LookupBatchEmptyThrows
+[       OK ] VocabularyOnDisk.LookupBatchEmptyThrows (0 ms)
+[ RUN      ] VocabularyOnDisk.LookupBatchOutOfRangeIndexThrows
+[       OK ] VocabularyOnDisk.LookupBatchOutOfRangeIndexThrows (0 ms)
+[ RUN      ] VocabularyOnDisk.LookupBatchesStreamedMatchesIndividualLookups
+[       OK ] VocabularyOnDisk.LookupBatchesStreamedMatchesIndividualLookups (0 ms)
+[ RUN      ] VocabularyOnDisk.LookupBatchesStreamedEmptyStreamYieldsNothing
+[       OK ] VocabularyOnDisk.LookupBatchesStreamedEmptyStreamYieldsNothing (0 ms)
+[ RUN      ] VocabularyOnDisk.LookupBatchesStreamedOutOfRangeIndexThrows
+[       OK ] VocabularyOnDisk.LookupBatchesStreamedOutOfRangeIndexThrows (0 ms)
+[ RUN      ] VocabularyOnDisk.LookupBatchesStreamedEmptyBatchThrows
+[       OK ] VocabularyOnDisk.LookupBatchesStreamedEmptyBatchThrows (0 ms)
+[----------] 21 tests from VocabularyOnDisk (183 ms total)
+
+[----------] Global test environment tear-down
+[==========] 21 tests from 1 test suite ran. (183 ms total)
+[  PASSED  ] 21 tests.

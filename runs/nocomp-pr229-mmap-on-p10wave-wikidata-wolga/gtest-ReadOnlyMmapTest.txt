@@ -1,0 +1,21 @@
+Running main() from gmock_main.cc
+[==========] Running 6 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 6 tests from ReadOnlyMmap
+[ RUN      ] ReadOnlyMmap.DefaultIsUnmapped
+[       OK ] ReadOnlyMmap.DefaultIsUnmapped (0 ms)
+[ RUN      ] ReadOnlyMmap.MapsFileContents
+[       OK ] ReadOnlyMmap.MapsFileContents (0 ms)
+[ RUN      ] ReadOnlyMmap.RemapDifferentRegionIsRejected
+[       OK ] ReadOnlyMmap.RemapDifferentRegionIsRejected (0 ms)
+[ RUN      ] ReadOnlyMmap.MapsSuffixAtOffset
+[       OK ] ReadOnlyMmap.MapsSuffixAtOffset (0 ms)
+[ RUN      ] ReadOnlyMmap.FailedMapStaysUnmapped
+[       OK ] ReadOnlyMmap.FailedMapStaysUnmapped (0 ms)
+[ RUN      ] ReadOnlyMmap.MoveTransfersMapping
+[       OK ] ReadOnlyMmap.MoveTransfersMapping (0 ms)
+[----------] 6 tests from ReadOnlyMmap (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 6 tests.
