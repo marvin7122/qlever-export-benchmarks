@@ -1,0 +1,184 @@
+[2026-10-07T00:27:16Z] PR #3539 wikidata turtle_export queries=H-vocab-label-large-de scenarios=cold,warm reps=5 mode=two binaries layout=ural
+[2026-10-07T00:27:16Z] base:    /local/data-ssd/stoetzem/thesis/experiments/runs/export-cpu-mmap-resident-vs-p12-de/bin/qlever-server-base (fc954b6300d518ce25131169731e45f9d4f867a2) args='' form=''
+[2026-10-07T00:27:16Z] variant: /local/data-ssd/stoetzem/thesis/experiments/runs/export-cpu-mmap-resident-vs-p12-de/bin/qlever-server-variant (ca7132433d9da6cd54f04c68088d2888edd6190a) args='--set-runtime-parameter vocabulary-mmap-resident-reads=true' form=''
+[2026-10-07T00:27:16Z] variant2: /local/data-ssd/stoetzem/thesis/experiments/runs/export-cpu-mmap-resident-vs-p12-de/bin/qlever-server-variant (ca7132433d9da6cd54f04c68088d2888edd6190a) args='--set-runtime-parameter vocabulary-mmap-resident-reads=false' label='mmap-resident-off'
+[2026-10-07T00:27:16Z] !!!!!!!! syscall counter not built: disabled in pr-ab-tools-fast5-nopreload (#3547 research loop) !!!!!!!!
+[2026-10-07T00:27:16Z] fastab: arms ['base', 'variant', 'variant2'], warm servers 3 (toggle-rp=True), scenarios cold,warm, reps 5, early-stop False (gap > 10%), min-measure-s 10, screening False (cold: ['H-vocab-label-large-de']), load gate 0.5 CPUs on [0, 1, 2, 3, 8, 9, 10, 11], pin server [0, 1, 2] client 3, cycles True, serving files 25 (200.7 GiB), MemAvailable 119.7 GiB
+[2026-10-07T00:27:18Z] load gate cold-H-vocab-label-large-de-base-r1: foreign load 6.44 CPUs > 0.5, waiting
+[2026-10-07T00:32:38Z] !!!!!!!! load gate cold-H-vocab-label-large-de-base-r1: foreign load 6.43 CPUs after 320s wait; proceeding !!!!!!!!
+[2026-10-07T00:33:48Z] pr3539-H-vocab-label-large-de-cold-base-r1 done: complete 32.525s x1 (cold-base)
+[2026-10-07T00:33:52Z] load gate cold-H-vocab-label-large-de-variant-r1: foreign load 4.46 CPUs > 0.5, waiting
+[2026-10-07T00:36:23Z] pr3539-H-vocab-label-large-de-cold-variant-r1 done: complete 23.604s x1 (cold-variant)
+[2026-10-07T00:36:28Z] load gate cold-H-vocab-label-large-de-variant2-r1: foreign load 4.26 CPUs > 0.5, waiting
+[2026-10-07T00:41:48Z] !!!!!!!! load gate cold-H-vocab-label-large-de-variant2-r1: foreign load 6.27 CPUs after 320s wait; proceeding !!!!!!!!
+[2026-10-07T00:43:01Z] pr3539-H-vocab-label-large-de-cold-variant2-r1 done: complete 33.828s x1 (cold-variant2)
+[2026-10-07T00:43:06Z] load gate cold-H-vocab-label-large-de-variant2-r2: foreign load 6.26 CPUs > 0.5, waiting
+[2026-10-07T00:48:26Z] !!!!!!!! load gate cold-H-vocab-label-large-de-variant2-r2: foreign load 6.29 CPUs after 320s wait; proceeding !!!!!!!!
+[2026-10-07T00:49:38Z] pr3539-H-vocab-label-large-de-cold-variant2-r2 done: complete 33.619s x1 (cold-variant2)
+[2026-10-07T00:49:43Z] load gate cold-H-vocab-label-large-de-variant-r2: foreign load 6.25 CPUs > 0.5, waiting
+[2026-10-07T00:55:03Z] !!!!!!!! load gate cold-H-vocab-label-large-de-variant-r2: foreign load 6.28 CPUs after 320s wait; proceeding !!!!!!!!
+[2026-10-07T00:56:08Z] pr3539-H-vocab-label-large-de-cold-variant-r2 done: complete 26.450s x1 (cold-variant)
+[2026-10-07T00:56:13Z] load gate cold-H-vocab-label-large-de-base-r2: foreign load 6.26 CPUs > 0.5, waiting
+[2026-10-07T01:01:33Z] !!!!!!!! load gate cold-H-vocab-label-large-de-base-r2: foreign load 4.71 CPUs after 320s wait; proceeding !!!!!!!!
+[2026-10-07T01:02:41Z] pr3539-H-vocab-label-large-de-cold-base-r2 done: complete 31.063s x1 (cold-base)
+[2026-10-07T01:02:46Z] load gate cold-H-vocab-label-large-de-base-r3: foreign load 4.59 CPUs > 0.5, waiting
+[2026-10-07T01:08:06Z] !!!!!!!! load gate cold-H-vocab-label-large-de-base-r3: foreign load 6.54 CPUs after 320s wait; proceeding !!!!!!!!
+[2026-10-07T01:09:19Z] pr3539-H-vocab-label-large-de-cold-base-r3 done: complete 33.850s x1 (cold-base)
+[2026-10-07T01:09:24Z] load gate cold-H-vocab-label-large-de-variant-r3: foreign load 6.33 CPUs > 0.5, waiting
+[2026-10-07T01:14:44Z] !!!!!!!! load gate cold-H-vocab-label-large-de-variant-r3: foreign load 3.50 CPUs after 320s wait; proceeding !!!!!!!!
+[2026-10-07T01:15:39Z] pr3539-H-vocab-label-large-de-cold-variant-r3 done: complete 19.789s x1 (cold-variant)
+[2026-10-07T01:15:44Z] load gate cold-H-vocab-label-large-de-variant2-r3: foreign load 1.01 CPUs > 0.5, waiting
+[2026-10-07T01:17:21Z] pr3539-H-vocab-label-large-de-cold-variant2-r3 done: complete 29.913s x1 (cold-variant2)
+[2026-10-07T01:17:26Z] load gate cold-H-vocab-label-large-de-variant2-r4: foreign load 3.80 CPUs > 0.5, waiting
+[2026-10-07T01:22:46Z] !!!!!!!! load gate cold-H-vocab-label-large-de-variant2-r4: foreign load 6.33 CPUs after 320s wait; proceeding !!!!!!!!
+[2026-10-07T01:23:59Z] pr3539-H-vocab-label-large-de-cold-variant2-r4 done: complete 34.002s x1 (cold-variant2)
+[2026-10-07T01:24:04Z] load gate cold-H-vocab-label-large-de-variant-r4: foreign load 6.24 CPUs > 0.5, waiting
+[2026-10-07T01:29:24Z] !!!!!!!! load gate cold-H-vocab-label-large-de-variant-r4: foreign load 6.25 CPUs after 320s wait; proceeding !!!!!!!!
+[2026-10-07T01:30:29Z] pr3539-H-vocab-label-large-de-cold-variant-r4 done: complete 26.142s x1 (cold-variant)
+[2026-10-07T01:30:34Z] load gate cold-H-vocab-label-large-de-base-r4: foreign load 6.25 CPUs > 0.5, waiting
+[2026-10-07T01:35:54Z] !!!!!!!! load gate cold-H-vocab-label-large-de-base-r4: foreign load 6.32 CPUs after 320s wait; proceeding !!!!!!!!
+[2026-10-07T01:37:07Z] pr3539-H-vocab-label-large-de-cold-base-r4 done: complete 33.973s x1 (cold-base)
+[2026-10-07T01:37:11Z] load gate cold-H-vocab-label-large-de-base-r5: foreign load 6.26 CPUs > 0.5, waiting
+[2026-10-07T01:42:31Z] !!!!!!!! load gate cold-H-vocab-label-large-de-base-r5: foreign load 4.59 CPUs after 320s wait; proceeding !!!!!!!!
+[2026-10-07T01:43:37Z] pr3539-H-vocab-label-large-de-cold-base-r5 done: complete 29.776s x1 (cold-base)
+[2026-10-07T01:43:41Z] load gate cold-H-vocab-label-large-de-variant-r5: foreign load 3.88 CPUs > 0.5, waiting
+[2026-10-07T01:49:01Z] !!!!!!!! load gate cold-H-vocab-label-large-de-variant-r5: foreign load 6.49 CPUs after 320s wait; proceeding !!!!!!!!
+[2026-10-07T01:50:07Z] pr3539-H-vocab-label-large-de-cold-variant-r5 done: complete 26.369s x1 (cold-variant)
+[2026-10-07T01:50:13Z] load gate cold-H-vocab-label-large-de-variant2-r5: foreign load 6.27 CPUs > 0.5, waiting
+[2026-10-07T01:55:33Z] pr3539-H-vocab-label-large-de-cold-variant2-r5 done: complete 30.026s x1 (cold-variant2)
+[2026-10-07T01:55:35Z] phase cold took 5299 s
+[2026-10-07T01:55:40Z] load gate warm-start: foreign load 3.95 CPUs > 0.5, waiting
+[2026-10-07T01:57:51Z] warm servers: warm-base port 7041 ready 25.2s rss 22.3 GiB; warm-variant port 7042 ready 25.5s rss 22.3 GiB; warm-variant2 port 7043 ready 25.5s rss 22.3 GiB; MemAvailable 53.3 GiB
+[2026-10-07T01:58:10Z] warm-up H-vocab-label-large-de base: HTTP 200 15.13s
+[2026-10-07T01:58:21Z] warm-up H-vocab-label-large-de variant: HTTP 200 9.35s
+[2026-10-07T01:58:38Z] warm-up H-vocab-label-large-de variant2: HTTP 200 15.10s
+[2026-10-07T01:58:54Z] pr3539-H-vocab-label-large-de-warm-base-r1 done: complete 15.495s x1 (warm-base)
+[2026-10-07T01:59:06Z] pr3539-H-vocab-label-large-de-warm-variant-r1 done: complete 11.875s x1 (warm-variant)
+[2026-10-07T01:59:27Z] pr3539-H-vocab-label-large-de-warm-variant2-r1 done: complete 20.765s x1 (warm-variant2)
+[2026-10-07T01:59:48Z] pr3539-H-vocab-label-large-de-warm-variant2-r2 done: complete 20.333s x1 (warm-variant2)
+[2026-10-07T02:00:00Z] pr3539-H-vocab-label-large-de-warm-variant-r2 done: complete 11.401s x1 (warm-variant)
+[2026-10-07T02:00:19Z] pr3539-H-vocab-label-large-de-warm-base-r2 done: complete 18.979s x1 (warm-base)
+[2026-10-07T02:00:38Z] pr3539-H-vocab-label-large-de-warm-base-r3 done: complete 18.740s x1 (warm-base)
+[2026-10-07T02:00:57Z] pr3539-H-vocab-label-large-de-warm-variant-r3 done: complete 9.004s x2 (warm-variant)
+[2026-10-07T02:01:14Z] pr3539-H-vocab-label-large-de-warm-variant2-r3 done: complete 17.065s x1 (warm-variant2)
+[2026-10-07T02:01:32Z] pr3539-H-vocab-label-large-de-warm-variant2-r4 done: complete 17.313s x1 (warm-variant2)
+[2026-10-07T02:01:50Z] pr3539-H-vocab-label-large-de-warm-variant-r4 done: complete 8.966s x2 (warm-variant)
+[2026-10-07T02:02:08Z] pr3539-H-vocab-label-large-de-warm-base-r4 done: complete 18.308s x1 (warm-base)
+[2026-10-07T02:02:32Z] pr3539-H-vocab-label-large-de-warm-base-r5 done: complete 23.311s x1 (warm-base)
+[2026-10-07T02:02:46Z] pr3539-H-vocab-label-large-de-warm-variant-r5 done: complete 13.402s x1 (warm-variant)
+[2026-10-07T02:03:10Z] pr3539-H-vocab-label-large-de-warm-variant2-r5 done: complete 23.330s x1 (warm-variant2)
+[2026-10-07T02:03:10Z] warm servers after trials: warm-base rss 22.4 GiB; warm-variant rss 28.8 GiB; warm-variant2 rss 22.4 GiB; MemAvailable 45.0 GiB
+[2026-10-07T02:03:19Z] phase warm took 463 s
+[2026-10-07T02:03:19Z] measuring wall time: 5763 s
+# Three-arm run: one base run, two comparisons
+
+## base vs variant (mmap-resident)
+## PR #3539 A/B on wikidata (turtle_export)
+
+- Base: `fc954b6300d518ce25131169731e45f9d4f867a2` p12; server args: `(none)`
+- Variant: `ca7132433d9da6cd54f04c68088d2888edd6190a` mmap-resident; server args: `--set-runtime-parameter vocabulary-mmap-resident-reads=true`
+- Binaries: two binaries; host `ural` (ural layout)
+- Server query threads (`--num-simultaneous-queries`): 1
+- Trials: 5 per arm, query and scenario; arms interleaved per trial, order alternating (odd trials base first, even trials reversed).
+- cold: per trial a fresh server after the index's serving files were evicted from the page cache (`posix_fadvise(DONTNEED)`, residency verified with `mincore`, `startup.tsv`); one execution per trial.
+- Pinning: server CPUs 0-2, client/driver CPU 3; SMT siblings of both kept free of our work
+- Output sink: timed executions discard the body (byte count + streamed xxh3_128 only); each arm's body is captured once per query in an untimed execution (the warm-up) and digested; a trial is correct when its xxh3 equals its arm's captured body and that body equals base's.
+- warm: one long-running server per binary for all queries and trials (runtime-parameter-only arms share a server; parameters switched over HTTP before each measurement and verified in the reply); one untimed warm-up per arm and query; QLever's result cache cleared before every execution and verified empty (`cache-stats`), so every execution recomputes; each measurement loops the query until >= 10 s, elapsed = per-query mean.
+- Noise rule: within noise when |delta| < 1% or the min..max ranges overlap.
+
+### Timing (elapsed_s, end to end)
+
+| query | scenario | arm | n | median | min | max | delta vs base | verdict | correctness |
+|---|---|---|---|---|---|---|---|---|---|
+| H-vocab-label-large-de | cold | p12 | 5 | 32.5247 | 29.7755 | 33.9734 |  |  |  |
+| H-vocab-label-large-de | cold | mmap-resident | 5 | 26.1421 | 19.7891 | 26.4496 | -19.62% | variant faster | identical bytes |
+| H-vocab-label-large-de | warm | p12 | 5 | 18.7397 | 15.4945 | 23.3114 |  |  |  |
+| H-vocab-label-large-de | warm | mmap-resident | 5 | 11.4012 | 8.9664 | 13.4023 | -39.16% | variant faster | identical bytes |
+
+### Cycles (perf stat on the server process tree, user+kernel, per query)
+
+Warm rows are CPU-bound: their verdict is stated on cycles (same noise rule); wall time is reported above. CV = coefficient of variation over the trials of one cell.
+
+| query | scenario | arm | n | median Gcycles | min | max | delta vs base | verdict | CV cycles | CV wall |
+|---|---|---|---|---|---|---|---|---|---|---|
+| H-vocab-label-large-de | cold | p12 | 5 | 146.476 | 137.365 | 151.943 |  |  | 3.97% | 5.03% |
+| H-vocab-label-large-de | cold | mmap-resident | 5 | 118.704 | 91.694 | 120.759 | -18.96% | variant faster | 9.76% | 10.50% |
+| H-vocab-label-large-de | warm | p12 | 5 | 89.487 | 76.425 | 110.081 |  |  | 11.79% | 13.22% |
+| H-vocab-label-large-de | warm | mmap-resident | 5 | 61.111 | 48.416 | 69.806 | -31.71% | variant faster | 14.32% | 15.74% |
+
+### Verdict
+
+- H-vocab-label-large-de cold: variant faster (-19.62%); correctness: identical bytes
+- H-vocab-label-large-de warm: variant faster (-39.16%); correctness: identical bytes
+- H-vocab-label-large-de warm, on cycles (verdict basis for warm rows): variant faster (-31.71%)
+
+### Gates
+
+- `gate-postflight-cold.log`: == POSTFLIGHT: PASS ==
+- `gate-postflight-warm.log`: == POSTFLIGHT: PASS ==
+- `gate-preflight-base.log`: == PREFLIGHT: PASS ==
+- `gate-preflight-variant.log`: == PREFLIGHT: PASS ==
+- `gate-verify-base.log`: VERDICT: PASS — binary is trustworthy for benchmarking
+- `gate-verify-variant.log`: VERDICT: PASS — binary is trustworthy for benchmarking
+
+### Problems
+
+None: every rep complete, non-empty and correct.
+
+Artifacts: `results.csv` (all reps), `<scenario>/<query>/<arm>/raw/` (harness output per rep), `correctness.tsv`, `build-env.txt`, `env-before.txt`, `env-after.txt`, `gate-*.log`, `driver.log`.
+
+## base vs variant2 (mmap-resident-off)
+## PR #3539 A/B on wikidata (turtle_export)
+
+- Base: `fc954b6300d518ce25131169731e45f9d4f867a2` p12; server args: `(none)`
+- Variant: `ca7132433d9da6cd54f04c68088d2888edd6190a` mmap-resident-off; server args: `--set-runtime-parameter vocabulary-mmap-resident-reads=false`
+- Binaries: two binaries; host `ural` (ural layout)
+- Server query threads (`--num-simultaneous-queries`): 1
+- Trials: 5 per arm, query and scenario; arms interleaved per trial, order alternating (odd trials base first, even trials reversed).
+- cold: per trial a fresh server after the index's serving files were evicted from the page cache (`posix_fadvise(DONTNEED)`, residency verified with `mincore`, `startup.tsv`); one execution per trial.
+- Pinning: server CPUs 0-2, client/driver CPU 3; SMT siblings of both kept free of our work
+- Output sink: timed executions discard the body (byte count + streamed xxh3_128 only); each arm's body is captured once per query in an untimed execution (the warm-up) and digested; a trial is correct when its xxh3 equals its arm's captured body and that body equals base's.
+- warm: one long-running server per binary for all queries and trials (runtime-parameter-only arms share a server; parameters switched over HTTP before each measurement and verified in the reply); one untimed warm-up per arm and query; QLever's result cache cleared before every execution and verified empty (`cache-stats`), so every execution recomputes; each measurement loops the query until >= 10 s, elapsed = per-query mean.
+- Noise rule: within noise when |delta| < 1% or the min..max ranges overlap.
+
+### Timing (elapsed_s, end to end)
+
+| query | scenario | arm | n | median | min | max | delta vs base | verdict | correctness |
+|---|---|---|---|---|---|---|---|---|---|
+| H-vocab-label-large-de | cold | p12 | 5 | 32.5247 | 29.7755 | 33.9734 |  |  |  |
+| H-vocab-label-large-de | cold | mmap-resident-off | 5 | 33.6187 | 29.9130 | 34.0019 | +3.36% | within noise | identical bytes |
+| H-vocab-label-large-de | warm | p12 | 5 | 18.7397 | 15.4945 | 23.3114 |  |  |  |
+| H-vocab-label-large-de | warm | mmap-resident-off | 5 | 20.3330 | 17.0651 | 23.3300 | +8.50% | within noise | identical bytes |
+
+### Cycles (perf stat on the server process tree, user+kernel, per query)
+
+Warm rows are CPU-bound: their verdict is stated on cycles (same noise rule); wall time is reported above. CV = coefficient of variation over the trials of one cell.
+
+| query | scenario | arm | n | median Gcycles | min | max | delta vs base | verdict | CV cycles | CV wall |
+|---|---|---|---|---|---|---|---|---|---|---|
+| H-vocab-label-large-de | cold | p12 | 5 | 146.476 | 137.365 | 151.943 |  |  | 3.97% | 5.03% |
+| H-vocab-label-large-de | cold | mmap-resident-off | 5 | 150.188 | 137.480 | 151.886 | +2.53% | within noise | 4.59% | 5.85% |
+| H-vocab-label-large-de | warm | p12 | 5 | 89.487 | 76.425 | 110.081 |  |  | 11.79% | 13.22% |
+| H-vocab-label-large-de | warm | mmap-resident-off | 5 | 98.797 | 81.917 | 109.770 | +10.40% | within noise | 11.29% | 11.83% |
+
+### Verdict
+
+- H-vocab-label-large-de cold: within noise (+3.36%); correctness: identical bytes
+- H-vocab-label-large-de warm: within noise (+8.50%); correctness: identical bytes
+- H-vocab-label-large-de warm, on cycles (verdict basis for warm rows): within noise (+10.40%)
+
+### Gates
+
+- `gate-postflight-cold.log`: == POSTFLIGHT: PASS ==
+- `gate-postflight-warm.log`: == POSTFLIGHT: PASS ==
+- `gate-preflight-base.log`: == PREFLIGHT: PASS ==
+- `gate-preflight-variant.log`: == PREFLIGHT: PASS ==
+- `gate-verify-base.log`: VERDICT: PASS — binary is trustworthy for benchmarking
+- `gate-verify-variant.log`: VERDICT: PASS — binary is trustworthy for benchmarking
+
+### Problems
+
+None: every rep complete, non-empty and correct.
+
+Artifacts: `results.csv` (all reps), `<scenario>/<query>/<arm>/raw/` (harness output per rep), `correctness.tsv`, `build-env.txt`, `env-before.txt`, `env-after.txt`, `gate-*.log`, `driver.log`.
+[2026-10-07T02:03:20Z] finished rc=0 run=/local/data-ssd/stoetzem/thesis/experiments/runs/export-cpu-mmap-resident-vs-p12-de

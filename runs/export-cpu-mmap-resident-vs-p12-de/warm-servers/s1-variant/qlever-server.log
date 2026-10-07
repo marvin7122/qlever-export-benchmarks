@@ -1,0 +1,272 @@
+2026-10-07 03:57:25.761 - INFO: [1mQLever server CIKM-2867-gca7132433, compiled on Tue Oct  6 12:56:34 UTC 2026 using git hash ca71324[22m
+2026-10-07 03:57:25.761 - INFO: Runtime parameter set from the command line: vocabulary-mmap-resident-reads=true
+2026-10-07 03:57:25.761 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-10-07 03:57:25.762 - INFO: The git hash used to build this index was "65f84b4"
+2026-10-07 03:57:25.762 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-10-07 03:57:40.440 - INFO: Done, number of words: 1,580,300,680
+2026-10-07 03:57:40.440 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-10-07 03:57:40.516 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 03:57:40.613 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 03:57:40.682 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 03:57:40.777 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 03:57:40.859 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 03:57:40.938 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 03:57:40.994 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 03:57:41.048 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 03:57:41.048 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-10-07 03:57:42.810 - WARN: The geo points of this index use the encoding "lat-major", which is deprecated and will not be supported for much longer; with this encoding, a spatial prefilter on points can only restrict the latitude; please build the index with the default encoding "z-order" (just omit the option `--geo-point-encoding` of `qlever-index`)
+2026-10-07 03:57:42.810 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-10-07 03:57:51.258 - INFO: Initializing server ...
+2026-10-07 03:57:51.258 - INFO: No access token required for restricted API calls
+2026-10-07 03:57:51.258 - INFO: The server is ready, listening for requests on port 7042 ...
+2026-10-07 03:58:10.353 - INFO: 
+2026-10-07 03:58:10.353 - INFO: Request received via GET, no content type specified
+2026-10-07 03:58:10.353 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 03:58:10.370 - INFO: 
+2026-10-07 03:58:10.370 - INFO: Request received via GET, no content type specified
+2026-10-07 03:58:10.370 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 03:58:10.387 - INFO: 
+2026-10-07 03:58:10.387 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 03:58:10.389 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-10-07 03:58:10.389 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-07 03:58:10.390 - INFO: Query planning done in 3 ms
+2026-10-07 03:58:10.390 - INFO: Result has unknown size (not computed yet)
+2026-10-07 03:58:19.714 - INFO: Done processing query and sending result, total time was 9,327 ms
+2026-10-07 03:58:54.533 - INFO: 
+2026-10-07 03:58:54.533 - INFO: Request received via GET, no content type specified
+2026-10-07 03:58:54.533 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 03:58:54.868 - INFO: 
+2026-10-07 03:58:54.868 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 03:58:54.868 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-10-07 03:58:54.868 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-07 03:58:54.869 - INFO: Query planning done in 0 ms
+2026-10-07 03:58:54.869 - INFO: Result has unknown size (not computed yet)
+2026-10-07 03:59:06.709 - INFO: Done processing query and sending result, total time was 11,841 ms
+2026-10-07 03:59:48.538 - INFO: 
+2026-10-07 03:59:48.539 - INFO: Request received via GET, no content type specified
+2026-10-07 03:59:48.539 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 03:59:48.866 - INFO: 
+2026-10-07 03:59:48.866 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 03:59:48.867 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-10-07 03:59:48.867 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-07 03:59:48.868 - INFO: Query planning done in 1 ms
+2026-10-07 03:59:48.868 - INFO: Result has unknown size (not computed yet)
+2026-10-07 04:00:00.240 - INFO: Done processing query and sending result, total time was 11,373 ms
+2026-10-07 04:00:38.669 - INFO: 
+2026-10-07 04:00:38.669 - INFO: Request received via GET, no content type specified
+2026-10-07 04:00:38.669 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 04:00:38.992 - INFO: 
+2026-10-07 04:00:38.992 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 04:00:38.992 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-10-07 04:00:38.992 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-07 04:00:38.992 - INFO: Query planning done in 0 ms
+2026-10-07 04:00:38.992 - INFO: Result has unknown size (not computed yet)
+2026-10-07 04:00:48.161 - INFO: Done processing query and sending result, total time was 9,169 ms
+2026-10-07 04:00:48.180 - INFO: 
+2026-10-07 04:00:48.180 - INFO: Request received via GET, no content type specified
+2026-10-07 04:00:48.180 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 04:00:48.199 - INFO: 
+2026-10-07 04:00:48.199 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 04:00:48.199 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-10-07 04:00:48.199 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-07 04:00:48.200 - INFO: Query planning done in 0 ms
+2026-10-07 04:00:48.200 - INFO: Result has unknown size (not computed yet)
+2026-10-07 04:00:56.995 - INFO: Done processing query and sending result, total time was 8,796 ms
+2026-10-07 04:01:32.075 - INFO: 
+2026-10-07 04:01:32.075 - INFO: Request received via GET, no content type specified
+2026-10-07 04:01:32.075 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 04:01:32.398 - INFO: 
+2026-10-07 04:01:32.398 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 04:01:32.398 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-10-07 04:01:32.399 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-07 04:01:32.399 - INFO: Query planning done in 0 ms
+2026-10-07 04:01:32.399 - INFO: Result has unknown size (not computed yet)
+2026-10-07 04:01:41.747 - INFO: Done processing query and sending result, total time was 9,348 ms
+2026-10-07 04:01:41.769 - INFO: 
+2026-10-07 04:01:41.769 - INFO: Request received via GET, no content type specified
+2026-10-07 04:01:41.769 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 04:01:41.790 - INFO: 
+2026-10-07 04:01:41.790 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 04:01:41.791 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-10-07 04:01:41.791 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-07 04:01:41.791 - INFO: Query planning done in 0 ms
+2026-10-07 04:01:41.791 - INFO: Result has unknown size (not computed yet)
+2026-10-07 04:01:50.330 - INFO: Done processing query and sending result, total time was 8,539 ms
+2026-10-07 04:02:32.667 - INFO: 
+2026-10-07 04:02:32.667 - INFO: Request received via GET, no content type specified
+2026-10-07 04:02:32.667 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 04:02:32.997 - INFO: 
+2026-10-07 04:02:32.997 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 04:02:32.997 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-10-07 04:02:32.997 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-07 04:02:32.998 - INFO: Query planning done in 0 ms
+2026-10-07 04:02:32.998 - INFO: Result has unknown size (not computed yet)
+2026-10-07 04:02:46.371 - INFO: Done processing query and sending result, total time was 13,373 ms

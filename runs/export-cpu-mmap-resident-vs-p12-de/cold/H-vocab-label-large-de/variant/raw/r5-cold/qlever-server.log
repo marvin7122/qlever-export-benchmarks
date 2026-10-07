@@ -1,0 +1,52 @@
+2026-10-07 03:49:07.235 - INFO: [1mQLever server CIKM-2867-gca7132433, compiled on Tue Oct  6 12:56:34 UTC 2026 using git hash ca71324[22m
+2026-10-07 03:49:07.235 - INFO: Runtime parameter set from the command line: vocabulary-mmap-resident-reads=true
+2026-10-07 03:49:07.235 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-10-07 03:49:07.247 - INFO: The git hash used to build this index was "65f84b4"
+2026-10-07 03:49:07.247 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-10-07 03:49:23.692 - INFO: Done, number of words: 1,580,300,680
+2026-10-07 03:49:23.693 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-10-07 03:49:23.797 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 03:49:23.932 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 03:49:24.033 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 03:49:24.162 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 03:49:24.271 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 03:49:24.382 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 03:49:24.458 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 03:49:24.533 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 03:49:24.533 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-10-07 03:49:26.451 - WARN: The geo points of this index use the encoding "lat-major", which is deprecated and will not be supported for much longer; with this encoding, a spatial prefilter on points can only restrict the latitude; please build the index with the default encoding "z-order" (just omit the option `--geo-point-encoding` of `qlever-index`)
+2026-10-07 03:49:26.451 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-10-07 03:49:37.425 - INFO: Initializing server ...
+2026-10-07 03:49:37.425 - INFO: No access token required for restricted API calls
+2026-10-07 03:49:37.425 - INFO: The server is ready, listening for requests on port 7041 ...
+2026-10-07 03:49:41.146 - INFO: 
+2026-10-07 03:49:41.146 - INFO: Request received via GET, no content type specified
+2026-10-07 03:49:41.146 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-07 03:49:41.478 - INFO: 
+2026-10-07 03:49:41.478 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 03:49:41.482 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-10-07 03:49:41.482 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-07 03:49:41.487 - INFO: Query planning done in 9 ms
+2026-10-07 03:49:41.488 - INFO: Result has unknown size (not computed yet)
+2026-10-07 03:50:07.816 - INFO: Done processing query and sending result, total time was 26,337 ms
