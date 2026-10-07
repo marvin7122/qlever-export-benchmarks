@@ -1,0 +1,17 @@
+# Scattered-read candidate (io-screen 2026-10-06): German labels of all
+# female humans (wdt:P31 wd:Q5 + wdt:P21 wd:Q6581072), about a quarter of
+# the humans of H-vocab-label-large-de, so fewer reads share a page.
+# No VALUES. Public endpoint count (2026-10): ~0.99M German labels.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity wdt:P21 wd:Q6581072 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}

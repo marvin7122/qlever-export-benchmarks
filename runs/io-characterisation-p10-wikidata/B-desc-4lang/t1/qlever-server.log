@@ -1,0 +1,46 @@
+2026-10-07 00:26:02.005 - INFO: [1mQLever server CIKM-2801-g4dd60f853, compiled on Tue Oct  6 07:51:44 UTC 2026 using git hash 4dd60f8[22m
+2026-10-07 00:26:02.005 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-10-07 00:26:02.006 - INFO: The git hash used to build this index was "65f84b4"
+2026-10-07 00:26:02.006 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-10-07 00:26:16.267 - INFO: Done, number of words: 1,580,300,680
+2026-10-07 00:26:16.267 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-10-07 00:26:16.353 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 00:26:16.454 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 00:26:16.528 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 00:26:16.628 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 00:26:16.712 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 00:26:16.797 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 00:26:16.855 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 00:26:16.911 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 00:26:16.911 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-10-07 00:26:18.472 - WARN: The geo points of this index use the encoding "lat-major", which is deprecated and will not be supported for much longer; with this encoding, a spatial prefilter on points can only restrict the latitude; please build the index with the default encoding "z-order" (just omit the option `--geo-point-encoding` of `qlever-index`)
+2026-10-07 00:26:18.472 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-10-07 00:26:26.830 - INFO: Initializing server ...
+2026-10-07 00:26:26.830 - INFO: No access token required for restricted API calls
+2026-10-07 00:26:26.830 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-10-07 00:26:27.090 - INFO: 
+2026-10-07 00:26:27.090 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 00:26:27.093 - INFO: Processing the following SPARQL query:
+# I/O-path candidate (io-screen 2026-10-06): four on-disk columns of longer
+# literals. Humans with a description in each of de, fr, es, it.
+# ~1.1M rows on the public endpoint (2026-10).
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+CONSTRUCT { ?entity schema:description ?de . ?entity schema:description ?fr .
+            ?entity schema:description ?es . ?entity schema:description ?it }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity schema:description ?de . FILTER(LANG(?de) = "de")
+  ?entity schema:description ?fr . FILTER(LANG(?fr) = "fr")
+  ?entity schema:description ?es . FILTER(LANG(?es) = "es")
+  ?entity schema:description ?it . FILTER(LANG(?it) = "it")
+}
+
+2026-10-07 00:26:27.093 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-07 00:26:27.097 - INFO: Query planning done in 6 ms
+2026-10-07 00:26:27.097 - INFO: Result has unknown size (not computed yet)
+2026-10-07 00:26:37.462 - INFO: Done processing query and sending result, total time was 10,371 ms

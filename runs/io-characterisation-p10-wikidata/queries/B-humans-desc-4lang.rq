@@ -1,0 +1,18 @@
+# I/O-path candidate (io-screen 2026-10-06): four on-disk columns of longer
+# literals. Humans with a description in each of de, fr, es, it.
+# ~1.1M rows on the public endpoint (2026-10).
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+CONSTRUCT { ?entity schema:description ?de . ?entity schema:description ?fr .
+            ?entity schema:description ?es . ?entity schema:description ?it }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity schema:description ?de . FILTER(LANG(?de) = "de")
+  ?entity schema:description ?fr . FILTER(LANG(?fr) = "fr")
+  ?entity schema:description ?es . FILTER(LANG(?es) = "es")
+  ?entity schema:description ?it . FILTER(LANG(?it) = "it")
+}

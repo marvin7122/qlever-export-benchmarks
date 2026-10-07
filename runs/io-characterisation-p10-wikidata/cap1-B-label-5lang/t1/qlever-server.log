@@ -1,0 +1,48 @@
+2026-10-07 00:29:17.472 - INFO: [1mQLever server CIKM-2801-g4dd60f853, compiled on Tue Oct  6 07:51:44 UTC 2026 using git hash 4dd60f8[22m
+2026-10-07 00:29:17.472 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-10-07 00:29:17.473 - INFO: The git hash used to build this index was "65f84b4"
+2026-10-07 00:29:17.473 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-10-07 00:29:34.036 - INFO: Done, number of words: 1,580,300,680
+2026-10-07 00:29:34.036 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-10-07 00:29:34.140 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 00:29:34.265 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 00:29:34.357 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 00:29:34.486 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 00:29:34.597 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 00:29:34.708 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 00:29:34.778 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 00:29:34.852 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 00:29:34.853 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-10-07 00:29:36.717 - WARN: The geo points of this index use the encoding "lat-major", which is deprecated and will not be supported for much longer; with this encoding, a spatial prefilter on points can only restrict the latitude; please build the index with the default encoding "z-order" (just omit the option `--geo-point-encoding` of `qlever-index`)
+2026-10-07 00:29:36.717 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-10-07 00:29:47.459 - INFO: Initializing server ...
+2026-10-07 00:29:47.459 - INFO: No access token required for restricted API calls
+2026-10-07 00:29:47.459 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-10-07 00:29:47.800 - INFO: 
+2026-10-07 00:29:47.800 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 00:29:47.805 - INFO: Processing the following SPARQL query:
+# I/O-path candidate (io-screen 2026-10-06): five on-disk columns per row.
+# Humans with a label in each of de, fr, es, it, nl (all external vocabulary;
+# only "en" is internal). ~2.3M rows on the public endpoint (2026-10).
+# Five columns with misses per batch = the regime cooperative fibers target.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+CONSTRUCT { ?entity rdfs:label ?de . ?entity rdfs:label ?fr . ?entity rdfs:label ?es .
+            ?entity rdfs:label ?it . ?entity rdfs:label ?nl }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?de . FILTER(LANG(?de) = "de")
+  ?entity rdfs:label ?fr . FILTER(LANG(?fr) = "fr")
+  ?entity rdfs:label ?es . FILTER(LANG(?es) = "es")
+  ?entity rdfs:label ?it . FILTER(LANG(?it) = "it")
+  ?entity rdfs:label ?nl . FILTER(LANG(?nl) = "nl")
+}
+
+2026-10-07 00:29:47.805 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-07 00:29:47.814 - INFO: Query planning done in 14 ms
+2026-10-07 00:29:47.815 - INFO: Result has unknown size (not computed yet)
+2026-10-07 00:31:37.940 - INFO: Done processing query and sending result, total time was 110,143 ms

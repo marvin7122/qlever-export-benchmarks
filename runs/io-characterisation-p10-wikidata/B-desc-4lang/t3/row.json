@@ -1,0 +1,171 @@
+{
+ "label": "B-desc-4lang",
+ "query": "B-humans-desc-4lang",
+ "trial": 3,
+ "evict_rc": 0,
+ "cap_headroom_gib": null,
+ "mem_max_bytes": null,
+ "rps": [],
+ "server_pid": 2481558,
+ "server_exe": "/local/data-ssd/stoetzem/bin-cache/4dd60f853612dacc4405c713638b1726c6382877/qlever-server",
+ "ready_s": 23.28,
+ "anon_at_ready": 23958990848,
+ "status": 200,
+ "bytes": 470260726,
+ "lines": 4433704,
+ "xxh3_128": "07b3ee4080e5de836c22d46602d462b7",
+ "elapsed_s": 9.823,
+ "ttfb_s": 0.704,
+ "export_phase_s": 9.119,
+ "server_cpu_s": 15.445,
+ "export_tid": 2482173,
+ "export_comm": "qlever-server",
+ "export_run_s": 6.548,
+ "export_runq_s": 0.029,
+ "export_offcpu_s": 3.247,
+ "export_uring_wait_s": 0.219,
+ "export_uring_share_wall": 0.0223,
+ "export_uring_share_export_phase": 0.024,
+ "export_offcpu_by_syscall_s": {
+  "S:futex": 2.98,
+  "S:io_uring_enter": 0.219,
+  "S:running": 0.047
+ },
+ "export_state_samples": {
+  "R": 4920,
+  "S:futex": 1835,
+  "S:io_uring_enter": 135,
+  "S:running": 29
+ },
+ "uring_threads": [
+  {
+   "tid": 2482173,
+   "comm": "qlever-server",
+   "uring_sample_share": 0.0195,
+   "run_s": 6.548
+  }
+ ],
+ "counts": {
+  "pread": 25231,
+  "preadv2": 2576236,
+  "preadv2_nowait": 2576236,
+  "preadv2_eagain": 49604,
+  "io_uring_enter": 0,
+  "liburing_submit": 10353
+ },
+ "fastpath_hit_share": 0.9807,
+ "proc_io": {
+  "rchar": 582525141,
+  "syscr": 2601487,
+  "read_bytes": 1160945664
+ },
+ "disk_whole": {
+  "window_s": 9.824,
+  "read_bytes": 1673297920,
+  "reads": 61606,
+  "avg_read_kib": 26.52,
+  "read_mb_s": 170.3,
+  "read_iops": 6271,
+  "aqu_sz": 0.654,
+  "r_await_ms": 0.104
+ },
+ "disk_export": {
+  "window_s": 9.073,
+  "read_bytes": 1447776256,
+  "reads": 51009,
+  "avg_read_kib": 27.72,
+  "read_mb_s": 159.6,
+  "read_iops": 5622,
+  "aqu_sz": 0.587,
+  "r_await_ms": 0.1041
+ },
+ "disk_peak_1s_mb_s": 356.9,
+ "md_whole": {
+  "window_s": 9.824,
+  "read_bytes": 1673297920,
+  "reads": 61669,
+  "avg_read_kib": 26.5,
+  "read_mb_s": 170.3,
+  "read_iops": 6277,
+  "aqu_sz": 0.645,
+  "r_await_ms": 0.1027
+ },
+ "anon_peak": 24091258880,
+ "cg_before": {
+  "cgroup": "/sys/fs/cgroup/user.slice/user-8744.slice/user@8744.service/app.slice/run-rdff6bc03dd8f4819bf93cc7d0f031fdf.scope",
+  "memory.max": "max",
+  "memory.peak": "48377466880",
+  "memory.current": "47896924160",
+  "memory.events.oom": 0,
+  "memory.events.oom_kill": 0,
+  "memory.events.max": 0,
+  "memory.events.high": 0,
+  "memory.stat.anon": 23958990848,
+  "memory.stat.file": 23887839232,
+  "memory.stat.workingset_refault_file": 0,
+  "memory.stat.workingset_refault_anon": 0,
+  "memory.stat.pgmajfault": 58,
+  "memory.stat.pgfault": 6254398,
+  "memory.stat.pgscan": 0,
+  "memory.stat.pgsteal": 0,
+  "memory.stat.file_mapped": 13680640
+ },
+ "cg_after": {
+  "cgroup": "/sys/fs/cgroup/user.slice/user-8744.slice/user@8744.service/app.slice/run-rdff6bc03dd8f4819bf93cc7d0f031fdf.scope",
+  "memory.max": "max",
+  "memory.peak": "49111040000",
+  "memory.current": "49092833280",
+  "memory.events.oom": 0,
+  "memory.events.oom_kill": 0,
+  "memory.events.max": 0,
+  "memory.events.high": 0,
+  "memory.stat.anon": 23981707264,
+  "memory.stat.file": 25048788992,
+  "memory.stat.workingset_refault_file": 0,
+  "memory.stat.workingset_refault_anon": 0,
+  "memory.stat.pgmajfault": 63,
+  "memory.stat.pgfault": 6407627,
+  "memory.stat.pgscan": 0,
+  "memory.stat.pgsteal": 0,
+  "memory.stat.file_mapped": 17817600
+ },
+ "sampler_iterations": 7479,
+ "top_threads": [
+  {
+   "tid": 2482173,
+   "comm": "qlever-server",
+   "run_s": 6.547746704,
+   "runq_s": 0.028523866
+  },
+  {
+   "tid": 2482120,
+   "comm": "qlever-server",
+   "run_s": 1.764661726,
+   "runq_s": 0.034917244
+  },
+  {
+   "tid": 2482119,
+   "comm": "qlever-server",
+   "run_s": 0.877296788,
+   "runq_s": 0.030266627
+  },
+  {
+   "tid": 2482136,
+   "comm": "qlever-server",
+   "run_s": 0.494228444,
+   "runq_s": 0.0001711
+  },
+  {
+   "tid": 2482135,
+   "comm": "qlever-server",
+   "run_s": 0.46684608,
+   "runq_s": 0.00015918
+  },
+  {
+   "tid": 2482132,
+   "comm": "qlever-server",
+   "run_s": 0.341950865,
+   "runq_s": 8.602e-05
+  }
+ ]
+}

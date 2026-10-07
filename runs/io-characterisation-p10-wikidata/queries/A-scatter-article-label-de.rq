@@ -1,0 +1,17 @@
+# Scattered-read candidate (io-screen 2026-10-06): German labels of all scholarly articles (Q13442814; long titles).
+# No VALUES: one P+O bound class scan (wdt:P31 wd:Q13442814), then the German
+# label scan. German literals are in the external (on-disk) vocabulary.
+# A sparse class spreads its label IDs over the sorted vocabulary, so few
+# reads share a page. Public endpoint count (2026-10): ~0.26M German labels.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q13442814 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}

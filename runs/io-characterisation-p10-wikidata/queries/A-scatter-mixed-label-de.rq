@@ -1,0 +1,21 @@
+# Scattered-read candidate (io-screen 2026-10-06): German labels of five
+# unrelated sparse classes: family names (Q101352), streets (Q79007),
+# asteroids (Q3863), albums (Q482994), films (Q11424).
+# No VALUES: a UNION of five P+O bound class scans (~2.3M members), then the
+# German label scan. The label IDs of unrelated classes interleave over the
+# whole sorted vocabulary, so few reads share a page.
+# Public endpoint count (2026-10): ~1.5M German labels.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  { ?entity wdt:P31 wd:Q101352 } UNION { ?entity wdt:P31 wd:Q79007 } UNION
+  { ?entity wdt:P31 wd:Q3863 } UNION { ?entity wdt:P31 wd:Q482994 } UNION
+  { ?entity wdt:P31 wd:Q11424 }
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}

@@ -1,0 +1,20 @@
+# I/O-path candidate (io-screen 2026-10-06): five on-disk columns per row.
+# Humans with a label in each of de, fr, es, it, nl (all external vocabulary;
+# only "en" is internal). ~2.3M rows on the public endpoint (2026-10).
+# Five columns with misses per batch = the regime cooperative fibers target.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+CONSTRUCT { ?entity rdfs:label ?de . ?entity rdfs:label ?fr . ?entity rdfs:label ?es .
+            ?entity rdfs:label ?it . ?entity rdfs:label ?nl }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?de . FILTER(LANG(?de) = "de")
+  ?entity rdfs:label ?fr . FILTER(LANG(?fr) = "fr")
+  ?entity rdfs:label ?es . FILTER(LANG(?es) = "es")
+  ?entity rdfs:label ?it . FILTER(LANG(?it) = "it")
+  ?entity rdfs:label ?nl . FILTER(LANG(?nl) = "nl")
+}
