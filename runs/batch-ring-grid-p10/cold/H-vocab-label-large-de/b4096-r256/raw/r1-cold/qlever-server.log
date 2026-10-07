@@ -1,0 +1,53 @@
+2026-10-07 01:23:37.224 - INFO: [1mQLever server CIKM-2803-g52ca007a3, compiled on Tue Oct  6 12:06:43 UTC 2026 using git hash 52ca007[22m
+2026-10-07 01:23:37.224 - INFO: Runtime parameter set from the command line: construct-export-row-batch-size=4096
+2026-10-07 01:23:37.224 - INFO: Runtime parameter set from the command line: vocabulary-iouring-ring-size=256
+2026-10-07 01:23:37.224 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-10-07 01:23:37.225 - INFO: The git hash used to build this index was "65f84b4"
+2026-10-07 01:23:37.225 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-10-07 01:23:53.547 - INFO: Done, number of words: 1,580,300,680
+2026-10-07 01:23:53.548 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-10-07 01:23:53.646 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 01:23:53.770 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 01:23:53.863 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-07 01:23:53.985 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-07 01:23:54.092 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 01:23:54.203 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-07 01:23:54.273 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 01:23:54.346 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-07 01:23:54.346 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-10-07 01:23:56.195 - WARN: The geo points of this index use the encoding "lat-major", which is deprecated and will not be supported for much longer; with this encoding, a spatial prefilter on points can only restrict the latitude; please build the index with the default encoding "z-order" (just omit the option `--geo-point-encoding` of `qlever-index`)
+2026-10-07 01:23:56.195 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-10-07 01:24:06.825 - INFO: Initializing server ...
+2026-10-07 01:24:06.825 - INFO: No access token required for restricted API calls
+2026-10-07 01:24:06.826 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-10-07 01:24:07.120 - INFO: 
+2026-10-07 01:24:07.121 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-07 01:24:07.125 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-10-07 01:24:07.125 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-07 01:24:07.126 - INFO: Query planning done in 5 ms
+2026-10-07 01:24:07.126 - INFO: Result has unknown size (not computed yet)
+2026-10-07 01:24:37.295 - INFO: Done processing query and sending result, total time was 30,174 ms
+2026-10-07 01:24:37.317 - INFO: 
+2026-10-07 01:24:37.317 - INFO: Request received via GET, no content type specified
+2026-10-07 01:24:37.317 - INFO: Processing command "cache-stats": get cache statistics
