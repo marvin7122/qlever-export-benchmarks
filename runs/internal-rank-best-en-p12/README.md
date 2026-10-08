@@ -1,7 +1,7 @@
 # Rank lookup with prefetching and huge pages (vs part 12): overview and base A/B, English labels
 
 This run is the base A/B of a three-step experiment for fork PR marvin7122/qlever#264.
-All steps ran in one Ural queue entry (#5362, script [`irl-prefetch-hp-ab.sh`](irl-prefetch-hp-ab.sh)) on 2026-10-07 21:00–23:05 UTC.
+All steps ran in one Ural queue entry (#5362, script [`irl-prefetch-hp-ab.sh`](irl-prefetch-hp-ab.sh)) on 2026-10-07 20:58–23:04 UTC (per-step windows in each run's `driver.log`).
 
 ## Question
 
