@@ -1,0 +1,17 @@
+[2026-09-29T12:28:07Z] !!!!!!!! syscall counter not built: disabled in pr-ab-tools-fast5-nopreload (#3547 research loop) !!!!!!!!
+[2026-09-29T12:28:07Z] fastab: arms ['base', 'variant', 'variant2'], warm servers 2 (toggle-rp=True), scenarios warm, reps 3, early-stop True (gap > 10%), min-measure-s 10, screening False (cold: ['H-vocab-random-label-de-200k']), load gate 0.5 CPUs on [0, 1, 2, 3, 8, 9, 10, 11], pin server [0, 1, 2] client 3, cycles True, serving files 25 (200.7 GiB), MemAvailable 106.1 GiB
+[2026-09-29T12:28:12Z] load gate warm-start: foreign load 2.04 CPUs > 0.5, waiting
+[2026-09-29T12:32:39Z] warm servers: warm-base port 7041 ready 22.4s rss 22.3 GiB; warm-variant+variant2 port 7042 ready 22.4s rss 22.3 GiB; MemAvailable 73.0 GiB
+[2026-09-29T12:32:51Z] warm-up H-vocab-random-label-de-200k base: HTTP 200 9.46s
+[2026-09-29T12:32:56Z] warm-up H-vocab-random-label-de-200k variant: HTTP 200 4.54s
+[2026-09-29T12:33:00Z] warm-up H-vocab-random-label-de-200k variant2: HTTP 200 4.33s
+[2026-09-29T12:33:14Z] pr3547-H-vocab-random-label-de-200k-warm-base-r1 done: complete 4.486s x3 (warm-base)
+[2026-09-29T12:33:28Z] pr3547-H-vocab-random-label-de-200k-warm-variant-r1 done: complete 4.543s x3 (warm-variant+variant2)
+[2026-09-29T12:33:42Z] pr3547-H-vocab-random-label-de-200k-warm-variant2-r1 done: complete 4.469s x3 (warm-variant+variant2)
+[2026-09-29T12:33:56Z] pr3547-H-vocab-random-label-de-200k-warm-variant2-r2 done: complete 4.462s x3 (warm-variant+variant2)
+[2026-09-29T12:34:09Z] pr3547-H-vocab-random-label-de-200k-warm-variant-r2 done: complete 4.520s x3 (warm-variant+variant2)
+[2026-09-29T12:34:23Z] pr3547-H-vocab-random-label-de-200k-warm-base-r2 done: complete 4.471s x3 (warm-base)
+[2026-09-29T12:34:23Z] early stop: H-vocab-random-label-de-200k warm cycles CV < 1% in every arm after 2 trials
+[2026-09-29T12:34:23Z] early stop: H-vocab-random-label-de-200k warm after 2 trials
+[2026-09-29T12:34:23Z] warm servers after trials: warm-base rss 22.6 GiB; warm-variant+variant2 rss 22.6 GiB; MemAvailable 73.1 GiB
+[2026-09-29T12:34:28Z] phase warm took 381 s

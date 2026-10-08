@@ -1,0 +1,46 @@
+# PR #3547 A/B on wikidata (turtle_export)
+
+- Base: `0ed8f9223497196d8979accb24ac737becc42f2b` p7-3526; server args: `(none)`
+- Variant: `51269ab4bf895211983287d1086c0a700ea43c86` nowait-fastpath-off; server args: `--set-runtime-parameter vocabulary-iouring-page-cache-fast-path=false`
+- Binaries: two binaries; host `ural` (ural layout)
+- Server query threads (`--num-simultaneous-queries`): 1
+- Trials: up to 3 per arm, query and scenario; a cell stops after 2 trials when every variant's min..max range is disjoint from base's by more than 10% of the base median, or (warm) when every arm's cycles CV is below 1 % (`adaptive.tsv`); column n gives the trials per cell. Arms interleaved per trial, order alternating (odd trials base first, even trials reversed).
+- Pinning: server CPUs 0-2, client/driver CPU 3; SMT siblings of both kept free of our work
+- Output sink: timed executions discard the body (byte count + streamed xxh3_128 only); each arm's body is captured once per query in an untimed execution (the warm-up) and digested; a trial is correct when its xxh3 equals its arm's captured body and that body equals base's.
+- warm: one long-running server per binary for all queries and trials (runtime-parameter-only arms share a server; parameters switched over HTTP before each measurement and verified in the reply); one untimed warm-up per arm and query; QLever's result cache cleared before every execution and verified empty (`cache-stats`), so every execution recomputes; each measurement loops the query until >= 10 s, elapsed = per-query mean.
+- Noise rule: within noise when |delta| < 1% or the min..max ranges overlap.
+
+## Timing (elapsed_s, end to end)
+
+| query | scenario | arm | n | median | min | max | delta vs base | verdict | correctness |
+|---|---|---|---|---|---|---|---|---|---|
+| H-vocab-random-label-de-200k | warm | p7-3526 | 2 | 4.4787 | 4.4713 | 4.4861 |  |  |  |
+| H-vocab-random-label-de-200k | warm | nowait-fastpath-off | 2 | 4.5315 | 4.5196 | 4.5435 | +1.18% | variant slower | identical bytes |
+
+## Cycles (perf stat on the server process tree, user+kernel, per query)
+
+Warm rows are CPU-bound: their verdict is stated on cycles (same noise rule); wall time is reported above. CV = coefficient of variation over the trials of one cell.
+
+| query | scenario | arm | n | median Gcycles | min | max | delta vs base | verdict | CV cycles | CV wall |
+|---|---|---|---|---|---|---|---|---|---|---|
+| H-vocab-random-label-de-200k | warm | p7-3526 | 2 | 19.217 | 19.208 | 19.226 |  |  | 0.05% | 0.17% |
+| H-vocab-random-label-de-200k | warm | nowait-fastpath-off | 2 | 19.578 | 19.539 | 19.617 | +1.88% | variant slower | 0.20% | 0.26% |
+
+## Verdict
+
+- H-vocab-random-label-de-200k warm: variant slower (+1.18%); correctness: identical bytes
+- H-vocab-random-label-de-200k warm, on cycles (verdict basis for warm rows): variant slower (+1.88%)
+
+## Gates
+
+- `gate-postflight-warm.log`: == POSTFLIGHT: PASS ==
+- `gate-preflight-base.log`: == PREFLIGHT: PASS ==
+- `gate-preflight-variant.log`: == PREFLIGHT: PASS ==
+- `gate-verify-base.log`: VERDICT: PASS — binary is trustworthy for benchmarking
+- `gate-verify-variant.log`: VERDICT: PASS — binary is trustworthy for benchmarking
+
+## Problems
+
+None: every rep complete, non-empty and correct.
+
+Artifacts: `results.csv` (all reps), `<scenario>/<query>/<arm>/raw/` (harness output per rep), `correctness.tsv`, `build-env.txt`, `env-before.txt`, `env-after.txt`, `gate-*.log`, `driver.log`.
