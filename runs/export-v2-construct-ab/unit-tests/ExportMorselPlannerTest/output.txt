@@ -1,0 +1,27 @@
+Running main() from gmock_main.cc
+[==========] Running 9 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 9 tests from ExportMorselPlanner
+[ RUN      ] ExportMorselPlanner.SplitsLargeBlockIntoMorsels
+[       OK ] ExportMorselPlanner.SplitsLargeBlockIntoMorsels (0 ms)
+[ RUN      ] ExportMorselPlanner.AccumulatesSmallBlocksIntoMorsels
+[       OK ] ExportMorselPlanner.AccumulatesSmallBlocksIntoMorsels (0 ms)
+[ RUN      ] ExportMorselPlanner.RecordsRowsExportedBeforeBlock
+[       OK ] ExportMorselPlanner.RecordsRowsExportedBeforeBlock (0 ms)
+[ RUN      ] ExportMorselPlanner.LimitStopsPulling
+[       OK ] ExportMorselPlanner.LimitStopsPulling (0 ms)
+[ RUN      ] ExportMorselPlanner.LimitExactlyAtBlockBoundary
+[       OK ] ExportMorselPlanner.LimitExactlyAtBlockBoundary (0 ms)
+[ RUN      ] ExportMorselPlanner.OffsetSkipsRowsAcrossBlocks
+[       OK ] ExportMorselPlanner.OffsetSkipsRowsAcrossBlocks (0 ms)
+[ RUN      ] ExportMorselPlanner.ExportLimitCountsWithoutSerializing
+[       OK ] ExportMorselPlanner.ExportLimitCountsWithoutSerializing (0 ms)
+[ RUN      ] ExportMorselPlanner.LimitZeroPullsNothing
+[       OK ] ExportMorselPlanner.LimitZeroPullsNothing (0 ms)
+[ RUN      ] ExportMorselPlanner.EmptyBlocksAreSkipped
+[       OK ] ExportMorselPlanner.EmptyBlocksAreSkipped (0 ms)
+[----------] 9 tests from ExportMorselPlanner (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 9 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 9 tests.

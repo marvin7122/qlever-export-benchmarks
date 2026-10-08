@@ -1,0 +1,41 @@
+Running main() from gmock_main.cc
+[==========] Running 16 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 16 tests from ExportPipelineRouterTest
+[ RUN      ] ExportPipelineRouterTest.ToStringFunction
+[       OK ] ExportPipelineRouterTest.ToStringFunction (0 ms)
+[ RUN      ] ExportPipelineRouterTest.DefaultModeIsLegacyV1
+[       OK ] ExportPipelineRouterTest.DefaultModeIsLegacyV1 (2 ms)
+[ RUN      ] ExportPipelineRouterTest.UrlParamFastExportTruthySelectsV2
+[       OK ] ExportPipelineRouterTest.UrlParamFastExportTruthySelectsV2 (0 ms)
+[ RUN      ] ExportPipelineRouterTest.UrlParamFastExportFalsySelectsV1
+[       OK ] ExportPipelineRouterTest.UrlParamFastExportFalsySelectsV1 (0 ms)
+[ RUN      ] ExportPipelineRouterTest.EngineOverridesIgnoreCase
+[       OK ] ExportPipelineRouterTest.EngineOverridesIgnoreCase (0 ms)
+[ RUN      ] ExportPipelineRouterTest.UrlParamExportEngineV2
+[       OK ] ExportPipelineRouterTest.UrlParamExportEngineV2 (0 ms)
+[ RUN      ] ExportPipelineRouterTest.HttpHeaderOverrides
+[       OK ] ExportPipelineRouterTest.HttpHeaderOverrides (0 ms)
+[ RUN      ] ExportPipelineRouterTest.ServerDefaultModeConfiguration
+[       OK ] ExportPipelineRouterTest.ServerDefaultModeConfiguration (0 ms)
+[ RUN      ] ExportPipelineRouterTest.AskQueryNotEligibleForFastStreaming
+[       OK ] ExportPipelineRouterTest.AskQueryNotEligibleForFastStreaming (0 ms)
+[ RUN      ] ExportPipelineRouterTest.DescribeDecisionDiagnostics
+[       OK ] ExportPipelineRouterTest.DescribeDecisionDiagnostics (0 ms)
+[ RUN      ] ExportPipelineRouterTest.SelectSendModeDefaultIsConcatenatedString
+[       OK ] ExportPipelineRouterTest.SelectSendModeDefaultIsConcatenatedString (0 ms)
+[ RUN      ] ExportPipelineRouterTest.SelectSendModeUrlParam
+[       OK ] ExportPipelineRouterTest.SelectSendModeUrlParam (0 ms)
+[ RUN      ] ExportPipelineRouterTest.UnsupportedConstructsFallBackToV1
+[       OK ] ExportPipelineRouterTest.UnsupportedConstructsFallBackToV1 (1 ms)
+[ RUN      ] ExportPipelineRouterTest.EligibleShapesStillSelectV2
+[       OK ] ExportPipelineRouterTest.EligibleShapesStillSelectV2 (0 ms)
+[ RUN      ] ExportPipelineRouterTest.IneligibleQueryExplainsFallback
+[       OK ] ExportPipelineRouterTest.IneligibleQueryExplainsFallback (0 ms)
+[ RUN      ] ExportPipelineRouterTest.SelectSendModeHeader
+[       OK ] ExportPipelineRouterTest.SelectSendModeHeader (0 ms)
+[----------] 16 tests from ExportPipelineRouterTest (5 ms total)
+
+[----------] Global test environment tear-down
+[==========] 16 tests from 1 test suite ran. (5 ms total)
+[  PASSED  ] 16 tests.

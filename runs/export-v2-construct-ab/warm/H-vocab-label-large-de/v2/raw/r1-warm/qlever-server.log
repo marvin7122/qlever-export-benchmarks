@@ -1,0 +1,230 @@
+2026-10-08 02:36:04.516 - INFO: [1mQLever server CIKM-3095-g60efca19a, compiled on Wed Oct  7 21:02:12 UTC 2026 using git hash 60efca1[22m
+2026-10-08 02:36:04.516 - INFO: Cleanup of previous index directories after each rebuild enabled (--rebuild-keep-previous-index-dirs original-and-most-recent)
+2026-10-08 02:36:04.518 - INFO: The git hash used to build this index was "65f84b4"
+2026-10-08 02:36:04.518 - INFO: Reading vocabulary from file /local/data-ssd/stoetzem/wikidata/wikidata.vocabulary.words ...
+2026-10-08 02:36:17.455 - INFO: Done, number of words: 1,580,300,680
+2026-10-08 02:36:17.455 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 777,658,536
+2026-10-08 02:36:17.532 - INFO: Registered PSO permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-08 02:36:17.629 - INFO: Registered PSO permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-08 02:36:17.700 - INFO: Registered POS permutation: #relations = 10,100, #blocks = 225,155, #triples = 6,983,973,847
+2026-10-08 02:36:17.799 - INFO: Registered POS permutation: #relations = 13,566, #blocks = 264,339, #triples = 8,220,417,022
+2026-10-08 02:36:17.882 - INFO: Registered OPS permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-08 02:36:17.963 - INFO: Registered OSP permutation: #relations = 1,683,253,489, #blocks = 222,728, #triples = 8,220,417,022
+2026-10-08 02:36:18.019 - INFO: Registered SPO permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-08 02:36:18.074 - INFO: Registered SOP permutation: #relations = 252,534,289, #blocks = 175,741, #triples = 8,220,417,022
+2026-10-08 02:36:18.074 - INFO: Reading patterns from file /local/data-ssd/stoetzem/wikidata/wikidata.index.patterns ...
+2026-10-08 02:36:19.449 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2026-10-08 02:36:27.499 - INFO: Initializing server ...
+2026-10-08 02:36:27.499 - INFO: ExportEngineV2 serialize posts onto queryThreadPool_ (8 threads); no extra V2 pool. Helpers stop admitting when another query is registered.
+2026-10-08 02:36:27.499 - INFO: No access token required for restricted API calls
+2026-10-08 02:36:27.499 - INFO: The server is ready, listening for requests on port 7015 ...
+2026-10-08 02:36:27.574 - INFO: 
+2026-10-08 02:36:27.574 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-08 02:36:27.577 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-10-08 02:36:27.577 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-08 02:36:27.600 - INFO: Query planning done in 25 ms
+2026-10-08 02:36:27.600 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-08 02:36:27.600 - INFO: Using ExportEngineV2 for text/turtle export
+2026-10-08 02:36:27.601 - INFO: Result has unknown size (not computed yet)
+2026-10-08 02:36:27.601 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-08 02:36:32.324 - INFO: Done processing query and sending result, total time was 4,750 ms
+2026-10-08 02:36:32.343 - INFO: 
+2026-10-08 02:36:32.343 - INFO: Request received via GET, no content type specified
+2026-10-08 02:36:32.343 - INFO: Processing command "cache-stats": get cache statistics
+2026-10-08 02:36:32.360 - INFO: 
+2026-10-08 02:36:32.360 - INFO: Request received via GET, no content type specified
+2026-10-08 02:36:32.360 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-08 02:36:32.378 - INFO: 
+2026-10-08 02:36:32.378 - INFO: Request received via GET, no content type specified
+2026-10-08 02:36:32.378 - INFO: Processing command "cache-stats": get cache statistics
+2026-10-08 02:36:32.396 - INFO: 
+2026-10-08 02:36:32.396 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-08 02:36:32.396 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-10-08 02:36:32.396 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-08 02:36:32.397 - INFO: Query planning done in 0 ms
+2026-10-08 02:36:32.397 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-08 02:36:32.397 - INFO: Using ExportEngineV2 for text/turtle export
+2026-10-08 02:36:32.397 - INFO: Result has unknown size (not computed yet)
+2026-10-08 02:36:32.397 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-08 02:36:34.482 - INFO: Done processing query and sending result, total time was 2,085 ms
+2026-10-08 02:36:34.497 - INFO: 
+2026-10-08 02:36:34.497 - INFO: Request received via GET, no content type specified
+2026-10-08 02:36:34.497 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-08 02:36:34.518 - INFO: 
+2026-10-08 02:36:34.518 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-08 02:36:34.518 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-10-08 02:36:34.519 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-08 02:36:34.519 - INFO: Query planning done in 0 ms
+2026-10-08 02:36:34.519 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-08 02:36:34.519 - INFO: Using ExportEngineV2 for text/turtle export
+2026-10-08 02:36:34.519 - INFO: Result has unknown size (not computed yet)
+2026-10-08 02:36:34.519 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-08 02:36:36.553 - INFO: Done processing query and sending result, total time was 2,035 ms
+2026-10-08 02:36:36.571 - INFO: 
+2026-10-08 02:36:36.571 - INFO: Request received via GET, no content type specified
+2026-10-08 02:36:36.571 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-08 02:36:36.589 - INFO: 
+2026-10-08 02:36:36.589 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-08 02:36:36.589 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-10-08 02:36:36.589 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-08 02:36:36.589 - INFO: Query planning done in 0 ms
+2026-10-08 02:36:36.589 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-08 02:36:36.589 - INFO: Using ExportEngineV2 for text/turtle export
+2026-10-08 02:36:36.590 - INFO: Result has unknown size (not computed yet)
+2026-10-08 02:36:36.590 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-08 02:36:38.738 - INFO: Done processing query and sending result, total time was 2,149 ms
+2026-10-08 02:36:38.754 - INFO: 
+2026-10-08 02:36:38.754 - INFO: Request received via GET, no content type specified
+2026-10-08 02:36:38.754 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-08 02:36:38.771 - INFO: 
+2026-10-08 02:36:38.771 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-08 02:36:38.772 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-10-08 02:36:38.772 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-08 02:36:38.772 - INFO: Query planning done in 0 ms
+2026-10-08 02:36:38.772 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-08 02:36:38.772 - INFO: Using ExportEngineV2 for text/turtle export
+2026-10-08 02:36:38.772 - INFO: Result has unknown size (not computed yet)
+2026-10-08 02:36:38.772 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-08 02:36:40.750 - INFO: Done processing query and sending result, total time was 1,978 ms
+2026-10-08 02:36:40.766 - INFO: 
+2026-10-08 02:36:40.766 - INFO: Request received via GET, no content type specified
+2026-10-08 02:36:40.766 - INFO: Processing command "clear-cache": clear the cache (unpinned elements only)
+2026-10-08 02:36:40.783 - INFO: 
+2026-10-08 02:36:40.783 - INFO: Request received via POST, content type "application/x-www-form-urlencoded"
+2026-10-08 02:36:40.784 - INFO: Processing the following SPARQL query:
+# Tier H-vocab — German labels, large
+# Physical: P+O bound scan of wdt:P31 wd:Q5 (class postings), then
+# S+P bound SPO scan of rdfs:label. LANG(?label) maps label IDs to
+# strings. CONSTRUCT writes entity IRI + label.
+# Targets: large sequential class scan with EXTERNAL vocabulary words.
+# German is not in languages-internal (only "en"), so QLever's
+# shouldLiteralBeExternalized places every de literal in the external
+# tier (src/index/vocabulary/Vocabulary.cpp). Same shape as
+# H-vocab-label-large.rq, but every lookup is a guaranteed external
+# miss on cold caches.
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?entity rdfs:label ?label }
+WHERE {
+  ?entity wdt:P31 wd:Q5 .
+  ?entity rdfs:label ?label .
+  FILTER(LANG(?label) = "de")
+}
+
+2026-10-08 02:36:40.784 - INFO: Requested media types of the result are: "text/turtle"
+2026-10-08 02:36:40.784 - INFO: Query planning done in 0 ms
+2026-10-08 02:36:40.784 - INFO: ExportEngine: FastStreamingV2 [Reason: Fast-Path V2 selected (eligible export query with explicit or default opt-in)]
+2026-10-08 02:36:40.784 - INFO: Using ExportEngineV2 for text/turtle export
+2026-10-08 02:36:40.784 - INFO: Result has unknown size (not computed yet)
+2026-10-08 02:36:40.784 - INFO: ExportEngineV2 streaming lazy result blocks to morsels on queryThreadPool_ (no extra V2 threads)
+2026-10-08 02:36:42.756 - INFO: Done processing query and sending result, total time was 1,972 ms
+2026-10-08 02:36:42.771 - INFO: 
+2026-10-08 02:36:42.771 - INFO: Request received via GET, no content type specified
+2026-10-08 02:36:42.771 - INFO: Processing command "cache-stats": get cache statistics
