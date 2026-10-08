@@ -1,0 +1,51 @@
+    45.69%  qlever-server        [.] ad_utility::vocabulary::VocabularyInMemoryBinSearch::positionOfIndex(unsigned long) const
+     9.57%  qlever-server        [.] fsst_decompress
+     7.56%  qlever-server        [.] ad_utility::vocabulary::VocabularyInMemoryBinSearch::wordAtPosition(unsigned long) const
+     5.20%  qlever-server        [.] ad_utility::vocabulary::makePmrVocabBatchLookupResult(std::span<std::basic_string_view<char, std::char_traits<char> > const, 18446744073709551615ul>)
+     4.62%  qlever-server        [.] void ad_utility::detail::adCorrectnessCheckImpl<>(bool, std::basic_string_view<char, std::char_traits<char> >, std::source_location)
+     1.79%  libc.so.6            [.] 0x0000000000188d05
+     1.49%  qlever-server        [.] ql::engine::export_v2::ExportEngineV2::appendSerializedRows(columnBasedIdTable::IdTable<ValueId, 0, std::vector<ValueId, ad_utility::default_init_allocator<ValueId, ad_utility::allocatorImpl::AllocatorWithLimit<ValueId> > >, (columnBasedIdTable::IsView)0> const&, LocalVocab const&, ql::engine::export_v2::RowFormat, qlever::export_v2::ScatterGatherChunkBuilder&, Index const&, std::span<std::optional<unsigned long> const, 18446744073709551615ul>, unsigned long, unsigned long, std::span<ql::engine::export_v2::ColumnLattice const, 18446744073709551615ul>)
+     1.43%  qlever-server        [.] void ql::engine::export_v2::(anonymous namespace)::setWordCell<(ql::engine::export_v2::RowFormat)0>(ql::engine::export_v2::(anonymous namespace)::ResolvedColumn&, unsigned long, ad_utility::triple_component::LiteralOrIriView const&, bool)
+     1.16%  libzstd.so.1.5.5     [.] 0x000000000007772d
+     0.96%  qlever-server        [.] ad_utility::vocabulary::CompressedVocabulary<ad_utility::vocabulary::VocabularyInternalExternal, ad_utility::vocabulary::FsstSquaredCompressionWrapper, 1048576ul>::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>, ad_utility::vocabulary::ArenaVocabBatchBuilder&) const
+     0.84%  qlever-server        [.] ValueId::compareThreeWay(ValueId const&) const
+     0.67%  qlever-server        [.] FsstDecoder::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>) const
+     0.62%  qlever-server        [.] ad_utility::AddCombinedRowToIdTable::flush()
+     0.55%  qlever-server        [.] FsstRepeatedDecoder<2ul>::decompressInto(std::basic_string_view<char, std::char_traits<char> >, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+     0.54%  qlever-server        [.] void ad_utility::detail::BlockZipperJoinImplCRTP<ad_utility::detail::BlockZipperJoinImpl<ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, std::less<void>, ad_utility::AddCombinedRowToIdTable, ad_utility::detail::AlwaysFalse>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, ad_utility::detail::JoinSide<ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Iterator, ad_utility::InputRangeFromGet<ad_utility::IdTableAndFirstCols<1ul, IdTable>, cppcoro::NoDetails>::Sentinel, ql::identity, std::monostate>, std::less<void>, ad_utility::AddCombinedRowToIdTable, ad_utility::detail::AlwaysFalse>::joinAndRemoveLessThanCurrentEl<false>(std::vector<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> >, std::allocator<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> > > >&, std::vector<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> >, std::allocator<ad_utility::detail::BlockAndSubrange<ad_utility::IdTableAndFirstCols<1ul, IdTable> > > >&, ValueId const&)
+     0.52%  qlever-server        [.] ad_utility::vocabulary::VocabularyInternalExternal::lookupBatch(std::span<unsigned long const, 18446744073709551615ul>) const
+     0.50%  qlever-server        [.] ad_utility::vocabulary::detail::DecoderMultiplexer<FsstRepeatedDecoder<2ul> >::decompressInto(std::basic_string_view<char, std::char_traits<char> >, unsigned long, std::span<char, 18446744073709551615ul>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const
+     0.49%  qlever-server        [.] FsstDecoder::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     0.47%  libzstd.so.1.5.5     [.] 0x00000000000773e7
+     0.42%  qlever-server        [.] unsigned int ql::engine::export_v2::detail::scanChunkAvx2<(ql::engine::export_v2::EscapeFormat)0>(char const*)
+     0.41%  libzstd.so.1.5.5     [.] 0x00000000000650d3
+     0.36%  [kernel.kallsyms]    [k] rep_movs_alternative
+     0.30%  libzstd.so.1.5.5     [.] 0x000000000007735a
+     0.30%  libzstd.so.1.5.5     [.] 0x00000000000775de
+     0.29%  libzstd.so.1.5.5     [.] 0x0000000000077763
+     0.28%  qlever-server        [.] ad_utility::triple_component::BasicLiteral<false>::BasicLiteral(std::basic_string_view<char, std::char_traits<char> >, unsigned long)
+     0.26%  [kernel.kallsyms]    [k] kernel_init_pages
+     0.25%  qlever-server        [.] void ad_utility::AddCombinedRowToIdTable::addRows<std::ranges::iota_view<unsigned long, unsigned long>, std::ranges::iota_view<unsigned long, unsigned long> >(std::ranges::iota_view<unsigned long, unsigned long> const&, std::ranges::iota_view<unsigned long, unsigned long> const&) [clone .isra.0]
+     0.22%  qlever-server        [.] FsstRepeatedDecoder<2ul>::maxDecompressedSize(std::basic_string_view<char, std::char_traits<char> >) [clone .isra.0]
+     0.20%  qlever-server        [.] ValueId::compareThreeWay(ValueId const&) const [clone .constprop.1]
+     0.18%  libzstd.so.1.5.5     [.] 0x0000000000077356
+     0.18%  libzstd.so.1.5.5     [.] 0x00000000000771f4
+     0.17%  libzstd.so.1.5.5     [.] 0x00000000000775db
+     0.17%  libzstd.so.1.5.5     [.] 0x000000000007721a
+     0.16%  libzstd.so.1.5.5     [.] 0x00000000000771ef
+     0.16%  libzstd.so.1.5.5     [.] 0x00000000000774bb
+     0.15%  qlever-server        [.] ad_utility::vocabulary::VocabularyInMemoryBinSearch::operator[](unsigned long) const
+     0.14%  libzstd.so.1.5.5     [.] 0x0000000000077211
+     0.14%  libzstd.so.1.5.5     [.] 0x0000000000077310
+     0.14%  [kernel.kallsyms]    [k] srso_safe_ret
+     0.13%  libzstd.so.1.5.5     [.] 0x00000000000774d7
+     0.13%  libjemalloc.so.2     [.] operator new(unsigned long)
+     0.13%  libzstd.so.1.5.5     [.] 0x00000000000774e3
+     0.12%  libzstd.so.1.5.5     [.] 0x000000000007732a
+     0.12%  libzstd.so.1.5.5     [.] 0x00000000000773ea
+     0.12%  qlever-server        [.] ad_utility::triple_component::BasicLiteralOrIri<false>::getLiteral() const
+     0.11%  libc.so.6            [.] 0x0000000000188d22
+     0.11%  qlever-server        [.] ad_utility::triple_component::BasicLiteral<false>::fromStringRepresentation(std::basic_string_view<char, std::char_traits<char> >)
+     0.11%  libzstd.so.1.5.5     [.] 0x00000000000772f7
+     0.11%  libzstd.so.1.5.5     [.] 0x0000000000077443
+     0.10%  libzstd.so.1.5.5     [.] 0x0000000000077226

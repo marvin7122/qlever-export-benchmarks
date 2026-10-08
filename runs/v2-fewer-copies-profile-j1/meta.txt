@@ -1,0 +1,7 @@
+threads=1 min_s=10 perf_freq=499 dwarf_stack=16384 form=fast-export=1 steps=stat,record,alloc
+query=/local/data-ssd/stoetzem/thesis/representative-queries/wikidata/H-vocab-label-large-select.rq
+host=ural kernel=7.0.0-28-generic
+perf=perf version 7.0.12
+loadavg=20.48 19.84 15.17 18/1413 481977
+governor=powersave
+arms=base=/local/data-ssd/stoetzem/thesis/experiments/runs/pr120-wikidata-j8-ab-identity/bin/qlever-server-ab@87f57674 variant=/local/data-ssd/stoetzem/bin-cache/719615ab5f3a8a3203d5904a704e106fee49bab0/qlever-server@719615ab
